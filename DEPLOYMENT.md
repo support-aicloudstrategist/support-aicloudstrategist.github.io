@@ -2,49 +2,38 @@
 
 ## Source of Truth
 
-This repository is configured as the GitHub Pages source for the public AICloudStrategist website.
+This repository is the GitHub source of truth for the public AICloudStrategist website. Cloudflare Pages is connected to this repository and deploys new commits from `main`.
 
 - Repository: `support-aicloudstrategist/support-aicloudstrategist.github.io`
-- Publishing branch: `main`
-- Publishing path: `/`
-- GitHub Pages default URL: `https://support-aicloudstrategist.github.io/`
-- Intended custom domain: `https://aicloudstrategist.com/`
+- Production branch: `main`
+- Cloudflare Pages project: `aicloudstrategist-site`
+- Cloudflare Pages URL: `https://aicloudstrategist-site.pages.dev/`
+- Custom domains: `https://aicloudstrategist.com/` and `https://www.aicloudstrategist.com/`
 
-Any committed change pushed to `main` is built by GitHub Pages automatically.
+Any committed change pushed to `main` is deployed by Cloudflare Pages automatically.
 
 ## Current Custom Domain Status
 
-GitHub Pages is configured with the custom domain `aicloudstrategist.com`, and the root `CNAME` file contains:
+Cloudflare Pages is connected to GitHub with repository access limited to `support-aicloudstrategist/support-aicloudstrategist.github.io`.
 
-```text
-aicloudstrategist.com
-```
-
-Cloudflare DNS was updated on April 30, 2026 to point `aicloudstrategist.com` and `www.aicloudstrategist.com` to GitHub Pages. Future pushed changes to `main` should publish through GitHub Pages.
+Cloudflare DNS was updated on April 30, 2026 to route `aicloudstrategist.com` and `www.aicloudstrategist.com` to the Cloudflare Pages project. Cloudflare handles public HTTPS for both domains.
 
 ## Required Cloudflare DNS Records
 
-For the apex domain, Cloudflare should keep these DNS-only GitHub Pages records:
+Cloudflare should keep these proxied DNS records:
 
 ```text
-Type  Name  Value
-A     @     185.199.108.153
-A     @     185.199.109.153
-A     @     185.199.110.153
-A     @     185.199.111.153
-AAAA  @     2606:50c0:8000::153
-AAAA  @     2606:50c0:8001::153
-AAAA  @     2606:50c0:8002::153
-AAAA  @     2606:50c0:8003::153
+Type   Name  Value                           Proxy
+CNAME  @     aicloudstrategist-site.pages.dev Proxied
+CNAME  www   aicloudstrategist-site.pages.dev Proxied
 ```
 
-For `www`, keep:
+Security settings enabled in Cloudflare:
 
-```text
-Type   Name  Value
-CNAME  www   support-aicloudstrategist.github.io
-```
+- Always Use HTTPS: on
+- Automatic HTTPS Rewrites: on
+- Minimum TLS version: 1.2
+- TLS 1.3: on
+- HSTS: on for the apex hostname, without `includeSubDomains`
 
-After DNS propagates, return to GitHub repository settings and enable **Enforce HTTPS** if it is not enabled automatically. GitHub may need time to issue the certificate after DNS is changed.
-
-Reference: GitHub Pages custom domain documentation.
+Do not re-add a root `CNAME` file for GitHub Pages. The custom domain belongs to Cloudflare Pages.
