@@ -17,5 +17,11 @@
 /audit.html
   X-Robots-Tag: noindex, nofollow
 
+/audit
+  X-Robots-Tag: noindex, nofollow
+
 /book.html
+  X-Robots-Tag: noindex, nofollow
+
+/book
   X-Robots-Tag: noindex, nofollow
