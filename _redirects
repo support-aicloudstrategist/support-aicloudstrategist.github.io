@@ -1,3 +1,10 @@
+﻿/blog/* /resources 301!
+/papers/* /resources 301!
+/audit.html /dpdp-readiness-assessment 301!
+/book.html /dpdp-readiness-assessment 301!
+/cloud-cost* /resources 301!
+/finops* /resources 301!
+/*.pdf /resources 301!
 https://aicloudstrategist.com/blog/* https://aicloudstrategist.com/resources 301!
 https://aicloudstrategist.com/papers/* https://aicloudstrategist.com/resources 301!
 https://aicloudstrategist.com/audit.html https://aicloudstrategist.com/dpdp-readiness-assessment 301!
@@ -6,3 +13,4 @@ https://aicloudstrategist.com/cloud-cost* https://aicloudstrategist.com/resource
 https://aicloudstrategist.com/finops* https://aicloudstrategist.com/resources 301!
 https://aicloudstrategist.com/*.pdf https://aicloudstrategist.com/resources 301!
 https://www.aicloudstrategist.com/* https://aicloudstrategist.com/:splat 301!
+
