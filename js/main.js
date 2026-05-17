@@ -122,8 +122,17 @@
     }
   }
   if (launcher) launcher.addEventListener('click', openChat);
+  document.querySelectorAll('[data-open-chat]').forEach(btn => btn.addEventListener('click', openChat));
   if (closeChat) closeChat.addEventListener('click', closeChatPanel);
   if (suggestions) suggestions.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => { openChat(); askAics(btn.textContent); }));
+  if (launcher && panel && !sessionStorage.getItem('aicsChatSeen')) {
+    window.setTimeout(() => {
+      if (!sessionStorage.getItem('aicsChatSeen')) {
+        openChat();
+        sessionStorage.setItem('aicsChatSeen', '1');
+      }
+    }, 1400);
+  }
   if (chatForm) chatForm.addEventListener('submit', e => {
     e.preventDefault();
     const message = chatInput ? chatInput.value.trim() : '';
