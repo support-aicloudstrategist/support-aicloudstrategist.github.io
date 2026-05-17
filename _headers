@@ -3,7 +3,7 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' https://formspree.io https://formsubmit.co; script-src 'self' 'unsafe-inline' https://analytics.aicloudstrategist.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://formsubmit.co https://analytics.aicloudstrategist.com https://cloudflareinsights.com https://*.cloudflareinsights.com; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' https://formspree.io https://formsubmit.co; script-src 'self' 'unsafe-inline' https://analytics.aicloudstrategist.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.aicloudstrategist.com https://formspree.io https://formsubmit.co https://analytics.aicloudstrategist.com https://cloudflareinsights.com https://*.cloudflareinsights.com; upgrade-insecure-requests
 
 /blog/*
   X-Robots-Tag: noindex, nofollow

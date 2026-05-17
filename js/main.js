@@ -66,6 +66,72 @@
     if (ref) ref.value = document.referrer || '';
   });
 
+  const launcher = document.getElementById('chatLauncher');
+  const panel = document.getElementById('aicsChatPanel');
+  const closeChat = document.getElementById('chatClose');
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+  const chatMessages = document.getElementById('chatMessages');
+  const suggestions = document.getElementById('chatSuggestions');
+  const chatSession = 'web-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+
+  function addChatMessage(role, html) {
+    if (!chatMessages) return;
+    const msg = document.createElement('div');
+    msg.className = `chat-msg ${role}`;
+    msg.innerHTML = html;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+  function escapeHtml(text) {
+    return String(text || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  }
+  function openChat() {
+    if (!panel || !launcher) return;
+    panel.hidden = false;
+    launcher.setAttribute('aria-expanded', 'true');
+    setTimeout(() => chatInput && chatInput.focus(), 80);
+    trackEvent('Chatbot Open', { page: location.pathname });
+  }
+  function closeChatPanel() {
+    if (!panel || !launcher) return;
+    panel.hidden = true;
+    launcher.setAttribute('aria-expanded', 'false');
+  }
+  async function askAics(message) {
+    addChatMessage('user', `<p>${escapeHtml(message)}</p>`);
+    addChatMessage('bot typing', '<p>Checking AICS knowledge base…</p>');
+    try {
+      const res = await fetch('https://api.aicloudstrategist.com/rag/v1/website/respond', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, session_id: chatSession })
+      });
+      if (!res.ok) throw new Error('RAG response failed');
+      const data = await res.json();
+      const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
+      if (typing) typing.remove();
+      const answer = escapeHtml(data.answer || 'I can map this to the right AICloudStrategist module after a short business review.').replace(/\n/g, '<br>');
+      addChatMessage('bot', `<p>${answer}</p><a class="chat-cta" href="/free-business-review">Book free review</a>`);
+      trackEvent('Chatbot Question', { page: location.pathname });
+    } catch (error) {
+      const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
+      if (typing) typing.remove();
+      addChatMessage('bot', '<p>I could not reach the AICS knowledge base right now. Please WhatsApp us with your industry, city and biggest leakage point — we will map the right module.</p><a class="chat-cta" href="https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20to%20map%20my%20business%20problem%20to%20the%20right%20AI%20module.">WhatsApp AICS</a>');
+      console.error(error);
+    }
+  }
+  if (launcher) launcher.addEventListener('click', openChat);
+  if (closeChat) closeChat.addEventListener('click', closeChatPanel);
+  if (suggestions) suggestions.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => { openChat(); askAics(btn.textContent); }));
+  if (chatForm) chatForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const message = chatInput ? chatInput.value.trim() : '';
+    if (!message) return;
+    chatInput.value = '';
+    askAics(message);
+  });
+
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
