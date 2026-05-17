@@ -66,3 +66,9 @@ html,body{max-width:100%;overflow-x:hidden}
   .topbar-inner{max-width:calc(100vw - 52px)!important;margin:0 auto!important}
   .topbar-inner span:last-child{font-size:12px!important;line-height:1.35!important}
 }
+@media(max-width:620px){
+  .hero-copy,.hero h1,.hero-lead,.eyebrow,.chat-open-strip,.actions,.hero-proof{width:100%!important;max-width:292px!important;margin-left:0!important;margin-right:auto!important}
+  .hero-proof{grid-template-columns:1fr!important}
+  .topbar-inner{max-width:292px!important;text-align:left!important}
+  .actions .btn{width:100%!important;max-width:292px!important}
+}
