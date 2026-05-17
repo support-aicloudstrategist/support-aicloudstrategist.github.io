@@ -100,14 +100,14 @@
   }
   async function askAics(message) {
     addChatMessage('user', `<p>${escapeHtml(message)}</p>`);
-    addChatMessage('bot typing', '<p>Checking AICS knowledge base…</p>');
+    addChatMessage('bot typing', '<p>Checking…</p>');
     try {
       const res = await fetch('https://api.aicloudstrategist.com/rag/v1/website/respond', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, session_id: chatSession })
       });
-      if (!res.ok) throw new Error('RAG response failed');
+      if (!res.ok) throw new Error('Chat response failed');
       const data = await res.json();
       const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
       if (typing) typing.remove();
@@ -117,7 +117,7 @@
     } catch (error) {
       const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
       if (typing) typing.remove();
-      addChatMessage('bot', '<p>I could not reach the AICS knowledge base right now. Please WhatsApp us with your industry, city and biggest leakage point — we will map the right module.</p><a class="chat-cta" href="https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20to%20map%20my%20business%20problem%20to%20the%20right%20AI%20module.">WhatsApp AICS</a>');
+      addChatMessage('bot', '<p>I could not answer that right now. Please WhatsApp us with your business type, city and problem — we will respond there.</p><a class="chat-cta" href="https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20to%20map%20my%20business%20problem%20to%20the%20right%20AI%20module.">WhatsApp AICS</a>');
       console.error(error);
     }
   }
