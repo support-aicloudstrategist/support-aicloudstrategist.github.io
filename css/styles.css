@@ -59,3 +59,10 @@ html,body{max-width:100%;overflow-x:hidden}
   .premium-cta:before{display:none!important}
   .cta-grid,.form{width:100%!important;max-width:calc(100vw - 36px)!important;min-width:0!important}
 }
+@media(max-width:620px){
+  .container{padding-left:26px!important;padding-right:26px!important}
+  .hero h1,.hero-lead,.chat-open-strip,.actions,.hero-proof,.hero-copy{max-width:calc(100vw - 72px)!important}
+  .actions .btn,.chat-open-strip button{max-width:100%!important}
+  .topbar-inner{max-width:calc(100vw - 52px)!important;margin:0 auto!important}
+  .topbar-inner span:last-child{font-size:12px!important;line-height:1.35!important}
+}
