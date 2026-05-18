@@ -72,3 +72,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .topbar-inner{max-width:292px!important;text-align:left!important}
   .actions .btn{width:100%!important;max-width:292px!important}
 }
+
+/* Razorpay payment page */
+.payment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.payment-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--soft-shadow);display:flex;flex-direction:column;gap:12px}.payment-card h3{font-size:22px;margin:0}.payment-card p{color:var(--muted);margin:0;flex:1}.payment-price{font-size:32px;font-weight:950;color:var(--ink);letter-spacing:-.04em}.payment-note{background:#fff6d6;border:1px solid #f1d675;border-radius:16px;padding:16px;color:#5d4500;font-weight:800}.btn-full{width:100%;text-align:center;justify-content:center}
+@media(max-width:900px){.payment-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.payment-grid{grid-template-columns:1fr}.payment-price{font-size:28px}}
