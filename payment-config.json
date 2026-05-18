@@ -1,0 +1,57 @@
+{
+  "provider": "Razorpay",
+  "currency": "INR",
+  "enabled": true,
+  "mode": "payment_links",
+  "businessName": "AICloudStrategist",
+  "notes": "Fill paymentLink values with live Razorpay Payment Links from the Razorpay dashboard or API. Do not store Razorpay key_secret in this static website repo.",
+  "support": {
+    "email": "contact@aicloudstrategist.com",
+    "phone": "+918065480898",
+    "whatsapp": "https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20need%20help%20with%20Razorpay%20payment."
+  },
+  "items": [
+    {
+      "id": "website-starter",
+      "title": "Website & Lead Capture — Starter",
+      "amount": 9999,
+      "description": "3-page mobile-first website, WhatsApp/call links, enquiry form, metadata and launch checklist.",
+      "paymentLink": "https://rzp.io/rzp/qqpKX0r"
+    },
+    {
+      "id": "website-standard",
+      "title": "Website & Lead Capture — Standard",
+      "amount": 17999,
+      "description": "5-page website, detailed copy, Google Business Profile setup and post-launch revision.",
+      "paymentLink": "https://rzp.io/rzp/t5alTLR"
+    },
+    {
+      "id": "automation-starter",
+      "title": "Operations Automation — Starter",
+      "amount": 14999,
+      "description": "Lead/task tracker, follow-up stages, templates and owner dashboard.",
+      "paymentLink": "https://rzp.io/rzp/ivv0hkCN"
+    },
+    {
+      "id": "automation-standard",
+      "title": "Operations Automation — Standard",
+      "amount": 24999,
+      "description": "Process map, automation triggers, CRM/sheet integration and 30-day check-in.",
+      "paymentLink": "https://rzp.io/rzp/cBzpanZq"
+    },
+    {
+      "id": "compliance-starter",
+      "title": "DPDP Website Compliance — Starter",
+      "amount": 25000,
+      "description": "Privacy notice and trust gap review, consent/forms notes, vendor register and roadmap.",
+      "paymentLink": "https://rzp.io/rzp/kvPII0Ne"
+    },
+    {
+      "id": "compliance-standard",
+      "title": "DPDP Website Compliance — Standard",
+      "amount": 45000,
+      "description": "Starter scope plus rights request, breach readiness, grievance notes and 90-day review.",
+      "paymentLink": "https://rzp.io/rzp/QAgXI7f"
+    }
+  ]
+}
