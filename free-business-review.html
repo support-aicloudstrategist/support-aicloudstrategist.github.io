@@ -73,10 +73,16 @@
               type="hidden"
               name="_captcha"
               value="false"
-            /><!-- Form endpoint inherited from existing FormSubmit configuration; verify end-to-end before launch. --><label
+            /><input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for requesting your AICloudStrategist Lost-Lead Audit. We have received your details and will review your website, WhatsApp/contact flow, and visible lead-capture gaps. This is an automated confirmation from AICloudStrategist."
+            /><!-- Form endpoint inherited from existing FormSubmit configuration; verified end-to-end after PR #5 activation. --><label
               for="full_name"
               >Full name</label
-            ><input id="full_name" name="full_name" type="text" required /><label for="business_name"
+            ><input id="full_name" name="full_name" type="text" required /><label for="email"
+              >Email</label
+            ><input id="email" name="email" type="email" autocomplete="email" required /><label for="business_name"
               >Business name</label
             ><input id="business_name" name="business_name" type="text" required /><label for="website_url"
               >Website URL</label
