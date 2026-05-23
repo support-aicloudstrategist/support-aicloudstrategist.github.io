@@ -59,59 +59,43 @@
               alt="Sample Lost-Lead Audit Report PDF cover"
             />
           </aside>
-          <form
-            id="lostLeadAuditForm"
-            class="form lead-form"
-            action="https://formsubmit.co/contact@aicloudstrategist.com"
-            method="POST"
-          >
-            <input type="hidden" name="_subject" value="Free Lost-Lead Audit request" /><input
-              type="hidden"
-              name="_template"
-              value="table"
-            /><input
-              type="hidden"
-              name="_captcha"
-              value="false"
-            /><input
-              type="hidden"
-              name="_autoresponse"
-              value="Thank you for requesting your AICloudStrategist Lost-Lead Audit. We have received your details and will review your website, WhatsApp/contact flow, and visible lead-capture gaps. This is an automated confirmation from AICloudStrategist."
-            /><!-- Form endpoint inherited from existing FormSubmit configuration; verified end-to-end after PR #5 activation. --><label
-              for="full_name"
-              >Full name</label
-            ><input id="full_name" name="full_name" type="text" required /><label for="email"
-              >Email</label
-            ><input id="email" name="email" type="email" autocomplete="email" required /><label for="business_name"
+          <form id="lostLeadAuditForm" class="form lead-form" novalidate>
+            <label for="full_name">Full name</label><input id="full_name" name="full_name" type="text" /><label for="email"
+              >Email (optional)</label
+            ><input id="email" name="email" type="email" autocomplete="email" /><label for="business_name"
               >Business name</label
-            ><input id="business_name" name="business_name" type="text" required /><label for="website_url"
+            ><input id="business_name" name="business_name" type="text" required /><label for="website"
               >Website URL</label
-            ><input id="website_url" name="website_url" type="url" required /><label for="whatsapp_number"
+            ><input id="website" name="website" type="url" required /><label for="whatsapp_number"
               >WhatsApp number with country code</label
             ><input
               id="whatsapp_number"
               name="whatsapp_number"
               type="tel"
               placeholder="+919876543210"
-              pattern="^\+91[0-9]{10}$"
+              pattern="^\+?[0-9][0-9\s-]{8,18}$"
               required
             /><label for="vertical">Vertical</label
             ><select id="vertical" name="vertical" required>
               <option value="">Select one</option>
-              <option>Dental clinic</option>
-              <option>Diagnostic lab</option>
-              <option>Aesthetic/dermatology clinic</option>
-              <option>Law firm</option>
-              <option>Real estate</option>
-              <option>Other</option></select
+              <option value="dental">Dental clinic</option>
+              <option value="diagnostic_lab">Diagnostic lab</option>
+              <option value="aesthetic_dermatology">Aesthetic/dermatology clinic</option>
+              <option value="law_firm">Law firm</option>
+              <option value="real_estate">Real estate</option>
+              <option value="other">Other</option></select
             ><label for="specific_notes">Anything specific you want us to look at?</label
-            ><textarea id="specific_notes" name="specific_notes" maxlength="500"></textarea
-            ><button class="btn btn-dark" type="submit">Request my free audit</button>
-            <div id="auditSuccess" class="success-box">
-              Got it. Your Lost-Lead Audit is being prepared. You'll receive the PDF on WhatsApp and email within 48
-              working hours. If you'd like to book an optional 15-min review call after you read it, here's the
-              calendar:
+            ><textarea id="specific_notes" name="notes" maxlength="500"></textarea
+            ><button class="btn btn-dark" type="submit" id="auditSubmitButton">Request my free audit</button>
+            <div id="auditSuccess" class="success-box" role="status">
+              Got it. Your Lost-Lead Audit request has reached AICloudStrategist. You'll receive the PDF on WhatsApp and
+              email within 48 working hours if an email was provided. If you'd like to book an optional 15-min review
+              call after you read it, here's the calendar:
               <a href="https://calendly.com/aicloudstrategist/15min">https://calendly.com/aicloudstrategist/15min</a>.
+            </div>
+            <div id="auditError" class="success-box" role="alert" style="display: none; border-color: #f4b4b4; background: #fff7f7; color: #7a1f1f;">
+              We could not submit the request. Please check the required fields and retry, or WhatsApp us at +91 87963
+              02608.
             </div>
           </form>
         </div>
@@ -140,7 +124,47 @@
           <p><strong>100% free. No credit card. No sales call required. We won't share your information.</strong></p>
         </div>
       </section>
-      <!-- Native FormSubmit POST is intentional: it preserves browser validation and avoids false-success UI when the upstream email service fails. -->
+      <script>
+        const auditForm = document.getElementById("lostLeadAuditForm");
+        const auditSuccess = document.getElementById("auditSuccess");
+        const auditError = document.getElementById("auditError");
+        const auditSubmitButton = document.getElementById("auditSubmitButton");
+
+        auditForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          auditSuccess.style.display = "none";
+          auditError.style.display = "none";
+
+          if (!auditForm.checkValidity()) {
+            auditForm.reportValidity();
+            return;
+          }
+
+          const payload = Object.fromEntries(new FormData(auditForm).entries());
+          auditSubmitButton.disabled = true;
+          auditSubmitButton.textContent = "Submitting...";
+
+          try {
+            const response = await fetch("/api/lead", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.ok) {
+              throw new Error(result.error || "Submission failed");
+            }
+            auditForm.reset();
+            auditSuccess.style.display = "block";
+          } catch (error) {
+            auditError.textContent = `${error.message || "We could not submit the request."} Please retry, or WhatsApp us at +91 87963 02608.`;
+            auditError.style.display = "block";
+          } finally {
+            auditSubmitButton.disabled = false;
+            auditSubmitButton.textContent = "Request my free audit";
+          }
+        });
+      </script>
     </main>
     <footer class="footer">
       <div class="container">
