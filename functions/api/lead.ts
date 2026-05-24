@@ -1,0 +1,203 @@
+type LeadEnv = {
+  LEAD_LOG?: KVNamespace;
+  M365_TENANT_ID?: string;
+  M365_CLIENT_ID?: string;
+  M365_CLIENT_SECRET?: string;
+  M365_SENDER?: string;
+  M365_RECIPIENT?: string;
+};
+
+type GraphTokenCache = {
+  token: string;
+  expiresAt: number;
+};
+
+let graphTokenCache: GraphTokenCache | null = null;
+
+const jsonHeaders = {
+  "Content-Type": "application/json; charset=utf-8",
+  "Cache-Control": "no-store",
+  "Access-Control-Allow-Origin": "https://aicloudstrategist.com",
+};
+
+const clean = (value: unknown) => String(value ?? "").trim();
+
+async function getGraphToken(env: LeadEnv): Promise<string> {
+  const tenantId = clean(env.M365_TENANT_ID);
+  const clientId = clean(env.M365_CLIENT_ID);
+  const clientSecret = clean(env.M365_CLIENT_SECRET);
+
+  if (!tenantId || !clientId || !clientSecret) {
+    throw new Error("Microsoft Graph credentials are not configured.");
+  }
+
+  const now = Date.now();
+  if (graphTokenCache && graphTokenCache.expiresAt - 60_000 > now) {
+    return graphTokenCache.token;
+  }
+
+  const body = new URLSearchParams({
+    grant_type: "client_credentials",
+    client_id: clientId,
+    client_secret: clientSecret,
+    scope: "https://graph.microsoft.com/.default",
+  });
+
+  const response = await fetch(`https://login.microsoftonline.com/${tenantId}/oauth2/v2.0/token`, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+  });
+
+  const tokenPayload = (await response.json().catch(() => ({}))) as { access_token?: string; expires_in?: number; error?: string; error_description?: string };
+  if (!response.ok || !tokenPayload.access_token) {
+    throw new Error(tokenPayload.error_description || tokenPayload.error || `Graph token request failed with ${response.status}.`);
+  }
+
+  graphTokenCache = {
+    token: tokenPayload.access_token,
+    expiresAt: now + Math.max(60, tokenPayload.expires_in || 3600) * 1000,
+  };
+
+  return graphTokenCache.token;
+}
+
+async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBody: string) {
+  const sender = clean(env.M365_SENDER);
+  const recipient = clean(env.M365_RECIPIENT || env.M365_SENDER);
+
+  if (!sender || !recipient) {
+    throw new Error("Microsoft Graph sender/recipient is not configured.");
+  }
+
+  const token = await getGraphToken(env);
+  const subject = `Free Lost-Lead Audit request — ${lead.business_name}`;
+  const graphPayload = {
+    message: {
+      subject,
+      body: { contentType: "Text", content: textBody },
+      toRecipients: [{ emailAddress: { address: recipient } }],
+      replyTo: lead.email ? [{ emailAddress: { address: lead.email, name: lead.full_name || lead.business_name } }] : undefined,
+    },
+    saveToSentItems: true,
+  };
+
+  const response = await fetch(`https://graph.microsoft.com/v1.0/users/${encodeURIComponent(sender)}/sendMail`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(graphPayload),
+  });
+
+  const responseText = await response.text();
+  if (!response.ok) {
+    throw new Error(responseText || `Graph sendMail failed with ${response.status}.`);
+  }
+
+  return { status: response.status, responseText };
+}
+
+export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
+  let payload: Record<string, unknown>;
+  try {
+    payload = await context.request.json();
+  } catch {
+    return new Response(JSON.stringify({ ok: false, error: "Invalid JSON payload." }), { status: 400, headers: jsonHeaders });
+  }
+
+  const businessName = clean(payload.business_name);
+  const website = clean(payload.website || payload.website_url);
+  const whatsappNumber = clean(payload.whatsapp_number);
+  const vertical = clean(payload.vertical);
+  const email = clean(payload.email);
+  const notes = clean(payload.notes || payload.specific_notes);
+  const fullName = clean(payload.full_name);
+
+  const missing = [
+    ["business_name", businessName],
+    ["website", website],
+    ["whatsapp_number", whatsappNumber],
+    ["vertical", vertical],
+  ]
+    .filter(([, value]) => !value)
+    .map(([field]) => field);
+
+  if (missing.length) {
+    return new Response(JSON.stringify({ ok: false, error: `Missing required field(s): ${missing.join(", ")}` }), {
+      status: 422,
+      headers: jsonHeaders,
+    });
+  }
+
+  if (!/^https?:\/\//i.test(website)) {
+    return new Response(JSON.stringify({ ok: false, error: "Website must start with http:// or https://." }), {
+      status: 422,
+      headers: jsonHeaders,
+    });
+  }
+
+  if (!/^\+?[0-9][0-9\s-]{8,18}$/.test(whatsappNumber)) {
+    return new Response(JSON.stringify({ ok: false, error: "Enter a valid WhatsApp number with country code." }), {
+      status: 422,
+      headers: jsonHeaders,
+    });
+  }
+
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return new Response(JSON.stringify({ ok: false, error: "Enter a valid email address or leave it blank." }), {
+      status: 422,
+      headers: jsonHeaders,
+    });
+  }
+
+  const submittedAt = new Date().toISOString();
+  const leadId = `lead-${submittedAt.replace(/[:.]/g, "-")}-${crypto.randomUUID()}`;
+  const lead = {
+    lead_id: leadId,
+    submitted_at: submittedAt,
+    full_name: fullName,
+    business_name: businessName,
+    website,
+    whatsapp_number: whatsappNumber,
+    vertical,
+    email,
+    notes,
+    source: "free-business-review",
+  };
+
+  const textBody = `New AICloudStrategist Lost-Lead Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${email || "not provided"}\nNotes: ${notes || "not provided"}\n`;
+
+  let graphResult: { status: number; responseText: string };
+  try {
+    graphResult = await sendLeadEmail(context.env, lead, textBody);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Email delivery failed.";
+    return new Response(JSON.stringify({ ok: false, error: "Email delivery failed. Please retry or WhatsApp us directly.", details: message.slice(0, 300) }), {
+      status: 502,
+      headers: jsonHeaders,
+    });
+  }
+
+  const logRecord = { ...lead, graph_status: graphResult.status, graph_response: graphResult.responseText.slice(0, 500) };
+  try {
+    if (context.env.LEAD_LOG) {
+      await context.env.LEAD_LOG.put(leadId, JSON.stringify(logRecord), { metadata: { submitted_at: submittedAt, business_name: businessName } });
+    }
+  } catch {
+    // Email delivery is the primary pipeline. KV logging failure should not create a false failure for the prospect.
+  }
+
+  return new Response(JSON.stringify({ ok: true, lead_id: leadId }), { status: 200, headers: jsonHeaders });
+};
+
+export const onRequestOptions: PagesFunction = async () =>
+  new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "https://aicloudstrategist.com",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
