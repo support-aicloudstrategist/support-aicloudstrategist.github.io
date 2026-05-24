@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://aicloudstrategist.com/sitemap.xml

@@ -1,0 +1,4 @@
+data_field,collection_point,purpose,retention_period,processor,location,consent_basis,access_owner,status
+full_name,website form,respond to enquiry,[RETENTION],[PROCESSOR],[LOCATION],consent/legitimate purpose,front desk,UNKNOWN
+phone_number,WhatsApp/call,follow-up and appointment coordination,[RETENTION],WhatsApp/phone tool,India/UNKNOWN,consent,front desk,UNKNOWN
+report_link,lab portal,report delivery,[RETENTION],[LAB SYSTEM],[LOCATION],service delivery,lab manager,UNKNOWN
