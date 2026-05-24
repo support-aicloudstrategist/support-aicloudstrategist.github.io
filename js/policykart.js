@@ -4,7 +4,6 @@ const message = document.getElementById('resultMessage');
 const scoreValue = document.getElementById('scoreValue');
 const gapList = document.getElementById('gapList');
 const submitStatus = document.getElementById('submitStatus');
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnqeyqkz';
 function trackPolicyKartEvent(name, props = {}) {
   if (window.plausible) {
     window.plausible(name, { props });
@@ -57,36 +56,6 @@ form.addEventListener('submit', async (event) => {
     return;
   }
 
-  const payload = new FormData();
-  payload.append('_subject', `PolicyKart assessment: ${website || email}`);
-  payload.append('source', 'PolicyKart');
-  payload.append('email', email);
-  payload.append('website', website);
-  payload.append('risk_score', String(score));
-  payload.append('readiness_band', result);
-  payload.append('likely_focus_areas', items.join(', '));
-  payload.append('message', copy);
-
-  submitStatus.textContent = 'Saving your assessment request...';
-
-  try {
-    const response = await fetch(FORMSPREE_ENDPOINT, {
-      method: 'POST',
-      body: payload,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (!response.ok) throw new Error('PolicyKart submission failed');
-
-    trackPolicyKartEvent('PolicyKart Form Submit', {
-      band: result,
-      score: String(score)
-    });
-    submitStatus.textContent = 'Assessment saved. We will use these details only to respond to this request.';
-    submitStatus.classList.add('success');
-  } catch (error) {
-    submitStatus.textContent = 'Assessment calculated, but the details did not send. Please email contact@aicloudstrategist.com if you want follow-up.';
-    submitStatus.classList.add('error');
-    console.error(error);
-  }
+  submitStatus.textContent = 'Assessment calculated locally. For follow-up, use the Free Business Review form so the request goes through the approved AICS lead pipeline.';
+  submitStatus.classList.add('success');
 });
