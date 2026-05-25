@@ -25,3 +25,18 @@
 
 /book
   X-Robots-Tag: noindex, nofollow
+
+
+/404.html
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/*.md
+  X-Robots-Tag: noindex, nofollow
+
+/*.csv
+  X-Robots-Tag: noindex, nofollow
+
+/*.json
+  X-Robots-Tag: noindex, nofollow
+

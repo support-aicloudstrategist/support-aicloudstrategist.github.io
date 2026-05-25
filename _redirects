@@ -1,3 +1,13 @@
+# Block deploy-root/internal artifacts from public serving
+/CLAUDE.md /404.html 404!
+/DEPLOYMENT.md /404.html 404!
+/contact-channels.json /404.html 404!
+/gtm.csv /404.html 404!
+/prospects.csv /404.html 404!
+/internal.html /404.html 404!
+/reports/* /404.html 404!
+/week1-brief/* /404.html 404!
+/week2-brief/* /404.html 404!
 /blog/three-silent-cloud-patterns.html /resources 301!
 /blog/orphaned-ebs-volumes.html /resources 301!
 /blog/cost-per-1000-inferences.html /resources 301!
