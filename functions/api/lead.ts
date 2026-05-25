@@ -62,33 +62,20 @@ async function getGraphToken(env: LeadEnv): Promise<string> {
   return graphTokenCache.token;
 }
 
-async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBody: string) {
+async function sendGraphMail(env: LeadEnv, graphMessage: Record<string, unknown>) {
   const sender = clean(env.M365_SENDER);
-  const recipient = clean(env.M365_RECIPIENT || env.M365_SENDER);
-
-  if (!sender || !recipient) {
-    throw new Error("Microsoft Graph sender/recipient is not configured.");
+  if (!sender) {
+    throw new Error("Microsoft Graph sender is not configured.");
   }
 
   const token = await getGraphToken(env);
-  const subject = `Free Lost-Lead Audit request — ${lead.business_name}`;
-  const graphPayload = {
-    message: {
-      subject,
-      body: { contentType: "Text", content: textBody },
-      toRecipients: [{ emailAddress: { address: recipient } }],
-      replyTo: lead.email ? [{ emailAddress: { address: lead.email, name: lead.full_name || lead.business_name } }] : undefined,
-    },
-    saveToSentItems: true,
-  };
-
   const response = await fetch(`https://graph.microsoft.com/v1.0/users/${encodeURIComponent(sender)}/sendMail`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(graphPayload),
+    body: JSON.stringify({ message: graphMessage, saveToSentItems: true }),
   });
 
   const responseText = await response.text();
@@ -97,6 +84,49 @@ async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBod
   }
 
   return { status: response.status, responseText };
+}
+
+async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBody: string) {
+  const recipient = clean(env.M365_RECIPIENT || env.M365_SENDER);
+
+  if (!recipient) {
+    throw new Error("Microsoft Graph recipient is not configured.");
+  }
+
+  const subject = `Free Lost-Lead Audit request — ${lead.business_name}`;
+  return sendGraphMail(env, {
+    subject,
+    body: { contentType: "Text", content: textBody },
+    toRecipients: [{ emailAddress: { address: recipient } }],
+    replyTo: lead.prospect_email ? [{ emailAddress: { address: lead.prospect_email, name: lead.full_name || lead.business_name } }] : undefined,
+  });
+}
+
+function buildProspectConfirmationBody(lead: Record<string, string>) {
+  return `Hi ${lead.full_name || "there"},
+
+Thank you for requesting your Lost-Lead Audit for ${lead.business_name}. I have your details and the audit is now in motion.
+
+You can expect the PDF within 48 working hours. We will check where enquiries may be leaking across your website, WhatsApp/call capture, contact visibility, mobile experience, basic trust signals, and DPDP/privacy readiness.
+
+If something urgent needs to be added before we review it, WhatsApp us at +91 87963 02608 with your business name.
+
+Warmly,
+Anushka Bhattacharya
+Director, AICloudStrategist`;
+}
+
+async function sendProspectConfirmationEmail(env: LeadEnv, lead: Record<string, string>) {
+  if (!lead.prospect_email) {
+    return { status: 0, responseText: "skipped: prospect email not provided" };
+  }
+
+  return sendGraphMail(env, {
+    subject: "Your Lost-Lead Audit is in motion — AICloudStrategist",
+    body: { contentType: "Text", content: buildProspectConfirmationBody(lead) },
+    toRecipients: [{ emailAddress: { address: lead.prospect_email, name: lead.full_name || lead.business_name } }],
+    replyTo: [{ emailAddress: { address: clean(env.M365_RECIPIENT || env.M365_SENDER), name: "AICloudStrategist" } }],
+  });
 }
 
 export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
@@ -111,7 +141,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   const website = clean(payload.website || payload.website_url);
   const whatsappNumber = clean(payload.whatsapp_number);
   const vertical = clean(payload.vertical);
-  const email = clean(payload.email);
+  const prospectEmail = clean(payload.prospect_email || payload.email);
   const notes = clean(payload.notes || payload.specific_notes);
   const fullName = clean(payload.full_name);
 
@@ -120,6 +150,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     ["website", website],
     ["whatsapp_number", whatsappNumber],
     ["vertical", vertical],
+    ["prospect_email", prospectEmail],
   ]
     .filter(([, value]) => !value)
     .map(([field]) => field);
@@ -145,8 +176,8 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     });
   }
 
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return new Response(JSON.stringify({ ok: false, error: "Enter a valid email address or leave it blank." }), {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(prospectEmail)) {
+    return new Response(JSON.stringify({ ok: false, error: "Enter a valid email address." }), {
       status: 422,
       headers: jsonHeaders,
     });
@@ -162,16 +193,19 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     website,
     whatsapp_number: whatsappNumber,
     vertical,
-    email,
+    prospect_email: prospectEmail,
+    email: prospectEmail,
     notes,
     source: "free-business-review",
   };
 
-  const textBody = `New AICloudStrategist Lost-Lead Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${email || "not provided"}\nNotes: ${notes || "not provided"}\n`;
+  const textBody = `New AICloudStrategist Lost-Lead Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nNotes: ${notes || "not provided"}\n`;
 
-  let graphResult: { status: number; responseText: string };
+  let internalGraphResult: { status: number; responseText: string };
+  let prospectGraphResult: { status: number; responseText: string };
   try {
-    graphResult = await sendLeadEmail(context.env, lead, textBody);
+    internalGraphResult = await sendLeadEmail(context.env, lead, textBody);
+    prospectGraphResult = await sendProspectConfirmationEmail(context.env, lead);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Email delivery failed.";
     return new Response(JSON.stringify({ ok: false, error: "Email delivery failed. Please retry or WhatsApp us directly.", details: message.slice(0, 300) }), {
@@ -180,7 +214,13 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     });
   }
 
-  const logRecord = { ...lead, graph_status: graphResult.status, graph_response: graphResult.responseText.slice(0, 500) };
+  const logRecord = {
+    ...lead,
+    graph_status: internalGraphResult.status,
+    graph_response: internalGraphResult.responseText.slice(0, 500),
+    prospect_confirmation_status: prospectGraphResult.status,
+    prospect_confirmation_response: prospectGraphResult.responseText.slice(0, 500),
+  };
   try {
     if (context.env.LEAD_LOG) {
       await context.env.LEAD_LOG.put(leadId, JSON.stringify(logRecord), { metadata: { submitted_at: submittedAt, business_name: businessName } });
@@ -189,7 +229,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     // Email delivery is the primary pipeline. KV logging failure should not create a false failure for the prospect.
   }
 
-  return new Response(JSON.stringify({ ok: true, lead_id: leadId }), { status: 200, headers: jsonHeaders });
+  return new Response(JSON.stringify({ ok: true, lead_id: leadId, confirmation_sent: prospectGraphResult.status > 0 }), { status: 200, headers: jsonHeaders });
 };
 
 export const onRequestOptions: PagesFunction = async () =>

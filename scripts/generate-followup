@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const LEADS_DIR = '/home/OpenClaw/.openclaw/workspace/reports/leads';
+const PACK_DIR = '/home/OpenClaw/.openclaw/workspace/reports/approval-packs';
+function arg(n){ const i=process.argv.indexOf(`--${n}`); return i>=0 ? process.argv[i+1] : ''; }
+function main(){
+  const leadId = arg('lead_id') || process.argv[2];
+  const day = String(arg('days_since_delivery') || arg('day') || process.argv[3] || '').replace(/^\+/, '');
+  if(!leadId || !['1','3','7'].includes(day)){ console.error('Usage: scripts/generate-followup --lead_id <id> --days_since_delivery 1|3|7'); process.exit(2); }
+  const leadPath = path.join(LEADS_DIR, `${leadId}.json`);
+  if(!fs.existsSync(leadPath)){ console.error(`Missing lead json: ${leadPath}`); process.exit(2); }
+  fs.mkdirSync(PACK_DIR,{recursive:true});
+  const l = JSON.parse(fs.readFileSync(leadPath,'utf8'));
+  const name = l.full_name || 'there';
+  const templates = {
+    '1': {
+      email:`Subject: Did the audit reach you?\n\nHi ${name},\n\nJust checking that the Lost-Lead Audit for ${l.business_name} reached you safely. Start with the first-page summary; it shows the quickest places where enquiries may be leaking before they become booked conversations.\n\nIf anything looks unclear, reply with your question and I’ll point you to the relevant section.\n\nWarmly,\nAnushka`,
+      whatsapp:`Hi ${name}, Anushka here. Just checking that the Lost-Lead Audit for ${l.business_name} reached you. The first-page summary is the best place to start. Reply if you want me to point out the quickest fix.`
+    },
+    '3': {
+      email:`Subject: The fastest DPDP/trust fixes from your audit\n\nHi ${name},\n\nA quick follow-up on your audit. If you want momentum, the practical next step is usually a short DPDP + trust sprint: privacy/consent cleanup, contact capture hygiene, and clearer enquiry paths so visitors feel safe enough to act.\n\nReply “SPRINT” if you want us to map the smallest 7-day fix plan.\n\nWarmly,\nAnushka`,
+      whatsapp:`Hi ${name}, based on the audit, the fastest next step is often a small DPDP + trust sprint: privacy/consent cleanup plus clearer enquiry paths. Reply SPRINT if you want a 7-day fix plan.`
+    },
+    '7': {
+      email:`Subject: Closing the loop on your Lost-Lead Audit\n\nHi ${name},\n\nI’ll close the loop after this note. Even if AICloudStrategist is not a fit right now, I’d genuinely value your thoughts on whether the audit showed something useful about missed enquiries or trust gaps.\n\nIf you want help later, just reply to this email and we’ll pick it up from there.\n\nWarmly,\nAnushka`,
+      whatsapp:`Hi ${name}, closing the loop on your Lost-Lead Audit. Even if we’re not a fit right now, I’d love your thoughts on whether it showed anything useful about missed enquiries or trust gaps.`
+    }
+  };
+  const t = templates[day];
+  const pack = `# Follow-up approval pack — ${leadId} Day +${day}\n\nDecision sought: APPROVE / REJECT / EDIT\n\n## Prospect context\n- Business: ${l.business_name}\n- Contact: ${name}\n- Email: ${l.prospect_email || l.email || 'not provided'}\n- WhatsApp: ${l.whatsapp_number || 'not provided'}\n- Website: ${l.website_url || l.website || 'not provided'}\n- Vertical: ${l.vertical || 'not provided'}\n\n## Draft email\n${t.email}\n\n## Draft WhatsApp text\n${t.whatsapp}\n`;
+  const out = path.join(PACK_DIR, `followup-${leadId}-day${day}.md`);
+  fs.writeFileSync(out, pack);
+  console.log(`Follow-up pack saved: ${out}`);
+}
+main();
