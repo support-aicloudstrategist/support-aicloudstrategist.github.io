@@ -1,0 +1,60 @@
+{
+  "phase": 8,
+  "status": "completed",
+  "tracker": "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/crm/aics-outreach-tracker.md",
+  "total_rows_after_append": 122,
+  "new_rows_appended": 120,
+  "sample_new_rows": [
+    {
+      "prospect_id": "AICS-MUM-001",
+      "metro": "Mumbai",
+      "business_name": "The Dental Studio",
+      "doctor_name": "Dr. Chitrang Thaker",
+      "channel": "none-yet: needs enrichment",
+      "message_id": "AICS-MUM-001",
+      "sent_date": "",
+      "outcome": "queued",
+      "follow_up_date": "",
+      "next_action": "Enrich contact channel; queue approved first-touch outreach",
+      "status": "queued",
+      "best_channel": "none-yet",
+      "suggested_first_touch_date": "2026-05-26"
+    },
+    {
+      "prospect_id": "AICS-MUM-002",
+      "metro": "Mumbai",
+      "business_name": "Dr. Gandhi Dental Clinic",
+      "doctor_name": "Dr. Ashish Gandhi",
+      "channel": "none-yet: needs enrichment",
+      "message_id": "AICS-MUM-002",
+      "sent_date": "",
+      "outcome": "queued",
+      "follow_up_date": "",
+      "next_action": "Enrich contact channel; queue approved first-touch outreach",
+      "status": "queued",
+      "best_channel": "none-yet",
+      "suggested_first_touch_date": "2026-05-26"
+    },
+    {
+      "prospect_id": "AICS-MUM-003",
+      "metro": "Mumbai",
+      "business_name": "Wondersmiles",
+      "doctor_name": "Dr. Rajesh Kamdar",
+      "channel": "none-yet: needs enrichment",
+      "message_id": "AICS-MUM-003",
+      "sent_date": "",
+      "outcome": "queued",
+      "follow_up_date": "",
+      "next_action": "Enrich contact channel; queue approved first-touch outreach",
+      "status": "queued",
+      "best_channel": "none-yet",
+      "suggested_first_touch_date": "2026-05-26"
+    }
+  ],
+  "source_counts": {
+    "aics-prospects-mumbai-owner-led.csv": 30,
+    "aics-prospects-delhi-ncr-owner-led.csv": 30,
+    "aics-prospects-hyderabad-owner-led.csv": 30,
+    "aics-prospects-diagnostic-labs-owner-led.csv": 30
+  }
+}

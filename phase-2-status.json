@@ -1,0 +1,53 @@
+{
+  "phase": 2,
+  "status": "completed-local-test",
+  "notes": [
+    "generate-audit script created; uses public HTML checks and outputs /tmp/audits/<lead_id>.pdf plus JSON.",
+    "Copied PR #9 template PDF into assets/audit because PR #9 is not merged on main yet."
+  ],
+  "sample_run": {
+    "lead_id": "test-smilekraft-dental-20260525",
+    "pdf": "/tmp/audits/test-smilekraft-dental-20260525.pdf",
+    "pdf_bytes": 39236,
+    "fetched": {
+      "status": 200,
+      "final_url": "https://smilekraftdental.com/",
+      "load_ms": 1049,
+      "error": null
+    },
+    "key_fields": {
+      "https": {
+        "status": "pass",
+        "finding": "HTTPS is enabled."
+      },
+      "mobile_responsive": {
+        "status": "pass",
+        "finding": "Viewport meta tag found."
+      },
+      "page_load_time": {
+        "status": "pass",
+        "finding": "1049 ms HTML fetch time (200)."
+      },
+      "contact_visibility": {
+        "status": "review",
+        "finding": "Contact/call signals not obvious in public HTML."
+      },
+      "whatsapp_cta": {
+        "status": "review",
+        "finding": "No WhatsApp CTA/reference found in public HTML."
+      },
+      "privacy_policy": {
+        "status": "review",
+        "finding": "Privacy policy link not obvious in public HTML."
+      },
+      "cookie_banner": {
+        "status": "review",
+        "finding": "Cookie/consent banner not obvious in public HTML."
+      },
+      "dpdp_pii_consent": {
+        "status": "pass",
+        "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+      }
+    }
+  }
+}
