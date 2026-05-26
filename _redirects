@@ -6,6 +6,7 @@
 /prospects.csv /404.html 404!
 /internal.html /404.html 404!
 /reports/* /404.html 404!
+/_workspace/* /404.html 404!
 /week1-brief/* /404.html 404!
 /week2-brief/* /404.html 404!
 /blog/three-silent-cloud-patterns.html /resources 301!
