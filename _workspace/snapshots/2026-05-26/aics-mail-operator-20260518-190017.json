@@ -1,0 +1,32 @@
+{
+  "ts": "2026-05-18T19:00:16+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "support@mail.support.microsoft.com",
+          "subject": "RE: Case 2605080030006208\u2009 Your question was su... - TrackingID#2605080030006208",
+          "received": "2026-05-18T13:05:37Z",
+          "action": "mark_read_review_later",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 1,
+    "replied": 0,
+    "marked_read": 1,
+    "errors": 0
+  }
+}

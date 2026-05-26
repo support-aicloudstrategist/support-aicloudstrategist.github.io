@@ -1,0 +1,7 @@
+business_name,segment,approved_channel_candidate,public_contact_or_route,status_guardrail
+Sparsh Hair Skin Dermatology Clinic,healthcare/aesthetic clinic,existing inbound route,recorded separately,Do not send until exact Raj approval and route confirmation
+Cosmetic Mantra,healthcare/aesthetic clinic,WhatsApp/call,+91 80098 06060 / +91 98898 82246,Do not send/call until exact Raj approval
+Morya Diagnostics & Pathology Lab,diagnostics/pathology,WhatsApp/call,+91 91307 66868 / +91 99213 46868,Do not send/call until exact Raj approval
+Skin Care & Laser Centre,healthcare/aesthetic clinic,WhatsApp/call,7388656417 / 9451289837,Do not send/call until exact Raj approval
+Krushna Orthodontic & Dental Clinic,dental/orthodontic clinic,WhatsApp/call,+91 98906 29988,Do not send/call until exact Raj approval
+Paranjape Diagnostics,diagnostics/pathology,WhatsApp route,https://wa.me/918208292266,Do not send until exact Raj approval

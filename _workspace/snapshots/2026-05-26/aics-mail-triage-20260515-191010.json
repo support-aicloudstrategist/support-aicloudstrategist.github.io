@@ -1,0 +1,37 @@
+{
+  "ts": "2026-05-15T19:10:09+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [
+        {
+          "from": "Zapier",
+          "address": "learn@send.zapier.com",
+          "subject": "Put AI to work for you",
+          "received": "2026-05-15T12:52:03Z",
+          "preview": "It's already built in. Let it do your heavy lifting.\r\n\u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 2,
+      "already_seen": 47,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 50,
+      "errors": []
+    }
+  ],
+  "important_count": 0,
+  "review_count": 1,
+  "ignored_count": 2,
+  "errors": []
+}

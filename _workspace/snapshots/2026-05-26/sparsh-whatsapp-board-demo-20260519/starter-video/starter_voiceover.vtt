@@ -1,0 +1,124 @@
+1
+00:00:00,100 --> 00:00:05,110
+Starter Clinic Follow-up Board demo for Sparsh Hair Skin Dermatology Clinic.
+
+2
+00:00:05,060 --> 00:00:08,365
+This demo is for a very simple problem.
+
+3
+00:00:08,365 --> 00:00:15,709
+Clinics receive enquiries from WhatsApp, phone calls, Google, Instagram, and website forms.
+
+4
+00:00:15,709 --> 00:00:20,144
+But when everything is scattered, follow-up depends on memory.
+
+5
+00:00:20,144 --> 00:00:23,461
+One patient asks about hair fall timing.
+
+6
+00:00:23,461 --> 00:00:30,516
+Another asks for an acne consultation after six PM. Someone else gives a missed call and waits for callback.
+
+7
+00:00:30,516 --> 00:00:36,093
+If staff is busy, these warm enquiries can get delayed or completely missed.
+
+8
+00:00:36,093 --> 00:00:39,230
+The requirement is not a heavy CRM.
+
+9
+00:00:39,230 --> 00:00:46,033
+Sparsh first needs a practical follow-up board where every enquiry stays visible until someone closes it.
+
+10
+00:00:46,033 --> 00:00:54,819
+The owner should be able to see what is new, what needs appointment confirmation, what needs callback, and what has already been handled.
+
+11
+00:00:54,819 --> 00:01:00,564
+So in the Starter package, AICloudStrategist builds a simple clinic enquiry board.
+
+12
+00:01:00,564 --> 00:01:03,834
+Every enquiry becomes a small card.
+
+13
+00:01:03,834 --> 00:01:12,331
+The board has four useful sections: New Enquiries, Appointment Requests, Staff Follow-up, and Closed or Summary.
+
+14
+00:01:12,331 --> 00:01:18,617
+A WhatsApp message like, hair fall consultation timing, appears under New Enquiries.
+
+15
+00:01:18,617 --> 00:01:23,545
+If the person wants a slot, staff moves it to Appointment Requests.
+
+16
+00:01:23,545 --> 00:01:28,149
+If callback is needed, it goes to Staff Follow-up with a reminder.
+
+17
+00:01:28,149 --> 00:01:34,326
+Once the enquiry is booked, not interested, or completed, it moves to Closed.
+
+18
+00:01:34,326 --> 00:01:37,487
+The components are intentionally simple.
+
+19
+00:01:37,487 --> 00:01:39,903
+A clinic enquiry board.
+
+20
+00:01:39,903 --> 00:01:43,593
+WhatsApp click-to-chat or enquiry form capture.
+
+21
+00:01:43,593 --> 00:01:48,870
+Basic reply templates for timing, location and appointment confirmation.
+
+22
+00:01:48,870 --> 00:01:54,002
+A daily owner summary showing new, pending, booked and missed follow-ups.
+
+23
+00:01:54,002 --> 00:02:01,983
+And a privacy-safe setup: no diagnosis, no treatment advice, and no patient medical records in the demo.
+
+24
+00:02:01,983 --> 00:02:04,675
+The benefit for the clinic is clear.
+
+25
+00:02:04,675 --> 00:02:08,954
+Warm leads do not disappear inside WhatsApp chat history.
+
+26
+00:02:08,954 --> 00:02:12,055
+Reception knows what needs action today.
+
+27
+00:02:12,055 --> 00:02:16,346
+The owner gets visibility without checking every staff phone.
+
+28
+00:02:16,346 --> 00:02:21,875
+Patients get faster replies for timings, location and appointment requests.
+
+29
+00:02:21,875 --> 00:02:30,360
+And the clinic can start small, then later upgrade to Growth automation or an advanced WhatsApp API workflow only if needed.
+
+30
+00:02:30,360 --> 00:02:37,572
+For Sparsh, the first step is only a ten to fifteen minute walkthrough of this starter board using sample data.
+
+31
+00:02:37,572 --> 00:02:43,882
+After that, we understand their real enquiry process and suggest the smallest practical pilot.
+

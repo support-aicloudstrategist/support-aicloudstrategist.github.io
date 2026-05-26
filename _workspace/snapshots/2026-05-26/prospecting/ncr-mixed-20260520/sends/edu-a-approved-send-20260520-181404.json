@@ -1,0 +1,55 @@
+{
+  "ts": "2026-05-20T18:14:04+0530",
+  "template": "EDU-A",
+  "approval": "Raj approved EDU-A, Telegram message 5527",
+  "creative": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/edu-a/edu-a-approval-creative-final.png",
+  "results": [
+    {
+      "business_name": "DUCAT India",
+      "to": "919999993213",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_42520344043563@lid_3EB0458E645AA14EFF003B",
+        "to": "919999993213@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/edu-a/edu-a-approval-creative-final.png"
+      }
+    },
+    {
+      "business_name": "CETPA Infotech Pvt. Ltd.",
+      "to": "917827011536",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_264089016213621@lid_3EB06C9E17653A75BF2FAB",
+        "to": "917827011536@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/edu-a/edu-a-approval-creative-final.png"
+      }
+    },
+    {
+      "business_name": "Drishti IAS",
+      "to": "918010440440",
+      "skip_reason": "not_registered_on_whatsapp",
+      "status": "skipped",
+      "reason": "not_registered_on_whatsapp"
+    },
+    {
+      "business_name": "FIITJEE",
+      "to": "917825895400",
+      "skip_reason": "not_registered_on_whatsapp",
+      "status": "skipped",
+      "reason": "not_registered_on_whatsapp"
+    },
+    {
+      "business_name": "BASU Classes",
+      "to": "918130147179",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_198565079036142@lid_3EB0E478F712F0FD4DC9DF",
+        "to": "918130147179@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/edu-a/edu-a-approval-creative-final.png"
+      }
+    }
+  ]
+}

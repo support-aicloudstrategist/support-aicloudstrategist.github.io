@@ -1,0 +1,16 @@
+{
+  "ts": "2026-05-20T15:43:56+0530",
+  "sender": "contact@aicloudstrategist.com",
+  "purpose": "prospect_outreach",
+  "subject": "Free 20-minute check: are dental implant and aligner enquiries leaking between calls, WhatsApp and follow-ups?",
+  "approval_ref": "Telegram AICS-Ops message 5433 from Raj at 2026-05-20 15:41 IST: Approved DENTAL-A template + category",
+  "mode": "single_message",
+  "results": [
+    {
+      "to": [
+        "smilex.info1@gmail.com"
+      ],
+      "status": "sent"
+    }
+  ]
+}

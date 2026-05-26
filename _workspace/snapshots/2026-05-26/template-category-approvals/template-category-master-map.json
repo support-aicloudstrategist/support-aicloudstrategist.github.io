@@ -1,0 +1,50 @@
+{
+  "version": "2026-05-20",
+  "directive": "One-time approval for template + customer category. Once approved, Jarvis may send the same approved template to verified matching prospects on a daily/scheduled basis without asking again.",
+  "mappings": [
+    {
+      "template_id": "DIAG-LAB-A",
+      "category": "Independent diagnostics/pathology labs with public business email",
+      "channel": "email",
+      "status": "approved_by_raj",
+      "approval_keyword": "APPROVE TEMPLATE DIAG-LAB-A",
+      "template_file": "/home/OpenClaw/.openclaw/workspace/reports/template-category-approvals/2026-05-20-diagnostics-template-a/diag-lab-a-production-template.html",
+      "approval_card": "/home/OpenClaw/.openclaw/workspace/reports/template-category-approvals/2026-05-20-diagnostics-template-a/template-category-diag-lab-a-card-v2.png",
+      "sender": "contact@aicloudstrategist.com",
+      "rules": [
+        "verified public business email only",
+        "individual sends only",
+        "no CC/BCC/bulk",
+        "no patient data request",
+        "no medical/compliance outcome claim",
+        "use current AICS contacts",
+        "material changes require re-approval"
+      ],
+      "approved_by": "Raj",
+      "approved_at_ist": "2026-05-20 19:46 IST",
+      "approval_ref": "Telegram AICS-Ops message 5572: Raj approved APPROVE TEMPLATE DIAG-LAB-A; sends executed 2026-05-20 19:47 IST"
+    },
+    {
+      "template_id": "DENTAL-A",
+      "category": "Dental implant, orthodontic and aligner clinics with public business email",
+      "channel": "email",
+      "status": "approved_by_raj",
+      "approval_keyword": "APPROVE TEMPLATE DENTAL-A",
+      "template_file": "/home/OpenClaw/.openclaw/workspace/reports/template-category-approvals/2026-05-20-dental-template-a/dental-a-production-template.html",
+      "approval_card": "/home/OpenClaw/.openclaw/workspace/reports/template-category-approvals/2026-05-20-dental-template-a/template-category-dental-a-card.png",
+      "sender": "contact@aicloudstrategist.com",
+      "rules": [
+        "verified public business email only",
+        "individual sends only",
+        "no CC/BCC/bulk",
+        "no patient data request",
+        "no medical/compliance outcome claim",
+        "use current AICS contacts",
+        "material changes require re-approval"
+      ],
+      "approved_by": "Raj",
+      "approved_at_ist": "2026-05-20 15:41 IST",
+      "approval_ref": "Telegram AICS-Ops message 5433: Approved"
+    }
+  ]
+}

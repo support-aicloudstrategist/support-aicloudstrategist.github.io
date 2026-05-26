@@ -1,0 +1,29 @@
+Subject: Free enquiry-flow review for {{business_name}}
+Sender: Anushka Bhattacharya, Director, AICloudStrategist <contact@aicloudstrategist.com>
+
+Namaste {{business_name}} Team,
+
+Many clinics and diagnostics teams receive enquiries from calls, WhatsApp, website forms and repeat follow-ups. The practical gap is usually visibility: who needs a callback, what is pending, and where the enquiry came from.
+
+AICloudStrategist helps clinic teams review the admin workflow and identify simple fixes for enquiry capture, callback visibility and appointment follow-up. No patient medical data is required for the first review.
+
+What the free review checks:
+- Missed call / WhatsApp enquiry visibility
+- Callback and appointment follow-up status
+- Staff handover and daily owner/manager summary
+- Privacy-aware first review; no treatment or outcome claims
+
+Can we share a free 10-minute enquiry-leakage review for {{business_name}}?
+
+Free review: https://aicloudstrategist.com/free-business-review
+WhatsApp: +91 87963 02608
+Voice line: +91 80654 80898
+Email: contact@aicloudstrategist.com
+Support: support@aicloudstrategist.com
+
+— Anushka Bhattacharya
+Director, AICloudStrategist
+Website: https://aicloudstrategist.com/
+
+Guardrail: Healthcare guardrail: admin/enquiry workflow only; no medical advice, outcome, diagnosis, treatment or compliance guarantee claims.
+If this is not relevant, reply STOP and we will not follow up.

@@ -1,0 +1,38 @@
+{
+  "call_id": "demo-coaching-1778905384",
+  "caller_phrase": "Hello Asha, I run a coaching institute in Greater Noida and I need a website, WhatsApp enquiry capture, and follow up automation.",
+  "ws": "wss://calling.aicloudstrategist.com/stream/ws",
+  "greeting_ok": true,
+  "greeting_audio_bytes": 62976,
+  "greeting_events": [
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "checkpoint"
+  ],
+  "reply_ok": true,
+  "reply_audio_bytes": 119616,
+  "reply_events": [
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "playAudio",
+    "checkpoint"
+  ],
+  "reply_checkpoint": {
+    "event": "checkpoint",
+    "streamId": "demo-stream",
+    "name": "reply-4"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "ts": "2026-05-19T20:46:30+0530",
+  "sender": "contact@aicloudstrategist.com",
+  "purpose": "customer_outreach",
+  "subject": "Test",
+  "approval_ref": "TEST",
+  "mode": "single_message",
+  "results": [
+    {
+      "to": [
+        "test@example.com"
+      ],
+      "status": "dry_run"
+    }
+  ]
+}

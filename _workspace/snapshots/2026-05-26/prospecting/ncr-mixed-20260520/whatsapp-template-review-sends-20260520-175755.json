@@ -1,0 +1,63 @@
+{
+  "ts": "2026-05-20T17:57:55+0530",
+  "to": "Raj personal WhatsApp +91 96252 66139",
+  "from": "AICS WhatsApp +91 87963 02608",
+  "results": [
+    {
+      "template_id": "HEALTHCARE-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB03AA2C067D094D92E54",
+        "to": "919625266139@c.us"
+      }
+    },
+    {
+      "template_id": "EDU-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB0DB19B2AA3F15EEB5B9",
+        "to": "919625266139@c.us"
+      }
+    },
+    {
+      "template_id": "MFG-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB07EEBD7FEA8B642B900",
+        "to": "919625266139@c.us"
+      }
+    },
+    {
+      "template_id": "RE-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB03F5309C1E2D156D1BE",
+        "to": "919625266139@c.us"
+      }
+    },
+    {
+      "template_id": "SALON-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB05EABB3EE6EDCC79CC9",
+        "to": "919625266139@c.us"
+      }
+    },
+    {
+      "template_id": "FOOD-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB0CF9202EA7B26DC5E6B",
+        "to": "919625266139@c.us"
+      }
+    },
+    {
+      "template_id": "PROF-A",
+      "response": {
+        "ok": true,
+        "id": "true_25383307075622@lid_3EB0E3384BD4C007FDEC1D",
+        "to": "919625266139@c.us"
+      }
+    }
+  ]
+}

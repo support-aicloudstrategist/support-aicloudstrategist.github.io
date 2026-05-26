@@ -1,0 +1,1 @@
+Starter board. Every enquiry stays visible until it is handled. The clinic can start with sample data and then move to a live pilot.

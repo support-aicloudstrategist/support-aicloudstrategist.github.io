@@ -1,0 +1,250 @@
+{
+  "base": "https://calling.aicloudstrategist.com/stream",
+  "ws": "wss://calling.aicloudstrategist.com/stream/ws",
+  "started_at": "2026-05-16 08:46:21 IST",
+  "rounds": [
+    {
+      "round": 1,
+      "phrase": "Hello Asha, I run a clinic and need website automation for appointments.",
+      "call_id": "synthetic-round-1-1778901382",
+      "greeting": {
+        "ok": true,
+        "counts": {
+          "playAudio": 382,
+          "checkpoint": 1
+        },
+        "audio_bytes": 60967,
+        "checkpoints": [
+          "greeting"
+        ],
+        "clearAudio": 0,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-1",
+          "name": "greeting"
+        }
+      },
+      "reply": {
+        "ok": true,
+        "counts": {
+          "clearAudio": 1,
+          "playAudio": 1049,
+          "checkpoint": 1
+        },
+        "audio_bytes": 167825,
+        "checkpoints": [
+          "reply-4"
+        ],
+        "clearAudio": 1,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-1",
+          "name": "reply-4"
+        }
+      },
+      "pass": true,
+      "elapsed_sec": 10.46
+    },
+    {
+      "round": 2,
+      "phrase": "I have a school and want WhatsApp enquiry capture and follow up reminders.",
+      "call_id": "synthetic-round-2-1778901392",
+      "greeting": {
+        "ok": true,
+        "counts": {
+          "playAudio": 382,
+          "checkpoint": 1
+        },
+        "audio_bytes": 60967,
+        "checkpoints": [
+          "greeting"
+        ],
+        "clearAudio": 0,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-2",
+          "name": "greeting"
+        }
+      },
+      "reply": {
+        "ok": true,
+        "counts": {
+          "clearAudio": 1,
+          "playAudio": 1123,
+          "checkpoint": 1
+        },
+        "audio_bytes": 179607,
+        "checkpoints": [
+          "reply-4"
+        ],
+        "clearAudio": 1,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-2",
+          "name": "reply-4"
+        }
+      },
+      "pass": true,
+      "elapsed_sec": 10.52
+    },
+    {
+      "round": 3,
+      "phrase": "We are a cloud team and need AWS cost optimisation and security review.",
+      "call_id": "synthetic-round-3-1778901403",
+      "greeting": {
+        "ok": true,
+        "counts": {
+          "playAudio": 382,
+          "checkpoint": 1
+        },
+        "audio_bytes": 60967,
+        "checkpoints": [
+          "greeting"
+        ],
+        "clearAudio": 0,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-3",
+          "name": "greeting"
+        }
+      },
+      "reply": {
+        "ok": true,
+        "counts": {
+          "clearAudio": 1,
+          "playAudio": 1158,
+          "checkpoint": 1
+        },
+        "audio_bytes": 185258,
+        "checkpoints": [
+          "reply-4"
+        ],
+        "clearAudio": 1,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-3",
+          "name": "reply-4"
+        }
+      },
+      "pass": true,
+      "elapsed_sec": 11.5
+    },
+    {
+      "round": 4,
+      "phrase": "My shop has no website. I need a simple digital presence and lead form.",
+      "call_id": "synthetic-round-4-1778901414",
+      "greeting": {
+        "ok": true,
+        "counts": {
+          "playAudio": 382,
+          "checkpoint": 1
+        },
+        "audio_bytes": 60967,
+        "checkpoints": [
+          "greeting"
+        ],
+        "clearAudio": 0,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-4",
+          "name": "greeting"
+        }
+      },
+      "reply": {
+        "ok": true,
+        "counts": {
+          "clearAudio": 1,
+          "playAudio": 1369,
+          "checkpoint": 1
+        },
+        "audio_bytes": 218968,
+        "checkpoints": [
+          "reply-4"
+        ],
+        "clearAudio": 1,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-4",
+          "name": "reply-4"
+        }
+      },
+      "pass": true,
+      "elapsed_sec": 10.82
+    },
+    {
+      "round": 5,
+      "phrase": "I need compliance trust pages, privacy policy, and better customer enquiry handling.",
+      "call_id": "synthetic-round-5-1778901425",
+      "greeting": {
+        "ok": true,
+        "counts": {
+          "playAudio": 382,
+          "checkpoint": 1
+        },
+        "audio_bytes": 60967,
+        "checkpoints": [
+          "greeting"
+        ],
+        "clearAudio": 0,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-5",
+          "name": "greeting"
+        }
+      },
+      "reply": {
+        "ok": true,
+        "counts": {
+          "clearAudio": 1,
+          "playAudio": 1123,
+          "checkpoint": 1
+        },
+        "audio_bytes": 179607,
+        "checkpoints": [
+          "reply-4"
+        ],
+        "clearAudio": 1,
+        "last": {
+          "event": "checkpoint",
+          "streamId": "stream-5",
+          "name": "reply-4"
+        }
+      },
+      "pass": true,
+      "elapsed_sec": 11.78
+    }
+  ],
+  "health_status": 200,
+  "health": {
+    "ok": true,
+    "service": "AICS Vobiz Stream Agent",
+    "log": "/app/run/aics-vobiz-stream-20260515-170131.log",
+    "has_sarvam": false,
+    "has_deepgram": false,
+    "has_groq": false,
+    "has_vosk": true,
+    "stt_provider": "auto",
+    "stt_order": [
+      "sarvam",
+      "deepgram",
+      "groq",
+      "vosk"
+    ],
+    "tts_provider": "auto",
+    "tts_order": [
+      "sarvam",
+      "deepgram",
+      "espeak"
+    ],
+    "llm_provider": "v10",
+    "v10_url": "http://aics-v10-brain:8799/ask",
+    "voice": "en-in+f3",
+    "sarvam_tts_model": "bulbul:v2",
+    "deepgram_tts_model": "aura-2-thalia-en"
+  },
+  "answer_status": 200,
+  "answer_contains_wss": true,
+  "answer_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n  <Stream bidirectional=\"true\" keepCallAlive=\"true\" audioTrack=\"inbound\" streamTimeout=\"1800\" contentType=\"audio/x-mulaw;rate=8000\" statusCallbackUrl=\"https://calling.aicloudstrategist.com/stream/stream-status\" statusCallbackMethod=\"POST\">wss://calling.aicloudstrategist.com/stream/ws</Stream>\n</Response>\n",
+  "passed_rounds": 5,
+  "overall_pass": true
+}

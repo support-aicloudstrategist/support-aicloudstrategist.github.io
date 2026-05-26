@@ -1,0 +1,14 @@
+{
+  "phase": 1,
+  "status": "completed_partial_gmb_blocked",
+  "tier1_total": 11,
+  "medium_or_high_validation": 10,
+  "low_validation": 1,
+  "blockers": [
+    "web_search tool unavailable (SearXNG not configured)",
+    "Google Maps dynamic page did not expose GMB details",
+    "Justdial detail pages returned empty 14-byte response; search/result pages exposed JSON-LD and cards"
+  ],
+  "output": "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/prospect-list/aics-prospects-bengaluru-enriched.csv",
+  "timestamp": "2026-05-24T20:46:00+05:30"
+}

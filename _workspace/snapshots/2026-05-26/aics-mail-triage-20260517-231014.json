@@ -1,0 +1,46 @@
+{
+  "ts": "2026-05-17T23:10:13+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [
+        {
+          "from": "Amazon Web Services",
+          "address": "no-reply@amazonaws.com",
+          "subject": "Customer verification successfully completed",
+          "received": "2026-05-17T17:07:49Z",
+          "preview": "Greetings from Amazon Web Services,\r\n\r\nWe were able to complete customer verification based on the information you submitted for your AWS account. No further action is required at your end.\r\n\r\nYou can view or make changes to your customer verification inf",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAHTULXAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "review": [
+        {
+          "from": "The Airtable Team",
+          "address": "team@mail.airtable.com",
+          "subject": "Create the perfect Airtable database",
+          "received": "2026-05-17T15:59:43Z",
+          "preview": "Learn how to create data that works for you\r\n\u200a\r\nLearn how adding data the right way can set you up for long-term success\r\n\r\nThe data your team is focused on should form the foundation of your workflow. That\u2019s why the first step to building in Airtable is ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAHTULWAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 0,
+      "already_seen": 48,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 50,
+      "errors": []
+    }
+  ],
+  "important_count": 1,
+  "review_count": 1,
+  "ignored_count": 0,
+  "errors": []
+}

@@ -1,0 +1,13 @@
+{
+  "ts": "2026-05-20T18:21:50+0530",
+  "template": "RE-A",
+  "approval": "Raj approved RE-A, Telegram message 5537",
+  "results": [
+    {
+      "business_name": "Investors Clinic",
+      "to": "918010101010",
+      "status": "skipped",
+      "reason": "not_registered_on_whatsapp"
+    }
+  ]
+}

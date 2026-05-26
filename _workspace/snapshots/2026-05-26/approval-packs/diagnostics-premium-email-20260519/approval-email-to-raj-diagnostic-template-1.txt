@@ -1,0 +1,9 @@
+Approval required for email outreach
+
+Target count: 1
+Recipient: The Diagnostic Clinical Laboratory <diagnostic.official@gmail.com>
+From: contact@aicloudstrategist.com
+Template: Template 1
+Subject: Quick check: are any lab enquiries or report requests slipping between WhatsApp, calls and website?
+
+Full production email is rendered in HTML in the approval email. Reply: APPROVE / CHANGES / REJECT.

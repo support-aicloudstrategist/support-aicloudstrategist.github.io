@@ -1,0 +1,456 @@
+{
+  "ts": "2026-05-14T15:22:25+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [
+        {
+          "from": "Reddit Support (Reddit Support)",
+          "address": "support@reddit.zendesk.com",
+          "subject": "[Reddit Support] Re: Your request sent to Reddit Support",
+          "received": "2026-05-13T18:37:11Z",
+          "preview": "Your request (17834564) has been updated. To add additional comments, reply to this email.\r\n\r\n\r\n\r\nReddit Support (Reddit Support)\r\n\r\nMay 13, 2026, 11:37 PDT\r\n\r\nThank you for your interest in using the Reddit Data API.\r\nWe have reviewed your recent request",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9SAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "The Airtable Team",
+          "address": "team@mail.airtable.com",
+          "subject": "Welcome to Airtable! Let\u2019s start building",
+          "received": "2026-05-13T15:59:47Z",
+          "preview": "Here\u2019s how to get started fast\r\n\r\nYou\u2019ve been added to a workspace \u2014 and there\u2019s so much you can do. From project tracking to powerful AI tools, Airtable gives you everything you need to start building today.\r\n\r\nOver the next two weeks, we\u2019ll walk you thr",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9QAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Google",
+          "address": "no-reply@accounts.google.com",
+          "subject": "Security alert",
+          "received": "2026-05-13T06:33:02Z",
+          "preview": "A new sign-in on Linux\r\nsupport@aicloudstrategist.com\r\nWe noticed a new sign-in to your Google Account on a Linux device. If this was you, you don\u2019t need to do anything. If not, we\u2019ll help you secure your account.\r\nCheck activity\r\nYou can also see securit",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9JAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "GitHub",
+          "address": "noreply@github.com",
+          "subject": "One of your invitations didn't reach its recipient",
+          "received": "2026-05-13T05:29:58Z",
+          "preview": "Some of your invitations didn\u2019t reach their recipients\r\n\r\nThere\u2019s been a hold up in getting some of your teammates onboarded, but don\u2019t let it stop you. See what the problem was and how you can fix it.\r\nCheck out the steps you can take to fix any errors o",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9HAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Google Payments",
+          "address": "payments-noreply@google.com",
+          "subject": "Google Payments: Your India tax info has been accepted",
+          "received": "2026-05-12T13:14:19Z",
+          "preview": "Your India tax information has been accepted\r\nThe India tax information that you added to your payments profile has been accepted and validated, and is now active.\r\nYou can view your tax information at any time.\r\n View tax info\r\nGoogle can't advise yo",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9AAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "GitHub",
+          "address": "noreply@github.com",
+          "subject": "[GitHub] Please verify your device",
+          "received": "2026-05-11T17:05:42Z",
+          "preview": "Hey support-aicloudstrategist!\r\n\r\nA sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.\r\n\r\nDevice: Chrome on macOS\r\nVerification code: 112",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi8mAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Apollo",
+          "address": "hello@mail.apollo.io",
+          "subject": "How to find the contacts most likely to reply this week",
+          "received": "2026-05-10T21:28:48Z",
+          "preview": "Three filters that surface warmer leads than a cold list ever will. \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAC%2F7eWAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: RE: TrackingID#2605080030006208 - Graph sendMail 550 5.7.708 requested details",
+          "received": "2026-05-08T14:16:09Z",
+          "preview": "Your message to help@mail.support.microsoft.com couldn't be delivered.\r\nhelp wasn't found at mail.support.microsoft.com.\r\nsupport         Office 365      help\r\nAction Required                 Recipient\r\nUnknown To address\r\n\r\nHow to Fix It\r\nThe address mig",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAABTX5oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph minimal me send 20260508-193949",
+          "received": "2026-05-08T14:11:58Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAABTX5nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph API test",
+          "received": "2026-05-08T08:47:45Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAABTX5VAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph ME sendMail variant test 20260508-135915",
+          "received": "2026-05-08T08:31:23Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAABTX5UAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud GRAPH API visible failure demo 20260508-135240",
+          "received": "2026-05-08T08:24:49Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAABTX5TAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "review": [
+        {
+          "from": "Reddit Support",
+          "address": "support@reddit.zendesk.com",
+          "subject": "API Access Request Submission",
+          "received": "2026-05-13T16:32:30Z",
+          "preview": "Thank you, we received your request!\r\n\r\nReddit\r\n\r\nThis email is a service from Reddit Support.\r\n[1JRKJL-DD1YD]",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9RAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Kash at Clay",
+          "address": "kash@clay.com",
+          "subject": "You're connected: Clay is now live inside Claude",
+          "received": "2026-05-12T13:20:03Z",
+          "preview": "You've successfully connected Clay inside Claude, which means you can now access Clay's research infrastructure directly in any Claude conversation.\u200c \u200c \u200c\r\n\r\nHi Support,\r\n\r\n\r\n\r\nYou\u2019ve successfully connected Clay in Claude, which means you can now access Cl",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9CAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Supabase",
+          "address": "welcome@supabase.com",
+          "subject": "Welcome to Supabase",
+          "received": "2026-05-12T13:05:10Z",
+          "preview": "Hey there,\r\n\r\nWelcome to Supabase, the Postgres development platform.\r\n\r\nSupabase gives you all the backend features you need to build a product: Database, Authentication, Storage, Realtime API, Edge Functions, Serverless APIs, and more.\r\n\r\nCreate Your Fi",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi8%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Zapier",
+          "address": "learn@send.zapier.com",
+          "subject": "Build your first Zap with Copilot \u26a1",
+          "received": "2026-05-12T12:51:59Z",
+          "preview": "Just describe what you want to automate. Copilot will handle the rest.\r\n\u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi88AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Lucid",
+          "address": "email@e.lucid.co",
+          "subject": "[Onboarding] Your Lucidchart starter guide",
+          "received": "2026-05-12T12:35:21Z",
+          "preview": "Here\u2019s your checklist to get started \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi86AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Lucid",
+          "address": "account@app.lucid.co",
+          "subject": "Confirmation of your Lucidchart account",
+          "received": "2026-05-12T12:23:09Z",
+          "preview": "Explore your new account \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c \u200c ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi85AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "The Miro Team",
+          "address": "your@product.miro.com",
+          "subject": "Welcome to Miro, Rajiv Gupta! \ud83d\udc4b",
+          "received": "2026-05-12T12:04:20Z",
+          "preview": "Get started in three simple steps.\r\n\u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c   \u034f \u200c",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi84AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Notion Team",
+          "address": "team@mail.notion.so",
+          "subject": "From chaos to clarity: Database edition",
+          "received": "2026-05-12T02:00:53Z",
+          "preview": "Get started with a quick prompt \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi8wAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "startup.india@investindia.org.in",
+          "address": "startup.india@investindia.org.in",
+          "subject": "Welcome to the Startup India Hub",
+          "received": "2026-05-11T09:30:21Z",
+          "preview": "Hi AICLOUDSTRATEGIST PRIVATE LIMITED,\r\n\r\nWelcome to the Startup India Hub!\r\n\r\nYour profile has been updated/published. Now you can login to the system.\r\n\r\nRegards,\r\n\r\nTeam - Startup India Hub",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAC%2F7emAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Apollo",
+          "address": "hello@mail.apollo.io",
+          "subject": "How to save $120+ per year on Apollo",
+          "received": "2026-05-11T09:28:49Z",
+          "preview": "Switch to annual billing to save $$$ and secure Apollo for one year. \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAC%2F7ekAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Support",
+          "address": "support@mail.support.microsoft.com",
+          "subject": "Case 2605080030006208\u2009 Your question was succe... - TrackingID#2605080030006208",
+          "received": "2026-05-08T14:00:34Z",
+          "preview": "Support\r\n\r\nThank you. Your question was successfully submitted to Microsoft Support.\r\n\r\nPlease keep in mind: techsupport.microsoft.com, microsoftsupport.com and microsoft.com are valid email domains used for communications related to your support re",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAABTX5lAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 27,
+      "already_seen": 0,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [
+        {
+          "from": "Rajiv Gupta",
+          "address": "support@aicloudstrategist.com",
+          "subject": "Exotel - AicloudStrategist meeting",
+          "received": "2026-05-14T08:07:03Z",
+          "preview": "We are looking for a production-ready setup for AICloudStrategist:\r\n\r\n1. Public hotline / virtual number\r\n- Indian virtual/local/toll-free number for website, ads, and customer calls\r\n- Call forwarding to our backend/private number while keeping the publi",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAAFHBpJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Vyom Padalia",
+          "address": "invitations@linkedin.com",
+          "subject": "You have an invitation",
+          "received": "2026-05-14T07:09:36Z",
+          "preview": "Vyom, Chief of Staff from wrrk.ai is waiting for your response\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAAFHBpIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "notifications-noreply@linkedin.com",
+          "subject": "IT Consulting request from Harsh shrivas and other clients are available. Show Requests.",
+          "received": "2026-05-13T18:17:43Z",
+          "preview": "IT Consulting request from Harsh shrivas and other clients are available. Show Requests.\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADq0wCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Rajiv Gupta",
+          "address": "support@aicloudstrategist.com",
+          "subject": "[TEST] AICloudStrategist Advisory \u2014 premium email v3 preview",
+          "received": "2026-05-13T12:22:41Z",
+          "preview": "Cloud cost, security and reliability clarity \u2014 a focused senior review for growing teams.\r\nAICloudStrategist Advisory\r\nCloud \u2022 FinOps \u2022 DevSecOps \u2022 SRE \u2022 AI readiness\r\nFind cloud waste, risk and reliability gaps before they become expensive.\r\n\r\nFor founde",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADq0v8AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "notifications-noreply@linkedin.com",
+          "subject": "IT Consulting request from Abhishek Gupta and other clients are available. Show Requests.",
+          "received": "2026-05-11T18:17:20Z",
+          "preview": "IT Consulting request from Abhishek Gupta and other clients are available. Show Requests.\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADAyhjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "notifications-noreply@linkedin.com",
+          "subject": "You have 2 new invitations",
+          "received": "2026-05-11T15:09:30Z",
+          "preview": "See who reached out, Anushka \ud83e\udd1d\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADAyhiAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "notifications-noreply@linkedin.com",
+          "subject": "You have 1 new invitation",
+          "received": "2026-05-09T14:19:24Z",
+          "preview": "See who reached out, Anu \ud83e\udd1d\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAABgHCNAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "notifications-noreply@linkedin.com",
+          "subject": "IT Consulting request from Priyanka Rathee and other clients are available. Show Requests.",
+          "received": "2026-05-08T20:47:20Z",
+          "preview": "IT Consulting request from Priyanka Rathee and other clients are available. Show Requests.\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAABgHCIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph minimal user send 20260508-193949",
+          "received": "2026-05-08T14:11:57Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq22QAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph heartbeat verification 20260508-185540",
+          "received": "2026-05-08T13:27:50Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq22AAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph API test",
+          "received": "2026-05-08T08:47:23Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq21QAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph API test",
+          "received": "2026-05-08T08:46:43Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq21AAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "NayaBansIradatNagarDelhi  Branchhead",
+          "address": "NayaBansIradatNagarDelhi.Branchhead@axis.bank.in",
+          "subject": "Welcome to Axis Bank \u2013 Exclusive Current Account Benefits for Your New Company",
+          "received": "2026-05-08T08:34:40Z",
+          "preview": "Proposal: Current Account Offering for Newly Registered Companies\r\nDear Sir/Madam,\r\nCongratulations on the successful registration of your company with the Ministry of Corporate Affairs (MCA).\r\nAt Axis Bank, we understand the unique financial needs of new",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq20wAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Ubuntu O365 self-resolution test contact 20260508-132818",
+          "received": "2026-05-08T08:00:30Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq20gAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud O365 Ubuntu Graph verification contact 20260508-121127",
+          "received": "2026-05-08T06:43:34Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq20QAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud O365 external verification contact 20260508-113404",
+          "received": "2026-05-08T06:06:15Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq2zwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud O365 external unblock verification contact@aicloudstrategist.com 20260507-194915",
+          "received": "2026-05-07T14:21:23Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26tgAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "notifications-noreply@linkedin.com",
+          "subject": "You have 1 new invitation",
+          "received": "2026-05-07T14:18:58Z",
+          "preview": "See who reached out, Anu \ud83e\udd1d\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26tQAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud outbound recovery probe contact 20260507-183707",
+          "received": "2026-05-07T13:09:14Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26sgAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud O365 final verification contact 2026-05-07T17:18:50+05:30",
+          "received": "2026-05-07T11:51:01Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26rwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud O365 final verification contact 2026-05-07T17:15:52+05:30",
+          "received": "2026-05-07T11:48:06Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26qwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud O365 remediation Graph contact test 2026-05-07T16:59:03+05:30",
+          "received": "2026-05-07T11:31:10Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26qQAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Microsoft Outlook",
+          "address": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud contact O365 DKIM delivery test 2026-05-07T16:29:09+05:30",
+          "received": "2026-05-07T11:01:15Z",
+          "preview": "Delivery has failed to these recipients or groups:\r\n\r\ngupta082013@gmail.com (gupta082013@gmail.com)\r\nYour message wasn't delivered because the recipient's email provider rejected it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDiagnostic information for administrators:\r\n\r\nGeneratin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26pwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "review": [
+        {
+          "from": "Mohit Jain",
+          "address": "mohit@eaccounting.in",
+          "subject": "First Month Compliance Checklist",
+          "received": "2026-05-13T06:27:37Z",
+          "preview": "Company Name: AICLOUDSTRATEGIST PRIVATE LIMITED\r\nCIN: U62020DC2026PTC470945\r\n\r\nDear Director,\r\n\r\nWe hope this message finds you well.\r\n\r\nCongratulations on completing two weeks of incorporation! Here\u2019s your essential first-month compliance checklist:\r\n\r\n ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADq0v7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "yusuf.m@abtikservices.com",
+          "address": "yusuf.m@abtikservices.com",
+          "subject": "Startup India Seed Fund Scheme Process",
+          "received": "2026-05-12T12:44:50Z",
+          "preview": "Dear Startup Founder,\r\n\r\nGreetings from ABTIK Group of Companies \ud83d\udc4b\r\n\r\nCongratulations on successfully obtaining your Startup India Certificate. This recognition opens doors to multiple government-backed funding opportunities aimed at supporting innovatio",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADq0v2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Anushka bhattacharya",
+          "address": "bhattacharyaanushka01@gmail.com",
+          "subject": "",
+          "received": "2026-05-11T10:49:55Z",
+          "preview": "Abc",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAADAyhgAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "LinkedIn",
+          "address": "jobs-listings@linkedin.com",
+          "subject": "Atlys is hiring a Entrepreneur-in-Residence (EIR)",
+          "received": "2026-05-09T03:09:30Z",
+          "preview": "Posted on 4/23/2026\r\n\u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f \u034f  \u034f \u034f",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAABgHCKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Narendra Tiwari",
+          "address": "tiwarinites400@gmail.com",
+          "subject": "Simplify Your Business Registration & Certification",
+          "received": "2026-05-08T10:38:19Z",
+          "preview": "Hello,\r\n\r\nI assist businesses with certification and registration to grow your business smoothly.\r\n\r\nOur services Include:\r\n\r\n  1.  ISO Certification ( All standards )\r\n  2.  IEC\r\n  3.  Startup India Registration\r\n  4.  MSME\r\n  5.  Trademark\r\n  6.  GEM\r\n ",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq21gAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Global Startup Ventures",
+          "address": "info@9055115.brevosend.com",
+          "subject": "FUNDING SUPPORT FROM GOVERNMENT TO STARTUPS COMPANIES",
+          "received": "2026-05-08T06:35:19Z",
+          "preview": "Dear Sir/Mam\r\nThis Mail Is Regarding SEED FUNDING\r\n\r\nIn this Scheme Government are providing Upto 70 lacs Funding To startups Companies In That (20 Lac) Is grant which you don't want to repay its totally Non-Refundable and Rest (50 Lac) Amount of fundin",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAdq20AAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "from": "Renuka Tiwari",
+          "address": "tiwaripriya1222@gmail.com",
+          "subject": "This top valuable website for you !",
+          "received": "2026-05-07T11:33:35Z",
+          "preview": "This top valuable website for you !\r\n\r\nI'm  Renuka Tiwari   from Blue Brain Technologies Pvt Ltd....\r\n\r\nOur Company Works :\r\n\r\nWebsite Design Development\r\nMobile App Development\r\nCRM, HR management Software\r\nSocial Media Marketing\r\nSearch Engine Optimizat",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AQMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAADXmis8zB9UkOptn1hB3Z6iAcAiw1Kt7ENuEC6%2BYsbcw0QggAAAgEMAAAAiw1Kt7ENuEC6%2BYsbcw0QggAAAU26qgAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 20,
+      "already_seen": 0,
+      "errors": []
+    }
+  ],
+  "important_count": 35,
+  "review_count": 18,
+  "ignored_count": 47,
+  "errors": []
+}

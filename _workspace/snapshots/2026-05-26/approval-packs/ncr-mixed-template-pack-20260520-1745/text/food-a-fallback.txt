@@ -1,0 +1,29 @@
+Subject: Free customer-support workflow review for {{business_name}}
+Sender: Anushka Bhattacharya, Director, AICloudStrategist <contact@aicloudstrategist.com>
+
+Namaste {{business_name}} Team,
+
+Food and retail brands receive customer queries from websites, apps, phone, WhatsApp and store channels. When support and feedback are scattered, issues take longer to resolve.
+
+AICloudStrategist helps teams review enquiry and complaint routing, WhatsApp/order-help workflows, SLA visibility, cloud backup and process hygiene.
+
+What the free review checks:
+- Enquiry and complaint routing map
+- WhatsApp/order-help automation opportunities
+- SLA and pending-ticket visibility
+- Feedback/review capture and process hygiene
+
+Can we share a free 10-minute customer-support workflow review for {{business_name}}?
+
+Free review: https://aicloudstrategist.com/free-business-review
+WhatsApp: +91 87963 02608
+Voice line: +91 80654 80898
+Email: contact@aicloudstrategist.com
+Support: support@aicloudstrategist.com
+
+— Anushka Bhattacharya
+Director, AICloudStrategist
+Website: https://aicloudstrategist.com/
+
+Guardrail: Food/retail guardrail: operational support review only; no platform integration or SLA guarantee unless scoped later.
+If this is not relevant, reply STOP and we will not follow up.

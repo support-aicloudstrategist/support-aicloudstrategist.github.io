@@ -1,0 +1,32 @@
+{
+  "ts": "2026-05-18T22:30:10+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "invoice+statements+acct_1m07hslmdodimxbs@stripe.com",
+          "subject": "Your receipt from Eleven Labs Inc. #2955-9872-8550",
+          "received": "2026-05-18T16:46:51Z",
+          "action": "mark_read_sensitive_notify",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 1,
+    "replied": 0,
+    "marked_read": 1,
+    "errors": 0
+  }
+}

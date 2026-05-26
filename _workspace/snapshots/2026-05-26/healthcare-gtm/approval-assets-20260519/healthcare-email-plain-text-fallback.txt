@@ -1,0 +1,28 @@
+Subject: Healthcare Digital Readiness Review for {{BusinessName}}
+
+Hi {{Name}},
+
+If patient enquiries, appointments, reports, billing follow-ups, backups, or internal coordination are still handled across scattered tools and manual reminders, small delays can quietly become revenue leakage, staff pressure, and operational risk.
+
+AICloudStrategist can do a short Healthcare Digital Readiness Review for {{BusinessName}}.
+
+What we review:
+• Appointment and enquiry flow
+• Report delivery workflow
+• Billing and follow-up leakage
+• Backup and basic security readiness
+• Simple automation opportunities
+
+Outcome: a simple 30-day improvement map showing the top fixes that can improve visibility without replacing your existing hospital/lab software.
+
+Would you be open to a 20-minute readiness review this week?
+
+Request the review: https://aicloudstrategist.com/free-business-review
+
+Regards,
+AICloudStrategist
+Digital presence, workflow automation, cloud, security and AI readiness for growing businesses
+Website: https://aicloudstrategist.com
+Email: support@aicloudstrategist.com
+
+If this is not relevant, reply STOP and we will not follow up.

@@ -1,0 +1,1 @@
+Advanced workflow view. The Advanced view is for scale. It connects WhatsApp API, webhooks, staff workflow, owner dashboard, and audit reporting.

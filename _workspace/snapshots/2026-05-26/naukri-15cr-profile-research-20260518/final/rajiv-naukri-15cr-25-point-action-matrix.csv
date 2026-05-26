@@ -1,0 +1,26 @@
+Priority,Point,Current State,Required State,Action,Weight
+P0,Executive identity,Senior Cloud & AI Infrastructure Architect,Cloud & Platform Transformation Leader / Director-Head-VP-track,Rewrite headline and summary,10
+P0,Salary anchor,Naukri 50L; resume 60L,Consistent truthful CTC; resume should not show low anchor,Remove CTC from resume and align Naukri field,10
+P0,Search titles,Mostly Lead/Architect,Director/Head/VP/Principal Enterprise Architect variants,Update headline/career profile/skills,9
+P0,Profile summary,Generic AWS Cloud Solutions Architect,Enterprise transformation leader with scale/outcomes,Rewrite summary,10
+P0,Key skills,Tool-heavy low-level list,Leadership + transformation terms first,Reorder/add skills,9
+P0,Resume identity,AI Cloud Architect file,Cloud Platform Transformation Leader master resume,Rename/rebuild/upload resume,9
+P1,Business scale,Workloads/servers only,Users/accounts/regions/spend/team/vendors,Collect and insert scale data,10
+P1,Money proof,30% only,Cloud spend and ₹/$ savings,Add FinOps money proof,10
+P1,Team leadership,Weak/unclear,Direct/matrix/vendor team size,Collect and insert team data,10
+P1,Transformation mandate,Responsibility bullets,Portfolio/program ownership,Rewrite experience bullets,9
+P1,Reliability outcomes,SRE keywords only,SLA/uptime/MTTR/RTO/RPO outcomes,Add metrics,9
+P1,Security compliance,Framework names,Audit/risk/compliance outcomes,Add confirmed frameworks/outcomes,8
+P1,FinOps leadership,Generic cost optimization,Showback/chargeback/commitments/dashboards,Rewrite FinOps story,9
+P1,Platform engineering,Kubernetes/tools,Golden paths/self-service/developer productivity,Reframe platform work,8
+P1,CXO governance,Light mention,Steering committees/tradeoff decisions,Add examples,9
+P1,Vendor budget governance,Mostly absent,CapEx/OpEx/MSP/licensing governance,Add if true,8
+P1,Commercial impact,RFP mentioned,RFP count/deal/account influence,Collect and add values,8
+P1,Career narrative,Not explicit,Admin→Architect→Transformation Leader,Rewrite narrative arc,8
+P1,Naukri fields,Fragmented,All fields one target identity,Align headline skills roles summary,10
+P1,Projects,AI/GPU heavy generated tone,Strategic evidence-safe transformation portfolio,Rewrite projects,8
+P1,AI positioning,Too prominent,AI-ready platform enhancer unless production proof,De-risk AI/GPU language,8
+P2,Accomplishments,Blank links/work samples,Executive proof links/papers/presentations,Add profile/work samples,6
+P2,Naukri feedback loop,Inbound jobs 40-75L,₹1Cr+ aligned inbound roles,Track weekly and tune,7
+P2,Sector targeting,Not explicit,GCC/BFSI/product/hyperscaler/consulting,Update preferred industries/roles,8
+P2,Refresh cadence,Ad hoc updates,Weekly meaningful refresh and metrics log,Create cadence,7

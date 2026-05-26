@@ -1,0 +1,3 @@
+queue_id,recipient,channel,inbound_evidence,classification,proposed_action,approval_status,next_safe_action
+AICS-WA-REPLY-SPARSH-20260519-2015,Sparsh Hair Skin Dermatology Clinic,WhatsApp,"events.log line 2759: Ok",Soft positive / permission to share details,"Send clinic WhatsApp bot demo explanation",Pending Raj approval,"Wait for APPROVE/CHANGES/REJECT; do not send customer reply yet"
+AICS-WA-REPLY-UJWAL-20260519-2015,Ujwal Electricals,WhatsApp,"events.log line 2772: Please share your requirement",Ambiguous inbound / request for context,"Send website/Google visibility audit clarification",Pending Raj approval,"Wait for APPROVE/CHANGES/REJECT; do not send customer reply yet"

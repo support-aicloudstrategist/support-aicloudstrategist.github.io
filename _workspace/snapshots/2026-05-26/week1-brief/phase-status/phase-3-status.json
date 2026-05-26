@@ -1,0 +1,9 @@
+{
+  "phase": 3,
+  "status": "done",
+  "evidence": "Homepage hero/nav rewritten; FinOps/MLOps/DevOps removed from hero and primary nav.",
+  "files": [
+    "index.html"
+  ],
+  "updated_at": "2026-05-24T22:04:40.640880"
+}

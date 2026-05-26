@@ -1,0 +1,17 @@
+{
+  "phase": 4,
+  "status": "self_validated",
+  "pass_count": 2,
+  "excluded_count": 0,
+  "checks": {
+    "doctor_name_spelling": "YES",
+    "clinic_name_accuracy": "YES",
+    "hook_signal_real": "YES from captured Justdial result-card text",
+    "length_limits": "YES phone scripts under 150 words",
+    "Anushka_signature": "YES",
+    "no_fabricated_performance_revenue_lead_volume_current_setup_claims": "YES",
+    "no_medical_clinical_outcome_claims": "YES",
+    "specific_public_signal": "YES"
+  },
+  "timestamp": "2026-05-24T20:46:00+05:30"
+}

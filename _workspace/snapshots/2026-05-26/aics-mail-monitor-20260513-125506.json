@@ -1,0 +1,26 @@
+{
+  "dry_run": true,
+  "ts": "2026-05-13T12:55:06+0530",
+  "summary": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 0,
+      "auto_replied": 0,
+      "notify_only": 0,
+      "errors": [
+        "InvalidURL: URL can't contain control characters. '/v1.0/users/support%40aicloudstrategist.com/mailFolders/inbox/messages?$top=25&$filter=isRead eq false&$select=id,subject,from,receivedDateTime,bodyPreview,isRead,conversationId' (found at least ' ')"
+      ],
+      "items": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "auto_replied": 0,
+      "notify_only": 0,
+      "errors": [
+        "InvalidURL: URL can't contain control characters. '/v1.0/users/contact%40aicloudstrategist.com/mailFolders/inbox/messages?$top=25&$filter=isRead eq false&$select=id,subject,from,receivedDateTime,bodyPreview,isRead,conversationId' (found at least ' ')"
+      ],
+      "items": []
+    }
+  ]
+}

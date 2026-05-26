@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-05-20T19:15:00+05:30",
+  "source_board": "/home/OpenClaw/.openclaw/workspace/reports/crm-follow-up/ncr-mixed-20260520-1900/follow-up-board.json",
+  "aics_contact_source_checked": "https://aicloudstrategist.com/contact-channels.json fetched 2026-05-20T13:45:23Z",
+  "aics_contact_details": {
+    "email": "contact@aicloudstrategist.com",
+    "support": "support@aicloudstrategist.com",
+    "whatsapp": "+91 87963 02608",
+    "voice_line": "+91 80654 80898",
+    "signature": "Anushka Bhattacharya, Director, AICloudStrategist"
+  },
+  "summary": {
+    "total_blocked_whatsapp_routes": 7,
+    "email_first_recoverable": 5,
+    "needs_route_verification": 2
+  },
+  "rows": [
+    {
+      "business_name": "Drishti IAS",
+      "template": "EDU-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://www.drishtiias.com/contact",
+      "public_email_from_existing_verified_queue": "care@groupdrishti.in",
+      "public_phone_from_existing_verified_queue": "+91 8010440440; +91 8750187501",
+      "recommended_recovery_route": "Email-first recovery approval needed",
+      "approval_asset_needed": "Premium HTML email + plain-text fallback, rendered to Raj personal email first",
+      "risk_notes": "Large brand with internal tech team; outreach should be consultative, not generic.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    },
+    {
+      "business_name": "FIITJEE",
+      "template": "EDU-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://www.fiitjee.com/contact-us",
+      "public_email_from_existing_verified_queue": "info@fiitjee.com",
+      "public_phone_from_existing_verified_queue": "+91 7825895400",
+      "recommended_recovery_route": "Email-first recovery approval needed",
+      "approval_asset_needed": "Premium HTML email + plain-text fallback, rendered to Raj personal email first",
+      "risk_notes": "Large legacy institute; procurement may be slow; avoid academic result claims.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    },
+    {
+      "business_name": "Yatharth Hospitals",
+      "template": "HEALTHCARE-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://www.yatharthhospitals.com/",
+      "public_email_from_existing_verified_queue": "",
+      "public_phone_from_existing_verified_queue": "Noida +91 9582833333; Greater Noida +91 8800447777; Noida Ext +91 8800110086",
+      "recommended_recovery_route": "Call/alternate-channel verification needed before approval",
+      "approval_asset_needed": "Founder-approved call script or alternate route after public contact re-check",
+      "risk_notes": "Large enterprise procurement cycle; strict healthcare/legal review needed; avoid outcome claims.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    },
+    {
+      "business_name": "R. P. Enterprises",
+      "template": "MFG-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://www.rpenterprises.co.in/contact-us.html",
+      "public_email_from_existing_verified_queue": "",
+      "public_phone_from_existing_verified_queue": "08045801389",
+      "recommended_recovery_route": "Call/alternate-channel verification needed before approval",
+      "approval_asset_needed": "Founder-approved call script or alternate route after public contact re-check",
+      "risk_notes": "Phone appears via marketplace/TradeIndia widget; public business email not found.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    },
+    {
+      "business_name": "Sai Creations",
+      "template": "MFG-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://www.saicreations.co.in/contact-us",
+      "public_email_from_existing_verified_queue": "info@saicreations.co.in",
+      "public_phone_from_existing_verified_queue": "(+91) 120-4356635",
+      "recommended_recovery_route": "Email-first recovery approval needed",
+      "approval_asset_needed": "Premium HTML email + plain-text fallback, rendered to Raj personal email first",
+      "risk_notes": "B2B exporter; email-first professional tone recommended.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    },
+    {
+      "business_name": "Investors Clinic",
+      "template": "RE-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://investorsclinic.in/contact-us",
+      "public_email_from_existing_verified_queue": "customercare@investors-clinic.com; support@investorsclinic.in",
+      "public_phone_from_existing_verified_queue": "+91 8010101010; 0120-4247285",
+      "recommended_recovery_route": "Email-first recovery approval needed",
+      "approval_asset_needed": "Premium HTML email + plain-text fallback, rendered to Raj personal email first",
+      "risk_notes": "Real estate has RERA/compliance sensitivities; avoid investment-return claims.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    },
+    {
+      "business_name": "Looks Salon",
+      "template": "SALON-A",
+      "original_blocker": "not_registered_on_whatsapp",
+      "due": "2026-05-21",
+      "official_source_url": "https://www.lookssalon.in/",
+      "public_email_from_existing_verified_queue": "customercare@lookssalon.in",
+      "public_phone_from_existing_verified_queue": "1800 212 5665",
+      "recommended_recovery_route": "Email-first recovery approval needed",
+      "approval_asset_needed": "Premium HTML email + plain-text fallback, rendered to Raj personal email first",
+      "risk_notes": "Large chain; central customer care may not route vendor pitches.",
+      "next_safe_action": "Re-check target official source immediately before drafting; then prepare exact Raj approval item. No contact/public send without approval."
+    }
+  ]
+}

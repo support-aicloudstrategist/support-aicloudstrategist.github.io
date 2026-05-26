@@ -1,0 +1,11 @@
+{
+  "approval_pack_id": "AICS-APP-20260523-SEO-ARTICLES-BATCH-01",
+  "status": "PENDING",
+  "article_paths": [
+    "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/task5-content-drafts/seo-articles/01-stop-losing-leads-indian-clinics.md",
+    "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/task5-content-drafts/seo-articles/02-dpdp-readiness-for-small-healthcare-businesses.md",
+    "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/task5-content-drafts/seo-articles/03-whatsapp-follow-up-system-for-local-businesses.md",
+    "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/task5-content-drafts/seo-articles/04-website-automation-compliance-growth-journey.md"
+  ],
+  "external_action_performed": false
+}

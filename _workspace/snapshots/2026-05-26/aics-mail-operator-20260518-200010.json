@@ -1,0 +1,32 @@
+{
+  "ts": "2026-05-18T20:00:09+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"FLATMATES (GIRLS) NEEDED\"",
+          "received": "2026-05-18T14:08:59Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 1,
+    "replied": 0,
+    "marked_read": 1,
+    "errors": 0
+  }
+}

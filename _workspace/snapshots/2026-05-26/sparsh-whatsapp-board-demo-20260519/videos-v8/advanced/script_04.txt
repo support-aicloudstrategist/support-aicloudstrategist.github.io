@@ -1,0 +1,1 @@
+Solution we build. WhatsApp API: Official template-based customer communication where required. Workflow engine: Enquiries move through rules, reminders, escalation, and status updates. Integrations: Website, forms, calls, sheets, CRM, or appointment tools can connect. Audit reports: Owner sees delivery status, pending work, staff action, and outcomes.

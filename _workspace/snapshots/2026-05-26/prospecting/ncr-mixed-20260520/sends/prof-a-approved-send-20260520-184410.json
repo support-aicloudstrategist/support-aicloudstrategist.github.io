@@ -1,0 +1,63 @@
+{
+  "ts": "2026-05-20T18:44:10+0530",
+  "template": "PROF-A",
+  "approval": "Raj approved PROF-A, Telegram message 5550",
+  "creative": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/prof-a/prof-a-approval-creative-final.png",
+  "results": [
+    {
+      "business_name": "AKGVG & Associates",
+      "to": "919811118031",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_213687960924288@lid_3EB09C39169BF246CD245B",
+        "to": "919811118031@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/prof-a/prof-a-approval-creative-final.png"
+      }
+    },
+    {
+      "business_name": "Global Taxation",
+      "to": "919990999281",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_71713219965151@lid_3EB099D1E6B609313CFE30",
+        "to": "919990999281@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/prof-a/prof-a-approval-creative-final.png"
+      }
+    },
+    {
+      "business_name": "I.P. Pasricha & Co.",
+      "to": "919810774806",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_90881608663163@lid_3EB073E70E6ECE44F5BB35",
+        "to": "919810774806@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/prof-a/prof-a-approval-creative-final.png"
+      }
+    },
+    {
+      "business_name": "Dinesh Aarjav & Associates",
+      "to": "919899969645",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_22669172985890@lid_3EB01874AEF99FE65607E9",
+        "to": "919899969645@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/prof-a/prof-a-approval-creative-final.png"
+      }
+    },
+    {
+      "business_name": "S Lohia & Associates",
+      "to": "919810353219",
+      "status": "sent",
+      "response": {
+        "ok": true,
+        "id": "true_125357361467566@lid_3EB0F833F091F92258FF90",
+        "to": "919810353219@c.us",
+        "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/prof-a/prof-a-approval-creative-final.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "ts": "2026-05-18T18:30:10+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 2,
+      "actions": [
+        {
+          "from": "learn@send.zapier.com",
+          "subject": "Go beyond workflows \ud83d\ude80",
+          "received": "2026-05-18T12:52:02Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        },
+        {
+          "from": "email@e.lucid.co",
+          "subject": "[Onboarding] Lucid Training Labs",
+          "received": "2026-05-18T12:35:37Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 2,
+    "replied": 0,
+    "marked_read": 2,
+    "errors": 0
+  }
+}

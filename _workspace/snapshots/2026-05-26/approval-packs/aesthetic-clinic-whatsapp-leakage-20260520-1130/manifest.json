@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-05-20T11:30:00+05:30",
+  "status": "prepared_pending_raj_approval",
+  "targets": 2,
+  "asset": "/home/OpenClaw/.openclaw/workspace/reports/approval-packs/aesthetic-clinic-whatsapp-leakage-20260520-1130/aesthetic-clinic-whatsapp-review-card.png",
+  "caption": "/home/OpenClaw/.openclaw/workspace/reports/approval-packs/aesthetic-clinic-whatsapp-leakage-20260520-1130/aesthetic-clinic-whatsapp-caption-template.txt",
+  "manifest": "/home/OpenClaw/.openclaw/workspace/reports/approval-packs/aesthetic-clinic-whatsapp-leakage-20260520-1130/post-approval-whatsapp-manifest.csv",
+  "approval_card": "/home/OpenClaw/.openclaw/workspace/reports/approval-packs/aesthetic-clinic-whatsapp-leakage-20260520-1130/approval-card.md",
+  "sop_contacts": {
+    "brand": "AICloudStrategist",
+    "website": "https://aicloudstrategist.com/",
+    "free_review": "https://aicloudstrategist.com/free-business-review",
+    "email": "contact@aicloudstrategist.com",
+    "support": "support@aicloudstrategist.com",
+    "whatsapp": "+91 87963 02608",
+    "voice": "+91 80654 80898",
+    "signature": "Anushka Bhattacharya, Director, AICloudStrategist"
+  },
+  "blocked_until": "Raj approves exact target list, channel, creative, caption, and execution route"
+}

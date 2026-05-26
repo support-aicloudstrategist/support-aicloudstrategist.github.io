@@ -1,0 +1,29 @@
+Subject: Free appointment-flow review for {{business_name}}
+Sender: Anushka Bhattacharya, Director, AICloudStrategist <contact@aicloudstrategist.com>
+
+Namaste {{business_name}} Team,
+
+Salon and beauty enquiries often come through calls, WhatsApp, Instagram, repeat customers and outlet teams. Missed follow-ups affect appointment flow and customer experience.
+
+AICloudStrategist helps salons review booking enquiries, outlet-wise follow-up visibility, WhatsApp reply support and feedback/review capture.
+
+What the free review checks:
+- Missed enquiry and booking follow-up tracking
+- Outlet-wise owner/manager visibility
+- WhatsApp reply and reminder workflow
+- Feedback and review capture opportunities
+
+Can we share a free 10-minute appointment-flow review for {{business_name}}?
+
+Free review: https://aicloudstrategist.com/free-business-review
+WhatsApp: +91 87963 02608
+Voice line: +91 80654 80898
+Email: contact@aicloudstrategist.com
+Support: support@aicloudstrategist.com
+
+— Anushka Bhattacharya
+Director, AICloudStrategist
+Website: https://aicloudstrategist.com/
+
+Guardrail: Salon guardrail: appointment/customer-experience workflow only; no medical/aesthetic outcome claims.
+If this is not relevant, reply STOP and we will not follow up.
