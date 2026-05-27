@@ -1,1 +1,1 @@
-{"version":1,"include":["/*"],"exclude":["/_workspace/*"]}
+{"version":1,"include":["/*"],"exclude":["/_workspace/*","/.workspace-snapshots/*"]}
