@@ -1,0 +1,4 @@
+# Never upload workspace evidence/snapshot artifacts to Cloudflare Pages public assets.
+.workspace-snapshots/**
+_workspace/**
+.wrangler/**
