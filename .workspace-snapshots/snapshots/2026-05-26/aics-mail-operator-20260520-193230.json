@@ -1,0 +1,40 @@
+{
+  "ts": "2026-05-20T19:32:28+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"(F19), should I leave him?\"",
+          "received": "2026-05-20T13:57:47Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"She accidentally made me forget why we were fighting....\"",
+          "received": "2026-05-20T13:59:12Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 2,
+    "replied": 0,
+    "marked_read": 2,
+    "errors": 0
+  }
+}

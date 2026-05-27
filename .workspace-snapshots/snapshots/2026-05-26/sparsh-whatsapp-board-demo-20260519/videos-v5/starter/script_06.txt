@@ -1,0 +1,1 @@
+Components included. Clinic enquiry board with simple status columns. WhatsApp click-to-chat or enquiry form capture. Basic reply templates for timing, location, and appointment confirmation. Daily owner summary: new, pending, booked, and missed follow-ups. Privacy-safe setup: no diagnosis, treatment advice, or patient records in demo.

@@ -1,0 +1,26 @@
+{
+  "id": "AICS-LEADMAGNET-20260520-0845-CLINIC-DIGITAL-TRUST",
+  "createdAtIst": "2026-05-20 08:45",
+  "workstream": "lead magnet / landing-page asset",
+  "sourceBrief": "reports/gtm-intelligence/2026-05-20-gtm-intelligence-brief.md",
+  "externalActionPerformed": false,
+  "sopContactSource": "https://aicloudstrategist.com/contact-channels.json verified live at 2026-05-20 08:45 IST",
+  "brand": "AICloudStrategist",
+  "website": "https://aicloudstrategist.com/",
+  "freeReview": "https://aicloudstrategist.com/free-business-review",
+  "email": "contact@aicloudstrategist.com",
+  "supportEmail": "support@aicloudstrategist.com",
+  "voiceLine": "+91 80654 80898",
+  "whatsapp": "+91 87963 02608",
+  "whatsappUrl": "https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20a%20free%20business%20review.",
+  "signature": "Anushka Bhattacharya, Director, AICloudStrategist",
+  "assets": [
+    "clinic-digital-trust-checklist.html",
+    "clinic-digital-trust-checklist.pdf",
+    "clinic-digital-trust-checklist.md",
+    "landing-page-block.md",
+    "approval-card.md"
+  ],
+  "status": "prepared_pending_raj_approval",
+  "renderGate": "PDF rendered successfully from HTML via headless Chromium at 2026-05-20 08:48 IST"
+}

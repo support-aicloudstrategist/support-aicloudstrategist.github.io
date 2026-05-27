@@ -1,0 +1,37 @@
+{
+  "ts": "2026-05-15T13:10:10+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [
+        {
+          "from": "WhatsApp Business",
+          "address": "noreply@support.whatsapp.com",
+          "subject": "WhatsApp Verification Code: 860-847",
+          "received": "2026-05-15T06:31:57Z",
+          "preview": "We received a request to add support@aicloudstrategist.com to your WhatsApp account. To verify your email:\r\n\r\nOpen WhatsApp on your phone\r\nGo to Settings > Account > Email address\r\nEnter this code:\r\n\r\n860-847\r\n\r\nDon't share this code or email with anyone.",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9uAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 49,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 50,
+      "errors": []
+    }
+  ],
+  "important_count": 1,
+  "review_count": 0,
+  "ignored_count": 0,
+  "errors": []
+}

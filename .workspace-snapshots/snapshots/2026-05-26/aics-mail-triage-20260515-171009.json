@@ -1,0 +1,37 @@
+{
+  "ts": "2026-05-15T17:10:09+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 1,
+      "already_seen": 49,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [
+        {
+          "from": "Puneet Arora",
+          "address": "puneet.kkp01@gmail.com",
+          "subject": "Helping you stay compliant from day one",
+          "received": "2026-05-15T11:09:56Z",
+          "preview": "Dear Promoter,\r\n\r\nCongratulations on the incorporation of your company. Wishing you great success as you begin this new journey.\r\n\r\nIn the early stages, a few key compliances require timely attention\u2014such as appointment of the first auditor (ADT-1), comme",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADQwZDRjM2UwLWMzNzEtNGQ5Ni1iNDhlLWE2YmY3MjM1ZTMyMQBGAAAAAABeaKzzMH1SQ6m2fWEHdnqIBwCLDUq3sQ24QLr5ixtzDRCCAAAAAAEMAACLDUq3sQ24QLr5ixtzDRCCAAAFX9ksAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 0,
+      "already_seen": 49,
+      "errors": []
+    }
+  ],
+  "important_count": 0,
+  "review_count": 1,
+  "ignored_count": 1,
+  "errors": []
+}

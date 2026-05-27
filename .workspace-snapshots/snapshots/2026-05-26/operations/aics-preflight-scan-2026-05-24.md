@@ -1,0 +1,84 @@
+# AICS Production Preflight Scan — 2026-05-24
+
+Command:
+
+```bash
+python3 /home/OpenClaw/.openclaw/workspace/aics-github-sync/operations/website_preflight.py 2>&1 | tee /tmp/preflight-output.log
+```
+
+Note: script scans local site root `/home/OpenClaw/.openclaw/workspace/aics-github-sync/AICloudStrategist.github.io`.
+
+## Summary
+
+- HTML pages checked: 29
+- Blocking issues: 13
+- Warnings: 39
+- No fixes applied. Founder review required.
+
+## Blocking issues
+
+```text
+BROKEN_ANCHOR dpdp-compliance-consultant-india.html -> /#offer missing #offer in index.html
+BROKEN_ANCHOR dpdp-compliance-for-d2c-brands.html -> /#offer missing #offer in index.html
+BROKEN_ANCHOR dpdp-compliance-for-saas-india.html -> /#offer missing #offer in index.html
+BROKEN_ANCHOR dpdp-readiness-assessment.html -> /#offer missing #offer in index.html
+BROKEN_ANCHOR free-business-review.html -> /#ladder missing #ladder in index.html
+BROKEN_ANCHOR free-business-review.html -> /#pricing missing #pricing in index.html
+CSP_FORM_ACTION_BLOCK free-business-review.html -> https://formsubmit.co missing from _headers form-action
+CSP_FORM_ACTION_BLOCK index.html -> https://formsubmit.co missing from _headers form-action
+CSP_FORM_ACTION_BLOCK local.html -> https://formsubmit.co missing from _headers form-action
+BROKEN_ANCHOR policykart.html -> /#offer missing #offer in index.html
+BROKEN_ANCHOR policykart.html -> /#evidence missing #evidence in index.html
+BROKEN_ANCHOR privacy.html -> /#offer missing #offer in index.html
+BROKEN_ANCHOR privacy.html -> /#evidence missing #evidence in index.html
+```
+
+## Warnings
+
+```text
+MISSING_ANALYTICS about.html
+LONG_TITLE advisory.html: 71 chars
+MISSING_ANALYTICS advisory.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-breach-readiness-checklist.html
+META_DESCRIPTION_LENGTH dpdp-compliance-checklist-india.html: 186 chars
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-compliance-checklist-india.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-compliance-consultant-india.html
+DPDP_MISSING_LEGAL_BOUNDARY dpdp-compliance-consultant-india.html
+MISSING_JSONLD dpdp-compliance-for-d2c-brands.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-compliance-for-d2c-brands.html
+DPDP_MISSING_LEGAL_BOUNDARY dpdp-compliance-for-d2c-brands.html
+MISSING_JSONLD dpdp-compliance-for-saas-india.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-compliance-for-saas-india.html
+DPDP_MISSING_LEGAL_BOUNDARY dpdp-compliance-for-saas-india.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-consent-flow-checklist.html
+DPDP_MISSING_LEGAL_BOUNDARY dpdp-consent-flow-checklist.html
+MISSING_JSONLD dpdp-readiness-assessment.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-readiness-assessment.html
+DPDP_MISSING_SAMPLE_OR_OFFER_CTA dpdp-vendor-register-template.html
+DPDP_MISSING_LEGAL_BOUNDARY dpdp-vendor-register-template.html
+MISSING_ANALYTICS dpdp-website-compliance-sprint.html
+DPDP_MISSING_LEGAL_BOUNDARY dpdp-website-compliance-sprint.html
+MISSING_ANALYTICS factory-website-development-india.html
+MISSING_ANALYTICS free-business-review.html
+META_DESCRIPTION_LENGTH index.html: 175 chars
+MISSING_ANALYTICS index.html
+MISSING_JSONLD lead-follow-up-checklist-india.html
+MISSING_ANALYTICS lead-follow-up-checklist-india.html
+MISSING_ANALYTICS local-business-website-india.html
+MISSING_ANALYTICS local.html
+MISSING_ANALYTICS operations-automation-sprint.html
+META_DESCRIPTION_LENGTH policykart.html: 84 chars
+LONG_TITLE resources.html: 73 chars
+MISSING_ANALYTICS small-business-automation-india.html
+LONG_TITLE smb-website-checklist-india.html: 71 chars
+MISSING_JSONLD smb-website-checklist-india.html
+MISSING_ANALYTICS smb-website-checklist-india.html
+MISSING_ANALYTICS website-lead-capture-sprint.html
+MISSING_ANALYTICS whatsapp-lead-management-india.html
+```
+
+## Founder-review notes
+
+- `CSP_FORM_ACTION_BLOCK` references FormSubmit on local scanned files. Production PR #7 moved the primary free audit form pipeline to `/api/lead` + Microsoft Graph, but this scan root is the parallel local clone and may not reflect the production repo after PR #7.
+- Broken anchors and missing analytics/schema warnings should be reviewed before any further public quality work.
+- No changes were made by this scan.

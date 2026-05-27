@@ -1,0 +1,10 @@
+lane,item,count_or_score,status,next_safe_action,approval_blocker
+Healthcare,NKPC Kidney Clinic,fit 88 AMD 14,needs exact approval,Approve one channel and exact copy; prefer email if WhatsApp blocked,Target+channel+copy approval
+Healthcare,Aastha Dental Care,fit 84 AMD 13,needs exact approval,Approve one channel and exact copy,Target+channel+copy approval
+Healthcare,Highway Hospital,fit 88 AMD 14,needs exact approval,Approve call script only; record outcome,Target+channel+call script approval
+Healthcare,Park Clinic,fit 87 AMD 14,needs exact approval,Approve call script only; record outcome,Target+channel+call script approval
+Healthcare,Sudeep/Indus Eye Care,fit 76 AMD 13,held,Manual identity/contact verification,Identity mismatch
+Local SMB seed,Hot local leads,36,new/not contacted,Reverify top 10 before approval pack,Stale public-source data + exact outreach approval
+WhatsApp pilot,Tier A queued prospects,10,queued_not_sent,Hold until QR scan and archive/label verified,WhatsApp route + approval
+Mail ops,Today operator scans,8 handled / 2 replies / 0 errors,no customer follow-up found,Continue scans and separate vendor threads,None immediate
+Social content,Approval queue,37 pending / 1 partially live,pending approval,Handle in 18:00 approval consolidation,Posting approval

@@ -1,0 +1,40 @@
+{
+  "ts": "2026-05-19T17:31:41+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 2,
+      "actions": [
+        {
+          "from": "rajiv.dasgupta@rackspace.com",
+          "subject": "Test",
+          "received": "2026-05-19T11:57:50Z",
+          "action": "reply_customer_ack",
+          "replied": true,
+          "marked_read": true
+        },
+        {
+          "from": "noreply-dmarc-support@google.com",
+          "subject": "Report domain: aicloudstrategist.com Submitter: google.com Report-ID: 5861145483166193777",
+          "received": "2026-05-19T11:39:06Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 2,
+    "replied": 1,
+    "marked_read": 2,
+    "errors": 0
+  }
+}

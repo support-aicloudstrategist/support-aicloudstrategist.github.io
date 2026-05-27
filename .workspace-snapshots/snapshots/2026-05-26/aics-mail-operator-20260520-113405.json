@@ -1,0 +1,32 @@
+{
+  "ts": "2026-05-20T11:34:04+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "hello@news.sarvam.ai",
+          "subject": "Webinar: A deep dive into Sarvam's Speech-to-Text model",
+          "received": "2026-05-20T06:00:26Z",
+          "action": "mark_read_review_later",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 1,
+    "replied": 0,
+    "marked_read": 1,
+    "errors": 0
+  }
+}

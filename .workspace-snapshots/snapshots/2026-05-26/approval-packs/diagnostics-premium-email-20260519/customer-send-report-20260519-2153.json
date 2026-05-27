@@ -1,0 +1,16 @@
+{
+  "ts": "2026-05-19T21:53:52+0530",
+  "sender": "contact@aicloudstrategist.com",
+  "purpose": "customer_outreach",
+  "subject": "Quick check: are any lab enquiries or report requests slipping between WhatsApp, calls and website?",
+  "approval_ref": "Telegram AICS-Ops message 5262 from Raj at 2026-05-19 21:53 IST: Approved",
+  "mode": "single_message",
+  "results": [
+    {
+      "to": [
+        "diagnostic.official@gmail.com"
+      ],
+      "status": "sent"
+    }
+  ]
+}

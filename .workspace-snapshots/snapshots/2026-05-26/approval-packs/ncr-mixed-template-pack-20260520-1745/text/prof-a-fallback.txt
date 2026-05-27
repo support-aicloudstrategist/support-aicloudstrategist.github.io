@@ -1,0 +1,29 @@
+Subject: Free secure client-workflow review for {{business_name}}
+Sender: Anushka Bhattacharya, Director, AICloudStrategist <contact@aicloudstrategist.com>
+
+Namaste {{business_name}} Team,
+
+Professional-service firms handle client documents, reminders and follow-ups across email, WhatsApp and calls. The risk is scattered intake and missed client actions.
+
+AICloudStrategist helps firms review client intake tracking, document collection reminders, secure cloud folder structure and basic email/domain/cloud hygiene.
+
+What the free review checks:
+- Client intake and pending task visibility
+- Document collection reminders
+- Secure cloud folder structure review
+- Email/domain/cloud hygiene without legal or tax advice
+
+Can we share a free 10-minute client-workflow review for {{business_name}}?
+
+Free review: https://aicloudstrategist.com/free-business-review
+WhatsApp: +91 87963 02608
+Voice line: +91 80654 80898
+Email: contact@aicloudstrategist.com
+Support: support@aicloudstrategist.com
+
+— Anushka Bhattacharya
+Director, AICloudStrategist
+Website: https://aicloudstrategist.com/
+
+Guardrail: Professional-services guardrail: technology/process support only; no tax/legal advice or compliance guarantee claims.
+If this is not relevant, reply STOP and we will not follow up.

@@ -1,0 +1,32 @@
+{
+  "ts": "2026-05-19T18:01:29+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "security-noreply@linkedin.com",
+          "subject": "New device registration for Remember me",
+          "received": "2026-05-19T12:23:50Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 1,
+    "replied": 0,
+    "marked_read": 1,
+    "errors": 0
+  }
+}

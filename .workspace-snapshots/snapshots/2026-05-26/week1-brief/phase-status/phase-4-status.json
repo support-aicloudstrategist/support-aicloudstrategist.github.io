@@ -1,0 +1,10 @@
+{
+  "phase": 4,
+  "status": "done",
+  "evidence": "Free Business Review page rebuilt; form still posts JSON to /api/lead and functions/api/lead.ts untouched.",
+  "files": [
+    "free-business-review.html",
+    "free-business-review/index.html"
+  ],
+  "updated_at": "2026-05-24T22:04:40.641408"
+}

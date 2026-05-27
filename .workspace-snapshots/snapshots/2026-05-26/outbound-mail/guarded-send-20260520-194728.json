@@ -1,0 +1,16 @@
+{
+  "ts": "2026-05-20T19:47:28+0530",
+  "sender": "contact@aicloudstrategist.com",
+  "purpose": "prospect_outreach",
+  "subject": "Diagnostics Flow Review for G1 Pathology Lab",
+  "approval_ref": "Raj approved TEMPLATE DIAG-LAB-A in AICS-Ops Telegram message 5572 at 2026-05-20 19:46 IST",
+  "mode": "single_message",
+  "results": [
+    {
+      "to": [
+        "gkhvpune@gmail.com"
+      ],
+      "status": "sent"
+    }
+  ]
+}

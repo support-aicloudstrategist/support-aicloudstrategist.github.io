@@ -1,0 +1,14 @@
+{
+  "ts": "2026-05-20T18:15:19+0530",
+  "from": "AICS WhatsApp +91 87963 02608",
+  "to": "Raj personal WhatsApp +91 96252 66139",
+  "template": "MFG-A",
+  "creative": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/mfg-a/mfg-a-approval-creative-final.png",
+  "caption": "AICS TEMPLATE REVIEW — MFG-A\nCreative + WhatsApp message sample\n\nNamaste {business_name} Team,\n\nMany B2B enquiries get lost between website forms, calls, WhatsApp messages, catalogues and quotation follow-ups.\n\nAICloudStrategist helps manufacturers/exporters create a simple RFQ and buyer follow-up workflow:\n\n✅ enquiry/RFQ capture\n✅ catalogue or spec-sheet routing\n✅ quote follow-up reminders\n✅ secure cloud document sharing\n✅ sales pipeline visibility\n\nWe can do a free 10-minute review of where enquiries may be leaking for {business_name}.\n\n— Anushka Bhattacharya\nDirector, AICloudStrategist\nWebsite: https://aicloudstrategist.com\nWhatsApp: +91 87963 02608\nVoice line: +91 80654 80898\nEmail: contact@aicloudstrategist.com\n\nApproval: APPROVE MFG-A / CHANGES MFG-A",
+  "response": {
+    "ok": true,
+    "id": "true_25383307075622@lid_3EB02615802D7726D556D3",
+    "to": "919625266139@c.us",
+    "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/mfg-a/mfg-a-approval-creative-final.png"
+  }
+}

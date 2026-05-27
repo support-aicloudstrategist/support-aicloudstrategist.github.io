@@ -1,0 +1,1597 @@
+{
+  "generated": 30,
+  "skipped": [],
+  "findings": [
+    {
+      "prospect_id": "MUM-001",
+      "business_name": "The Dental Studio",
+      "owner_name": "Dr. Chitrang Thaker",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-chitrang-s-the-dental-studio-goregaon-east",
+      "pdf": "/tmp/audits/m5/MUM-001.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-chitrang-s-the-dental-studio-goregaon-east",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 230 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "230 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-001.pdf"
+    },
+    {
+      "prospect_id": "MUM-002",
+      "business_name": "Dr. Gandhi Dental Clinic",
+      "owner_name": "Dr. Ashish Gandhi",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-gandhi-dental-clinic-andheri-west",
+      "pdf": "/tmp/audits/m5/MUM-002.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-gandhi-dental-clinic-andheri-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 204 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "204 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-002.pdf"
+    },
+    {
+      "prospect_id": "MUM-003",
+      "business_name": "Wondersmiles",
+      "owner_name": "Dr. Rajesh Kamdar",
+      "website": "https://www.practo.com/Mumbai/clinic/wonder-smiles-dental-clinic-dr-rajesh-kamdar-s-clinic-andheri-west",
+      "pdf": "/tmp/audits/m5/MUM-003.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/wonder-smiles-dental-clinic-dr-rajesh-kamdar-s-clinic-andheri-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 243 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "243 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-003.pdf"
+    },
+    {
+      "prospect_id": "MUM-004",
+      "business_name": "Dr. Gauri's Dental Speciality Clinic",
+      "owner_name": "Dr. Gauri Kadam",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-gauri-s-dental-speciality-clinic-andheri-west",
+      "pdf": "/tmp/audits/m5/MUM-004.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-gauri-s-dental-speciality-clinic-andheri-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 145 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "145 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-004.pdf"
+    },
+    {
+      "prospect_id": "MUM-005",
+      "business_name": "Dr. Megghal Shah's Microscope Enhanced Dental Clinic",
+      "owner_name": "Dr. Meghal Shah",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-meghal-shah-grant-road",
+      "pdf": "/tmp/audits/m5/MUM-005.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-meghal-shah-grant-road",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 270 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "270 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-005.pdf"
+    },
+    {
+      "prospect_id": "MUM-006",
+      "business_name": "Parekh's Dental Clinic",
+      "owner_name": "Dr. Bandish Parekh",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-parekh-s-dental-clinic-bandra-bandra",
+      "pdf": "/tmp/audits/m5/MUM-006.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-parekh-s-dental-clinic-bandra-bandra",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 188 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "188 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-006.pdf"
+    },
+    {
+      "prospect_id": "MUM-007",
+      "business_name": "Dr. Vora's Dental Care Center",
+      "owner_name": "Dr. Sheel Vora",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-vora-s-dental-care-center-santacruz-east",
+      "pdf": "/tmp/audits/m5/MUM-007.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-vora-s-dental-care-center-santacruz-east",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 184 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "184 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-007.pdf"
+    },
+    {
+      "prospect_id": "MUM-008",
+      "business_name": "Embrace Orthodontics",
+      "owner_name": "Dr. Keyur Mehta",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-keyur-s-orthodontics-clinic-borivali",
+      "pdf": "/tmp/audits/m5/MUM-008.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-keyur-s-orthodontics-clinic-borivali",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 304 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "304 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-008.pdf"
+    },
+    {
+      "prospect_id": "MUM-009",
+      "business_name": "Garden Multispeciality Dental Clinic",
+      "owner_name": "Dr. Vividha Singhania",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-vividha-s-dental-clinic-mahim",
+      "pdf": "/tmp/audits/m5/MUM-009.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-vividha-s-dental-clinic-mahim",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 285 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "285 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-009.pdf"
+    },
+    {
+      "prospect_id": "MUM-010",
+      "business_name": "Dr. Inamdar Dental Speciality Clinic",
+      "owner_name": "Dr. Abdul Haque Inamdar",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-inamdar-dental-speciality-clinic-bandra-west",
+      "pdf": "/tmp/audits/m5/MUM-010.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-inamdar-dental-speciality-clinic-bandra-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 210 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "210 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-010.pdf"
+    },
+    {
+      "prospect_id": "MUM-011",
+      "business_name": "Dr sonal's All Smiles Dental Clinic",
+      "owner_name": "Dr. Sonal Malguria Bhasin",
+      "website": "https://www.practo.com/Mumbai/clinic/all-smiles-dental-clinic-iso-9001-2008-certified-santacruz-west",
+      "pdf": "/tmp/audits/m5/MUM-011.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/all-smiles-dental-clinic-iso-9001-2008-certified-santacruz-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 168 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "168 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-011.pdf"
+    },
+    {
+      "prospect_id": "MUM-012",
+      "business_name": "Mount Mary Dental Speciality Clinic",
+      "owner_name": "Dr. Dattatraya Kamat",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-kamat-s-mount-mary-dental-speciality-clinic-bandra-west",
+      "pdf": "/tmp/audits/m5/MUM-012.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-kamat-s-mount-mary-dental-speciality-clinic-bandra-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 190 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "190 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-012.pdf"
+    },
+    {
+      "prospect_id": "MUM-013",
+      "business_name": "Dr Sankpals Dental Center",
+      "owner_name": "Dr. Rajendra Sankpal",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-sankpal-s-dental-center-powai",
+      "pdf": "/tmp/audits/m5/MUM-013.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-sankpal-s-dental-center-powai",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 279 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "279 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-013.pdf"
+    },
+    {
+      "prospect_id": "MUM-014",
+      "business_name": "32 Smiles Stones Dental Clinic",
+      "owner_name": "Dr. Jeevan Shetty",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-jeevan-shetty-s-32-smile-stones-powai",
+      "pdf": "/tmp/audits/m5/MUM-014.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-jeevan-shetty-s-32-smile-stones-powai",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 316 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "316 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-014.pdf"
+    },
+    {
+      "prospect_id": "MUM-015",
+      "business_name": "Dr. Nishant's Dental Surgeons Planet",
+      "owner_name": "Dr. Nishant Gandhi",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-nishant-s-dental-planet-powai",
+      "pdf": "/tmp/audits/m5/MUM-015.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-nishant-s-dental-planet-powai",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 359 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "359 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-015.pdf"
+    },
+    {
+      "prospect_id": "MUM-016",
+      "business_name": "Dr Soham's Dental Clinic",
+      "owner_name": "Dr. Soham Mallick",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-soham-s-dental-clinic-powai",
+      "pdf": "/tmp/audits/m5/MUM-016.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-soham-s-dental-clinic-powai",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 293 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "293 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-016.pdf"
+    },
+    {
+      "prospect_id": "MUM-017",
+      "business_name": "Bhaskar Dental Clinic - Dr Pratik Mantal Nayak",
+      "owner_name": "Dr. Pratik Nayak",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-pratik-mantal-nayak-ghatkopar-west",
+      "pdf": "/tmp/audits/m5/MUM-017.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-pratik-mantal-nayak-ghatkopar-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 220 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "220 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-017.pdf"
+    },
+    {
+      "prospect_id": "MUM-018",
+      "business_name": "Dr. Deven's Dentocare",
+      "owner_name": "Dr. Deven Dabholkar",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-deven-s-dentocare-borivali-west",
+      "pdf": "/tmp/audits/m5/MUM-018.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-deven-s-dentocare-borivali-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 249 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "249 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-018.pdf"
+    },
+    {
+      "prospect_id": "MUM-019",
+      "business_name": "Dr Falguni Shah's Dental Clinic",
+      "owner_name": "Dr. Falguni Shah",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-falguni-shah-s-dental-clinic-borivali-west",
+      "pdf": "/tmp/audits/m5/MUM-019.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-falguni-shah-s-dental-clinic-borivali-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 415 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "415 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-019.pdf"
+    },
+    {
+      "prospect_id": "MUM-020",
+      "business_name": "Dr. Ritu Mehta's Family Dental Centre",
+      "owner_name": "Dr. Ritu Mehta",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-ritu-mehta-s-family-dental-centre-borivali-west",
+      "pdf": "/tmp/audits/m5/MUM-020.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-ritu-mehta-s-family-dental-centre-borivali-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 191 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "191 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-020.pdf"
+    },
+    {
+      "prospect_id": "MUM-021",
+      "business_name": "Speciality Dental Centre & Dental Implants",
+      "owner_name": "Dr. Amruta Bhalchandra Wadekar",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-amruta-s-dental-clinic-dahisar",
+      "pdf": "/tmp/audits/m5/MUM-021.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-amruta-s-dental-clinic-dahisar",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 317 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "317 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-021.pdf"
+    },
+    {
+      "prospect_id": "MUM-022",
+      "business_name": "SmilesForever By Dr Suhas Lele",
+      "owner_name": "Dr. Suhas Lele",
+      "website": "https://www.practo.com/Mumbai/clinic/smiles-forever-dr-suhas-lele-andheri-west",
+      "pdf": "/tmp/audits/m5/MUM-022.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/smiles-forever-dr-suhas-lele-andheri-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 361 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "361 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-022.pdf"
+    },
+    {
+      "prospect_id": "MUM-023",
+      "business_name": "Sakarwala's Dental Speciality Centre",
+      "owner_name": "Dr. Sakarwala Mustafa",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-sakarwala-s-dental-speciality-mazgaon",
+      "pdf": "/tmp/audits/m5/MUM-023.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-sakarwala-s-dental-speciality-mazgaon",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 1387 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "1387 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-023.pdf"
+    },
+    {
+      "prospect_id": "MUM-024",
+      "business_name": "White Arc Dental Studio",
+      "owner_name": "Dr. Aniket Gandhi",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-gandhi-s-white-arc-dental-studio-kings-circle",
+      "pdf": "/tmp/audits/m5/MUM-024.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-gandhi-s-white-arc-dental-studio-kings-circle",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 277 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "277 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-024.pdf"
+    },
+    {
+      "prospect_id": "MUM-025",
+      "business_name": "Parekh's Dental Clinic",
+      "owner_name": "Dr. Bandish Parekh",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-parekh-s-dental-clinic-matunga",
+      "pdf": "/tmp/audits/m5/MUM-025.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-parekh-s-dental-clinic-matunga",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 464 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "464 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-025.pdf"
+    },
+    {
+      "prospect_id": "MUM-026",
+      "business_name": "Dr. Ashar`s Dental Care Centre",
+      "owner_name": "Dr. Nipaj S Ashar",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-ashar-s-dental-care-centre-matunga",
+      "pdf": "/tmp/audits/m5/MUM-026.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-ashar-s-dental-care-centre-matunga",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 279 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "279 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-026.pdf"
+    },
+    {
+      "prospect_id": "MUM-027",
+      "business_name": "Dr.Riddhi's Dental Studio",
+      "owner_name": "Dr. Riddhi Mehta",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-riddhi-s-dental-studio-malad-west",
+      "pdf": "/tmp/audits/m5/MUM-027.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-riddhi-s-dental-studio-malad-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 186 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "186 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-027.pdf"
+    },
+    {
+      "prospect_id": "MUM-028",
+      "business_name": "Dr. Nariman'S Multispeciality Dental Center",
+      "owner_name": "Dr. Rushad Nariman",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-narimans-multispeciality-dental-center-malad-west",
+      "pdf": "/tmp/audits/m5/MUM-028.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-narimans-multispeciality-dental-center-malad-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 229 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "229 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-028.pdf"
+    },
+    {
+      "prospect_id": "MUM-029",
+      "business_name": "Dr Jigna Kanavia's Dental Clinic",
+      "owner_name": "Dr. Jigna Kanavia",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-jigna-kanavia-s-dental-clinic-malad-west",
+      "pdf": "/tmp/audits/m5/MUM-029.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-jigna-kanavia-s-dental-clinic-malad-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 287 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "287 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-029.pdf"
+    },
+    {
+      "prospect_id": "MUM-030",
+      "business_name": "Dr. Ritika's Dental Studio",
+      "owner_name": "Dr. Ritika Goyal",
+      "website": "https://www.practo.com/Mumbai/clinic/dr-ritika-s-dental-studio-malad-west",
+      "pdf": "/tmp/audits/m5/MUM-030.pdf",
+      "top_finding": "No review finding; public HTML checks mostly passed",
+      "summary": [
+        "Website: https://www.practo.com/Mumbai/clinic/dr-ritika-s-dental-studio-malad-west",
+        "HTTPS: HTTPS is enabled.",
+        "Mobile: Viewport meta tag found.",
+        "Load: 218 ms HTML fetch time (200).",
+        "WhatsApp CTA: WhatsApp CTA/reference found.",
+        "DPDP: PII collection appears to have consent/privacy context or no public PII form found.",
+        "Leads lost/month: Insufficient public data \u2014 founder manual review required"
+      ],
+      "checks": {
+        "https": {
+          "status": "pass",
+          "finding": "HTTPS is enabled."
+        },
+        "mobile_responsive": {
+          "status": "pass",
+          "finding": "Viewport meta tag found."
+        },
+        "page_load_time": {
+          "status": "pass",
+          "finding": "218 ms HTML fetch time (200)."
+        },
+        "contact_visibility": {
+          "status": "pass",
+          "finding": "Contact/call signals visible in public HTML."
+        },
+        "whatsapp_cta": {
+          "status": "pass",
+          "finding": "WhatsApp CTA/reference found."
+        },
+        "privacy_policy": {
+          "status": "pass",
+          "finding": "Privacy policy signal found."
+        },
+        "cookie_banner": {
+          "status": "pass",
+          "finding": "Cookie/consent signal found."
+        },
+        "dpdp_pii_consent": {
+          "status": "pass",
+          "finding": "PII collection appears to have consent/privacy context or no public PII form found."
+        }
+      },
+      "lead_loss_estimate": "Insufficient public data \u2014 founder manual review required",
+      "workspace_pdf": "/home/OpenClaw/.openclaw/workspace/reports/week3-brief/audits/pdfs/MUM-030.pdf"
+    }
+  ],
+  "selected_count": 30
+}

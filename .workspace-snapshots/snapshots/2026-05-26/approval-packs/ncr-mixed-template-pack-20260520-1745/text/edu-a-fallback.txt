@@ -1,0 +1,29 @@
+Subject: Free course-enquiry leakage review for {{business_name}}
+Sender: Anushka Bhattacharya, Director, AICloudStrategist <contact@aicloudstrategist.com>
+
+Namaste {{business_name}} Team,
+
+Training and coaching teams usually receive enquiries from calls, WhatsApp, website forms and repeat student or parent questions. Good leads can go cold when counsellor routing and follow-up are not visible.
+
+AICloudStrategist helps institutes review enquiry capture, counsellor assignment and follow-up reminders so the admissions/support team has a cleaner operating flow.
+
+What the free review checks:
+- New enquiry capture across website/call/WhatsApp
+- Counsellor assignment and pending follow-up reminders
+- FAQ and WhatsApp routing opportunities
+- Daily lead visibility without admissions/result promises
+
+Can we share a free 10-minute lead-leakage review for {{business_name}}?
+
+Free review: https://aicloudstrategist.com/free-business-review
+WhatsApp: +91 87963 02608
+Voice line: +91 80654 80898
+Email: contact@aicloudstrategist.com
+Support: support@aicloudstrategist.com
+
+— Anushka Bhattacharya
+Director, AICloudStrategist
+Website: https://aicloudstrategist.com/
+
+Guardrail: Education guardrail: no claims about admissions, marks, ranks, results or conversion guarantees.
+If this is not relevant, reply STOP and we will not follow up.

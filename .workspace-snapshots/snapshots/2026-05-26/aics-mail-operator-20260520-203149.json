@@ -1,0 +1,32 @@
+{
+  "ts": "2026-05-20T20:31:43+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 0,
+      "actions": [],
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 1,
+      "actions": [
+        {
+          "from": "updates-noreply@linkedin.com",
+          "subject": "Utkarsh Vijay - Co-Founder and CEO reacted to this post: 22 lakh students woke up to\u2026",
+          "received": "2026-05-20T14:35:02Z",
+          "action": "mark_read_noise",
+          "marked_read": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "totals": {
+    "checked": 1,
+    "replied": 0,
+    "marked_read": 1,
+    "errors": 0
+  }
+}

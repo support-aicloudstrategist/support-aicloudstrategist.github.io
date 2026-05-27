@@ -1,0 +1,10 @@
+priority,item,current_state,safe_next_action,approval_gate
+1,DIAG-LAB-A diagnostics/pathology premium HTML email category,"Founder card + premium HTML ready; 2 recipients reverified at 18:15 IST","If approved, re-check sources if >60 min old; personalize business name only; guarded individual contact@ sends","APPROVE TEMPLATE DIAG-LAB-A"
+2,HEALTHCARE-A NCR WhatsApp category,"Sample sent to Raj personal WhatsApp; 5 prospects mapped","Await approval; no customer WhatsApp send","APPROVE HEALTHCARE-A"
+3,EDU-A NCR WhatsApp category,"Sample sent to Raj personal WhatsApp; 5 prospects mapped","Await approval; no customer WhatsApp send","APPROVE EDU-A"
+4,MFG-A NCR template/category,"5 manufacturing/export/RFQ prospects mapped; mixed email/WhatsApp routes","Prepare/render premium HTML approval before any email use; no customer send","APPROVE MFG-A plus email SOP if email is used"
+5,Dental DENTAL-A sent set,"2 guarded sends completed at 15:43 IST","Monitor only until 2026-05-22 15:43 IST","Fresh follow-up approval after monitor window"
+6,Diagnostics alternate sent set,"2 guarded sends completed at 14:35 IST","Monitor only until 2026-05-22 14:35 IST","Fresh follow-up approval after monitor window"
+7,Sparsh WhatsApp demo,"Approved and sent at 17:19 IST per 18:02 pack","Monitor only; no extra media or follow-up","Fresh exact WhatsApp approval"
+8,Website/About/Free Review/clinic resource polish,"Prepared but not published","Keep queued; do not edit or publish","Exact Raj staging/publish approval"
+9,MotorInc older approval reply,"Blocked by current SOP non-compliance","Fresh verification + rebuilt premium HTML + fresh approval","Fresh exact approval only"

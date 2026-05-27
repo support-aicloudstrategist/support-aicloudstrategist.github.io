@@ -1,0 +1,17 @@
+{
+  "phase": 3,
+  "status": "completed_limited_channels",
+  "approval_packs_total": 2,
+  "by_channel": {
+    "linkedin": 0,
+    "email": 0,
+    "phone": 2
+  },
+  "excluded_reasons": [
+    "LinkedIn URL MEDIUM+ not found for any prospect",
+    "Verified clinic email not found for any prospect",
+    "Phone script only drafted for two prospects with explicit Justdial phone number visible"
+  ],
+  "output": "/home/OpenClaw/.openclaw/workspace/reports/week1-brief/outreach-drafts/aics-bengaluru-outreach-multichannel-2026-05-24.md",
+  "timestamp": "2026-05-24T20:46:00+05:30"
+}

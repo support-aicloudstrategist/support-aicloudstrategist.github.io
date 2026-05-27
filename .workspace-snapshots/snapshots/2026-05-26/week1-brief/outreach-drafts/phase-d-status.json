@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-05-24T21:10:00+05:30",
+  "pune_phone_pack_count": 1,
+  "source": "aics-prospects-pune-owner-led.csv phone != NONE",
+  "pack_ids": [
+    "AICS-phone-PUN-001"
+  ]
+}

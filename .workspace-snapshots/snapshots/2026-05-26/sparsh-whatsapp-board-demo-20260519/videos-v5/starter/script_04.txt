@@ -1,0 +1,1 @@
+Solution we build. New enquiries: Fresh WhatsApp, missed-call, and form requests appear as cards. Appointment requests: Staff confirms timing, doctor availability, and next step. Staff follow-up: Callbacks and no-response reminders stay visible. Daily summary: Owner sees booked, pending, and missed follow-ups.

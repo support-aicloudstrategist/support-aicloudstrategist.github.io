@@ -1,0 +1,14 @@
+{
+  "ts": "2026-05-20T18:25:55+0530",
+  "from": "AICS WhatsApp +91 87963 02608",
+  "to": "Raj personal WhatsApp +91 96252 66139",
+  "template": "FOOD-A",
+  "creative": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/food-a/food-a-approval-creative-final.png",
+  "caption": "AICS TEMPLATE REVIEW — FOOD-A\nCreative + WhatsApp message sample\n\nNamaste {business_name} Team,\n\nFood and retail brands get customer queries from website, app, phone, WhatsApp and store channels. When support and feedback are scattered, issues take longer to resolve.\n\nAICloudStrategist helps businesses set up cleaner customer-support workflows:\n\n✅ enquiry and complaint routing\n✅ WhatsApp/order-help automation\n✅ SLA and pending-ticket visibility\n✅ feedback/review capture\n✅ cloud backup and process hygiene\n\nCan we share a free 10-minute customer-support workflow review for {business_name}?\n\n— Anushka Bhattacharya\nDirector, AICloudStrategist\nWebsite: https://aicloudstrategist.com\nWhatsApp: +91 87963 02608\nVoice line: +91 80654 80898\nEmail: contact@aicloudstrategist.com\n\nApproval: APPROVE FOOD-A / CHANGES FOOD-A",
+  "response": {
+    "ok": true,
+    "id": "true_25383307075622@lid_3EB0865F2575FDAA3A5744",
+    "to": "919625266139@c.us",
+    "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/food-a/food-a-approval-creative-final.png"
+  }
+}

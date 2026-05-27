@@ -1,0 +1,22 @@
+[
+  {
+    "business_name": "NKPC Kidney Clinic",
+    "email": "nationalkidney99@gmail.com",
+    "city": "Kolkata",
+    "segment": "specialty kidney/urology clinic",
+    "fit_score": "88",
+    "recommended_channel": "whatsapp_or_call",
+    "source_url": "https://www.nkpc.in/contact/",
+    "source_file": "/home/OpenClaw/.openclaw/workspace/prospecting/2026-05-19/aics-healthcare-prospect-reverification-0930.csv"
+  },
+  {
+    "business_name": "Park Clinic",
+    "email": "info@parkclinickolkata.com",
+    "city": "Kolkata",
+    "segment": "superspeciality clinic/hospital",
+    "fit_score": "87",
+    "recommended_channel": "call",
+    "source_url": "http://www.parkclinickolkata.in/ContactUs.htm",
+    "source_file": "/home/OpenClaw/.openclaw/workspace/prospecting/2026-05-19/aics-healthcare-prospect-reverification-0930.csv"
+  }
+]

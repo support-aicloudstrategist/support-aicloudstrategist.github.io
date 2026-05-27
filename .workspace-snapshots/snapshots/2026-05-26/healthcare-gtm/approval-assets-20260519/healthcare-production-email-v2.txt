@@ -1,0 +1,28 @@
+Subject: Healthcare Digital Readiness Review for {{BusinessName}}
+
+Hi {{Name}},
+
+In many clinics and diagnostic centres, the core issue is not lack of software. The real leakage happens between systems — a missed WhatsApp enquiry, a delayed callback, a report sent manually, a billing follow-up forgotten, or a backup process nobody has tested recently.
+
+AICloudStrategist helps healthcare businesses identify these operational gaps and convert them into a simple 30-day improvement plan.
+
+What the review covers:
+• Patient enquiry flow — calls, WhatsApp, website forms, appointment requests and follow-up ownership.
+• Report delivery process — manual coordination points, patient updates and delay risks.
+• Billing and follow-up visibility — pending payments, reminders, handovers and owner-level tracking.
+• Backup and security basics — access hygiene, backup assumptions, recovery readiness and patient-data handling basics.
+
+You receive a practical 30-day improvement map with clear recommendations for the top workflow fixes, automation opportunities and risk areas — prioritised by business impact and ease of implementation.
+
+If useful, we can do a 20-minute readiness review for {{BusinessName}} this week.
+
+Request the readiness review:
+https://aicloudstrategist.com/free-business-review
+
+If this is not the right person, you can reply with the correct contact or simply reply STOP and we will not follow up.
+
+Regards,
+AICloudStrategist
+Digital presence • workflow automation • cloud • security • AI readiness
+Website: https://aicloudstrategist.com
+Email: contact@aicloudstrategist.com

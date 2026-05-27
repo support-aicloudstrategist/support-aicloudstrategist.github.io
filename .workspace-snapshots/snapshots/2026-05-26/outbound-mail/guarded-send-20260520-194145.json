@@ -1,0 +1,16 @@
+{
+  "ts": "2026-05-20T19:41:45+0530",
+  "sender": "contact@aicloudstrategist.com",
+  "purpose": "support_reply",
+  "subject": "Approval needed: Diagnostics correction email \u2014 The Diagnostic Clinical Laboratory",
+  "approval_ref": "Raj voice instruction in AICS-Ops message 5563: send pending approvals one by one via correct channel",
+  "mode": "single_message",
+  "results": [
+    {
+      "to": [
+        "rajivjobnaukri@gmail.com"
+      ],
+      "status": "sent"
+    }
+  ]
+}

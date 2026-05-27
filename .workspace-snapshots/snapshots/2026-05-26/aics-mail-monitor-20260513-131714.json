@@ -1,0 +1,325 @@
+{
+  "dry_run": true,
+  "baseline": false,
+  "ts": "2026-05-13T13:17:14+0530",
+  "summary": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 25,
+      "auto_replied": 0,
+      "notify_only": 0,
+      "errors": [],
+      "items": [
+        {
+          "from": "no-reply@accounts.google.com",
+          "subject": "Security alert",
+          "received": "2026-05-13T06:33:02Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@github.com",
+          "subject": "[GitHub] Please download your two-factor recovery codes",
+          "received": "2026-05-13T05:38:25Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@github.com",
+          "subject": "One of your invitations didn't reach its recipient",
+          "received": "2026-05-13T05:29:58Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "dmarcreport@microsoft.com",
+          "subject": "[Preview] Report Domain: aicloudstrategist.com Submitter: enterprise.protection.outlook.com Report-ID: 6a072e7925a847408b31e63e90211c8e",
+          "received": "2026-05-13T01:31:46Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "notifications@github.com",
+          "subject": "Re: [support-aicloudstrategist/support-aicloudstrategist.github.io] Update website for Digital Bharat positioning (PR #2)",
+          "received": "2026-05-12T17:30:15Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "newsletter@formspree.io",
+          "subject": "Enrich Your Leads with Formspree",
+          "received": "2026-05-12T16:57:59Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "kash@clay.com",
+          "subject": "You're connected: Clay is now live inside Claude",
+          "received": "2026-05-12T13:20:03Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "workspace-noreply@google.com",
+          "subject": "Thank you for setting up billing in Google Workspace for aicloudstrategist.com",
+          "received": "2026-05-12T13:16:16Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "payments-noreply@google.com",
+          "subject": "Google Payments: Your India tax info has been accepted",
+          "received": "2026-05-12T13:14:19Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@supabase.com",
+          "subject": "OAuth Application Approval",
+          "received": "2026-05-12T13:05:29Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "welcome@supabase.com",
+          "subject": "Welcome to Supabase",
+          "received": "2026-05-12T13:05:10Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@github.com",
+          "subject": "[GitHub] A third-party OAuth application has been added to your account",
+          "received": "2026-05-12T12:53:13Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "learn@send.zapier.com",
+          "subject": "Build your first Zap with Copilot \u26a1",
+          "received": "2026-05-12T12:51:59Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@github.com",
+          "subject": "[GitHub] A third-party GitHub Application has been added to your account",
+          "received": "2026-05-12T12:40:18Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "email@e.lucid.co",
+          "subject": "[Onboarding] Your Lucidchart starter guide",
+          "received": "2026-05-12T12:35:21Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "account@app.lucid.co",
+          "subject": "Confirmation of your Lucidchart account",
+          "received": "2026-05-12T12:23:09Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "your@product.miro.com",
+          "subject": "Welcome to Miro, Rajiv Gupta! \ud83d\udc4b",
+          "received": "2026-05-12T12:04:20Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "team@mail.notion.so",
+          "subject": "From chaos to clarity: Database edition",
+          "received": "2026-05-12T02:00:53Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "dmarcreport@microsoft.com",
+          "subject": "[Preview] Report Domain: aicloudstrategist.com Submitter: enterprise.protection.outlook.com Report-ID: e3b3d7509ec64e6eba3cd0344181eefe",
+          "received": "2026-05-12T01:31:36Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply-dmarc@zoho.com",
+          "subject": "Report domain: aicloudstrategist.com Submitter: zoho.com Report-ID: 8b623496-3006-43bc-9d3c-95e56a71c876",
+          "received": "2026-05-11T18:42:03Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@github.com",
+          "subject": "[GitHub] Please review this sign in",
+          "received": "2026-05-11T17:06:25Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@github.com",
+          "subject": "[GitHub] Please verify your device",
+          "received": "2026-05-11T17:05:42Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply-dmarc-support@google.com",
+          "subject": "Report domain: aicloudstrategist.com Submitter: google.com Report-ID: 7258694251981128162",
+          "received": "2026-05-11T10:31:17Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "startup.india@investindia.org.in",
+          "subject": "Welcome to the Startup India Hub",
+          "received": "2026-05-11T09:30:21Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "nsws-noreply@investindia.org.in",
+          "subject": "NSWS - Approval Status",
+          "received": "2026-05-11T09:30:00Z",
+          "action": "already_processed"
+        }
+      ]
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 25,
+      "auto_replied": 0,
+      "notify_only": 0,
+      "errors": [],
+      "items": [
+        {
+          "from": "mohit@eaccounting.in",
+          "subject": "First Month Compliance Checklist",
+          "received": "2026-05-13T06:27:37Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "security-noreply@linkedin.com",
+          "subject": "New device registration for Remember me",
+          "received": "2026-05-13T05:43:34Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "veeram@cyberous.in",
+          "subject": "One Click Can Hack Your Startup - Get a Free Security Audit Today",
+          "received": "2026-05-13T05:26:01Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"UPVOTE OR GET RESULT LIKE THIS\"",
+          "received": "2026-05-12T14:05:50Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "messages-noreply@linkedin.com",
+          "subject": "Anushka, add \u0641\u0647\u062f \u0627\u0628\u0631\u0627\u0647\u064a\u0645 - Co-Founder",
+          "received": "2026-05-12T13:09:30Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "yusuf.m@abtikservices.com",
+          "subject": "Startup India Seed Fund Scheme Process",
+          "received": "2026-05-12T12:44:50Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "updates-noreply@linkedin.com",
+          "subject": "Nupur Sandhir recently posted",
+          "received": "2026-05-12T03:09:49Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "notifications-noreply@linkedin.com",
+          "subject": "IT Consulting request from Abhishek Gupta and other clients are available. Show Requests.",
+          "received": "2026-05-11T18:17:20Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "notifications-noreply@linkedin.com",
+          "subject": "You have 2 new invitations",
+          "received": "2026-05-11T15:09:30Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"No offence but if i was yogesh i would have chosen ruru too...\"",
+          "received": "2026-05-11T14:22:55Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "bhattacharyaanushka01@gmail.com",
+          "subject": "",
+          "received": "2026-05-11T10:49:55Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "newsletters-noreply@linkedin.com",
+          "subject": "The Truth Behind Arjun - A Revelation",
+          "received": "2026-05-09T15:06:05Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "notifications-noreply@linkedin.com",
+          "subject": "You have 1 new invitation",
+          "received": "2026-05-09T14:19:24Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"my crush gave me this, help!\"",
+          "received": "2026-05-09T14:18:12Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "messages-noreply@linkedin.com",
+          "subject": "Anu, add vijay cherian - Registered Nurse",
+          "received": "2026-05-09T13:09:30Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "jobs-listings@linkedin.com",
+          "subject": "Atlys is hiring a Entrepreneur-in-Residence (EIR)",
+          "received": "2026-05-09T03:09:30Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "messages-noreply@linkedin.com",
+          "subject": "Anu, meet Abha Mishra at Fundist.in \ud83e\udd1b",
+          "received": "2026-05-09T01:09:31Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "notifications-noreply@linkedin.com",
+          "subject": "IT Consulting request from Priyanka Rathee and other clients are available. Show Requests.",
+          "received": "2026-05-08T20:47:20Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "updates-noreply@linkedin.com",
+          "subject": "Vivek Upadhyay and others share their thoughts on LinkedIn",
+          "received": "2026-05-08T14:29:44Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "noreply@redditmail.com",
+          "subject": "\"6.6 Banners (2nd half)\"",
+          "received": "2026-05-08T14:22:12Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph minimal user send 20260508-193949",
+          "received": "2026-05-08T14:11:57Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph heartbeat verification 20260508-185540",
+          "received": "2026-05-08T13:27:50Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "newsletters-noreply@linkedin.com",
+          "subject": "Indian Brands Vs Global Brands On Mother's Day",
+          "received": "2026-05-08T11:48:45Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "tiwarinites400@gmail.com",
+          "subject": "Simplify Your Business Registration & Certification",
+          "received": "2026-05-08T10:38:19Z",
+          "action": "already_processed"
+        },
+        {
+          "from": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@aicloudstrategist.com",
+          "subject": "Undeliverable: AI Cloud Graph API test",
+          "received": "2026-05-08T08:47:23Z",
+          "action": "already_processed"
+        }
+      ]
+    }
+  ]
+}

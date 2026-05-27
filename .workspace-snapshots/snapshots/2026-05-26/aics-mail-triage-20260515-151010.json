@@ -1,0 +1,46 @@
+{
+  "ts": "2026-05-15T15:10:10+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [
+        {
+          "from": "Pranjal from Vobiz AI",
+          "address": "support@vobiz.ai",
+          "subject": "Re: Pilot pricing request: India SIP trunk / Voice API for AI calling",
+          "received": "2026-05-15T09:29:52Z",
+          "preview": "1) We are happy to let you know that there are no onboarding fees. Please keep in mind that each DID you purchase has a one-time setup fee.\r\n\r\n\r\n2) There is no monthly minimum requirement unless you have selected a partner account. To use our services, su",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9wAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "review": [
+        {
+          "from": "Apollo",
+          "address": "hello@mail.apollo.io",
+          "subject": "Reminder: You could be saving $120+ per year",
+          "received": "2026-05-15T09:28:51Z",
+          "preview": "Lower your costs. Access your credits upfront. Keep everything you love. \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAADmi9vAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 0,
+      "already_seen": 48,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 1,
+      "already_seen": 49,
+      "errors": []
+    }
+  ],
+  "important_count": 1,
+  "review_count": 1,
+  "ignored_count": 1,
+  "errors": []
+}

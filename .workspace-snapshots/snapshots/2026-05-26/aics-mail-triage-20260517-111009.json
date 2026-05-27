@@ -1,0 +1,28 @@
+{
+  "ts": "2026-05-17T11:10:09+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 50,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 50,
+      "errors": []
+    }
+  ],
+  "important_count": 0,
+  "review_count": 0,
+  "ignored_count": 0,
+  "errors": []
+}

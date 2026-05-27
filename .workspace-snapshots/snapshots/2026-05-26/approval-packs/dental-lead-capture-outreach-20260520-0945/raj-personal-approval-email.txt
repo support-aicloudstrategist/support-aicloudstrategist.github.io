@@ -1,0 +1,13 @@
+APPROVAL NEEDED: dental implant/aligner lead-capture outreach
+
+Targets identified: 2 email-ready prospects
+- Smilex Dental Implant & Aligner Centers <smilex.info1@gmail.com>
+- Dr Kadu's Orthodontic & Dental Clinic <info@punedentalcare.com>
+
+Proposed item: premium HTML dental enquiry-flow email.
+Sender after approval: contact@aicloudstrategist.com via aics_mail_send_guard.py.
+Subject: Free 20-minute check: are dental implant and aligner enquiries leaking between calls, WhatsApp and follow-ups?
+
+SOP checked at 2026-05-20 09:45 IST: live contact source verified; WhatsApp +91 87963 02608; voice line +91 80654 80898; primary sender/contact contact@aicloudstrategist.com; support@ only as support reference; signature Anushka Bhattacharya, Director, AICloudStrategist; premium HTML customer email.
+
+Reply: APPROVE DENTAL EMAILS / CHANGES / REJECT

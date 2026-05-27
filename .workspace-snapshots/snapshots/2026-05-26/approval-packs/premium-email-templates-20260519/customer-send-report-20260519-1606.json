@@ -1,0 +1,21 @@
+{
+  "ts": "2026-05-19T16:07:19+0530",
+  "approval_message_id": "5213",
+  "approved_by": "Raj",
+  "template": "Template 1 — AICloudStrategist premium Business Flow Check follow-up email",
+  "sender": "support@aicloudstrategist.com delegated Microsoft Graph /me",
+  "results": [
+    {
+      "business": "NKPC Kidney Clinic",
+      "email": "nationalkidney99@gmail.com",
+      "subject": "Free 20-minute Business Flow Check for NKPC Kidney Clinic",
+      "status": "sent"
+    },
+    {
+      "business": "Park Clinic Kolkata",
+      "email": "info@parkclinickolkata.com",
+      "subject": "Free 20-minute Business Flow Check for Park Clinic Kolkata",
+      "status": "sent"
+    }
+  ]
+}

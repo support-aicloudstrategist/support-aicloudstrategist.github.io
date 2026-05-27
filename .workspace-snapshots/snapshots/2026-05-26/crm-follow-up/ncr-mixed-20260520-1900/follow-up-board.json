@@ -1,0 +1,315 @@
+{
+  "generated_at": "2026-05-20T19:00:00+05:30",
+  "summary": {
+    "total": 25,
+    "sent": 18,
+    "skipped": 7,
+    "by_template": {
+      "EDU-A": {
+        "sent": 3,
+        "skipped": 2
+      },
+      "FOOD-A": {
+        "sent": 2,
+        "skipped": 0
+      },
+      "HEALTHCARE-A": {
+        "sent": 4,
+        "skipped": 1
+      },
+      "MFG-A": {
+        "sent": 3,
+        "skipped": 2
+      },
+      "PROF-A": {
+        "sent": 5,
+        "skipped": 0
+      },
+      "RE-A": {
+        "sent": 0,
+        "skipped": 1
+      },
+      "SALON-A": {
+        "sent": 1,
+        "skipped": 1
+      }
+    }
+  },
+  "rows": [
+    {
+      "template": "EDU-A",
+      "business_name": "DUCAT India",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/edu-a-approved-send-20260520-181404.json",
+      "message_id": "true_42520344043563@lid_3EB0458E645AA14EFF003B"
+    },
+    {
+      "template": "EDU-A",
+      "business_name": "CETPA Infotech Pvt. Ltd.",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/edu-a-approved-send-20260520-181404.json",
+      "message_id": "true_264089016213621@lid_3EB06C9E17653A75BF2FAB"
+    },
+    {
+      "template": "EDU-A",
+      "business_name": "Drishti IAS",
+      "city": "",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/edu-a-approved-send-20260520-181404.json",
+      "message_id": ""
+    },
+    {
+      "template": "EDU-A",
+      "business_name": "FIITJEE",
+      "city": "",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/edu-a-approved-send-20260520-181404.json",
+      "message_id": ""
+    },
+    {
+      "template": "EDU-A",
+      "business_name": "BASU Classes",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/edu-a-approved-send-20260520-181404.json",
+      "message_id": "true_198565079036142@lid_3EB0E478F712F0FD4DC9DF"
+    },
+    {
+      "template": "FOOD-A",
+      "business_name": "Bakingo",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/food-a-approved-send-20260520-183539.json",
+      "message_id": "true_73156345729249@lid_3EB0FB681056448ABC375A"
+    },
+    {
+      "template": "FOOD-A",
+      "business_name": "Bikanervala",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/food-a-approved-send-20260520-183539.json",
+      "message_id": "true_251521925165141@lid_3EB0B7C7AC9B3B94680D96"
+    },
+    {
+      "template": "HEALTHCARE-A",
+      "business_name": "Dentcraft Multispeciality Dental Clinic",
+      "city": "Noida Sector 104",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/healthcare-a-approved-send-20260520-180820.json",
+      "message_id": "true_166713870032938@lid_3EB0C3778DC6CF0D282073"
+    },
+    {
+      "template": "HEALTHCARE-A",
+      "business_name": "Aryaa Dental Clinic",
+      "city": "Noida Sector 137",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/healthcare-a-approved-send-20260520-180820.json",
+      "message_id": "true_7761358266368@lid_3EB0EE7031FFDDC10F1691"
+    },
+    {
+      "template": "HEALTHCARE-A",
+      "business_name": "Ganesh Diagnostic and Imaging Centre Pvt. Ltd.",
+      "city": "Rohini, Delhi",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/healthcare-a-approved-send-20260520-180820.json",
+      "message_id": "true_268066357309440@lid_3EB0E84DCABEEE88848E51"
+    },
+    {
+      "template": "HEALTHCARE-A",
+      "business_name": "Yatharth Hospitals",
+      "city": "Noida / Greater Noida / Faridabad",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/healthcare-a-approved-send-20260520-180820.json",
+      "message_id": ""
+    },
+    {
+      "template": "HEALTHCARE-A",
+      "business_name": "Dadu Medical Centre",
+      "city": "Delhi",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/healthcare-a-approved-send-20260520-180820.json",
+      "message_id": "true_30726883905588@lid_3EB00892A3346D57C7085C"
+    },
+    {
+      "template": "MFG-A",
+      "business_name": "Capital India",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/mfg-a-approved-send-20260520-181811.json",
+      "message_id": "true_268396818092226@lid_3EB08AB3F86F12D3B92EAF"
+    },
+    {
+      "template": "MFG-A",
+      "business_name": "R. P. Enterprises",
+      "city": "",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/mfg-a-approved-send-20260520-181811.json",
+      "message_id": ""
+    },
+    {
+      "template": "MFG-A",
+      "business_name": "Krishna Enterprises / Krishna Plastics",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/mfg-a-approved-send-20260520-181811.json",
+      "message_id": "true_97402023325749@lid_3EB0773B7C39D94AF5A834"
+    },
+    {
+      "template": "MFG-A",
+      "business_name": "House of Ace's",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/mfg-a-approved-send-20260520-181811.json",
+      "message_id": "true_221495842320459@lid_3EB0681F5CD3E3E5C18DE4"
+    },
+    {
+      "template": "MFG-A",
+      "business_name": "Sai Creations",
+      "city": "",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/mfg-a-approved-send-20260520-181811.json",
+      "message_id": ""
+    },
+    {
+      "template": "PROF-A",
+      "business_name": "AKGVG & Associates",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/prof-a-approved-send-20260520-184410.json",
+      "message_id": "true_213687960924288@lid_3EB09C39169BF246CD245B"
+    },
+    {
+      "template": "PROF-A",
+      "business_name": "Global Taxation",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/prof-a-approved-send-20260520-184410.json",
+      "message_id": "true_71713219965151@lid_3EB099D1E6B609313CFE30"
+    },
+    {
+      "template": "PROF-A",
+      "business_name": "I.P. Pasricha & Co.",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/prof-a-approved-send-20260520-184410.json",
+      "message_id": "true_90881608663163@lid_3EB073E70E6ECE44F5BB35"
+    },
+    {
+      "template": "PROF-A",
+      "business_name": "Dinesh Aarjav & Associates",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/prof-a-approved-send-20260520-184410.json",
+      "message_id": "true_22669172985890@lid_3EB01874AEF99FE65607E9"
+    },
+    {
+      "template": "PROF-A",
+      "business_name": "S Lohia & Associates",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/prof-a-approved-send-20260520-184410.json",
+      "message_id": "true_125357361467566@lid_3EB0F833F091F92258FF90"
+    },
+    {
+      "template": "RE-A",
+      "business_name": "Investors Clinic",
+      "city": "",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/re-a-approved-send-20260520-182150.json",
+      "message_id": ""
+    },
+    {
+      "template": "SALON-A",
+      "business_name": "Looks Salon",
+      "city": "",
+      "status": "skipped",
+      "blocker": "not_registered_on_whatsapp",
+      "next_action": "Do not retry WhatsApp. Verify alternate public email/contact route, then prepare fresh approval item if outreach still fits.",
+      "due": "2026-05-21",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/salon-a-approved-send-20260520-182441.json",
+      "message_id": ""
+    },
+    {
+      "template": "SALON-A",
+      "business_name": "Geetanjali Salon",
+      "city": "",
+      "status": "sent",
+      "blocker": "None",
+      "next_action": "Monitor for inbound reply; if no reply after 48h, prepare one soft follow-up for Raj approval before sending.",
+      "due": "2026-05-22",
+      "evidence_file": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/sends/salon-a-approved-send-20260520-182441.json",
+      "message_id": "true_243838715175159@lid_3EB0093FE7E68DCE06FCEE"
+    }
+  ]
+}

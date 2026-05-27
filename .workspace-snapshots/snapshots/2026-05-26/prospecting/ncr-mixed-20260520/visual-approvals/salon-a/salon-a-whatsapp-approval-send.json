@@ -1,0 +1,14 @@
+{
+  "ts": "2026-05-20T18:23:13+0530",
+  "from": "AICS WhatsApp +91 87963 02608",
+  "to": "Raj personal WhatsApp +91 96252 66139",
+  "template": "SALON-A",
+  "creative": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/salon-a/salon-a-approval-creative-final.png",
+  "caption": "AICS TEMPLATE REVIEW — SALON-A\nCreative + WhatsApp message sample\n\nNamaste {business_name} Team 👋\n\nSalon bookings and customer enquiries often come through calls, WhatsApp, Instagram and repeat customers. Missed follow-ups directly affect appointments and customer experience.\n\nAICloudStrategist helps salons create a simple booking and follow-up workflow:\n\n✅ missed enquiry tracking\n✅ appointment follow-up reminders\n✅ outlet-wise visibility\n✅ WhatsApp reply support\n✅ feedback/review capture\n\nCan we share a free 10-minute appointment-flow review for {business_name}?\n\n— Anushka Bhattacharya\nDirector, AICloudStrategist\nWebsite: https://aicloudstrategist.com\nWhatsApp: +91 87963 02608\nVoice line: +91 80654 80898\nEmail: contact@aicloudstrategist.com\n\nApproval: APPROVE SALON-A / CHANGES SALON-A",
+  "response": {
+    "ok": true,
+    "id": "true_25383307075622@lid_3EB0BF4720F76723583518",
+    "to": "919625266139@c.us",
+    "mediaPath": "/home/OpenClaw/.openclaw/workspace/reports/prospecting/ncr-mixed-20260520/visual-approvals/salon-a/salon-a-approval-creative-final.png"
+  }
+}

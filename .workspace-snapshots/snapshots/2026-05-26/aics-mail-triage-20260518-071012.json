@@ -1,0 +1,46 @@
+{
+  "ts": "2026-05-18T07:10:11+0530",
+  "dry_run": false,
+  "mailboxes": [
+    {
+      "mailbox": "support@aicloudstrategist.com",
+      "checked": 50,
+      "important": [
+        {
+          "from": "Google Payments",
+          "address": "payments-noreply@google.com",
+          "subject": "Google Workspace: Your invoice is available",
+          "received": "2026-05-17T20:09:51Z",
+          "preview": "Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email.\r\nName    aicloudstrategist\r\nInvoice number  5574248020\r\nPayments profile ID     7754-1140-5854\r\nIf you want to view your payment h",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAHTULYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "review": [
+        {
+          "from": "Apollo",
+          "address": "hello@mail.apollo.io",
+          "subject": "Why your list of 500 contacts isn't converting",
+          "received": "2026-05-17T21:28:49Z",
+          "preview": "The segmentation fix that changes what your messages can do. \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f",
+          "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkADg1ODRlOTQ3LWRiNmMtNGIyMS04NzAzLTQ0OTU1MjQ0ZTQwNgBGAAAAAAAXNRNdw6KyRJe7iSV16ciIBwAEmr0roVUSS5EmKAslSdvPAAAAAAEMAAAEmr0roVUSS5EmKAslSdvPAAAHTULZAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "ignored_new": 0,
+      "already_seen": 48,
+      "errors": []
+    },
+    {
+      "mailbox": "contact@aicloudstrategist.com",
+      "checked": 50,
+      "important": [],
+      "review": [],
+      "ignored_new": 0,
+      "already_seen": 50,
+      "errors": []
+    }
+  ],
+  "important_count": 1,
+  "review_count": 1,
+  "ignored_count": 0,
+  "errors": []
+}

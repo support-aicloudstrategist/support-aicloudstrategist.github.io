@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-05-24T21:10:00+05:30",
+  "scope": "OWNER-BLR-003 through OWNER-BLR-011",
+  "rows": [
+    {
+      "prospect_id": "OWNER-BLR-003",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/doctor/dr-k-a-mohan?practice_id=1138332&specialization=Dentist"
+    },
+    {
+      "prospect_id": "OWNER-BLR-004",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/doctor/dr-mahantesh-2-dentist?practice_id=1272173&specialization=Dentist"
+    },
+    {
+      "prospect_id": "OWNER-BLR-005",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/doctor/dr-baswaraj-biradar-dentist?practice_id=734346&specialization=Dentist"
+    },
+    {
+      "prospect_id": "OWNER-BLR-006",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/doctor/dr-sunil-rao-dentist-1?practice_id=779552&specialization=Dentist"
+    },
+    {
+      "prospect_id": "OWNER-BLR-007",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/doctor/dr-shyam-padmanabhan-dentist?practice_id=1235728&specialization=Dentist"
+    },
+    {
+      "prospect_id": "OWNER-BLR-008",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/doctor/dr-ramya-dentist?practice_id=744758&specialization=Dentist"
+    },
+    {
+      "prospect_id": "OWNER-BLR-009",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/clinic/denta-uno-advanced-multispeciality-dental-clinic-jp-nagar-6-phase-1"
+    },
+    {
+      "prospect_id": "OWNER-BLR-010",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/clinic/dental-frames-banaswadi-banaswadi-1"
+    },
+    {
+      "prospect_id": "OWNER-BLR-011",
+      "phone": "NONE",
+      "discovery_method": "none",
+      "source_url": "https://www.practo.com/bangalore/clinic/seven-hills-dental-mahadevapura"
+    }
+  ],
+  "new_phone_count": 0,
+  "notes": "Practo profile HTML/inline JS inspected; phone_number values were masked where present. Justdial direct listing URLs from enrichment did not expose unmasked phone in fetched HTML here. Search/web fetch provider unavailable for broader search; no clinic-owned site phone verified."
+}

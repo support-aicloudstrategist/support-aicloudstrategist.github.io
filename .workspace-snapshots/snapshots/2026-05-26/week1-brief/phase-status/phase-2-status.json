@@ -1,0 +1,16 @@
+{
+  "phase": 2,
+  "status": "done",
+  "evidence": "DPDP Sprint sellable package assets saved under /assets/dpdp-sprint/.",
+  "files": [
+    "assets/dpdp-sprint/privacy-policy-clinic-template.md",
+    "assets/dpdp-sprint/privacy-policy-clinic-paste-ready.html",
+    "assets/dpdp-sprint/cookie-banner.js",
+    "assets/dpdp-sprint/cookie-banner.css",
+    "assets/dpdp-sprint/whatsapp-consent-flow-template.md",
+    "assets/dpdp-sprint/data-inventory-worksheet.csv",
+    "assets/dpdp-sprint/board-ready-compliance-summary-template.md",
+    "assets/dpdp-sprint/two-week-sprint-delivery-checklist-founder-sop.md"
+  ],
+  "updated_at": "2026-05-24T22:04:40.640450"
+}

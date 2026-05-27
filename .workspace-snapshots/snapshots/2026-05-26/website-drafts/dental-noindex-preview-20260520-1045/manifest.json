@@ -1,0 +1,24 @@
+{
+  "pack_id": "AICS-DENTAL-NOINDEX-PREVIEW-20260520-1045",
+  "created_at_ist": "2026-05-20 10:45 IST",
+  "action": "Created internal noindex landing-page preview source and QA checklist; no staging, publish, send, customer contact, calls, spend, or sensitive/external-system change performed",
+  "source_assets": [
+    "reports/proposal-assets/aics-dental-lead-capture-mini-offer-2026-05-20-1000.md",
+    "reports/website-drafts/aics-dental-enquiry-flow-faq-approval-ready-2026-05-20-1015.md",
+    "reports/approval-packs/dental-lead-capture-outreach-20260520-0945/"
+  ],
+  "files": [
+    "/home/OpenClaw/.openclaw/workspace/reports/website-drafts/dental-noindex-preview-20260520-1045/index.html",
+    "/home/OpenClaw/.openclaw/workspace/reports/website-drafts/dental-noindex-preview-20260520-1045/qa-and-approval-checklist.md"
+  ],
+  "sop": {
+    "live_contact_source_checked": "https://aicloudstrategist.com/contact-channels.json at 2026-05-20 10:45 IST",
+    "whatsapp": "+91 87963 02608",
+    "voice_line": "+91 80654 80898",
+    "primary_email": "contact@aicloudstrategist.com",
+    "signature": "Anushka Bhattacharya, Director, AICloudStrategist",
+    "noindex": true,
+    "raj_approval_required_before_staging_or_public_use": true
+  },
+  "next_action": "QA locally and/or send Raj approval for noindex staging only after deciding channel; do not publish publicly without separate approval."
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "business_name": "Dentcraft Multispeciality Dental Clinic",
+    "template_code": "HEALTHCARE-A",
+    "recommended_channel": "WhatsApp/call",
+    "public_email": "info@dentcraftdentalclinic.com",
+    "public_phone_whatsapp": "+91 8448262006",
+    "website_source_url": "https://dentcraftdentalclinic.com/contact-us",
+    "confidence": "High",
+    "risk_notes": "Healthcare: avoid outcome/medical claims; use appointment/admin automation angle only."
+  },
+  {
+    "business_name": "Aryaa Dental Clinic",
+    "template_code": "HEALTHCARE-A",
+    "recommended_channel": "WhatsApp/call",
+    "public_email": "",
+    "public_phone_whatsapp": "+91 7678429627",
+    "website_source_url": "https://aryaadentalclinic.com/contact-us/",
+    "confidence": "Medium",
+    "risk_notes": "Phone extracted from official page markup; no public email found. Avoid medical claims."
+  },
+  {
+    "business_name": "Ganesh Diagnostic and Imaging Centre Pvt. Ltd.",
+    "template_code": "HEALTHCARE-A",
+    "recommended_channel": "WhatsApp/call",
+    "public_email": "info@ganeshdiagnostic.com",
+    "public_phone_whatsapp": "+91 9212125996; 01147333333",
+    "website_source_url": "https://www.ganeshdiagnostic.com/contact-us",
+    "confidence": "High",
+    "risk_notes": "Healthcare data sensitivity; avoid diagnostic accuracy/outcome claims; contacts include multiple numbers, verify preferred channel."
+  },
+  {
+    "business_name": "Yatharth Hospitals",
+    "template_code": "HEALTHCARE-A",
+    "recommended_channel": "Email/call via official contact desk",
+    "public_email": "",
+    "public_phone_whatsapp": "Noida +91 9582833333; Greater Noida +91 8800447777; Noida Ext +91 8800110086",
+    "website_source_url": "https://www.yatharthhospitals.com/",
+    "confidence": "High",
+    "risk_notes": "Large enterprise procurement cycle; strict healthcare/legal review needed; avoid outcome claims."
+  },
+  {
+    "business_name": "Dadu Medical Centre",
+    "template_code": "HEALTHCARE-A",
+    "recommended_channel": "WhatsApp",
+    "public_email": "",
+    "public_phone_whatsapp": "WhatsApp +91 7428500885; +91 9667721501; +91 9810939319",
+    "website_source_url": "https://www.dadumedicalcentre.com/contact-us/",
+    "confidence": "High",
+    "risk_notes": "Medical/aesthetic claims sensitive; use admin workflow only."
+  },
+  {
+    "business_name": "DUCAT India",
+    "template_code": "EDU-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "info@ducatindia.com",
+    "public_phone_whatsapp": "Phone 7070905090; WhatsApp 9999993213",
+    "website_source_url": "https://www.ducatindia.com/contact-us",
+    "confidence": "High",
+    "risk_notes": "Competitive edtech market; avoid claiming admissions outcomes."
+  },
+  {
+    "business_name": "CETPA Infotech Pvt. Ltd.",
+    "template_code": "EDU-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "query@cetpainfotech.com",
+    "public_phone_whatsapp": "+91 7827011536; +91 9212172602; 0120-4535353",
+    "website_source_url": "https://www.cetpainfotech.com/",
+    "confidence": "High",
+    "risk_notes": "Contacts extracted from official homepage; verify branch-specific recipient."
+  },
+  {
+    "business_name": "Drishti IAS",
+    "template_code": "EDU-A",
+    "recommended_channel": "Email/call",
+    "public_email": "care@groupdrishti.in",
+    "public_phone_whatsapp": "+91 8010440440; +91 8750187501",
+    "website_source_url": "https://www.drishtiias.com/contact",
+    "confidence": "High",
+    "risk_notes": "Large brand with internal tech team; outreach should be consultative, not generic."
+  },
+  {
+    "business_name": "FIITJEE",
+    "template_code": "EDU-A",
+    "recommended_channel": "Email/call",
+    "public_email": "info@fiitjee.com",
+    "public_phone_whatsapp": "+91 7825895400",
+    "website_source_url": "https://www.fiitjee.com/contact-us",
+    "confidence": "High",
+    "risk_notes": "Large legacy institute; procurement may be slow; avoid academic result claims."
+  },
+  {
+    "business_name": "BASU Classes",
+    "template_code": "EDU-A",
+    "recommended_channel": "WhatsApp/call",
+    "public_email": "",
+    "public_phone_whatsapp": "+91 8130147179; 8447760430",
+    "website_source_url": "https://basueducation.com/",
+    "confidence": "Medium",
+    "risk_notes": "No public email found; phone extracted from official page."
+  },
+  {
+    "business_name": "Capital India",
+    "template_code": "MFG-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "infocapitalindia@gmail.com",
+    "public_phone_whatsapp": "+91 9990665758; +91 8510050515",
+    "website_source_url": "https://www.capitalindia.ind.in/contact-us/",
+    "confidence": "High",
+    "risk_notes": "Gmail address suggests limited domain-email maturity; verify decision-maker before proposal."
+  },
+  {
+    "business_name": "R. P. Enterprises",
+    "template_code": "MFG-A",
+    "recommended_channel": "Call",
+    "public_email": "",
+    "public_phone_whatsapp": "08045801389",
+    "website_source_url": "https://www.rpenterprises.co.in/contact-us.html",
+    "confidence": "Medium",
+    "risk_notes": "Phone appears via marketplace/TradeIndia widget; public business email not found."
+  },
+  {
+    "business_name": "Krishna Enterprises / Krishna Plastics",
+    "template_code": "MFG-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "krishna.enterprises04@gmail.com",
+    "public_phone_whatsapp": "+91 9319573636",
+    "website_source_url": "https://krishnaaplastics.in/contact-us/",
+    "confidence": "High",
+    "risk_notes": "Gmail contact; likely owner-led sales process; keep pitch simple."
+  },
+  {
+    "business_name": "House of Ace's",
+    "template_code": "MFG-A",
+    "recommended_channel": "Email/WhatsApp",
+    "public_email": "akarsh@houseofaces.in",
+    "public_phone_whatsapp": "+91 9873550260; 0120-4070268",
+    "website_source_url": "https://houseofaces.co.in/",
+    "confidence": "Medium",
+    "risk_notes": "Official homepage contained some dummy/example emails too; use only domain email and verify before outreach."
+  },
+  {
+    "business_name": "Sai Creations",
+    "template_code": "MFG-A",
+    "recommended_channel": "Email/call",
+    "public_email": "info@saicreations.co.in",
+    "public_phone_whatsapp": "(+91) 120-4356635",
+    "website_source_url": "https://www.saicreations.co.in/contact-us",
+    "confidence": "High",
+    "risk_notes": "B2B exporter; email-first professional tone recommended."
+  },
+  {
+    "business_name": "Investors Clinic",
+    "template_code": "RE-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "customercare@investors-clinic.com; support@investorsclinic.in",
+    "public_phone_whatsapp": "+91 8010101010; 0120-4247285",
+    "website_source_url": "https://investorsclinic.in/contact-us",
+    "confidence": "High",
+    "risk_notes": "Real estate has RERA/compliance sensitivities; avoid investment-return claims."
+  },
+  {
+    "business_name": "Looks Salon",
+    "template_code": "SALON-A",
+    "recommended_channel": "Email/call",
+    "public_email": "customercare@lookssalon.in",
+    "public_phone_whatsapp": "1800 212 5665",
+    "website_source_url": "https://www.lookssalon.in/",
+    "confidence": "Medium",
+    "risk_notes": "Large chain; central customer care may not route vendor pitches."
+  },
+  {
+    "business_name": "Geetanjali Salon",
+    "template_code": "SALON-A",
+    "recommended_channel": "WhatsApp/call",
+    "public_email": "",
+    "public_phone_whatsapp": "+91 7428918292",
+    "website_source_url": "https://www.geetanjalisalon.com/locations/",
+    "confidence": "Medium",
+    "risk_notes": "Contact number extracted from official locations page markup; no public email found."
+  },
+  {
+    "business_name": "Bakingo",
+    "template_code": "FOOD-A",
+    "recommended_channel": "Email/call",
+    "public_email": "care@bakingo.com",
+    "public_phone_whatsapp": "+91 8882553333",
+    "website_source_url": "https://www.bakingo.com/contact-us",
+    "confidence": "High",
+    "risk_notes": "Already tech-enabled; pitch should be audit/optimization, not basic website."
+  },
+  {
+    "business_name": "Bikanervala",
+    "template_code": "FOOD-A",
+    "recommended_channel": "Email/call",
+    "public_email": "customercare@bikanervala.com",
+    "public_phone_whatsapp": "+91 8802143800; +91 9650075931",
+    "website_source_url": "https://bikanervala.com/pages/contact",
+    "confidence": "High",
+    "risk_notes": "Large established brand; central team may require vendor onboarding."
+  },
+  {
+    "business_name": "AKGVG & Associates",
+    "template_code": "PROF-A",
+    "recommended_channel": "Email/call",
+    "public_email": "info@akgvg.com",
+    "public_phone_whatsapp": "+91 9811118031; +91 9818314719; +91 9891024827",
+    "website_source_url": "https://www.akgvg.com/contact-us",
+    "confidence": "High",
+    "risk_notes": "They may already advise on compliance; pitch operational automation/security support, not tax expertise."
+  },
+  {
+    "business_name": "Global Taxation",
+    "template_code": "PROF-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "india@globaltaxation.in",
+    "public_phone_whatsapp": "WhatsApp +91 9990999281; +91 9458809281",
+    "website_source_url": "https://www.globaltaxation.in/contact-us.html",
+    "confidence": "High",
+    "risk_notes": "Sensitive financial data; stress privacy/security, avoid legal/tax advice claims."
+  },
+  {
+    "business_name": "I.P. Pasricha & Co.",
+    "template_code": "PROF-A",
+    "recommended_channel": "Call/LinkedIn follow-up",
+    "public_email": "",
+    "public_phone_whatsapp": "+91 9810774806",
+    "website_source_url": "https://ippcgroup.com/",
+    "confidence": "Medium",
+    "risk_notes": "Only phone reliably extracted from official site; email not clearly public in fetched source."
+  },
+  {
+    "business_name": "Dinesh Aarjav & Associates",
+    "template_code": "PROF-A",
+    "recommended_channel": "WhatsApp/email",
+    "public_email": "info@dineshaarjav.com",
+    "public_phone_whatsapp": "+91 9899969645",
+    "website_source_url": "https://www.dineshaarjav.com/",
+    "confidence": "High",
+    "risk_notes": "Small firm: keep offer lightweight and ROI-focused."
+  },
+  {
+    "business_name": "S Lohia & Associates",
+    "template_code": "PROF-A",
+    "recommended_channel": "Email/WhatsApp",
+    "public_email": "sulabhlohia@slohia.com",
+    "public_phone_whatsapp": "+91 9810353219; +91 9910353219",
+    "website_source_url": "https://www.slohia.com/",
+    "confidence": "High",
+    "risk_notes": "Financial/legal sensitivity; no tax claims; emphasize process/security."
+  }
+]
