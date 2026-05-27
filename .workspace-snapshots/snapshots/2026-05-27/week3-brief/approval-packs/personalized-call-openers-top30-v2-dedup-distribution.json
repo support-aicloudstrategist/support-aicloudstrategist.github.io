@@ -1,0 +1,152 @@
+[
+  {
+    "finding_text": "Clove Dental - Indiranagar: no href containing privacy in the fetched HTML \u2014 evidence: No anchor href containing \"privacy\" found in fetched HTML",
+    "count": 1,
+    "hash": "9cbb03d87a9d"
+  },
+  {
+    "finding_text": "Clove Dental - HSR Layout: no href containing privacy in the fetched HTML \u2014 evidence: No anchor href containing \"privacy\" found in fetched HTML",
+    "count": 1,
+    "hash": "e36bbb4fdd71"
+  },
+  {
+    "finding_text": "Clove Dental - Whitefield: no href containing privacy in the fetched HTML \u2014 evidence: No anchor href containing \"privacy\" found in fetched HTML",
+    "count": 1,
+    "hash": "a6a7d4fc3f5c"
+  },
+  {
+    "finding_text": "Clove Dental - Jayanagar: no href containing privacy in the fetched HTML \u2014 evidence: No anchor href containing \"privacy\" found in fetched HTML",
+    "count": 1,
+    "hash": "99a31000f57d"
+  },
+  {
+    "finding_text": "Clove Dental - Koramangala: no href containing privacy in the fetched HTML \u2014 evidence: No anchor href containing \"privacy\" found in fetched HTML",
+    "count": 1,
+    "hash": "31c536b7d889"
+  },
+  {
+    "finding_text": "Vasan Dental Care - Indiranagar: no href containing privacy in the fetched HTML \u2014 evidence: No anchor href containing \"privacy\" found in fetched HTML",
+    "count": 1,
+    "hash": "e4f698b28a99"
+  },
+  {
+    "finding_text": "S R Dental Implants Braces Centre: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "a3e9febc94dd"
+  },
+  {
+    "finding_text": "City Dental: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "9f838f49fdd6"
+  },
+  {
+    "finding_text": "Dr Vedprakash Memorial Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "0484526332af"
+  },
+  {
+    "finding_text": "Dr. Sourabh Nagpal Dental Practice: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "2b8fea52e1c8"
+  },
+  {
+    "finding_text": "Dentistry Futura Implant Centre: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "aa724f40f06b"
+  },
+  {
+    "finding_text": "Marya S Dental And Implant Centre: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "cfb1a799cee4"
+  },
+  {
+    "finding_text": "Denta'Glo Dental Clinic & Implant Centre: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "5ddf0c171f9d"
+  },
+  {
+    "finding_text": "Sri Sai Dental Hospital: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "5c44984e4129"
+  },
+  {
+    "finding_text": "Brite Smiles Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "f70bd46bb7fd"
+  },
+  {
+    "finding_text": "Dr. Gowd's Dental Hospital: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "7bcd451bb270"
+  },
+  {
+    "finding_text": "Ethos Dental: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "7d571e489bce"
+  },
+  {
+    "finding_text": "Dr.Gowds Dental Hospitals: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "aa9641060e3a"
+  },
+  {
+    "finding_text": "Smile Studio Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "f1c016d7977f"
+  },
+  {
+    "finding_text": "London Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "a314259f09bc"
+  },
+  {
+    "finding_text": "Kenia Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "eab4350585b9"
+  },
+  {
+    "finding_text": "Smile Care Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "cb5449f4fd4d"
+  },
+  {
+    "finding_text": "Dr. Mehtaa's Dental Clinic: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "111547cee9af"
+  },
+  {
+    "finding_text": "SITE_UNREACHABLE_ALT",
+    "count": 1,
+    "hash": "aa1995b4cbf1"
+  },
+  {
+    "finding_text": "Dr. Ratnika's - Smile Up Dental Clinic & Implant Center: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "581a50997629"
+  },
+  {
+    "finding_text": "Dental Tree: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "b21010bd61e8"
+  },
+  {
+    "finding_text": "Dentsee Dental Clinic, Laser and Implant Centre: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "74138ee23e0c"
+  },
+  {
+    "finding_text": "Dentalist - The Smile Experts: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "2fd668fbaa68"
+  },
+  {
+    "finding_text": "Smile Time Multispeciality Dental And Implant Centre: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "3819d1d9be7a"
+  },
+  {
+    "finding_text": "Dr Sahu\u2019s Dental & Orthodontic Care: tracking-without-consent signal \u2014 Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+    "count": 1,
+    "hash": "d300d814e2a8"
+  }
+]

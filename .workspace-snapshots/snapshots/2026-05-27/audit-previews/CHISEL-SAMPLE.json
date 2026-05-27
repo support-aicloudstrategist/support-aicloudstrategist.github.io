@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-05-27T09:29:21.177Z",
+  "prospect": {
+    "prospect_id": "CHISEL-SAMPLE",
+    "business_name": "Chisel Dental",
+    "website_url": "https://chiseldental.com",
+    "vertical": "dental_clinic",
+    "owner_name": "Dr. Sumanth Shetty",
+    "metro": "Bengaluru"
+  },
+  "site_unreachable": true,
+  "fetch": {
+    "status": null,
+    "final_url": null,
+    "fetch_ms": 10556,
+    "error": "fetch failed"
+  },
+  "findings": [
+    {
+      "id": "site_unreachable",
+      "category": "availability",
+      "status": "flagged",
+      "evidence": "HTTP/error: fetch failed; skipped remaining checks after 10556 ms.",
+      "severity": "high"
+    }
+  ],
+  "top_3_findings": [
+    {
+      "id": "site_unreachable",
+      "category": "availability",
+      "status": "flagged",
+      "evidence": "HTTP/error: fetch failed; skipped remaining checks after 10556 ms.",
+      "severity": "high"
+    }
+  ],
+  "limited_public_exposure_points_found": false,
+  "outputs": {
+    "pdf": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/CHISEL-SAMPLE.pdf",
+    "json": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/CHISEL-SAMPLE.json",
+    "html_debug": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/CHISEL-SAMPLE.html",
+    "pdf_bytes": 35044
+  }
+}

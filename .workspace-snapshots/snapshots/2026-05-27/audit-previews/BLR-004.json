@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-05-27T09:29:39.329Z",
+  "prospect": {
+    "prospect_id": "BLR-004",
+    "business_name": "Clove Dental - Jayanagar",
+    "owner_name": "",
+    "metro": "Bengaluru",
+    "city": "Bengaluru",
+    "vertical": "dental",
+    "website_url": "https://www.google.com/maps/search/?api=1&query=Clove%20Dental%20-%20Jayanagar%20Bengaluru",
+    "source_url": "https://www.google.com/maps/search/?api=1&query=Clove%20Dental%20-%20Jayanagar%20Bengaluru",
+    "original_row_id": "BLR-004"
+  },
+  "site_unreachable": false,
+  "fetch": {
+    "status": 200,
+    "final_url": "https://www.google.com/maps/search/?api=1&query=Clove%20Dental%20-%20Jayanagar%20Bengaluru",
+    "fetch_ms": 694,
+    "error": null,
+    "page_response_time_ms": 702
+  },
+  "findings": [
+    {
+      "id": "privacy_policy_link",
+      "category": "privacy",
+      "status": "missing",
+      "evidence": "No anchor href containing \"privacy\" found in fetched HTML.",
+      "severity": "high"
+    },
+    {
+      "id": "cookie_banner_script",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.",
+      "severity": "medium"
+    },
+    {
+      "id": "whatsapp_cta",
+      "category": "conversion",
+      "status": "missing",
+      "evidence": "No wa.me/ or whatsapp.com/send link found in fetched HTML.",
+      "severity": "medium"
+    },
+    {
+      "id": "mobile_viewport_meta",
+      "category": "mobile",
+      "status": "present",
+      "evidence": "<meta content=\"initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\" name=\"viewport\">",
+      "severity": "low"
+    },
+    {
+      "id": "contact_form_analysis",
+      "category": "forms",
+      "status": "missing",
+      "evidence": "No <form> element found in fetched HTML.",
+      "severity": "low"
+    },
+    {
+      "id": "tracking_scripts",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No gtag/GTM/Google Analytics/fbq/connect.facebook.net detected in fetched HTML.",
+      "severity": "low"
+    },
+    {
+      "id": "https_status",
+      "category": "security",
+      "status": "present",
+      "evidence": "URL scheme is HTTPS: https://www.google.com/maps/search/?api=1&query=Clove%20Dental%20-%20Jayanagar%20Bengaluru",
+      "severity": "low"
+    },
+    {
+      "id": "hsts_header",
+      "category": "security",
+      "status": "missing",
+      "evidence": "Strict-Transport-Security header not found in curl -I response.",
+      "severity": "medium"
+    },
+    {
+      "id": "structured_data",
+      "category": "seo",
+      "status": "missing",
+      "evidence": "No <script type=\"application/ld+json\"> found in fetched HTML.",
+      "severity": "medium"
+    },
+    {
+      "id": "page_response_time_ms",
+      "category": "performance",
+      "status": "present",
+      "evidence": "curl total time 702 ms",
+      "severity": "low"
+    }
+  ],
+  "top_3_findings": [
+    {
+      "id": "privacy_policy_link",
+      "category": "privacy",
+      "status": "missing",
+      "evidence": "No anchor href containing \"privacy\" found in fetched HTML.",
+      "severity": "high"
+    },
+    {
+      "id": "cookie_banner_script",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.",
+      "severity": "medium"
+    },
+    {
+      "id": "hsts_header",
+      "category": "security",
+      "status": "missing",
+      "evidence": "Strict-Transport-Security header not found in curl -I response.",
+      "severity": "medium"
+    }
+  ],
+  "limited_public_exposure_points_found": false,
+  "outputs": {
+    "pdf": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/BLR-004.pdf",
+    "json": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/BLR-004.json",
+    "html_debug": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/BLR-004.html",
+    "pdf_bytes": 34378
+  }
+}
