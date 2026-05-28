@@ -159,6 +159,13 @@ p {
 .nav-links a:hover {
   color: var(--blue);
 }
+.nav-cta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.nav-cta-short {
+  display: none;
+}
 .mobile-toggle {
   display: none;
   border: 0;
@@ -1094,6 +1101,11 @@ p {
     padding: 18px;
     box-shadow: var(--shadow);
   }
+  .nav-links a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+  }
   .nav-links.active {
     display: flex;
   }
@@ -1231,6 +1243,7 @@ p {
   .nav-inner {
     height: 68px;
     overflow: visible;
+    gap: 8px;
   }
   .nav-links {
     top: 68px;
@@ -1240,10 +1253,29 @@ p {
   .brand {
     font-size: 15px;
     min-width: 0;
+    flex: 1 1 auto;
   }
   .brand span:last-child {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
+  }
+  .nav-cta {
+    min-height: 40px;
+    padding: 9px 12px;
+    font-size: 12px;
+    line-height: 1.1;
+    max-width: 104px;
+  }
+  .nav-cta-full {
+    display: none;
+  }
+  .nav-cta-short {
+    display: inline;
+  }
+  .mobile-toggle {
+    flex: 0 0 auto;
+    min-height: 40px;
+    min-width: 42px;
+    padding: 8px 11px;
   }
   .mark {
     width: 38px;
@@ -6363,5 +6395,50 @@ body {
 @media (max-width: 760px) {
   .sla-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .nav {
+    overflow: visible !important;
+  }
+  .nav-inner.container {
+    overflow: visible !important;
+    justify-content: flex-start !important;
+  }
+  .brand {
+    flex: 0 0 auto !important;
+  }
+  .nav-cta {
+    margin-left: 0 !important;
+  }
+  .mobile-toggle {
+    display: block !important;
+  }
+  .conversion-hero,
+  .conversion-hero-grid,
+  .conversion-hero-grid > div,
+  .conversion-hero h1,
+  .conversion-hero p,
+  .hero-panel {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+  }
+  .conversion-hero h1 {
+    font-size: clamp(30px, 8.4vw, 34px) !important;
+    line-height: 1.06 !important;
+    max-width: calc(100vw - 52px) !important;
+  }
+  .conversion-hero p,
+  .conversion-hero .eyebrow,
+  .conversion-hero .actions,
+  .hero-panel {
+    max-width: calc(100vw - 52px) !important;
   }
 }
