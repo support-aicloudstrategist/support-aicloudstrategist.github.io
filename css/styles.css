@@ -6444,7 +6444,7 @@ body {
 }
 
 /* Homepage-only premium dark visual theme. Content and section order stay untouched. */
-body.reform-site:has(> main > .conversion-hero#offer) {
+body.reform-site.home-dark-theme {
   background:
     radial-gradient(circle at 12% 4%, rgba(0, 210, 255, 0.18), transparent 28%),
     radial-gradient(circle at 84% 18%, rgba(124, 92, 255, 0.18), transparent 30%),
@@ -6452,64 +6452,64 @@ body.reform-site:has(> main > .conversion-hero#offer) {
   color: #eef7ff;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .topbar {
+body.reform-site.home-dark-theme .topbar {
   background: #020611;
   color: #b9c8d8;
   border-bottom: 1px solid rgba(125, 211, 252, 0.16);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .topbar a {
+body.reform-site.home-dark-theme .topbar a {
   color: #86f7ff;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .nav {
+body.reform-site.home-dark-theme .nav {
   background: rgba(3, 8, 18, 0.78);
   border-bottom: 1px solid rgba(148, 163, 184, 0.16);
   backdrop-filter: blur(20px);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .nav.scrolled {
+body.reform-site.home-dark-theme .nav.scrolled {
   background: rgba(3, 8, 18, 0.93);
   box-shadow: 0 18px 54px rgba(0, 0, 0, 0.34);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .brand,
-body.reform-site:has(> main > .conversion-hero#offer) .nav-links a:not(.btn) {
+body.reform-site.home-dark-theme .brand,
+body.reform-site.home-dark-theme .nav-links a:not(.btn) {
   color: #eef7ff;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .nav-links a:hover {
+body.reform-site.home-dark-theme .nav-links a:hover {
   color: #67e8f9;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .mark {
+body.reform-site.home-dark-theme .mark {
   background: conic-gradient(from 210deg, #22d3ee, #60a5fa, #8b5cf6, #22d3ee);
   color: #04111f;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 18px 42px rgba(34, 211, 238, 0.28);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .mobile-toggle,
-body.reform-site:has(> main > .conversion-hero#offer) .btn-dark {
+body.reform-site.home-dark-theme .mobile-toggle,
+body.reform-site.home-dark-theme .btn-dark {
   background: linear-gradient(135deg, #0f172a, #111827);
   color: #f8fafc;
   border: 1px solid rgba(125, 211, 252, 0.26);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .btn-primary {
+body.reform-site.home-dark-theme .btn-primary {
   background: linear-gradient(135deg, #22d3ee, #60a5fa 62%, #8b5cf6);
   color: #020617;
   box-shadow: 0 18px 50px rgba(34, 211, 238, 0.24);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .btn-light {
+body.reform-site.home-dark-theme .btn-light {
   background: rgba(255, 255, 255, 0.08);
   color: #f8fafc;
   border: 1px solid rgba(226, 232, 240, 0.18);
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero {
+body.reform-site.home-dark-theme .conversion-hero {
   background:
     radial-gradient(circle at 18% 10%, rgba(34, 211, 238, 0.24), transparent 30%),
     radial-gradient(circle at 82% 18%, rgba(139, 92, 246, 0.24), transparent 32%),
@@ -6519,7 +6519,7 @@ body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero {
   overflow: hidden;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero:before {
+body.reform-site.home-dark-theme .conversion-hero:before {
   content: '';
   position: absolute;
   inset: 0;
@@ -6527,82 +6527,82 @@ body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero:before {
   background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.055) 48%, transparent 58%);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero-grid {
+body.reform-site.home-dark-theme .conversion-hero-grid {
   position: relative;
   z-index: 1;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero h1,
-body.reform-site:has(> main > .conversion-hero#offer) .section h2,
-body.reform-site:has(> main > .conversion-hero#offer) .number-card h3,
-body.reform-site:has(> main > .conversion-hero#offer) .founder-card h2 {
+body.reform-site.home-dark-theme .conversion-hero h1,
+body.reform-site.home-dark-theme .section h2,
+body.reform-site.home-dark-theme .number-card h3,
+body.reform-site.home-dark-theme .founder-card h2 {
   color: #ffffff;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .conversion-hero p,
-body.reform-site:has(> main > .conversion-hero#offer) .section-head .lead,
-body.reform-site:has(> main > .conversion-hero#offer) .number-card p,
-body.reform-site:has(> main > .conversion-hero#offer) .founder-card,
-body.reform-site:has(> main > .conversion-hero#offer) .footer p {
+body.reform-site.home-dark-theme .conversion-hero p,
+body.reform-site.home-dark-theme .section-head .lead,
+body.reform-site.home-dark-theme .number-card p,
+body.reform-site.home-dark-theme .founder-card,
+body.reform-site.home-dark-theme .footer p {
   color: #cbd5e1;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .eyebrow,
-body.reform-site:has(> main > .conversion-hero#offer) .tag {
+body.reform-site.home-dark-theme .eyebrow,
+body.reform-site.home-dark-theme .tag {
   color: #a5f3fc;
   background: rgba(14, 165, 233, 0.12);
   border: 1px solid rgba(125, 211, 252, 0.28);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .hero-panel,
-body.reform-site:has(> main > .conversion-hero#offer) .number-card,
-body.reform-site:has(> main > .conversion-hero#offer) .founder-card {
+body.reform-site.home-dark-theme .hero-panel,
+body.reform-site.home-dark-theme .number-card,
+body.reform-site.home-dark-theme .founder-card {
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.78), rgba(2, 6, 23, 0.82));
   border: 1px solid rgba(148, 163, 184, 0.18);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .hero-panel {
+body.reform-site.home-dark-theme .hero-panel {
   backdrop-filter: blur(12px);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .section {
+body.reform-site.home-dark-theme .section {
   background: transparent;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .section.alt {
+body.reform-site.home-dark-theme .section.alt {
   background:
     radial-gradient(circle at 20% 0%, rgba(96, 165, 250, 0.12), transparent 28%),
     rgba(2, 6, 23, 0.24);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .number-card b {
+body.reform-site.home-dark-theme .number-card b {
   background: linear-gradient(135deg, #22d3ee, #60a5fa);
   color: #020617;
   box-shadow: 0 14px 32px rgba(34, 211, 238, 0.22);
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .number-card a,
-body.reform-site:has(> main > .conversion-hero#offer) .founder-card a,
-body.reform-site:has(> main > .conversion-hero#offer) .footer a {
+body.reform-site.home-dark-theme .number-card a,
+body.reform-site.home-dark-theme .founder-card a,
+body.reform-site.home-dark-theme .footer a {
   color: #67e8f9;
 }
 
-body.reform-site:has(> main > .conversion-hero#offer) .footer {
+body.reform-site.home-dark-theme .footer {
   background: #020611;
   color: #cbd5e1;
   border-top: 1px solid rgba(148, 163, 184, 0.16);
 }
 
 @media (max-width: 1020px) {
-  body.reform-site:has(> main > .conversion-hero#offer) .nav-links {
+  body.reform-site.home-dark-theme .nav-links {
     background: rgba(3, 8, 18, 0.96);
     border-color: rgba(125, 211, 252, 0.2);
   }
 }
 
 @media (max-width: 620px) {
-  body.reform-site:has(> main > .conversion-hero#offer) .founder-card .btn {
+  body.reform-site.home-dark-theme .founder-card .btn {
     width: 100%;
     max-width: 100% !important;
     white-space: normal;
