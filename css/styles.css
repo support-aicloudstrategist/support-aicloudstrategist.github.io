@@ -6694,8 +6694,35 @@ body.reform-site.home-dark-theme .mock-hero-line,
 body.reform-site.home-dark-theme .mock-copy-line,
 body.reform-site.home-dark-theme .mock-bars i {
   display: block;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(34, 211, 238, 0.78), rgba(96, 165, 250, 0.5), rgba(139, 92, 246, 0.44));
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(103, 232, 249, 0.16);
+}
+
+body.reform-site.home-dark-theme .mock-hero-line,
+body.reform-site.home-dark-theme .mock-copy-line {
+  display: flex;
+  align-items: center;
+}
+
+body.reform-site.home-dark-theme .mock-hero-line:before,
+body.reform-site.home-dark-theme .mock-copy-line:before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 10px 0 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.34);
+}
+
+body.reform-site.home-dark-theme .mock-hero-line strong,
+body.reform-site.home-dark-theme .mock-copy-line span {
+  color: #eaf7ff;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.01em;
 }
 
 body.reform-site.home-dark-theme .mock-site-hero {
@@ -6735,19 +6762,23 @@ body.reform-site.home-dark-theme .mock-site-hero a {
 
 body.reform-site.home-dark-theme .mock-hero-line {
   width: 78%;
-  height: 26px;
-  margin-bottom: 18px;
+  height: 58px;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(96, 165, 250, 0.14), rgba(139, 92, 246, 0.14));
 }
 
 body.reform-site.home-dark-theme .mock-copy-line {
-  width: 92%;
-  height: 10px;
-  opacity: 0.62;
-  margin-bottom: 10px;
+  width: max-content;
+  max-width: 92%;
+  height: 32px;
+  padding-right: 13px;
+  border-radius: 999px;
+  opacity: 1;
+  margin-bottom: 9px;
 }
 
 body.reform-site.home-dark-theme .mock-copy-line.short {
-  width: 58%;
+  width: max-content;
 }
 
 body.reform-site.home-dark-theme .mock-site-grid {
@@ -6819,9 +6850,10 @@ body.reform-site.home-dark-theme .mock-card span {
 }
 
 body.reform-site.home-dark-theme .mock-form {
-  left: 12px;
-  bottom: 96px;
-  width: 192px;
+  left: 18px;
+  bottom: 130px;
+  width: 210px;
+  z-index: 3;
 }
 
 body.reform-site.home-dark-theme .mock-form em {
@@ -6844,9 +6876,10 @@ body.reform-site.home-dark-theme .mock-message {
 }
 
 body.reform-site.home-dark-theme .mock-dashboard {
-  left: 92px;
-  bottom: 10px;
-  width: 224px;
+  left: 250px;
+  bottom: 12px;
+  width: 238px;
+  z-index: 4;
   animation-delay: -2.4s;
 }
 
@@ -6995,22 +7028,25 @@ body.reform-site.home-dark-theme .creative-preview span {
   body.reform-site.home-dark-theme .mock-browser-top em {
     display: none;
   }
-  body.reform-site.home-dark-theme .mock-site-hero {
-    min-height: 100px;
-    padding: 16px;
-    border-radius: 18px;
+  body.reform-site.home-dark-theme .mock-hero-line {
+    height: 24px;
+    margin-bottom: 9px;
   }
-  body.reform-site.home-dark-theme .mock-site-hero strong {
-    font-size: 16px;
+  body.reform-site.home-dark-theme .mock-copy-line {
+    height: 22px;
+    margin-bottom: 8px;
   }
-  body.reform-site.home-dark-theme .mock-site-hero p {
-    font-size: 10px;
-    margin-bottom: 10px;
+  body.reform-site.home-dark-theme .mock-hero-line:before,
+  body.reform-site.home-dark-theme .mock-copy-line:before {
+    width: 8px;
+    height: 8px;
+    margin: 0 7px 0 9px;
+    border-radius: 999px;
+    background: #67e8f9;
   }
-  body.reform-site.home-dark-theme .mock-site-hero a {
-    padding: 7px 9px;
-    font-size: 10px;
-    min-height: 36px;
+  body.reform-site.home-dark-theme .mock-hero-line strong,
+  body.reform-site.home-dark-theme .mock-copy-line span {
+    font-size: 9px;
   }
   body.reform-site.home-dark-theme .mock-site-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -7058,9 +7094,6 @@ body.reform-site.home-dark-theme .creative-preview span {
   body.reform-site.home-dark-theme .creative-preview {
     height: 52px;
     border-radius: 14px;
-  }
-  body.reform-site.home-dark-theme .mock-bars i {
-    height: 26px;
   }
 }
 
