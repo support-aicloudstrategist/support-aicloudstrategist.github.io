@@ -8631,3 +8631,220 @@ body.reform-site.home-dark-theme .footer {
     border-radius: 12px;
   }
 }
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .topbar-inner {
+    min-height: 28px;
+  }
+  body.reform-site.home-dark-theme .topbar a {
+    min-height: 28px;
+    font-size: 11px;
+  }
+  body.reform-site.home-dark-theme .nav-inner {
+    height: 58px;
+  }
+  body.reform-site.home-dark-theme .mark {
+    width: 36px;
+    height: 36px;
+  }
+  body.reform-site.home-dark-theme .brand span:last-child {
+    font-size: 14px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding: 16px 0 24px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero-grid {
+    gap: 12px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1 {
+    font-size: clamp(26px, 7.1vw, 30px) !important;
+    line-height: 1.04;
+  }
+  body.reform-site.home-dark-theme .conversion-hero p {
+    font-size: 15px !important;
+    line-height: 1.42;
+    margin-bottom: 14px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero .actions {
+    gap: 8px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene {
+    padding: 8px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-shell {
+    padding: 11px;
+    border-radius: 20px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-top {
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 9px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-top span {
+    width: 7px;
+    height: 7px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-website {
+    min-height: 128px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .website-status {
+    margin-bottom: 8px;
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-website strong {
+    font-size: 17px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-website p {
+    font-size: 10px;
+    margin: 6px 0 8px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .website-actions i {
+    min-height: 28px;
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .website-panels {
+    display: none;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: 8px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .creative-flow {
+    display: none;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow > div {
+    padding: 9px;
+    border-radius: 14px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow small {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow b {
+    font-size: 11px;
+  }
+  body.reform-site.home-dark-theme .section {
+    padding: 48px 0;
+  }
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 22px;
+  }
+  body.reform-site.home-dark-theme .section h2 {
+    font-size: clamp(28px, 7vw, 34px);
+    margin-bottom: 10px;
+  }
+  body.reform-site.home-dark-theme .section-head .lead {
+    font-size: 15px;
+    line-height: 1.42;
+  }
+  body.reform-site.home-dark-theme .service-card-grid {
+    gap: 14px;
+  }
+  body.reform-site.home-dark-theme .service-card {
+    min-height: auto;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 22px;
+  }
+  body.reform-site.home-dark-theme .service-card:after {
+    top: 18px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+  }
+  body.reform-site.home-dark-theme .service-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+  body.reform-site.home-dark-theme .service-visual {
+    min-height: 64px;
+    border-radius: 17px;
+  }
+  body.reform-site.home-dark-theme .service-card h3 {
+    font-size: 20px;
+  }
+  body.reform-site.home-dark-theme .service-card p {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  body.reform-site.home-dark-theme .service-card ul {
+    gap: 6px;
+  }
+  body.reform-site.home-dark-theme .service-card li {
+    font-size: 12.5px;
+    line-height: 1.22;
+  }
+  body.reform-site.home-dark-theme .service-card li:nth-child(n+4) {
+    display: none;
+  }
+  body.reform-site.home-dark-theme .service-card strong {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+  }
+  body.reform-site.home-dark-theme .website-visual i {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    height: 12px;
+  }
+  body.reform-site.home-dark-theme .website-visual b:nth-of-type(1),
+  body.reform-site.home-dark-theme .website-visual b:nth-of-type(2) {
+    top: 31px;
+    height: 18px;
+  }
+  body.reform-site.home-dark-theme .website-visual em {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    height: 9px;
+  }
+  body.reform-site.home-dark-theme .lead-visual i,
+  body.reform-site.home-dark-theme .lead-visual b {
+    height: 17px;
+  }
+  body.reform-site.home-dark-theme .lead-visual i { top: 12px; left: 12px; }
+  body.reform-site.home-dark-theme .lead-visual b:nth-of-type(1) { top: 34px; right: 12px; }
+  body.reform-site.home-dark-theme .lead-visual b:nth-of-type(2) { top: 56px; right: 12px; }
+  body.reform-site.home-dark-theme .lead-visual em,
+  body.reform-site.home-dark-theme .lead-visual:after {
+    display: none;
+  }
+  body.reform-site.home-dark-theme .trust-visual i {
+    top: 10px;
+    width: 40px;
+    height: 44px;
+  }
+  body.reform-site.home-dark-theme .trust-visual b {
+    left: 14px;
+    bottom: 10px;
+    width: 40px;
+    height: 36px;
+  }
+  body.reform-site.home-dark-theme .trust-visual em {
+    right: 14px;
+    bottom: 20px;
+  }
+  body.reform-site.home-dark-theme .creative-card-visual i {
+    left: 12px;
+    top: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  body.reform-site.home-dark-theme .creative-card-visual b {
+    top: 15px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+  }
+  body.reform-site.home-dark-theme .creative-card-visual em {
+    right: 14px;
+    bottom: 16px;
+  }
+}
