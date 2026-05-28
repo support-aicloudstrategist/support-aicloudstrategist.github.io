@@ -6598,8 +6598,11 @@ body.reform-site.home-dark-theme .hero-panel {
 
 body.reform-site.home-dark-theme .hero-system-mockup {
   position: relative;
-  min-height: 520px;
-  padding: 26px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+  min-height: auto;
+  padding: 22px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -6640,7 +6643,9 @@ body.reform-site.home-dark-theme .mock-card {
 
 body.reform-site.home-dark-theme .mock-browser {
   position: relative;
-  min-height: 305px;
+  grid-column: 1 / 9;
+  grid-row: 1 / 4;
+  min-height: 360px;
   border-radius: 28px;
   padding: 20px;
   animation: heroFloatMain 9s ease-in-out infinite;
@@ -6817,7 +6822,7 @@ body.reform-site.home-dark-theme .mock-site-grid i span {
 }
 
 body.reform-site.home-dark-theme .mock-card {
-  position: absolute;
+  position: relative;
   border-radius: 22px;
   padding: 16px;
   color: #eaf7ff;
@@ -6850,9 +6855,9 @@ body.reform-site.home-dark-theme .mock-card span {
 }
 
 body.reform-site.home-dark-theme .mock-form {
-  left: 18px;
-  bottom: 130px;
-  width: 210px;
+  grid-column: 1 / 6;
+  grid-row: 4;
+  width: auto;
   z-index: 3;
 }
 
@@ -6869,16 +6874,16 @@ body.reform-site.home-dark-theme .mock-form em {
 }
 
 body.reform-site.home-dark-theme .mock-message {
-  right: 8px;
-  bottom: 136px;
-  width: 218px;
+  grid-column: 9 / 13;
+  grid-row: 2;
+  width: auto;
   animation-delay: -1.6s;
 }
 
 body.reform-site.home-dark-theme .mock-dashboard {
-  left: 250px;
-  bottom: 12px;
-  width: 238px;
+  grid-column: 6 / 13;
+  grid-row: 4;
+  width: auto;
   z-index: 4;
   animation-delay: -2.4s;
 }
@@ -6938,9 +6943,9 @@ body.reform-site.home-dark-theme .mock-bars i {
 }
 
 body.reform-site.home-dark-theme .mock-creative {
-  right: 34px;
-  top: 88px;
-  width: 170px;
+  grid-column: 9 / 13;
+  grid-row: 1;
+  width: auto;
   animation-delay: -3.1s;
 }
 
@@ -7007,16 +7012,20 @@ body.reform-site.home-dark-theme .creative-preview span {
   }
   body.reform-site.home-dark-theme .mock-browser {
     grid-column: 1 / -1;
+    grid-row: auto;
     min-height: 220px;
   }
 }
 
 @media (max-width: 620px) {
   body.reform-site.home-dark-theme .hero-system-mockup {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     min-height: auto;
     padding: 14px;
   }
   body.reform-site.home-dark-theme .mock-browser {
+    grid-column: 1 / -1;
+    grid-row: auto;
     min-height: 165px;
     padding: 14px;
     border-radius: 22px;
@@ -7065,6 +7074,8 @@ body.reform-site.home-dark-theme .creative-preview span {
     display: none;
   }
   body.reform-site.home-dark-theme .mock-card {
+    grid-column: auto;
+    grid-row: auto;
     border-radius: 18px;
     padding: 12px;
   }
@@ -7839,7 +7850,20 @@ body.reform-site.home-dark-theme .process-card p {
     padding: 2px 0;
   }
   body.reform-site.home-dark-theme .topbar-inner {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 3px 0;
     line-height: 1.35;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:first-child {
+    display: none;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    align-items: center;
   }
   body.reform-site.home-dark-theme .brand {
     min-height: 44px;
@@ -7953,11 +7977,19 @@ body.reform-site.home-dark-theme .footer {
     background: rgba(3, 8, 18, 0.96);
     border-color: rgba(125, 211, 252, 0.2);
   }
+  body.reform-site.home-dark-theme .topbar-inner {
+    justify-content: center;
+    min-height: 34px;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:first-child,
+  body.reform-site.home-dark-theme .topbar-sep {
+    display: none;
+  }
   body.reform-site.home-dark-theme .topbar a,
   body.reform-site.home-dark-theme .footer a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: 38px;
   }
 }
 
