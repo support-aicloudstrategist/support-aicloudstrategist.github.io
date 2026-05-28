@@ -6858,7 +6858,11 @@ body.reform-site.home-dark-theme .creative-preview span {
 
 @media (max-width: 800px) {
   body.reform-site.home-dark-theme .hero-system-mockup {
-    min-height: 640px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    min-height: auto;
+    padding: 18px;
   }
   body.reform-site.home-dark-theme .mock-card {
     position: relative;
@@ -6867,23 +6871,63 @@ body.reform-site.home-dark-theme .creative-preview span {
     top: auto;
     bottom: auto;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 0;
   }
   body.reform-site.home-dark-theme .mock-browser {
-    min-height: 250px;
+    grid-column: 1 / -1;
+    min-height: 220px;
   }
 }
 
 @media (max-width: 620px) {
   body.reform-site.home-dark-theme .hero-system-mockup {
     min-height: auto;
-    padding: 20px;
+    padding: 14px;
+  }
+  body.reform-site.home-dark-theme .mock-browser {
+    min-height: 165px;
+    padding: 14px;
+    border-radius: 22px;
+  }
+  body.reform-site.home-dark-theme .mock-browser-top {
+    margin-bottom: 14px;
+    font-size: 10px;
+  }
+  body.reform-site.home-dark-theme .mock-hero-line {
+    height: 18px;
+    margin-bottom: 10px;
+  }
+  body.reform-site.home-dark-theme .mock-copy-line {
+    height: 7px;
   }
   body.reform-site.home-dark-theme .mock-site-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 18px;
   }
   body.reform-site.home-dark-theme .mock-site-grid i {
-    height: 46px;
+    height: 34px;
+  }
+  body.reform-site.home-dark-theme .mock-card {
+    border-radius: 18px;
+    padding: 12px;
+  }
+  body.reform-site.home-dark-theme .mock-card small {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+  body.reform-site.home-dark-theme .mock-card b {
+    font-size: 13px;
+  }
+  body.reform-site.home-dark-theme .mock-card span {
+    font-size: 10px;
+  }
+  body.reform-site.home-dark-theme .creative-preview {
+    height: 52px;
+    border-radius: 14px;
+  }
+  body.reform-site.home-dark-theme .mock-bars i {
+    height: 26px;
   }
 }
 
@@ -7621,6 +7665,59 @@ body.reform-site.home-dark-theme .process-card p {
 }
 
 @media (max-width: 620px) {
+  body.reform-site.home-dark-theme .topbar a,
+  body.reform-site.home-dark-theme .footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 2px 0;
+  }
+  body.reform-site.home-dark-theme .topbar-inner {
+    line-height: 1.35;
+  }
+  body.reform-site.home-dark-theme .brand {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  body.reform-site.home-dark-theme .mark {
+    width: 40px;
+    height: 40px;
+  }
+  body.reform-site.home-dark-theme .mobile-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  body.reform-site.home-dark-theme .nav-links {
+    left: 14px;
+    right: 14px;
+    top: calc(100% + 8px);
+    padding: 12px;
+    border-radius: 18px;
+    max-height: calc(100vh - 132px);
+    overflow-y: auto;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  }
+  body.reform-site.home-dark-theme .nav-links a {
+    min-height: 48px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding: 34px 0 40px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero-grid {
+    gap: 24px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero .actions {
+    gap: 10px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero .actions .btn {
+    flex: 1 1 100%;
+    min-height: 48px;
+    white-space: normal;
+    text-align: center;
+  }
   body.reform-site.home-dark-theme {
     animation: none;
   }
@@ -7689,6 +7786,12 @@ body.reform-site.home-dark-theme .footer {
   body.reform-site.home-dark-theme .nav-links {
     background: rgba(3, 8, 18, 0.96);
     border-color: rgba(125, 211, 252, 0.2);
+  }
+  body.reform-site.home-dark-theme .topbar a,
+  body.reform-site.home-dark-theme .footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
 }
 
