@@ -7795,6 +7795,24 @@ body.reform-site.home-dark-theme .footer {
   }
 }
 
+@media (min-width: 621px) and (max-width: 1020px) {
+  body.reform-site.home-dark-theme .nav-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+  }
+  body.reform-site.home-dark-theme .nav-links.active {
+    display: grid;
+  }
+  body.reform-site.home-dark-theme .nav-links a {
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+}
+
 @media (max-width: 620px) {
   body.reform-site.home-dark-theme .founder-card .btn {
     width: 100%;
