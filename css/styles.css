@@ -6566,6 +6566,287 @@ body.reform-site.home-dark-theme .hero-panel {
   backdrop-filter: blur(12px);
 }
 
+body.reform-site.home-dark-theme .hero-system-mockup {
+  position: relative;
+  min-height: 520px;
+  padding: 26px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.reform-site.home-dark-theme .hero-system-mockup:before,
+body.reform-site.home-dark-theme .hero-system-mockup:after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(28px);
+  opacity: 0.62;
+  z-index: -1;
+}
+
+body.reform-site.home-dark-theme .hero-system-mockup:before {
+  width: 210px;
+  height: 210px;
+  right: -70px;
+  top: -58px;
+  background: rgba(34, 211, 238, 0.34);
+}
+
+body.reform-site.home-dark-theme .hero-system-mockup:after {
+  width: 240px;
+  height: 240px;
+  left: -86px;
+  bottom: -86px;
+  background: rgba(139, 92, 246, 0.28);
+}
+
+body.reform-site.home-dark-theme .mock-browser,
+body.reform-site.home-dark-theme .mock-card {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.82));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+body.reform-site.home-dark-theme .mock-browser {
+  position: relative;
+  min-height: 305px;
+  border-radius: 28px;
+  padding: 20px;
+  animation: heroFloatMain 9s ease-in-out infinite;
+}
+
+body.reform-site.home-dark-theme .mock-browser-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5f3fc;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+body.reform-site.home-dark-theme .mock-browser-top span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #22d3ee;
+  opacity: 0.85;
+}
+
+body.reform-site.home-dark-theme .mock-browser-top span:nth-child(2) {
+  background: #60a5fa;
+}
+
+body.reform-site.home-dark-theme .mock-browser-top span:nth-child(3) {
+  background: #8b5cf6;
+}
+
+body.reform-site.home-dark-theme .mock-browser-top b {
+  margin-left: 6px;
+}
+
+body.reform-site.home-dark-theme .mock-hero-line,
+body.reform-site.home-dark-theme .mock-copy-line,
+body.reform-site.home-dark-theme .mock-site-grid i,
+body.reform-site.home-dark-theme .mock-bars i {
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.78), rgba(96, 165, 250, 0.5), rgba(139, 92, 246, 0.44));
+}
+
+body.reform-site.home-dark-theme .mock-hero-line {
+  width: 78%;
+  height: 26px;
+  margin-bottom: 18px;
+}
+
+body.reform-site.home-dark-theme .mock-copy-line {
+  width: 92%;
+  height: 10px;
+  opacity: 0.62;
+  margin-bottom: 10px;
+}
+
+body.reform-site.home-dark-theme .mock-copy-line.short {
+  width: 58%;
+}
+
+body.reform-site.home-dark-theme .mock-site-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 34px;
+}
+
+body.reform-site.home-dark-theme .mock-site-grid i {
+  height: 82px;
+  border-radius: 18px;
+  opacity: 0.72;
+}
+
+body.reform-site.home-dark-theme .mock-card {
+  position: absolute;
+  border-radius: 22px;
+  padding: 16px;
+  color: #eaf7ff;
+  animation: heroFloatCard 7.5s ease-in-out infinite;
+}
+
+body.reform-site.home-dark-theme .mock-card small {
+  display: block;
+  color: #67e8f9;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+body.reform-site.home-dark-theme .mock-card b {
+  display: block;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+body.reform-site.home-dark-theme .mock-card span {
+  display: block;
+  color: #cbd5e1;
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 6px;
+}
+
+body.reform-site.home-dark-theme .mock-form {
+  left: 12px;
+  bottom: 96px;
+  width: 192px;
+}
+
+body.reform-site.home-dark-theme .mock-form em {
+  display: inline-flex;
+  margin-top: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+  color: #020617;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 950;
+}
+
+body.reform-site.home-dark-theme .mock-message {
+  right: 8px;
+  bottom: 136px;
+  width: 218px;
+  animation-delay: -1.6s;
+}
+
+body.reform-site.home-dark-theme .mock-dashboard {
+  left: 92px;
+  bottom: 10px;
+  width: 224px;
+  animation-delay: -2.4s;
+}
+
+body.reform-site.home-dark-theme .mock-dashboard > div:not(.mock-bars) {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+body.reform-site.home-dark-theme .mock-dashboard > div:not(.mock-bars) b {
+  color: #67e8f9;
+  font-size: 23px;
+}
+
+body.reform-site.home-dark-theme .mock-bars {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 0.95fr;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+body.reform-site.home-dark-theme .mock-bars i {
+  height: 38px;
+  border-radius: 10px 10px 5px 5px;
+}
+
+body.reform-site.home-dark-theme .mock-creative {
+  right: 34px;
+  top: 88px;
+  width: 170px;
+  animation-delay: -3.1s;
+}
+
+body.reform-site.home-dark-theme .creative-preview {
+  display: grid;
+  place-items: center;
+  height: 82px;
+  border-radius: 17px;
+  margin-bottom: 10px;
+  background:
+    radial-gradient(circle at 70% 24%, rgba(255, 255, 255, 0.36), transparent 18%),
+    linear-gradient(135deg, #22d3ee, #2563eb 48%, #8b5cf6);
+}
+
+body.reform-site.home-dark-theme .creative-preview span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.72);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+@keyframes heroFloatMain {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -10px, 0); }
+}
+
+@keyframes heroFloatCard {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+}
+
+@media (max-width: 800px) {
+  body.reform-site.home-dark-theme .hero-system-mockup {
+    min-height: 640px;
+  }
+  body.reform-site.home-dark-theme .mock-card {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 12px;
+  }
+  body.reform-site.home-dark-theme .mock-browser {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .hero-system-mockup {
+    min-height: auto;
+    padding: 20px;
+  }
+  body.reform-site.home-dark-theme .mock-site-grid {
+    grid-template-columns: 1fr;
+  }
+  body.reform-site.home-dark-theme .mock-site-grid i {
+    height: 46px;
+  }
+}
+
 body.reform-site.home-dark-theme .section {
   background: transparent;
 }
