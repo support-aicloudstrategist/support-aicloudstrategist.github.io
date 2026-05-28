@@ -14,7 +14,7 @@
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
   }
 
-  const revealItems = document.querySelectorAll('.reveal, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card');
+  const revealItems = document.querySelectorAll('.reveal, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card, .home-dark-theme .section-head, .home-dark-theme .service-card, .home-dark-theme .actual-tile, .home-dark-theme .before-after-card, .home-dark-theme .process-card');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

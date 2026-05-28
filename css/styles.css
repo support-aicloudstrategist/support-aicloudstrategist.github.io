@@ -6449,7 +6449,22 @@ body.reform-site.home-dark-theme {
     radial-gradient(circle at 12% 4%, rgba(0, 210, 255, 0.18), transparent 28%),
     radial-gradient(circle at 84% 18%, rgba(124, 92, 255, 0.18), transparent 30%),
     linear-gradient(180deg, #030711 0%, #07111f 46%, #050812 100%);
+  background-size: 125% 125%, 120% 120%, 100% 100%;
+  animation: homeGradientDrift 12s ease-in-out infinite alternate;
   color: #eef7ff;
+}
+
+body.reform-site.home-dark-theme .animate-in {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 0.42s ease, transform 0.42s ease;
+  will-change: opacity, transform;
+}
+
+body.reform-site.home-dark-theme .animate-in.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
 }
 
 body.reform-site.home-dark-theme .topbar {
@@ -6502,6 +6517,19 @@ body.reform-site.home-dark-theme .btn-primary {
   box-shadow: 0 18px 50px rgba(34, 211, 238, 0.24);
 }
 
+body.reform-site.home-dark-theme .btn {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+body.reform-site.home-dark-theme .btn:hover {
+  transform: translateY(-2px);
+}
+
+body.reform-site.home-dark-theme .btn-primary:hover,
+body.reform-site.home-dark-theme .nav-cta:hover {
+  box-shadow: 0 20px 58px rgba(34, 211, 238, 0.32), 0 0 24px rgba(139, 92, 246, 0.16);
+}
+
 body.reform-site.home-dark-theme .btn-light {
   background: rgba(255, 255, 255, 0.08);
   color: #f8fafc;
@@ -6525,6 +6553,8 @@ body.reform-site.home-dark-theme .conversion-hero:before {
   inset: 0;
   pointer-events: none;
   background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.055) 48%, transparent 58%);
+  background-size: 220% 100%;
+  animation: heroSheen 7s ease-in-out infinite;
 }
 
 body.reform-site.home-dark-theme .conversion-hero-grid {
@@ -6814,6 +6844,16 @@ body.reform-site.home-dark-theme .creative-preview span {
 @keyframes heroFloatCard {
   0%, 100% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(0, -8px, 0); }
+}
+
+@keyframes homeGradientDrift {
+  0% { background-position: 0% 0%, 100% 0%, 0 0; }
+  100% { background-position: 8% 4%, 92% 7%, 0 0; }
+}
+
+@keyframes heroSheen {
+  0%, 100% { background-position: 120% 0; opacity: 0.42; }
+  50% { background-position: 0% 0; opacity: 0.72; }
 }
 
 @media (max-width: 800px) {
@@ -7538,10 +7578,25 @@ body.reform-site.home-dark-theme .process-card p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  body.reform-site.home-dark-theme,
+  body.reform-site.home-dark-theme .conversion-hero:before,
+  body.reform-site.home-dark-theme .mock-browser,
+  body.reform-site.home-dark-theme .mock-card,
   body.reform-site.home-dark-theme .before-after-card,
   body.reform-site.home-dark-theme .before-after-arrow,
   body.reform-site.home-dark-theme .process-card {
     animation: none;
+  }
+  body.reform-site.home-dark-theme .animate-in,
+  body.reform-site.home-dark-theme .animate-in.visible,
+  body.reform-site.home-dark-theme .btn,
+  body.reform-site.home-dark-theme .service-card {
+    transition: none;
+    transform: none;
+    opacity: 1;
   }
 }
 
@@ -7566,6 +7621,23 @@ body.reform-site.home-dark-theme .process-card p {
 }
 
 @media (max-width: 620px) {
+  body.reform-site.home-dark-theme {
+    animation: none;
+  }
+  body.reform-site.home-dark-theme .conversion-hero:before,
+  body.reform-site.home-dark-theme .mock-card,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .before-after-arrow,
+  body.reform-site.home-dark-theme .process-card {
+    animation: none;
+  }
+  body.reform-site.home-dark-theme .mock-browser {
+    animation-duration: 12s;
+  }
+  body.reform-site.home-dark-theme .animate-in {
+    transform: translate3d(0, 10px, 0);
+    transition-duration: 0.3s;
+  }
   body.reform-site.home-dark-theme .service-card-grid {
     grid-template-columns: 1fr;
   }
