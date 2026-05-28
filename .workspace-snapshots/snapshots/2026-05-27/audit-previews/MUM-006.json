@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-05-27T09:30:10.810Z",
+  "prospect": {
+    "prospect_id": "MUM-006",
+    "business_name": "Dazzle Dental",
+    "owner_name": "",
+    "metro": "Mumbai",
+    "city": "Mumbai",
+    "vertical": "Dental clinic",
+    "website_url": "https://dazzledentalclinic.com/",
+    "source_url": "https://www.practo.com/Mumbai/clinic/dazzle-dental-kemps-corner",
+    "original_row_id": "MUM-006"
+  },
+  "site_unreachable": true,
+  "fetch": {
+    "status": null,
+    "final_url": null,
+    "fetch_ms": 568,
+    "error": "fetch failed"
+  },
+  "findings": [
+    {
+      "id": "site_unreachable",
+      "category": "availability",
+      "status": "flagged",
+      "evidence": "HTTP/error: fetch failed; skipped remaining checks after 568 ms.",
+      "severity": "high"
+    }
+  ],
+  "top_3_findings": [
+    {
+      "id": "site_unreachable",
+      "category": "availability",
+      "status": "flagged",
+      "evidence": "HTTP/error: fetch failed; skipped remaining checks after 568 ms.",
+      "severity": "high"
+    }
+  ],
+  "limited_public_exposure_points_found": false,
+  "outputs": {
+    "pdf": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/MUM-006.pdf",
+    "json": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/MUM-006.json",
+    "html_debug": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/MUM-006.html",
+    "pdf_bytes": 33810
+  }
+}

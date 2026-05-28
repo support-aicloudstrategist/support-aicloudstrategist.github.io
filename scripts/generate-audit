@@ -4,71 +4,218 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
-const TEMPLATE = path.join(ROOT, 'assets/audit/lost-lead-audit-template.pdf');
-const OUT_DIR = '/tmp/audits';
+const DEFAULT_OUT = path.join(ROOT, '.workspace-snapshots/snapshots/2026-05-27/audit-previews');
+const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36 AICloudStrategist-Audit/2.0';
+const SEVERITY_RANK = { high: 3, medium: 2, low: 1 };
 
-function arg(name, fallback='') {
+function arg(name, fallback = '') {
   const ix = process.argv.indexOf(`--${name}`);
-  if (ix >= 0 && process.argv[ix + 1]) return process.argv[ix + 1];
+  if (ix >= 0 && process.argv[ix + 1] !== undefined) return process.argv[ix + 1];
   return fallback;
 }
-function esc(s){ return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-function has(re, html){ return re.test(html || ''); }
-function textSnippet(html){ return (html||'').replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim().slice(0,400); }
-function scoreFinding(ok, good, bad){ return ok ? {status:'pass', finding:good} : {status:'review', finding:bad}; }
-async function main(){
+function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+function clean(s) { return String(s ?? '').replace(/\s+/g, ' ').trim(); }
+function clip(s, n = 200) { const t = clean(s); return t.length > n ? t.slice(0, n - 1) + '…' : t; }
+function stripTags(s) { return clean(String(s ?? '').replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]*>/g, ' ')); }
+function attrs(tag) {
+  const out = {};
+  for (const m of String(tag).matchAll(/([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/g)) {
+    out[m[1].toLowerCase()] = m[2].replace(/^['"]|['"]$/g, '');
+  }
+  return out;
+}
+function all(re, s) { return [...String(s || '').matchAll(re)]; }
+function finding(id, category, status, evidence, severity) { return { id, category, status, evidence: clip(evidence), severity }; }
+function locate(html, index) {
+  const before = html.slice(Math.max(0, index - 2500), index).toLowerCase();
+  if (before.includes('<header') || before.includes('navbar') || before.includes('nav-')) return 'header';
+  if (before.includes('hero') || before.includes('banner') || before.includes('above-fold')) return 'hero';
+  const after = html.slice(index, Math.min(html.length, index + 2500)).toLowerCase();
+  if (before.includes('<footer') || after.includes('</footer>')) return 'footer';
+  return 'body';
+}
+function jsonLdTypes(html) {
+  const types = [];
+  for (const m of all(/<script\b[^>]*type\s*=\s*["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi, html)) {
+    const raw = m[1].trim();
+    try {
+      const data = JSON.parse(raw);
+      const collect = (obj) => {
+        if (!obj || typeof obj !== 'object') return;
+        if (obj['@type']) types.push(Array.isArray(obj['@type']) ? obj['@type'].join('/') : String(obj['@type']));
+        if (Array.isArray(obj)) obj.forEach(collect);
+        else Object.values(obj).forEach(v => { if (v && typeof v === 'object') collect(v); });
+      };
+      collect(data);
+    } catch { types.push('unparsed-json-ld'); }
+  }
+  return [...new Set(types)].slice(0, 10);
+}
+function curlHead(url) {
+  const r = spawnSync('curl', ['-I', '-L', '--max-time', '15', '-A', USER_AGENT, url], { encoding: 'utf8' });
+  return `${r.stdout || ''}\n${r.stderr || ''}`;
+}
+function curlTotalMs(url) {
+  const r = spawnSync('curl', ['-L', '-s', '-o', '/dev/null', '--max-time', '15', '-A', USER_AGENT, '-w', '%{time_total}', url], { encoding: 'utf8' });
+  const sec = Number.parseFloat((r.stdout || '').trim());
+  return Number.isFinite(sec) ? Math.round(sec * 1000) : null;
+}
+async function fetchHtml(url) {
+  const started = Date.now();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 15000);
+  try {
+    const response = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': USER_AGENT, 'Accept': 'text/html,application/xhtml+xml' }, signal: controller.signal });
+    const html = await response.text();
+    clearTimeout(timer);
+    return { ok: response.ok, status: response.status, final_url: response.url, html, fetch_ms: Date.now() - started, error: null };
+  } catch (e) {
+    clearTimeout(timer);
+    return { ok: false, status: null, final_url: null, html: '', fetch_ms: Date.now() - started, error: e.name === 'AbortError' ? 'timeout_after_15s' : e.message };
+  }
+}
+function analyse(input, fetched, headText, totalMs) {
+  const html = fetched.html || '';
+  const lower = html.toLowerCase();
+  const findings = [];
+
+  const privacyLinks = all(/<a\b[^>]*href\s*=\s*(["'][^"']*privacy[^"']*["']|[^\s>]*privacy[^\s>]*)[^>]*>/gi, html);
+  findings.push(privacyLinks.length
+    ? finding('privacy_policy_link', 'privacy', 'present', privacyLinks[0][0], 'low')
+    : finding('privacy_policy_link', 'privacy', 'missing', 'No anchor href containing "privacy" found in fetched HTML.', 'high'));
+
+  const cookieScript = all(/<script\b[^>]*src\s*=\s*(["'][^"']*(cookieyes|cookiebot|onetrust|klaro|osano|cookieconsent)[^"']*["']|[^\s>]*(cookieyes|cookiebot|onetrust|klaro|osano|cookieconsent)[^\s>]*)[^>]*>/gi, html);
+  findings.push(cookieScript.length
+    ? finding('cookie_banner_script', 'consent', 'present', cookieScript[0][0], 'low')
+    : finding('cookie_banner_script', 'consent', 'missing', 'No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.', 'medium'));
+
+  const wa = all(/<a\b[^>]*href\s*=\s*(["'][^"']*(wa\.me\/|whatsapp\.com\/send)[^"']*["']|[^\s>]*(wa\.me\/|whatsapp\.com\/send)[^\s>]*)[^>]*>/gi, html);
+  findings.push(wa.length
+    ? finding('whatsapp_cta', 'conversion', 'present', `location=${locate(html, wa[0].index)}; ${wa[0][0]}`, 'low')
+    : finding('whatsapp_cta', 'conversion', 'missing', 'No wa.me/ or whatsapp.com/send link found in fetched HTML.', 'medium'));
+
+  const viewport = html.match(/<meta\b[^>]*name\s*=\s*["']viewport["'][^>]*>/i);
+  findings.push(viewport
+    ? finding('mobile_viewport_meta', 'mobile', 'present', viewport[0], 'low')
+    : finding('mobile_viewport_meta', 'mobile', 'missing', 'No <meta name="viewport"> found in fetched HTML.', 'medium'));
+
+  const forms = all(/<form\b[\s\S]*?<\/form>/gi, html);
+  if (!forms.length) {
+    findings.push(finding('contact_form_analysis', 'forms', 'missing', 'No <form> element found in fetched HTML.', 'low'));
+  } else {
+    const summaries = forms.map((m, i) => {
+      const form = m[0];
+      const inputCount = all(/<(input|textarea|select)\b/gi, form).length;
+      const context = html.slice(Math.max(0, m.index - 500), Math.min(html.length, m.index + form.length + 500));
+      const consentNearby = /privacy|consent/i.test(stripTags(context));
+      return { form: i + 1, input_fields: inputCount, consent_or_privacy_within_500_chars: consentNearby, evidence: clip(form, 120) };
+    });
+    const risky = summaries.find(s => s.input_fields > 0 && !s.consent_or_privacy_within_500_chars);
+    findings.push(risky
+      ? finding('contact_form_analysis', 'forms', 'flagged', `form ${risky.form}: ${risky.input_fields} fields; no privacy/consent text within 500 chars; ${risky.evidence}`, 'high')
+      : finding('contact_form_analysis', 'forms', 'present', `${summaries.length} form(s); privacy/consent context found or no input fields.`, 'low'));
+  }
+
+  const trackers = [];
+  const trackerEvidence = [];
+  const googleTracker = html.match(/<script\b[^>]*(googletagmanager|google-analytics|www\.googletagmanager\.com|google-analytics\.com)[^>]*>|gtag\([^\n<]{0,140}/i);
+  const metaTracker = html.match(/<script\b[^>]*(connect\.facebook\.net)[^>]*>|fbq\([^\n<]{0,140}/i);
+  if (googleTracker) { trackers.push('Google Analytics/Tag Manager'); trackerEvidence.push(googleTracker[0]); }
+  if (metaTracker) { trackers.push('Meta Pixel'); trackerEvidence.push(metaTracker[0]); }
+  const cookieMissing = findings.find(f => f.id === 'cookie_banner_script')?.status === 'missing';
+  const trackerExcerpt = trackerEvidence.length ? trackerEvidence.join(' | ') : '';
+  findings.push(trackers.length && cookieMissing
+    ? finding('tracking_scripts', 'consent', 'flagged', `${trackers.join(', ')} detected without known cookie banner script; evidence: ${trackerExcerpt}`, 'high')
+    : trackers.length
+      ? finding('tracking_scripts', 'consent', 'present', `${trackers.join(', ')} detected; evidence: ${trackerExcerpt}`, 'low')
+      : finding('tracking_scripts', 'consent', 'missing', 'No gtag/GTM/Google Analytics/fbq/connect.facebook.net detected in fetched HTML.', 'low'));
+
+  const scheme = (() => { try { return new URL(input.website_url).protocol; } catch { return ''; } })();
+  findings.push(scheme === 'https:'
+    ? finding('https_status', 'security', 'present', `URL scheme is HTTPS: ${input.website_url}`, 'low')
+    : finding('https_status', 'security', 'missing', `URL scheme is not HTTPS: ${input.website_url}`, 'high'));
+
+  const hsts = /strict-transport-security\s*:/i.test(headText || '');
+  findings.push(hsts
+    ? finding('hsts_header', 'security', 'present', clip((headText.match(/strict-transport-security\s*:[^\n\r]*/i) || [''])[0]), 'low')
+    : finding('hsts_header', 'security', 'missing', 'Strict-Transport-Security header not found in curl -I response.', 'medium'));
+
+  const types = jsonLdTypes(html);
+  findings.push(types.length
+    ? finding('structured_data', 'seo', 'present', `JSON-LD types: ${types.join(', ')}`, 'low')
+    : finding('structured_data', 'seo', 'missing', 'No <script type="application/ld+json"> found in fetched HTML.', 'medium'));
+
+  findings.push(finding('page_response_time_ms', 'performance', totalMs !== null ? 'present' : 'missing', totalMs !== null ? `curl total time ${totalMs} ms` : 'curl total time unavailable/timeout.', totalMs !== null && totalMs > 3000 ? 'medium' : 'low'));
+
+  return findings;
+}
+function topFindings(findings) {
+  return findings
+    .filter(f => ['missing', 'flagged'].includes(f.status))
+    .sort((a, b) => (SEVERITY_RANK[b.severity] - SEVERITY_RANK[a.severity]) || a.id.localeCompare(b.id))
+    .slice(0, 3);
+}
+function renderHtml(report) {
+  const top = report.top_3_findings.length ? report.top_3_findings : [{ id: 'limited', category: 'summary', status: 'note', severity: 'low', evidence: 'limited public exposure points found' }];
+  return `<!doctype html><html><head><meta charset="utf-8"><title>Lost-Lead Audit - ${esc(report.prospect.business_name)}</title><style>
+  body{font-family:Arial,sans-serif;color:#13233f;margin:38px;line-height:1.45}.cover{border:2px solid #14213d;padding:26px;margin-bottom:24px;background:#f8fafc}h1{font-size:30px;margin:0 0 8px}h2{margin-top:24px;color:#14213d}.badge{display:inline-block;border-radius:999px;padding:4px 10px;background:#e8eef8;margin-right:6px}.finding{border-left:4px solid #e2a100;padding:10px 14px;margin:10px 0;background:#fffaf0}.high{border-color:#b42318}.medium{border-color:#d97706}.low{border-color:#2563eb}.grid{display:grid;grid-template-columns:160px 1fr 95px 90px;gap:8px;border-top:1px solid #ddd}.grid>*{border-bottom:1px solid #eee;padding:8px}.small{font-size:12px;color:#64748b}code{white-space:pre-wrap;word-break:break-word}</style></head><body>
+  <div class="cover"><p class="small">AICloudStrategist Lost-Lead Audit Preview • Public HTML signals only</p><h1>${esc(report.prospect.business_name)}</h1><p>${esc(report.prospect.vertical)} • ${esc(report.prospect.metro || report.prospect.city || '')}</p><p>${esc(report.prospect.website_url)}</p><p><strong>Prospect ID:</strong> ${esc(report.prospect.prospect_id)}</p></div>
+  <h2>Top visible findings</h2>${top.map(f => `<div class="finding ${esc(f.severity)}"><strong>${esc(f.id.replace(/_/g, ' '))}</strong> <span class="badge">${esc(f.status)}</span><span class="badge">${esc(f.severity)}</span><br><code>${esc(f.evidence)}</code></div>`).join('')}
+  ${report.limited_public_exposure_points_found ? '<p><strong>Note:</strong> limited public exposure points found.</p>' : ''}${report.site_unreachable ? `<p><strong>Site unreachable:</strong> ${esc(report.fetch.error || report.fetch.status)}</p>` : ''}
+  <h2>Full signal table</h2><div class="grid"><strong>Signal</strong><strong>Evidence</strong><strong>Status</strong><strong>Severity</strong>${report.findings.map(f => `<span>${esc(f.id)}</span><span><code>${esc(f.evidence)}</code></span><span>${esc(f.status)}</span><span>${esc(f.severity)}</span>`).join('')}</div>
+  <p class="small">Generated ${esc(report.generated_at)}. Findings are based on fetched public HTML and headers only; validate before outreach.</p>
+  </body></html>`;
+}
+async function main() {
   let input = {};
   const jsonFile = arg('json');
-  if (jsonFile) input = JSON.parse(fs.readFileSync(jsonFile,'utf8'));
-  for (const key of ['lead_id','business_name','website_url','whatsapp_number','vertical']) input[key] = arg(key, input[key]);
-  if (!input.lead_id || !input.business_name || !input.website_url || !input.vertical) {
-    console.error('Missing required args: --lead_id --business_name --website_url --vertical [--whatsapp_number] or --json file');
+  if (jsonFile) input = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
+  const aliases = { lead_id: 'prospect_id', row_id: 'prospect_id', website: 'website_url', source_url: 'source_url' };
+  for (const key of ['prospect_id', 'lead_id', 'row_id', 'business_name', 'website_url', 'website', 'source_url', 'vertical', 'owner_name', 'metro', 'city']) {
+    const v = arg(key, input[key] || '');
+    if (v) input[aliases[key] || key] = v;
+  }
+  input.prospect_id = input.prospect_id || input.lead_id || input.row_id;
+  input.website_url = input.website_url || input.website || input.source_url;
+  if (!input.prospect_id || !input.business_name || !input.website_url || !input.vertical) {
+    console.error('Missing required args: --prospect_id/--lead_id --business_name --website_url [or --website/--source_url] --vertical');
     process.exit(2);
   }
-  if (!fs.existsSync(TEMPLATE)) {
-    console.error(`Missing template: ${TEMPLATE}. PR #9 must provide assets/audit/lost-lead-audit-template.pdf`);
-    process.exit(3);
-  }
-  const started = Date.now();
-  let response, html = '', fetchError = '';
-  try {
-    response = await fetch(input.website_url, { redirect:'follow', headers:{'User-Agent':'AICloudStrategist AuditBot/1.0'} });
-    html = await response.text();
-  } catch(e) { fetchError = e.message; }
-  const loadMs = Date.now() - started;
-  const url = new URL(input.website_url);
-  const checks = {
-    https: scoreFinding(url.protocol === 'https:', 'HTTPS is enabled.', 'Website is not loaded over HTTPS.'),
-    mobile_responsive: scoreFinding(has(/<meta[^>]+name=["']viewport["']/i, html), 'Viewport meta tag found.', 'No viewport meta tag found in public HTML.'),
-    page_load_time: { status: loadMs <= 3000 ? 'pass' : 'review', finding: `${loadMs} ms HTML fetch time (${response?.status || fetchError || 'no response'}).` },
-    contact_visibility: scoreFinding(has(/tel:|mailto:|contact|phone|call|whatsapp|appointment|book/i, html), 'Contact/call signals visible in public HTML.', 'Contact/call signals not obvious in public HTML.'),
-    whatsapp_cta: scoreFinding(has(/wa\.me|api\.whatsapp|whatsapp/i, html), 'WhatsApp CTA/reference found.', 'No WhatsApp CTA/reference found in public HTML.'),
-    privacy_policy: scoreFinding(has(/privacy\s+policy|href=["'][^"']*privacy/i, html), 'Privacy policy signal found.', 'Privacy policy link not obvious in public HTML.'),
-    cookie_banner: scoreFinding(has(/cookie|consent/i, html), 'Cookie/consent signal found.', 'Cookie/consent banner not obvious in public HTML.'),
-    dpdp_pii_consent: scoreFinding(!has(/<form[\s\S]*?(name|email|phone|mobile|whatsapp)[\s\S]*?<\/form>/i, html) || has(/consent|privacy/i, html), 'PII collection appears to have consent/privacy context or no public PII form found.', 'Possible PII form found without obvious consent/privacy wording in public HTML.'),
+  if (!/^https?:\/\//i.test(input.website_url)) input.website_url = `https://${input.website_url}`;
+  const outDir = arg('output-dir', DEFAULT_OUT);
+  fs.mkdirSync(outDir, { recursive: true });
+
+  const fetched = await fetchHtml(input.website_url);
+  const report = {
+    generated_at: new Date().toISOString(),
+    prospect: input,
+    site_unreachable: !fetched.ok,
+    fetch: { status: fetched.status, final_url: fetched.final_url, fetch_ms: fetched.fetch_ms, error: fetched.error },
+    findings: [],
+    top_3_findings: [],
+    limited_public_exposure_points_found: false,
+    outputs: {}
   };
-  const manualLeadEstimate = 'Insufficient public data — founder manual review required';
-  const summary = [
-    `Website: ${input.website_url}`,
-    `HTTPS: ${checks.https.finding}`,
-    `Mobile: ${checks.mobile_responsive.finding}`,
-    `Load: ${checks.page_load_time.finding}`,
-    `WhatsApp CTA: ${checks.whatsapp_cta.finding}`,
-    `DPDP: ${checks.dpdp_pii_consent.finding}`,
-    `Leads lost/month: ${manualLeadEstimate}`
-  ];
-  fs.mkdirSync(OUT_DIR, {recursive:true});
-  const pdfPath = path.join(OUT_DIR, `${input.lead_id}.pdf`);
-  const htmlPath = path.join(OUT_DIR, `${input.lead_id}.html`);
-  const resultJsonPath = path.join(OUT_DIR, `${input.lead_id}.json`);
-  const reportHtml = `<!doctype html><html><head><meta charset="utf-8"><title>Lost-Lead Audit - ${esc(input.business_name)}</title><style>body{font-family:Arial,sans-serif;color:#13233f;margin:42px}.cover{border:2px solid #13233f;padding:28px;margin-bottom:22px}h1{font-size:30px}h2{margin-top:26px}.grid{display:grid;grid-template-columns:1fr 2fr;gap:8px 18px}.status-pass{color:#106b3c}.status-review{color:#9a5b00}.small{color:#5d6678;font-size:12px}</style></head><body><div class="cover"><p class="small">Filled from template: ${esc(path.relative(ROOT,TEMPLATE))}</p><h1>Lost-Lead Audit</h1><h2>${esc(input.business_name)}</h2><p>${esc(input.vertical)} • ${esc(input.website_url)}</p><p><strong>Lead ID:</strong> ${esc(input.lead_id)}</p></div><h2>Public website checks</h2><div class="grid">${Object.entries(checks).map(([k,v])=>`<strong>${esc(k.replace(/_/g,' '))}</strong><span class="status-${v.status}">${esc(v.finding)}</span>`).join('')}</div><h2>Estimated leads lost/month</h2><p>${esc(manualLeadEstimate)}</p><h2>Founder review notes</h2><p>This PDF is pre-filled from public website checks only. Validate assumptions before approving delivery.</p><h2>Public HTML excerpt</h2><p>${esc(textSnippet(html) || fetchError || 'No HTML captured.')}</p></body></html>`;
-  fs.writeFileSync(htmlPath, reportHtml);
-  const chrome = spawnSync('google-chrome', ['--headless','--disable-gpu','--no-sandbox',`--print-to-pdf=${pdfPath}`, `file://${htmlPath}`], {encoding:'utf8'});
-  if (chrome.status !== 0 || !fs.existsSync(pdfPath)) {
-    fs.writeFileSync(pdfPath, Buffer.from(`%PDF-1.4\n% Audit generation failed; see ${htmlPath}\n%%EOF\n`));
+  if (!fetched.ok) {
+    report.findings.push(finding('site_unreachable', 'availability', 'flagged', `HTTP/error: ${fetched.status || fetched.error}; skipped remaining checks after ${fetched.fetch_ms} ms.`, 'high'));
+  } else {
+    const headText = curlHead(fetched.final_url || input.website_url);
+    const totalMs = curlTotalMs(fetched.final_url || input.website_url);
+    report.fetch.page_response_time_ms = totalMs;
+    report.findings = analyse(input, fetched, headText, totalMs);
   }
-  const result = { lead: input, fetched: { status: response?.status || null, final_url: response?.url || null, load_ms: loadMs, error: fetchError || null }, checks, lead_loss_estimate: manualLeadEstimate, output_pdf: pdfPath, output_pdf_bytes: fs.statSync(pdfPath).size, html_debug: htmlPath, template_pdf: TEMPLATE, summary };
-  fs.writeFileSync(resultJsonPath, JSON.stringify(result,null,2));
-  console.log(JSON.stringify(result,null,2));
+  report.top_3_findings = topFindings(report.findings);
+  report.limited_public_exposure_points_found = !report.site_unreachable && report.top_3_findings.length < 3;
+
+  const base = path.join(outDir, input.prospect_id);
+  const htmlPath = `${base}.html`;
+  const pdfPath = `${base}.pdf`;
+  const jsonPath = `${base}.json`;
+  fs.writeFileSync(htmlPath, renderHtml(report));
+  const chrome = spawnSync('google-chrome', ['--headless', '--disable-gpu', '--no-sandbox', `--print-to-pdf=${pdfPath}`, `file://${htmlPath}`], { encoding: 'utf8' });
+  if (chrome.status !== 0 || !fs.existsSync(pdfPath)) fs.writeFileSync(pdfPath, Buffer.from(`%PDF-1.4\n% PDF generation failed; see ${htmlPath}\n%%EOF\n`));
+  report.outputs = { pdf: pdfPath, json: jsonPath, html_debug: htmlPath, pdf_bytes: fs.statSync(pdfPath).size };
+  fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
+  console.log(JSON.stringify(report, null, 2));
 }
-main().catch(e=>{ console.error(e.stack || e.message); process.exit(1); });
+main().catch(e => { console.error(e.stack || e.message); process.exit(1); });

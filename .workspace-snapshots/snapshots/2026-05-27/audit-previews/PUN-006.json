@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-05-27T09:30:00.592Z",
+  "prospect": {
+    "prospect_id": "PUN-006",
+    "business_name": "Dr Sahu’s Dental & Orthodontic Care",
+    "owner_name": "Dr. Apoorva Sahu",
+    "metro": "Pune",
+    "city": "Pune",
+    "vertical": "dental_clinic",
+    "website_url": "https://www.practo.com/pune/doctor/apoorv-sahu-dentist?practice_id=1122954&specialization=Dentist&referrer=doctor_listing&page_uid=8da4e7af-77fb-4859-b4af-84d6c6459c53",
+    "source_url": "https://www.practo.com/pune/doctor/apoorv-sahu-dentist?practice_id=1122954&specialization=Dentist&referrer=doctor_listing&page_uid=8da4e7af-77fb-4859-b4af-84d6c6459c53",
+    "original_row_id": "PUN-006"
+  },
+  "site_unreachable": false,
+  "fetch": {
+    "status": 200,
+    "final_url": "https://www.practo.com/pune/doctor/apoorv-sahu-dentist?practice_id=1122954&specialization=Dentist&referrer=doctor_listing&page_uid=8da4e7af-77fb-4859-b4af-84d6c6459c53",
+    "fetch_ms": 316,
+    "error": null,
+    "page_response_time_ms": 347
+  },
+  "findings": [
+    {
+      "id": "privacy_policy_link",
+      "category": "privacy",
+      "status": "present",
+      "evidence": "<a class=\"u-color--white u-d-block\" target=\"_blank\" href=\"/company/privacy\">",
+      "severity": "low"
+    },
+    {
+      "id": "cookie_banner_script",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.",
+      "severity": "medium"
+    },
+    {
+      "id": "whatsapp_cta",
+      "category": "conversion",
+      "status": "missing",
+      "evidence": "No wa.me/ or whatsapp.com/send link found in fetched HTML.",
+      "severity": "medium"
+    },
+    {
+      "id": "mobile_viewport_meta",
+      "category": "mobile",
+      "status": "present",
+      "evidence": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\"/>",
+      "severity": "low"
+    },
+    {
+      "id": "contact_form_analysis",
+      "category": "forms",
+      "status": "missing",
+      "evidence": "No <form> element found in fetched HTML.",
+      "severity": "low"
+    },
+    {
+      "id": "tracking_scripts",
+      "category": "consent",
+      "status": "flagged",
+      "evidence": "Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+      "severity": "high"
+    },
+    {
+      "id": "https_status",
+      "category": "security",
+      "status": "present",
+      "evidence": "URL scheme is HTTPS: https://www.practo.com/pune/doctor/apoorv-sahu-dentist?practice_id=1122954&specialization=Dentist&referrer=doctor_listing&page_uid=8da4e7af-77fb-4859-b4af-84d6c6459c53",
+      "severity": "low"
+    },
+    {
+      "id": "hsts_header",
+      "category": "security",
+      "status": "present",
+      "evidence": "strict-transport-security: max-age=63072000; includeSubDomains; preload",
+      "severity": "low"
+    },
+    {
+      "id": "structured_data",
+      "category": "seo",
+      "status": "present",
+      "evidence": "JSON-LD types: Dentist, MedicalClinic, CreativeWork, PostalAddress, AggregateRating, GeoCoordinates, Map, OpeningHoursSpecification, Offer, Review",
+      "severity": "low"
+    },
+    {
+      "id": "page_response_time_ms",
+      "category": "performance",
+      "status": "present",
+      "evidence": "curl total time 347 ms",
+      "severity": "low"
+    }
+  ],
+  "top_3_findings": [
+    {
+      "id": "tracking_scripts",
+      "category": "consent",
+      "status": "flagged",
+      "evidence": "Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+      "severity": "high"
+    },
+    {
+      "id": "cookie_banner_script",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.",
+      "severity": "medium"
+    },
+    {
+      "id": "whatsapp_cta",
+      "category": "conversion",
+      "status": "missing",
+      "evidence": "No wa.me/ or whatsapp.com/send link found in fetched HTML.",
+      "severity": "medium"
+    }
+  ],
+  "limited_public_exposure_points_found": false,
+  "outputs": {
+    "pdf": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/PUN-006.pdf",
+    "json": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/PUN-006.json",
+    "html_debug": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/PUN-006.html",
+    "pdf_bytes": 34001
+  }
+}

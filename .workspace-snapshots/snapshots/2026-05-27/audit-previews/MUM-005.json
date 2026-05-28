@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-05-27T09:30:09.107Z",
+  "prospect": {
+    "prospect_id": "MUM-005",
+    "business_name": "Dr. Mehtaa's Dental Clinic",
+    "owner_name": "Dr. Ankit H Mehta / Dr. Nidhi Mehta",
+    "metro": "Mumbai",
+    "city": "Mumbai",
+    "vertical": "Dental clinic",
+    "website_url": "https://www.practo.com/mumbai/clinic/dr-mehtaa-s-dental-clinic-santacruz-west",
+    "source_url": "https://www.practo.com/mumbai/clinic/dr-mehtaa-s-dental-clinic-santacruz-west",
+    "original_row_id": "MUM-005"
+  },
+  "site_unreachable": false,
+  "fetch": {
+    "status": 200,
+    "final_url": "https://www.practo.com/mumbai/clinic/dr-mehtaa-s-dental-clinic-santacruz-west",
+    "fetch_ms": 354,
+    "error": null,
+    "page_response_time_ms": 240
+  },
+  "findings": [
+    {
+      "id": "privacy_policy_link",
+      "category": "privacy",
+      "status": "present",
+      "evidence": "<a class=\"u-color--white u-d-block\" target=\"_blank\" href=\"/company/privacy\">",
+      "severity": "low"
+    },
+    {
+      "id": "cookie_banner_script",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.",
+      "severity": "medium"
+    },
+    {
+      "id": "whatsapp_cta",
+      "category": "conversion",
+      "status": "missing",
+      "evidence": "No wa.me/ or whatsapp.com/send link found in fetched HTML.",
+      "severity": "medium"
+    },
+    {
+      "id": "mobile_viewport_meta",
+      "category": "mobile",
+      "status": "present",
+      "evidence": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\"/>",
+      "severity": "low"
+    },
+    {
+      "id": "contact_form_analysis",
+      "category": "forms",
+      "status": "missing",
+      "evidence": "No <form> element found in fetched HTML.",
+      "severity": "low"
+    },
+    {
+      "id": "tracking_scripts",
+      "category": "consent",
+      "status": "flagged",
+      "evidence": "Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+      "severity": "high"
+    },
+    {
+      "id": "https_status",
+      "category": "security",
+      "status": "present",
+      "evidence": "URL scheme is HTTPS: https://www.practo.com/mumbai/clinic/dr-mehtaa-s-dental-clinic-santacruz-west",
+      "severity": "low"
+    },
+    {
+      "id": "hsts_header",
+      "category": "security",
+      "status": "present",
+      "evidence": "strict-transport-security: max-age=63072000; includeSubDomains; preload",
+      "severity": "low"
+    },
+    {
+      "id": "structured_data",
+      "category": "seo",
+      "status": "present",
+      "evidence": "JSON-LD types: BreadcrumbList, ListItem, MedicalClinic, OpeningHoursSpecification, Review, Person, PostalAddress, CreativeWork, Dentist, AggregateRating",
+      "severity": "low"
+    },
+    {
+      "id": "page_response_time_ms",
+      "category": "performance",
+      "status": "present",
+      "evidence": "curl total time 240 ms",
+      "severity": "low"
+    }
+  ],
+  "top_3_findings": [
+    {
+      "id": "tracking_scripts",
+      "category": "consent",
+      "status": "flagged",
+      "evidence": "Meta Pixel detected without known cookie banner script; evidence: fbq('init', '327052174165071');",
+      "severity": "high"
+    },
+    {
+      "id": "cookie_banner_script",
+      "category": "consent",
+      "status": "missing",
+      "evidence": "No CookieYes/Cookiebot/OneTrust/Klaro/Osano/cookieconsent script src found.",
+      "severity": "medium"
+    },
+    {
+      "id": "whatsapp_cta",
+      "category": "conversion",
+      "status": "missing",
+      "evidence": "No wa.me/ or whatsapp.com/send link found in fetched HTML.",
+      "severity": "medium"
+    }
+  ],
+  "limited_public_exposure_points_found": false,
+  "outputs": {
+    "pdf": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/MUM-005.pdf",
+    "json": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/MUM-005.json",
+    "html_debug": ".workspace-snapshots/snapshots/2026-05-27/audit-previews/MUM-005.html",
+    "pdf_bytes": 33810
+  }
+}
