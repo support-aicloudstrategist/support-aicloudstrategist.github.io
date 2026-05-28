@@ -7021,29 +7021,30 @@ body.reform-site.home-dark-theme .creative-preview span {
   body.reform-site.home-dark-theme .hero-system-mockup {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     min-height: auto;
-    padding: 14px;
+    gap: 9px;
+    padding: 10px;
   }
   body.reform-site.home-dark-theme .mock-browser {
     grid-column: 1 / -1;
     grid-row: auto;
-    min-height: 165px;
-    padding: 14px;
+    min-height: 138px;
+    padding: 11px;
     border-radius: 22px;
   }
   body.reform-site.home-dark-theme .mock-browser-top {
-    margin-bottom: 14px;
+    margin-bottom: 9px;
     font-size: 10px;
   }
   body.reform-site.home-dark-theme .mock-browser-top em {
     display: none;
   }
   body.reform-site.home-dark-theme .mock-hero-line {
-    height: 24px;
-    margin-bottom: 9px;
+    height: 22px;
+    margin-bottom: 7px;
   }
   body.reform-site.home-dark-theme .mock-copy-line {
-    height: 22px;
-    margin-bottom: 8px;
+    height: 20px;
+    margin-bottom: 6px;
   }
   body.reform-site.home-dark-theme .mock-hero-line:before,
   body.reform-site.home-dark-theme .mock-copy-line:before {
@@ -7059,12 +7060,12 @@ body.reform-site.home-dark-theme .creative-preview span {
   }
   body.reform-site.home-dark-theme .mock-site-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    margin-top: 18px;
+    gap: 6px;
+    margin-top: 10px;
   }
   body.reform-site.home-dark-theme .mock-site-grid i {
-    min-height: 50px;
-    padding: 8px;
+    min-height: 36px;
+    padding: 7px;
     border-radius: 13px;
   }
   body.reform-site.home-dark-theme .mock-site-grid i b {
@@ -7077,14 +7078,14 @@ body.reform-site.home-dark-theme .creative-preview span {
     grid-column: auto;
     grid-row: auto;
     border-radius: 18px;
-    padding: 12px;
+    padding: 10px;
   }
   body.reform-site.home-dark-theme .mock-card small {
     font-size: 9px;
     margin-bottom: 5px;
   }
   body.reform-site.home-dark-theme .mock-card b {
-    font-size: 13px;
+    font-size: 12px;
   }
   body.reform-site.home-dark-theme .mock-card span {
     font-size: 10px;
@@ -7094,7 +7095,7 @@ body.reform-site.home-dark-theme .creative-preview span {
     margin-top: 8px;
   }
   body.reform-site.home-dark-theme .tracker-list i {
-    padding: 6px 7px;
+    padding: 5px 6px;
     font-size: 9px;
   }
   body.reform-site.home-dark-theme .tracker-list span {
@@ -7103,7 +7104,7 @@ body.reform-site.home-dark-theme .creative-preview span {
     font-size: 9px;
   }
   body.reform-site.home-dark-theme .creative-preview {
-    height: 52px;
+    height: 46px;
     border-radius: 14px;
   }
 }
@@ -7846,14 +7847,15 @@ body.reform-site.home-dark-theme .process-card p {
   body.reform-site.home-dark-theme .footer a {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: 32px;
     padding: 2px 0;
   }
   body.reform-site.home-dark-theme .topbar-inner {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 3px 0;
+    min-height: 32px;
+    padding: 0;
     line-height: 1.35;
   }
   body.reform-site.home-dark-theme .topbar-inner span:first-child {
@@ -7864,6 +7866,15 @@ body.reform-site.home-dark-theme .process-card p {
     flex-wrap: wrap;
     gap: 2px 10px;
     align-items: center;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:last-child > a:first-child {
+    display: none;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:last-child > a:last-child {
+    font-size: 12px;
+  }
+  body.reform-site.home-dark-theme .nav-inner {
+    height: 62px;
   }
   body.reform-site.home-dark-theme .brand {
     min-height: 44px;
@@ -7894,19 +7905,36 @@ body.reform-site.home-dark-theme .process-card p {
     background: rgba(255, 255, 255, 0.035);
   }
   body.reform-site.home-dark-theme .conversion-hero {
-    padding: 34px 0 40px;
+    padding: 22px 0 30px;
   }
   body.reform-site.home-dark-theme .conversion-hero-grid {
-    gap: 24px;
+    gap: 16px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1 {
+    font-size: clamp(28px, 7.8vw, 32px) !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero p {
+    font-size: 16px !important;
+    line-height: 1.5;
+    margin-bottom: 18px;
   }
   body.reform-site.home-dark-theme .conversion-hero .actions {
     gap: 10px;
+    margin-bottom: 2px;
   }
   body.reform-site.home-dark-theme .conversion-hero .actions .btn {
     flex: 1 1 100%;
     min-height: 48px;
     white-space: normal;
     text-align: center;
+  }
+  body.reform-site.home-dark-theme .conversion-hero .actions .btn-light {
+    min-height: 42px;
+    background: transparent;
+    color: #a5f3fc;
+    border-color: rgba(125, 211, 252, 0.2);
+    box-shadow: none;
+    font-size: 14px;
   }
   body.reform-site.home-dark-theme {
     animation: none;
