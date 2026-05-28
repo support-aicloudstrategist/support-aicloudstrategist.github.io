@@ -7478,6 +7478,220 @@ body.reform-site.home-dark-theme .service-icon {
   box-shadow: 0 14px 34px rgba(34, 211, 238, 0.22);
 }
 
+body.reform-site.home-dark-theme .service-visual {
+  display: block;
+  position: relative;
+  min-height: 116px;
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(2, 6, 23, 0.46);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+body.reform-site.home-dark-theme .service-visual:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 76% 12%, rgba(34, 211, 238, 0.18), transparent 38%);
+}
+
+body.reform-site.home-dark-theme .website-visual i {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(103, 232, 249, 0.95), rgba(96, 165, 250, 0.5));
+}
+
+body.reform-site.home-dark-theme .website-visual b {
+  position: absolute;
+  left: 16px;
+  height: 34px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.09);
+}
+
+body.reform-site.home-dark-theme .website-visual b:nth-of-type(1) {
+  top: 46px;
+  width: calc(58% - 16px);
+}
+
+body.reform-site.home-dark-theme .website-visual b:nth-of-type(2) {
+  top: 46px;
+  right: 16px;
+  left: auto;
+  width: calc(42% - 22px);
+  background: rgba(34, 211, 238, 0.13);
+}
+
+body.reform-site.home-dark-theme .website-visual em {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 15px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.18);
+}
+
+body.reform-site.home-dark-theme .lead-visual i {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 54%;
+  height: 27px;
+  border-radius: 16px 16px 16px 4px;
+  background: rgba(96, 165, 250, 0.32);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+body.reform-site.home-dark-theme .lead-visual b {
+  position: absolute;
+  right: 16px;
+  height: 26px;
+  border-radius: 16px 16px 4px 16px;
+  background: rgba(34, 211, 238, 0.3);
+  border: 1px solid rgba(103, 232, 249, 0.18);
+}
+
+body.reform-site.home-dark-theme .lead-visual b:nth-of-type(1) {
+  top: 52px;
+  width: 62%;
+}
+
+body.reform-site.home-dark-theme .lead-visual b:nth-of-type(2) {
+  top: 84px;
+  width: 46%;
+}
+
+body.reform-site.home-dark-theme .lead-visual em {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.9), rgba(96, 165, 250, 0.55));
+  box-shadow: 0 12px 28px rgba(34, 211, 238, 0.18);
+}
+
+body.reform-site.home-dark-theme .lead-visual:after {
+  content: '';
+  position: absolute;
+  left: 48px;
+  top: 64px;
+  width: 52px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(103, 232, 249, 0.72), transparent);
+  transform: rotate(-22deg);
+}
+
+body.reform-site.home-dark-theme .trust-visual i {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  width: 58px;
+  height: 66px;
+  transform: translateX(-50%);
+  border-radius: 26px 26px 18px 18px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.22), rgba(15, 23, 42, 0.8));
+  border: 1px solid rgba(103, 232, 249, 0.3);
+}
+
+body.reform-site.home-dark-theme .trust-visual i:after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #a7f3d0;
+  font-size: 28px;
+  font-weight: 1000;
+}
+
+body.reform-site.home-dark-theme .trust-visual b {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 64px;
+  border-radius: 13px;
+  background: rgba(167, 243, 208, 0.12);
+  border: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+body.reform-site.home-dark-theme .trust-visual em {
+  position: absolute;
+  right: 20px;
+  bottom: 26px;
+  width: 58px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(167, 243, 208, 0.42);
+  box-shadow: 0 -18px 0 rgba(148, 163, 184, 0.18), 0 -36px 0 rgba(148, 163, 184, 0.13);
+}
+
+body.reform-site.home-dark-theme .trust-visual:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  width: 82px;
+  height: 82px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  border: 1px solid rgba(167, 243, 208, 0.22);
+  box-shadow: 0 0 34px rgba(34, 197, 94, 0.12);
+}
+
+body.reform-site.home-dark-theme .creative-card-visual {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(139, 92, 246, 0.32), transparent 38%),
+    rgba(2, 6, 23, 0.48);
+}
+
+body.reform-site.home-dark-theme .creative-card-visual i {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 74px;
+  border-radius: 20px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 1000;
+  background: linear-gradient(135deg, #22d3ee, #2563eb 50%, #8b5cf6);
+  box-shadow: 0 14px 32px rgba(139, 92, 246, 0.2);
+}
+
+body.reform-site.home-dark-theme .creative-card-visual b {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(226, 232, 240, 0.12);
+}
+
+body.reform-site.home-dark-theme .creative-card-visual em {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+  width: 72px;
+  height: 13px;
+  border-radius: 999px;
+  background: rgba(103, 232, 249, 0.35);
+  box-shadow: 0 -22px 0 rgba(139, 92, 246, 0.2);
+}
+
 body.reform-site.home-dark-theme .service-card h3 {
   color: #fff;
   font-size: 24px;
@@ -7526,6 +7740,28 @@ body.reform-site.home-dark-theme .service-card strong {
 body.reform-site.home-dark-theme .creative-service:before {
   background: radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.22), transparent 36%),
     radial-gradient(circle at 18% 18%, rgba(34, 211, 238, 0.12), transparent 30%);
+}
+
+body.reform-site.home-dark-theme .service-card-website:before {
+  background: radial-gradient(circle at 78% 0%, rgba(34, 211, 238, 0.18), transparent 36%);
+}
+
+body.reform-site.home-dark-theme .service-card-leads:before {
+  background: radial-gradient(circle at 78% 0%, rgba(96, 165, 250, 0.2), transparent 36%),
+    radial-gradient(circle at 8% 22%, rgba(34, 211, 238, 0.1), transparent 28%);
+}
+
+body.reform-site.home-dark-theme .service-card-trust:before {
+  background: radial-gradient(circle at 78% 0%, rgba(167, 243, 208, 0.18), transparent 36%),
+    radial-gradient(circle at 12% 22%, rgba(34, 197, 94, 0.08), transparent 28%);
+}
+
+body.reform-site.home-dark-theme .service-card-leads .service-icon {
+  background: linear-gradient(135deg, #60a5fa, #22d3ee);
+}
+
+body.reform-site.home-dark-theme .service-card-trust .service-icon {
+  background: linear-gradient(135deg, #a7f3d0, #22d3ee);
 }
 
 body.reform-site.home-dark-theme .creative-service .service-icon {
