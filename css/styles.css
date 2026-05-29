@@ -9359,3 +9359,67 @@ body.reform-site.home-dark-theme .conversion-hero .hero-proof {
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* Step 6 — small visual outcome labels, no proof claims */
+body.reform-site.home-dark-theme .outcome-badge {
+  position: absolute;
+  z-index: 4;
+  left: 14px;
+  top: 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #dffcff;
+  background: rgba(2, 6, 23, 0.68);
+  border: 1px solid rgba(103, 232, 249, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  font-size: 10.5px;
+  font-weight: 950;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+}
+
+body.reform-site.home-dark-theme .outcome-badge:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: #67e8f9;
+  box-shadow: 0 0 10px rgba(103, 232, 249, 0.75);
+}
+
+body.reform-site.home-dark-theme .visual-window,
+body.reform-site.home-dark-theme .chat-visual,
+body.reform-site.home-dark-theme .policy-visual,
+body.reform-site.home-dark-theme .ad-visual {
+  position: relative;
+}
+
+body.reform-site.home-dark-theme .visual-window .window-bar,
+body.reform-site.home-dark-theme .chat-visual .chat-bubble:first-of-type,
+body.reform-site.home-dark-theme .policy-page strong,
+body.reform-site.home-dark-theme .ad-visual .reel-frame {
+  margin-top: 18px;
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .outcome-badge {
+    left: 12px;
+    top: 12px;
+    min-height: 24px;
+    padding: 4px 8px;
+    font-size: 9.5px;
+  }
+
+  body.reform-site.home-dark-theme .visual-window .window-bar,
+  body.reform-site.home-dark-theme .chat-visual .chat-bubble:first-of-type,
+  body.reform-site.home-dark-theme .policy-page strong,
+  body.reform-site.home-dark-theme .ad-visual .reel-frame {
+    margin-top: 16px;
+  }
+}
