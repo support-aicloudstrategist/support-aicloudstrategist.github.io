@@ -9522,3 +9522,127 @@ body.reform-site.home-dark-theme .footer-contact-row a {
     margin-top: 10px;
   }
 }
+
+/* Step 4 rebalance — restore premium breathing room without returning to huge gaps */
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 52px;
+    padding-bottom: 34px;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero-grid {
+    gap: 38px;
+  }
+
+  body.reform-site.home-dark-theme #how {
+    padding-top: 62px;
+    padding-bottom: 68px;
+  }
+
+  body.reform-site.home-dark-theme .actual-get-section {
+    padding-top: 68px;
+    padding-bottom: 72px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-section {
+    padding-top: 66px;
+    padding-bottom: 70px;
+  }
+
+  body.reform-site.home-dark-theme .process-section {
+    padding-top: 66px;
+    padding-bottom: 78px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 30px;
+  }
+
+  body.reform-site.home-dark-theme .section h2 {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    line-height: 1.04;
+  }
+
+  body.reform-site.home-dark-theme .section-head .lead {
+    max-width: 820px;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    gap: 18px;
+  }
+
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .process-card {
+    padding: 24px;
+  }
+
+  body.reform-site.home-dark-theme .service-card {
+    gap: 14px;
+  }
+
+  body.reform-site.home-dark-theme .service-visual {
+    min-height: 108px;
+    border-radius: 22px;
+  }
+
+  body.reform-site.home-dark-theme .service-card p {
+    line-height: 1.48;
+  }
+
+  body.reform-site.home-dark-theme .service-card ul {
+    gap: 8px;
+  }
+
+  body.reform-site.home-dark-theme .actual-tile > div:first-child {
+    min-height: 230px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-wrap {
+    gap: 24px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card {
+    padding: 30px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card h2 {
+    margin: 8px 0 18px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card ul {
+    gap: 10px;
+  }
+
+  body.reform-site.home-dark-theme .process-card {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1020px) {
+  body.reform-site.home-dark-theme .section {
+    padding: 64px 0;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .section {
+    padding-top: 44px;
+    padding-bottom: 46px;
+  }
+
+  body.reform-site.home-dark-theme #how {
+    padding-top: 36px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 16px;
+  }
+}
