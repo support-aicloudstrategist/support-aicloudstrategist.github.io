@@ -8992,3 +8992,76 @@ body.reform-site.home-dark-theme .conversion-hero .hero-proof {
     display: none;
   }
 }
+
+/* Step 4 desktop rhythm pass — tighter connected section spacing, no content changes */
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-bottom: 40px;
+  }
+
+  body.reform-site.home-dark-theme .section {
+    padding: 66px 0;
+  }
+
+  body.reform-site.home-dark-theme #how {
+    padding-top: 58px;
+  }
+
+  body.reform-site.home-dark-theme .actual-get-section {
+    padding-top: 60px;
+    padding-bottom: 64px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-section {
+    padding-top: 58px;
+    padding-bottom: 60px;
+  }
+
+  body.reform-site.home-dark-theme .process-section {
+    padding-top: 58px;
+    padding-bottom: 68px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 28px;
+  }
+
+  body.reform-site.home-dark-theme .section-head h2 {
+    margin-bottom: 10px;
+  }
+
+  body.reform-site.home-dark-theme .section-head .lead {
+    margin-top: 0;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    gap: 16px;
+  }
+
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .process-card {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  body.reform-site.home-dark-theme .section.alt {
+    background:
+      linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 12%, rgba(2, 6, 23, 0.22) 88%, rgba(2, 6, 23, 0) 100%),
+      radial-gradient(circle at 20% 0%, rgba(96, 165, 250, 0.1), transparent 26%),
+      rgba(2, 6, 23, 0.2);
+  }
+}
+
+/* Keep mobile full-page QA and scroll rhythm intact; no layout/content changes */
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .service-card.animate-in,
+  body.reform-site.home-dark-theme .actual-tile.animate-in,
+  body.reform-site.home-dark-theme .before-after-card.animate-in,
+  body.reform-site.home-dark-theme .process-card.animate-in {
+    opacity: 1;
+    transform: none;
+  }
+}
