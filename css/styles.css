@@ -8848,3 +8848,140 @@ body.reform-site.home-dark-theme .footer {
     bottom: 16px;
   }
 }
+
+/* Step 3 redo polish — hero/services clarity */
+body.reform-site.home-dark-theme .hero-proof {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: #a7f3d0;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero-grid {
+    grid-template-columns: minmax(0, 0.94fr) minmax(440px, 0.86fr);
+    gap: 38px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene {
+    max-width: 560px;
+    justify-self: end;
+  }
+  body.reform-site.home-dark-theme .hero-system-mockup {
+    transform: translateZ(0) scale(0.96);
+    transform-origin: center right;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .topbar-inner {
+    min-height: 24px;
+  }
+  body.reform-site.home-dark-theme .topbar a {
+    min-height: 24px;
+    font-size: 10.5px;
+  }
+  body.reform-site.home-dark-theme .nav-inner {
+    height: 54px;
+    gap: 8px;
+  }
+  body.reform-site.home-dark-theme .nav-cta {
+    padding: 9px 10px;
+    min-height: 38px;
+    font-size: 12px;
+  }
+  body.reform-site.home-dark-theme .mobile-toggle {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding: 12px 0 18px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1 {
+    font-size: clamp(25px, 6.8vw, 29px) !important;
+    line-height: 1.02;
+  }
+  body.reform-site.home-dark-theme .conversion-hero p {
+    font-size: 14.5px !important;
+    line-height: 1.38;
+    margin-bottom: 12px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero .actions .btn {
+    min-height: 44px;
+    padding: 11px 14px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero .actions .btn-light {
+    min-height: 38px;
+    padding: 8px 12px;
+  }
+  body.reform-site.home-dark-theme .hero-proof {
+    margin-top: 10px;
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene {
+    margin-top: 4px;
+    padding: 6px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-shell {
+    padding: 9px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-website {
+    min-height: 108px;
+    padding: 10px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow {
+    margin-top: 6px;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow > div {
+    padding: 7px;
+  }
+  body.reform-site.home-dark-theme .section {
+    padding: 38px 0;
+  }
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 14px;
+  }
+  body.reform-site.home-dark-theme .service-card-grid {
+    gap: 12px;
+  }
+  body.reform-site.home-dark-theme .service-card {
+    padding: 14px;
+    border-radius: 20px;
+  }
+  body.reform-site.home-dark-theme .service-visual {
+    min-height: 56px;
+  }
+}
+
+/* Step 3 redo follow-up — keep both contact paths visible and pull services up */
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .topbar-inner span:last-child {
+    gap: 0 8px;
+    justify-content: center;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:last-child > a:first-child {
+    display: inline-flex;
+  }
+  body.reform-site.home-dark-theme .topbar-inner span:last-child > a:last-child,
+  body.reform-site.home-dark-theme .topbar-inner span:last-child > a:first-child {
+    font-size: 9.8px;
+    letter-spacing: -0.02em;
+  }
+  body.reform-site.home-dark-theme #how {
+    padding-top: 30px;
+  }
+  body.reform-site.home-dark-theme #how .section-head {
+    margin-bottom: 8px;
+  }
+  body.reform-site.home-dark-theme #how .section-head .lead {
+    margin-bottom: 0;
+  }
+}
+
+body.reform-site.home-dark-theme .conversion-hero .hero-proof {
+  display: block;
+  grid-template-columns: none;
+  gap: 0;
+}
