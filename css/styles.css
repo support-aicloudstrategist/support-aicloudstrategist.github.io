@@ -10443,3 +10443,36 @@ body.reform-site.home-dark-theme .lead {
     width: calc(100% - 32px);
   }
 }
+
+/* Desktop gutter tune — reduce side padding only, keep mobile/tablet safe */
+@media (min-width: 1021px) {
+  :root {
+    --max: 1360px;
+    --aics-container-pad: 24px;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    width: min(calc(100% - 48px), var(--max));
+  }
+}
+
+@media (min-width: 1441px) {
+  :root {
+    --max: 1400px;
+    --aics-container-pad: 28px;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    width: min(calc(100% - 56px), var(--max));
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1020px) {
+  :root {
+    --aics-container-pad: 24px;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    width: calc(100% - 48px);
+  }
+}
