@@ -9443,3 +9443,82 @@ body.reform-site.home-dark-theme .outcome-badge {
     padding: 5px 9px;
   }
 }
+
+/* Final responsive QA cleanup — bug fixes only */
+body.reform-site.home-dark-theme .footer-link-row,
+body.reform-site.home-dark-theme .footer-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 14px;
+}
+
+body.reform-site.home-dark-theme .footer-link-row a,
+body.reform-site.home-dark-theme .footer-contact-row a {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (min-width: 621px) and (max-width: 1020px) {
+  body.reform-site.home-dark-theme .topbar-sep {
+    display: inline;
+  }
+}
+
+@media (max-width: 1020px) {
+  body.reform-site.home-dark-theme .animate-in,
+  body.reform-site.home-dark-theme .animate-in.visible,
+  body.reform-site.home-dark-theme .service-card.animate-in,
+  body.reform-site.home-dark-theme .actual-tile.animate-in,
+  body.reform-site.home-dark-theme .before-after-card.animate-in,
+  body.reform-site.home-dark-theme .process-card.animate-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1020px) {
+  body.reform-site.home-dark-theme .section {
+    padding: 56px 0;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 22px;
+  }
+
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .process-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .footer-link-row,
+  body.reform-site.home-dark-theme .footer-contact-row {
+    gap: 6px 12px;
+  }
+
+  body.reform-site.home-dark-theme .footer-link-row a,
+  body.reform-site.home-dark-theme .footer-contact-row a {
+    min-height: 34px;
+  }
+
+  body.reform-site.home-dark-theme .ad-visual {
+    padding-top: 6px;
+  }
+
+  body.reform-site.home-dark-theme .ad-visual .outcome-badge {
+    top: 10px;
+  }
+
+  body.reform-site.home-dark-theme .ad-caption {
+    margin-top: 10px;
+  }
+}
