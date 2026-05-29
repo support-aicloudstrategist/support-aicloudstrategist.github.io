@@ -10356,3 +10356,90 @@ body.reform-site.home-dark-theme .footer-bottom-row a {
     margin-top: 30px;
   }
 }
+
+/* Responsive width correction — wider, consistent homepage containers only */
+:root {
+  --max: 1280px;
+  --aics-container-pad: clamp(18px, 3vw, 42px);
+}
+
+body.reform-site.home-dark-theme .container {
+  width: min(100% - (var(--aics-container-pad) * 2), var(--max));
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.reform-site.home-dark-theme .section-head,
+body.reform-site.home-dark-theme .section-head h2,
+body.reform-site.home-dark-theme .lead {
+  max-width: 860px;
+}
+
+@media (min-width: 1321px) {
+  :root {
+    --max: 1320px;
+    --aics-container-pad: 48px;
+  }
+}
+
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(460px, 0.92fr);
+    gap: 52px;
+  }
+
+  body.reform-site.home-dark-theme .growth-system-scene {
+    max-width: 600px;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    gap: 24px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-wrap {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1020px) {
+  :root {
+    --aics-container-pad: 24px;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    width: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --aics-container-pad: 18px;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    width: calc(100% - 36px);
+    max-width: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero,
+  body.reform-site.home-dark-theme .section,
+  body.reform-site.home-dark-theme .premium-footer {
+    overflow-x: clip;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --aics-container-pad: 16px;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    width: calc(100% - 32px);
+  }
+}
