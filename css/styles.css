@@ -9709,3 +9709,145 @@ body.reform-site.home-dark-theme .footer-contact-row a {
     margin-bottom: 18px;
   }
 }
+
+/* Industries carousel — scoped horizontal scroll only for this section */
+body.reform-site.home-dark-theme .industries-section {
+  overflow: hidden;
+}
+
+body.reform-site.home-dark-theme .industries-head {
+  margin-bottom: 24px;
+}
+
+body.reform-site.home-dark-theme .industries-head .lead {
+  color: #67e8f9;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+body.reform-site.home-dark-theme .industries-scroll-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+body.reform-site.home-dark-theme .industries-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+body.reform-site.home-dark-theme .industry-card {
+  min-height: 128px;
+  padding: 22px;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(34, 211, 238, 0.16), transparent 34%),
+    radial-gradient(circle at 90% 20%, rgba(167, 139, 250, 0.14), transparent 30%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.86));
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+body.reform-site.home-dark-theme .industry-card:hover {
+  border-color: rgba(103, 232, 249, 0.42);
+  transform: translateY(-2px);
+}
+
+body.reform-site.home-dark-theme .industry-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #cffafe;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.22), rgba(124, 58, 237, 0.18));
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+body.reform-site.home-dark-theme .industry-card strong {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+body.reform-site.home-dark-theme .industry-card-more {
+  border-color: rgba(167, 139, 250, 0.28);
+}
+
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .industries-section {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+}
+
+@media (max-width: 1020px) {
+  body.reform-site.home-dark-theme .industries-section {
+    overflow: hidden;
+  }
+
+  body.reform-site.home-dark-theme .industries-scroll-wrap {
+    margin-right: calc(var(--container-pad, 20px) * -1);
+    overflow: hidden;
+  }
+
+  body.reform-site.home-dark-theme .industries-track {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 2px var(--container-pad, 20px) 14px 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(103, 232, 249, 0.38) rgba(15, 23, 42, 0.42);
+  }
+
+  body.reform-site.home-dark-theme .industries-track::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  body.reform-site.home-dark-theme .industries-track::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.42);
+    border-radius: 999px;
+  }
+
+  body.reform-site.home-dark-theme .industries-track::-webkit-scrollbar-thumb {
+    background: rgba(103, 232, 249, 0.42);
+    border-radius: 999px;
+  }
+
+  body.reform-site.home-dark-theme .industry-card {
+    flex: 0 0 min(72vw, 280px);
+    min-height: 132px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .industries-section {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+
+  body.reform-site.home-dark-theme .industries-head {
+    margin-bottom: 18px;
+  }
+
+  body.reform-site.home-dark-theme .industry-card {
+    flex-basis: 74vw;
+    min-height: 124px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+}
