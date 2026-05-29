@@ -9961,3 +9961,27 @@ body.reform-site .aics-product-card:active {
     animation: none !important;
   }
 }
+
+/* Hero mockup cleanup — remove duplicate floating overlays causing visual clutter */
+body.reform-site.home-dark-theme .growth-system-scene .scene-glow-card {
+  display: none;
+}
+
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .growth-system-scene {
+    overflow: hidden;
+  }
+
+  body.reform-site.home-dark-theme .growth-system-scene .system-shell {
+    min-height: 450px;
+  }
+
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow {
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  body.reform-site.home-dark-theme .growth-system-scene .system-flow > div {
+    min-height: 82px;
+  }
+}
