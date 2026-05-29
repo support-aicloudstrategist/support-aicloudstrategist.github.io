@@ -42,7 +42,8 @@
       e.preventDefault();
       const navHeight = navbar ? navbar.offsetHeight : 0;
       const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
-      window.scrollTo({ top, behavior: 'smooth' });
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
   });
 
