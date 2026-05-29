@@ -9065,3 +9065,161 @@ body.reform-site.home-dark-theme .conversion-hero .hero-proof {
     transform: none;
   }
 }
+
+/* Step 4 stronger desktop rhythm correction — visibly tighter, content unchanged */
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 44px;
+    padding-bottom: 18px;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero-grid {
+    gap: 30px;
+  }
+
+  body.reform-site.home-dark-theme #how {
+    padding-top: 42px;
+    padding-bottom: 52px;
+  }
+
+  body.reform-site.home-dark-theme .actual-get-section {
+    padding-top: 44px;
+    padding-bottom: 50px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-section {
+    padding-top: 42px;
+    padding-bottom: 46px;
+  }
+
+  body.reform-site.home-dark-theme .process-section {
+    padding-top: 42px;
+    padding-bottom: 54px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 20px;
+  }
+
+  body.reform-site.home-dark-theme .section h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 0.98;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    gap: 14px;
+  }
+
+  body.reform-site.home-dark-theme .service-card {
+    gap: 11px;
+    padding: 20px;
+  }
+
+  body.reform-site.home-dark-theme .service-visual {
+    min-height: 96px;
+  }
+
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .process-card,
+  body.reform-site.home-dark-theme .before-after-card {
+    padding: 24px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-wrap {
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card h2 {
+    margin: 6px 0 14px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card ul {
+    gap: 8px;
+  }
+}
+
+/* Step 4 final visible desktop tightening — compact premium rhythm, content unchanged */
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 38px;
+    padding-bottom: 0;
+  }
+
+  body.reform-site.home-dark-theme #how {
+    padding-top: 34px;
+    padding-bottom: 42px;
+  }
+
+  body.reform-site.home-dark-theme .actual-get-section,
+  body.reform-site.home-dark-theme .before-after-section,
+  body.reform-site.home-dark-theme .process-section {
+    padding-top: 36px;
+    padding-bottom: 42px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 16px;
+  }
+
+  body.reform-site.home-dark-theme .section h2 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  body.reform-site.home-dark-theme .section-head .lead {
+    max-width: 720px;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    gap: 12px;
+  }
+
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .process-card {
+    padding: 18px;
+  }
+
+  body.reform-site.home-dark-theme .service-card {
+    gap: 9px;
+  }
+
+  body.reform-site.home-dark-theme .service-visual {
+    min-height: 82px;
+    border-radius: 18px;
+  }
+
+  body.reform-site.home-dark-theme .service-card p {
+    line-height: 1.38;
+  }
+
+  body.reform-site.home-dark-theme .service-card ul {
+    gap: 6px;
+  }
+
+  body.reform-site.home-dark-theme .actual-tile > div:first-child {
+    min-height: 210px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card {
+    padding: 22px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card h2 {
+    margin: 4px 0 10px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-card ul {
+    gap: 7px;
+  }
+
+  body.reform-site.home-dark-theme .process-card {
+    min-height: 230px;
+  }
+}
