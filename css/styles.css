@@ -9646,3 +9646,66 @@ body.reform-site.home-dark-theme .footer-contact-row a {
     margin-bottom: 16px;
   }
 }
+
+/* Spacing tune — a bit more premium breathing room after review */
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 58px;
+    padding-bottom: 42px;
+  }
+
+  body.reform-site.home-dark-theme #how {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+
+  body.reform-site.home-dark-theme .actual-get-section {
+    padding-top: 78px;
+    padding-bottom: 82px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-section {
+    padding-top: 76px;
+    padding-bottom: 80px;
+  }
+
+  body.reform-site.home-dark-theme .process-section {
+    padding-top: 76px;
+    padding-bottom: 88px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 34px;
+  }
+
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    gap: 22px;
+  }
+
+  body.reform-site.home-dark-theme .before-after-wrap {
+    gap: 28px;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 1020px) {
+  body.reform-site.home-dark-theme .section {
+    padding: 70px 0;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .section {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+
+  body.reform-site.home-dark-theme .section-head {
+    margin-bottom: 18px;
+  }
+}
