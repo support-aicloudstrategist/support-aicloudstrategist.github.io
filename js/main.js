@@ -55,20 +55,6 @@
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => link.addEventListener('click', () => trackEvent('WhatsApp CTA Click', { page: location.pathname })));
   document.querySelectorAll('a[href^="mailto:"]').forEach(link => link.addEventListener('click', () => trackEvent('Email CTA Click', { page: location.pathname })));
 
-
-  const industriesTrack = document.querySelector('.industries-track');
-  const industriesPrev = document.querySelector('.industries-prev');
-  const industriesNext = document.querySelector('.industries-next');
-  if (industriesTrack && industriesPrev && industriesNext) {
-    const scrollIndustries = (direction) => {
-      const firstCard = industriesTrack.querySelector('.industry-card');
-      const step = firstCard ? firstCard.getBoundingClientRect().width + 18 : 260;
-      industriesTrack.scrollBy({ left: direction * step, behavior: 'smooth' });
-    };
-    industriesPrev.addEventListener('click', () => scrollIndustries(-1));
-    industriesNext.addEventListener('click', () => scrollIndustries(1));
-  }
-
   document.querySelectorAll('form.lead-form').forEach(form => {
     const params = new URLSearchParams(window.location.search);
     ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(key => {
