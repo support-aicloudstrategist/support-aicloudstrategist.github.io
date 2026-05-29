@@ -8985,3 +8985,10 @@ body.reform-site.home-dark-theme .conversion-hero .hero-proof {
   grid-template-columns: none;
   gap: 0;
 }
+
+/* Step 4 cleanup — avoid orphan separator in compact topbars */
+@media (max-width: 620px) {
+  .topbar .topbar-sep {
+    display: none;
+  }
+}
