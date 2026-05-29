@@ -9709,3 +9709,255 @@ body.reform-site.home-dark-theme .footer-contact-row a {
     margin-bottom: 18px;
   }
 }
+
+/* Premium animated card system — existing cards only, no content/layout redesign */
+:root {
+  --aics-card-cyan: 34, 211, 238;
+  --aics-card-blue: 96, 165, 250;
+  --aics-card-violet: 139, 92, 246;
+  --aics-card-magenta: 217, 70, 239;
+  --aics-card-teal: 45, 212, 191;
+}
+
+body.reform-site.home-dark-theme .service-card,
+body.reform-site.home-dark-theme .actual-tile,
+body.reform-site .aics-price-card,
+body.reform-site .price-card,
+body.reform-site .deep-industry-card,
+body.reform-site .industry-portfolio-card,
+body.reform-site .aics-product-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow, border-color;
+  --card-accent-a: var(--aics-card-cyan);
+  --card-accent-b: var(--aics-card-violet);
+  border-color: rgba(var(--card-accent-a), 0.2);
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.88)) padding-box,
+    linear-gradient(135deg, rgba(var(--card-accent-a), 0.35), rgba(var(--card-accent-b), 0.2), rgba(255, 255, 255, 0.08)) border-box;
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.025) inset,
+    0 0 34px rgba(var(--card-accent-a), 0.06);
+  transition:
+    transform 260ms cubic-bezier(.2,.8,.2,1),
+    box-shadow 260ms ease,
+    border-color 260ms ease,
+    background-position 520ms ease;
+}
+
+body.reform-site.home-dark-theme .service-card:before,
+body.reform-site.home-dark-theme .actual-tile:before,
+body.reform-site .aics-price-card:before,
+body.reform-site .price-card:before,
+body.reform-site .deep-industry-card:before,
+body.reform-site .industry-portfolio-card:before,
+body.reform-site .aics-product-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 16% 12%, rgba(var(--card-accent-a), 0.18), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(var(--card-accent-b), 0.14), transparent 34%),
+    linear-gradient(115deg, transparent 12%, rgba(255, 255, 255, 0.02) 38%, transparent 62%);
+  opacity: 0.9;
+  background-size: 130% 130%, 140% 140%, 220% 100%;
+  background-position: 0% 0%, 100% 0%, 110% 0%;
+  transition: opacity 260ms ease, background-position 720ms ease;
+}
+
+body.reform-site.home-dark-theme .actual-tile:after,
+body.reform-site .aics-price-card:after,
+body.reform-site .price-card:after,
+body.reform-site .deep-industry-card:after,
+body.reform-site .industry-portfolio-card:after,
+body.reform-site .aics-product-card:after {
+  content: "";
+  position: absolute;
+  inset: -42% -70%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.16) 50%, transparent 58%);
+  opacity: 0;
+  transform: translateX(-38%) rotate(4deg);
+  transition: opacity 240ms ease, transform 760ms cubic-bezier(.2,.8,.2,1);
+}
+
+body.reform-site.home-dark-theme .service-card > *,
+body.reform-site.home-dark-theme .actual-tile > *,
+body.reform-site .aics-price-card > *,
+body.reform-site .price-card > *,
+body.reform-site .deep-industry-card > *,
+body.reform-site .industry-portfolio-card > *,
+body.reform-site .aics-product-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.reform-site.home-dark-theme .service-card-website,
+body.reform-site.home-dark-theme .website-tile { --card-accent-a: var(--aics-card-cyan); --card-accent-b: var(--aics-card-blue); }
+body.reform-site.home-dark-theme .service-card-leads,
+body.reform-site.home-dark-theme .followup-tile { --card-accent-a: var(--aics-card-teal); --card-accent-b: var(--aics-card-cyan); }
+body.reform-site.home-dark-theme .service-card-trust,
+body.reform-site.home-dark-theme .trust-tile { --card-accent-a: var(--aics-card-violet); --card-accent-b: var(--aics-card-blue); }
+body.reform-site.home-dark-theme .service-card-creative,
+body.reform-site.home-dark-theme .ad-tile { --card-accent-a: var(--aics-card-magenta); --card-accent-b: var(--aics-card-cyan); }
+body.reform-site .aics-price-card.featured,
+body.reform-site .price-card.popular { --card-accent-a: var(--aics-card-teal); --card-accent-b: var(--aics-card-violet); }
+body.reform-site .aics-price-card.entry { --card-accent-a: var(--aics-card-cyan); --card-accent-b: var(--aics-card-blue); }
+body.reform-site .aics-product-card.flagship { --card-accent-a: var(--aics-card-teal); --card-accent-b: var(--aics-card-cyan); }
+
+body.reform-site .aics-price-card,
+body.reform-site .price-card {
+  color: #e5f4ff;
+}
+
+body.reform-site .aics-price-card h2,
+body.reform-site .aics-price-card h3,
+body.reform-site .aics-price-card strong,
+body.reform-site .price-card h2,
+body.reform-site .price-card h3,
+body.reform-site .price-card b {
+  color: #ffffff;
+}
+
+body.reform-site .aics-price-card p,
+body.reform-site .aics-price-card li,
+body.reform-site .aics-price-card .ideal-for,
+body.reform-site .aics-price-card .setup-fee,
+body.reform-site .price-card li,
+body.reform-site .price-card p {
+  color: #cbd5e1;
+}
+
+body.reform-site .aics-price-card details,
+body.reform-site .aics-price-card .not-included {
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(2, 6, 23, 0.34);
+  color: #dbeafe;
+}
+
+body.reform-site .aics-price-card .btn,
+body.reform-site .price-card .btn {
+  box-shadow: 0 12px 30px rgba(var(--card-accent-a), 0.12);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.reform-site.home-dark-theme .service-card:hover,
+  body.reform-site.home-dark-theme .actual-tile:hover,
+  body.reform-site .aics-price-card:hover,
+  body.reform-site .price-card:hover,
+  body.reform-site .deep-industry-card:hover,
+  body.reform-site .industry-portfolio-card:hover,
+  body.reform-site .aics-product-card:hover {
+    transform: translateY(-8px) rotateX(1deg) rotateY(-1deg);
+    border-color: rgba(var(--card-accent-a), 0.48);
+    box-shadow:
+      0 34px 94px rgba(0, 0, 0, 0.36),
+      0 0 46px rgba(var(--card-accent-a), 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  body.reform-site.home-dark-theme .service-card:hover:before,
+  body.reform-site.home-dark-theme .actual-tile:hover:before,
+  body.reform-site .aics-price-card:hover:before,
+  body.reform-site .price-card:hover:before,
+  body.reform-site .deep-industry-card:hover:before,
+  body.reform-site .industry-portfolio-card:hover:before,
+  body.reform-site .aics-product-card:hover:before {
+    opacity: 1;
+    background-position: 18% 16%, 82% 8%, -80% 0%;
+  }
+
+  body.reform-site.home-dark-theme .actual-tile:hover:after,
+  body.reform-site .aics-price-card:hover:after,
+  body.reform-site .price-card:hover:after,
+  body.reform-site .deep-industry-card:hover:after,
+  body.reform-site .industry-portfolio-card:hover:after,
+  body.reform-site .aics-product-card:hover:after {
+    opacity: 0.55;
+    transform: translateX(38%) rotate(4deg);
+  }
+
+  body.reform-site.home-dark-theme .service-card:hover .service-icon,
+  body.reform-site.home-dark-theme .service-card:hover .service-visual,
+  body.reform-site.home-dark-theme .actual-tile:hover > div:first-child,
+  body.reform-site .deep-industry-card:hover .industry-picture,
+  body.reform-site .industry-portfolio-card:hover .portfolio-scene,
+  body.reform-site .aics-product-card:hover .product-icon {
+    transform: translateY(-3px) translateZ(18px) scale(1.015);
+  }
+}
+
+body.reform-site.home-dark-theme .service-icon,
+body.reform-site.home-dark-theme .service-visual,
+body.reform-site.home-dark-theme .actual-tile > div:first-child,
+body.reform-site .deep-industry-card .industry-picture,
+body.reform-site .industry-portfolio-card .portfolio-scene,
+body.reform-site .aics-product-card .product-icon {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+body.reform-site.home-dark-theme .service-card:active,
+body.reform-site.home-dark-theme .actual-tile:active,
+body.reform-site .aics-price-card:active,
+body.reform-site .price-card:active,
+body.reform-site .deep-industry-card:active,
+body.reform-site .industry-portfolio-card:active,
+body.reform-site .aics-product-card:active {
+  transform: scale(0.992);
+  border-color: rgba(var(--card-accent-a), 0.42);
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site .aics-price-card,
+  body.reform-site .price-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-portfolio-card,
+  body.reform-site .aics-product-card {
+    transform: none;
+    transition-duration: 160ms;
+  }
+
+  body.reform-site.home-dark-theme .service-card:active,
+  body.reform-site.home-dark-theme .actual-tile:active,
+  body.reform-site .aics-price-card:active,
+  body.reform-site .price-card:active,
+  body.reform-site .deep-industry-card:active,
+  body.reform-site .industry-portfolio-card:active,
+  body.reform-site .aics-product-card:active {
+    transform: scale(0.985);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site .aics-price-card,
+  body.reform-site .price-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-portfolio-card,
+  body.reform-site .aics-product-card,
+  body.reform-site.home-dark-theme .service-card:before,
+  body.reform-site.home-dark-theme .actual-tile:before,
+  body.reform-site.home-dark-theme .actual-tile:after,
+  body.reform-site .aics-price-card:before,
+  body.reform-site .aics-price-card:after,
+  body.reform-site .price-card:before,
+  body.reform-site .price-card:after,
+  body.reform-site .deep-industry-card:before,
+  body.reform-site .deep-industry-card:after,
+  body.reform-site .industry-portfolio-card:before,
+  body.reform-site .industry-portfolio-card:after,
+  body.reform-site .aics-product-card:before,
+  body.reform-site .aics-product-card:after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
