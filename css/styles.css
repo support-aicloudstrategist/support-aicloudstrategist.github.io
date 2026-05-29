@@ -9985,3 +9985,219 @@ body.reform-site.home-dark-theme .growth-system-scene .scene-glow-card {
     min-height: 82px;
   }
 }
+
+/* Premium footer — scoped footer-only upgrade */
+body.reform-site.home-dark-theme .premium-footer {
+  position: relative;
+  padding: 72px 0 34px;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(34, 211, 238, 0.11), transparent 30%),
+    radial-gradient(circle at 86% 6%, rgba(139, 92, 246, 0.12), transparent 34%),
+    #020611;
+  border-top: 1px solid rgba(148, 163, 184, 0.13);
+  overflow: hidden;
+}
+
+body.reform-site.home-dark-theme .premium-footer-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 34px;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.9)) padding-box,
+    linear-gradient(135deg, rgba(34, 211, 238, 0.24), rgba(139, 92, 246, 0.18), rgba(255, 255, 255, 0.06)) border-box;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.32),
+    0 0 46px rgba(34, 211, 238, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+body.reform-site.home-dark-theme .premium-footer-panel:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(34, 211, 238, 0.13), transparent 26%),
+    radial-gradient(circle at 92% 22%, rgba(139, 92, 246, 0.12), transparent 30%);
+}
+
+body.reform-site.home-dark-theme .footer-main-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr 0.9fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+body.reform-site.home-dark-theme .footer-brand-block,
+body.reform-site.home-dark-theme .footer-links-grid,
+body.reform-site.home-dark-theme .footer-cta-card {
+  min-width: 0;
+}
+
+body.reform-site.home-dark-theme .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 1000;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+body.reform-site.home-dark-theme .footer-brand-block p {
+  max-width: 390px;
+  margin: 0 0 18px;
+  color: #dbeafe;
+  line-height: 1.55;
+}
+
+body.reform-site.home-dark-theme .footer-contact-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+body.reform-site.home-dark-theme .footer-contact-pills a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 13px;
+  border-radius: 999px;
+  color: #cffafe;
+  background: rgba(2, 6, 23, 0.46);
+  border: 1px solid rgba(103, 232, 249, 0.22);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+body.reform-site.home-dark-theme .footer-contact-pills a:hover {
+  border-color: rgba(103, 232, 249, 0.5);
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.1);
+}
+
+body.reform-site.home-dark-theme .footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+body.reform-site.home-dark-theme .footer-links-grid h3,
+body.reform-site.home-dark-theme .footer-cta-card h3 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+body.reform-site.home-dark-theme .footer-links-grid a {
+  display: block;
+  width: fit-content;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 850;
+  line-height: 1.25;
+  margin: 0 0 11px;
+}
+
+body.reform-site.home-dark-theme .footer-links-grid a:hover {
+  color: #67e8f9;
+}
+
+body.reform-site.home-dark-theme .footer-cta-card {
+  padding: 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  background:
+    radial-gradient(circle at 85% 12%, rgba(139, 92, 246, 0.18), transparent 34%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.76));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+body.reform-site.home-dark-theme .footer-cta-card span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #67e8f9;
+  background: rgba(34, 211, 238, 0.09);
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.reform-site.home-dark-theme .footer-cta-card .btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+body.reform-site.home-dark-theme .footer-bottom-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+body.reform-site.home-dark-theme .footer-bottom-row a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+body.reform-site.home-dark-theme .footer-bottom-row a:hover {
+  color: #67e8f9;
+}
+
+@media (max-width: 1020px) {
+  body.reform-site.home-dark-theme .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  body.reform-site.home-dark-theme .footer-cta-card {
+    order: 3;
+  }
+}
+
+@media (max-width: 620px) {
+  body.reform-site.home-dark-theme .premium-footer {
+    padding: 50px 0 24px;
+  }
+
+  body.reform-site.home-dark-theme .premium-footer-panel {
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  body.reform-site.home-dark-theme .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  body.reform-site.home-dark-theme .footer-contact-pills a,
+  body.reform-site.home-dark-theme .footer-cta-card .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+    text-align: center;
+  }
+
+  body.reform-site.home-dark-theme .footer-bottom-row {
+    justify-content: center;
+    text-align: center;
+  }
+}
