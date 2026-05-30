@@ -10770,3 +10770,41 @@ body.reform-site.home-dark-theme #services .service-card strong {
     min-height: 138px;
   }
 }
+
+/* Narrow-screen hardening after service polish */
+@media (max-width: 640px) {
+  html,
+  body.reform-site.home-dark-theme {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.reform-site.home-dark-theme .container {
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero h1,
+  body.reform-site.home-dark-theme #services h2,
+  body.reform-site.home-dark-theme #services .service-card h3,
+  body.reform-site.home-dark-theme #services .service-card p,
+  body.reform-site.home-dark-theme #services .service-card li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  body.reform-site.home-dark-theme #services .service-card:after {
+    display: none;
+  }
+
+  body.reform-site.home-dark-theme #services .service-card strong {
+    width: 100%;
+  }
+
+  body.reform-site.home-dark-theme #services .service-visual {
+    width: 100%;
+    max-width: 100%;
+  }
+}
