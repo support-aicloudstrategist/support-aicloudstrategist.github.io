@@ -11204,3 +11204,176 @@ body.how-work-page .how-hero-note {
     line-height: 1.45;
   }
 }
+
+/* How it works process timeline — visual style only */
+body.how-work-page .process-list {
+  position: relative;
+  gap: 22px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+body.how-work-page .process-list::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(36, 225, 201, 0.12), rgba(36, 225, 201, 0.55), rgba(91, 163, 255, 0.18));
+  border-radius: 999px;
+}
+
+body.how-work-page .process-step {
+  position: relative;
+  grid-template-columns: 72px 56px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  background:
+    linear-gradient(145deg, rgba(10, 27, 45, 0.98), rgba(4, 13, 25, 0.98)),
+    radial-gradient(circle at 92% 0%, rgba(34, 211, 238, 0.16), transparent 34%);
+  border: 1px solid rgba(145, 214, 255, 0.18);
+  color: #eef8ff;
+  box-shadow: 0 18px 46px rgba(2, 10, 20, 0.18);
+  overflow: visible;
+}
+
+body.how-work-page .process-step b {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(36, 225, 201, 0.5);
+  background: linear-gradient(135deg, #04111f, #083342);
+  color: #bffbf2;
+  box-shadow: 0 0 0 8px #f4f8fc, 0 12px 28px rgba(8, 40, 59, 0.22);
+}
+
+body.how-work-page .process-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(36, 225, 201, 0.1);
+  border: 1px solid rgba(36, 225, 201, 0.2);
+  font-size: 24px;
+  line-height: 1;
+}
+
+body.how-work-page .process-label {
+  margin: 0 0 6px;
+  color: #78f0df;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+body.how-work-page .process-step h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+}
+
+body.how-work-page .process-step ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+body.how-work-page .process-step li {
+  color: #cbdff0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+body.how-work-page .process-step li::marker {
+  color: #32dec8;
+}
+
+body.how-work-page .process-step strong {
+  color: #ffffff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.how-work-page .process-step {
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  body.how-work-page .process-step:hover {
+    transform: translateY(-3px);
+    border-color: rgba(36, 225, 201, 0.38);
+    box-shadow: 0 22px 54px rgba(2, 10, 20, 0.24);
+  }
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .process-list {
+    gap: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  body.how-work-page .process-list::before {
+    left: 42px;
+    top: 18px;
+    bottom: 18px;
+  }
+
+  body.how-work-page .process-step {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px;
+    padding: 18px;
+    overflow: hidden;
+  }
+
+  body.how-work-page .process-step b {
+    grid-row: span 2;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 6px #f4f8fc, 0 10px 22px rgba(8, 40, 59, 0.18);
+  }
+
+  body.how-work-page .process-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    font-size: 21px;
+  }
+
+  body.how-work-page .process-label {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+  }
+
+  body.how-work-page .process-step h2 {
+    font-size: clamp(23px, 6.3vw, 30px);
+  }
+
+  body.how-work-page .process-step ul {
+    grid-column: 2;
+    padding-left: 17px;
+  }
+
+  body.how-work-page .process-step li {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+}
+
+/* Keep How it works process labels/headings readable on narrow phones */
+body.how-work-page .process-label,
+body.how-work-page .process-step h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .process-step h2 {
+    font-size: clamp(22px, 5.8vw, 28px);
+  }
+}
