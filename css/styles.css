@@ -10808,3 +10808,233 @@ body.reform-site.home-dark-theme #services .service-card strong {
     max-width: 100%;
   }
 }
+
+/* What you actually get — finished cards without skeleton placeholders */
+body.reform-site.home-dark-theme .actual-get-section {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(34, 211, 238, 0.08), transparent 30%),
+    radial-gradient(circle at 90% 6%, rgba(96, 165, 250, 0.07), transparent 34%),
+    linear-gradient(180deg, #020617 0%, #07111f 48%, #020617 100%);
+}
+
+body.reform-site.home-dark-theme .actual-get-section:before {
+  opacity: .55;
+}
+
+body.reform-site.home-dark-theme .deliverable-grid {
+  gap: 22px;
+}
+
+body.reform-site.home-dark-theme .deliverable-tile {
+  padding: 22px;
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(2, 6, 23, 0.92)) padding-box,
+    linear-gradient(135deg, rgba(var(--card-accent-a), 0.36), rgba(var(--card-accent-b), 0.18), rgba(255,255,255,.07)) border-box;
+  border: 1px solid transparent;
+}
+
+body.reform-site.home-dark-theme .deliverable-tile > div:first-child,
+body.reform-site.home-dark-theme .deliverable-art {
+  min-height: 178px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 26px;
+  border: 1px solid rgba(var(--card-accent-a), .18);
+  background:
+    radial-gradient(circle at 82% 16%, rgba(var(--card-accent-a), .18), transparent 34%),
+    linear-gradient(145deg, rgba(8, 47, 73, .34), rgba(2, 6, 23, .74));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+body.reform-site.home-dark-theme .deliverable-art .outcome-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  max-width: 100%;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: #04111e;
+  background: linear-gradient(135deg, #67e8f9, #a7f3d0);
+  font-size: 11px;
+  font-weight: 1000;
+  white-space: normal;
+}
+
+body.reform-site.home-dark-theme .deliverable-icon {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 24px;
+  color: #06111f;
+  background: linear-gradient(135deg, #67e8f9, #60a5fa);
+  box-shadow: 0 18px 44px rgba(var(--card-accent-a), .22);
+  font-size: 30px;
+  font-weight: 1000;
+}
+
+body.reform-site.home-dark-theme .trust-tile .deliverable-icon {
+  background: linear-gradient(135deg, #a7f3d0, #67e8f9);
+}
+
+body.reform-site.home-dark-theme .ad-tile .deliverable-icon {
+  color: #fff;
+  background: linear-gradient(135deg, #22d3ee, #2563eb 52%, #8b5cf6);
+  font-size: 24px;
+}
+
+body.reform-site.home-dark-theme .deliverable-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+body.reform-site.home-dark-theme .deliverable-mini b,
+body.reform-site.home-dark-theme .deliverable-flow b {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: #dffbff;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.09);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+body.reform-site.home-dark-theme .deliverable-flow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+body.reform-site.home-dark-theme .deliverable-flow i {
+  width: 28px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #67e8f9, transparent);
+}
+
+body.reform-site.home-dark-theme .deliverable-tile h3 {
+  font-size: 23px;
+  line-height: 1.12;
+  margin-bottom: 9px;
+}
+
+body.reform-site.home-dark-theme .deliverable-tile p {
+  color: #dbeafe;
+}
+
+@media (max-width: 1050px) {
+  body.reform-site.home-dark-theme .deliverable-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .deliverable-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.reform-site.home-dark-theme .deliverable-tile {
+    padding: 20px;
+  }
+
+  body.reform-site.home-dark-theme .deliverable-tile > div:first-child,
+  body.reform-site.home-dark-theme .deliverable-art {
+    min-height: 164px;
+  }
+}
+
+/* Mobile overflow guard for polished homepage sections */
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme main,
+  body.reform-site.home-dark-theme section,
+  body.reform-site.home-dark-theme .container,
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero h1 {
+    font-size: clamp(34px, 10vw, 44px);
+    max-width: 100%;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero p,
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .system-shell {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body.reform-site.home-dark-theme .service-card *,
+  body.reform-site.home-dark-theme .actual-tile * {
+    min-width: 0;
+  }
+}
+
+body.reform-site.home-dark-theme .before-after-section {
+  background: #020617;
+}
+
+/* Tablet/narrow browser guard: some mobile renderers report ~980px layout width */
+@media (max-width: 1000px) {
+  body.reform-site.home-dark-theme main,
+  body.reform-site.home-dark-theme section,
+  body.reform-site.home-dark-theme .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .system-shell,
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body.reform-site.home-dark-theme .conversion-hero h1,
+  body.reform-site.home-dark-theme .section-head h2,
+  body.reform-site.home-dark-theme .service-card h3,
+  body.reform-site.home-dark-theme .actual-tile h3,
+  body.reform-site.home-dark-theme .conversion-hero p,
+  body.reform-site.home-dark-theme .section-head p,
+  body.reform-site.home-dark-theme .service-card p,
+  body.reform-site.home-dark-theme .actual-tile p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
