@@ -11155,3 +11155,52 @@ body.how-work-page .footer a {
     max-width: 390px !important;
   }
 }
+
+/* How it works hero CTA polish — hero only */
+body.how-work-page .how-hero {
+  padding: 58px 0 50px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(37, 230, 200, 0.14), transparent 30%),
+    radial-gradient(circle at 88% 10%, rgba(88, 200, 255, 0.12), transparent 32%),
+    linear-gradient(135deg, #05111f, #08283b 62%, #06323c);
+}
+
+body.how-work-page .how-hero h1 {
+  margin-bottom: 14px;
+}
+
+body.how-work-page .how-hero p {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+body.how-work-page .how-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+body.how-work-page .how-hero-note {
+  margin-top: 14px;
+  color: #bfeee7;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-hero {
+    padding: 42px 0 36px;
+  }
+
+  body.how-work-page .how-hero-actions .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  body.how-work-page .how-hero-note {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
