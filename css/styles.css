@@ -11038,3 +11038,120 @@ body.reform-site.home-dark-theme .before-after-section {
     overflow-wrap: anywhere;
   }
 }
+
+/* How it works mobile overflow fix — layout only, no content changes */
+body.how-work-page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body.how-work-page *,
+body.how-work-page *::before,
+body.how-work-page *::after {
+  box-sizing: border-box;
+}
+
+body.how-work-page main,
+body.how-work-page section,
+body.how-work-page .container,
+body.how-work-page .page-hero,
+body.how-work-page .process-list,
+body.how-work-page .process-step,
+body.how-work-page .process-step > div,
+body.how-work-page .footer {
+  max-width: 100%;
+  min-width: 0;
+}
+
+body.how-work-page .page-hero p,
+body.how-work-page .process-step h2,
+body.how-work-page .process-step p,
+body.how-work-page .footer p,
+body.how-work-page .footer a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  body.how-work-page .topbar-inner,
+  body.how-work-page .nav-inner {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body.how-work-page .page-hero {
+    padding: 54px 0;
+  }
+
+  body.how-work-page .page-hero h1 {
+    font-size: clamp(34px, 11vw, 48px);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  body.how-work-page .page-hero p {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  body.how-work-page .process-list {
+    width: 100%;
+    gap: 14px;
+  }
+
+  body.how-work-page .process-step {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  body.how-work-page .process-step b {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  body.how-work-page .process-step h2 {
+    font-size: clamp(24px, 7vw, 32px);
+    line-height: 1.12;
+  }
+
+  body.how-work-page .process-step p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  body.how-work-page .footer {
+    overflow-x: hidden;
+  }
+}
+
+/* Extra narrow viewport guard for How it works screenshots/phones */
+@media (max-width: 800px) {
+  body.how-work-page .container {
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  body.how-work-page .topbar-inner,
+  body.how-work-page .nav-inner,
+  body.how-work-page .process-step,
+  body.how-work-page .footer .container {
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+  }
+}
