@@ -93,7 +93,7 @@ async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBod
     throw new Error("Microsoft Graph recipient is not configured.");
   }
 
-  const subject = `Free Lost-Lead Audit request — ${lead.business_name}`;
+  const subject = `Free Trust & Growth Audit request — ${lead.business_name}`;
   return sendGraphMail(env, {
     subject,
     body: { contentType: "Text", content: textBody },
@@ -105,9 +105,9 @@ async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBod
 function buildProspectConfirmationBody(lead: Record<string, string>) {
   return `Hi ${lead.full_name || "there"},
 
-Thank you for requesting your Lost-Lead Audit for ${lead.business_name}. I have your details and the audit is now in motion.
+Thank you for requesting your Free Trust & Growth Audit for ${lead.business_name}. I have your details and the audit is now in motion.
 
-You can expect the PDF within 48 working hours. We will check where enquiries may be leaking across your website, WhatsApp/call capture, contact visibility, mobile experience, basic trust signals, and DPDP/privacy readiness.
+You can expect the report within 48 working hours. We will check website clarity, enquiry capture, WhatsApp/call follow-up, trust signals, and basic privacy/consent readiness.
 
 If something urgent needs to be added before we review it, WhatsApp us at +91 87963 02608 with your business name.
 
@@ -122,7 +122,7 @@ async function sendProspectConfirmationEmail(env: LeadEnv, lead: Record<string, 
   }
 
   return sendGraphMail(env, {
-    subject: "Your Lost-Lead Audit is in motion — AICloudStrategist",
+    subject: "Your Free Trust & Growth Audit is in motion — AICloudStrategist",
     body: { contentType: "Text", content: buildProspectConfirmationBody(lead) },
     toRecipients: [{ emailAddress: { address: lead.prospect_email, name: lead.full_name || lead.business_name } }],
     replyTo: [{ emailAddress: { address: clean(env.M365_RECIPIENT || env.M365_SENDER), name: "AICloudStrategist" } }],
@@ -196,10 +196,10 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     prospect_email: prospectEmail,
     email: prospectEmail,
     notes,
-    source: "free-business-review",
+    source: "free-trust-growth-audit",
   };
 
-  const textBody = `New AICloudStrategist Lost-Lead Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nNotes: ${notes || "not provided"}\n`;
+  const textBody = `New AICloudStrategist Free Trust & Growth Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nNotes: ${notes || "not provided"}\n`;
 
   let internalGraphResult: { status: number; responseText: string };
   let prospectGraphResult: { status: number; responseText: string };
