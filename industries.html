@@ -131,6 +131,269 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* Premium card motion for existing industry cards only */
 .deep-industry-card,.industry-flow-card{position:relative;isolation:isolate;overflow:hidden;transform-style:preserve-3d;border-color:rgba(37,230,200,.22);background:linear-gradient(145deg,rgba(15,23,42,.94),rgba(2,6,23,.9)) padding-box,linear-gradient(135deg,rgba(37,230,200,.36),rgba(141,108,255,.22),rgba(255,255,255,.08)) border-box;box-shadow:0 24px 76px rgba(5,17,31,.18),0 0 36px rgba(37,230,200,.07);transition:transform .26s cubic-bezier(.2,.8,.2,1),box-shadow .26s ease,border-color .26s ease}.deep-industry-card:before,.industry-flow-card:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 18% 10%,rgba(37,230,200,.16),transparent 32%),radial-gradient(circle at 90% 12%,rgba(141,108,255,.14),transparent 34%),linear-gradient(115deg,transparent 38%,rgba(255,255,255,.13) 50%,transparent 62%);background-size:130% 130%,140% 140%,220% 100%;background-position:0 0,100% 0,115% 0;opacity:.86;transition:background-position .72s ease,opacity .26s ease}.deep-industry-card>* ,.industry-flow-card>*{position:relative;z-index:1}.deep-industry-card .industry-content,.industry-flow-card{color:#e5f4ff}.deep-industry-card .industry-content h3,.industry-flow-card h3{color:#fff}.deep-industry-card .industry-content p,.industry-flow-card .flow-steps span{color:#cbd5e1}.deep-industry-card .workflow-chips span,.industry-flow-card .flow-steps div{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#e2e8f0}.deep-industry-card .roi-line{background:rgba(37,230,200,.12);border-color:rgba(37,230,200,.25);color:#a7fff1}@media(hover:hover) and (pointer:fine){.deep-industry-card:hover,.industry-flow-card:hover{transform:translateY(-8px) rotateX(1deg) rotateY(-1deg);border-color:rgba(37,230,200,.48);box-shadow:0 34px 96px rgba(5,17,31,.24),0 0 46px rgba(37,230,200,.16)}.deep-industry-card:hover:before,.industry-flow-card:hover:before{background-position:18% 14%,82% 8%,-80% 0;opacity:1}.deep-industry-card:hover .industry-picture{transform:translateY(-3px) scale(1.012)}}.deep-industry-card .industry-picture{transition:transform .26s ease}.deep-industry-card:active,.industry-flow-card:active{transform:scale(.992)}@media(max-width:620px){.deep-industry-card:active,.industry-flow-card:active{transform:scale(.985)}}@media(prefers-reduced-motion:reduce){.deep-industry-card,.industry-flow-card,.deep-industry-card:before,.industry-flow-card:before,.deep-industry-card .industry-picture{transition:none!important;animation:none!important}}
+
+/* AICS inner pages — cards and buttons only, Home-style polish */
+body.reform-site:not(.home-dark-theme) .process-step,
+body.reform-site:not(.home-dark-theme) .deep-industry-card,
+body.reform-site:not(.home-dark-theme) .industry-flow-card,
+body.reform-site:not(.home-dark-theme) .aics-price-card,
+body.reform-site:not(.home-dark-theme) .pricing-card,
+body.reform-site:not(.home-dark-theme) .card,
+body.reform-site:not(.home-dark-theme) .contact-action,
+body.reform-site:not(.home-dark-theme) .calc-card,
+body.reform-site:not(.home-dark-theme) .template-library article,
+body.reform-site:not(.home-dark-theme) .improve-grid a,
+body.reform-site:not(.home-dark-theme) .pain-map-grid div,
+body.reform-site:not(.home-dark-theme) .growth-loop div,
+body.reform-site:not(.home-dark-theme) .owner-video-grid article,
+body.reform-site:not(.home-dark-theme) .smb-collection-grid a,
+body.reform-site:not(.home-dark-theme) .footer-brand-card,
+body.reform-site:not(.home-dark-theme) .footer-contact-card {
+  color: #eaf7ff;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.86));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+body.reform-site:not(.home-dark-theme) .process-step:hover,
+body.reform-site:not(.home-dark-theme) .deep-industry-card:hover,
+body.reform-site:not(.home-dark-theme) .industry-flow-card:hover,
+body.reform-site:not(.home-dark-theme) .aics-price-card:hover,
+body.reform-site:not(.home-dark-theme) .pricing-card:hover,
+body.reform-site:not(.home-dark-theme) .card:hover,
+body.reform-site:not(.home-dark-theme) .contact-action:hover,
+body.reform-site:not(.home-dark-theme) .calc-card:hover,
+body.reform-site:not(.home-dark-theme) .template-library article:hover,
+body.reform-site:not(.home-dark-theme) .improve-grid a:hover,
+body.reform-site:not(.home-dark-theme) .pain-map-grid div:hover,
+body.reform-site:not(.home-dark-theme) .growth-loop div:hover,
+body.reform-site:not(.home-dark-theme) .owner-video-grid article:hover,
+body.reform-site:not(.home-dark-theme) .smb-collection-grid a:hover {
+  transform: translateY(-5px);
+  border-color: rgba(103, 232, 249, 0.42);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.38), 0 0 36px rgba(34, 211, 238, 0.12);
+}
+body.reform-site:not(.home-dark-theme) .process-step h2,
+body.reform-site:not(.home-dark-theme) .process-step h3,
+body.reform-site:not(.home-dark-theme) .deep-industry-card h3,
+body.reform-site:not(.home-dark-theme) .industry-flow-card h3,
+body.reform-site:not(.home-dark-theme) .aics-price-card h2,
+body.reform-site:not(.home-dark-theme) .pricing-card h2,
+body.reform-site:not(.home-dark-theme) .card h2,
+body.reform-site:not(.home-dark-theme) .card h3,
+body.reform-site:not(.home-dark-theme) .contact-action h2,
+body.reform-site:not(.home-dark-theme) .calc-card h3,
+body.reform-site:not(.home-dark-theme) .template-library h3,
+body.reform-site:not(.home-dark-theme) .improve-grid h3,
+body.reform-site:not(.home-dark-theme) .pain-map-grid b,
+body.reform-site:not(.home-dark-theme) .growth-loop h3,
+body.reform-site:not(.home-dark-theme) .owner-video-grid h3,
+body.reform-site:not(.home-dark-theme) .smb-collection-grid b,
+body.reform-site:not(.home-dark-theme) .footer-brand-card h3,
+body.reform-site:not(.home-dark-theme) .footer-contact-card h3 {
+  color: #ffffff;
+}
+body.reform-site:not(.home-dark-theme) .process-step p,
+body.reform-site:not(.home-dark-theme) .process-step li,
+body.reform-site:not(.home-dark-theme) .deep-industry-card p,
+body.reform-site:not(.home-dark-theme) .industry-flow-card p,
+body.reform-site:not(.home-dark-theme) .aics-price-card p,
+body.reform-site:not(.home-dark-theme) .pricing-card p,
+body.reform-site:not(.home-dark-theme) .card p,
+body.reform-site:not(.home-dark-theme) .contact-action p,
+body.reform-site:not(.home-dark-theme) .calc-card p,
+body.reform-site:not(.home-dark-theme) .template-library p,
+body.reform-site:not(.home-dark-theme) .improve-grid p,
+body.reform-site:not(.home-dark-theme) .pain-map-grid span,
+body.reform-site:not(.home-dark-theme) .growth-loop p,
+body.reform-site:not(.home-dark-theme) .owner-video-grid p,
+body.reform-site:not(.home-dark-theme) .smb-collection-grid span,
+body.reform-site:not(.home-dark-theme) .footer-brand-card p,
+body.reform-site:not(.home-dark-theme) .footer-contact-card p {
+  color: #cbd5e1;
+}
+body.reform-site:not(.home-dark-theme) .btn {
+  min-height: 44px;
+  border-radius: 999px;
+  font-weight: 950;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+body.reform-site:not(.home-dark-theme) .btn:hover { transform: translateY(-2px); }
+body.reform-site:not(.home-dark-theme) .btn-primary,
+body.reform-site:not(.home-dark-theme) .nav-cta {
+  background: linear-gradient(135deg, #22d3ee, #60a5fa 62%, #8b5cf6);
+  color: #020617;
+  border-color: rgba(125, 211, 252, 0.26);
+  box-shadow: 0 18px 50px rgba(34, 211, 238, 0.24);
+}
+body.reform-site:not(.home-dark-theme) .btn-primary:hover,
+body.reform-site:not(.home-dark-theme) .nav-cta:hover {
+  box-shadow: 0 20px 58px rgba(34, 211, 238, 0.32), 0 0 24px rgba(139, 92, 246, 0.16);
+}
+body.reform-site:not(.home-dark-theme) .btn-light {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border: 1px solid rgba(226, 232, 240, 0.18);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
+}
+body.reform-site:not(.home-dark-theme) .btn-dark:not(.nav-cta) {
+  background: rgba(2, 6, 23, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(125, 211, 252, 0.22);
+}
+@media (max-width: 640px) {
+  body.reform-site:not(.home-dark-theme) .btn {
+    min-height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.reform-site:not(.home-dark-theme) .process-step,
+  body.reform-site:not(.home-dark-theme) .deep-industry-card,
+  body.reform-site:not(.home-dark-theme) .industry-flow-card,
+  body.reform-site:not(.home-dark-theme) .aics-price-card,
+  body.reform-site:not(.home-dark-theme) .pricing-card,
+  body.reform-site:not(.home-dark-theme) .card,
+  body.reform-site:not(.home-dark-theme) .contact-action,
+  body.reform-site:not(.home-dark-theme) .calc-card,
+  body.reform-site:not(.home-dark-theme) .template-library article,
+  body.reform-site:not(.home-dark-theme) .btn {
+    transition: none;
+  }
+}
+
+
+/* AICS inner pages — card/button mobile containment only */
+@media (max-width: 640px) {
+  body.reform-site:not(.home-dark-theme) .process-step,
+  body.reform-site:not(.home-dark-theme) .deep-industry-card,
+  body.reform-site:not(.home-dark-theme) .industry-flow-card,
+  body.reform-site:not(.home-dark-theme) .aics-price-card,
+  body.reform-site:not(.home-dark-theme) .pricing-card,
+  body.reform-site:not(.home-dark-theme) .card,
+  body.reform-site:not(.home-dark-theme) .contact-action,
+  body.reform-site:not(.home-dark-theme) .calc-card,
+  body.reform-site:not(.home-dark-theme) .template-library article,
+  body.reform-site:not(.home-dark-theme) .improve-grid a,
+  body.reform-site:not(.home-dark-theme) .pain-map-grid div,
+  body.reform-site:not(.home-dark-theme) .growth-loop div,
+  body.reform-site:not(.home-dark-theme) .owner-video-grid article,
+  body.reform-site:not(.home-dark-theme) .smb-collection-grid a {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+  }
+  body.reform-site:not(.home-dark-theme) .process-step *,
+  body.reform-site:not(.home-dark-theme) .deep-industry-card *,
+  body.reform-site:not(.home-dark-theme) .industry-flow-card *,
+  body.reform-site:not(.home-dark-theme) .aics-price-card *,
+  body.reform-site:not(.home-dark-theme) .pricing-card *,
+  body.reform-site:not(.home-dark-theme) .card *,
+  body.reform-site:not(.home-dark-theme) .contact-action *,
+  body.reform-site:not(.home-dark-theme) .calc-card *,
+  body.reform-site:not(.home-dark-theme) .template-library article * {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* AICS inner pages — pricing controls are buttons too */
+@media (max-width: 640px) {
+  body.reform-site:not(.home-dark-theme) .pricing-toggle {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(100%, 338px);
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 24px;
+  }
+  body.reform-site:not(.home-dark-theme) .pricing-toggle button {
+    width: 100%;
+    min-height: 48px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    padding: 12px 14px;
+  }
+  body.reform-site:not(.home-dark-theme) .aics-price-card li,
+  body.reform-site:not(.home-dark-theme) .pricing-card li,
+  body.reform-site:not(.home-dark-theme) .aics-price-card p,
+  body.reform-site:not(.home-dark-theme) .pricing-card p {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+}
+
+
+/* AICS inner pages — mobile card group containment */
+@media (max-width: 640px) {
+  body.reform-site:not(.home-dark-theme) .aics-pricing-grid,
+  body.reform-site:not(.home-dark-theme) .contact-action-grid,
+  body.reform-site:not(.home-dark-theme) .contact-action-grid-three,
+  body.reform-site:not(.home-dark-theme) .calculator-showcase,
+  body.reform-site:not(.home-dark-theme) .template-library,
+  body.reform-site:not(.home-dark-theme) .deep-industry-grid,
+  body.reform-site:not(.home-dark-theme) .process-list,
+  body.reform-site:not(.home-dark-theme) .simple-page-grid {
+    width: min(calc(100vw - 52px), 338px);
+    max-width: min(calc(100vw - 52px), 338px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+  }
+  body.reform-site:not(.home-dark-theme) .aics-price-card,
+  body.reform-site:not(.home-dark-theme) .pricing-card,
+  body.reform-site:not(.home-dark-theme) .contact-action,
+  body.reform-site:not(.home-dark-theme) .calc-card,
+  body.reform-site:not(.home-dark-theme) .template-library article,
+  body.reform-site:not(.home-dark-theme) .deep-industry-card,
+  body.reform-site:not(.home-dark-theme) .process-step,
+  body.reform-site:not(.home-dark-theme) .simple-page-grid .card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* AICS inner pages — final card/button containment specificity */
+@media (max-width: 640px) {
+  body.reform-site:not(.home-dark-theme) .aics-pricing-grid,
+  body.reform-site:not(.home-dark-theme) .contact-action-grid,
+  body.reform-site:not(.home-dark-theme) .contact-action-grid-three {
+    width: min(calc(100vw - 64px), 326px) !important;
+    max-width: min(calc(100vw - 64px), 326px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important;
+  }
+  body.reform-site:not(.home-dark-theme) .aics-price-card,
+  body.reform-site:not(.home-dark-theme) .pricing-card,
+  body.reform-site:not(.home-dark-theme) .contact-action {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  body.reform-site:not(.home-dark-theme) .aics-price-card *,
+  body.reform-site:not(.home-dark-theme) .pricing-card *,
+  body.reform-site:not(.home-dark-theme) .contact-action * {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"AICloudStrategist","url":"https://aicloudstrategist.com/","telephone":"+918065480898","email":"contact@aicloudstrategist.com","areaServed":["India","Global"],"description":"AICloudStrategist builds practical digital systems for websites, lead recovery, automation, cloud review, trust and AI safety."}</script>
 </head>
