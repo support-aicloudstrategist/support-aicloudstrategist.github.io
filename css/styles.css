@@ -1308,7 +1308,7 @@ p {
   right: 22px;
   bottom: 22px;
   z-index: 80;
-  font-family: inherit;
+  font-family: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 .chat-launcher {
   border: 0;
@@ -13533,4 +13533,184 @@ body.reform-site.motion-ready .animate-in.visible {
     word-break: normal !important;
     hyphens: none !important;
   }
+}
+
+/* AICloudStrategist first-load loader — fully scoped, no page style overrides */
+#site-loader.aics-loader {
+  --loader-bg: #05030f;
+  --loader-bg-2: #0a0720;
+  --loader-core: #5fd6ff;
+  --loader-accent: #7b6cff;
+  --loader-ink: #e8ecff;
+  --loader-ink-dim: #7c83a8;
+  --loader-ring: rgba(123, 108, 255, 0.18);
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100dvh;
+  overflow: hidden;
+  font-family: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(120% 90% at 50% 38%, var(--loader-bg-2) 0%, var(--loader-bg) 60%);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+#site-loader.aics-loader::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background-image:
+    linear-gradient(var(--loader-ring) 1px, transparent 1px),
+    linear-gradient(90deg, var(--loader-ring) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 62%);
+  mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 62%);
+  opacity: 0.5;
+  animation: aicsLoaderGridDrift 14s linear infinite;
+}
+#site-loader.aics-loader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#site-loader .aics-loader-mark {
+  position: relative;
+  z-index: 1;
+  width: clamp(104px, 28vw, 132px);
+  height: clamp(104px, 28vw, 132px);
+  display: grid;
+  place-items: center;
+}
+#site-loader .aics-loader-core {
+  width: clamp(50px, 13vw, 60px);
+  height: clamp(50px, 13vw, 60px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #bfeeff 0%, var(--loader-core) 38%, var(--loader-accent) 100%);
+  box-shadow: 0 0 28px 4px rgba(95,214,255,0.45), 0 0 60px 12px rgba(123,108,255,0.30);
+  animation: aicsLoaderCorePulse 2.4s ease-in-out infinite;
+}
+#site-loader .aics-loader-orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--loader-ring);
+}
+#site-loader .aics-loader-orbit::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--loader-core);
+  top: -4px;
+  left: calc(50% - 4px);
+  box-shadow: 0 0 12px 2px var(--loader-core);
+}
+#site-loader .aics-loader-orbit-one { animation: aicsLoaderSpin 3.2s linear infinite; }
+#site-loader .aics-loader-orbit-two {
+  inset: 18px;
+  border-color: rgba(95,214,255,0.16);
+  animation: aicsLoaderSpin 4.8s linear infinite reverse;
+}
+#site-loader .aics-loader-orbit-two::after {
+  width: 6px;
+  height: 6px;
+  top: -3px;
+  left: calc(50% - 3px);
+  background: var(--loader-accent);
+  box-shadow: 0 0 12px 2px var(--loader-accent);
+}
+#site-loader .aics-loader-word {
+  position: relative;
+  z-index: 1;
+  margin-top: 42px;
+  text-align: center;
+  opacity: 0;
+  animation: aicsLoaderRise 0.9s ease 0.25s forwards;
+}
+#site-loader .aics-loader-word h1 {
+  margin: 0;
+  color: var(--loader-ink);
+  font: 600 clamp(20px, 5vw, 30px)/1.1 inherit;
+  letter-spacing: 0.02em;
+}
+#site-loader .aics-loader-word h1 b {
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--loader-core), var(--loader-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#site-loader .aics-loader-word p {
+  margin: 9px 0 0;
+  color: var(--loader-ink-dim);
+  font: 700 11px/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+#site-loader .aics-loader-progress {
+  position: relative;
+  z-index: 1;
+  margin-top: 34px;
+  width: min(260px, 62vw);
+  opacity: 0;
+  animation: aicsLoaderRise 0.9s ease 0.45s forwards;
+}
+#site-loader .aics-loader-track {
+  position: relative;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.07);
+  overflow: hidden;
+}
+#site-loader .aics-loader-fill {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--loader-core), var(--loader-accent));
+  box-shadow: 0 0 12px rgba(95,214,255,0.6);
+  transition: width 0.18s ease;
+}
+#site-loader .aics-loader-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 11px;
+  color: var(--loader-ink-dim);
+  font: 700 10.5px/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.16em;
+}
+#site-loader #site-loader-pct { color: var(--loader-core); }
+@keyframes aicsLoaderGridDrift { to { background-position: 46px 46px, 46px 46px; } }
+@keyframes aicsLoaderSpin { to { transform: rotate(360deg); } }
+@keyframes aicsLoaderCorePulse {
+  0%,100% { transform: scale(0.92); box-shadow: 0 0 22px 3px rgba(95,214,255,0.35), 0 0 50px 10px rgba(123,108,255,0.22); }
+  50% { transform: scale(1.04); box-shadow: 0 0 34px 6px rgba(95,214,255,0.55), 0 0 76px 16px rgba(123,108,255,0.38); }
+}
+@keyframes aicsLoaderRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 640px) {
+  #site-loader.aics-loader { min-height: 100svh; padding: 24px; }
+  #site-loader .aics-loader-word { margin-top: 34px; }
+  #site-loader .aics-loader-word p { font-size: 10px; letter-spacing: 0.16em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #site-loader.aics-loader::before,
+  #site-loader .aics-loader-core,
+  #site-loader .aics-loader-orbit,
+  #site-loader .aics-loader-orbit-two,
+  #site-loader .aics-loader-word,
+  #site-loader .aics-loader-progress {
+    animation: none !important;
+  }
+  #site-loader .aics-loader-word,
+  #site-loader .aics-loader-progress { opacity: 1; transform: none; }
+  #site-loader .aics-loader-fill { transition: none; }
 }
