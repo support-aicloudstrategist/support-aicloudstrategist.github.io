@@ -12499,3 +12499,296 @@ body.reform-site.home-dark-theme .growth-system-scene .creative-glow div {
     line-height: 1.07 !important;
   }
 }
+
+/* Existing card premium pass — styling only, no text/section/card changes */
+:root {
+  --aics-card-radius: 28px;
+  --aics-card-pad: clamp(20px, 2.4vw, 28px);
+  --aics-card-border: rgba(184, 232, 255, 0.15);
+  --aics-card-glass: linear-gradient(145deg, rgba(255,255,255,0.086), rgba(255,255,255,0.032));
+  --aics-card-glow: 0 24px 74px rgba(5, 17, 31, 0.24), 0 0 28px rgba(37, 230, 200, 0.065);
+  --aics-card-glow-hover: 0 32px 92px rgba(5, 17, 31, 0.32), 0 0 34px rgba(37, 230, 200, 0.105);
+}
+body.reform-site .service-card,
+body.reform-site .actual-tile,
+body.reform-site .deliverable-tile,
+body.reform-site .industry-card,
+body.reform-site .deep-industry-card,
+body.reform-site .industry-flow-card,
+body.reform-site .aics-price-card,
+body.reform-site .pricing-card,
+body.reform-site .process-card,
+body.reform-site .process-step {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--aics-card-radius);
+  border: 1px solid var(--aics-card-border);
+  box-shadow: var(--aics-card-glow);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+body.reform-site.home-dark-theme .service-card,
+body.reform-site.home-dark-theme .actual-tile,
+body.reform-site.home-dark-theme .deliverable-tile,
+body.reform-site.home-dark-theme .process-card,
+body.reform-site:not(.home-dark-theme) .deep-industry-card,
+body.reform-site:not(.home-dark-theme) .industry-flow-card,
+body.reform-site:not(.home-dark-theme) .aics-price-card,
+body.reform-site:not(.home-dark-theme) .pricing-card,
+body.reform-site:not(.home-dark-theme) .process-step {
+  background: var(--aics-card-glass);
+  backdrop-filter: blur(18px);
+}
+body.reform-site .service-card::after,
+body.reform-site .actual-tile::after,
+body.reform-site .deliverable-tile::after,
+body.reform-site .industry-card::after,
+body.reform-site .deep-industry-card::after,
+body.reform-site .industry-flow-card::after,
+body.reform-site .aics-price-card::after,
+body.reform-site .pricing-card::after,
+body.reform-site .process-card::after,
+body.reform-site .process-step::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent) -140% 0 / 60% 100% no-repeat,
+    linear-gradient(90deg, transparent, rgba(37,230,200,0.42), transparent) 0 0 / 100% 1px no-repeat;
+  opacity: 0.64;
+  transition: background-position 0.7s ease, opacity 0.3s ease;
+}
+body.reform-site .service-card::before,
+body.reform-site .actual-tile::before,
+body.reform-site .deliverable-tile::before,
+body.reform-site .deep-industry-card::before,
+body.reform-site .industry-flow-card::before,
+body.reform-site .aics-price-card::before,
+body.reform-site .pricing-card::before,
+body.reform-site .process-card::before,
+body.reform-site .process-step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 18% 0%, rgba(37,230,200,0.13), transparent 34%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+body.reform-site .service-card > *,
+body.reform-site .actual-tile > *,
+body.reform-site .deliverable-tile > *,
+body.reform-site .industry-card > *,
+body.reform-site .deep-industry-card > *,
+body.reform-site .industry-flow-card > *,
+body.reform-site .aics-price-card > *,
+body.reform-site .pricing-card > *,
+body.reform-site .process-card > *,
+body.reform-site .process-step > * {
+  position: relative;
+  z-index: 2;
+}
+@media (hover: hover) and (pointer: fine) {
+  body.reform-site .service-card:hover,
+  body.reform-site .actual-tile:hover,
+  body.reform-site .deliverable-tile:hover,
+  body.reform-site .industry-card:hover,
+  body.reform-site .deep-industry-card:hover,
+  body.reform-site .industry-flow-card:hover,
+  body.reform-site .aics-price-card:hover,
+  body.reform-site .pricing-card:hover,
+  body.reform-site .process-card:hover,
+  body.reform-site .process-step:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 230, 200, 0.32);
+    box-shadow: var(--aics-card-glow-hover);
+  }
+  body.reform-site .service-card:hover::before,
+  body.reform-site .actual-tile:hover::before,
+  body.reform-site .deliverable-tile:hover::before,
+  body.reform-site .deep-industry-card:hover::before,
+  body.reform-site .industry-flow-card:hover::before,
+  body.reform-site .aics-price-card:hover::before,
+  body.reform-site .pricing-card:hover::before,
+  body.reform-site .process-card:hover::before,
+  body.reform-site .process-step:hover::before { opacity: 1; }
+  body.reform-site .service-card:hover::after,
+  body.reform-site .actual-tile:hover::after,
+  body.reform-site .deliverable-tile:hover::after,
+  body.reform-site .industry-card:hover::after,
+  body.reform-site .deep-industry-card:hover::after,
+  body.reform-site .industry-flow-card:hover::after,
+  body.reform-site .aics-price-card:hover::after,
+  body.reform-site .pricing-card:hover::after,
+  body.reform-site .process-card:hover::after,
+  body.reform-site .process-step:hover::after {
+    background-position: 155% 0, 0 0;
+    opacity: 0.9;
+  }
+}
+body.reform-site .service-icon,
+body.reform-site .service-visual,
+body.reform-site .deliverable-art,
+body.reform-site .process-card > span,
+body.reform-site .process-step .process-icon,
+body.reform-site .growth-loop i,
+body.reform-site .industry-picture > span {
+  border-radius: 20px;
+  border: 1px solid rgba(184, 232, 255, 0.16);
+  box-shadow: 0 16px 46px rgba(5, 17, 31, 0.18), 0 0 22px rgba(37, 230, 200, 0.08);
+}
+body.reform-site .service-card,
+body.reform-site .actual-tile,
+body.reform-site .deliverable-tile,
+body.reform-site .aics-price-card,
+body.reform-site .pricing-card,
+body.reform-site .process-card,
+body.reform-site .process-step,
+body.reform-site .industry-flow-card {
+  padding: var(--aics-card-pad);
+}
+body.reform-site .deep-industry-card .industry-content {
+  padding: var(--aics-card-pad);
+}
+body.reform-site .industry-card em,
+body.reform-site .industry-story {
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 14px 42px rgba(0,0,0,0.2);
+}
+@media (max-width: 640px) {
+  body.reform-site .service-card,
+  body.reform-site .actual-tile,
+  body.reform-site .deliverable-tile,
+  body.reform-site .industry-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-flow-card,
+  body.reform-site .aics-price-card,
+  body.reform-site .pricing-card,
+  body.reform-site .process-card,
+  body.reform-site .process-step {
+    border-radius: 24px;
+    box-shadow: 0 18px 52px rgba(5, 17, 31, 0.2);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  body.reform-site .service-card::after,
+  body.reform-site .actual-tile::after,
+  body.reform-site .deliverable-tile::after,
+  body.reform-site .industry-card::after,
+  body.reform-site .deep-industry-card::after,
+  body.reform-site .industry-flow-card::after,
+  body.reform-site .aics-price-card::after,
+  body.reform-site .pricing-card::after,
+  body.reform-site .process-card::after,
+  body.reform-site .process-step::after {
+    background: linear-gradient(90deg, transparent, rgba(37,230,200,0.34), transparent) 0 0 / 100% 1px no-repeat;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.reform-site .service-card,
+  body.reform-site .actual-tile,
+  body.reform-site .deliverable-tile,
+  body.reform-site .industry-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-flow-card,
+  body.reform-site .aics-price-card,
+  body.reform-site .pricing-card,
+  body.reform-site .process-card,
+  body.reform-site .process-step,
+  body.reform-site .service-card::after,
+  body.reform-site .actual-tile::after,
+  body.reform-site .deliverable-tile::after,
+  body.reform-site .industry-card::after,
+  body.reform-site .deep-industry-card::after,
+  body.reform-site .industry-flow-card::after,
+  body.reform-site .aics-price-card::after,
+  body.reform-site .pricing-card::after,
+  body.reform-site .process-card::after,
+  body.reform-site .process-step::after {
+    transition: none !important;
+  }
+}
+
+/* Card pass contrast/mobile corrections — keeps existing palette, card styling only */
+body.reform-site:not(.home-dark-theme) .aics-price-card,
+body.reform-site:not(.home-dark-theme) .pricing-card,
+body.reform-site:not(.home-dark-theme) .process-step,
+body.reform-site:not(.home-dark-theme) .industry-flow-card,
+body.reform-site:not(.home-dark-theme) .deep-industry-card {
+  background: linear-gradient(145deg, rgba(5,17,31,0.96), rgba(7,35,50,0.9)) !important;
+  color: #dbe8f2 !important;
+}
+body.reform-site:not(.home-dark-theme) .aics-price-card h2,
+body.reform-site:not(.home-dark-theme) .aics-price-card h3,
+body.reform-site:not(.home-dark-theme) .pricing-card h2,
+body.reform-site:not(.home-dark-theme) .pricing-card h3,
+body.reform-site:not(.home-dark-theme) .process-step h2,
+body.reform-site:not(.home-dark-theme) .process-step h3,
+body.reform-site:not(.home-dark-theme) .industry-flow-card h3,
+body.reform-site:not(.home-dark-theme) .deep-industry-card h3 {
+  color: #ffffff !important;
+}
+body.reform-site:not(.home-dark-theme) .aics-price-card p,
+body.reform-site:not(.home-dark-theme) .aics-price-card li,
+body.reform-site:not(.home-dark-theme) .pricing-card p,
+body.reform-site:not(.home-dark-theme) .pricing-card li,
+body.reform-site:not(.home-dark-theme) .process-step p,
+body.reform-site:not(.home-dark-theme) .process-step li,
+body.reform-site:not(.home-dark-theme) .industry-flow-card p,
+body.reform-site:not(.home-dark-theme) .deep-industry-card p {
+  color: #cbd5e1 !important;
+}
+body.reform-site:not(.home-dark-theme) .aics-price-card .price-line,
+body.reform-site:not(.home-dark-theme) .pricing-card .price-line,
+body.reform-site:not(.home-dark-theme) .process-label {
+  color: #bffff5 !important;
+}
+body.reform-site:not(.home-dark-theme) .aics-price-card .btn,
+body.reform-site:not(.home-dark-theme) .pricing-card .btn {
+  color: #020617 !important;
+}
+body.reform-site:not(.home-dark-theme) .aics-price-card .btn-light,
+body.reform-site:not(.home-dark-theme) .pricing-card .btn-light {
+  color: #f8fafc !important;
+}
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .section-head,
+  body.reform-site.home-dark-theme .section-head h2,
+  body.reform-site.home-dark-theme .section-head p,
+  body.reform-site.home-dark-theme .lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  body.reform-site .service-card,
+  body.reform-site .actual-tile,
+  body.reform-site .deliverable-tile,
+  body.reform-site .industry-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-flow-card,
+  body.reform-site .aics-price-card,
+  body.reform-site .pricing-card,
+  body.reform-site .process-card,
+  body.reform-site .process-step {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* Mobile card-section copy safety: prevents edge clipping around card grids */
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .section-head .lead,
+  body.reform-site.home-dark-theme .section-head p {
+    padding-right: 4px !important;
+    overflow-wrap: anywhere !important;
+  }
+}
