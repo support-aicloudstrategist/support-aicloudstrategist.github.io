@@ -14,7 +14,7 @@
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
   }
 
-  const revealItems = document.querySelectorAll('.reveal, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card, .home-dark-theme .section-head, .home-dark-theme .service-card, .home-dark-theme .actual-tile, .home-dark-theme .before-after-card, .home-dark-theme .process-card');
+  const revealItems = document.querySelectorAll('.reveal, .section, .section-head, .subhero, .pricing-hero, .customer-industry-hero, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card, .service-card, .actual-tile, .deliverable-tile, .before-after-card, .process-card, .industry-card, .deep-industry-card, .industry-flow-card, .pricing-card, .aics-price-card');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

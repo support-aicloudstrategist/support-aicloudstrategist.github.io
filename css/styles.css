@@ -12953,3 +12953,124 @@ body.reform-site .aics-price-card h2:first-child {
   background: transparent !important;
   box-shadow: none !important;
 }
+
+/* Lightweight premium animations — no layout/content changes */
+:root { --aics-motion-ease: cubic-bezier(0.16, 1, 0.3, 1); }
+body.reform-site .nav {
+  transition: background-color 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, backdrop-filter 0.24s ease;
+}
+body.reform-site .nav.scrolled {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 18px 58px rgba(2, 8, 23, 0.16);
+}
+body.reform-site .section.animate-in,
+body.reform-site .subhero.animate-in,
+body.reform-site .pricing-hero.animate-in,
+body.reform-site .customer-industry-hero.animate-in,
+body.reform-site .section-head.animate-in {
+  opacity: 0.001;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--aics-motion-ease), transform 0.7s var(--aics-motion-ease);
+  will-change: opacity, transform;
+}
+body.reform-site .section.animate-in.visible,
+body.reform-site .subhero.animate-in.visible,
+body.reform-site .pricing-hero.animate-in.visible,
+body.reform-site .customer-industry-hero.animate-in.visible,
+body.reform-site .section-head.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+body.reform-site.home-dark-theme .growth-system-scene,
+body.reform-site.home-dark-theme .hero-panel,
+body.reform-site .hero-visual {
+  animation: aicsSlowFloat 8s ease-in-out infinite;
+  will-change: transform;
+}
+body.reform-site .btn,
+body.reform-site .nav-cta,
+body.reform-site button[type="submit"] {
+  position: relative;
+  overflow: hidden;
+}
+body.reform-site .btn::before,
+body.reform-site .nav-cta::before,
+body.reform-site button[type="submit"]::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -75%;
+  width: 48%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.32), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.65s ease;
+}
+body.reform-site .btn:hover::before,
+body.reform-site .nav-cta:hover::before,
+body.reform-site button[type="submit"]:hover::before { left: 135%; }
+body.reform-site .btn-primary,
+body.reform-site .nav-cta,
+body.reform-site .cta .btn,
+body.reform-site .premium-cta .btn {
+  box-shadow: 0 18px 48px rgba(37, 230, 200, 0.22), 0 0 22px rgba(37, 230, 200, 0.08);
+}
+body.reform-site .btn-primary:hover,
+body.reform-site .nav-cta:hover,
+body.reform-site .cta .btn:hover,
+body.reform-site .premium-cta .btn:hover {
+  box-shadow: 0 22px 62px rgba(37, 230, 200, 0.30), 0 0 32px rgba(37, 230, 200, 0.14);
+}
+@keyframes aicsSlowFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@media (max-width: 640px) {
+  body.reform-site .section.animate-in,
+  body.reform-site .subhero.animate-in,
+  body.reform-site .pricing-hero.animate-in,
+  body.reform-site .customer-industry-hero.animate-in,
+  body.reform-site .section-head.animate-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene,
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site .hero-visual {
+    animation: none !important;
+    will-change: auto;
+  }
+  body.reform-site .btn::before,
+  body.reform-site .nav-cta::before,
+  body.reform-site button[type="submit"]::before { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.reform-site *,
+  body.reform-site *::before,
+  body.reform-site *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+  body.reform-site .section.animate-in,
+  body.reform-site .subhero.animate-in,
+  body.reform-site .pricing-hero.animate-in,
+  body.reform-site .customer-industry-hero.animate-in,
+  body.reform-site .section-head.animate-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Mobile topbar readability safeguard: spacing only */
+@media (max-width: 640px) {
+  body.reform-site .topbar-inner span:last-child {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+  }
+  body.reform-site .topbar-sep { display: inline-block !important; margin: 0 2px; }
+}
