@@ -11697,3 +11697,549 @@ body.reform-site:not(.home-dark-theme) .btn-dark:not(.nav-cta) {
     overflow-wrap: anywhere !important;
   }
 }
+
+/* Claude-inspired visual polish for AICloudStrategist home — visual styling only, existing palette/content preserved */
+body.reform-site.home-dark-theme {
+  background:
+    radial-gradient(circle at 16% 8%, rgba(37, 230, 200, 0.11), transparent 26%),
+    radial-gradient(circle at 84% 18%, rgba(49, 87, 213, 0.14), transparent 30%),
+    linear-gradient(180deg, #030914 0%, #06111f 42%, #071827 100%);
+}
+body.reform-site.home-dark-theme::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, #000, transparent 78%);
+}
+body.reform-site.home-dark-theme > * { position: relative; z-index: 1; }
+body.reform-site.home-dark-theme .nav {
+  background: rgba(3, 9, 20, 0.72);
+  border-bottom: 1px solid rgba(184, 232, 255, 0.12);
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.22);
+}
+body.reform-site.home-dark-theme .nav.scrolled {
+  background: rgba(3, 9, 20, 0.9);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.34), 0 0 34px rgba(37, 230, 200, 0.06);
+}
+body.reform-site.home-dark-theme .brand,
+body.reform-site.home-dark-theme .nav-links a:not(.btn) { color: rgba(244, 251, 255, 0.86); }
+body.reform-site.home-dark-theme .nav-links a:not(.btn):hover { color: var(--teal); }
+body.reform-site.home-dark-theme .conversion-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(82px, 9vw, 132px);
+  padding-bottom: clamp(74px, 9vw, 126px);
+  background:
+    radial-gradient(circle at 11% 16%, rgba(37, 230, 200, 0.24), transparent 28%),
+    radial-gradient(circle at 82% 8%, rgba(141, 108, 255, 0.19), transparent 30%),
+    radial-gradient(circle at 72% 82%, rgba(88, 200, 255, 0.14), transparent 34%),
+    linear-gradient(135deg, #030914 0%, #071827 56%, #062f3a 100%);
+  isolation: isolate;
+}
+body.reform-site.home-dark-theme .conversion-hero::before,
+body.reform-site.home-dark-theme .conversion-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+body.reform-site.home-dark-theme .conversion-hero::before {
+  width: min(66vw, 760px);
+  height: min(66vw, 760px);
+  right: -18%;
+  top: 8%;
+  border: 1px solid rgba(184, 232, 255, 0.13);
+  box-shadow: inset 0 0 80px rgba(37, 230, 200, 0.035), 0 0 90px rgba(49, 87, 213, 0.08);
+  animation: aicsPremiumFloat 10s ease-in-out infinite;
+}
+body.reform-site.home-dark-theme .conversion-hero::after {
+  width: 420px;
+  height: 420px;
+  left: -160px;
+  bottom: -180px;
+  background: rgba(37, 230, 200, 0.12);
+  filter: blur(22px);
+  animation: aicsPremiumFloat 12s ease-in-out infinite reverse;
+}
+body.reform-site.home-dark-theme .conversion-hero h1 {
+  letter-spacing: -0.058em;
+  text-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+body.reform-site.home-dark-theme .conversion-hero p {
+  color: rgba(220, 237, 247, 0.78);
+}
+body.reform-site.home-dark-theme .eyebrow,
+body.reform-site.home-dark-theme .tag {
+  border-radius: 999px;
+  border: 1px solid rgba(37, 230, 200, 0.28);
+  background: linear-gradient(135deg, rgba(37, 230, 200, 0.12), rgba(88, 200, 255, 0.06));
+  box-shadow: 0 0 26px rgba(37, 230, 200, 0.09);
+  color: #bffff5;
+}
+body.reform-site.home-dark-theme .tag::before,
+body.reform-site.home-dark-theme .eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--teal);
+  box-shadow: 0 0 12px var(--teal);
+}
+body.reform-site.home-dark-theme .btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  transition: transform 0.28s cubic-bezier(0.16,1,0.3,1), box-shadow 0.28s cubic-bezier(0.16,1,0.3,1), border-color 0.28s ease, background 0.28s ease;
+}
+body.reform-site.home-dark-theme .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -80%;
+  width: 54%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.38), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.68s ease;
+  pointer-events: none;
+}
+body.reform-site.home-dark-theme .btn:hover::before { left: 135%; }
+body.reform-site.home-dark-theme .btn:hover { transform: translateY(-3px); }
+body.reform-site.home-dark-theme .btn-primary:hover {
+  box-shadow: 0 22px 66px rgba(37, 230, 200, 0.36), 0 0 34px rgba(88, 200, 255, 0.16);
+}
+body.reform-site.home-dark-theme .btn-light,
+body.reform-site.home-dark-theme .btn-dark:not(.nav-cta) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fbff;
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+}
+body.reform-site.home-dark-theme .btn-light:hover,
+body.reform-site.home-dark-theme .btn-dark:not(.nav-cta):hover {
+  border-color: rgba(37, 230, 200, 0.4);
+  box-shadow: 0 22px 66px rgba(0, 0, 0, 0.28), 0 0 28px rgba(37, 230, 200, 0.12);
+}
+body.reform-site.home-dark-theme .hero-panel,
+body.reform-site.home-dark-theme .system-shell {
+  border-color: rgba(184, 232, 255, 0.18);
+  background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035));
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.42), 0 0 52px rgba(37, 230, 200, 0.08);
+  backdrop-filter: blur(24px);
+}
+body.reform-site.home-dark-theme .hero-panel {
+  transform: translateY(-8px);
+  animation: aicsPremiumFloat 7s ease-in-out infinite;
+}
+body.reform-site.home-dark-theme .scene-glow-card,
+body.reform-site.home-dark-theme .system-flow > div,
+body.reform-site.home-dark-theme .system-website,
+body.reform-site.home-dark-theme .system-dashboard {
+  border-color: rgba(184, 232, 255, 0.16);
+  background: rgba(5, 17, 31, 0.62);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+body.reform-site.home-dark-theme .section {
+  position: relative;
+  padding-top: clamp(76px, 8vw, 118px);
+  padding-bottom: clamp(76px, 8vw, 118px);
+  background: linear-gradient(180deg, rgba(6, 17, 31, 0.98), rgba(7, 24, 39, 0.96));
+}
+body.reform-site.home-dark-theme .section.alt {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(37, 230, 200, 0.11), transparent 28%),
+    linear-gradient(180deg, rgba(7, 24, 39, 0.98), rgba(4, 11, 20, 0.98));
+}
+body.reform-site.home-dark-theme .section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 88% 10%, rgba(88, 200, 255, 0.07), transparent 30%);
+}
+body.reform-site.home-dark-theme .section > .container { position: relative; z-index: 1; }
+body.reform-site.home-dark-theme .section-head {
+  margin-bottom: clamp(34px, 5vw, 58px);
+}
+body.reform-site.home-dark-theme .section-head h2 {
+  color: #f8fbff;
+  text-shadow: 0 12px 48px rgba(0, 0, 0, 0.28);
+}
+body.reform-site.home-dark-theme .lead,
+body.reform-site.home-dark-theme .section-head p { color: rgba(203, 221, 235, 0.76); }
+body.reform-site.home-dark-theme .service-card,
+body.reform-site.home-dark-theme .actual-tile,
+body.reform-site.home-dark-theme .before-after-card,
+body.reform-site.home-dark-theme .process-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(184, 232, 255, 0.14);
+  background: linear-gradient(145deg, rgba(255,255,255,0.088), rgba(255,255,255,0.034));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+  transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s cubic-bezier(0.16,1,0.3,1), border-color 0.38s ease, background 0.38s ease;
+}
+body.reform-site.home-dark-theme .service-card::before,
+body.reform-site.home-dark-theme .actual-tile::before,
+body.reform-site.home-dark-theme .before-after-card::before,
+body.reform-site.home-dark-theme .process-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 18% 0%, rgba(37, 230, 200, 0.18), transparent 34%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+body.reform-site.home-dark-theme .service-card::after,
+body.reform-site.home-dark-theme .actual-tile::after,
+body.reform-site.home-dark-theme .before-after-card::after,
+body.reform-site.home-dark-theme .process-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37, 230, 200, 0.58), transparent);
+  opacity: 0.72;
+  pointer-events: none;
+}
+body.reform-site.home-dark-theme .service-card > *,
+body.reform-site.home-dark-theme .actual-tile > *,
+body.reform-site.home-dark-theme .before-after-card > *,
+body.reform-site.home-dark-theme .process-card > * { position: relative; z-index: 1; }
+@media (hover: hover) and (pointer: fine) {
+  body.reform-site.home-dark-theme .service-card:hover,
+  body.reform-site.home-dark-theme .actual-tile:hover,
+  body.reform-site.home-dark-theme .before-after-card:hover,
+  body.reform-site.home-dark-theme .process-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(37, 230, 200, 0.34);
+    background: linear-gradient(145deg, rgba(255,255,255,0.115), rgba(37,230,200,0.045));
+    box-shadow: 0 34px 110px rgba(0, 0, 0, 0.38), 0 0 38px rgba(37, 230, 200, 0.11);
+  }
+  body.reform-site.home-dark-theme .service-card:hover::before,
+  body.reform-site.home-dark-theme .actual-tile:hover::before,
+  body.reform-site.home-dark-theme .before-after-card:hover::before,
+  body.reform-site.home-dark-theme .process-card:hover::before { opacity: 1; }
+}
+body.reform-site.home-dark-theme .service-icon,
+body.reform-site.home-dark-theme .process-card span,
+body.reform-site.home-dark-theme .outcome-badge {
+  box-shadow: 0 0 24px rgba(37, 230, 200, 0.12);
+}
+body.reform-site.home-dark-theme .service-visual,
+body.reform-site.home-dark-theme .deliverable-art {
+  border-color: rgba(184, 232, 255, 0.13);
+  background: linear-gradient(145deg, rgba(3, 9, 20, 0.58), rgba(255, 255, 255, 0.05));
+}
+body.reform-site.home-dark-theme .before-after-wrap {
+  align-items: stretch;
+}
+body.reform-site.home-dark-theme .before-after-arrow {
+  border: 1px solid rgba(37, 230, 200, 0.24);
+  background: rgba(37, 230, 200, 0.12);
+  box-shadow: 0 0 32px rgba(37, 230, 200, 0.15);
+}
+body.reform-site.home-dark-theme .premium-footer {
+  border-top: 1px solid rgba(184, 232, 255, 0.12);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(37, 230, 200, 0.09), transparent 28%),
+    linear-gradient(180deg, #040b14 0%, #020713 100%);
+}
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .animate-in {
+    opacity: 0.001;
+    transform: translateY(34px) scale(0.985);
+    transition: opacity 0.78s cubic-bezier(0.16,1,0.3,1), transform 0.78s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s ease, border-color 0.38s ease, background 0.38s ease;
+  }
+  body.reform-site.home-dark-theme .animate-in.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (max-width: 1020px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 74px;
+    padding-bottom: 76px;
+  }
+  body.reform-site.home-dark-theme .hero-panel {
+    transform: none;
+    animation: none;
+  }
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .process-card {
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+  }
+}
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .conversion-hero,
+  body.reform-site.home-dark-theme .section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+  body.reform-site.home-dark-theme .conversion-hero-grid { gap: 32px; }
+  body.reform-site.home-dark-theme .actions { width: 100%; }
+  body.reform-site.home-dark-theme .actions .btn { width: 100%; }
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .process-card {
+    border-radius: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.reform-site.home-dark-theme .conversion-hero::before,
+  body.reform-site.home-dark-theme .conversion-hero::after,
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .orb,
+  body.reform-site.home-dark-theme .animate-in,
+  body.reform-site.home-dark-theme .btn::before {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Final mobile/spacing guard for 2026-06-01 visual polish */
+@media (min-width: 1021px) {
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 86px;
+    padding-bottom: 82px;
+  }
+}
+@media (max-width: 640px) {
+  html,
+  body.reform-site.home-dark-theme {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body.reform-site.home-dark-theme .topbar,
+  body.reform-site.home-dark-theme .nav,
+  body.reform-site.home-dark-theme main,
+  body.reform-site.home-dark-theme .conversion-hero,
+  body.reform-site.home-dark-theme .section,
+  body.reform-site.home-dark-theme .premium-footer {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body.reform-site.home-dark-theme .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: visible !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 26px !important;
+    padding-bottom: 34px !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .process-step-grid,
+  body.reform-site.home-dark-theme .before-after-wrap {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+    overflow: visible !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1,
+  body.reform-site.home-dark-theme .section-head h2 {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: auto;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1 {
+    font-size: clamp(30px, 9vw, 36px) !important;
+    line-height: 1.05 !important;
+  }
+  body.reform-site.home-dark-theme .section-head h2 {
+    font-size: clamp(28px, 8vw, 34px) !important;
+    line-height: 1.08 !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero p,
+  body.reform-site.home-dark-theme .section-head p,
+  body.reform-site.home-dark-theme .lead {
+    max-width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .growth-system-scene,
+  body.reform-site.home-dark-theme .system-shell,
+  body.reform-site.home-dark-theme .system-main,
+  body.reform-site.home-dark-theme .system-website,
+  body.reform-site.home-dark-theme .system-flow,
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .process-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    transform: none !important;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene {
+    padding: 8px !important;
+    animation: none !important;
+  }
+  body.reform-site.home-dark-theme .system-shell {
+    padding: 11px !important;
+  }
+  body.reform-site.home-dark-theme .system-main,
+  body.reform-site.home-dark-theme .system-flow {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  body.reform-site.home-dark-theme .system-dashboard,
+  body.reform-site.home-dark-theme .scene-glow-card,
+  body.reform-site.home-dark-theme .creative-flow,
+  body.reform-site.home-dark-theme .website-panels {
+    display: none !important;
+  }
+  body.reform-site.home-dark-theme .actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+  }
+  body.reform-site.home-dark-theme .actions .btn {
+    width: 100% !important;
+    white-space: normal !important;
+  }
+  body.reform-site.home-dark-theme .topbar-inner {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2px !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* Hard viewport clamp for small screens — prevents any inherited desktop width from widening the page */
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .conversion-hero-grid > div,
+  body.reform-site.home-dark-theme .section-head,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .before-after-wrap,
+  body.reform-site.home-dark-theme .process-step-grid {
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1,
+  body.reform-site.home-dark-theme .conversion-hero p,
+  body.reform-site.home-dark-theme .conversion-hero .hero-proof,
+  body.reform-site.home-dark-theme .section-head h2,
+  body.reform-site.home-dark-theme .section-head p,
+  body.reform-site.home-dark-theme .lead {
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .growth-system-scene,
+  body.reform-site.home-dark-theme .system-shell,
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .process-card {
+    width: calc(100vw - 36px) !important;
+    max-width: calc(100vw - 36px) !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden !important;
+  }
+  body.reform-site.home-dark-theme .system-shell,
+  body.reform-site.home-dark-theme .system-shell * {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* Fixed small-screen content rail so headless/mobile browsers cannot inherit a wider layout viewport */
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .container,
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .conversion-hero-grid > div,
+  body.reform-site.home-dark-theme .section-head,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .before-after-wrap,
+  body.reform-site.home-dark-theme .process-step-grid,
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .growth-system-scene,
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .process-card {
+    width: 100% !important;
+    max-width: 342px !important;
+    box-sizing: border-box !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1,
+  body.reform-site.home-dark-theme .section-head h2,
+  body.reform-site.home-dark-theme .conversion-hero p,
+  body.reform-site.home-dark-theme .section-head p,
+  body.reform-site.home-dark-theme .lead,
+  body.reform-site.home-dark-theme .conversion-hero .hero-proof {
+    width: 100% !important;
+    max-width: 342px !important;
+    box-sizing: border-box !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero h1 {
+    font-size: 30px !important;
+  }
+  body.reform-site.home-dark-theme .section-head h2 {
+    font-size: 29px !important;
+  }
+}
+@media (max-width: 370px) {
+  body.reform-site.home-dark-theme .container,
+  body.reform-site.home-dark-theme .conversion-hero-grid,
+  body.reform-site.home-dark-theme .conversion-hero-grid > div,
+  body.reform-site.home-dark-theme .section-head,
+  body.reform-site.home-dark-theme .service-card-grid,
+  body.reform-site.home-dark-theme .actual-get-grid,
+  body.reform-site.home-dark-theme .before-after-wrap,
+  body.reform-site.home-dark-theme .process-step-grid,
+  body.reform-site.home-dark-theme .hero-panel,
+  body.reform-site.home-dark-theme .growth-system-scene,
+  body.reform-site.home-dark-theme .service-card,
+  body.reform-site.home-dark-theme .actual-tile,
+  body.reform-site.home-dark-theme .before-after-card,
+  body.reform-site.home-dark-theme .process-card,
+  body.reform-site.home-dark-theme .conversion-hero h1,
+  body.reform-site.home-dark-theme .section-head h2,
+  body.reform-site.home-dark-theme .conversion-hero p,
+  body.reform-site.home-dark-theme .section-head p,
+  body.reform-site.home-dark-theme .lead,
+  body.reform-site.home-dark-theme .conversion-hero .hero-proof {
+    max-width: 310px !important;
+  }
+}
