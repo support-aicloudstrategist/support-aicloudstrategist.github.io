@@ -33,6 +33,36 @@
     revealItems.forEach(el => el.classList.add('visible'));
   }
 
+
+
+  const reduceMotionPref = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.body.classList.add('motion-ready');
+  document.querySelectorAll('.animate-in').forEach((el, index) => {
+    el.style.setProperty('--aics-delay', `${Math.min(index % 6, 5) * 55}ms`);
+  });
+  if (!reduceMotionPref && window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const tiltTargets = document.querySelectorAll('.growth-system-scene, .service-card, .actual-tile, .deliverable-tile, .industry-card, .deep-industry-card, .industry-flow-card, .pricing-card, .aics-price-card, .process-card, .process-step');
+    tiltTargets.forEach(el => {
+      el.addEventListener('pointermove', event => {
+        const rect = el.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width - 0.5) * 6;
+        const y = ((event.clientY - rect.top) / rect.height - 0.5) * -5;
+        el.style.setProperty('--tiltX', `${x.toFixed(2)}deg`);
+        el.style.setProperty('--tiltY', `${y.toFixed(2)}deg`);
+      }, { passive: true });
+      el.addEventListener('pointerleave', () => {
+        el.style.setProperty('--tiltX', '0deg');
+        el.style.setProperty('--tiltY', '0deg');
+      }, { passive: true });
+    });
+    const hero = document.querySelector('.conversion-hero');
+    if (hero) hero.addEventListener('pointermove', event => {
+      const rect = hero.getBoundingClientRect();
+      document.body.style.setProperty('--aics-mx', `${Math.round(((event.clientX - rect.left) / rect.width) * 100)}%`);
+      document.body.style.setProperty('--aics-my', `${Math.round(((event.clientY - rect.top) / rect.height) * 100)}%`);
+    }, { passive: true });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');

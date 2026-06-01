@@ -13074,3 +13074,168 @@ body.reform-site .premium-cta .btn:hover {
   }
   body.reform-site .topbar-sep { display: inline-block !important; margin: 0 2px; }
 }
+
+/* Creative lightweight motion layer — visible, premium, no layout/content changes */
+body.reform-site {
+  --aics-mx: 50%;
+  --aics-my: 18%;
+}
+body.reform-site.home-dark-theme .conversion-hero,
+body.reform-site .pricing-hero,
+body.reform-site .subhero,
+body.reform-site .customer-industry-hero {
+  background-size: 160% 160%, 140% 140%, auto !important;
+  animation: aicsAuroraDrift 16s ease-in-out infinite alternate;
+}
+body.reform-site.home-dark-theme .conversion-hero::before {
+  background:
+    radial-gradient(circle at var(--aics-mx) var(--aics-my), rgba(37,230,200,0.16), transparent 22%),
+    radial-gradient(circle at 72% 18%, rgba(88,200,255,0.11), transparent 26%),
+    radial-gradient(circle at 18% 76%, rgba(141,108,255,0.10), transparent 28%) !important;
+  opacity: 0.9;
+  animation: aicsAmbientPulse 8s ease-in-out infinite;
+}
+body.reform-site.home-dark-theme .growth-system-scene {
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(var(--tiltY, 0deg)) rotateY(var(--tiltX, 0deg));
+  transition: transform 0.18s ease-out, box-shadow 0.24s ease;
+}
+body.reform-site.home-dark-theme .growth-system-scene .system-shell { transform: translateZ(14px); }
+body.reform-site.home-dark-theme .growth-system-scene .scene-glow-card { transform: translateZ(28px); }
+body.reform-site .service-card,
+body.reform-site .actual-tile,
+body.reform-site .deliverable-tile,
+body.reform-site .industry-card,
+body.reform-site .deep-industry-card,
+body.reform-site .industry-flow-card,
+body.reform-site .aics-price-card,
+body.reform-site .pricing-card,
+body.reform-site .process-card,
+body.reform-site .process-step {
+  transform-style: preserve-3d;
+}
+body.reform-site .service-card::after,
+body.reform-site .actual-tile::after,
+body.reform-site .deliverable-tile::after,
+body.reform-site .industry-card::after,
+body.reform-site .deep-industry-card::after,
+body.reform-site .industry-flow-card::after,
+body.reform-site .aics-price-card::after,
+body.reform-site .pricing-card::after,
+body.reform-site .process-card::after,
+body.reform-site .process-step::after {
+  animation: aicsCardLightRun 5.8s ease-in-out infinite;
+}
+body.reform-site .service-card:nth-child(2n)::after,
+body.reform-site .actual-tile:nth-child(2n)::after,
+body.reform-site .process-card:nth-child(2n)::after,
+body.reform-site .pricing-card:nth-child(2n)::after,
+body.reform-site .aics-price-card:nth-child(2n)::after { animation-delay: -2.4s; }
+body.reform-site .service-card:nth-child(3n)::after,
+body.reform-site .actual-tile:nth-child(3n)::after,
+body.reform-site .process-card:nth-child(3n)::after,
+body.reform-site .pricing-card:nth-child(3n)::after,
+body.reform-site .aics-price-card:nth-child(3n)::after { animation-delay: -4s; }
+body.reform-site .service-icon,
+body.reform-site .deliverable-icon,
+body.reform-site .process-card > span,
+body.reform-site .process-step .process-icon,
+body.reform-site .mark {
+  animation: aicsIconGlowBreath 4.8s ease-in-out infinite;
+}
+body.reform-site .service-visual,
+body.reform-site .deliverable-art {
+  background-size: 180% 180% !important;
+  animation: aicsMiniSurfaceShift 9s ease-in-out infinite alternate;
+}
+body.reform-site .animate-in {
+  transition-delay: var(--aics-delay, 0ms) !important;
+}
+body.reform-site.motion-ready .animate-in.visible {
+  animation: aicsRevealSettle 0.72s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (hover: hover) and (pointer: fine) {
+  body.reform-site .service-card:hover,
+  body.reform-site .actual-tile:hover,
+  body.reform-site .deliverable-tile:hover,
+  body.reform-site .industry-card:hover,
+  body.reform-site .deep-industry-card:hover,
+  body.reform-site .industry-flow-card:hover,
+  body.reform-site .aics-price-card:hover,
+  body.reform-site .pricing-card:hover,
+  body.reform-site .process-card:hover,
+  body.reform-site .process-step:hover {
+    transform: perspective(900px) translateY(-10px) rotateX(var(--tiltY, 0deg)) rotateY(var(--tiltX, 0deg)) !important;
+  }
+}
+@keyframes aicsAuroraDrift {
+  0% { background-position: 0% 18%, 100% 0%, 0 0; }
+  100% { background-position: 100% 44%, 8% 82%, 0 0; }
+}
+@keyframes aicsAmbientPulse {
+  0%, 100% { opacity: 0.62; filter: saturate(1); }
+  50% { opacity: 0.95; filter: saturate(1.18); }
+}
+@keyframes aicsCardLightRun {
+  0%, 46%, 100% { background-position: 0 0, -170% 0 !important; opacity: 0.62; }
+  58%, 74% { background-position: 0 0, 165% 0 !important; opacity: 1; }
+}
+@keyframes aicsIconGlowBreath {
+  0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 14px 34px rgba(2,8,23,0.20), 0 0 14px rgba(37,230,200,0.08); }
+  50% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), 0 18px 42px rgba(2,8,23,0.26), 0 0 28px rgba(37,230,200,0.18); }
+}
+@keyframes aicsMiniSurfaceShift {
+  0% { background-position: 0% 20%; }
+  100% { background-position: 100% 80%; }
+}
+@keyframes aicsRevealSettle {
+  0% { filter: blur(2px); }
+  100% { filter: blur(0); }
+}
+@media (max-width: 640px) {
+  body.reform-site.home-dark-theme .conversion-hero,
+  body.reform-site .pricing-hero,
+  body.reform-site .subhero,
+  body.reform-site .customer-industry-hero,
+  body.reform-site .service-card::after,
+  body.reform-site .actual-tile::after,
+  body.reform-site .deliverable-tile::after,
+  body.reform-site .industry-card::after,
+  body.reform-site .deep-industry-card::after,
+  body.reform-site .industry-flow-card::after,
+  body.reform-site .aics-price-card::after,
+  body.reform-site .pricing-card::after,
+  body.reform-site .process-card::after,
+  body.reform-site .process-step::after,
+  body.reform-site .service-icon,
+  body.reform-site .deliverable-icon,
+  body.reform-site .process-card > span,
+  body.reform-site .process-step .process-icon,
+  body.reform-site .mark,
+  body.reform-site .service-visual,
+  body.reform-site .deliverable-art {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  body.reform-site.home-dark-theme .growth-system-scene { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.reform-site.home-dark-theme .conversion-hero,
+  body.reform-site .pricing-hero,
+  body.reform-site .subhero,
+  body.reform-site .customer-industry-hero,
+  body.reform-site.home-dark-theme .growth-system-scene,
+  body.reform-site .service-card::after,
+  body.reform-site .actual-tile::after,
+  body.reform-site .deliverable-tile::after,
+  body.reform-site .industry-card::after,
+  body.reform-site .deep-industry-card::after,
+  body.reform-site .industry-flow-card::after,
+  body.reform-site .aics-price-card::after,
+  body.reform-site .pricing-card::after,
+  body.reform-site .process-card::after,
+  body.reform-site .process-step::after {
+    animation: none !important;
+    transform: none !important;
+  }
+}
