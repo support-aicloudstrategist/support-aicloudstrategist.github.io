@@ -5,44 +5,33 @@
   if (siteLoader) {
     const fill = document.getElementById('site-loader-fill');
     const pct = document.getElementById('site-loader-pct');
-    const seenKey = 'aicsSiteLoaderSeen';
     const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const minVisibleMs = 3000;
+    const safeFallbackMs = 6500;
+    const startedAt = Date.now();
+    let isCompleting = false;
+    let progress = 0;
     const finishLoader = () => {
       siteLoader.classList.add('is-done');
-      sessionStorage.setItem(seenKey, '1');
       window.setTimeout(() => siteLoader.remove(), 650);
     };
-    if (sessionStorage.getItem(seenKey) === '1') {
-      siteLoader.remove();
-    } else if (reduceMotion) {
+    const countTimer = reduceMotion ? null : window.setInterval(() => {
+      progress += Math.max(1, (96 - progress) * 0.08) + Math.random() * 1.5;
+      progress = Math.min(progress, 96);
+      if (fill) fill.style.width = progress + '%';
+      if (pct) pct.textContent = Math.floor(progress) + '%';
+    }, 90);
+    const complete = () => {
+      if (isCompleting || !document.body.contains(siteLoader)) return;
+      isCompleting = true;
+      if (countTimer) window.clearInterval(countTimer);
       if (fill) fill.style.width = '100%';
       if (pct) pct.textContent = '100%';
-      window.setTimeout(finishLoader, 250);
-    } else {
-      let progress = 0;
-      const startedAt = Date.now();
-      const countTimer = window.setInterval(() => {
-        progress += Math.max(2, (96 - progress) * 0.14) + Math.random() * 3;
-        progress = Math.min(progress, 96);
-        if (fill) fill.style.width = progress + '%';
-        if (pct) pct.textContent = Math.floor(progress) + '%';
-      }, 70);
-      const complete = () => {
-        window.clearInterval(countTimer);
-        if (fill) fill.style.width = '100%';
-        if (pct) pct.textContent = '100%';
-        const elapsed = Date.now() - startedAt;
-        window.setTimeout(finishLoader, Math.max(80, 900 - elapsed));
-      };
-      const fallback = window.setTimeout(complete, 1700);
-      window.addEventListener('load', () => {
-        window.clearTimeout(fallback);
-        window.setTimeout(complete, 120);
-      }, { once: true });
-      window.setTimeout(() => {
-        if (document.body.contains(siteLoader)) complete();
-      }, 2000);
-    }
+      const elapsed = Date.now() - startedAt;
+      window.setTimeout(finishLoader, Math.max(0, minVisibleMs - elapsed));
+    };
+    window.addEventListener('load', complete, { once: true });
+    window.setTimeout(complete, safeFallbackMs);
   }
 
   const navbar = document.getElementById('navbar') || document.querySelector('.nav');
