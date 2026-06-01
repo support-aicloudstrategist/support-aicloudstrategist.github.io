@@ -13239,3 +13239,298 @@ body.reform-site.motion-ready .animate-in.visible {
     transform: none !important;
   }
 }
+
+/* Mobile responsiveness cleanup after premium design changes — mobile only */
+@media (max-width: 640px) {
+  html,
+  body.reform-site {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  body.reform-site *,
+  body.reform-site *::before,
+  body.reform-site *::after { box-sizing: border-box; }
+  body.reform-site .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: visible !important;
+  }
+  body.reform-site .topbar,
+  body.reform-site .nav,
+  body.reform-site main,
+  body.reform-site section,
+  body.reform-site footer,
+  body.reform-site .conversion-hero,
+  body.reform-site .pricing-hero,
+  body.reform-site .subhero,
+  body.reform-site .customer-industry-hero {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: clip !important;
+  }
+  body.reform-site .nav-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+    overflow: visible !important;
+  }
+  body.reform-site .brand {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+  body.reform-site .brand span:last-child {
+    min-width: 0 !important;
+    max-width: 130px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  body.reform-site .nav-cta {
+    flex: 0 0 auto !important;
+    min-height: 42px !important;
+    padding: 9px 12px !important;
+    font-size: 13px !important;
+  }
+  body.reform-site .mobile-toggle {
+    flex: 0 0 auto !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+  }
+  body.reform-site .nav-links.active {
+    left: 18px !important;
+    right: 18px !important;
+    width: auto !important;
+    max-width: calc(100vw - 36px) !important;
+  }
+  body.reform-site .conversion-hero,
+  body.reform-site .pricing-hero,
+  body.reform-site .customer-industry-hero,
+  body.reform-site .subhero {
+    padding-top: 42px !important;
+    padding-bottom: 44px !important;
+    min-height: auto !important;
+  }
+  body.reform-site.home-dark-theme .conversion-hero {
+    padding-top: 28px !important;
+    padding-bottom: 38px !important;
+  }
+  body.reform-site .conversion-hero-grid,
+  body.reform-site .hero-grid,
+  body.reform-site .customer-hero-grid,
+  body.reform-site .toolkit-hero-grid,
+  body.reform-site .product-hero-grid,
+  body.reform-site .audit-grid,
+  body.reform-site .simple-page-grid,
+  body.reform-site .pricing-showcase,
+  body.reform-site .aics-pricing-grid,
+  body.reform-site .aics-pricing-grid.week1,
+  body.reform-site .deep-industry-grid,
+  body.reform-site .industry-flow-grid,
+  body.reform-site .service-card-grid,
+  body.reform-site .actual-get-grid,
+  body.reform-site .deliverable-grid,
+  body.reform-site .process-step-grid,
+  body.reform-site .process-list,
+  body.reform-site .grid-2,
+  body.reform-site .grid-3,
+  body.reform-site .grid-4,
+  body.reform-site .industry-grid,
+  body.reform-site .footer-main-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 18px !important;
+    overflow: visible !important;
+  }
+  body.reform-site .conversion-hero-grid > *,
+  body.reform-site .hero-grid > *,
+  body.reform-site .pricing-showcase > *,
+  body.reform-site .aics-pricing-grid > *,
+  body.reform-site .deep-industry-grid > *,
+  body.reform-site .industry-flow-grid > *,
+  body.reform-site .service-card-grid > *,
+  body.reform-site .actual-get-grid > *,
+  body.reform-site .process-step-grid > *,
+  body.reform-site .process-list > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  body.reform-site h1,
+  body.reform-site h2,
+  body.reform-site h3,
+  body.reform-site p,
+  body.reform-site li,
+  body.reform-site .lead,
+  body.reform-site .section-head,
+  body.reform-site .section-head h2,
+  body.reform-site .section-head p {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+  body.reform-site h1 { font-size: clamp(30px, 9vw, 38px) !important; line-height: 1.06 !important; }
+  body.reform-site h2 { font-size: clamp(26px, 8vw, 34px) !important; line-height: 1.08 !important; }
+  body.reform-site h3 { font-size: clamp(20px, 6vw, 26px) !important; line-height: 1.14 !important; }
+  body.reform-site p,
+  body.reform-site li { font-size: 15px !important; line-height: 1.55 !important; }
+  body.reform-site .hero-panel,
+  body.reform-site .growth-system-scene,
+  body.reform-site .system-shell,
+  body.reform-site .hero-visual,
+  body.reform-site .service-card,
+  body.reform-site .actual-tile,
+  body.reform-site .deliverable-tile,
+  body.reform-site .industry-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-flow-card,
+  body.reform-site .aics-price-card,
+  body.reform-site .pricing-card,
+  body.reform-site .process-card,
+  body.reform-site .process-step,
+  body.reform-site .card,
+  body.reform-site .footer-brand-card,
+  body.reform-site .footer-contact-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+    overflow: hidden !important;
+  }
+  body.reform-site .aics-price-card.featured,
+  body.reform-site .aics-pricing-grid.week1 .featured { transform: none !important; }
+  body.reform-site .service-card,
+  body.reform-site .actual-tile,
+  body.reform-site .deliverable-tile,
+  body.reform-site .industry-card,
+  body.reform-site .deep-industry-card,
+  body.reform-site .industry-flow-card,
+  body.reform-site .aics-price-card,
+  body.reform-site .pricing-card,
+  body.reform-site .process-card,
+  body.reform-site .process-step {
+    padding: 20px !important;
+    border-radius: 24px !important;
+  }
+  body.reform-site .deep-industry-card .industry-content { padding: 20px !important; }
+  body.reform-site .service-visual,
+  body.reform-site .deliverable-art,
+  body.reform-site .industry-picture,
+  body.reform-site .service-media,
+  body.reform-site .hero-visual img {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+  body.reform-site .actions,
+  body.reform-site .cta-actions,
+  body.reform-site .footer-contact-pills,
+  body.reform-site .website-actions,
+  body.reform-site .pricing-toggle {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 10px !important;
+  }
+  body.reform-site .btn,
+  body.reform-site button,
+  body.reform-site .actions .btn,
+  body.reform-site .footer-contact-pills a,
+  body.reform-site .pricing-toggle button {
+    min-height: 46px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    touch-action: manipulation;
+  }
+  body.reform-site .comparison-wrap { max-width: 100% !important; overflow-x: auto !important; }
+  body.reform-site .comparison-table { min-width: 720px !important; }
+  body.reform-site .footer,
+  body.reform-site .premium-footer { padding: 34px 0 24px !important; }
+  body.reform-site .footer-bottom-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+  body.reform-site .footer a,
+  body.reform-site .footer p { overflow-wrap: anywhere !important; }
+  body.reform-site.home-dark-theme .system-dashboard,
+  body.reform-site.home-dark-theme .scene-glow-card,
+  body.reform-site.home-dark-theme .creative-flow,
+  body.reform-site.home-dark-theme .website-panels { display: none !important; }
+  body.reform-site.home-dark-theme .system-main,
+  body.reform-site.home-dark-theme .system-flow { grid-template-columns: minmax(0, 1fr) !important; }
+  body.reform-site .animate-in,
+  body.reform-site .animate-in.visible { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+  body.reform-site.home-dark-theme .conversion-hero,
+  body.reform-site .pricing-hero,
+  body.reform-site .subhero,
+  body.reform-site .customer-industry-hero,
+  body.reform-site .service-card::after,
+  body.reform-site .actual-tile::after,
+  body.reform-site .deliverable-tile::after,
+  body.reform-site .industry-card::after,
+  body.reform-site .deep-industry-card::after,
+  body.reform-site .industry-flow-card::after,
+  body.reform-site .aics-price-card::after,
+  body.reform-site .pricing-card::after,
+  body.reform-site .process-card::after,
+  body.reform-site .process-step::after,
+  body.reform-site .service-icon,
+  body.reform-site .deliverable-icon,
+  body.reform-site .process-card > span,
+  body.reform-site .process-step .process-icon,
+  body.reform-site .mark,
+  body.reform-site .service-visual,
+  body.reform-site .deliverable-art {
+    animation: none !important;
+  }
+}
+
+/* Final mobile containment fixes from CDP audit */
+@media (max-width: 640px) {
+  body.reform-site .nav-cta {
+    display: none !important;
+  }
+  body.reform-site .nav-inner {
+    justify-content: space-between !important;
+  }
+  body.reform-site.home-dark-theme .system-website p {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 2px !important;
+  }
+  body.reform-site .footer-glow {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Mobile heading readability: avoid awkward single-letter breaks now that overflow is contained */
+@media (max-width: 640px) {
+  body.reform-site h1,
+  body.reform-site h2,
+  body.reform-site h3,
+  body.reform-site .process-step h3,
+  body.reform-site .process-card h3,
+  body.reform-site .service-card h3,
+  body.reform-site .pricing-card h2,
+  body.reform-site .aics-price-card h2 {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+  }
+}
