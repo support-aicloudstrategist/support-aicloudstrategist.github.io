@@ -1,4 +1,44 @@
+# Public crawl policy for AICloudStrategist.
+# Search engines and standard link-preview fetchers may read all public pages.
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
 User-agent: *
 Allow: /
 Allow: /resources/
+
 Sitemap: https://aicloudstrategist.com/sitemap.xml
