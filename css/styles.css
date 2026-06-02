@@ -13537,13 +13537,13 @@ body.reform-site.motion-ready .animate-in.visible {
 
 /* AICloudStrategist first-load loader — fully scoped, no page style overrides */
 #site-loader.aics-loader {
-  --loader-bg: #05030f;
-  --loader-bg-2: #0a0720;
-  --loader-core: #5fd6ff;
-  --loader-accent: #7b6cff;
-  --loader-ink: #e8ecff;
-  --loader-ink-dim: #7c83a8;
-  --loader-ring: rgba(123, 108, 255, 0.18);
+  --loader-bg: #04131a;
+  --loader-bg-2: #071f29;
+  --loader-core: #58c8ff;
+  --loader-accent: #8d6cff;
+  --loader-ink: #eaf6ff;
+  --loader-ink-dim: #7fa3b0;
+  --loader-ring: rgba(88, 200, 255, 0.16);
   position: fixed;
   inset: 0;
   z-index: 2147483000;
@@ -13593,7 +13593,7 @@ body.reform-site.motion-ready .animate-in.visible {
   height: clamp(50px, 13vw, 60px);
   border-radius: 50%;
   background: radial-gradient(circle at 35% 30%, #bfeeff 0%, var(--loader-core) 38%, var(--loader-accent) 100%);
-  box-shadow: 0 0 28px 4px rgba(95,214,255,0.45), 0 0 60px 12px rgba(123,108,255,0.30);
+  box-shadow: 0 0 28px 4px rgba(88, 200, 255, 0.45), 0 0 60px 12px rgba(37, 230, 200, 0.28);
   animation: aicsLoaderCorePulse 2.4s ease-in-out infinite;
 }
 #site-loader .aics-loader-orbit {
@@ -13616,7 +13616,7 @@ body.reform-site.motion-ready .animate-in.visible {
 #site-loader .aics-loader-orbit-one { animation: aicsLoaderSpin 3.2s linear infinite; }
 #site-loader .aics-loader-orbit-two {
   inset: 18px;
-  border-color: rgba(95,214,255,0.16);
+  border-color: rgba(37, 230, 200, 0.18);
   animation: aicsLoaderSpin 4.8s linear infinite reverse;
 }
 #site-loader .aics-loader-orbit-two::after {
@@ -13675,8 +13675,8 @@ body.reform-site.motion-ready .animate-in.visible {
   inset: 0;
   width: 0%;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--loader-core), var(--loader-accent));
-  box-shadow: 0 0 12px rgba(95,214,255,0.6);
+  background: linear-gradient(90deg, #58c8ff, #25e6c8, #8d6cff);
+  box-shadow: 0 0 12px rgba(88, 200, 255, 0.55);
   transition: width 0.18s ease;
 }
 #site-loader .aics-loader-meta {
