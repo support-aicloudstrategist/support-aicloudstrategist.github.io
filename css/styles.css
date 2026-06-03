@@ -12987,6 +12987,11 @@ body.reform-site .hero-visual {
   animation: aicsSlowFloat 8s ease-in-out infinite;
   will-change: transform;
 }
+
+body.reform-site.home-dark-theme .process-section .process-card {
+  animation: none;
+}
+
 body.reform-site .btn,
 body.reform-site .nav-cta,
 body.reform-site button[type="submit"] {
@@ -13739,7 +13744,7 @@ body.reform-site.home-dark-theme .process-section .process-card {
     radial-gradient(420px circle at var(--aics-card-gx, 50%) var(--aics-card-gy, 0%), rgba(88, 200, 255, 0.16), transparent 46%),
     linear-gradient(145deg, rgba(11, 20, 38, 0.96), rgba(7, 14, 28, 0.92));
   border: 1px solid rgba(125, 210, 255, 0.22);
-  box-shadow: 0 18px 44px -28px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: 0 22px 58px -30px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(88, 200, 255, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: transform 0.14s ease-out, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
   will-change: transform;
 }
@@ -13752,10 +13757,12 @@ body.reform-site.home-dark-theme .process-section .process-card::before {
   border-radius: inherit;
   pointer-events: none;
   background:
-    linear-gradient(135deg, rgba(255,255,255,0.16), transparent 34%),
+    linear-gradient(90deg, rgba(88,200,255,0.78), rgba(37,230,200,0.38), transparent 62%) top left / 100% 2px no-repeat,
+    radial-gradient(220px circle at 18% 0%, rgba(88,200,255,0.18), transparent 58%),
+    linear-gradient(135deg, rgba(255,255,255,0.14), transparent 34%),
     linear-gradient(315deg, rgba(37,230,200,0.12), transparent 42%);
-  opacity: 0.45;
-  z-index: -1;
+  opacity: 0.82;
+  z-index: 1;
 }
 
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile::after,
@@ -13775,7 +13782,7 @@ body.reform-site.home-dark-theme .process-section .process-card::after {
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile.is-aics-card-active,
 body.reform-site.home-dark-theme .process-section .process-card.is-aics-card-active {
   border-color: rgba(88, 200, 255, 0.48);
-  box-shadow: 0 26px 56px -22px rgba(88, 200, 255, 0.42), 0 18px 44px -28px rgba(0, 0, 0, 0.92);
+  box-shadow: 0 30px 64px -22px rgba(88, 200, 255, 0.5), 0 20px 46px -28px rgba(0, 0, 0, 0.94), 0 0 0 1px rgba(88, 200, 255, 0.16);
 }
 
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile.is-aics-card-active::after,
