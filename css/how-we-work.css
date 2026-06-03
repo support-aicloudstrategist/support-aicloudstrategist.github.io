@@ -1,0 +1,1049 @@
+/* AICloudStrategist — How it works page-only styles.
+   Loaded only by /how-we-work/index.html.
+   Keep this file scoped to body.how-work-page / process timeline selectors. */
+
+/* How it works mobile overflow fix — layout only, no content changes */
+body.how-work-page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body.how-work-page *,
+body.how-work-page *::before,
+body.how-work-page *::after {
+  box-sizing: border-box;
+}
+
+body.how-work-page main,
+body.how-work-page section,
+body.how-work-page .container,
+body.how-work-page .page-hero,
+body.how-work-page .process-list,
+body.how-work-page .process-step,
+body.how-work-page .process-step > div,
+body.how-work-page .footer {
+  max-width: 100%;
+  min-width: 0;
+}
+
+body.how-work-page .page-hero p,
+body.how-work-page .process-step h2,
+body.how-work-page .process-step p,
+body.how-work-page .footer p,
+body.how-work-page .footer a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  body.how-work-page .topbar-inner,
+  body.how-work-page .nav-inner {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body.how-work-page .page-hero {
+    padding: 54px 0;
+  }
+
+  body.how-work-page .page-hero h1 {
+    font-size: clamp(34px, 11vw, 48px);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  body.how-work-page .page-hero p {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  body.how-work-page .process-list {
+    width: 100%;
+    gap: 14px;
+  }
+
+  body.how-work-page .process-step {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  body.how-work-page .process-step b {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  body.how-work-page .process-step h2 {
+    font-size: clamp(24px, 7vw, 32px);
+    line-height: 1.12;
+  }
+
+  body.how-work-page .process-step p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  body.how-work-page .footer {
+    overflow-x: hidden;
+  }
+}
+
+/* Extra narrow viewport guard for How it works screenshots/phones */
+@media (max-width: 800px) {
+  body.how-work-page .container {
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  body.how-work-page .topbar-inner,
+  body.how-work-page .nav-inner,
+  body.how-work-page .process-step,
+  body.how-work-page .footer .container {
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+  }
+}
+
+/* How it works hero CTA polish — hero only */
+body.how-work-page .how-hero {
+  padding: 58px 0 50px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(37, 230, 200, 0.14), transparent 30%),
+    radial-gradient(circle at 88% 10%, rgba(88, 200, 255, 0.12), transparent 32%),
+    linear-gradient(135deg, #05111f, #08283b 62%, #06323c);
+}
+
+body.how-work-page .how-hero h1 {
+  margin-bottom: 14px;
+}
+
+body.how-work-page .how-hero p {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+body.how-work-page .how-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+body.how-work-page .how-hero-note {
+  margin-top: 14px;
+  color: #bfeee7;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-hero {
+    padding: 42px 0 36px;
+  }
+
+  body.how-work-page .how-hero-actions .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  body.how-work-page .how-hero-note {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
+/* How it works process timeline — visual style only */
+body.how-work-page .process-list {
+  position: relative;
+  gap: 22px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+body.how-work-page .process-list::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(36, 225, 201, 0.12), rgba(36, 225, 201, 0.55), rgba(91, 163, 255, 0.18));
+  border-radius: 999px;
+}
+
+body.how-work-page .process-step {
+  position: relative;
+  grid-template-columns: 72px 56px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  background:
+    linear-gradient(145deg, rgba(10, 27, 45, 0.98), rgba(4, 13, 25, 0.98)),
+    radial-gradient(circle at 92% 0%, rgba(34, 211, 238, 0.16), transparent 34%);
+  border: 1px solid rgba(145, 214, 255, 0.18);
+  color: #eef8ff;
+  box-shadow: 0 18px 46px rgba(2, 10, 20, 0.18);
+  overflow: visible;
+}
+
+body.how-work-page .process-step b {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(36, 225, 201, 0.5);
+  background: linear-gradient(135deg, #04111f, #083342);
+  color: #bffbf2;
+  box-shadow: 0 0 0 8px #f4f8fc, 0 12px 28px rgba(8, 40, 59, 0.22);
+}
+
+body.how-work-page .process-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(36, 225, 201, 0.1);
+  border: 1px solid rgba(36, 225, 201, 0.2);
+  font-size: 24px;
+  line-height: 1;
+}
+
+body.how-work-page .process-label {
+  margin: 0 0 6px;
+  color: #78f0df;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+body.how-work-page .process-step h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+}
+
+body.how-work-page .process-step ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+body.how-work-page .process-step li {
+  color: #cbdff0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+body.how-work-page .process-step li::marker {
+  color: #32dec8;
+}
+
+body.how-work-page .process-step strong {
+  color: #ffffff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.how-work-page .process-step {
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  body.how-work-page .process-step:hover {
+    transform: translateY(-3px);
+    border-color: rgba(36, 225, 201, 0.38);
+    box-shadow: 0 22px 54px rgba(2, 10, 20, 0.24);
+  }
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .process-list {
+    gap: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  body.how-work-page .process-list::before {
+    left: 42px;
+    top: 18px;
+    bottom: 18px;
+  }
+
+  body.how-work-page .process-step {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px;
+    padding: 18px;
+    overflow: hidden;
+  }
+
+  body.how-work-page .process-step b {
+    grid-row: span 2;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 6px #f4f8fc, 0 10px 22px rgba(8, 40, 59, 0.18);
+  }
+
+  body.how-work-page .process-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    font-size: 21px;
+  }
+
+  body.how-work-page .process-label {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+  }
+
+  body.how-work-page .process-step h2 {
+    font-size: clamp(23px, 6.3vw, 30px);
+  }
+
+  body.how-work-page .process-step ul {
+    grid-column: 2;
+    padding-left: 17px;
+  }
+
+  body.how-work-page .process-step li {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+}
+
+/* Keep How it works process labels/headings readable on narrow phones */
+body.how-work-page .process-label,
+body.how-work-page .process-step h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .process-step h2 {
+    font-size: clamp(22px, 5.8vw, 28px);
+  }
+}
+
+/* How it works closing CTA — bottom block only */
+body.how-work-page .how-closing-cta-wrap {
+  padding: 6px 0 58px;
+  background: #f4f8fc;
+}
+
+body.how-work-page .how-closing-cta {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  padding: 34px;
+  border: 1px solid rgba(145, 214, 255, 0.18);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(36, 225, 201, 0.16), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(91, 163, 255, 0.14), transparent 36%),
+    linear-gradient(135deg, #06111f, #08283b 64%, #06323c);
+  box-shadow: 0 20px 54px rgba(2, 10, 20, 0.18);
+  color: #ffffff;
+}
+
+body.how-work-page .how-closing-cta h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.08;
+}
+
+body.how-work-page .how-closing-cta p {
+  max-width: 760px;
+  margin: 0 0 4px;
+  color: #cde3f2;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-closing-cta-wrap {
+    padding: 0 0 40px;
+  }
+
+  body.how-work-page .how-closing-cta {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  body.how-work-page .how-closing-cta h2 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  body.how-work-page .how-closing-cta p {
+    font-size: 16px;
+  }
+
+  body.how-work-page .how-closing-cta .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* How it works page — premium homepage-matched refresh (scoped to this page only) */
+body.how-work-page main {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(37, 230, 200, 0.14), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(88, 200, 255, 0.12), transparent 32%),
+    linear-gradient(180deg, #05111f 0%, #071522 46%, #050d18 100%);
+  color: #eef8ff;
+  overflow-x: hidden;
+}
+
+body.how-work-page .how-hero {
+  position: relative;
+  padding: clamp(62px, 8vw, 104px) 0 clamp(46px, 6vw, 72px);
+  background:
+    radial-gradient(circle at 16% 10%, rgba(93, 255, 220, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(88, 200, 255, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(5, 17, 31, 0.98), rgba(7, 31, 49, 0.94) 58%, rgba(5, 13, 24, 0.98));
+  border-bottom: 1px solid rgba(130, 220, 220, 0.14);
+  overflow: hidden;
+}
+
+body.how-work-page .how-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 8% -90px auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 999px;
+  background: rgba(37, 230, 200, 0.10);
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+body.how-work-page .how-hero .container,
+body.how-work-page .how-process-section .container,
+body.how-work-page .how-closing-cta-wrap .container {
+  position: relative;
+  z-index: 1;
+}
+
+body.how-work-page .how-hero h1 {
+  max-width: 780px;
+  margin: 0 0 16px;
+  color: #f7fbff;
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+body.how-work-page .how-hero p {
+  max-width: 690px;
+  color: #cbd6df;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+}
+
+body.how-work-page .how-hero-note {
+  color: #9df8ea;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+
+body.how-work-page .how-hero-actions .btn,
+body.how-work-page .how-closing-cta .btn {
+  box-shadow: 0 16px 42px rgba(37, 230, 200, 0.20);
+}
+
+body.how-work-page .how-process-section {
+  padding: clamp(54px, 7vw, 92px) 0;
+  background: transparent;
+}
+
+body.how-work-page .how-process-head {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+body.how-work-page .how-process-head .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border: 1px solid rgba(91, 255, 226, 0.25);
+  background: rgba(20, 120, 110, 0.18);
+  color: #dffefa;
+  box-shadow: 0 0 28px rgba(37, 230, 200, 0.08);
+}
+
+body.how-work-page .how-process-head .tag::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #5bffe2;
+  box-shadow: 0 0 12px rgba(91, 255, 226, 0.9);
+}
+
+body.how-work-page .how-process-head h2 {
+  max-width: 760px;
+  margin-top: 14px;
+  color: #f7fbff;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+body.how-work-page .how-process-head .lead {
+  max-width: 620px;
+  color: #cbd6df;
+}
+
+body.how-work-page .how-premium-timeline {
+  position: relative;
+  display: grid;
+  gap: 22px;
+  max-width: 1060px;
+  padding: 6px 0;
+}
+
+body.how-work-page .how-premium-timeline::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 26px;
+  bottom: 26px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(91,255,226,0.12), rgba(91,255,226,0.62), rgba(88,200,255,0.16));
+  box-shadow: 0 0 18px rgba(91,255,226,0.18);
+}
+
+body.how-work-page .how-premium-timeline .process-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 58px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: clamp(22px, 3vw, 30px);
+  border-radius: 28px !important;
+  border: 1px solid rgba(130, 220, 220, 0.24) !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(93, 255, 220, 0.18), transparent 38%),
+    radial-gradient(circle at 88% 100%, rgba(52, 125, 180, 0.11), transparent 48%),
+    linear-gradient(145deg, rgba(25, 48, 63, 0.74), rgba(7, 19, 32, 0.90)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.085), 0 18px 45px rgba(0,0,0,0.28) !important;
+  color: #eef8ff;
+  overflow: hidden;
+}
+
+body.how-work-page .how-premium-timeline .process-step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,0.11), transparent 34%);
+  opacity: 0.75;
+}
+
+body.how-work-page .how-premium-timeline .process-step > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.how-work-page .how-premium-timeline .process-step b,
+body.how-work-page .how-premium-timeline .process-icon {
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(120, 255, 230, 0.08) !important;
+  border: 1px solid rgba(130, 255, 230, 0.24) !important;
+  color: #9df8ea;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 16px 34px rgba(80,255,220,0.10) !important;
+}
+
+body.how-work-page .how-premium-timeline .process-step b {
+  width: 52px;
+  height: 52px;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+body.how-work-page .how-premium-timeline .process-icon {
+  width: 54px;
+  height: 54px;
+  font-size: 24px;
+}
+
+body.how-work-page .how-premium-timeline .process-label {
+  margin: 0 0 8px;
+  color: #78f0df;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+body.how-work-page .how-premium-timeline .process-step h2 {
+  margin: 0 0 14px;
+  color: #f7f9fb;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+body.how-work-page .how-premium-timeline .process-step ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.how-work-page .how-premium-timeline .process-step li {
+  min-width: 0;
+  padding: 12px 13px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.055);
+  color: #cbd6df;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body.how-work-page .how-premium-timeline .process-step strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.how-work-page .how-premium-timeline .process-step {
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  }
+  body.how-work-page .how-premium-timeline .process-step:hover {
+    transform: translateY(-4px);
+    border-color: rgba(105, 255, 230, 0.46) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.11), 0 24px 60px rgba(0,0,0,0.36), 0 0 28px rgba(80,255,220,0.08) !important;
+  }
+}
+
+body.how-work-page .how-closing-cta-wrap {
+  padding: 0 0 clamp(54px, 7vw, 86px);
+  background: transparent;
+}
+
+body.how-work-page .how-closing-cta {
+  border-radius: 30px;
+  border: 1px solid rgba(130, 220, 220, 0.24);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(93,255,220,0.18), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(88,200,255,0.13), transparent 36%),
+    linear-gradient(135deg, rgba(25, 48, 63, 0.78), rgba(5, 13, 24, 0.96));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 20px 54px rgba(0,0,0,0.30);
+}
+
+body.how-work-page .how-closing-cta h2 {
+  color: #f7fbff;
+  letter-spacing: -0.045em;
+}
+
+body.how-work-page .how-closing-cta p {
+  color: #cbd6df;
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-hero {
+    padding: 48px 0 38px;
+  }
+  body.how-work-page .how-hero h1 {
+    font-size: clamp(42px, 14vw, 58px);
+  }
+  body.how-work-page .how-process-section {
+    padding: 44px 0 50px;
+  }
+  body.how-work-page .how-premium-timeline {
+    gap: 16px;
+  }
+  body.how-work-page .how-premium-timeline::before {
+    left: 25px;
+  }
+  body.how-work-page .how-premium-timeline .process-step {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+    padding: 18px;
+    border-radius: 24px !important;
+  }
+  body.how-work-page .how-premium-timeline .process-step b {
+    grid-row: span 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+  }
+  body.how-work-page .how-premium-timeline .process-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    font-size: 21px;
+  }
+  body.how-work-page .how-premium-timeline .process-step ul {
+    grid-column: 2;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  body.how-work-page .how-premium-timeline .process-step li {
+    padding: 11px 12px;
+    font-size: 14.5px;
+    overflow-wrap: break-word;
+  }
+  body.how-work-page .how-closing-cta {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+}
+
+/* How it works process section — approved premium alternating timeline redesign only */
+body.how-work-page .how-process-section .how-process-head {
+  max-width: 820px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+body.how-work-page .how-process-section .how-process-head h2 {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.how-work-page .how-process-section .how-process-head .lead {
+  max-width: 690px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.how-work-page .how-premium-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 86px minmax(0, 1fr);
+  gap: 28px 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 0;
+}
+
+body.how-work-page .how-premium-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 34px;
+  bottom: 34px;
+  width: 2px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(91,255,226,0.10), rgba(91,255,226,0.72), rgba(88,200,255,0.14));
+  box-shadow: 0 0 28px rgba(91,255,226,0.20);
+}
+
+body.how-work-page .how-premium-timeline .process-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+  border-radius: 28px !important;
+  border: 1px solid rgba(130, 220, 220, 0.25) !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(93, 255, 220, 0.20), transparent 38%),
+    radial-gradient(circle at 92% 100%, rgba(88, 200, 255, 0.12), transparent 46%),
+    linear-gradient(145deg, rgba(25, 48, 63, 0.78), rgba(7, 19, 32, 0.92)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 20px 54px rgba(0,0,0,0.30) !important;
+  overflow: hidden;
+}
+
+body.how-work-page .how-premium-timeline .process-step:nth-child(odd) {
+  grid-column: 1 / 2;
+}
+
+body.how-work-page .how-premium-timeline .process-step:nth-child(even) {
+  grid-column: 3 / 4;
+}
+
+body.how-work-page .how-premium-timeline .process-step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 34%);
+  opacity: 0.72;
+}
+
+body.how-work-page .how-premium-timeline .process-step::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  width: 43px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(91,255,226,0.58), rgba(91,255,226,0));
+  box-shadow: 0 0 18px rgba(91,255,226,0.22);
+}
+
+body.how-work-page .how-premium-timeline .process-step:nth-child(odd)::after {
+  right: -43px;
+}
+
+body.how-work-page .how-premium-timeline .process-step:nth-child(even)::after {
+  left: -43px;
+  transform: rotate(180deg);
+}
+
+body.how-work-page .how-premium-timeline .process-step > * {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+body.how-work-page .how-premium-timeline .process-step b {
+  position: absolute;
+  top: 18px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(130,255,230,0.28) !important;
+  background: rgba(120,255,230,0.10) !important;
+  color: #9df8ea;
+  font-size: 13px;
+  font-weight: 950;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 14px 30px rgba(80,255,220,0.12) !important;
+}
+
+body.how-work-page .how-premium-timeline .process-step:nth-child(odd) b {
+  right: -66px;
+}
+
+body.how-work-page .how-premium-timeline .process-step:nth-child(even) b {
+  left: -66px;
+}
+
+body.how-work-page .how-premium-timeline .process-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 19px;
+  border: 1px solid rgba(130,255,230,0.24) !important;
+  background: rgba(120,255,230,0.08) !important;
+  color: #62f4df;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 16px 34px rgba(80,255,220,0.10) !important;
+}
+
+body.how-work-page .how-premium-timeline .process-icon span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+body.how-work-page .how-premium-timeline .process-icon i {
+  position: absolute;
+  inset: auto 10px 10px auto;
+  width: 14px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(91,255,226,0.58);
+  box-shadow: 0 0 12px rgba(91,255,226,0.45);
+}
+
+body.how-work-page .how-premium-timeline .process-copy {
+  min-width: 0;
+}
+
+body.how-work-page .how-premium-timeline .process-label {
+  margin: 0 0 8px;
+  color: #78f0df;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+body.how-work-page .how-premium-timeline .process-step h2 {
+  margin: 0 0 10px;
+  color: #f7f9fb;
+  font-size: clamp(23px, 2.4vw, 30px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+body.how-work-page .how-premium-timeline .process-summary {
+  margin: 0;
+  color: #cbd6df;
+  font-size: 15.5px;
+  line-height: 1.58;
+}
+
+body.how-work-page .how-premium-timeline .process-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  min-width: 0;
+}
+
+body.how-work-page .how-premium-timeline .process-chips span {
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.075);
+  color: #f4f7f8;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.how-work-page .how-premium-timeline .process-step {
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  }
+  body.how-work-page .how-premium-timeline .process-step:hover {
+    transform: translateY(-4px);
+    border-color: rgba(105,255,230,0.46) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.11), 0 26px 68px rgba(0,0,0,0.38), 0 0 28px rgba(80,255,220,0.08) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-process-section .how-process-head {
+    text-align: left;
+    margin-bottom: 28px;
+  }
+
+  body.how-work-page .how-premium-timeline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    max-width: 100%;
+    padding-left: 26px;
+    overflow-x: clip;
+  }
+
+  body.how-work-page .how-premium-timeline::before {
+    left: 10px;
+    top: 26px;
+    bottom: 26px;
+    transform: none;
+  }
+
+  body.how-work-page .how-premium-timeline .process-step,
+  body.how-work-page .how-premium-timeline .process-step:nth-child(odd),
+  body.how-work-page .how-premium-timeline .process-step:nth-child(even) {
+    grid-column: 1 / -1;
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    padding: 18px;
+    border-radius: 24px !important;
+  }
+
+  body.how-work-page .how-premium-timeline .process-step::after {
+    left: -16px !important;
+    right: auto !important;
+    top: 28px;
+    width: 16px;
+    transform: none !important;
+  }
+
+  body.how-work-page .how-premium-timeline .process-step b,
+  body.how-work-page .how-premium-timeline .process-step:nth-child(odd) b,
+  body.how-work-page .how-premium-timeline .process-step:nth-child(even) b {
+    left: -42px;
+    right: auto;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+
+  body.how-work-page .how-premium-timeline .process-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+  }
+
+  body.how-work-page .how-premium-timeline .process-icon span {
+    font-size: 21px;
+  }
+
+  body.how-work-page .how-premium-timeline .process-step h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  body.how-work-page .how-premium-timeline .process-summary {
+    font-size: 15px;
+    overflow-wrap: break-word;
+  }
+
+  body.how-work-page .how-premium-timeline .process-chips {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-premium-timeline .process-step h2 {
+    font-size: clamp(20px, 5.4vw, 25px);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+  body.how-work-page .how-premium-timeline .process-label,
+  body.how-work-page .how-premium-timeline .process-summary,
+  body.how-work-page .how-premium-timeline .process-chips {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  body.how-work-page .how-premium-timeline .process-step,
+  body.how-work-page .how-premium-timeline .process-step:nth-child(odd),
+  body.how-work-page .how-premium-timeline .process-step:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 18px 16px;
+  }
+  body.how-work-page .how-premium-timeline .process-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 2px;
+  }
+  body.how-work-page .how-premium-timeline .process-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  body.how-work-page .how-premium-timeline .process-step h2,
+  body.how-work-page .how-premium-timeline .process-summary {
+    max-width: 100%;
+  }
+}
