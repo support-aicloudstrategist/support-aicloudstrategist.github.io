@@ -13491,3 +13491,6 @@ body.reform-site .nav-links a:not(.btn) {
   #site-loader .aics-loader-progress { opacity: 1; transform: none; }
   #site-loader .aics-loader-fill { transition: none; }
 }
+
+/* Growth & Control OS homepage bundle */
+.premium-bundle-section{background:#06111f;color:#fff}.premium-bundle-card{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center;border:1px solid rgba(255,255,255,.14);border-radius:32px;padding:34px;background:radial-gradient(circle at 85% 5%,rgba(37,230,200,.20),transparent 30%),linear-gradient(135deg,#071827,#0b3d54)}.premium-bundle-card h2{color:#fff}.premium-bundle-card .lead{color:#d4eaf2}.bundle-mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bundle-mini-grid b{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:18px;color:#8affea}.premium-bundle-card .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22)}@media(max-width:900px){.premium-bundle-card{grid-template-columns:1fr}.bundle-mini-grid{grid-template-columns:1fr}}
