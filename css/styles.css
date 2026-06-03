@@ -923,7 +923,7 @@ p {
 .form {
   background: #fff;
   color: var(--slate);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 26px;
   box-shadow: var(--shadow);
 }
@@ -1020,14 +1020,14 @@ p {
   color: var(--ink);
 }
 .reveal {
-  opacity: 1 !important;
+  opacity: 1;
   transform: none;
   transition:
     opacity 0.75s ease,
     transform 0.75s ease;
 }
 .reveal.visible {
-  opacity: 1 !important;
+  opacity: 1;
   transform: none;
 }
 .delay-1 {
@@ -1037,14 +1037,14 @@ p {
   transition-delay: 0.24s;
 }
 .animate-in {
-  opacity: 1 !important;
+  opacity: 1;
   transform: none;
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
 }
 .animate-in.visible {
-  opacity: 1 !important;
+  opacity: 1;
   transform: none;
 }
 @keyframes floaty {
@@ -1299,7 +1299,7 @@ p {
   }
   .reveal,
   .animate-in {
-    opacity: 1 !important;
+    opacity: 1;
     transform: none;
   }
 }
@@ -1340,7 +1340,7 @@ p {
   max-height: min(680px, calc(100vh - 110px));
   background: #fff;
   border: 1px solid rgba(220, 231, 240, 0.95);
-  border-radius: 28px !important;
+  border-radius: 28px;
   box-shadow: 0 30px 100px rgba(5, 17, 31, 0.28);
   overflow: hidden;
   display: flex;
@@ -2237,7 +2237,7 @@ body {
 .outcome-card {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   box-shadow: var(--soft-shadow);
 }
@@ -2288,7 +2288,7 @@ body {
   position: relative;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 26px;
   box-shadow: var(--soft-shadow);
   display: flex;
@@ -2420,7 +2420,7 @@ body {
 .calculator {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 26px;
   box-shadow: var(--soft-shadow);
   display: grid;
@@ -3082,7 +3082,7 @@ body {
   top: 34px;
   width: 84px;
   height: 84px;
-  border-radius: 28px !important;
+  border-radius: 28px;
   background: #fff;
   display: grid;
   place-items: center;
@@ -3287,7 +3287,7 @@ body {
 .contact-action {
   position: relative;
   overflow: hidden;
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   color: #fff;
   min-height: 250px;
@@ -3364,7 +3364,7 @@ body {
 .premium-form {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 26px;
   box-shadow: var(--soft-shadow);
 }
@@ -3708,7 +3708,7 @@ body {
 .resource-mag-card {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   box-shadow: var(--soft-shadow);
   min-height: 260px;
@@ -3750,7 +3750,7 @@ body {
 .video-shelf article {
   background: #06111f;
   color: #dbe8f2;
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   min-height: 240px;
 }
@@ -4194,7 +4194,7 @@ body {
 .pain-map-grid div {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 23px;
   box-shadow: var(--soft-shadow);
   transition: 0.2s ease;
@@ -4460,7 +4460,7 @@ body {
   inset: 24px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.055);
-  border-radius: 28px !important;
+  border-radius: 28px;
 }
 .industry-picture:after {
   content: "";
@@ -4592,7 +4592,7 @@ body {
 .growth-loop div {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   box-shadow: var(--soft-shadow);
 }
@@ -4903,7 +4903,7 @@ body {
 .deliverable-grid article {
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   box-shadow: var(--soft-shadow);
 }
@@ -5271,7 +5271,7 @@ body {
 .ui-window {
   position: relative;
   overflow: hidden;
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 24px;
   background: #fff;
   border: 1px solid var(--line);
@@ -5694,7 +5694,7 @@ body {
   box-shadow: 0 34px 110px rgba(0, 0, 0, 0.33);
 }
 .cr-hero-media img {
-  border-radius: 28px !important;
+  border-radius: 28px;
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
 }
 .cr-float-card {
@@ -6198,7 +6198,7 @@ body {
 .founder-photo {
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 28px !important;
+  border-radius: 28px;
   object-fit: cover;
   background: #eef3f7;
 }
@@ -6455,14 +6455,14 @@ body.reform-site.home-dark-theme {
 }
 
 body.reform-site.home-dark-theme .animate-in {
-  opacity: 0 !important;
+  opacity: 0;
   transform: translate3d(0, 18px, 0);
   transition: opacity 0.42s ease, transform 0.42s ease;
   will-change: opacity, transform;
 }
 
 body.reform-site.home-dark-theme .animate-in.visible {
-  opacity: 1 !important;
+  opacity: 1;
   transform: translate3d(0, 0, 0);
   will-change: auto;
 }
@@ -6646,7 +6646,7 @@ body.reform-site.home-dark-theme .mock-browser {
   grid-column: 1 / 9;
   grid-row: 1 / 4;
   min-height: 360px;
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 20px;
   animation: heroFloatMain 9s ease-in-out infinite;
 }
@@ -6778,7 +6778,7 @@ body.reform-site.home-dark-theme .mock-copy-line {
   height: 32px;
   padding-right: 13px;
   border-radius: 999px;
-  opacity: 1 !important;
+  opacity: 1;
   margin-bottom: 9px;
 }
 
@@ -7049,7 +7049,7 @@ body.reform-site.home-dark-theme .scene-glow-card {
 body.reform-site.home-dark-theme .system-website {
   min-height: 260px;
   padding: 24px;
-  border-radius: 28px !important;
+  border-radius: 28px;
   background:
     radial-gradient(circle at 88% 18%, rgba(139, 92, 246, 0.22), transparent 30%),
     linear-gradient(135deg, rgba(34, 211, 238, 0.16), rgba(15, 23, 42, 0.72));
@@ -7121,7 +7121,7 @@ body.reform-site.home-dark-theme .website-panels span {
 }
 
 body.reform-site.home-dark-theme .system-dashboard {
-  border-radius: 28px !important;
+  border-radius: 28px;
   padding: 18px;
 }
 
@@ -7412,7 +7412,7 @@ body.reform-site.home-dark-theme .service-card {
   flex-direction: column;
   gap: 14px;
   padding: 24px;
-  border-radius: 28px !important;
+  border-radius: 28px;
   color: #eaf7ff;
   border: 1px solid rgba(148, 163, 184, 0.18);
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.86));
@@ -8321,7 +8321,7 @@ body.reform-site.home-dark-theme .process-card p {
   body.reform-site.home-dark-theme .service-card {
     transition: none;
     transform: none;
-    opacity: 1 !important;
+    opacity: 1;
   }
 }
 
@@ -8475,7 +8475,7 @@ body.reform-site.home-dark-theme .process-card p {
   body.reform-site.home-dark-theme .before-after-card {
     min-height: auto;
     padding: 24px;
-    border-radius: 28px !important;
+    border-radius: 28px;
   }
   body.reform-site.home-dark-theme .before-after-card h2 {
     font-size: 46px;
@@ -9061,7 +9061,7 @@ body.reform-site.home-dark-theme .conversion-hero .hero-proof {
   body.reform-site.home-dark-theme .actual-tile.animate-in,
   body.reform-site.home-dark-theme .before-after-card.animate-in,
   body.reform-site.home-dark-theme .process-card.animate-in {
-    opacity: 1 !important;
+    opacity: 1;
     transform: none;
   }
 }
@@ -9350,12 +9350,12 @@ body.reform-site.home-dark-theme .conversion-hero .hero-proof {
 /* Step 5 QA hardening — reveal motion without hiding content in full-page/slow captures */
 @media (min-width: 1021px) {
   body.reform-site.home-dark-theme .animate-in {
-    opacity: 1 !important;
+    opacity: 1;
     transform: translate3d(0, 10px, 0);
   }
 
   body.reform-site.home-dark-theme .animate-in.visible {
-    opacity: 1 !important;
+    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -9472,7 +9472,7 @@ body.reform-site.home-dark-theme .footer-contact-row a {
   body.reform-site.home-dark-theme .actual-tile.animate-in,
   body.reform-site.home-dark-theme .before-after-card.animate-in,
   body.reform-site.home-dark-theme .process-card.animate-in {
-    opacity: 1 !important;
+    opacity: 1;
     transform: none;
   }
 
@@ -9782,7 +9782,7 @@ body.reform-site .aics-product-card:after {
   z-index: 0;
   pointer-events: none;
   background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.16) 50%, transparent 58%);
-  opacity: 0 !important;
+  opacity: 0;
   transform: translateX(-38%) rotate(4deg);
   transition: opacity 240ms ease, transform 760ms cubic-bezier(.2,.8,.2,1);
 }
@@ -9869,7 +9869,7 @@ body.reform-site .price-card .btn {
   body.reform-site .deep-industry-card:hover:before,
   body.reform-site .industry-portfolio-card:hover:before,
   body.reform-site .aics-product-card:hover:before {
-    opacity: 1 !important;
+    opacity: 1;
     background-position: 18% 16%, 82% 8%, -80% 0%;
   }
 
@@ -11390,7 +11390,7 @@ body.how-work-page .how-closing-cta {
   justify-items: start;
   padding: 34px;
   border: 1px solid rgba(145, 214, 255, 0.18);
-  border-radius: 28px !important;
+  border-radius: 28px;
   background:
     radial-gradient(circle at 12% 0%, rgba(36, 225, 201, 0.16), transparent 34%),
     radial-gradient(circle at 90% 12%, rgba(91, 163, 255, 0.14), transparent 36%),
@@ -11460,7 +11460,7 @@ body.reform-site:not(.home-dark-theme) .footer-contact-card {
   color: #eaf7ff;
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.86));
   border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 28px !important;
+  border-radius: 28px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
@@ -11896,7 +11896,7 @@ body.reform-site.home-dark-theme .process-card::before {
   inset: 0;
   pointer-events: none;
   background: radial-gradient(circle at 18% 0%, rgba(37, 230, 200, 0.18), transparent 34%);
-  opacity: 0 !important;
+  opacity: 0;
   transition: opacity 0.35s ease;
 }
 body.reform-site.home-dark-theme .service-card::after,
@@ -11963,7 +11963,7 @@ body.reform-site.home-dark-theme .premium-footer {
     transition: opacity 0.78s cubic-bezier(0.16,1,0.3,1), transform 0.78s cubic-bezier(0.16,1,0.3,1), box-shadow 0.38s ease, border-color 0.38s ease, background 0.38s ease;
   }
   body.reform-site.home-dark-theme .animate-in.visible {
-    opacity: 1 !important;
+    opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
@@ -12404,7 +12404,7 @@ body.reform-site.home-dark-theme .growth-system-scene .creative-glow div {
   }
   body.reform-site.home-dark-theme .growth-system-scene {
     padding: 10px !important;
-    border-radius: 28px !important;
+    border-radius: 28px;
     box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34), 0 0 32px rgba(37, 230, 200, 0.08);
   }
   body.reform-site.home-dark-theme .growth-system-scene .system-shell {
@@ -12580,7 +12580,7 @@ body.reform-site .process-step::before {
   z-index: 0;
   pointer-events: none;
   background: radial-gradient(circle at 18% 0%, rgba(37,230,200,0.13), transparent 34%);
-  opacity: 0 !important;
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 body.reform-site .service-card > *,
@@ -12978,7 +12978,7 @@ body.reform-site .subhero.animate-in.visible,
 body.reform-site .pricing-hero.animate-in.visible,
 body.reform-site .customer-industry-hero.animate-in.visible,
 body.reform-site .section-head.animate-in.visible {
-  opacity: 1 !important;
+  opacity: 1;
   transform: translateY(0);
 }
 body.reform-site.home-dark-theme .growth-system-scene,
@@ -13032,7 +13032,7 @@ body.reform-site .premium-cta .btn:hover {
   body.reform-site .pricing-hero.animate-in,
   body.reform-site .customer-industry-hero.animate-in,
   body.reform-site .section-head.animate-in {
-    opacity: 1 !important;
+    opacity: 1;
     transform: none;
     transition: none;
     will-change: auto;
@@ -13559,7 +13559,7 @@ body.reform-site.motion-ready .animate-in.visible {
   overflow: hidden;
   font-family: 'Sora', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: radial-gradient(120% 90% at 50% 38%, var(--loader-bg-2) 0%, var(--loader-bg) 60%);
-  opacity: 1 !important;
+  opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transition: opacity 0.55s ease, visibility 0.55s ease;
@@ -13578,7 +13578,7 @@ body.reform-site.motion-ready .animate-in.visible {
   animation: aicsLoaderGridDrift 14s linear infinite;
 }
 #site-loader.aics-loader.is-done {
-  opacity: 0 !important;
+  opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
@@ -13634,7 +13634,7 @@ body.reform-site.motion-ready .animate-in.visible {
   z-index: 1;
   margin-top: 42px;
   text-align: center;
-  opacity: 0 !important;
+  opacity: 0;
   animation: aicsLoaderRise 0.9s ease 0.25s forwards;
 }
 #site-loader .aics-loader-word h1 {
@@ -13662,7 +13662,7 @@ body.reform-site.motion-ready .animate-in.visible {
   z-index: 1;
   margin-top: 34px;
   width: min(260px, 62vw);
-  opacity: 0 !important;
+  opacity: 0;
   animation: aicsLoaderRise 0.9s ease 0.45s forwards;
 }
 #site-loader .aics-loader-track {
@@ -13734,15 +13734,15 @@ body.reform-site.home-dark-theme .process-section .process-card {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: 28px !important;
-  border: 1px solid rgba(130, 220, 220, 0.24) !important;
+  border-radius: 28px;
+  border: 1px solid rgba(130, 220, 220, 0.24);
   background:
-    radial-gradient(circle at 18% 0%, rgba(93, 255, 220, 0.20), transparent 38%),
-    radial-gradient(circle at 86% 100%, rgba(52, 125, 180, 0.11), transparent 48%),
-    linear-gradient(145deg, rgba(25, 48, 63, 0.74), rgba(7, 19, 32, 0.88)) !important;
+    radial-gradient(360px circle at 18% 0%, rgba(93, 255, 220, 0.20), transparent 38%),
+    radial-gradient(420px circle at 86% 100%, rgba(52, 125, 180, 0.11), transparent 48%),
+    linear-gradient(145deg, rgba(25, 48, 63, 0.74), rgba(7, 19, 32, 0.88));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.085),
-    0 18px 45px rgba(0, 0, 0, 0.28) !important;
+    0 18px 45px rgba(0, 0, 0, 0.28);
   transform: translateY(var(--aics-card-y, 0)) perspective(1000px) rotateX(var(--aics-card-rx, 0deg)) rotateY(var(--aics-card-ry, 0deg));
   transform-style: preserve-3d;
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
@@ -13760,8 +13760,8 @@ body.reform-site.home-dark-theme .process-section .process-card::before {
   pointer-events: none;
   background:
     linear-gradient(135deg, rgba(255,255,255,0.12), transparent 34%),
-    radial-gradient(circle at var(--aics-card-gx, 22%) var(--aics-card-gy, 0%), rgba(105, 255, 230, 0.15), transparent 46%) !important;
-  opacity: 0.75 !important;
+    radial-gradient(280px circle at var(--aics-card-gx, 22%) var(--aics-card-gy, 0%), rgba(105, 255, 230, 0.15), transparent 46%);
+  opacity: 0.75;
   z-index: 1;
 }
 
@@ -13772,9 +13772,9 @@ body.reform-site.home-dark-theme .process-section .process-card::after {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(circle at var(--aics-card-gx, 50%) var(--aics-card-gy, 0%), rgba(180, 245, 238, 0.16), transparent 45%) !important;
+  background: radial-gradient(380px circle at var(--aics-card-gx, 50%) var(--aics-card-gy, 0%), rgba(180, 245, 238, 0.16), transparent 45%);
   mix-blend-mode: screen;
-  opacity: 0 !important;
+  opacity: 0;
   transition: opacity 220ms ease;
   z-index: 4;
 }
@@ -13795,13 +13795,13 @@ body.reform-site.home-dark-theme .actual-get-section .deliverable-art {
   min-height: 184px;
   border-radius: 22px;
   margin-bottom: 22px;
-  border: 1px solid rgba(180, 230, 235, 0.18) !important;
+  border: 1px solid rgba(180, 230, 235, 0.18);
   background:
-    radial-gradient(circle at 26% 0%, rgba(93, 255, 220, 0.16), transparent 48%),
-    rgba(255, 255, 255, 0.045) !important;
+    radial-gradient(240px circle at 26% 0%, rgba(93, 255, 220, 0.16), transparent 48%),
+    rgba(255, 255, 255, 0.045);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.065),
-    0 14px 34px rgba(0,0,0,0.16) !important;
+    0 14px 34px rgba(0,0,0,0.16);
   transform: translateZ(28px);
 }
 
@@ -13809,7 +13809,7 @@ body.reform-site.home-dark-theme .actual-get-section .outcome-badge {
   border-radius: 999px;
   padding: 7px 12px;
   border: 1px solid rgba(140, 255, 232, 0.28);
-  background: linear-gradient(180deg, rgba(143, 255, 238, 0.94), rgba(92, 230, 223, 0.9)) !important;
+  background: linear-gradient(180deg, rgba(143, 255, 238, 0.94), rgba(92, 230, 223, 0.9));
   color: #06151c;
   font-size: 12px;
   font-weight: 900;
@@ -13822,9 +13822,9 @@ body.reform-site.home-dark-theme .process-section .process-card span {
   display: grid;
   place-items: center;
   border-radius: 18px;
-  background: rgba(120, 255, 230, 0.08) !important;
-  border: 1px solid rgba(130, 255, 230, 0.24) !important;
-  color: #62f4df !important;
+  background: rgba(120, 255, 230, 0.08);
+  border: 1px solid rgba(130, 255, 230, 0.24);
+  color: #62f4df;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.08),
     0 16px 34px rgba(80, 255, 220, 0.10);
@@ -13844,7 +13844,7 @@ body.reform-site.home-dark-theme .actual-get-section .deliverable-mini b,
 body.reform-site.home-dark-theme .actual-get-section .deliverable-flow b {
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.085) !important;
+  background: rgba(255,255,255,0.085);
   color: #f4f7f8;
   font-weight: 800;
 }
@@ -13870,18 +13870,18 @@ body.reform-site.home-dark-theme .process-section .process-card.is-aics-card-act
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile:hover,
 body.reform-site.home-dark-theme .process-section .process-card:hover {
   --aics-card-y: -4px;
-  border-color: rgba(105, 255, 230, 0.46) !important;
+  border-color: rgba(105, 255, 230, 0.46);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.11),
     0 24px 60px rgba(0,0,0,0.36),
-    0 0 28px rgba(80,255,220,0.08) !important;
+    0 0 28px rgba(80,255,220,0.08);
 }
 
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile.is-aics-card-active::after,
 body.reform-site.home-dark-theme .process-section .process-card.is-aics-card-active::after,
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile:hover::after,
 body.reform-site.home-dark-theme .process-section .process-card:hover::after {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 body.reform-site.home-dark-theme .actual-get-section .deliverable-tile:active,
