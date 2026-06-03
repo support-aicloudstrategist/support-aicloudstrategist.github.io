@@ -233,3 +233,49 @@
     });
   }
 })();
+
+
+// Scoped premium hover/tap feedback for homepage deliverable + process cards only.
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var touchOnly = window.matchMedia && window.matchMedia('(hover: none)').matches;
+  var cards = document.querySelectorAll(
+    '.actual-get-section .deliverable-tile, .process-section .process-card'
+  );
+  if (!cards.length) return;
+
+  cards.forEach(function(card){
+    card.addEventListener('pointerdown', function(){
+      card.classList.add('is-aics-card-active');
+    });
+    card.addEventListener('pointerup', function(){
+      if (touchOnly) window.setTimeout(function(){ card.classList.remove('is-aics-card-active'); }, 150);
+    });
+    card.addEventListener('pointercancel', function(){
+      card.classList.remove('is-aics-card-active');
+    });
+  });
+
+  if (reduce || touchOnly) return;
+
+  var MAX = 8;
+  cards.forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width;
+      var py = (e.clientY - r.top) / r.height;
+      card.style.setProperty('--aics-card-rx', ((0.5 - py) * MAX * 2).toFixed(2) + 'deg');
+      card.style.setProperty('--aics-card-ry', ((px - 0.5) * MAX * 2).toFixed(2) + 'deg');
+      card.style.setProperty('--aics-card-sc', '1.025');
+      card.style.setProperty('--aics-card-gx', (px * 100).toFixed(1) + '%');
+      card.style.setProperty('--aics-card-gy', (py * 100).toFixed(1) + '%');
+      card.classList.add('is-aics-card-active');
+    });
+    card.addEventListener('mouseleave', function(){
+      card.style.setProperty('--aics-card-rx', '0deg');
+      card.style.setProperty('--aics-card-ry', '0deg');
+      card.style.setProperty('--aics-card-sc', '1');
+      card.classList.remove('is-aics-card-active');
+    });
+  });
+})();
