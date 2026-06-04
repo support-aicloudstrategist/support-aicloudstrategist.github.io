@@ -100,14 +100,45 @@
   @keyframes svcPop{from{opacity:0;transform:translateY(6px) scale(.96)}to{opacity:1;transform:none}}
   @keyframes svcDot{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
   @keyframes svcBand{to{background-position:250% 0}}
-  @media (prefers-reduced-motion: reduce){
+
+
+ /* Lead Capture page-only hero/nav/footer fixes */
+ body.lead-capture-page .lcf-hero-section{padding:48px 0 60px!important;background:radial-gradient(circle at 18% 10%,rgba(34,211,238,.18),transparent 30%),radial-gradient(circle at 82% 18%,rgba(139,92,246,.16),transparent 32%),linear-gradient(135deg,#020617 0%,#071426 52%,#061827 100%);overflow:hidden}
+ body.lead-capture-page .lcf-hero-section .svc-hero{align-items:center;gap:56px;min-height:0}
+ body.lead-capture-page .lcf-hero-section h1{color:#fff!important;font-size:clamp(38px,4.4vw,56px)!important;line-height:1.04!important;letter-spacing:-.045em;margin:0;text-wrap:balance}
+ body.lead-capture-page .lcf-hero-section .lead{color:#d5e7ef;font-size:clamp(17px,1.55vw,19px);line-height:1.62;max-width:62ch;margin-top:18px}
+ body.lead-capture-page .lcf-hero-section .svc-eyebrow{margin-bottom:16px;white-space:normal;max-width:max-content}
+ body.lead-capture-page .lcf-hero-section .svc-hero-ctas{margin-top:24px}
+ body.lead-capture-page .lcf-hero-section .dash{width:100%;max-width:640px;justify-self:end}
+ body.lead-capture-page .nav-links a[href="/"]{display:inline-flex}
+ @media(max-width:900px){
+ body.lead-capture-page .lcf-hero-section{padding:34px 0 40px!important}
+ body.lead-capture-page .lcf-hero-section .svc-hero{gap:26px}
+ body.lead-capture-page .lcf-hero-section h1{font-size:clamp(28px,8vw,34px)!important;line-height:1.08!important;letter-spacing:-.035em}
+ body.lead-capture-page .lcf-hero-section .lead{font-size:16px;line-height:1.58;margin-top:14px}
+ body.lead-capture-page .lcf-hero-section .svc-eyebrow{font-size:11px;letter-spacing:.12em;padding:6px 12px;margin-bottom:14px;max-width:100%;white-space:nowrap}
+ body.lead-capture-page .lcf-hero-section .svc-hero-ctas{margin-top:18px;gap:9px}
+ body.lead-capture-page .lcf-hero-section .svc-hero-ctas .btn,body.lead-capture-page .lcf-hero-section .svc-ghost{width:100%;justify-content:center;text-align:center;min-height:44px}
+ body.lead-capture-page .lcf-hero-section .dash{max-width:100%;justify-self:stretch;animation:none}
+ body.lead-capture-page .dbody{grid-template-columns:1.08fr .92fr!important;gap:10px;padding:12px}
+ body.lead-capture-page .rows{min-height:118px}
+ body.lead-capture-page .wa{min-height:82px}
+ body.lead-capture-page .stat{padding:10px}
+ body.lead-capture-page .stat .big{font-size:22px}
+ body.lead-capture-page .row{padding:8px}
+ body.lead-capture-page .bub{font-size:9px;padding:6px 8px}
+ }
+ @media(max-width:390px){body.lead-capture-page .lcf-hero-section .svc-eyebrow{white-space:normal}}
+ @media(max-width:359px){body.lead-capture-page .dbody{grid-template-columns:1fr!important}body.lead-capture-page .rows{min-height:auto}}
+
+ @media (prefers-reduced-motion: reduce){
     .rise,.reveal{opacity:1 !important;transform:none !important}
     .svc-card,.dash{animation:none !important;transform:none !important}
     .svc-eyebrow::after,.svc-band::before,.dhead .live .pd{animation:none !important}
   }
 </style>
 </head>
-<body class="reform-site home-dark-theme">
+<body class="reform-site home-dark-theme lead-capture-page">
 
 <!-- SITE LOADER (same as homepage) -->
 <div id="site-loader" class="aics-loader" role="status" aria-live="polite" aria-label="Loading AICloudStrategist">
@@ -127,15 +158,15 @@
 <div class="topbar"><div class="container topbar-inner"><span>Websites · Automation · Trust · AI Creatives — for businesses worldwide.</span><span><a href="tel:+918065480898">Call +91 80654 80898</a><span class="topbar-sep"> · </span><a href="https://wa.me/918796302608">WA +91 87963 02608</a></span></div></div>
 
 <!-- NAV (same as homepage) -->
-<nav id="navbar" class="nav"><div class="container nav-inner"><a class="brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button><div class="nav-links" id="navLinks"><a href="/how-we-work/">How it works</a><a href="/#services">Services</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a></div><a class="btn btn-dark nav-cta" href="/free-business-review/"><span class="nav-cta-full">Get free growth review</span><span class="nav-cta-short">Free review</span></a></div></nav>
+<nav id="navbar" class="nav"><div class="container nav-inner"><a class="brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button><div class="nav-links" id="navLinks"><a href="/">Home</a><a href="/#services">Services</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a></div><a class="btn btn-dark nav-cta" href="/free-business-review/"><span class="nav-cta-full">Get free growth review</span><span class="nav-cta-short">Free review</span></a></div></nav>
 
 <main>
 
   <!-- HERO -->
-  <section class="section">
+  <section class="section lcf-hero-section">
     <div class="container svc-hero">
       <div>
-        <span class="svc-eyebrow rise d1">● Service 02 · Lead Capture &amp; Follow-up</span>
+        <span class="svc-eyebrow rise d1">LEAD CAPTURE &amp; FOLLOW-UP</span>
         <h1 class="rise d2">Stop good leads going cold — capture every enquiry and follow up automatically.</h1>
         <p class="lead rise d3">Most businesses don't lose customers because demand is low. They lose them because follow-up breaks. We capture every enquiry, route it to WhatsApp or a call-back, and remind you until it's handled — all tracked in one simple dashboard.</p>
         <div class="svc-hero-ctas rise d4">
@@ -214,7 +245,7 @@
 </main>
 
 <!-- FOOTER (same as homepage) -->
-<footer class="footer premium-footer"><div class="container"><div class="footer-main-grid"><div class="footer-brand-block"><a class="footer-brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><p>Practical digital growth services for businesses worldwide.</p></div><div class="footer-links-group"><h3>Quick Links</h3><a href="/how-we-work/">How it works</a><a href="/#services">Services</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a><a href="/free-business-review/">Get free Business Growth Review</a></div><div class="footer-links-group"><h3>Services</h3><a href="/free-business-review/?service=website-digital-presence">Website &amp; Digital Presence</a><a href="/free-business-review/?service=lead-capture-follow-up">Lead Capture &amp; Follow-up</a><a href="/free-business-review/?service=trust-compliance">Trust &amp; Compliance</a><a href="/free-business-review/?service=ai-creative-studio">AI Creative Studio</a></div><div class="footer-contact-block"><h3>Contact</h3><div class="footer-contact-pills"><a href="tel:+918065480898">Phone: +91 80654 80898</a><a href="https://wa.me/918796302608">WhatsApp: +91 87963 02608</a><a href="mailto:contact@aicloudstrategist.com">Email: contact@aicloudstrategist.com</a></div></div></div><div class="footer-bottom-row"><span>© AICloudStrategist</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><span>Serving businesses worldwide</span></div></div></footer>
+<footer class="footer premium-footer"><div class="container"><div class="footer-main-grid"><div class="footer-brand-block"><a class="footer-brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><p>Practical digital growth services for businesses worldwide.</p></div><div class="footer-links-group"><h3>Quick Links</h3><a href="/how-we-work/">How it works</a><a href="/#services">Services</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a><a href="/free-business-review/">Get free Business Growth Review</a></div><div class="footer-links-group"><h3>Services</h3><a href="/free-business-review/?service=website-digital-presence">Website &amp; Digital Presence</a><a href="/lead-capture-follow-up/">Lead Capture &amp; Follow-up</a><a href="/free-business-review/?service=trust-compliance">Trust &amp; Compliance</a><a href="/free-business-review/?service=ai-creative-studio">AI Creative Studio</a></div><div class="footer-contact-block"><h3>Contact</h3><div class="footer-contact-pills"><a href="tel:+918065480898">Phone: +91 80654 80898</a><a href="https://wa.me/918796302608">WhatsApp: +91 87963 02608</a><a href="mailto:contact@aicloudstrategist.com">Email: contact@aicloudstrategist.com</a></div></div></div><div class="footer-bottom-row"><span>© AICloudStrategist</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><span>Serving businesses worldwide</span></div></div></footer>
 
 <!-- same site script as homepage (loader + nav behavior) -->
 <script src="/js/main.js?v=visible-scoped-cards-20260603" defer></script>
