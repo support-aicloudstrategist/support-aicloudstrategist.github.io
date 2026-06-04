@@ -13564,11 +13564,15 @@ body.reform-site.home-dark-theme .nav-more-menu {
   box-shadow: 0 26px 80px rgba(0, 0, 0, 0.48);
 }
 body.reform-site .nav-more:hover .nav-more-menu,
-body.reform-site .nav-more:focus-within .nav-more-menu {
+body.reform-site .nav-more:focus-within .nav-more-menu,
+body.reform-site .nav-more.is-open .nav-more-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+}
+body.reform-site .nav-more.is-open .nav-more-toggle span {
+  transform: translateY(1px) rotate(180deg);
 }
 body.reform-site .nav-more-menu a {
   min-height: 40px;

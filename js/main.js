@@ -48,6 +48,29 @@
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
   }
 
+  const navMore = document.querySelector('.nav-more');
+  const navMoreToggle = navMore && navMore.querySelector('.nav-more-toggle');
+  const closeNavMore = () => {
+    if (!navMore || !navMoreToggle) return;
+    navMore.classList.remove('is-open');
+    navMoreToggle.setAttribute('aria-expanded', 'false');
+  };
+  if (navMore && navMoreToggle) {
+    navMoreToggle.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isOpen = navMore.classList.toggle('is-open');
+      navMoreToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navMore.querySelectorAll('.nav-more-menu a').forEach(link => link.addEventListener('click', closeNavMore));
+    document.addEventListener('click', event => {
+      if (!navMore.contains(event.target)) closeNavMore();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeNavMore();
+    });
+  }
+
   const revealItems = document.querySelectorAll('.reveal, .section, .section-head, .subhero, .pricing-hero, .customer-industry-hero, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card, .service-card, .actual-tile, .deliverable-tile, .before-after-card, .process-card, .industry-card, .deep-industry-card, .industry-flow-card, .pricing-card, .aics-price-card');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
