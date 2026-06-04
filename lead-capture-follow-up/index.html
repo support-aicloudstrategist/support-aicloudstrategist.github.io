@@ -103,8 +103,8 @@
 
 
  /* Lead Capture page-only hero/nav/footer fixes */
- body.lead-capture-page .lcf-hero-section{padding:48px 0 60px!important;background:radial-gradient(circle at 18% 10%,rgba(34,211,238,.18),transparent 30%),radial-gradient(circle at 82% 18%,rgba(139,92,246,.16),transparent 32%),linear-gradient(135deg,#020617 0%,#071426 52%,#061827 100%);overflow:hidden}
- body.lead-capture-page .lcf-hero-section .svc-hero{align-items:center;gap:56px;min-height:0}
+ body.lead-capture-page .lcf-hero-section{min-height:calc(100svh - 112px);display:flex;align-items:center;padding:clamp(32px,5vh,56px) 0!important;background:radial-gradient(circle at 18% 10%,rgba(34,211,238,.18),transparent 30%),radial-gradient(circle at 82% 18%,rgba(139,92,246,.16),transparent 32%),linear-gradient(135deg,#020617 0%,#071426 52%,#061827 100%);overflow:hidden}
+ body.lead-capture-page .lcf-hero-section .svc-hero{align-items:center;gap:56px;min-height:0;width:100%}
  body.lead-capture-page .lcf-hero-section h1{color:#fff!important;font-size:clamp(38px,4.4vw,56px)!important;line-height:1.04!important;letter-spacing:-.045em;margin:0;text-wrap:balance}
  body.lead-capture-page .lcf-hero-section .lead{color:#d5e7ef;font-size:clamp(17px,1.55vw,19px);line-height:1.62;max-width:62ch;margin-top:18px}
  body.lead-capture-page .lcf-hero-section .svc-eyebrow{margin-bottom:16px;white-space:normal;max-width:max-content}
@@ -112,7 +112,7 @@
  body.lead-capture-page .lcf-hero-section .dash{width:100%;max-width:640px;justify-self:end}
  body.lead-capture-page .nav-links a[href="/"]{display:inline-flex}
  @media(max-width:900px){
- body.lead-capture-page .lcf-hero-section{padding:34px 0 40px!important}
+ body.lead-capture-page .lcf-hero-section{min-height:auto;display:block;padding:34px 0 40px!important}
  body.lead-capture-page .lcf-hero-section .svc-hero{gap:26px}
  body.lead-capture-page .lcf-hero-section h1{font-size:clamp(28px,8vw,34px)!important;line-height:1.08!important;letter-spacing:-.035em}
  body.lead-capture-page .lcf-hero-section .lead{font-size:16px;line-height:1.58;margin-top:14px}
