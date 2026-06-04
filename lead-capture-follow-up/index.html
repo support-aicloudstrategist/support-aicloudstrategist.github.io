@@ -103,30 +103,33 @@
 
 
  /* Lead Capture page-only hero/nav/footer fixes */
- body.lead-capture-page .lcf-hero-section{min-height:calc(100svh - 112px);display:flex;align-items:center;padding:clamp(32px,5vh,56px) 0!important;background:radial-gradient(circle at 18% 10%,rgba(34,211,238,.18),transparent 30%),radial-gradient(circle at 82% 18%,rgba(139,92,246,.16),transparent 32%),linear-gradient(135deg,#020617 0%,#071426 52%,#061827 100%);overflow:hidden}
- body.lead-capture-page .lcf-hero-section .svc-hero{align-items:center;gap:56px;min-height:0;width:100%}
+ body.lead-capture-page .lcf-hero-section{min-height:calc(100vh - 112px);min-height:calc(100svh - 112px);display:flex;align-items:center;padding:clamp(24px,4vh,44px) 0!important;background:radial-gradient(circle at 18% 10%,rgba(34,211,238,.18),transparent 30%),radial-gradient(circle at 82% 18%,rgba(139,92,246,.16),transparent 32%),linear-gradient(135deg,#020617 0%,#071426 52%,#061827 100%);overflow:hidden}
+ body.lead-capture-page .lcf-hero-section .svc-hero{align-items:center;grid-template-columns:minmax(0,1fr) minmax(420px,.92fr);gap:56px;min-height:0;width:100%}
  body.lead-capture-page .lcf-hero-section h1{color:#fff!important;font-size:clamp(38px,4.4vw,56px)!important;line-height:1.04!important;letter-spacing:-.045em;margin:0;text-wrap:balance}
  body.lead-capture-page .lcf-hero-section .lead{color:#d5e7ef;font-size:clamp(17px,1.55vw,19px);line-height:1.62;max-width:62ch;margin-top:18px}
  body.lead-capture-page .lcf-hero-section .svc-eyebrow{margin-bottom:16px;white-space:normal;max-width:max-content}
  body.lead-capture-page .lcf-hero-section .svc-hero-ctas{margin-top:24px}
  body.lead-capture-page .lcf-hero-section .dash{width:100%;max-width:640px;justify-self:end}
+ body.lead-capture-page .lcf-hero-section .stat .big{font-size:18px;font-weight:700;line-height:1.12}
  body.lead-capture-page .nav-links a[href="/"]{display:inline-flex}
+ @media(max-width:1180px){body.lead-capture-page .lcf-hero-section{min-height:calc(100vh - 98px);min-height:calc(100svh - 98px)}body.lead-capture-page .lcf-hero-section .svc-hero{grid-template-columns:minmax(0,1fr) minmax(360px,.95fr);gap:34px}}
  @media(max-width:900px){
- body.lead-capture-page .lcf-hero-section{min-height:auto;display:block;padding:34px 0 40px!important}
- body.lead-capture-page .lcf-hero-section .svc-hero{gap:26px}
- body.lead-capture-page .lcf-hero-section h1{font-size:clamp(28px,8vw,34px)!important;line-height:1.08!important;letter-spacing:-.035em}
- body.lead-capture-page .lcf-hero-section .lead{font-size:16px;line-height:1.58;margin-top:14px}
+ body.lead-capture-page .lcf-hero-section{min-height:auto;display:block;padding:26px 0 34px!important}
+ body.lead-capture-page .lcf-hero-section .svc-hero{grid-template-columns:1fr;gap:20px}
+ body.lead-capture-page .lcf-hero-section h1{font-size:clamp(27px,7.4vw,32px)!important;line-height:1.08!important;letter-spacing:-.035em}
+ body.lead-capture-page .lcf-hero-section .lead{font-size:15.5px;line-height:1.52;margin-top:12px}
  body.lead-capture-page .lcf-hero-section .svc-eyebrow{font-size:11px;letter-spacing:.12em;padding:6px 12px;margin-bottom:14px;max-width:100%;white-space:nowrap}
- body.lead-capture-page .lcf-hero-section .svc-hero-ctas{margin-top:18px;gap:9px}
+ body.lead-capture-page .lcf-hero-section .svc-hero-ctas{margin-top:14px;gap:9px}
  body.lead-capture-page .lcf-hero-section .svc-hero-ctas .btn,body.lead-capture-page .lcf-hero-section .svc-ghost{width:100%;justify-content:center;text-align:center;min-height:44px}
  body.lead-capture-page .lcf-hero-section .dash{max-width:100%;justify-self:stretch;animation:none}
  body.lead-capture-page .dbody{grid-template-columns:1.08fr .92fr!important;gap:10px;padding:12px}
- body.lead-capture-page .rows{min-height:118px}
- body.lead-capture-page .wa{min-height:82px}
+ body.lead-capture-page .rows{min-height:92px}
+ body.lead-capture-page .wa{min-height:72px;max-height:92px;overflow:hidden}
  body.lead-capture-page .stat{padding:10px}
  body.lead-capture-page .stat .big{font-size:22px}
  body.lead-capture-page .row{padding:8px}
  body.lead-capture-page .bub{font-size:9px;padding:6px 8px}
+ body.lead-capture-page .rows .row:nth-child(n+3){display:none}
  }
  @media(max-width:390px){body.lead-capture-page .lcf-hero-section .svc-eyebrow{white-space:normal}}
  @media(max-width:359px){body.lead-capture-page .dbody{grid-template-columns:1fr!important}body.lead-capture-page .rows{min-height:auto}}
@@ -166,11 +169,11 @@
   <section class="section lcf-hero-section">
     <div class="container svc-hero">
       <div>
-        <span class="svc-eyebrow rise d1">LEAD CAPTURE &amp; FOLLOW-UP</span>
+        <span class="svc-eyebrow rise d1">Lead Capture &amp; Follow-up</span>
         <h1 class="rise d2">Stop good leads going cold — capture every enquiry and follow up automatically.</h1>
         <p class="lead rise d3">Most businesses don't lose customers because demand is low. They lose them because follow-up breaks. We capture every enquiry, route it to WhatsApp or a call-back, and remind you until it's handled — all tracked in one simple dashboard.</p>
         <div class="svc-hero-ctas rise d4">
-          <a class="btn btn-dark" href="/free-business-review/?service=lead-capture-follow-up">Find my missed lead leakage →</a>
+          <a class="btn btn-dark" href="/free-business-review/?service=lead-capture-follow-up">Improve my follow-up system →</a>
           <a class="svc-ghost" href="#included">See what's included ↓</a>
         </div>
       </div>
@@ -185,9 +188,9 @@
             <div class="wa"><div class="h">WHATSAPP FOLLOW-UP</div><div id="chat"></div></div>
           </div>
           <div class="statcol">
-            <div class="stat"><div class="lbl">Enquiries captured</div><div class="big c" id="s1">0</div><div class="sm">this week</div></div>
-            <div class="stat"><div class="lbl">Followed up</div><div class="big t" id="s2">0</div><div class="sm">auto + reminders</div></div>
-            <div class="stat"><div class="lbl">Recovered leads</div><div class="big v" id="s3">0</div><div class="sm">would've been lost</div></div>
+            <div class="stat"><div class="big c">Enquiries captured</div><div class="sm">from every channel</div></div>
+            <div class="stat"><div class="big t">Follow-ups sent</div><div class="sm">auto + reminders</div></div>
+            <div class="stat"><div class="big v">Leads tracked</div><div class="sm">in one simple view</div></div>
           </div>
         </div>
       </div>
