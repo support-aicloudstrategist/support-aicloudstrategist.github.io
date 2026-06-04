@@ -6,6 +6,7 @@
 <title>Website &amp; Digital Presence | AICloudStrategist</title>
 <meta name="description" content="A clean, fast, mobile-friendly website that tells your business story, shows your services, and gives customers an easy way to enquire. Built so the right people find you. From AICloudStrategist." />
 <link rel="canonical" href="https://aicloudstrategist.com/services/website-digital-presence/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2325e6c8'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='%2304111e'%3EAI%3C/text%3E%3C/svg%3E" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -13,10 +14,6 @@
 <meta property="og:description" content="A professional, mobile-friendly website with a clear business story, SEO basics, and an easy enquiry path. Build my business presence." />
 <meta property="og:url" content="https://aicloudstrategist.com/services/website-digital-presence/" />
 
-<!-- Fonts: Sora to match the site -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <!-- Service schema -->
 <script type="application/ld+json">
@@ -43,13 +40,13 @@
     --txt:#eaf6ff; --dim:#9fb6c2; --muted:#7e9aa6;
     --line:rgba(88,200,255,.15);
     --radius:28px; --radius-sm:18px; --radius-xs:12px;
-    --maxw:1140px;
+    --maxw:1200px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     background:var(--ink); color:var(--txt);
-    font-family:'Sora',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     line-height:1.5; -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none}
@@ -61,11 +58,11 @@
 
   /* ---------- CTA buttons ---------- */
   .cta{display:inline-block;background:linear-gradient(90deg,var(--cyan),var(--teal));color:#04131a;
-    font-weight:600;font-size:14px;padding:13px 22px;border-radius:30px;position:relative;overflow:hidden;
-    transition:transform .25s ease, box-shadow .25s ease}
+    font-weight:950;font-size:14px;padding:13px 22px;border-radius:999px;position:relative;overflow:hidden;
+    box-shadow:0 18px 45px rgba(37,230,200,.28);transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
   .cta::after{content:"";position:absolute;top:0;left:-70%;width:55%;height:100%;
     background:linear-gradient(110deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg)}
-  .cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(88,200,255,.6)}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 22px 62px rgba(37,230,200,.30),0 0 32px rgba(37,230,200,.14)}
   .cta:hover::after{animation:sweep .7s ease}
   .cta.ghost{background:transparent;border:1px solid rgba(88,200,255,.4);color:#cfeefb;margin-left:10px}
   .cta.ghost::after{display:none}
@@ -95,7 +92,7 @@
   }
 
   /* ---------- sections ---------- */
-  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  section{padding:80px 0;border-bottom:1px solid var(--line)}
   .kicker{color:#7fe9d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
   h1{font-size:clamp(28px,5vw,44px);line-height:1.1;font-weight:600;letter-spacing:-.015em;color:#fff;margin-top:16px}
   h2{font-size:clamp(22px,3.2vw,30px);font-weight:600;color:#fff;letter-spacing:-.01em}
@@ -138,7 +135,7 @@
   @media(max-width:860px){.feature-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.feature-grid{grid-template-columns:1fr}}
   .card{background:linear-gradient(160deg,rgba(12,38,48,.72),rgba(8,26,34,.72));border:1px solid var(--line);
-    border-radius:var(--radius-sm);padding:22px;position:relative;transform-style:preserve-3d;
+    border-radius:var(--radius-sm);padding:26px;position:relative;transform-style:preserve-3d;
     transform:perspective(1000px) rotateX(var(--rx,0)) rotateY(var(--ry,0)) scale(var(--sc,1));
     transition:transform .12s ease-out, box-shadow .3s ease, border-color .3s ease}
   .card::after{content:"";position:absolute;inset:0;border-radius:var(--radius-sm);pointer-events:none;opacity:0;
@@ -200,6 +197,41 @@
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
+
+  /* ---------- homepage consistency layer for this page only ---------- */
+  .container{width:100%;max-width:1200px;margin:0 auto;padding:0 22px}
+  .topbar{background:#050d18;color:#c9d8e6;font-size:13px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .topbar a{color:#bffff5;font-weight:900}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(3,9,20,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(125,211,252,.14);transition:.18s ease;overflow:visible!important}
+  .nav.scrolled{box-shadow:0 18px 58px rgba(2,8,23,.16);background:rgba(3,9,20,.84)}
+  .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-width:0;position:relative;overflow:visible!important}
+  .brand{display:flex;align-items:center;gap:13px;font-weight:950;color:#f4fbff;letter-spacing:-.03em;white-space:nowrap}
+  .mark{width:42px;height:42px;border-radius:15px;background:conic-gradient(from 210deg,var(--teal),var(--cyan),#3157d5,var(--teal));display:grid;place-items:center;color:#06131f;font-weight:1000;box-shadow:0 14px 36px rgba(37,230,200,.28)}
+  .nav-links{display:flex!important;flex:1 1 auto;align-items:center;justify-content:flex-end;gap:clamp(14px,1.55vw,24px);font-size:14px;font-weight:900;min-width:0;flex-wrap:nowrap}
+  .nav-links a:not(.btn){color:rgba(244,251,255,.88);white-space:nowrap;min-height:40px;display:inline-flex;align-items:center}
+  .nav-links a:hover{color:#67e8f9}
+  .nav-cta{display:inline-flex!important;flex:0 0 auto;white-space:nowrap}
+  .nav-cta-short{display:none}
+  .mobile-toggle{display:none;border:0;background:#05111f;color:#fff;border-radius:12px;padding:10px 13px;font-size:20px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 17px;border-radius:999px;border:1px solid transparent;font:inherit;font-weight:950;white-space:nowrap;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:linear-gradient(135deg,var(--teal),#8afce7);color:#04111e;box-shadow:0 18px 45px rgba(37,230,200,.28)}
+  .premium-footer{background:#020c11;color:#eaf6ff;padding:64px 0 28px}
+  .footer-main-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr 1.2fr;gap:26px;align-items:start}
+  .footer-brand,.footer-brand-block .footer-brand{display:inline-flex;align-items:center;gap:13px;font-weight:950;color:#fff;letter-spacing:-.03em}
+  .footer-brand-block p,.premium-footer p{color:#7e9aa6;font-size:13px;line-height:1.65;margin-top:12px;max-width:42ch}
+  .footer-links-group h3,.footer-contact-block h3{color:#9fb6c2;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+  .footer-links-group a{display:block;color:#b9d2dd;font-size:13px;margin:7px 0}
+  .footer-links-group a:hover,.footer-contact-pills a:hover{color:#7fe9d6}
+  .footer-contact-pills{display:flex;flex-direction:column;gap:8px}
+  .footer-contact-pills a{color:#b9d2dd;font-size:13px}
+  .footer-bottom-row{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:#5f8593;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:1180px){
+    .nav-inner{height:58px!important;gap:10px!important}.brand{flex:1 1 auto;min-width:0}.brand span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mark{width:34px;height:34px;border-radius:11px;font-size:13px}.mobile-toggle{display:inline-grid!important;place-items:center;flex:0 0 36px;width:36px;min-width:36px;height:36px;padding:0;border-radius:11px;font-size:17px}.nav-links{display:none!important;position:absolute;left:14px;right:14px;top:calc(100% + 8px);max-width:calc(100vw - 28px);padding:12px;gap:7px;font-size:14px;flex-direction:column;align-items:stretch;background:rgba(3,9,20,.96);border:1px solid rgba(125,211,252,.18);border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.35)}.nav-links.active{display:flex!important}.nav-links a:not(.btn){min-height:44px;padding:9px 11px;border-radius:12px}.nav-cta{display:none!important}
+  }
+  @media(max-width:900px){section{padding:56px 0}.card{padding:22px}.footer-main-grid{grid-template-columns:1fr}.premium-footer{padding:44px 0 24px}}
+
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important}
     .rise,.reveal{opacity:1 !important;transform:none !important}
@@ -209,31 +241,8 @@
 </style>
 </head>
 <body>
-
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="wrap">
-      <span>Websites · Automation · Trust · AI Creatives — for businesses worldwide.</span>
-      <span class="hl">Call +91 80654 80898 · WA +91 87963 02608</span>
-    </div>
-  </div>
-
-  <!-- NAV -->
-  <header>
-    <div class="wrap">
-      <a class="brand" href="/"><span class="logo">AI</span><b>AICloudStrategist</b></a>
-      <button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button>
-      <nav class="links" id="navLinks">
-        <a href="/how-we-work/">How it works</a>
-        <a href="/#services" class="on">Services</a>
-        <a href="/industries/">Industries</a>
-        <a href="/pricing/">Pricing</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/free-business-review/" class="navcta">Get free growth review</a>
-      </nav>
-    </div>
-  </header>
+  <div class="topbar"><div class="container topbar-inner"><span>Websites · Automation · Trust · AI Creatives — for businesses worldwide.</span><span><a href="tel:+918065480898">Call +91 80654 80898</a><span class="topbar-sep"> · </span><a href="https://wa.me/918796302608">WA +91 87963 02608</a></span></div></div>
+<nav id="navbar" class="nav"><div class="container nav-inner"><a class="brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button><div class="nav-links" id="navLinks"><a href="/">Home</a><a href="/#services">Services</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a><a class="btn btn-primary nav-cta" href="/free-business-review/"><span class="nav-cta-full">Get free growth review</span><span class="nav-cta-short">Free review</span></a></div></div></nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -304,43 +313,15 @@
       <div class="center-cta reveal"><a class="cta" href="/free-business-review/">Build my business presence →</a></div>
     </div>
   </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="cols">
-        <div>
-          <b>AICloudStrategist</b>
-          <p>Practical websites, automation, trust basics and AI creatives — handled as one simple system for businesses worldwide.</p>
-        </div>
-        <div class="col">
-          <h5>Services</h5>
-          <a href="/services/website-digital-presence/">Website &amp; Digital Presence</a>
-          <a href="/#services">Lead Capture &amp; Follow-up</a>
-          <a href="/#services">Trust &amp; Compliance</a>
-          <a href="/#services">AI Creative Studio</a>
-        </div>
-        <div class="col">
-          <h5>Company</h5>
-          <a href="/how-we-work/">How it works</a>
-          <a href="/industries/">Industries</a>
-          <a href="/pricing/">Pricing</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-        </div>
-      </div>
-      <div class="bottom">
-        <span>© 2026 AICloudStrategist. Serving businesses worldwide.</span>
-        <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></span>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer premium-footer"><div class="container"><div class="footer-main-grid"><div class="footer-brand-block"><a class="footer-brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><p>Practical digital growth services for businesses worldwide.</p></div><div class="footer-links-group"><h3>Quick Links</h3><a href="/how-we-work/">How it works</a><a href="/#services">Services</a><a href="/growth-control-os/">Growth &amp; Control OS</a><a href="/healthcare-growthos/">Healthcare GrowthOS</a><a href="/healthcare-roi-leakage-calculator/">Healthcare ROI</a><a href="/roi-calculator/">Business ROI</a><a href="/cloud-trust-finops/">Cloud Trust &amp; FinOps</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a><a href="/free-business-review/">Get free Business Growth Review</a></div><div class="footer-links-group"><h3>Services</h3><a href="/services/website-digital-presence/">Website &amp; Digital Presence</a><a href="/lead-capture-follow-up/">Lead Capture &amp; Follow-up</a><a href="/trust-compliance/">Trust &amp; Compliance</a><a href="/ai-creative-studio/">AI Creative Studio</a><a href="/healthcare-roi-leakage-calculator/">Healthcare ROI Calculator</a><a href="/roi-calculator/">Business ROI Calculator</a><a href="/cloud-trust-finops/">Cloud Trust &amp; FinOps</a></div><div class="footer-contact-block"><h3>Contact</h3><div class="footer-contact-pills"><a href="tel:+918065480898">Phone: +91 80654 80898</a><a href="https://wa.me/918796302608">WhatsApp: +91 87963 02608</a><a href="mailto:contact@aicloudstrategist.com">Email: contact@aicloudstrategist.com</a></div></div></div><div class="footer-bottom-row"><span>© AICloudStrategist</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><span>Serving businesses worldwide</span></div></div></footer>
 
 <script>
 (function(){
   /* mobile menu */
-  var t=document.getElementById('menuToggle'),n=document.getElementById('navLinks');
-  if(t&&n)t.addEventListener('click',function(){n.classList.toggle('open');});
+  var t=document.getElementById('mobileToggle')||document.getElementById('menuToggle'),n=document.getElementById('navLinks');
+  if(t&&n)t.addEventListener('click',function(){n.classList.toggle('active');n.classList.toggle('open');});
+  var navbar=document.getElementById('navbar')||document.querySelector('.nav');
+  if(navbar){var setScrolled=function(){navbar.classList.toggle('scrolled',window.scrollY>24)};setScrolled();window.addEventListener('scroll',setScrolled,{passive:true});}
 
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduce)return;
