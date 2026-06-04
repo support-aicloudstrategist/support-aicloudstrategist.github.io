@@ -13516,8 +13516,9 @@ body.reform-site .nav-links {
 }
 body.reform-site .nav-more {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 body.reform-site .nav-more-toggle {
   appearance: none;
@@ -13558,21 +13559,25 @@ body.reform-site .nav-more-menu {
   pointer-events: none;
   transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
 }
+body.reform-site .nav-more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 14px;
+}
 body.reform-site.home-dark-theme .nav-more-menu {
-  background: rgba(3, 8, 18, 0.98);
-  border-color: rgba(125, 211, 252, 0.2);
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.48);
+  background: rgba(3, 8, 18, 0.96);
+  border-color: rgba(125, 211, 252, 0.32);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.52), 0 0 34px rgba(37, 230, 200, 0.12);
 }
 body.reform-site .nav-more:hover .nav-more-menu,
-body.reform-site .nav-more:focus-within .nav-more-menu,
-body.reform-site .nav-more.is-open .nav-more-menu {
+body.reform-site .nav-more:focus-within .nav-more-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
-}
-body.reform-site .nav-more.is-open .nav-more-toggle span {
-  transform: translateY(1px) rotate(180deg);
 }
 body.reform-site .nav-more-menu a {
   min-height: 40px;
@@ -13610,6 +13615,7 @@ body.reform-site.home-dark-theme .nav-more-menu a:hover {
     align-items: center;
     justify-content: flex-end;
     gap: clamp(18px, 2.1vw, 30px);
+    flex-wrap: nowrap !important;
     width: auto !important;
     max-width: none !important;
     padding: 0 !important;
@@ -13622,9 +13628,11 @@ body.reform-site.home-dark-theme .nav-more-menu a:hover {
   }
   body.reform-site .nav-links a,
   body.reform-site .nav-more-toggle {
+    flex: 0 0 auto;
     min-height: 40px;
     padding: 0;
     background: transparent !important;
+    line-height: 40px;
   }
   body.reform-site .mobile-toggle {
     display: none !important;
@@ -13688,6 +13696,9 @@ body.reform-site.home-dark-theme .nav-more-menu a:hover {
   body.reform-site .nav-more {
     display: block;
     width: 100%;
+  }
+  body.reform-site .nav-more::after {
+    display: none;
   }
   body.reform-site .nav-more-toggle {
     width: 100% !important;
