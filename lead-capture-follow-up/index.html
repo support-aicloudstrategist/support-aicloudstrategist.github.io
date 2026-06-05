@@ -70,6 +70,12 @@
   .svc-card h3{font-size:16px;font-weight:600;color:#eaf6ff;margin:0 0 6px;transform:translateZ(24px)}
   .svc-card p{color:#9fb6c2;font-size:13.5px;line-height:1.55;margin:0;transform:translateZ(16px)}
 
+  /* what you get */
+  .lcf-get-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  .lcf-get-card{background:linear-gradient(160deg,rgba(12,38,48,.72),rgba(8,26,34,.72));border:1px solid rgba(88,200,255,.15);border-radius:16px;padding:16px 18px;color:#eaf6ff;font-size:15px;font-weight:600;line-height:1.35}
+  @media(max-width:860px){.lcf-get-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.lcf-get-grid{grid-template-columns:1fr}.lcf-get-card{padding:15px 16px}}
+
   /* enquiry highlight band */
   .svc-band{background:linear-gradient(120deg,rgba(141,108,255,.12),rgba(88,200,255,.08));border:1px solid rgba(141,108,255,.28);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;position:relative;overflow:hidden}
   .svc-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(141,108,255,.1),transparent);background-size:250% 100%;animation:svcBand 5.5s linear infinite;pointer-events:none}
@@ -198,6 +204,23 @@
         <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Reminders</h3><p>Timely nudges so your team follows up before a lead goes cold.</p></div>
         <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M9 5v14"/></svg></div><h3>Simple CRM sheet/dashboard</h3><p>One clear view of every lead and its status — no complicated software.</p></div>
         <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-9"/><path d="M21 7v5h-5"/></svg></div><h3>Missed-lead recovery</h3><p>We surface the leads you were about to lose and bring them back into the flow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="section lcf-get-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>What you get</h2>
+      </div>
+      <div class="lcf-get-grid">
+        <div class="lcf-get-card reveal">Lead capture form</div>
+        <div class="lcf-get-card reveal">WhatsApp or call-back flow</div>
+        <div class="lcf-get-card reveal">Auto-reply setup</div>
+        <div class="lcf-get-card reveal">Follow-up reminders</div>
+        <div class="lcf-get-card reveal">Simple lead dashboard</div>
+        <div class="lcf-get-card reveal">Monthly enquiry summary</div>
       </div>
     </div>
   </section>
