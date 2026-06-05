@@ -76,6 +76,14 @@
   @media(max-width:860px){.lcf-get-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.lcf-get-grid{grid-template-columns:1fr}.lcf-get-card{padding:15px 16px}}
 
+  /* workflow visual */
+  .lcf-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:stretch;margin-top:30px}
+  .lcf-flow-card{position:relative;background:linear-gradient(160deg,rgba(12,38,48,.78),rgba(8,26,34,.78));border:1px solid rgba(88,200,255,.18);border-radius:18px;padding:18px 14px;text-align:center;min-height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+  .lcf-flow-card:not(:last-child)::after{content:"→";position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:#58c8ff;font-weight:700;font-size:18px;z-index:2}
+  .lcf-flow-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(88,200,255,.18),rgba(37,230,200,.14));border:1px solid rgba(127,233,214,.22);color:#bff7ef;font-size:18px}
+  .lcf-flow-card b{color:#eaf6ff;font-size:14px;line-height:1.25}
+  @media(max-width:980px){.lcf-flow{grid-template-columns:1fr;gap:10px}.lcf-flow-card{min-height:auto;align-items:flex-start;text-align:left;flex-direction:row;justify-content:flex-start;padding:15px 16px}.lcf-flow-card:not(:last-child)::after{content:"↓";right:auto;left:35px;top:auto;bottom:-16px;transform:none;font-size:17px}.lcf-flow-icon{flex:0 0 42px}}
+
   /* enquiry highlight band */
   .svc-band{background:linear-gradient(120deg,rgba(141,108,255,.12),rgba(88,200,255,.08));border:1px solid rgba(141,108,255,.28);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;position:relative;overflow:hidden}
   .svc-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(141,108,255,.1),transparent);background-size:250% 100%;animation:svcBand 5.5s linear infinite;pointer-events:none}
@@ -221,6 +229,22 @@
         <div class="lcf-get-card reveal">Follow-up reminders</div>
         <div class="lcf-get-card reveal">Simple lead dashboard</div>
         <div class="lcf-get-card reveal">Monthly enquiry summary</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW VISUAL -->
+  <section class="section alt lcf-workflow-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>How enquiries move through the system</h2>
+      </div>
+      <div class="lcf-flow">
+        <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">✉</span><b>Enquiry</b></div>
+        <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">◎</span><b>Capture</b></div>
+        <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">☎</span><b>WhatsApp/call-back</b></div>
+        <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">⏱</span><b>Follow-up reminder</b></div>
+        <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">▦</span><b>Lead dashboard</b></div>
       </div>
     </div>
   </section>
