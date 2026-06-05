@@ -1,1 +1,0 @@
-Solution we build. Source tracking: Shows whether enquiry came from WhatsApp, call, Instagram, Google, or website. Service routing: Hair, skin, acne, laser, or consultation enquiries go to the right queue. Reminders: Callback and no-response reminders keep staff moving. Owner insights: Simple reports show pending, booked, source split, and response time.

@@ -1,9 +1,0 @@
-{
-  "phase": 3,
-  "status": "completed-dry-run",
-  "notes": [
-    "deliver-audit creates founder approval pack and refuses unsanctioned send; --approved --dry-run gives no-send output."
-  ],
-  "sample_pack": "/home/OpenClaw/.openclaw/workspace/reports/approval-packs/audit-delivery-test-smilekraft-dental-20260525.md",
-  "dry_run_output": "DRY RUN approved send: would email test@example.com with /tmp/audits/test-smilekraft-dental-20260525.pdf; would WhatsApp +910000000000."
-}

@@ -1,39 +1,98 @@
-# Block deploy-root/internal artifacts from public serving
-/CLAUDE.md /404.html 404!
-/DEPLOYMENT.md /404.html 404!
+# =====================================================================
+#  AICloudStrategist redirects — 2026 two-line refresh
+#  First match wins. "!" forces redirect even if a file exists.
+# =====================================================================
+
+# --- Block internal / sensitive artifacts ---
+/CLAUDE.md            /404.html  404!
+/DEPLOYMENT.md        /404.html  404!
 /contact-channels.json /404.html 404!
-/gtm.csv /404.html 404!
-/prospects.csv /404.html 404!
-/internal.html /404.html 404!
-/reports/* /404.html 404!
-/_workspace/* /404.html 404!
+/payment-config.json  /404.html  404!
+/_workspace/*         /404.html  404!
 /.workspace-snapshots/* /404.html 404!
-/week1-brief/* /404.html 404!
-/week2-brief/* /404.html 404!
-/blog/three-silent-cloud-patterns.html /resources 301!
-/blog/orphaned-ebs-volumes.html /resources 301!
-/blog/cost-per-1000-inferences.html /resources 301!
-/papers/state-of-cloud-cost-india-2026.html /resources 301!
-/blog/* /resources 301!
-/papers/* /resources 301!
-/audit.html /dpdp-readiness-assessment 301!
-/book.html /dpdp-readiness-assessment 301!
-/cloud-cost /resources 301!
-/cloud-cost/* /resources 301!
-/finops /resources 301!
-/finops/* /resources 301!
-/papers/state-of-cloud-cost-india-2026.pdf /resources 301!
-/website-development-for-small-business-india /website-lead-capture-sprint 301!
-/website-design-for-factory-india /website-lead-capture-sprint 301!
-/lead-capture-website-india /website-lead-capture-sprint 301!
-/business-automation-for-small-business-india /operations-automation-sprint 301!
-/whatsapp-lead-follow-up-automation /operations-automation-sprint 301!
-/local-business-website-development-india /local-business-website-india 301!
-/small-business-website-india /local-business-website-india 301!
-/factory-website-india /factory-website-development-india 301!
-/manufacturing-website-development-india /factory-website-development-india 301!
-/small-business-automation /small-business-automation-india 301!
-/whatsapp-lead-management /whatsapp-lead-management-india 301!
-/website-compliance-india /dpdp-website-compliance-sprint 301!
-/dpdp-website-compliance /dpdp-website-compliance-sprint 301!
-https://www.aicloudstrategist.com/* https://aicloudstrategist.com/:splat 301!
+/scripts/*            /404.html  404!
+/preview/*            /404.html  404!
+
+# --- Old top-level pages -> new clean URLs ---
+/about.html           /about/      301!
+/pricing.html         /pricing/    301!
+/contact.html         /contact/    301!
+/free-business-review        /cost-teardown/  301!
+/free-business-review/       /cost-teardown/  301!
+/free-business-review.html   /cost-teardown/  301!
+
+# --- Cloud / FinOps legacy -> Line A ---
+/cloud-trust-finops      /ai-cloud-cost/  301!
+/cloud-trust-finops/*    /ai-cloud-cost/  301!
+/roi-calculator          /ai-cloud-cost/  301!
+/roi-calculator/*        /ai-cloud-cost/  301!
+/advisory.html           /ai-cloud-cost/  301!
+/audit.html              /cost-teardown/  301!
+/book.html               /cost-teardown/  301!
+/blog/*                  /ai-cloud-cost/  301!
+/papers/*                /ai-cloud-cost/  301!
+
+# --- SMB web / leads / automation -> Line B ---
+/website-digital-presence    /web-seo/  301!
+/website-digital-presence/*  /web-seo/  301!
+/services                    /web-seo/  301!
+/services/*                  /web-seo/  301!
+/lead-capture-follow-up      /web-seo/  301!
+/lead-capture-follow-up/*    /web-seo/  301!
+/trust-compliance            /web-seo/  301!
+/trust-compliance/*          /web-seo/  301!
+/ai-creative-studio          /web-seo/  301!
+/ai-creative-studio/*        /web-seo/  301!
+/growth-control-os           /web-seo/  301!
+/growth-control-os/*         /web-seo/  301!
+/how-we-work                 /web-seo/  301!
+/how-we-work/*               /web-seo/  301!
+/partners                    /web-seo/  301!
+/partners/*                  /web-seo/  301!
+/case-studies                /web-seo/  301!
+/case-studies/*              /web-seo/  301!
+/industries.html             /web-seo/  301!
+/products.html               /web-seo/  301!
+/factory-website-development-india.html  /web-seo/  301!
+/local-business-website-india.html       /web-seo/  301!
+/small-business-automation-india.html    /web-seo/  301!
+/smb-website-checklist-india.html        /web-seo/  301!
+/whatsapp-lead-management-india.html     /web-seo/  301!
+/whatsapp-link-generator.html            /web-seo/  301!
+/operations-automation-sprint.html       /web-seo/  301!
+/website-lead-capture-sprint.html        /web-seo/  301!
+/lead-follow-up-checklist-india.html     /web-seo/  301!
+/lead-leakage-calculator.html            /web-seo/  301!
+
+# --- Healthcare + DPDP (fully retired) -> home ---
+/healthcare-growthos             /  301!
+/healthcare-growthos/*           /  301!
+/healthcare-roi-leakage-calculator    /  301!
+/healthcare-roi-leakage-calculator/*  /  301!
+/aesthetic-clinics               /  301!
+/aesthetic-clinics/*             /  301!
+/dpdp-for-clinics                /  301!
+/dpdp-for-clinics/*              /  301!
+/dpdp-for-diagnostic-labs        /  301!
+/dpdp-for-diagnostic-labs/*      /  301!
+/webinars                        /  301!
+/webinars/*                      /  301!
+/dpdp-breach-readiness-checklist.html    /  301!
+/dpdp-compliance-checklist-india.html    /  301!
+/dpdp-compliance-consultant-india.html   /  301!
+/dpdp-compliance-for-d2c-brands.html     /  301!
+/dpdp-compliance-for-saas-india.html     /  301!
+/dpdp-consent-flow-checklist.html        /  301!
+/dpdp-readiness-assessment.html          /  301!
+/dpdp-vendor-register-template.html      /  301!
+/dpdp-website-compliance-sprint.html     /  301!
+
+# --- Other retired pages -> home ---
+/client-desk.html    /  301!
+/resources.html      /  301!
+/resources           /  301!
+/resources/*         /  301!
+/local.html          /  301!
+/payments.html       /  301!
+/policykart.html     /  301!
+/thank-you.html      /  301!

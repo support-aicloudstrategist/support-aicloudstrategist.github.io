@@ -1,1 +1,0 @@
-Growth dashboard. The Growth view adds automation and insight on top of the Starter board, while still keeping the process easy for clinic staff.

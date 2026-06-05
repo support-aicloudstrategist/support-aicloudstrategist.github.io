@@ -1,1 +1,0 @@
-What the clinic needs. Official WhatsApp Business API workflow for approved templates and scalable messaging. Role-based staff access, opt-out handling, and clear audit trail. Integration with website forms, call events, sheets, CRM, or appointment systems.
