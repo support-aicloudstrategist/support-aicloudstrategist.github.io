@@ -118,6 +118,98 @@
   .lcf-final-cta p{color:#9fb6c2;font-size:15px;line-height:1.55;margin:10px auto 18px;max-width:62ch}
   @media(max-width:520px){.lcf-final-cta{padding:22px 18px}.lcf-final-cta .btn{width:100%;justify-content:center}}
 
+  /* unified page card system */
+  body.lead-capture-page .svc-card,
+  body.lead-capture-page .lcf-get-card,
+  body.lead-capture-page .lcf-flow-card,
+  body.lead-capture-page .lcf-ideal-strip,
+  body.lead-capture-page .lcf-ideal-chip,
+  body.lead-capture-page .lcf-faq-item,
+  body.lead-capture-page .svc-step{
+    background:linear-gradient(160deg,rgba(12,38,48,.76),rgba(8,26,34,.76));
+    border:1px solid rgba(88,200,255,.18);
+    border-radius:20px;
+    box-shadow:0 22px 70px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.04);
+    transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease;
+  }
+  body.lead-capture-page .svc-card,
+  body.lead-capture-page .lcf-get-card,
+  body.lead-capture-page .lcf-flow-card,
+  body.lead-capture-page .lcf-faq-item,
+  body.lead-capture-page .svc-step{padding:20px}
+  body.lead-capture-page .svc-card::before,
+  body.lead-capture-page .lcf-get-card::before,
+  body.lead-capture-page .lcf-flow-card::before,
+  body.lead-capture-page .lcf-faq-item::before,
+  body.lead-capture-page .svc-step::before{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:radial-gradient(circle at 18% 0%,rgba(37,230,200,.14),transparent 38%),radial-gradient(circle at 100% 20%,rgba(141,108,255,.1),transparent 34%);
+  }
+  body.lead-capture-page .lcf-get-card,
+  body.lead-capture-page .lcf-flow-card,
+  body.lead-capture-page .lcf-faq-item,
+  body.lead-capture-page .svc-step{position:relative;overflow:hidden}
+  body.lead-capture-page .svc-card h3,
+  body.lead-capture-page .lcf-faq-item h3,
+  body.lead-capture-page .svc-step h4,
+  body.lead-capture-page .lcf-flow-card b{color:#eaf6ff;font-weight:800}
+  body.lead-capture-page .svc-card p,
+  body.lead-capture-page .lcf-faq-item p,
+  body.lead-capture-page .svc-step p{color:#9fb6c2}
+  body.lead-capture-page .svc-card .ic,
+  body.lead-capture-page .lcf-flow-icon{
+    width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+    background:linear-gradient(135deg,rgba(88,200,255,.2),rgba(37,230,200,.14));
+    border:1px solid rgba(127,233,214,.24);color:#bff7ef;box-shadow:0 14px 34px rgba(37,230,200,.08);
+  }
+  body.lead-capture-page .lcf-get-grid,
+  body.lead-capture-page .svc-grid,
+  body.lead-capture-page .svc-steps{gap:16px}
+  body.lead-capture-page .lcf-flow{gap:14px}
+  body.lead-capture-page .lcf-ideal-strip{padding:24px}
+  body.lead-capture-page .lcf-ideal-chip{border-radius:16px;padding:12px 15px;line-height:1.2}
+  @media(hover:hover){
+    body.lead-capture-page .svc-card:hover,
+    body.lead-capture-page .lcf-get-card:hover,
+    body.lead-capture-page .lcf-flow-card:hover,
+    body.lead-capture-page .lcf-ideal-chip:hover,
+    body.lead-capture-page .lcf-faq-item:hover,
+    body.lead-capture-page .svc-step:hover{
+      transform:translateY(-5px);border-color:rgba(37,230,200,.38);box-shadow:0 30px 90px rgba(0,0,0,.25),0 0 44px rgba(37,230,200,.07);
+    }
+  }
+  body.lead-capture-page .svc-card:active,
+  body.lead-capture-page .lcf-get-card:active,
+  body.lead-capture-page .lcf-flow-card:active,
+  body.lead-capture-page .lcf-ideal-chip:active,
+  body.lead-capture-page .lcf-faq-item:active,
+  body.lead-capture-page .svc-step:active{transform:scale(.99)}
+  @media(max-width:620px){
+    body.lead-capture-page main .section:not(.lcf-hero-section){overflow-x:clip}
+    body.lead-capture-page main .section:not(.lcf-hero-section)>.container{width:calc(100% - 56px)!important;max-width:calc(100% - 56px)!important;box-sizing:border-box;padding-left:0!important;padding-right:0!important;margin-left:auto!important;margin-right:auto!important;overflow:visible}
+    body.lead-capture-page .svc-grid,
+    body.lead-capture-page .lcf-get-grid,
+    body.lead-capture-page .lcf-flow,
+    body.lead-capture-page .lcf-faq-list,
+    body.lead-capture-page .svc-steps,
+    body.lead-capture-page .lcf-ideal-chips{width:100%;max-width:100%;box-sizing:border-box;grid-template-columns:minmax(0,1fr)!important}
+    body.lead-capture-page .svc-card,
+    body.lead-capture-page .lcf-get-card,
+    body.lead-capture-page .lcf-flow-card,
+    body.lead-capture-page .lcf-faq-item,
+    body.lead-capture-page .svc-step{width:100%;max-width:100%;min-width:0;box-sizing:border-box;margin-left:0;margin-right:0;padding:18px;transform:none!important;transform-style:flat;overflow:hidden}
+    body.lead-capture-page .svc-card *,
+    body.lead-capture-page .lcf-get-card *,
+    body.lead-capture-page .lcf-flow-card *,
+    body.lead-capture-page .lcf-faq-item *,
+    body.lead-capture-page .svc-step *{min-width:0;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere}
+    body.lead-capture-page .svc-card .ic,
+    body.lead-capture-page .svc-card h3,
+    body.lead-capture-page .svc-card p{transform:none!important}
+    body.lead-capture-page .lcf-ideal-strip{padding:20px;width:100%;max-width:100%;box-sizing:border-box}
+    body.lead-capture-page .lcf-ideal-chip{width:100%;max-width:100%;box-sizing:border-box}
+  }
+
   /* entrance + reveal */
   .rise{opacity:0;transform:translateY(20px);animation:svcRise .75s cubic-bezier(.2,.7,.2,1) forwards}
   .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
