@@ -91,6 +91,13 @@
   .lcf-ideal-chip{border:1px solid rgba(127,233,214,.22);background:rgba(4,19,26,.45);border-radius:999px;padding:10px 14px;color:#eaf6ff;font-size:14px;font-weight:600;line-height:1}
   @media(max-width:520px){.lcf-ideal-strip{padding:20px}.lcf-ideal-chips{display:grid;grid-template-columns:1fr;gap:9px}.lcf-ideal-chip{border-radius:14px;line-height:1.25}}
 
+  /* faq */
+  .lcf-faq-list{display:grid;gap:12px;margin-top:26px}
+  .lcf-faq-item{background:linear-gradient(160deg,rgba(12,38,48,.72),rgba(8,26,34,.72));border:1px solid rgba(88,200,255,.15);border-radius:16px;padding:18px}
+  .lcf-faq-item h3{color:#eaf6ff;font-size:16px;margin:0 0 7px;line-height:1.35}
+  .lcf-faq-item p{color:#9fb6c2;font-size:14px;line-height:1.55;margin:0}
+  @media(max-width:520px){.lcf-faq-item{padding:16px}.lcf-faq-item h3{font-size:15px}}
+
   /* enquiry highlight band */
   .svc-band{background:linear-gradient(120deg,rgba(141,108,255,.12),rgba(88,200,255,.08));border:1px solid rgba(141,108,255,.28);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;position:relative;overflow:hidden}
   .svc-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(141,108,255,.1),transparent);background-size:250% 100%;animation:svcBand 5.5s linear infinite;pointer-events:none}
@@ -272,6 +279,22 @@
           <span class="lcf-ideal-chip">Repair/service businesses</span>
           <span class="lcf-ideal-chip">Ecommerce sellers</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt lcf-faq-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>FAQ</h2>
+      </div>
+      <div class="lcf-faq-list">
+        <div class="lcf-faq-item reveal"><h3>Do I need new software?</h3><p>Not always. We try to work with simple tools first.</p></div>
+        <div class="lcf-faq-item reveal"><h3>Can this work with my current WhatsApp number?</h3><p>Usually yes. We check your current setup before recommending the flow.</p></div>
+        <div class="lcf-faq-item reveal"><h3>Can you connect it to my existing website?</h3><p>Yes, if your website allows form or tracking updates.</p></div>
+        <div class="lcf-faq-item reveal"><h3>What if I don’t have a website?</h3><p>We can start with a simple enquiry page or form.</p></div>
+        <div class="lcf-faq-item reveal"><h3>How fast can this go live?</h3><p>A basic setup can usually be planned quickly after we review your enquiry flow.</p></div>
       </div>
     </div>
   </section>
