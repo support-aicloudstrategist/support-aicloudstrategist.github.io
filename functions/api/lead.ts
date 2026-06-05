@@ -12,6 +12,8 @@ type GraphTokenCache = {
   expiresAt: number;
 };
 
+type Line = "A" | "B" | "contact";
+
 let graphTokenCache: GraphTokenCache | null = null;
 
 const jsonHeaders = {
@@ -21,6 +23,13 @@ const jsonHeaders = {
 };
 
 const clean = (value: unknown) => String(value ?? "").trim();
+
+function classifyLine(rawLine: string): Line {
+  const l = rawLine.toLowerCase();
+  if (l.startsWith("a")) return "A";
+  if (l.startsWith("b")) return "B";
+  return "contact";
+}
 
 async function getGraphToken(env: LeadEnv): Promise<string> {
   const tenantId = clean(env.M365_TENANT_ID);
@@ -86,44 +95,78 @@ async function sendGraphMail(env: LeadEnv, graphMessage: Record<string, unknown>
   return { status: response.status, responseText };
 }
 
-async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBody: string) {
-  const recipient = clean(env.M365_RECIPIENT || env.M365_SENDER);
+// ── Line-aware copy ───────────────────────────────────────────────────────────
+function internalSubject(line: Line, businessName: string) {
+  if (line === "A") return `New Cost Teardown lead — ${businessName}`;
+  if (line === "B") return `New Web/SEO Teardown lead — ${businessName}`;
+  return `New contact enquiry — ${businessName}`;
+}
 
+function prospectSubject(line: Line) {
+  if (line === "A") return "Your free AI & Cloud Cost Teardown is in motion — AICloudStrategist";
+  if (line === "B") return "Your free Website + SEO Teardown is in motion — AICloudStrategist";
+  return "We received your message — AICloudStrategist";
+}
+
+function buildProspectConfirmationBody(line: Line, lead: Record<string, string>) {
+  const name = lead.full_name || "there";
+  const signoff = `Warmly,\nAnushka Bhattacharya\nDirector, AICloudStrategist`;
+
+  if (line === "A") {
+    return `Hi ${name},
+
+Thanks for requesting your free AI & Cloud Cost Teardown for ${lead.business_name}.
+
+We'll review your setup (${lead.vertical || "your cloud/AI stack"}) and send back a clear teardown: where you're overspending on cloud, GPU and LLM/API, the highest-impact savings, and a ranked list of fixes — with estimated monthly and annual savings.
+
+You can expect it within 2 working days. To add context before we review, just reply to this email, or WhatsApp +91 87963 02608 with your business name.
+
+${signoff}`;
+  }
+
+  if (line === "B") {
+    return `Hi ${name},
+
+Thanks for requesting your free Website + SEO Teardown for ${lead.business_name}.
+
+We'll review ${lead.website} and send back: a conversion review of your current site, your technical / on-page / content SEO gaps, keywords you can realistically win, and a ranked, prioritized fix list.
+
+You can expect it within 2 working days. To add context, reply to this email, or WhatsApp +91 87963 02608 with your business name.
+
+${signoff}`;
+  }
+
+  return `Hi ${name},
+
+Thanks for reaching out to AICloudStrategist — we have your message about ${lead.business_name} and will reply within 1 working day.
+
+If it's urgent, WhatsApp us at +91 87963 02608 or call +91 80654 80898.
+
+${signoff}`;
+}
+
+async function sendLeadEmail(env: LeadEnv, line: Line, lead: Record<string, string>, textBody: string) {
+  const recipient = clean(env.M365_RECIPIENT || env.M365_SENDER);
   if (!recipient) {
     throw new Error("Microsoft Graph recipient is not configured.");
   }
 
-  const subject = `Free Trust & Growth Audit request — ${lead.business_name}`;
   return sendGraphMail(env, {
-    subject,
+    subject: internalSubject(line, lead.business_name),
     body: { contentType: "Text", content: textBody },
     toRecipients: [{ emailAddress: { address: recipient } }],
     replyTo: lead.prospect_email ? [{ emailAddress: { address: lead.prospect_email, name: lead.full_name || lead.business_name } }] : undefined,
   });
 }
 
-function buildProspectConfirmationBody(lead: Record<string, string>) {
-  return `Hi ${lead.full_name || "there"},
-
-Thank you for requesting your Free Trust & Growth Audit for ${lead.business_name}. I have your details and the audit is now in motion.
-
-You can expect the report within 48 working hours. We will check website clarity, enquiry capture, WhatsApp/call follow-up, trust signals, and basic privacy/consent readiness.
-
-If something urgent needs to be added before we review it, WhatsApp us at +91 87963 02608 with your business name.
-
-Warmly,
-Anushka Bhattacharya
-Director, AICloudStrategist`;
-}
-
-async function sendProspectConfirmationEmail(env: LeadEnv, lead: Record<string, string>) {
+async function sendProspectConfirmationEmail(env: LeadEnv, line: Line, lead: Record<string, string>) {
   if (!lead.prospect_email) {
     return { status: 0, responseText: "skipped: prospect email not provided" };
   }
 
   return sendGraphMail(env, {
-    subject: "Your Free Trust & Growth Audit is in motion — AICloudStrategist",
-    body: { contentType: "Text", content: buildProspectConfirmationBody(lead) },
+    subject: prospectSubject(line),
+    body: { contentType: "Text", content: buildProspectConfirmationBody(line, lead) },
     toRecipients: [{ emailAddress: { address: lead.prospect_email, name: lead.full_name || lead.business_name } }],
     replyTo: [{ emailAddress: { address: clean(env.M365_RECIPIENT || env.M365_SENDER), name: "AICloudStrategist" } }],
   });
@@ -144,6 +187,8 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   const prospectEmail = clean(payload.prospect_email || payload.email);
   const notes = clean(payload.notes || payload.specific_notes);
   const fullName = clean(payload.full_name);
+  const rawLine = clean(payload.line);
+  const line = classifyLine(rawLine);
 
   const missing = [
     ["business_name", businessName],
@@ -196,16 +241,26 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     prospect_email: prospectEmail,
     email: prospectEmail,
     notes,
-    source: "free-trust-growth-audit",
+    line: rawLine || line,
+    line_class: line,
+    landing_page: clean(payload.landing_page),
+    referrer: clean(payload.referrer),
+    utm_source: clean(payload.utm_source),
+    utm_medium: clean(payload.utm_medium),
+    utm_campaign: clean(payload.utm_campaign),
+    utm_content: clean(payload.utm_content),
+    utm_term: clean(payload.utm_term),
+    source: rawLine || "website",
   };
 
-  const textBody = `New AICloudStrategist Free Trust & Growth Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nNotes: ${notes || "not provided"}\n`;
+  const lineLabel = line === "A" ? "Line A — AI & Cloud Cost" : line === "B" ? "Line B — Web & SEO" : "General contact";
+  const textBody = `New AICloudStrategist lead\n\nLine: ${lineLabel} (${rawLine || "n/a"})\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nNotes: ${notes || "not provided"}\n\nLanding page: ${lead.landing_page || "n/a"}\nReferrer: ${lead.referrer || "n/a"}\nUTM: ${lead.utm_source || "-"}/${lead.utm_medium || "-"}/${lead.utm_campaign || "-"}\n`;
 
   let internalGraphResult: { status: number; responseText: string };
   let prospectGraphResult: { status: number; responseText: string };
   try {
-    internalGraphResult = await sendLeadEmail(context.env, lead, textBody);
-    prospectGraphResult = await sendProspectConfirmationEmail(context.env, lead);
+    internalGraphResult = await sendLeadEmail(context.env, line, lead, textBody);
+    prospectGraphResult = await sendProspectConfirmationEmail(context.env, line, lead);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Email delivery failed.";
     return new Response(JSON.stringify({ ok: false, error: "Email delivery failed. Please retry or WhatsApp us directly.", details: message.slice(0, 300) }), {
@@ -223,7 +278,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   };
   try {
     if (context.env.LEAD_LOG) {
-      await context.env.LEAD_LOG.put(leadId, JSON.stringify(logRecord), { metadata: { submitted_at: submittedAt, business_name: businessName } });
+      await context.env.LEAD_LOG.put(leadId, JSON.stringify(logRecord), { metadata: { submitted_at: submittedAt, business_name: businessName, line } });
     }
   } catch {
     // Email delivery is the primary pipeline. KV logging failure should not create a false failure for the prospect.
