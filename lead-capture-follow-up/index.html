@@ -213,6 +213,32 @@
     body.lead-capture-page .lcf-ideal-chip{width:100%;max-width:100%;box-sizing:border-box}
   }
 
+  /* unified section flow */
+  body.lead-capture-page main .section:not(.lcf-hero-section){padding:clamp(46px,5.4vw,76px) 0;background:transparent}
+  body.lead-capture-page main .section.alt{background:transparent}
+  body.lead-capture-page main .section:not(.lcf-hero-section)+.section:not(.lcf-hero-section){padding-top:clamp(18px,2.8vw,36px)}
+  body.lead-capture-page .section-head{margin-bottom:24px;max-width:860px}
+  body.lead-capture-page .section-head h2{font-size:clamp(28px,3vw,42px);line-height:1.06;letter-spacing:-.035em;margin:0}
+  body.lead-capture-page .section-head .lead{font-size:clamp(15px,1.2vw,18px);line-height:1.6;margin-top:12px}
+  body.lead-capture-page .lcf-get-grid,
+  body.lead-capture-page .lcf-flow,
+  body.lead-capture-page .svc-grid,
+  body.lead-capture-page .lcf-faq-list,
+  body.lead-capture-page .lcf-ideal-chips{margin-top:0}
+  body.lead-capture-page .lcf-get-section{padding-top:clamp(50px,5.8vw,82px)}
+  body.lead-capture-page .lcf-final-section{padding-top:clamp(20px,3vw,40px)!important;padding-bottom:clamp(60px,6vw,92px)!important}
+  body.lead-capture-page .lcf-final-cta{margin-top:0;padding:clamp(24px,3.4vw,40px);max-width:980px;margin-left:auto;margin-right:auto}
+  body.lead-capture-page .lcf-final-cta .btn{margin-top:2px}
+  @media(max-width:620px){
+    body.lead-capture-page main .section:not(.lcf-hero-section){padding:36px 0}
+    body.lead-capture-page main .section:not(.lcf-hero-section)+.section:not(.lcf-hero-section){padding-top:14px}
+    body.lead-capture-page .section-head{margin-bottom:18px}
+    body.lead-capture-page .section-head h2{font-size:clamp(25px,7vw,31px);line-height:1.1}
+    body.lead-capture-page .section-head .lead{font-size:15px;line-height:1.55}
+    body.lead-capture-page .lcf-final-section{padding-bottom:52px!important}
+    body.lead-capture-page .lcf-final-cta .btn{width:calc(100% - 8px);max-width:100%;justify-content:center}
+  }
+
   /* entrance + reveal */
   .rise{opacity:0;transform:translateY(20px);animation:svcRise .75s cubic-bezier(.2,.7,.2,1) forwards}
   .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
@@ -335,24 +361,6 @@
     </div>
   </section>
 
-  <!-- WHAT'S INCLUDED -->
-  <section class="section alt" id="included">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Every enquiry caught. Every lead followed up.</h2>
-        <p class="lead">A complete capture-and-follow-up system, so nothing slips through the cracks.</p>
-      </div>
-      <div class="svc-grid" id="featureGrid">
-        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>Enquiry forms</h3><p>Simple, friction-free forms that capture leads from your site, ads, and profiles.</p></div>
-        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></div><h3>WhatsApp follow-up</h3><p>Automatic, friendly WhatsApp replies and follow-ups on the channel customers prefer.</p></div>
-        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5c0 8 7 15 15 15l-2-4-3 1c-3-1-6-4-7-7l1-3-4-2z"/></svg></div><h3>Call-back tracking</h3><p>Missed calls become a clear call-back list — no enquiry forgotten.</p></div>
-        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Reminders</h3><p>Timely nudges so your team follows up before a lead goes cold.</p></div>
-        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M9 5v14"/></svg></div><h3>Simple CRM sheet/dashboard</h3><p>One clear view of every lead and its status — no complicated software.</p></div>
-        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-9"/><path d="M21 7v5h-5"/></svg></div><h3>Missed-lead recovery</h3><p>We surface the leads you were about to lose and bring them back into the flow.</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- WHAT YOU GET -->
   <section class="section lcf-get-section">
     <div class="container">
@@ -382,6 +390,24 @@
         <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">☎</span><b>WhatsApp/call-back</b></div>
         <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">⏱</span><b>Follow-up reminder</b></div>
         <div class="lcf-flow-card reveal"><span class="lcf-flow-icon">▦</span><b>Lead dashboard</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="section alt" id="included">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Every enquiry caught. Every lead followed up.</h2>
+        <p class="lead">A complete capture-and-follow-up system, so nothing slips through the cracks.</p>
+      </div>
+      <div class="svc-grid" id="featureGrid">
+        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>Enquiry forms</h3><p>Simple, friction-free forms that capture leads from your site, ads, and profiles.</p></div>
+        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></div><h3>WhatsApp follow-up</h3><p>Automatic, friendly WhatsApp replies and follow-ups on the channel customers prefer.</p></div>
+        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5c0 8 7 15 15 15l-2-4-3 1c-3-1-6-4-7-7l1-3-4-2z"/></svg></div><h3>Call-back tracking</h3><p>Missed calls become a clear call-back list — no enquiry forgotten.</p></div>
+        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Reminders</h3><p>Timely nudges so your team follows up before a lead goes cold.</p></div>
+        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M9 5v14"/></svg></div><h3>Simple CRM sheet/dashboard</h3><p>One clear view of every lead and its status — no complicated software.</p></div>
+        <div class="svc-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-9"/><path d="M21 7v5h-5"/></svg></div><h3>Missed-lead recovery</h3><p>We surface the leads you were about to lose and bring them back into the flow.</p></div>
       </div>
     </div>
   </section>
@@ -422,32 +448,9 @@
     </div>
   </section>
 
-  <!-- HIGHLIGHT BAND -->
-  <section class="section">
-    <div class="container reveal">
-      <div class="svc-band">
-        <div>
-          <h2>You're probably losing 1 in 4 enquiries right now.</h2>
-          <p>Slow replies, missed calls, and no follow-up quietly cost you customers every week. We find exactly where your leads are leaking — and seal it.</p>
-        </div>
-        <a class="btn btn-dark" href="/free-business-review/?service=lead-capture-follow-up">Find my missed lead leakage →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section alt">
+  <!-- FINAL CTA -->
+  <section class="section lcf-final-section">
     <div class="container">
-      <div class="section-head reveal">
-        <h2>From leaky to locked-tight in a few steps.</h2>
-        <p class="lead">No tech overwhelm. You approve each stage.</p>
-      </div>
-      <div class="svc-steps">
-        <div class="svc-step reveal"><div class="n">01</div><h4>Find the leaks</h4><p>We map where enquiries enter and where they currently get lost.</p></div>
-        <div class="svc-step reveal"><div class="n">02</div><h4>Set up capture</h4><p>Forms, WhatsApp, and call-back tracking feeding one dashboard.</p></div>
-        <div class="svc-step reveal"><div class="n">03</div><h4>Automate follow-up</h4><p>Friendly auto-replies and reminders so no lead is forgotten.</p></div>
-        <div class="svc-step reveal"><div class="n">04</div><h4>Recover &amp; track</h4><p>Old missed leads brought back, everything visible and measured.</p></div>
-      </div>
       <div class="lcf-final-cta reveal">
         <h2>Want to know where enquiries are slipping away?</h2>
         <p>Book a free review. We’ll check your enquiry flow and suggest the clearest next step — no pressure, no jargon.</p>
