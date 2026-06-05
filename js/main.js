@@ -50,22 +50,29 @@
 
 
   const revealItems = document.querySelectorAll('.reveal, .section, .section-head, .subhero, .pricing-hero, .customer-industry-hero, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card, .service-card, .actual-tile, .deliverable-tile, .before-after-card, .process-card, .industry-card, .deep-industry-card, .industry-flow-card, .pricing-card, .aics-price-card');
+  const reveal = el => el.classList.add('visible');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { reveal(entry.target); observer.unobserve(entry.target); }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
     revealItems.forEach((el, index) => {
       if (!el.classList.contains('reveal')) el.classList.add('animate-in');
       if (!el.style.transitionDelay && index < 20) el.style.transitionDelay = `${Math.min(index % 4, 3) * 0.06}s`;
       observer.observe(el);
     });
+    // Safety net: anything that has reached (or scrolled past) the viewport is
+    // revealed even on fast scrolls / anchor jumps; a timed backstop guarantees
+    // nothing can ever stay stuck invisible.
+    const sweep = () => revealItems.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.94) reveal(el);
+    });
+    window.addEventListener('scroll', sweep, { passive: true });
+    window.addEventListener('load', () => window.setTimeout(sweep, 60));
+    window.setTimeout(sweep, 1500);
   } else {
-    revealItems.forEach(el => el.classList.add('visible'));
+    revealItems.forEach(reveal);
   }
 
 
