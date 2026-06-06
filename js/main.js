@@ -2,9 +2,10 @@
 (function(){
 
   const siteLoader = document.getElementById('site-loader');
-  if (siteLoader && window.location.pathname !== '/') {
+  const isRootHomepage = window.location.pathname === '/';
+  if (siteLoader && !isRootHomepage) {
     siteLoader.remove();
-  } else if (siteLoader) {
+  } else if (siteLoader && isRootHomepage) {
     const fill = document.getElementById('site-loader-fill');
     const pct = document.getElementById('site-loader-pct');
     const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
