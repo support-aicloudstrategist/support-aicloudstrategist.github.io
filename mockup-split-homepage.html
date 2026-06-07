@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AICloudStrategist — Layout Mockup</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; background: #f8f9fb; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 40px; background: #fff; border-bottom: 1px solid #e8e8f0;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo { font-size: 18px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.5px; }
+    .logo span { color: #4f46e5; }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: #555; font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: #4f46e5; }
+    .nav-cta {
+      background: #4f46e5; color: #fff !important; padding: 8px 18px;
+      border-radius: 6px; font-size: 13px !important;
+    }
+    .nav-cta:hover { background: #3730a3; color: #fff !important; }
+
+    /* ── HERO SPLIT ── */
+    .hero {
+      padding: 64px 40px 48px;
+      text-align: center;
+      background: linear-gradient(135deg, #f0f0ff 0%, #f8f9fb 60%);
+    }
+    .hero-badge {
+      display: inline-block; background: #ede9fe; color: #5b21b6;
+      font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 20px;
+      letter-spacing: 0.5px; margin-bottom: 20px; text-transform: uppercase;
+    }
+    .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.15; margin-bottom: 12px; color: #1a1a2e; }
+    .hero h1 em { font-style: normal; color: #4f46e5; }
+    .hero p { font-size: 17px; color: #555; max-width: 540px; margin: 0 auto 40px; }
+
+    /* ── SPLIT CARDS ── */
+    .split {
+      display: flex; gap: 24px; justify-content: center;
+      padding: 0 40px 64px; flex-wrap: wrap;
+    }
+    .line-card {
+      flex: 1; min-width: 300px; max-width: 460px;
+      background: #fff; border-radius: 16px; padding: 36px 32px;
+      border: 1.5px solid #e8e8f0; box-shadow: 0 4px 24px rgba(79,70,229,0.07);
+      transition: box-shadow 0.2s;
+    }
+    .line-card:hover { box-shadow: 0 8px 36px rgba(79,70,229,0.14); }
+    .line-card.line-a { border-top: 4px solid #4f46e5; }
+    .line-card.line-b { border-top: 4px solid #06b6d4; }
+
+    .line-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 10px;
+    }
+    .line-a .line-label { color: #4f46e5; }
+    .line-b .line-label { color: #0891b2; }
+
+    .line-card h2 { font-size: 22px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
+    .line-card .tagline { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.5; }
+
+    .line-card ul { list-style: none; margin-bottom: 28px; }
+    .line-card ul li {
+      font-size: 14px; color: #444; padding: 6px 0;
+      border-bottom: 1px solid #f0f0f8; display: flex; align-items: center; gap: 8px;
+    }
+    .line-card ul li:last-child { border-bottom: none; }
+    .check-a { color: #4f46e5; font-weight: 700; }
+    .check-b { color: #0891b2; font-weight: 700; }
+
+    .line-card .audience {
+      font-size: 12px; color: #888; background: #f8f8ff;
+      border-radius: 8px; padding: 10px 14px; margin-bottom: 24px; line-height: 1.5;
+    }
+    .line-b .audience { background: #f0fbff; }
+
+    .btn {
+      display: inline-block; width: 100%; text-align: center;
+      padding: 13px 24px; border-radius: 8px; font-size: 15px; font-weight: 700;
+      text-decoration: none; cursor: pointer; transition: opacity 0.15s;
+    }
+    .btn-a { background: #4f46e5; color: #fff; }
+    .btn-a:hover { background: #3730a3; }
+    .btn-b { background: #06b6d4; color: #fff; }
+    .btn-b:hover { background: #0891b2; }
+
+    /* ── DIVIDER ── */
+    .or-divider {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; color: #aaa; font-weight: 600;
+      padding: 0 4px; flex-shrink: 0; align-self: center;
+      min-width: 32px;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      text-align: center; padding: 24px 40px;
+      border-top: 1px solid #e8e8f0; background: #fff;
+      font-size: 13px; color: #888;
+    }
+    .trust-bar strong { color: #1a1a2e; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a1a2e; color: #ccc; padding: 32px 40px;
+      font-size: 13px; display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer a { color: #a5b4fc; text-decoration: none; }
+
+    /* ── ANNOTATION LABELS ── */
+    .mockup-note {
+      background: #fffbeb; border: 1px dashed #f59e0b; border-radius: 6px;
+      font-size: 11px; color: #92400e; padding: 4px 10px; display: inline-block;
+      margin-bottom: 8px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <div class="logo">AI<span>Cloud</span>Strategist</div>
+    <ul class="nav-links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="nav-cta">Get Free Review</a></li>
+    </ul>
+  </nav>
+  <!-- NOTE: Nav is clean — no per-service clutter. One CTA. -->
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="mockup-note">MOCKUP — for approval only, not live</div><br/>
+    <div class="hero-badge">One Brand · Two AI-Powered Growth Lines</div>
+    <h1>Grow your business.<br/><em>Cut your AI & cloud costs.</em></h1>
+    <p>AICloudStrategist runs two specialist lines — choose what your business needs right now.</p>
+  </section>
+
+  <!-- ── SPLIT CARDS ── -->
+  <div class="split">
+
+    <!-- LINE 1: Core Growth -->
+    <div class="line-card line-b">
+      <div class="line-label">Line 1 — Core Growth Services</div>
+      <h2>Grow Your Business Online</h2>
+      <p class="tagline">AI-powered websites, lead capture, trust, and a full growth system — built for local and growth-stage businesses.</p>
+      <ul>
+        <li><span class="check-b">✓</span> Website &amp; Digital Presence</li>
+        <li><span class="check-b">✓</span> Lead Capture &amp; Follow-up</li>
+        <li><span class="check-b">✓</span> Trust &amp; Compliance</li>
+        <li><span class="check-b">✓</span> AI Creative Studio</li>
+        <li><span class="check-b">✓</span> Growth &amp; Control OS (full bundle)</li>
+      </ul>
+      <div class="audience">
+        Clinics · Salons · Coaching centres · Local services · Ecommerce · Consultants
+      </div>
+      <a href="#" class="btn btn-b">Grow my business online →</a>
+      <!-- Routes into existing live site (/#services and existing service pages) -->
+    </div>
+
+    <div class="or-divider">or</div>
+
+    <!-- LINE 2: AI & Cloud Cost -->
+    <div class="line-card line-a">
+      <div class="line-label">Line 2 — Specialist Service</div>
+      <h2>AI &amp; Cloud Cost Efficiency</h2>
+      <p class="tagline">Cut AI/GPU/LLM and cloud spend by 20–40%. FinOps-grade analysis for teams running cloud-heavy workloads.</p>
+      <ul>
+        <li><span class="check-a">✓</span> Cloud cost review</li>
+        <li><span class="check-a">✓</span> GPU &amp; AI workload cost review</li>
+        <li><span class="check-a">✓</span> LLM / inference cost optimisation</li>
+        <li><span class="check-a">✓</span> FinOps dashboard</li>
+        <li><span class="check-a">✓</span> Waste detection &amp; action plan</li>
+      </ul>
+      <div class="audience">
+        SaaS · AI startups · Fintech · Healthtech · Funded startups · CTOs · CFOs · Engineering leads
+      </div>
+      <a href="https://two-line-rebuild-2026-06.aicloudstrategist-site.pages.dev/" class="btn btn-a" target="_blank">Reduce AI/cloud costs →</a>
+      <!-- Routes to: two-line-rebuild-2026-06.aicloudstrategist-site.pages.dev -->
+    </div>
+
+  </div>
+
+  <!-- ── TRUST BAR ── -->
+  <div class="trust-bar">
+    <strong>DPIIT-recognised startup</strong> &nbsp;·&nbsp;
+    contact@aicloudstrategist.com &nbsp;·&nbsp;
+    +91 80654 80898 &nbsp;·&nbsp;
+    WhatsApp +91 87963 02608
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div>© 2026 AICloudStrategist. All rights reserved.</div>
+    <div>
+      <a href="#">Privacy</a> &nbsp;·&nbsp;
+      <a href="#">Terms</a> &nbsp;·&nbsp;
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
