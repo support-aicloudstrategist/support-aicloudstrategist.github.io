@@ -204,9 +204,12 @@
   .rail-btns button:hover{border-color:rgba(88,200,255,.5);background:var(--glass-2);transform:translateY(-2px);}
   .rail-btns svg{width:18px;height:18px;}
   #portfolio{overflow:hidden;}
-  .work-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
-  .work-grid .vcard{scroll-snap-align:none;flex:initial;max-width:none;width:100%;}
-  .work-grid .vmedia{aspect-ratio:4/5;}
+  #portfolio .rail{scroll-behavior:smooth;overscroll-behavior-x:contain;}
+  #portfolio .vcard{cursor:pointer;}
+  #portfolio .vcard:focus-visible{outline:3px solid rgba(88,200,255,.75);outline-offset:4px;}
+  .work-lightbox .work-modal{width:min(960px,92vw);}
+  .work-lightbox h3{margin:0 0 14px;font-size:1.1rem;font-weight:700;color:var(--ink);}
+  .work-lightbox video{width:100%;max-height:78vh;}
 
   /* ---------- before / after ---------- */
   .ba-disclaim{display:inline-block;font-size:.74rem;letter-spacing:.6px;text-transform:uppercase;color:var(--faint);
@@ -347,7 +350,6 @@
   @media(max-width:980px){
     .auth,.contact-grid{grid-template-columns:1fr;}
     .foot-inner{grid-template-columns:1fr 1fr;gap:26px;}
-    .work-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   }
   @media(max-width:860px){
     nav.main{display:none;}
@@ -380,8 +382,6 @@
     .tabs button{flex:1 0 auto;padding-left:12px;padding-right:12px;}
     .work-hint{display:block;max-width:min(100%,358px);}
     .rail{max-width:min(100%,358px);}
-    .work-grid{grid-template-columns:1fr;max-width:min(100%,358px);}
-    .work-grid .vcard{max-width:100%;}
     .vcard{flex-basis:min(300px,84vw);max-width:84vw;}
     .ba-grid,.auth,.grid-3,.grid-2,.steps,.trust-grid,.price-grid,.contact-grid{max-width:min(100%,358px);}
     .form .row{grid-template-columns:1fr;}
@@ -511,15 +511,26 @@
         <p class="lead">Premium AI-powered videos, ads, reels, and campaign visuals for modern brands — without expensive shoots, models, studios, or production teams.</p>
       </div>
 
-      <div class="work-grid reveal" aria-label="AI Creative Studio campaign styles">
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-luxury-product.jpg" alt="Product Commercials preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-product.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 01</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Product Commercials</h3><p>Cinematic product ads for launches, ecommerce, websites, and premium campaigns.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-fashion-brands.jpg" alt="Fashion Campaigns preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-fashion-brands.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 02</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Fashion Campaigns</h3><p>Editorial-style AI fashion visuals, model-led campaign scenes, and premium brand stories.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-cosmetics.jpg" alt="Skincare / Beauty Ads preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-cosmetics.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 03</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Skincare / Beauty Ads</h3><p>Luxury beauty visuals, skincare product films, glow-focused reels, and launch ads.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-luxury-products.jpg" alt="Jewelry / Luxury Product Ads preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-products.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 04</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Jewelry / Luxury Product Ads</h3><p>High-end product visuals with cinematic lighting, close-up detail, and premium atmosphere.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/before-after/cafe-after.webp" alt="Food / Cafe Commercials preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-neon-brand.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 05</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Food / Cafe Commercials</h3><p>Warm, appetizing food and cafe visuals for reels, offers, launches, and brand promotion.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-influencers-creators.jpg" alt="Founder / Personal Brand Films preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-influencers-creators.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 06</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Founder / Personal Brand Films</h3><p>Cinematic story videos for founders, creators, consultants, coaches, and personal brands.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-luxury-product.jpg" alt="Ecommerce Product Ads preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-product.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 07</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Ecommerce Product Ads</h3><p>Scroll-stopping product ads for marketplaces, D2C brands, websites, and social campaigns.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
-        <article class="vcard"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-neon-brand.jpg" alt="Social Media Reels / Launch Campaigns preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-neon-brand.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 08</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Social Media Reels / Launch Campaigns</h3><p>Short-form reels, launch teasers, offer videos, and campaign assets for social platforms.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+      <div class="work-hint reveal">
+        <span>Swipe through premium campaign styles AI Creative Studio can create for your brand.</span>
+        <span><span class="count">8 campaign styles</span> · Scroll / arrows</span>
+      </div>
+
+      <div class="panel active reveal" id="panel-format">
+        <div class="rail-wrap">
+          <div class="rail" id="railFormat" aria-label="AI Creative Studio campaign carousel">
+            <article class="vcard" tabindex="0" data-title="Product Commercials" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-product.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-luxury-product.jpg" alt="Product Commercials preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-product.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 01</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Product Commercials</h3><p>Cinematic product ads for launches, ecommerce, websites, and premium campaigns.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <article class="vcard" tabindex="0" data-title="Fashion Campaigns" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-fashion-brands.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-fashion-brands.jpg" alt="Fashion Campaigns preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-fashion-brands.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 02</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Fashion Campaigns</h3><p>Editorial-style AI fashion visuals, model-led campaign scenes, and premium brand stories.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <article class="vcard" tabindex="0" data-title="Skincare / Beauty Ads" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-cosmetics.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-cosmetics.jpg" alt="Skincare / Beauty Ads preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-cosmetics.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 03</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Skincare / Beauty Ads</h3><p>Luxury beauty visuals, skincare product films, glow-focused reels, and launch ads.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <article class="vcard" tabindex="0" data-title="Jewelry / Luxury Product Ads" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-products.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-luxury-products.jpg" alt="Jewelry / Luxury Product Ads preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-products.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 04</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Jewelry / Luxury Product Ads</h3><p>High-end product visuals with cinematic lighting, close-up detail, and premium atmosphere.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <!-- TODO: Replace placeholder video when final Food / Cafe-specific preview asset is available. -->
+            <article class="vcard" tabindex="0" data-title="Food / Cafe Commercials" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-neon-brand.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/before-after/cafe-after.webp" alt="Food / Cafe Commercials preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-neon-brand.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 05</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Food / Cafe Commercials</h3><p>Warm, appetizing food and cafe visuals for reels, offers, launches, and brand promotion.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <article class="vcard" tabindex="0" data-title="Founder / Personal Brand Films" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-influencers-creators.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-influencers-creators.jpg" alt="Founder / Personal Brand Films preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-influencers-creators.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 06</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Founder / Personal Brand Films</h3><p>Cinematic story videos for founders, creators, consultants, coaches, and personal brands.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <article class="vcard" tabindex="0" data-title="Ecommerce Product Ads" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-product.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-luxury-product.jpg" alt="Ecommerce Product Ads preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-luxury-product.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 07</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Ecommerce Product Ads</h3><p>Scroll-stopping product ads for marketplaces, D2C brands, websites, and social campaigns.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+            <article class="vcard" tabindex="0" data-title="Social Media Reels / Launch Campaigns" data-video="/assets/ai-creative-studio/video/portfolio/portfolio-neon-brand.webm"><div class="vmedia"><img src="/assets/ai-creative-studio/images/video-posters/portfolio-neon-brand.jpg" alt="Social Media Reels / Launch Campaigns preview"><video src="/assets/ai-creative-studio/video/portfolio/portfolio-neon-brand.webm" muted loop playsinline preload="none"></video><span class="vbadge">Campaign style 08</span><span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vbody"><h3>Social Media Reels / Launch Campaigns</h3><p>Short-form reels, launch teasers, offer videos, and campaign assets for social platforms.</p><span class="vlink">Preview campaign style <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></article>
+          </div>
+        </div>
+        <div class="rail-btns"><button data-rail="railFormat" data-dir="-1" aria-label="Previous campaign styles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button><button data-rail="railFormat" data-dir="1" aria-label="Next campaign styles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button></div>
       </div>
     </div>
   </section>
@@ -769,6 +780,15 @@
   </footer>
 </div>
 
+<!-- work preview lightbox -->
+<div class="lightbox work-lightbox" id="workLightbox" role="dialog" aria-modal="true" aria-label="Campaign style preview">
+  <button class="close" id="workLbClose" aria-label="Close preview">×</button>
+  <div class="work-modal">
+    <h3 id="workLbTitle">Campaign preview</h3>
+    <video id="workLbVideo" controls playsinline></video>
+  </div>
+</div>
+
 <!-- floating cta -->
 <a class="float-cta" href="https://wa.me/918796302608?text=Hi%20AI%20Creative%20Studio%2C%20I%20want%20premium%20AI%20ads%20for%20my%20brand.">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Z"/></svg>
@@ -801,45 +821,48 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
   }
 
-  // work tabs
-  const hintLabel = document.getElementById('hintLabel');
-  const hintCount = document.getElementById('hintCount');
-  document.querySelectorAll('.tabs button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const t = btn.dataset.tab;
-      document.getElementById('panel-format').classList.toggle('active', t==='format');
-      document.getElementById('panel-type').classList.toggle('active', t==='type');
-      if (t==='format'){ hintLabel.textContent='Choose a content format — swipe through clear ad, reel, film, and visual formats AI Creative Studio can create.'; hintCount.textContent='8 visual concepts'; }
-      else { hintLabel.textContent='Choose a business type — see the campaign look that fits your kind of brand.'; hintCount.textContent='6 brand types'; }
-    });
-  });
-
-  // rail arrows
-  document.querySelectorAll('.rail-btns button').forEach(b => {
+  // work carousel + preview lightbox
+  document.querySelectorAll('#portfolio .rail-btns button').forEach(b => {
     b.addEventListener('click', () => {
       const rail = document.getElementById(b.dataset.rail);
-      rail.scrollBy({left: (+b.dataset.dir) * 340, behavior: RM ? 'auto' : 'smooth'});
+      if (!rail) return;
+      rail.scrollBy({left: (+b.dataset.dir) * Math.min(680, rail.clientWidth * .9), behavior: RM ? 'auto' : 'smooth'});
     });
   });
 
-  // portfolio video play (hover desktop, tap mobile)
-  document.querySelectorAll('.vcard').forEach(card => {
-    const vid = card.querySelector('video');
-    if (!vid) return;
-    const play = () => { card.classList.add('playing'); vid.play().catch(()=>{}); };
-    const stop = () => { card.classList.remove('playing'); vid.pause(); };
-    if (FINE){
-      card.addEventListener('mouseenter', play);
-      card.addEventListener('mouseleave', stop);
+  const workLb = document.getElementById('workLightbox');
+  const workLbVideo = document.getElementById('workLbVideo');
+  const workLbTitle = document.getElementById('workLbTitle');
+  const closeWorkLb = () => {
+    if (!workLb) return;
+    workLb.classList.remove('open');
+    document.body.style.overflow = '';
+    workLbVideo.pause();
+    workLbVideo.removeAttribute('src');
+    workLbVideo.load();
+  };
+  const openWorkLb = card => {
+    if (!workLb || !card) return;
+    document.querySelectorAll('#portfolio .vmedia video').forEach(v => { v.pause(); v.closest('.vcard')?.classList.remove('playing'); });
+    workLbTitle.textContent = card.dataset.title || card.querySelector('h3')?.textContent || 'Campaign preview';
+    workLbVideo.src = card.dataset.video || card.querySelector('video')?.getAttribute('src') || '';
+    workLb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    workLbVideo.play().catch(()=>{});
+  };
+
+  document.querySelectorAll('#portfolio .vcard').forEach(card => {
+    const vid = card.querySelector('.vmedia video');
+    if (vid && FINE && !RM){
+      card.addEventListener('mouseenter', () => { card.classList.add('playing'); vid.play().catch(()=>{}); });
+      card.addEventListener('mouseleave', () => { card.classList.remove('playing'); vid.pause(); });
     }
-    card.querySelector('.vplay').addEventListener('click', (e) => {
-      e.preventDefault();
-      if (card.classList.contains('playing')) stop(); else play();
-    });
-    card.querySelector('.vlink').addEventListener('click', (e)=>{ e.preventDefault(); if(card.classList.contains('playing')) stop(); else play(); });
+    card.addEventListener('click', e => { e.preventDefault(); openWorkLb(card); });
+    card.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openWorkLb(card); }});
   });
+  document.getElementById('workLbClose')?.addEventListener('click', closeWorkLb);
+  workLb?.addEventListener('click', e => { if (e.target === workLb) closeWorkLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && workLb?.classList.contains('open')) closeWorkLb(); });
 
   // before/after sliders
   document.querySelectorAll('[data-ba]').forEach(ba => {
