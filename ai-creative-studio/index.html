@@ -129,8 +129,8 @@
 
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;}
-  .hero-video{position:absolute;inset:0;z-index:0;}
-  .hero-video video{width:100%;height:100%;object-fit:cover;}
+  .hero-video{position:absolute;inset:0;z-index:0;background-image:url("/assets/ai-creative-studio/images/ai-creative-hero-poster.jpg");background-size:cover;background-position:center center;}
+  .hero-video video{width:100%;height:100%;object-fit:cover;object-position:center center;}
   .hero-video video{filter:saturate(1.05) contrast(1.03);}
   /* light, side-anchored scrim so the VIDEO stays visible; text kept legible via shadows below */
   .hero-video::after{content:"";position:absolute;inset:0;
@@ -385,6 +385,7 @@
     .reveal{opacity:1;transform:none;transition:none;}
     .btn-primary::after{display:none;}
     .reel-frame img,*{scroll-behavior:auto;}
+    .hero-video video{display:none;}
   }
 </style>
 </head>
@@ -443,7 +444,7 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-video" aria-hidden="true">
-      <video src="/assets/ai-creative-studio/video/hero-background.mp4" poster="/assets/ai-creative-studio/images/hero-background-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <video src="/assets/ai-creative-studio/video/ai-creative-hero.mp4" poster="/assets/ai-creative-studio/images/ai-creative-hero-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
     </div>
     <div class="container">
       <span class="eyebrow reveal">Service 04 · AI Creative Studio</span>
