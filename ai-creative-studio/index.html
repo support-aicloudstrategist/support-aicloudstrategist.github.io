@@ -379,7 +379,7 @@
     .ba-grid,.auth,.grid-3,.grid-2,.steps,.trust-grid,.price-grid,.contact-grid{max-width:min(100%,358px);}
     .form .row{grid-template-columns:1fr;}
     .foot-inner{grid-template-columns:1fr;}
-    .float-cta{left:14px;right:14px;bottom:12px;justify-content:center;white-space:normal;text-align:center;max-width:calc(100vw - 28px);padding-left:12px;padding-right:12px;}
+    .float-cta{left:14px;right:auto;bottom:12px;width:calc(100vw - 28px);max-width:none;box-sizing:border-box;justify-content:center;white-space:normal;text-align:center;padding-left:12px;padding-right:12px;}
   }
   @media (prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none;}
@@ -443,7 +443,7 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-video" aria-hidden="true">
-      <video src="/assets/ai-creative-studio/video/hero-mixkit-44541.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <video src="/assets/ai-creative-studio/video/hero-background.mp4" poster="/assets/ai-creative-studio/images/hero-background-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
     </div>
     <div class="container">
       <span class="eyebrow reveal">Service 04 · AI Creative Studio</span>
@@ -874,7 +874,7 @@
   // showreel lightbox (plays the hero film)
   const lb = document.getElementById('lightbox');
   const lbVideo = document.getElementById('lbVideo');
-  const HERO = '/assets/ai-creative-studio/video/hero-mixkit-44541.mp4';
+  const HERO = '/assets/ai-creative-studio/video/hero-background.mp4';
   const openReel = () => { lbVideo.src = HERO; lb.classList.add('open'); lbVideo.play().catch(()=>{}); };
   const closeReel = () => { lb.classList.remove('open'); lbVideo.pause(); lbVideo.removeAttribute('src'); lbVideo.load(); };
   const reel = document.getElementById('reelFrame');
