@@ -1,24 +1,465 @@
-<!doctype html>
-<html lang="en-IN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Growth & Control OS | AICloudStrategist</title>
-  <meta name="description" content="A premium managed operating system that combines website, lead capture, trust, AI creative, automation, dashboards, and cloud/FinOps visibility for serious businesses."/>
-  <link rel="canonical" href="https://aicloudstrategist.com/growth-control-os/"/>
-  <meta name="robots" content="index, follow"/>
-  <style>
-    :root{--navy:#061527;--navy2:#0b2340;--cyan:#28d5ff;--teal:#21e3b1;--soft:#eaf8ff;--muted:#627487;--ink:#0e1b2a;--line:#dce8f2;--card:#fff;--gold:#ffc766}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f6fbff;line-height:1.55}a{color:inherit;text-decoration:none}.top{background:rgba(6,21,39,.94);backdrop-filter:blur(12px);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.1)}.nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;letter-spacing:.2px}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:18px;color:#cde3f4;font-size:14px}.pill{padding:10px 16px;border:1px solid rgba(40,213,255,.55);border-radius:999px;color:#eaffff;background:rgba(40,213,255,.08)}.hero{background:radial-gradient(circle at 16% 10%,rgba(40,213,255,.32),transparent 28%),radial-gradient(circle at 90% 5%,rgba(33,227,177,.22),transparent 26%),linear-gradient(135deg,var(--navy),#0a2b51 55%,#062235);color:white;overflow:hidden}.wrap{max-width:1180px;margin:auto;padding:82px 22px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px;color:#d9f9ff}.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 18px var(--teal)}h1{font-size:58px;line-height:1.03;margin:20px 0 18px;letter-spacing:-2px}h2{font-size:38px;line-height:1.12;letter-spacing:-1px;margin:0 0 12px}h3{margin:0 0 10px;font-size:22px}.sub,.lead{font-size:20px;color:#d7eefa;max-width:760px}.lead{color:#52667b}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:16px;padding:15px 22px;font-weight:850}.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--teal));color:#042035;box-shadow:0 18px 44px rgba(33,227,177,.22)}.btn.secondary{border:1px solid rgba(255,255,255,.22);color:white;background:rgba(255,255,255,.08)}.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.24)}.dash{background:#071a30;border-radius:24px;padding:22px}.metric{display:flex;justify-content:space-between;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:14px;margin:12px 0}.metric span{color:#89f6e6}.section{max-width:1180px;margin:auto;padding:70px 22px}.alt{max-width:none;background:white;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.alt>.inner{max-width:1180px;margin:auto}.grid{display:grid;gap:20px}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 18px 52px rgba(12,43,78,.08)}.alt .card{background:#f8fcff}.icon{width:46px;height:46px;border-radius:16px;background:#071a30;color:#7ffbea;display:grid;place-items:center;font-weight:950;margin-bottom:15px}.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.badge{padding:9px 12px;border-radius:999px;background:#e9f8ff;color:#0b4366;font-weight:800;font-size:13px}.price{display:inline-flex;padding:7px 10px;border-radius:999px;background:#10223c;color:#8affea;font-weight:900;font-size:12px;margin-bottom:12px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}.step{background:#071a30;color:white;border-radius:18px;padding:18px;min-height:110px}.step b{display:block;font-size:18px}.step span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--teal));color:#042035;font-weight:950;margin-bottom:12px}.cta{background:linear-gradient(135deg,#071a30,#0b5163);color:white}.cta .box{max-width:1180px;margin:auto;padding:48px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer{background:#04111f;color:#bcd0df;padding:30px 22px;text-align:center;font-size:14px}@media(max-width:900px){.hero-grid,.three,.two,.flow{grid-template-columns:1fr}.navlinks{display:none}h1{font-size:42px}.cta .box{align-items:flex-start;flex-direction:column}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth &amp; Control OS | AICloudStrategist</title>
+<meta name="description" content="A premium managed operating system that combines website, lead capture, trust, AI creative, automation, dashboards, and cloud/FinOps visibility for serious businesses.">
+<link rel="canonical" href="https://aicloudstrategist.com/growth-control-os/">
+
+<!--
+  Growth & Control OS — redesigned in the AICloudStrategist premium design
+  system (dark teal-navy, cyan/teal/violet, glass) with animations.
+  Content, links, and section structure preserved from the original.
+-->
+
+<style>
+  :root{
+    --bg-0:#04131a; --bg-1:#06202b;
+    --ink:#eaf6fb; --muted:#9db4c0; --faint:#5f7a87;
+    --cyan:#58c8ff; --teal:#25e6c8; --blue:#4d8cff; --violet:#8d6cff;
+    --line:rgba(255,255,255,.09);
+    --glass:rgba(255,255,255,.038);
+    --glass-2:rgba(255,255,255,.06);
+    --shadow:0 30px 80px -30px rgba(0,0,0,.8);
+    --r-lg:24px; --r-md:16px; --r-sm:11px;
+    --font:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --maxw:1280px;
+    --grad:linear-gradient(100deg,var(--cyan),var(--teal) 45%,var(--violet));
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg-0);color:var(--ink);font-family:var(--font);
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{letter-spacing:-0.045em;line-height:1.06;margin:0;font-weight:800;}
+
+  /* atmosphere */
+  .bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+  .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.42;will-change:transform;}
+  .o1{width:42vw;height:42vw;left:-12vw;top:-8vw;background:radial-gradient(circle,rgba(88,200,255,.5),transparent 65%);animation:drift1 28s ease-in-out infinite;}
+  .o2{width:40vw;height:40vw;right:-12vw;top:18vh;background:radial-gradient(circle,rgba(141,108,255,.46),transparent 65%);animation:drift2 32s ease-in-out infinite;}
+  .o3{width:46vw;height:46vw;left:22vw;bottom:-22vw;background:radial-gradient(circle,rgba(37,230,200,.3),transparent 62%);animation:drift3 36s ease-in-out infinite;}
+  @keyframes drift1{50%{transform:translate(6vw,4vh) scale(1.08);}}
+  @keyframes drift2{50%{transform:translate(-5vw,5vh) scale(1.1);}}
+  @keyframes drift3{50%{transform:translate(3vw,-4vh) scale(.94);}}
+  .grid-veil{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45;
+    background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+    background-size:66px 66px;-webkit-mask-image:radial-gradient(120% 75% at 50% 0%,#000 30%,transparent 80%);mask-image:radial-gradient(120% 75% at 50% 0%,#000 30%,transparent 80%);}
+
+  .wrap{position:relative;z-index:2;}
+  .container{width:min(100% - (clamp(18px,3vw,42px) * 2),var(--maxw));max-width:none;margin:0 auto;padding-left:0;padding-right:0;}
+  @media(max-width:640px){.container{width:min(100% - 36px,var(--maxw));}.actions{display:grid;grid-template-columns:1fr}.btn{width:100%;min-height:52px;text-align:center;white-space:normal}}
+  .pad{padding:clamp(72px,7vw,104px) 0;}
+
+  /* shared */
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;margin-bottom:18px;
+    border:1px solid rgba(88,200,255,.28);background:linear-gradient(90deg,rgba(88,200,255,.1),rgba(141,108,255,.1));
+    font-size:.72rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--cyan);}
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{50%{opacity:.35;transform:scale(.7);}}
+  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .h-sec{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;max-width:22ch;font-weight:900;}
+  .lead{color:#cbd5e1;font-size:clamp(1rem,1.5vw,1.12rem);max-width:860px;line-height:1.65;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 24px;border-radius:999px;
+    font-weight:900;font-size:.96rem;cursor:pointer;border:1px solid transparent;position:relative;overflow:hidden;
+    transition:transform .3s ease,box-shadow .35s ease,border-color .3s ease,background .3s ease;}
+  .btn .arrow{transition:transform .35s cubic-bezier(.22,1,.36,1);}
+  .btn:hover .arrow{transform:translateX(5px);}
+  .btn.primary{color:#04131a;background:var(--grad);box-shadow:0 18px 44px -18px rgba(88,200,255,.75);}
+  .btn.primary:hover{transform:translateY(-3px);box-shadow:0 24px 54px -16px rgba(141,108,255,.7);}
+  .btn.primary::after{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .6s ease;}
+  .btn.primary:hover::after{left:150%;}
+  .btn.secondary{color:#eaf6fb;border-color:rgba(88,200,255,.28);background:rgba(255,255,255,.055);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);}
+  .btn.secondary:hover{transform:translateY(-3px);border-color:rgba(88,200,255,.6);background:linear-gradient(90deg,rgba(88,200,255,.13),rgba(141,108,255,.13));}
+
+  .card{border:1px solid rgba(88,200,255,.16);background:linear-gradient(160deg,rgba(12,38,48,.72),rgba(8,26,34,.72));
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.22);
+    transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .45s;}
+  .card.hoverable:hover{transform:translateY(-8px);border-color:rgba(88,200,255,.42);
+    box-shadow:0 36px 80px -30px rgba(0,0,0,.8),0 14px 50px -30px rgba(88,200,255,.55);}
+
+  /* header */
+  /* top bar (home style) */
+  .topbar{position:relative;z-index:41;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,8,15,.88);backdrop-filter:blur(10px);font-size:13px;color:#c9d8e6;}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:38px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+  .topbar a{color:#eaf6fb;font-weight:600;transition:color .25s;}
+  .topbar a:hover{color:var(--cyan);}
+  .topbar-sep{opacity:.5;}
+
+  /* navbar (home style) */
+  nav.nav{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);
+    background:rgba(4,19,26,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;}
+  .brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
+    font-size:.82rem;font-weight:900;letter-spacing:.01em;color:#04131a;background:var(--grad);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
+  .nav-links{display:flex;align-items:center;gap:22px;}
+  .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500;position:relative;transition:color .25s;}
+  .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;border-radius:2px;background:var(--grad);transition:width .3s ease;}
+  .nav-links a:not(.nav-cta):hover{color:var(--ink);} .nav-links a:not(.nav-cta):hover::after{width:100%;}
+  .nav-cta{color:#04131a!important;background:var(--grad);padding:10px 16px;border-radius:11px;font-weight:600;
+    transition:transform .25s,box-shadow .3s;box-shadow:0 12px 30px -14px rgba(88,200,255,.8);}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(141,108,255,.8);}
+  .nav-cta-short{display:none;}
+  .mobile-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--glass);color:var(--ink);font-size:1.3rem;cursor:pointer;align-items:center;justify-content:center;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:52px;align-items:center;padding-top:clamp(64px,7vw,96px);padding-bottom:clamp(64px,7vw,96px);}
+  .hero h1{font-size:clamp(2.55rem,5vw,4.4rem);font-weight:950;max-width:15ch;margin:0 0 20px;letter-spacing:-.06em;}
+  .hero .sub{color:#cbd5e1;font-size:clamp(1.03rem,1.55vw,1.2rem);max-width:64ch;margin:0 0 30px;line-height:1.65;}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;}
+
+  /* dashboard card */
+  .hero-card{position:relative;}
+  .dash{padding:26px 24px;border-radius:var(--r-lg);border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--glass-2),var(--glass));backdrop-filter:blur(16px);box-shadow:var(--shadow);position:relative;overflow:hidden;}
+  .dash::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--grad);opacity:.85;}
+  .dash h3{font-size:1.12rem;font-weight:700;margin:0 0 18px;display:flex;align-items:center;gap:10px;}
+  .dash h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal);animation:pulse 2s ease-in-out infinite;}
+  .metric{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 15px;border-radius:12px;
+    border:1px solid var(--line);background:rgba(4,19,26,.4);margin-bottom:10px;
+    opacity:0;transform:translateX(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1);}
+  .dash.in .metric{opacity:1;transform:none;}
+  .dash.in .metric:nth-child(2){transition-delay:.08s;}
+  .dash.in .metric:nth-child(3){transition-delay:.16s;}
+  .dash.in .metric:nth-child(4){transition-delay:.24s;}
+  .dash.in .metric:nth-child(5){transition-delay:.32s;}
+  .metric b{font-weight:600;font-size:.95rem;color:var(--ink);}
+  .metric span{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--teal);
+    padding:5px 11px;border-radius:999px;border:1px solid rgba(37,230,200,.28);background:rgba(37,230,200,.08);}
+  .metric span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal);animation:pulse 1.8s ease-in-out infinite;}
+  .dash .goal{color:#bdd8ea;margin:16px 0 0;font-size:.9rem;line-height:1.55;}
+
+  /* sections */
+  .section.alt{background:linear-gradient(180deg,transparent,rgba(6,28,38,.45),transparent);}
+  .grid{display:grid;gap:22px;}
+  .grid.three{grid-template-columns:repeat(3,1fr);}
+  .grid.two{grid-template-columns:repeat(2,1fr);}
+
+  .scard{padding:30px 26px;position:relative;overflow:hidden;}
+  .scard::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--grad);opacity:.7;transform:scaleX(0);transform-origin:left;transition:transform .5s ease;}
+  .scard:hover::after{transform:scaleX(1);}
+  .scard .icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-weight:800;font-size:1.2rem;color:#04131a;
+    background:var(--grad);box-shadow:0 12px 30px -12px rgba(88,200,255,.8);margin-bottom:16px;}
+  .scard h3{font-size:1.25rem;font-weight:900;margin:0 0 10px;letter-spacing:-.035em;}
+  .scard p{color:#9fb6c2;font-size:.96rem;margin:0;line-height:1.62;}
+
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+  .badge{font-size:.82rem;font-weight:600;color:#dceaf0;padding:8px 14px;border-radius:999px;border:1px solid var(--line);
+    background:rgba(255,255,255,.04);transition:border-color .25s,background .25s,transform .25s;}
+  .badge:hover{border-color:rgba(88,200,255,.5);background:rgba(88,200,255,.08);transform:translateY(-2px);}
+
+  /* flow */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:34px;position:relative;}
+  .flow::before{content:"";position:absolute;left:6%;right:6%;top:26px;height:2px;
+    background:linear-gradient(90deg,var(--cyan),var(--teal),var(--violet));opacity:.35;border-radius:2px;}
+  .step{position:relative;text-align:center;padding:0 6px;}
+  .step span{position:relative;z-index:2;display:grid;place-items:center;width:52px;height:52px;margin:0 auto 14px;border-radius:50%;
+    font-weight:800;color:#04131a;background:var(--grad);box-shadow:0 12px 30px -12px rgba(88,200,255,.8);
+    border:3px solid var(--bg-0);transition:transform .3s ease;}
+  .step:hover span{transform:scale(1.1) translateY(-2px);}
+  .step b{display:block;font-size:1rem;font-weight:700;margin-bottom:5px;}
+  .step small{color:var(--muted);font-size:.84rem;line-height:1.45;display:block;}
+
+  /* offer ladder */
+  .price{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--violet);
+    padding:5px 12px;border-radius:999px;border:1px solid rgba(141,108,255,.3);background:rgba(141,108,255,.08);margin-bottom:14px;}
+
+  /* cta */
+  .ctaband .box{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+    padding:38px 36px;border-radius:var(--r-lg);position:relative;overflow:hidden;
+    border:1px solid var(--line);background:linear-gradient(120deg,rgba(88,200,255,.12),rgba(141,108,255,.12));backdrop-filter:blur(14px);box-shadow:var(--shadow);}
+  .ctaband .box::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 80% 20%,rgba(37,230,200,.18),transparent 70%);pointer-events:none;}
+  .ctaband h2{font-size:clamp(1.4rem,2.6vw,1.9rem);}
+  .ctaband p{font-size:1rem;}
+
+  /* footer */
+  footer.footer{position:relative;z-index:2;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);}
+  .footer-main-grid{display:grid;grid-template-columns:1.1fr .76fr .94fr .88fr 1.08fr;gap:28px;padding:54px 0 34px;}
+  .footer-brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:14px;}
+  .footer-brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;font-size:.82rem;font-weight:900;color:#04131a;background:var(--grad);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
+  .footer-brand-block p{color:var(--muted);font-size:.9rem;line-height:1.6;max-width:300px;margin:0;}
+  .footer-disclaimer{color:var(--faint)!important;font-size:.78rem!important;line-height:1.55;margin-top:14px!important;max-width:320px;}
+  .footer-links-group h3,.footer-contact-block h3{font-size:.72rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--faint);font-weight:700;margin:0 0 14px;}
+  .footer-links-group a{display:block;color:var(--muted);font-size:.9rem;margin-bottom:10px;transition:color .25s;}
+  .footer-links-group a:hover{color:var(--cyan);}
+  .footer-contact-pills{display:grid;gap:10px;}
+  .footer-contact-pills a{color:var(--muted);font-size:.9rem;transition:color .25s;word-break:break-word;}
+  .footer-contact-pills a:hover{color:var(--cyan);}
+  .footer-bottom-row{border-top:1px solid var(--line);padding:16px 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--faint);}
+  .footer-bottom-row a{color:var(--faint);transition:color .25s;} .footer-bottom-row a:hover{color:var(--muted);}
+  .footer-bottom-row span:last-child{margin-left:auto;}
+  @media(max-width:900px){.footer-main-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.footer-main-grid{grid-template-columns:1fr;} .footer-bottom-row{flex-direction:column;align-items:flex-start;} .footer-bottom-row span:last-child{margin-left:0;}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .grid.three,.grid.two{grid-template-columns:1fr;}
+    .flow{grid-template-columns:1fr;gap:14px;}
+    .flow::before{display:none;}
+    .step{display:flex;align-items:center;gap:16px;text-align:left;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--glass);}
+    .step span{margin:0;flex:0 0 auto;width:46px;height:46px;}
+  }
+  @media(max-width:860px){
+    .mobile-toggle{display:flex;}
+    .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(4,19,26,.98);border-bottom:1px solid var(--line);padding:6px 0;backdrop-filter:blur(16px);}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:13px 22px;}
+    .nav-links a:not(.nav-cta)::after{display:none;}
+    .nav-cta{margin:8px 22px 6px;text-align:center;}
+    .nav-cta-full{display:none;} .nav-cta-short{display:inline;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .orb,.eyebrow .dot,.dash h3::before,.metric span::before{animation:none!important;}
+    .reveal,.dash .metric{opacity:1!important;transform:none!important;}
+    .btn.primary::after{display:none;}
+    *{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
-<header class="top"><div class="nav"><a class="brand" href="/">AI<span>Cloud</span>Strategist</a><nav class="navlinks"><a href="/#services">Services</a><a href="/growth-control-os/">Growth & Control OS</a><a href="/healthcare-growthos/">Healthcare GrowthOS</a><a href="/roi-calculator/">ROI Calculator</a><a href="/contact.html">Contact</a></nav><a class="pill" href="/free-business-review/?service=growth-control-os">Request Growth Review</a></div></header>
-<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow"><i class="dot"></i> Premium bundle · AICloudStrategist</div><h1>One managed system for growth, automation, trust, and control.</h1><p class="sub">Growth & Control OS combines the four core services — website, lead capture, trust, and AI creative — with owner dashboards, simple automation, ROI measurement, and selected Cloud Trust/FinOps visibility for serious businesses.</p><div class="actions"><a class="btn primary" href="/free-business-review/?service=growth-control-os">Request Growth Review</a><a class="btn secondary" href="#system">See the system</a></div></div><div class="hero-card"><div class="dash"><h3>Owner Control View</h3><div class="metric"><b>Enquiries</b><span>Captured</span></div><div class="metric"><b>Follow-up</b><span>Tracked</span></div><div class="metric"><b>Trust readiness</b><span>Improving</span></div><div class="metric"><b>ROI signals</b><span>Visible</span></div><p style="color:#bdd8ea;margin:16px 0 0">Goal: fewer disconnected tools, clearer growth signals, and better owner control.</p></div></div></div></section>
-<section class="section" id="system"><h2>Use the four services separately — or combine them into one operating system.</h2><p class="lead">This is the premium bundle for businesses that need more than a website or one campaign. It connects digital presence, enquiries, follow-up, trust, automation, creative, and reporting into a practical weekly operating rhythm.</p><div class="grid three" style="margin-top:28px"><div class="card"><div class="icon">1</div><h3>Growth foundation</h3><p>Website & Digital Presence, local visibility/SEO basics, service pages, enquiry paths, and clear offer messaging.</p></div><div class="card"><div class="icon">2</div><h3>Lead recovery loop</h3><p>Lead Capture & Follow-up, WhatsApp/preferred-channel replies, simple tracking, owner alerts, and missed-lead reduction.</p></div><div class="card"><div class="icon">3</div><h3>Trust + control layer</h3><p>Trust & Compliance basics, consent-aware handling, dashboards, automation, and selective Cloud Trust/FinOps reviews where relevant.</p></div></div></section>
-<section class="section alt"><div class="inner"><h2>What the structure now looks like</h2><p class="lead">The public website stays simple: four clear service pages, one premium bundle, and targeted specialist pages for healthcare and cloud-heavy buyers.</p><div class="grid two" style="margin-top:28px"><div class="card"><h3>Public service menu</h3><div class="badge-row"><span class="badge">Website & Digital Presence</span><span class="badge">Lead Capture & Follow-up</span><span class="badge">Trust & Compliance</span><span class="badge">AI Creative Studio</span><span class="badge">Growth & Control OS</span></div></div><div class="card"><h3>Specialist lanes</h3><p>Healthcare GrowthOS stays visible for healthcare facilities. Cloud Trust & FinOps stays targeted for SaaS, fintech, healthtech, and cloud-heavy buyers rather than becoming a confusing general service card.</p></div></div></div></section>
-<section class="section"><h2>Simple implementation flow</h2><p class="lead">We do not ask serious buyers to buy blindly. We start with a review, show the business case, then build the first useful system and improve it from real signals.</p><div class="flow"><div class="step"><span>1</span><b>Review</b><small>Leakage, visibility, trust, cloud/ops signals</small></div><div class="step"><span>2</span><b>Business case</b><small>ROI assumptions and priority fixes</small></div><div class="step"><span>3</span><b>Sprint</b><small>Website, lead, trust, or creative build</small></div><div class="step"><span>4</span><b>Dashboard</b><small>Owner view and weekly rhythm</small></div><div class="step"><span>5</span><b>Retainer</b><small>Managed improvements and control</small></div></div></section>
-<section class="section"><h2>Offer ladder</h2><div class="grid three" style="margin-top:28px"><div class="card"><div class="price">Entry</div><h3>Free / focused review</h3><p>Find visible gaps in growth, trust, follow-up, cloud cost, or manual work. Useful before a proposal.</p></div><div class="card"><div class="price">Sprint</div><h3>Build sprint</h3><p>Install the first useful part of the system: page, follow-up loop, trust layer, creative pack, dashboard, or FinOps review.</p></div><div class="card"><div class="price">Managed OS</div><h3>Monthly Growth & Control OS</h3><p>Ongoing measurement, improvements, content/creative support, automation, trust hygiene, dashboard updates, and owner reporting.</p></div></div></section>
-<section class="cta"><div class="box"><div><h2 style="margin:0 0 8px">Ready to see where growth or control is leaking?</h2><p style="margin:0;color:#d6edf8">Start with a focused review. We will show value areas and practical next steps before a larger proposal.</p></div><a class="btn primary" href="/free-business-review/?service=growth-control-os">Request Growth Review</a></div></section>
-<footer class="footer">Safe claim: We use diagnostics, calculators, and owner dashboards to estimate value and track progress. We do not guarantee revenue outcomes or fabricate proof.</footer>
+
+<div class="bg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="grid-veil" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Websites · Automation · Trust · AI Creatives — for businesses worldwide.</span>
+      <span>
+        <a href="tel:+918065480898">Call +91 80654 80898</a>
+        <span class="topbar-sep"> · </span>
+        <a href="https://wa.me/918796302608">WA +91 87963 02608</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/home-core-growth/">
+        <span class="mark">AI</span>
+        <span>AICloudStrategist</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/home-core-growth/">Home</a>
+        <a href="/home-core-growth/#services">Services</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact.html">Contact</a>
+        <a class="nav-cta" href="/free-business-review/">
+          <span class="nav-cta-full">Get free growth review</span>
+          <span class="nav-cta-short">Free review</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow reveal"><i class="dot"></i> Premium bundle · AICloudStrategist</div>
+        <h1 class="reveal">One <span class="grad">managed system</span> for growth, automation, trust, and control.</h1>
+        <p class="sub reveal">Growth &amp; Control OS combines the four core services — website, lead capture, trust, and AI creative — with owner dashboards, simple automation, ROI measurement, and selected Cloud Trust/FinOps visibility for serious businesses.</p>
+        <div class="actions reveal">
+          <a class="btn primary" href="/free-business-review/?service=growth-control-os">Request Growth Review <span class="arrow">→</span></a>
+          <a class="btn secondary" href="#system">See the system</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="dash" id="dash">
+          <h3>Owner Control View</h3>
+          <div class="metric"><b>Enquiries</b><span>Captured</span></div>
+          <div class="metric"><b>Follow-up</b><span>Tracked</span></div>
+          <div class="metric"><b>Trust readiness</b><span>Improving</span></div>
+          <div class="metric"><b>ROI signals</b><span>Visible</span></div>
+          <p class="goal">Goal: fewer disconnected tools, clearer growth signals, and better owner control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM -->
+  <section class="section pad" id="system">
+    <div class="container">
+      <h2 class="h-sec reveal">Use the four services separately — or combine them into one operating system.</h2>
+      <p class="lead reveal">This is the premium bundle for businesses that need more than a website or one campaign. It connects digital presence, enquiries, follow-up, trust, automation, creative, and reporting into a practical weekly operating rhythm.</p>
+      <div class="grid three" style="margin-top:30px">
+        <div class="card scard hoverable reveal"><div class="icon">1</div><h3>Growth foundation</h3><p>Website &amp; Digital Presence, local visibility/SEO basics, service pages, enquiry paths, and clear offer messaging.</p></div>
+        <div class="card scard hoverable reveal"><div class="icon">2</div><h3>Lead recovery loop</h3><p>Lead Capture &amp; Follow-up, WhatsApp/preferred-channel replies, simple tracking, owner alerts, and missed-lead reduction.</p></div>
+        <div class="card scard hoverable reveal"><div class="icon">3</div><h3>Trust + control layer</h3><p>Trust &amp; Compliance basics, consent-aware handling, dashboards, automation, and selective Cloud Trust/FinOps reviews where relevant.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUCTURE -->
+  <section class="section alt pad">
+    <div class="container">
+      <h2 class="h-sec reveal">What the structure now looks like</h2>
+      <p class="lead reveal">The public website stays simple: four clear service pages, one premium bundle, and targeted specialist pages for healthcare and cloud-heavy buyers.</p>
+      <div class="grid two" style="margin-top:30px">
+        <div class="card scard hoverable reveal">
+          <h3>Public service menu</h3>
+          <div class="badge-row">
+            <span class="badge">Website &amp; Digital Presence</span>
+            <span class="badge">Lead Capture &amp; Follow-up</span>
+            <span class="badge">Trust &amp; Compliance</span>
+            <span class="badge">AI Creative Studio</span>
+            <span class="badge">Growth &amp; Control OS</span>
+          </div>
+        </div>
+        <div class="card scard hoverable reveal">
+          <h3>Specialist lanes</h3>
+          <p>Healthcare GrowthOS stays visible for healthcare facilities. Cloud Trust &amp; FinOps stays targeted for SaaS, fintech, healthtech, and cloud-heavy buyers rather than becoming a confusing general service card.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section class="section pad">
+    <div class="container">
+      <h2 class="h-sec reveal">Simple implementation flow</h2>
+      <p class="lead reveal">We do not ask serious buyers to buy blindly. We start with a review, show the business case, then build the first useful system and improve it from real signals.</p>
+      <div class="flow">
+        <div class="step reveal"><span>1</span><div><b>Review</b><small>Leakage, visibility, trust, cloud/ops signals</small></div></div>
+        <div class="step reveal"><span>2</span><div><b>Business case</b><small>ROI assumptions and priority fixes</small></div></div>
+        <div class="step reveal"><span>3</span><div><b>Sprint</b><small>Website, lead, trust, or creative build</small></div></div>
+        <div class="step reveal"><span>4</span><div><b>Dashboard</b><small>Owner view and weekly rhythm</small></div></div>
+        <div class="step reveal"><span>5</span><div><b>Retainer</b><small>Managed improvements and control</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER LADDER -->
+  <section class="section pad">
+    <div class="container">
+      <h2 class="h-sec reveal">Offer ladder</h2>
+      <div class="grid three" style="margin-top:30px">
+        <div class="card scard hoverable reveal"><span class="price">Entry</span><h3>Free / focused review</h3><p>Find visible gaps in growth, trust, follow-up, cloud cost, or manual work. Useful before a proposal.</p></div>
+        <div class="card scard hoverable reveal"><span class="price">Sprint</span><h3>Build sprint</h3><p>Install the first useful part of the system: page, follow-up loop, trust layer, creative pack, dashboard, or FinOps review.</p></div>
+        <div class="card scard hoverable reveal"><span class="price">Managed OS</span><h3>Monthly Growth &amp; Control OS</h3><p>Ongoing measurement, improvements, content/creative support, automation, trust hygiene, dashboard updates, and owner reporting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section ctaband pad">
+    <div class="container">
+      <div class="box reveal">
+        <div>
+          <h2 style="margin:0 0 8px">Ready to see where growth or control is leaking?</h2>
+          <p style="margin:0;color:#d6edf8">Start with a focused review. We will show value areas and practical next steps before a larger proposal.</p>
+        </div>
+        <a class="btn primary" href="/free-business-review/?service=growth-control-os">Request Growth Review <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="/home-core-growth/"><span class="mark">AI</span><span>AICloudStrategist</span></a>
+          <p>Practical digital growth services for businesses worldwide.</p>
+          <p class="footer-disclaimer">Safe claim: We use diagnostics, calculators, and owner dashboards to estimate value and track progress. We do not guarantee revenue outcomes or fabricate proof.</p>
+        </div>
+        <div class="footer-links-group">
+          <h3>Quick Links</h3>
+          <a href="/how-we-work/">How it works</a>
+          <a href="/home-core-growth/#services">Services</a>
+          <a href="/industries.html">Industries</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about/">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/free-business-review/">Get free Business Growth Review</a>
+        </div>
+        <div class="footer-links-group">
+          <h3>Services</h3>
+          <a href="/services/website-digital-presence/">Website &amp; Digital Presence</a>
+          <a href="/lead-capture-follow-up/">Lead Capture &amp; Follow-up</a>
+          <a href="/trust-compliance/">Trust &amp; Compliance</a>
+          <a href="/ai-creative-studio/">AI Creative Studio</a>
+          <a href="/growth-control-os/">Growth &amp; Control OS</a>
+        </div>
+        <div class="footer-links-group">
+          <h3>Specialist Tools</h3>
+          <a href="/healthcare-growthos/">Healthcare GrowthOS</a>
+          <a href="/roi-calculator/">Business ROI Calculator</a>
+          <a href="/healthcare-roi-leakage-calculator/">Healthcare ROI Calculator</a>
+        </div>
+        <div class="footer-contact-block">
+          <h3>Contact</h3>
+          <div class="footer-contact-pills">
+            <a href="tel:+918065480898">Phone: +91 80654 80898</a>
+            <a href="https://wa.me/918796302608">WhatsApp: +91 87963 02608</a>
+            <a href="mailto:contact@aicloudstrategist.com">Email: contact@aicloudstrategist.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>© AICloudStrategist</span>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <span>Serving businesses worldwide</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // mobile nav (home-style toggle)
+  const mt = document.getElementById('mobileToggle');
+  const nl = document.getElementById('navLinks');
+  mt.addEventListener('click', () => nl.classList.toggle('open'));
+  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
+
+  // reveal on scroll + dashboard metric stagger
+  if (!RM && 'IntersectionObserver' in window){
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    const dash = document.getElementById('dash');
+    if (dash){
+      const dio = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){dash.classList.add('in');dio.unobserve(dash);}});},{threshold:.3});
+      dio.observe(dash);
+    }
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    document.getElementById('dash')?.classList.add('in');
+  }
+
+  // soft parallax on background orbs (desktop, motion-on)
+  if (!RM && window.matchMedia('(pointer:fine)').matches){
+    const orbs = document.querySelectorAll('.orb'); let raf=null;
+    window.addEventListener('pointermove', e=>{
+      if(raf) return;
+      raf=requestAnimationFrame(()=>{
+        const dx=(e.clientX/window.innerWidth-.5), dy=(e.clientY/window.innerHeight-.5);
+        orbs.forEach((o,i)=>{const f=(i+1)*8;o.style.translate=(dx*f)+'px '+(dy*f)+'px';});
+        raf=null;
+      });
+    });
+  }
+</script>
 </body>
 </html>
