@@ -1,5 +1,27 @@
 # Public crawl policy for AICloudStrategist.
-# Search engines and standard link-preview fetchers may read all public pages.
+# Search engines, AI search, answer engines, and standard link-preview fetchers may read public pages.
+# AICloudStrategist wants to be discoverable and citable by AI assistants.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 User-agent: Googlebot
 Allow: /
@@ -40,5 +62,6 @@ Allow: /
 User-agent: *
 Allow: /
 Allow: /resources/
+Allow: /services/
 
 Sitemap: https://aicloudstrategist.com/sitemap.xml
