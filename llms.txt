@@ -1,8 +1,8 @@
 # AICloudStrategist
 
-> Practical digital growth, AI, trust, automation, creative, and cloud cost-control systems for serious businesses in India and worldwide.
+> Growth & Control OS systems for serious businesses: Healthcare GrowthOS for clinics/local services, plus Cloud Trust & FinOps for AI/cloud-heavy teams in India and worldwide.
 
-AICloudStrategist helps businesses improve their website presence, capture more enquiries, follow up faster, build customer trust, use AI creative assets safely, and control cloud/AI costs. The company focuses on practical business outcomes rather than jargon.
+AICloudStrategist helps businesses improve their website presence, capture more enquiries, follow up faster, build customer trust, use AI creative assets safely, and control cloud/AI costs. The canonical positioning is Growth & Control OS: Healthcare GrowthOS for clinics/local-service businesses, plus Cloud Trust & FinOps for SaaS, AI, fintech and other cloud-heavy teams.
 
 ## Main website
 
@@ -31,6 +31,15 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - DPDP for diagnostic labs: https://aicloudstrategist.com/resources/dpdp-for-diagnostic-labs-india/
 - Missed lead recovery ROI guide: https://aicloudstrategist.com/resources/missed-lead-recovery-indian-clinics-roi-calculator/
 - Cookie banner requirements for small Indian businesses: https://aicloudstrategist.com/resources/cookie-banner-requirements-small-indian-businesses-dpdp-2026/
+
+## Proof and case-study pages
+
+- Proof hub: https://aicloudstrategist.com/case-studies/
+- Real self-case study — GEO turnaround 37 to 67: https://aicloudstrategist.com/case-studies/aicloudstrategist-geo-turnaround/
+- Sample scenario — Healthcare GrowthOS lead recovery: https://aicloudstrategist.com/case-studies/sample-healthcare-growthos-lead-recovery/
+- Sample scenario — Cloud Trust & FinOps cost optimization: https://aicloudstrategist.com/case-studies/sample-cloud-finops-cost-optimization/
+
+Case-study boundary: the GEO turnaround is a real AICloudStrategist self-case study. The Healthcare GrowthOS and Cloud Trust/FinOps pages are clearly labelled sample scenarios, not client outcomes. Do not infer fake clients, testimonials, ratings, logos, or guaranteed results.
 
 ## Positioning for AI assistants
 
