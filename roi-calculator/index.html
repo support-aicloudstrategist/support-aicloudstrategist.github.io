@@ -1,35 +1,488 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Business ROI Calculator | AICloudStrategist</title>
 <meta name="description" content="Estimate ROI, payback period, savings, recovered revenue, and shared-savings pricing for AICloudStrategist website, automation, cloud, and growth systems.">
 <link rel="canonical" href="https://aicloudstrategist.com/roi-calculator/">
+
+<!--
+  Business ROI Calculator — redesigned in the AICloudStrategist premium design
+  system (dark teal-navy, cyan/teal/violet, glass) with animations.
+  Navbar, footer, logo, padding, and font match /home-core-growth/.
+  All inputs, labels, outputs, links, copy, and the calc() logic are preserved.
+-->
+
 <style>
-:root{--navy:#071225;--ink:#111827;--muted:#607086;--blue:#2563eb;--cyan:#06b6d4;--green:#16a34a;--amber:#f59e0b;--red:#dc2626;--bg:#f5f8fc;--card:#fff;--line:#dbe5f1;--shadow:0 26px 76px rgba(7,18,37,.15)}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(135deg,#f8fbff,#eef6ff 45%,#fff);color:var(--ink)}.wrap{max-width:1240px;margin:0 auto;padding:30px 22px 56px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{font-weight:950;letter-spacing:-.035em;color:#071225}.nav a{font-weight:850;color:#1d4ed8;text-decoration:none}.hero{position:relative;overflow:hidden;border-radius:34px;padding:44px;color:white;background:radial-gradient(circle at 20% 10%,rgba(6,182,212,.28),transparent 25%),linear-gradient(135deg,#071225,#102b53 60%,#134e4a);box-shadow:var(--shadow)}.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:24px;align-items:end}.badge{display:inline-flex;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:8px 13px;border-radius:999px;font-size:13px;font-weight:850;color:#dff9ff}.hero h1{font-size:clamp(38px,5.2vw,70px);line-height:1.0;letter-spacing:-.065em;margin:18px 0 16px}.hero p{max-width:840px;font-size:19px;line-height:1.62;color:#dbeafe}.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:22px}.hero-card strong{display:block;font-size:38px;letter-spacing:-.045em}.hero-card span{color:#cdeafe;font-size:13px;line-height:1.45}.main{display:grid;grid-template-columns:1.02fr .98fr;gap:22px;margin-top:24px}.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 14px 42px rgba(16,43,83,.08)}h2{margin:0 0 8px;letter-spacing:-.03em;font-size:25px}.note{color:var(--muted);line-height:1.55;margin:0 0 18px}.inputs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{background:#f8fbff;border:1px solid #e1ebf7;border-radius:18px;padding:14px}.field label{display:block;font-weight:800;font-size:13px;color:#334155;margin-bottom:7px}.field small{display:block;color:#64748b;line-height:1.35;margin-top:7px}input,select{width:100%;border:1px solid #d7e3f2;border-radius:13px;padding:12px;font-size:16px;color:var(--ink);background:white;outline:none}input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(37,99,235,.12)}.results{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.metric{border-radius:20px;padding:18px;background:linear-gradient(180deg,#fff,#f8fbff);border:1px solid #e2ebf6}.metric .label{font-size:13px;font-weight:800;color:#64748b}.metric .value{font-size:30px;font-weight:950;letter-spacing:-.04em;margin-top:6px;color:#0f172a}.green{background:linear-gradient(180deg,#f0fdf4,#fff);border-color:#bbf7d0}.green .value{color:#15803d}.blue{background:linear-gradient(180deg,#eff6ff,#fff);border-color:#bfdbfe}.blue .value{color:#1d4ed8}.amber{background:linear-gradient(180deg,#fffbeb,#fff);border-color:#fde68a}.amber .value{color:#b45309}.band{margin-top:16px;border-radius:24px;padding:24px;background:linear-gradient(135deg,#07233f,#0b4a6f);color:white}.band h3{margin:0 0 8px}.band .big{font-size:38px;font-weight:950;letter-spacing:-.045em}.band p{color:#dbeafe;line-height:1.58;margin:8px 0 0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.btn{border:none;border-radius:999px;padding:13px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex}.primary{background:linear-gradient(135deg,var(--blue),var(--cyan));color:white}.secondary{background:#eef5ff;color:#12325d}.insights{display:grid;gap:12px;margin-top:18px}.insights div{display:flex;gap:10px;background:#f8fbff;border:1px solid #e3edf8;border-radius:16px;padding:13px;color:#334155;line-height:1.45}.dot{width:10px;height:10px;border-radius:50%;background:#06b6d4;margin-top:6px;flex:0 0 auto}.formula{margin-top:20px;padding:18px;border-radius:18px;border:1px dashed #b7c8dc;background:#fbfdff;color:#475569;line-height:1.55}.safe{margin-top:18px;font-size:13px;color:#64748b;line-height:1.55}.brandline{margin-top:20px;display:flex;justify-content:space-between;gap:12px;color:#64748b;font-size:13px}.brandline b{color:#0f172a}@media(max-width:900px){.hero-grid,.main,.inputs,.results{grid-template-columns:1fr}.hero{padding:30px}.wrap{padding:20px 14px 40px}.brandline,.nav{flex-direction:column;align-items:flex-start}}@media print{body{background:white}.wrap{padding:0}.hero,.card{box-shadow:none}.actions{display:none}.main{grid-template-columns:1fr 1fr}.hero{border-radius:0}.card{break-inside:avoid}.safe{font-size:11px}}
+  :root{
+    --bg-0:#04131a; --bg-1:#06202b;
+    --ink:#eaf6fb; --muted:#9db4c0; --faint:#5f7a87;
+    --cyan:#58c8ff; --teal:#25e6c8; --blue:#4d8cff; --violet:#8d6cff;
+    --line:rgba(255,255,255,.09);
+    --glass:rgba(255,255,255,.038);
+    --glass-2:rgba(255,255,255,.06);
+    --shadow:0 30px 80px -30px rgba(0,0,0,.8);
+    --r-lg:24px; --r-md:16px; --r-sm:11px;
+    --font:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --maxw:1280px;
+    --grad:linear-gradient(100deg,var(--cyan),var(--teal) 45%,var(--violet));
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg-0);color:var(--ink);font-family:var(--font);
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{letter-spacing:-0.045em;line-height:1.06;margin:0;font-weight:800;}
+
+  /* atmosphere */
+  .bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+  .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.42;will-change:transform;}
+  .o1{width:42vw;height:42vw;left:-12vw;top:-8vw;background:radial-gradient(circle,rgba(88,200,255,.5),transparent 65%);animation:drift1 28s ease-in-out infinite;}
+  .o2{width:40vw;height:40vw;right:-12vw;top:18vh;background:radial-gradient(circle,rgba(141,108,255,.46),transparent 65%);animation:drift2 32s ease-in-out infinite;}
+  .o3{width:46vw;height:46vw;left:22vw;bottom:-22vw;background:radial-gradient(circle,rgba(37,230,200,.3),transparent 62%);animation:drift3 36s ease-in-out infinite;}
+  @keyframes drift1{50%{transform:translate(6vw,4vh) scale(1.08);}}
+  @keyframes drift2{50%{transform:translate(-5vw,5vh) scale(1.1);}}
+  @keyframes drift3{50%{transform:translate(3vw,-4vh) scale(.94);}}
+  .grid-veil{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45;
+    background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+    background-size:66px 66px;-webkit-mask-image:radial-gradient(120% 75% at 50% 0%,#000 30%,transparent 80%);mask-image:radial-gradient(120% 75% at 50% 0%,#000 30%,transparent 80%);}
+
+  .wrap{position:relative;z-index:2;}
+  .container{width:min(100% - (clamp(18px,3vw,42px) * 2),var(--maxw));max-width:none;margin:0 auto;padding-left:0;padding-right:0;}
+  @media(max-width:640px){.container{width:min(100% - 36px,var(--maxw));}.actions{display:grid;grid-template-columns:1fr}.btn{width:100%;min-height:52px;text-align:center;white-space:normal}}
+
+  /* shared buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 24px;border-radius:999px;
+    font-weight:900;font-size:.96rem;cursor:pointer;border:1px solid transparent;position:relative;overflow:hidden;font-family:inherit;
+    transition:transform .3s ease,box-shadow .35s ease,border-color .3s ease,background .3s ease;}
+  .btn .arrow{transition:transform .35s cubic-bezier(.22,1,.36,1);}
+  .btn:hover .arrow{transform:translateX(5px);}
+  .btn.primary{color:#04131a;background:var(--grad);box-shadow:0 18px 44px -18px rgba(88,200,255,.75);}
+  .btn.primary:hover{transform:translateY(-3px);box-shadow:0 24px 54px -16px rgba(141,108,255,.7);}
+  .btn.primary::after{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .6s ease;}
+  .btn.primary:hover::after{left:150%;}
+  .btn.secondary{color:#eaf6fb;border-color:rgba(88,200,255,.28);background:rgba(255,255,255,.055);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);}
+  .btn.secondary:hover{transform:translateY(-3px);border-color:rgba(88,200,255,.6);background:linear-gradient(90deg,rgba(88,200,255,.13),rgba(141,108,255,.13));}
+
+  /* top bar (home style) */
+  .topbar{position:relative;z-index:41;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,8,15,.88);backdrop-filter:blur(10px);font-size:13px;color:#c9d8e6;}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:38px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+  .topbar a{color:#eaf6fb;font-weight:600;transition:color .25s;}
+  .topbar a:hover{color:var(--cyan);}
+  .topbar-sep{opacity:.5;}
+
+  /* navbar (home style) */
+  nav.nav{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);
+    background:rgba(4,19,26,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;}
+  .brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
+    font-size:.82rem;font-weight:900;letter-spacing:.01em;color:#04131a;background:var(--grad);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
+  .nav-links{display:flex;align-items:center;gap:22px;}
+  .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500;position:relative;transition:color .25s;}
+  .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;border-radius:2px;background:var(--grad);transition:width .3s ease;}
+  .nav-links a:not(.nav-cta):hover{color:var(--ink);} .nav-links a:not(.nav-cta):hover::after{width:100%;}
+  .nav-cta{color:#04131a!important;background:var(--grad);padding:10px 16px;border-radius:11px;font-weight:600;
+    transition:transform .25s,box-shadow .3s;box-shadow:0 12px 30px -14px rgba(88,200,255,.8);}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(141,108,255,.8);}
+  .nav-cta-short{display:none;}
+  .mobile-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--glass);color:var(--ink);font-size:1.3rem;cursor:pointer;align-items:center;justify-content:center;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;}
+ .hero .reveal{opacity:1;transform:none;}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);gap:52px;align-items:center;padding-top:clamp(64px,7vw,96px);padding-bottom:clamp(52px,6vw,78px);}
+  .hero .badge{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;margin-bottom:18px;
+    border:1px solid rgba(88,200,255,.28);background:linear-gradient(90deg,rgba(88,200,255,.1),rgba(141,108,255,.1));
+    font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);}
+  .hero h1{font-size:clamp(2.45rem,4.8vw,4.1rem);font-weight:950;max-width:16ch;margin:0 0 20px;letter-spacing:-.06em;color:#fff;}
+  .hero p{color:#cbd5e1;font-size:clamp(1.03rem,1.55vw,1.2rem);max-width:64ch;margin:0 0 30px;line-height:1.65;}
+  .actions{display:flex;flex-wrap:wrap;gap:13px;}
+  .hero-card{position:relative;text-align:center;padding:34px 28px;border-radius:var(--r-lg);border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--glass-2),var(--glass));backdrop-filter:blur(16px);box-shadow:var(--shadow);overflow:hidden;}
+  .hero-card::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--grad);}
+  .hero-card strong{display:block;font-size:clamp(2.8rem,7vw,4rem);font-weight:900;letter-spacing:-.03em;line-height:1;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px;}
+  .hero-card span{color:var(--muted);font-size:.9rem;line-height:1.55;display:block;max-width:34ch;margin:0 auto;}
+
+  /* main grid */
+  .main{display:grid;grid-template-columns:1.12fr .88fr;gap:24px;align-items:start;
+    padding-top:10px;padding-bottom:clamp(72px,7vw,104px);}
+  @media(max-width:980px){.main{grid-template-columns:1fr;gap:22px;}}
+
+  .card{border:1px solid var(--line);background:linear-gradient(180deg,var(--glass-2),var(--glass));
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:var(--r-lg);box-shadow:var(--shadow);
+    padding:30px 28px;position:relative;overflow:hidden;}
+  .card::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--grad);opacity:.6;}
+  .card h2{font-size:1.35rem;font-weight:800;margin:0 0 8px;}
+  .note{color:var(--muted);font-size:.9rem;margin:0 0 20px;line-height:1.55;}
+
+  /* inputs */
+  .inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:560px){.inputs{grid-template-columns:1fr;}}
+  .field label{display:block;font-size:.86rem;font-weight:850;color:#eaf6fb;margin-bottom:8px;}
+  .field input,.field select{width:100%;background:rgba(4,19,26,.55);border:1px solid var(--line);border-radius:11px;color:var(--ink);
+    font-family:inherit;font-size:.98rem;padding:12px 14px;transition:border-color .25s,box-shadow .25s,background .25s;}
+  .field input:focus,.field select:focus{outline:none;border-color:rgba(88,200,255,.62);box-shadow:0 0 0 3px rgba(88,200,255,.16);background:rgba(4,19,26,.92);}
+  .field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+    background-position:calc(100% - 18px) center,calc(100% - 13px) center;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:36px;}
+  .field select option{background:#06202b;color:var(--ink);}
+  .field small{display:block;color:var(--faint);font-size:.78rem;margin-top:6px;line-height:1.45;}
+
+  .formula{margin-top:20px;font-size:.84rem;color:var(--muted);line-height:1.6;padding:15px 17px;border-radius:13px;
+    border:1px dashed var(--line);background:rgba(255,255,255,.02);}
+  .formula b{color:var(--ink);}
+
+  /* results */
+  .results{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:380px){.results{grid-template-columns:1fr;}}
+  .metric{border:1px solid rgba(88,200,255,.14);background:rgba(4,19,26,.56);border-radius:16px;padding:17px 16px 17px 18px;
+    position:relative;overflow:hidden;transition:transform .35s ease,border-color .3s ease,box-shadow .35s ease;}
+  .metric:hover{transform:translateY(-3px);border-color:rgba(88,200,255,.4);box-shadow:0 18px 44px -24px rgba(88,200,255,.6);}
+  .metric::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cyan);}
+  .metric.blue::before{background:linear-gradient(180deg,var(--cyan),var(--blue));}
+  .metric.green::before{background:linear-gradient(180deg,var(--teal),var(--cyan));}
+  .metric.amber::before{background:linear-gradient(180deg,var(--violet),var(--blue));}
+  .metric .label{font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:8px;line-height:1.35;}
+  .metric .value{font-size:1.5rem;font-weight:950;letter-spacing:-.03em;color:#eaf6fb;}
+  .metric.blue .value{color:var(--cyan);}
+  .metric.green .value{color:var(--teal);}
+  .metric.amber .value{color:var(--violet);}
+  .metric .value.flash{animation:flash .5s ease;}
+  @keyframes flash{0%{transform:scale(1.07);}100%{transform:scale(1);}}
+
+  .band{margin-top:20px;border:1px solid rgba(88,200,255,.16);border-radius:18px;padding:24px;position:relative;overflow:hidden;
+    background:linear-gradient(120deg,rgba(88,200,255,.1),rgba(141,108,255,.1));}
+  .band::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 85% 15%,rgba(37,230,200,.16),transparent 70%);pointer-events:none;}
+  .band h3{font-size:.9rem;color:var(--cyan);margin:0 0 8px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;position:relative;}
+  .band .big{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:900;letter-spacing:-.02em;margin-bottom:8px;position:relative;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .band p{color:var(--muted);font-size:.86rem;margin:0;line-height:1.55;position:relative;}
+
+  .insights{margin-top:18px;display:grid;gap:11px;}
+  .insights>div{display:flex;gap:11px;align-items:flex-start;font-size:.9rem;color:#cfe3ec;line-height:1.5;}
+  .insights .dot{flex:0 0 auto;width:9px;height:9px;border-radius:50%;margin-top:6px;background:var(--grad);box-shadow:0 0 8px rgba(88,200,255,.6);}
+
+  .safe{margin-top:18px;font-size:.78rem;color:var(--faint);line-height:1.55;padding-top:15px;border-top:1px solid var(--line);}
+
+  /* footer (home style) */
+  footer.footer{position:relative;z-index:2;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);}
+  .footer-main-grid{display:grid;grid-template-columns:1.1fr .76fr .94fr .88fr 1.08fr;gap:28px;padding:54px 0 34px;}
+  .footer-brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:14px;}
+  .footer-brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;font-size:.82rem;font-weight:900;color:#04131a;background:var(--grad);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
+  .footer-brand-block p{color:var(--muted);font-size:.9rem;line-height:1.6;max-width:300px;margin:0;}
+  .footer-disclaimer{color:var(--faint)!important;font-size:.78rem!important;line-height:1.55;margin-top:14px!important;max-width:320px;}
+  .footer-links-group h3,.footer-contact-block h3{font-size:.72rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--faint);font-weight:700;margin:0 0 14px;}
+  .footer-links-group a{display:block;color:var(--muted);font-size:.9rem;margin-bottom:10px;transition:color .25s;}
+  .footer-links-group a:hover{color:var(--cyan);}
+  .footer-contact-pills{display:grid;gap:10px;}
+  .footer-contact-pills a{color:var(--muted);font-size:.9rem;transition:color .25s;word-break:break-word;}
+  .footer-contact-pills a:hover{color:var(--cyan);}
+  .footer-bottom-row{border-top:1px solid var(--line);padding:16px 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--faint);}
+  .footer-bottom-row a{color:var(--faint);transition:color .25s;} .footer-bottom-row a:hover{color:var(--muted);}
+  .footer-bottom-row span:last-child{margin-left:auto;}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:28px;}
+    .footer-main-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:860px){
+    .mobile-toggle{display:flex;}
+    .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(4,19,26,.98);border-bottom:1px solid var(--line);padding:6px 0;backdrop-filter:blur(16px);}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:13px 22px;}
+    .nav-links a:not(.nav-cta)::after{display:none;}
+    .nav-cta{margin:8px 22px 6px;text-align:center;}
+    .nav-cta-full{display:none;} .nav-cta-short{display:inline;}
+  }
+  @media(max-width:600px){
+    .footer-main-grid{grid-template-columns:1fr;}
+    .footer-bottom-row{flex-direction:column;align-items:flex-start;} .footer-bottom-row span:last-child{margin-left:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .orb{animation:none!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    .btn.primary::after{display:none;}
+    .metric .value.flash{animation:none!important;}
+    *{scroll-behavior:auto;}
+  }
+  @media print{
+    .bg,.grid-veil,.topbar,nav.nav,footer.footer{display:none!important;}
+    body{background:#fff;color:#000;}
+  }
 </style>
 </head>
 <body>
+
+<div class="bg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="grid-veil" aria-hidden="true"></div>
+
 <div class="wrap">
-<nav id="navbar" class="nav"><div class="container nav-inner"><a class="brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button><div class="nav-links" id="navLinks"><a href="/">Home</a><a href="/#services">Services</a><a href="/industries.html">Industries</a><a href="/pricing.html">Pricing</a><a href="/about/">About</a><a href="/contact.html">Contact</a><a class="btn btn-primary nav-cta" href="/free-business-review/"><span class="nav-cta-full">Get free growth review</span><span class="nav-cta-short">Free review</span></a></div></div></nav>
-<section class="hero"><div class="hero-grid"><div><span class="badge">G15-T-ROI-CALC • Website + proposals</span><h1>Show the value before asking for the price.</h1><p>A simple, customer-facing ROI calculator for website upgrades, enquiry follow-up, automation, Cloud Trust/FinOps, and Growth & Control OS proposals. It turns baseline leakage into conservative payback math.</p><div class="actions"><a class="btn primary" href="/free-business-review/?service=roi-review">Request ROI Review</a><button class="btn secondary" onclick="window.print()">Save as PDF</button></div></div><div class="hero-card"><strong id="heroROI">4.8×</strong><span>illustrative first-year ROI from default inputs. This is an estimate, not a promise.</span></div></div></section>
-<main class="main"><section class="card"><h2>Business value inputs</h2><p class="note">Use this for a clinic, SaaS, cloud-heavy SMB, professional service, or any business where missed enquiries, manual work, or cloud waste can be measured.</p><div class="inputs">
-<div class="field"><label>Baseline monthly revenue or cloud spend (₹)</label><input id="baseline" type="number" value="1500000"><small>Use revenue for growth projects or cloud bill for FinOps projects.</small></div>
-<div class="field"><label>Recoverable value / savings %</label><input id="uplift" type="number" value="10"><small>Keep conservative until data is validated.</small></div>
-<div class="field"><label>Manual hours saved per month</label><input id="hours" type="number" value="100"><small>Admin, follow-up, reporting, reconciliation, manual operations.</small></div>
-<div class="field"><label>Loaded hourly cost (₹)</label><input id="hourly" type="number" value="800"><small>Fully loaded cost of staff/founder time.</small></div>
-<div class="field"><label>One-time setup / sprint fee (₹)</label><input id="setup" type="number" value="200000"><small>Implementation, audit, dashboard, automations, page build.</small></div>
-<div class="field"><label>Monthly retainer / platform fee (₹)</label><input id="retainer" type="number" value="50000"><small>Managed system, optimization, reporting, support.</small></div>
-<div class="field"><label>Success / shared-savings fee %</label><input id="share" type="number" value="15"><small>Optional value-based pricing on verified incremental value.</small></div>
-<div class="field"><label>Evaluation horizon</label><select id="months"><option value="3">3 months</option><option value="6">6 months</option><option value="12" selected>12 months</option></select><small>Use 3–6 months for pilot, 12 months for board/founder planning.</small></div>
-</div><div class="actions"><button class="btn primary" onclick="calc()">Recalculate</button><a class="btn secondary" href="/cloud-trust-finops/">Cloud Trust offer</a><a class="btn secondary" href="/healthcare-growthos/">Healthcare GrowthOS</a></div><div class="formula"><b>Model:</b> monthly measurable value = baseline × recoverable % + manual hours saved × hourly cost. Net value subtracts setup, retainer, and success fee. ROI = net value ÷ total fee. Payback = setup ÷ monthly net value after retainer/success fee.</div></section>
-<section class="card"><h2>Estimated business case</h2><p class="note">The output is designed for proposal conversations. Replace default assumptions with customer data before any commercial commitment.</p><div class="results"><div class="metric blue"><div class="label">Monthly measurable value</div><div class="value" id="monthlyValue">₹1.1L</div></div><div class="metric amber"><div class="label">Monthly success fee</div><div class="value" id="successFee">₹22k</div></div><div class="metric green"><div class="label">Net monthly value after fees</div><div class="value" id="netMonthly">₹13k</div></div><div class="metric"><div class="label">Payback period</div><div class="value" id="payback">18.9 mo</div></div><div class="metric green"><div class="label">Net value over horizon</div><div class="value" id="netHorizon">₹1.6L</div></div><div class="metric blue"><div class="label">Estimated ROI multiple</div><div class="value" id="roiMultiple">0.2×</div></div></div><div class="band"><h3>Proposal-ready value range</h3><div class="big" id="rangeValue">₹0.8L – ₹1.3L / month</div><p>Use the range as a confidence band: low = 70% of calculated value, high = 115%. Validate with customer billing, lead, CRM, cloud, or workflow data.</p></div><div class="insights" id="insights"></div><div class="safe">Disclaimer: This calculator does not guarantee savings, revenue, cloud reduction, or conversion improvement. It creates a transparent estimate from stated assumptions for proposal and audit discussions.</div></section></main>
-<div class="brandline"><span><b>AICloudStrategist</b> — ROI-led Growth & Control OS</span><span>Customer-facing estimate tool • safe claims only</span></div></div>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Websites · Automation · Trust · AI Creatives — for businesses worldwide.</span>
+      <span>
+        <a href="tel:+918065480898">Call +91 80654 80898</a>
+        <span class="topbar-sep"> · </span>
+        <a href="https://wa.me/918796302608">WA +91 87963 02608</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/home-core-growth/">
+        <span class="mark">AI</span>
+        <span>AICloudStrategist</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/home-core-growth/">Home</a>
+        <a href="/home-core-growth/#services">Services</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact.html">Contact</a>
+        <a class="nav-cta" href="/free-business-review/">
+          <span class="nav-cta-full">Get free growth review</span>
+          <span class="nav-cta-short">Free review</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge reveal">G15-T-ROI-CALC • Website + proposals</span>
+        <h1 class="reveal">Show the value before asking for the price.</h1>
+        <p class="reveal">A simple, customer-facing ROI calculator for website upgrades, enquiry follow-up, automation, Cloud Trust/FinOps, and Growth &amp; Control OS proposals. It turns baseline leakage into conservative payback math.</p>
+        <div class="actions reveal">
+          <a class="btn primary" href="/free-business-review/?service=roi-review">Request ROI Review <span class="arrow">→</span></a>
+          <button class="btn secondary" onclick="window.print()">Save as PDF</button>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <strong id="heroROI">4.8×</strong>
+        <span>illustrative first-year ROI from default inputs. This is an estimate, not a promise.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="container main">
+
+    <!-- INPUTS -->
+    <section class="card reveal">
+      <h2>Business value inputs</h2>
+      <p class="note">Use this for a clinic, SaaS, cloud-heavy SMB, professional service, or any business where missed enquiries, manual work, or cloud waste can be measured.</p>
+      <div class="inputs">
+        <div class="field">
+          <label>Baseline monthly revenue or cloud spend (₹)</label>
+          <input id="baseline" type="number" value="1500000">
+          <small>Use revenue for growth projects or cloud bill for FinOps projects.</small>
+        </div>
+        <div class="field">
+          <label>Recoverable value / savings %</label>
+          <input id="uplift" type="number" value="10">
+          <small>Keep conservative until data is validated.</small>
+        </div>
+        <div class="field">
+          <label>Manual hours saved per month</label>
+          <input id="hours" type="number" value="100">
+          <small>Admin, follow-up, reporting, reconciliation, manual operations.</small>
+        </div>
+        <div class="field">
+          <label>Loaded hourly cost (₹)</label>
+          <input id="hourly" type="number" value="800">
+          <small>Fully loaded cost of staff/founder time.</small>
+        </div>
+        <div class="field">
+          <label>One-time setup / sprint fee (₹)</label>
+          <input id="setup" type="number" value="200000">
+          <small>Implementation, audit, dashboard, automations, page build.</small>
+        </div>
+        <div class="field">
+          <label>Monthly retainer / platform fee (₹)</label>
+          <input id="retainer" type="number" value="50000">
+          <small>Managed system, optimization, reporting, support.</small>
+        </div>
+        <div class="field">
+          <label>Success / shared-savings fee %</label>
+          <input id="share" type="number" value="15">
+          <small>Optional value-based pricing on verified incremental value.</small>
+        </div>
+        <div class="field">
+          <label>Evaluation horizon</label>
+          <select id="months">
+            <option value="3">3 months</option>
+            <option value="6">6 months</option>
+            <option value="12" selected>12 months</option>
+          </select>
+          <small>Use 3–6 months for pilot, 12 months for board/founder planning.</small>
+        </div>
+      </div>
+      <div class="actions" style="margin-top:22px">
+        <button class="btn primary" onclick="calc()">Recalculate</button>
+        <a class="btn secondary" href="/cloud-trust-finops/">Cloud Trust offer</a>
+        <a class="btn secondary" href="/healthcare-growthos/">Healthcare GrowthOS</a>
+      </div>
+      <div class="formula"><b>Model:</b> monthly measurable value = baseline × recoverable % + manual hours saved × hourly cost. Net value subtracts setup, retainer, and success fee. ROI = net value ÷ total fee. Payback = setup ÷ monthly net value after retainer/success fee.</div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="card reveal">
+      <h2>Estimated business case</h2>
+      <p class="note">The output is designed for proposal conversations. Replace default assumptions with customer data before any commercial commitment.</p>
+      <div class="results">
+        <div class="metric blue">
+          <div class="label">Monthly measurable value</div>
+          <div class="value" id="monthlyValue">₹1.1L</div>
+        </div>
+        <div class="metric amber">
+          <div class="label">Monthly success fee</div>
+          <div class="value" id="successFee">₹22k</div>
+        </div>
+        <div class="metric green">
+          <div class="label">Net monthly value after fees</div>
+          <div class="value" id="netMonthly">₹13k</div>
+        </div>
+        <div class="metric">
+          <div class="label">Payback period</div>
+          <div class="value" id="payback">18.9 mo</div>
+        </div>
+        <div class="metric green">
+          <div class="label">Net value over horizon</div>
+          <div class="value" id="netHorizon">₹1.6L</div>
+        </div>
+        <div class="metric blue">
+          <div class="label">Estimated ROI multiple</div>
+          <div class="value" id="roiMultiple">0.2×</div>
+        </div>
+      </div>
+      <div class="band">
+        <h3>Proposal-ready value range</h3>
+        <div class="big" id="rangeValue">₹0.8L – ₹1.3L / month</div>
+        <p>Use the range as a confidence band: low = 70% of calculated value, high = 115%. Validate with customer billing, lead, CRM, cloud, or workflow data.</p>
+      </div>
+      <div class="insights" id="insights"></div>
+      <div class="safe">Disclaimer: This calculator does not guarantee savings, revenue, cloud reduction, or conversion improvement. It creates a transparent estimate from stated assumptions for proposal and audit discussions.</div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (home style) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="/home-core-growth/"><span class="mark">AI</span><span>AICloudStrategist</span></a>
+          <p>Practical digital growth services for businesses worldwide.</p>
+          <p class="footer-disclaimer">AICloudStrategist — ROI-led Growth &amp; Control OS · Customer-facing estimate tool • safe claims only</p>
+        </div>
+        <div class="footer-links-group">
+          <h3>Quick Links</h3>
+          <a href="/how-we-work/">How it works</a>
+          <a href="/home-core-growth/#services">Services</a>
+          <a href="/industries.html">Industries</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about/">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/free-business-review/">Get free Business Growth Review</a>
+        </div>
+        <div class="footer-links-group">
+          <h3>Services</h3>
+          <a href="/services/website-digital-presence/">Website &amp; Digital Presence</a>
+          <a href="/lead-capture-follow-up/">Lead Capture &amp; Follow-up</a>
+          <a href="/trust-compliance/">Trust &amp; Compliance</a>
+          <a href="/ai-creative-studio/">AI Creative Studio</a>
+          <a href="/growth-control-os/">Growth &amp; Control OS</a>
+        </div>
+        <div class="footer-links-group">
+          <h3>Specialist Tools</h3>
+          <a href="/healthcare-growthos/">Healthcare GrowthOS</a>
+          <a href="/roi-calculator/">Business ROI Calculator</a>
+          <a href="/healthcare-roi-leakage-calculator/">Healthcare ROI Calculator</a>
+        </div>
+        <div class="footer-contact-block">
+          <h3>Contact</h3>
+          <div class="footer-contact-pills">
+            <a href="tel:+918065480898">Phone: +91 80654 80898</a>
+            <a href="https://wa.me/918796302608">WhatsApp: +91 87963 02608</a>
+            <a href="mailto:contact@aicloudstrategist.com">Email: contact@aicloudstrategist.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>© AICloudStrategist</span>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <span>Serving businesses worldwide</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
 <script>
 function n(id){return Math.max(0, Number(document.getElementById(id).value||0));}function rupee(x){x=Math.max(0, Math.round(x)); if(x>=10000000)return '₹'+(x/10000000).toFixed(1).replace(/\.0$/,'')+'Cr'; if(x>=100000)return '₹'+(x/100000).toFixed(1).replace(/\.0$/,'')+'L'; return '₹'+x.toLocaleString('en-IN');}
 function calc(){const baseline=n('baseline'), uplift=Math.min(100,n('uplift'))/100, hours=n('hours'), hourly=n('hourly'), setup=n('setup'), retainer=n('retainer'), share=Math.min(100,n('share'))/100, months=n('months'); const value=baseline*uplift+hours*hourly; const success=value*share; const netMonthly=Math.max(0,value-retainer-success); const totalFees=setup+retainer*months+success*months; const gross=value*months; const netHorizon=Math.max(0,gross-totalFees); const roi=totalFees>0?netHorizon/totalFees:0; const payback=netMonthly>0?setup/netMonthly:999; document.getElementById('monthlyValue').textContent=rupee(value); document.getElementById('successFee').textContent=rupee(success); document.getElementById('netMonthly').textContent=rupee(netMonthly); document.getElementById('payback').textContent=payback>60?'60+ mo':payback.toFixed(1)+' mo'; document.getElementById('netHorizon').textContent=rupee(netHorizon); document.getElementById('roiMultiple').textContent=roi.toFixed(1)+'×'; document.getElementById('heroROI').textContent=roi.toFixed(1)+'×'; document.getElementById('rangeValue').textContent=rupee(value*.7)+' – '+rupee(value*1.15)+' / month'; const ins=[]; if(roi>=2)ins.push('Strong business case: value can support premium pricing if the baseline is validated.'); else if(roi>=.75)ins.push('Moderate business case: tighten scope, reduce implementation friction, or validate higher leakage.'); else ins.push('Weak at current assumptions: use as diagnostic, not as a high-ticket proposal yet.'); if(payback<=6)ins.push('Payback is inside a practical pilot window. This is good for founder-level decision making.'); else ins.push('Payback is long. Consider a smaller sprint, clearer leakage source, or shared-savings component.'); if(share>0)ins.push('Shared-savings fee should be charged only on verified incremental value with agreed baseline.'); document.getElementById('insights').innerHTML=ins.map(x=>'<div><span class="dot"></span><span>'+x+'</span></div>').join('');}
 document.querySelectorAll('input,select').forEach(x=>x.addEventListener('input',calc));calc();
 </script>
-</body></html>
+
+<script>
+  // Additive UI only — does not touch the calculation above.
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // mobile nav (home-style toggle)
+  const mt = document.getElementById('mobileToggle');
+  const nl = document.getElementById('navLinks');
+  mt.addEventListener('click', () => nl.classList.toggle('open'));
+  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
+
+  // reveal on scroll
+  if (!RM && 'IntersectionObserver' in window){
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  // subtle flash on result values when inputs change (visual only)
+  if (!RM){
+    document.querySelectorAll('input,select').forEach(x => x.addEventListener('input', () => {
+      document.querySelectorAll('.metric .value, #rangeValue, #heroROI').forEach(v => {
+        v.classList.remove('flash'); void v.offsetWidth; v.classList.add('flash');
+      });
+    }));
+  }
+
+  // soft parallax on background orbs (desktop, motion-on)
+  if (!RM && window.matchMedia('(pointer:fine)').matches){
+    const orbs = document.querySelectorAll('.orb'); let raf=null;
+    window.addEventListener('pointermove', e=>{
+      if(raf) return;
+      raf=requestAnimationFrame(()=>{
+        const dx=(e.clientX/window.innerWidth-.5), dy=(e.clientY/window.innerHeight-.5);
+        orbs.forEach((o,i)=>{const f=(i+1)*8;o.style.translate=(dx*f)+'px '+(dy*f)+'px';});
+        raf=null;
+      });
+    });
+  }
+</script>
+</body>
+</html>
