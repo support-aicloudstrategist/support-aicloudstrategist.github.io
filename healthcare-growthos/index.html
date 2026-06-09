@@ -1,34 +1,482 @@
-<!doctype html>
-<html lang="en-IN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Healthcare GrowthOS | AICloudStrategist</title>
-  <meta name="description" content="Healthcare GrowthOS helps hospitals, clinics, diagnostics, dental, eye, skin, wellness, IVF and other healthcare facilities improve website trust, patient enquiry capture, follow-up, AI content and owner dashboards." />
-  <link rel="canonical" href="https://aicloudstrategist.com/healthcare-growthos/" />
-  <meta name="robots" content="index, follow" />
-  <style>
-    :root{
-      --navy:#061527;--navy2:#0b2340;--cyan:#28d5ff;--teal:#21e3b1;--soft:#eaf8ff;--muted:#6b7b8d;--ink:#0e1b2a;--line:#dce8f2;--card:#ffffff;--gold:#ffc766;
-    }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--ink);background:#f6fbff;line-height:1.55} a{color:inherit;text-decoration:none}
-    .top{background:rgba(6,21,39,.92);backdrop-filter:blur(12px);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.1)}
-    .nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:18px;color:#cde3f4;font-size:14px}.pill{padding:10px 16px;border:1px solid rgba(40,213,255,.55);border-radius:999px;color:#eaffff;background:rgba(40,213,255,.08)}
-    .hero{background:radial-gradient(circle at 20% 10%,rgba(40,213,255,.28),transparent 28%),radial-gradient(circle at 90% 5%,rgba(33,227,177,.2),transparent 26%),linear-gradient(135deg,var(--navy),#0a2b51 55%,#062235);color:white;overflow:hidden}.hero .wrap{max-width:1180px;margin:auto;padding:82px 22px 70px;display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px;color:#d9f9ff}.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 18px var(--teal)}h1{font-size:58px;line-height:1.02;margin:20px 0 18px;letter-spacing:-2px}.sub{font-size:20px;color:#d7eefa;max-width:690px}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:16px;padding:15px 22px;font-weight:750}.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--teal));color:#042035;box-shadow:0 18px 50px rgba(40,213,255,.25)}.btn.secondary{border:1px solid rgba(255,255,255,.25);color:#f5fdff;background:rgba(255,255,255,.08)}
-    .hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:26px;box-shadow:0 30px 90px rgba(0,0,0,.22)}.dash{background:white;color:var(--ink);border-radius:22px;padding:20px}.dash h3{margin:0 0 12px;font-size:18px}.metric{display:grid;grid-template-columns:1fr auto;gap:10px;border-bottom:1px solid #edf3f7;padding:12px 0}.metric:last-child{border-bottom:0}.metric b{color:#08223d}.metric span{color:#0eb996;font-weight:800}.leak{background:#fff7e5;border:1px solid #ffe2a3;border-radius:18px;margin-top:16px;padding:15px;color:#5d4109;font-weight:650}
-    .section{max-width:1180px;margin:auto;padding:70px 22px}.section h2{font-size:38px;line-height:1.1;margin:0 0 12px;letter-spacing:-.9px}.lead{font-size:18px;color:var(--muted);max-width:850px}.grid{display:grid;gap:18px}.grid.three{grid-template-columns:repeat(3,1fr)}.grid.two{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 18px 45px rgba(11,35,64,.06)}.card h3{margin:0 0 8px;font-size:21px}.card p{color:#566779;margin:0}.icon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#e4f9ff,#e8fff8);color:#0b7e9b;font-weight:900;margin-bottom:14px}.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.badge{background:white;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:#31506d;font-weight:650;font-size:14px}.dark{background:linear-gradient(135deg,#07182b,#0b2e4f);color:white}.dark .section{padding-top:76px;padding-bottom:76px}.dark h2,.dark h3{color:white}.dark .lead,.dark p{color:#cde4f3}.dark .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.13);box-shadow:none}.list{display:grid;gap:10px;margin-top:18px}.list div{padding:13px 15px;background:#f7fbff;border:1px solid var(--line);border-radius:16px;color:#31506d}.dark .list div{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);color:#e7f7ff}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}.step{background:white;border:1px solid var(--line);border-radius:20px;padding:18px;text-align:center}.step b{display:block;color:#06233f}.arrow{color:#24bdd8;font-weight:900;font-size:22px}.price{font-size:34px;font-weight:900;color:#0fb8d8}.cta{max-width:1180px;margin:0 auto 70px;padding:0 22px}.cta .box{background:linear-gradient(135deg,var(--navy),#063a54);border-radius:32px;color:white;padding:44px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;box-shadow:0 25px 80px rgba(6,21,39,.22)}.small{font-size:13px;color:#6f8192}.footer{padding:28px 22px;text-align:center;color:#6f8192;border-top:1px solid var(--line);background:white}
-    @media(max-width:900px){.hero .wrap,.grid.three,.grid.two,.cta .box{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.navlinks{display:none}h1{font-size:42px}.section{padding:48px 18px}.hero .wrap{padding:58px 18px}.cta .box{padding:28px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthcare GrowthOS | AICloudStrategist</title>
+<meta name="description" content="Healthcare GrowthOS helps hospitals, clinics, diagnostics, dental, eye, skin, wellness, IVF and other healthcare facilities improve website trust, patient enquiry capture, follow-up, AI content and owner dashboards.">
+<link rel="canonical" href="https://aicloudstrategist.com/healthcare-growthos/">
+
+<!--
+  Healthcare GrowthOS — redesigned in the AICloudStrategist premium design
+  system (dark teal-navy, cyan/teal/violet, glass) with animations.
+  Navbar, footer, logo, padding, and font match /home-core-growth/.
+  Page content, links, and section structure preserved from the original.
+-->
+
+<style>
+  :root{
+    --bg-0:#04131a; --bg-1:#06202b;
+    --ink:#eaf6fb; --muted:#9db4c0; --faint:#5f7a87;
+    --cyan:#58c8ff; --teal:#25e6c8; --blue:#4d8cff; --violet:#8d6cff;
+    --line:rgba(255,255,255,.09);
+    --glass:rgba(255,255,255,.038);
+    --glass-2:rgba(255,255,255,.06);
+    --shadow:0 30px 80px -30px rgba(0,0,0,.8);
+    --r-lg:24px; --r-md:16px; --r-sm:11px;
+    --font:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --maxw:1280px;
+    --grad:linear-gradient(100deg,var(--cyan),var(--teal) 45%,var(--violet));
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg-0);color:var(--ink);font-family:var(--font);
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{letter-spacing:-0.045em;line-height:1.06;margin:0;font-weight:800;}
+
+  /* atmosphere */
+  .bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+  .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.42;will-change:transform;}
+  .o1{width:42vw;height:42vw;left:-12vw;top:-8vw;background:radial-gradient(circle,rgba(88,200,255,.5),transparent 65%);animation:drift1 28s ease-in-out infinite;}
+  .o2{width:40vw;height:40vw;right:-12vw;top:18vh;background:radial-gradient(circle,rgba(141,108,255,.46),transparent 65%);animation:drift2 32s ease-in-out infinite;}
+  .o3{width:46vw;height:46vw;left:22vw;bottom:-22vw;background:radial-gradient(circle,rgba(37,230,200,.3),transparent 62%);animation:drift3 36s ease-in-out infinite;}
+  @keyframes drift1{50%{transform:translate(6vw,4vh) scale(1.08);}}
+  @keyframes drift2{50%{transform:translate(-5vw,5vh) scale(1.1);}}
+  @keyframes drift3{50%{transform:translate(3vw,-4vh) scale(.94);}}
+  .grid-veil{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45;
+    background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+    background-size:66px 66px;-webkit-mask-image:radial-gradient(120% 75% at 50% 0%,#000 30%,transparent 80%);mask-image:radial-gradient(120% 75% at 50% 0%,#000 30%,transparent 80%);}
+
+  .wrap{position:relative;z-index:2;}
+  .container{width:min(100% - (clamp(18px,3vw,42px) * 2),var(--maxw));max-width:none;margin:0 auto;padding-left:0;padding-right:0;}
+  @media(max-width:640px){.container{width:min(100% - 36px,var(--maxw));}.actions{display:grid;grid-template-columns:1fr}.btn{width:100%;min-height:52px;text-align:center;white-space:normal}}
+  .pad{padding:clamp(72px,7vw,104px) 0;}
+
+  /* shared */
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;margin-bottom:18px;
+    border:1px solid rgba(88,200,255,.28);background:linear-gradient(90deg,rgba(88,200,255,.1),rgba(141,108,255,.1));
+    font-size:.72rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--cyan);}
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{50%{opacity:.35;transform:scale(.7);}}
+  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .h-sec{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;max-width:22ch;font-weight:900;}
+  .lead{color:#cbd5e1;font-size:clamp(1rem,1.5vw,1.12rem);max-width:860px;line-height:1.65;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 24px;border-radius:999px;
+    font-weight:900;font-size:.96rem;cursor:pointer;border:1px solid transparent;position:relative;overflow:hidden;
+    transition:transform .3s ease,box-shadow .35s ease,border-color .3s ease,background .3s ease;}
+  .btn .arrow{transition:transform .35s cubic-bezier(.22,1,.36,1);}
+  .btn:hover .arrow{transform:translateX(5px);}
+  .btn.primary{color:#04131a;background:var(--grad);box-shadow:0 18px 44px -18px rgba(88,200,255,.75);}
+  .btn.primary:hover{transform:translateY(-3px);box-shadow:0 24px 54px -16px rgba(141,108,255,.7);}
+  .btn.primary::after{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .6s ease;}
+  .btn.primary:hover::after{left:150%;}
+  .btn.secondary{color:#eaf6fb;border-color:rgba(88,200,255,.28);background:rgba(255,255,255,.055);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);}
+  .btn.secondary:hover{transform:translateY(-3px);border-color:rgba(88,200,255,.6);background:linear-gradient(90deg,rgba(88,200,255,.13),rgba(141,108,255,.13));}
+
+  .card{border:1px solid var(--line);background:linear-gradient(180deg,var(--glass-2),var(--glass));
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:var(--r-lg);box-shadow:var(--shadow);
+    transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .45s;}
+  .card.hoverable:hover{transform:translateY(-8px);border-color:rgba(88,200,255,.42);
+    box-shadow:0 36px 80px -30px rgba(0,0,0,.8),0 14px 50px -30px rgba(88,200,255,.55);}
+
+  /* top bar (home style) */
+  .topbar{position:relative;z-index:41;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,8,15,.88);backdrop-filter:blur(10px);font-size:13px;color:#c9d8e6;}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:38px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+  .topbar a{color:#eaf6fb;font-weight:600;transition:color .25s;}
+  .topbar a:hover{color:var(--cyan);}
+  .topbar-sep{opacity:.5;}
+
+  /* navbar (home style) */
+  nav.nav{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);
+    background:rgba(4,19,26,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;}
+  .brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
+    font-size:.82rem;font-weight:900;letter-spacing:.01em;color:#04131a;background:var(--grad);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
+  .nav-links{display:flex;align-items:center;gap:22px;}
+  .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500;position:relative;transition:color .25s;}
+  .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;border-radius:2px;background:var(--grad);transition:width .3s ease;}
+  .nav-links a:not(.nav-cta):hover{color:var(--ink);} .nav-links a:not(.nav-cta):hover::after{width:100%;}
+  .nav-cta{color:#04131a!important;background:var(--grad);padding:10px 16px;border-radius:11px;font-weight:600;
+    transition:transform .25s,box-shadow .3s;box-shadow:0 12px 30px -14px rgba(88,200,255,.8);}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(141,108,255,.8);}
+  .nav-cta-short{display:none;}
+  .mobile-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--glass);color:var(--ink);font-size:1.3rem;cursor:pointer;align-items:center;justify-content:center;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;}
+  .hero .reveal{opacity:1;transform:none;}
+  .hero h1{color:#fff;}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:52px;align-items:center;padding-top:clamp(64px,7vw,96px);padding-bottom:clamp(64px,7vw,96px);}
+  .hero h1{font-size:clamp(2.55rem,5vw,4.4rem);font-weight:950;max-width:16ch;margin:0 0 20px;letter-spacing:-.06em;}
+  .hero .sub{color:#cbd5e1;font-size:clamp(1.03rem,1.55vw,1.2rem);max-width:64ch;margin:0 0 30px;line-height:1.65;}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;}
+
+  /* dashboard card */
+  .hero-card{position:relative;}
+  .dash{padding:28px 26px;border-radius:22px;border:1px solid rgba(88,200,255,.18);
+    background:linear-gradient(160deg,rgba(12,38,48,.78),rgba(8,26,34,.78));backdrop-filter:blur(16px);box-shadow:0 24px 70px rgba(0,0,0,.24);position:relative;overflow:hidden;}
+  .dash::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--grad);opacity:.85;}
+  .dash h3{font-size:1.16rem;font-weight:900;margin:0 0 18px;display:flex;align-items:center;gap:10px;color:#fff;letter-spacing:-.025em;}
+  .dash h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal);animation:pulse 2s ease-in-out infinite;}
+  .metric{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 15px;border-radius:12px;
+    border:1px solid var(--line);background:rgba(4,19,26,.4);margin-bottom:10px;
+    opacity:0;transform:translateX(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1);}
+  .dash.in .metric{opacity:1;transform:none;}
+  .dash.in .metric:nth-child(2){transition-delay:.08s;}
+  .dash.in .metric:nth-child(3){transition-delay:.16s;}
+  .dash.in .metric:nth-child(4){transition-delay:.24s;}
+  .dash.in .metric:nth-child(5){transition-delay:.32s;}
+  .metric b{font-weight:800;font-size:.95rem;color:#eaf6fb;}
+  .metric span{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--teal);
+    padding:5px 11px;border-radius:999px;border:1px solid rgba(37,230,200,.28);background:rgba(37,230,200,.08);}
+  .metric span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal);animation:pulse 1.8s ease-in-out infinite;}
+  .dash .leak{color:#cbd5e1;margin:16px 0 0;font-size:.92rem;line-height:1.55;padding-top:14px;border-top:1px solid rgba(255,255,255,.09);}
+
+  /* sections */
+  .section.dark{background:linear-gradient(180deg,transparent,rgba(6,28,38,.5),transparent);}
+  .grid{display:grid;gap:22px;}
+  .grid.three{grid-template-columns:repeat(3,1fr);}
+  .grid.two{grid-template-columns:repeat(2,1fr);}
+
+  .scard{padding:30px 26px;position:relative;overflow:hidden;}
+  .scard::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--grad);opacity:.7;transform:scaleX(0);transform-origin:left;transition:transform .5s ease;}
+  .scard:hover::after{transform:scaleX(1);}
+  .scard .icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-weight:800;font-size:1.2rem;color:#04131a;
+    background:var(--grad);box-shadow:0 12px 30px -12px rgba(88,200,255,.8);margin-bottom:16px;}
+  .scard h3{font-size:1.16rem;font-weight:700;margin:0 0 10px;}
+  .scard p{color:var(--muted);font-size:.94rem;margin:0;line-height:1.6;}
+
+  /* badges */
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
+  .badge{font-size:.9rem;font-weight:600;color:#dceaf0;padding:10px 16px;border-radius:999px;border:1px solid var(--line);
+    background:rgba(255,255,255,.04);transition:border-color .25s,background .25s,transform .25s;}
+  .badge:hover{border-color:rgba(88,200,255,.5);background:rgba(88,200,255,.08);transform:translateY(-2px);}
+
+  /* flow */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:36px;position:relative;}
+  .flow::before{content:"";position:absolute;left:9%;right:9%;top:11px;height:2px;border-radius:2px;
+    background:linear-gradient(90deg,var(--cyan),var(--teal),var(--violet));opacity:.35;}
+  .step{position:relative;text-align:center;padding:30px 6px 0;}
+  .step::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;
+    background:var(--grad);border:5px solid var(--bg-0);box-shadow:0 8px 22px -8px rgba(88,200,255,.85);z-index:2;transition:transform .3s ease;}
+  .step:hover::before{transform:translateX(-50%) scale(1.18);}
+  .step b{display:block;font-size:1.02rem;font-weight:700;margin-bottom:4px;}
+  .step span{display:block;color:var(--muted);font-size:.88rem;line-height:1.45;}
+
+  /* price label */
+  .price{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--violet);
+    padding:5px 12px;border-radius:999px;border:1px solid rgba(141,108,255,.3);background:rgba(141,108,255,.08);margin-bottom:14px;}
+
+  /* cta */
+  .ctaband .box{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+    padding:38px 36px;border-radius:var(--r-lg);position:relative;overflow:hidden;
+    border:1px solid var(--line);background:linear-gradient(120deg,rgba(88,200,255,.12),rgba(141,108,255,.12));backdrop-filter:blur(14px);box-shadow:var(--shadow);}
+  .ctaband .box::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 80% 20%,rgba(37,230,200,.18),transparent 70%);pointer-events:none;}
+  .ctaband h2{font-size:clamp(1.4rem,2.6vw,1.9rem);}
+  .ctaband p{font-size:1rem;}
+
+  /* footer (home style) */
+  footer.footer{position:relative;z-index:2;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);}
+  .footer-main-grid{display:grid;grid-template-columns:1.1fr .76fr .94fr .88fr 1.08fr;gap:28px;padding:54px 0 34px;}
+  .footer-brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:14px;}
+  .footer-brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;font-size:.82rem;font-weight:900;color:#04131a;background:var(--grad);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
+  .footer-brand-block p{color:var(--muted);font-size:.9rem;line-height:1.6;max-width:300px;margin:0;}
+  .footer-disclaimer{color:var(--faint)!important;font-size:.78rem!important;line-height:1.55;margin-top:14px!important;max-width:320px;}
+  .footer-links-group h3,.footer-contact-block h3{font-size:.72rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--faint);font-weight:700;margin:0 0 14px;}
+  .footer-links-group a{display:block;color:var(--muted);font-size:.9rem;margin-bottom:10px;transition:color .25s;}
+  .footer-links-group a:hover{color:var(--cyan);}
+  .footer-contact-pills{display:grid;gap:10px;}
+  .footer-contact-pills a{color:var(--muted);font-size:.9rem;transition:color .25s;word-break:break-word;}
+  .footer-contact-pills a:hover{color:var(--cyan);}
+  .footer-bottom-row{border-top:1px solid var(--line);padding:16px 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--faint);}
+  .footer-bottom-row a{color:var(--faint);transition:color .25s;} .footer-bottom-row a:hover{color:var(--muted);}
+  .footer-bottom-row span:last-child{margin-left:auto;}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .grid.three,.grid.two{grid-template-columns:1fr;}
+    .flow{grid-template-columns:1fr;gap:12px;}
+    .flow::before{display:none;}
+    .step{text-align:left;padding:16px 18px 16px 46px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--glass);}
+    .step::before{top:50%;left:18px;transform:translateY(-50%);width:18px;height:18px;}
+    .step:hover::before{transform:translateY(-50%) scale(1.15);}
+    .footer-main-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:860px){
+    .mobile-toggle{display:flex;}
+    .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(4,19,26,.98);border-bottom:1px solid var(--line);padding:6px 0;backdrop-filter:blur(16px);}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:13px 22px;}
+    .nav-links a:not(.nav-cta)::after{display:none;}
+    .nav-cta{margin:8px 22px 6px;text-align:center;}
+    .nav-cta-full{display:none;} .nav-cta-short{display:inline;}
+  }
+  @media(max-width:600px){
+    .footer-main-grid{grid-template-columns:1fr;}
+    .footer-bottom-row{flex-direction:column;align-items:flex-start;} .footer-bottom-row span:last-child{margin-left:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .orb,.eyebrow .dot,.dash h3::before,.metric span::before{animation:none!important;}
+    .reveal,.dash .metric{opacity:1!important;transform:none!important;}
+    .btn.primary::after{display:none;}
+    *{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
-  <header class="top"><div class="nav"><div class="brand">AI<span>Cloud</span>Strategist</div><nav class="navlinks"><a href="/#services">Services</a><a href="/growth-control-os/">Growth & Control OS</a><a href="/healthcare-growthos/">Healthcare GrowthOS</a><a href="/free-business-review/?service=trust-compliance">Trust</a><a href="/free-business-review/?service=ai-creative-studio">AI Studio</a></nav><a class="pill" href="/free-business-review/?service=healthcare-growthos">Request Audit</a></div></header>
-  <section class="hero"><div class="wrap"><div><div class="eyebrow"><i class="dot"></i> Healthcare GrowthOS · AICloudStrategist</div><h1>Turn missed patient enquiries into a controlled growth system.</h1><p class="sub">For hospitals, clinics, diagnostics, dental, eye, skin/aesthetic, wellness, IVF/fertility, and serious healthcare facilities that need better trust, faster follow-up, and owner visibility.</p><div class="actions"><a class="btn primary" href="/free-business-review/?service=healthcare-growthos">Request Healthcare Growth Audit</a><a class="btn secondary" href="#leakage">See What Is Leaking</a></div></div><div class="hero-card"><div class="dash"><h3>Owner Control View</h3><div class="metric"><b>New patient enquiries</b><span>Captured</span></div><div class="metric"><b>Pending follow-ups</b><span>Visible</span></div><div class="metric"><b>Missed response delays</b><span>Flagged</span></div><div class="metric"><b>Trust / privacy basics</b><span>Tracked</span></div><div class="leak">Goal: stop silent leakage before spending more on ads.</div></div></div></div></section>
-  <section class="section"><h2>Most healthcare growth leakage is hidden.</h2><p class="lead">Patients may visit your website, call, WhatsApp, compare reviews, ask a question, and then disappear. Healthcare GrowthOS creates a practical system around digital presence, enquiry capture, follow-up, trust readiness, content, and dashboards.</p><div class="grid three" style="margin-top:28px"><div class="card"><div class="icon">1</div><h3>Trust gap</h3><p>The facility is good, but the website and online journey do not create enough confidence.</p></div><div class="card"><div class="icon">2</div><h3>Follow-up gap</h3><p>Calls, WhatsApp messages, forms, and campaign leads are not tracked in one view.</p></div><div class="card"><div class="icon">3</div><h3>Owner visibility gap</h3><p>The owner cannot see where enquiries are stuck, delayed, or lost.</p></div></div></section>
-  <section class="dark"><div class="section"><h2>The GrowthOS combines the five controls that matter.</h2><p class="lead">Not another generic marketing package. This is a growth-control system for serious healthcare facilities.</p><div class="grid three" style="margin-top:28px"><div class="card"><h3>Premium healthcare website</h3><p>Clear service pages, mobile-first design, trust sections, doctor/facility highlights, FAQs, local SEO basics, and appointment CTAs.</p></div><div class="card"><h3>Patient enquiry capture</h3><p>Website forms, WhatsApp/call capture flow, auto-replies, follow-up reminders, hot/warm/cold status, and weekly leakage summary.</p></div><div class="card"><h3>Trust readiness</h3><p>Privacy policy readiness, consent clarity, communication disclaimers, and safe data-handling checklist.</p></div><div class="card"><h3>AI Creative Studio</h3><p>Premium reels, explainers, facility stories, doctor/founder content, and patient education concepts without false claims.</p></div><div class="card"><h3>Owner dashboard</h3><p>New enquiries, pending follow-ups, response delays, booked consultations, missed opportunities, and weekly action list.</p></div><div class="card"><h3>ROI-led improvement</h3><p>Start by showing leakage and value before asking the facility to buy a larger package.</p></div></div></div></section>
-  <section class="section"><h2>Built for serious healthcare facilities.</h2><div class="badges"><span class="badge">Hospitals</span><span class="badge">Clinics</span><span class="badge">Diagnostics</span><span class="badge">Dental</span><span class="badge">Eye clinics</span><span class="badge">Skin / aesthetic</span><span class="badge">Physio / wellness</span><span class="badge">Pharmacies</span><span class="badge">IVF / fertility</span></div></section>
-  <section class="section" id="leakage"><h2>First show leakage. Then price fairly.</h2><p class="lead">The offer should not ask a customer to buy blindly. We first estimate lost enquiries, slow follow-up cost, trust gaps, and value recovered from better handling.</p><div class="flow"><div class="step"><b>Audit</b><span>Find leakage</span></div><div class="step"><b>Baseline</b><span>Estimate value</span></div><div class="step"><b>Fix</b><span>Install controls</span></div><div class="step"><b>Measure</b><span>Track response</span></div><div class="step"><b>Scale</b><span>Managed OS</span></div></div></section>
-  <section class="section"><h2>Offer ladder</h2><div class="grid three" style="margin-top:28px"><div class="card"><div class="price">Free</div><h3>Healthcare Growth Audit</h3><p>Quick review of website trust, patient journey, enquiry capture, follow-up gaps, and visible leakage.</p></div><div class="card"><div class="price">Sprint</div><h3>GrowthOS Setup</h3><p>Focused setup: landing/service page, enquiry flow, follow-up tracker, trust basics, and owner dashboard.</p></div><div class="card"><div class="price">Monthly</div><h3>Managed Desk</h3><p>Ongoing improvement of digital presence, follow-up discipline, AI content, trust controls, and reporting.</p></div></div></section>
-  <section class="cta" id="audit"><div class="box"><div><h2 style="margin:0 0 8px">Ready to see where patient enquiries are leaking?</h2><p style="margin:0;color:#d6edf8">Start with a Healthcare Growth Audit. No exaggerated promises — just a practical view of trust, capture, follow-up, and visibility gaps.</p></div><a class="btn primary" href="/free-business-review/?service=healthcare-growthos">Request Audit</a></div></section>
-  <footer class="footer">Safe claim: AICloudStrategist does not guarantee patient bookings or medical outcomes. We improve digital trust, enquiry capture, follow-up discipline, content quality, and owner visibility.</footer>
+
+<div class="bg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="grid-veil" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Websites · Automation · Trust · AI Creatives — for businesses worldwide.</span>
+      <span>
+        <a href="tel:+918065480898">Call +91 80654 80898</a>
+        <span class="topbar-sep"> · </span>
+        <a href="https://wa.me/918796302608">WA +91 87963 02608</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/home-core-growth/">
+        <span class="mark">AI</span>
+        <span>AICloudStrategist</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="/home-core-growth/">Home</a>
+        <a href="/home-core-growth/#services">Services</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact.html">Contact</a>
+        <a class="nav-cta" href="/free-business-review/">
+          <span class="nav-cta-full">Get free growth review</span>
+          <span class="nav-cta-short">Free review</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow reveal"><i class="dot"></i> Healthcare GrowthOS · AICloudStrategist</div>
+        <h1 class="reveal">Turn missed patient enquiries into a <span class="grad">controlled growth system</span>.</h1>
+        <p class="sub reveal">For hospitals, clinics, diagnostics, dental, eye, skin/aesthetic, wellness, IVF/fertility, and serious healthcare facilities that need better trust, faster follow-up, and owner visibility.</p>
+        <div class="actions reveal">
+          <a class="btn primary" href="/free-business-review/?service=healthcare-growthos">Request Healthcare Growth Audit <span class="arrow">→</span></a>
+          <a class="btn secondary" href="#leakage">See What Is Leaking</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="dash" id="dash">
+          <h3>Owner Control View</h3>
+          <div class="metric"><b>New patient enquiries</b><span>Captured</span></div>
+          <div class="metric"><b>Pending follow-ups</b><span>Visible</span></div>
+          <div class="metric"><b>Missed response delays</b><span>Flagged</span></div>
+          <div class="metric"><b>Trust / privacy basics</b><span>Tracked</span></div>
+          <div class="leak">Goal: stop silent leakage before spending more on ads.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAKAGE INTRO -->
+  <section class="section pad">
+    <div class="container">
+      <h2 class="h-sec reveal">Most healthcare growth leakage is hidden.</h2>
+      <p class="lead reveal">Patients may visit your website, call, WhatsApp, compare reviews, ask a question, and then disappear. Healthcare GrowthOS creates a practical system around digital presence, enquiry capture, follow-up, trust readiness, content, and dashboards.</p>
+      <div class="grid three" style="margin-top:30px">
+        <div class="card scard hoverable reveal"><div class="icon">1</div><h3>Trust gap</h3><p>The facility is good, but the website and online journey do not create enough confidence.</p></div>
+        <div class="card scard hoverable reveal"><div class="icon">2</div><h3>Follow-up gap</h3><p>Calls, WhatsApp messages, forms, and campaign leads are not tracked in one view.</p></div>
+        <div class="card scard hoverable reveal"><div class="icon">3</div><h3>Owner visibility gap</h3><p>The owner cannot see where enquiries are stuck, delayed, or lost.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIVE CONTROLS -->
+  <section class="section dark pad">
+    <div class="container">
+      <h2 class="h-sec reveal">The GrowthOS combines the five controls that matter.</h2>
+      <p class="lead reveal">Not another generic marketing package. This is a growth-control system for serious healthcare facilities.</p>
+      <div class="grid three" style="margin-top:30px">
+        <div class="card scard hoverable reveal"><h3>Premium healthcare website</h3><p>Clear service pages, mobile-first design, trust sections, doctor/facility highlights, FAQs, local SEO basics, and appointment CTAs.</p></div>
+        <div class="card scard hoverable reveal"><h3>Patient enquiry capture</h3><p>Website forms, WhatsApp/call capture flow, auto-replies, follow-up reminders, hot/warm/cold status, and weekly leakage summary.</p></div>
+        <div class="card scard hoverable reveal"><h3>Trust readiness</h3><p>Privacy policy readiness, consent clarity, communication disclaimers, and safe data-handling checklist.</p></div>
+        <div class="card scard hoverable reveal"><h3>AI Creative Studio</h3><p>Premium reels, explainers, facility stories, doctor/founder content, and patient education concepts without false claims.</p></div>
+        <div class="card scard hoverable reveal"><h3>Owner dashboard</h3><p>New enquiries, pending follow-ups, response delays, booked consultations, missed opportunities, and weekly action list.</p></div>
+        <div class="card scard hoverable reveal"><h3>ROI-led improvement</h3><p>Start by showing leakage and value before asking the facility to buy a larger package.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGES -->
+  <section class="section pad">
+    <div class="container">
+      <h2 class="h-sec reveal">Built for serious healthcare facilities.</h2>
+      <div class="badges">
+        <span class="badge reveal">Hospitals</span>
+        <span class="badge reveal">Clinics</span>
+        <span class="badge reveal">Diagnostics</span>
+        <span class="badge reveal">Dental</span>
+        <span class="badge reveal">Eye clinics</span>
+        <span class="badge reveal">Skin / aesthetic</span>
+        <span class="badge reveal">Physio / wellness</span>
+        <span class="badge reveal">Pharmacies</span>
+        <span class="badge reveal">IVF / fertility</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAKAGE FLOW -->
+  <section class="section pad" id="leakage">
+    <div class="container">
+      <h2 class="h-sec reveal">First show leakage. Then price fairly.</h2>
+      <p class="lead reveal">The offer should not ask a customer to buy blindly. We first estimate lost enquiries, slow follow-up cost, trust gaps, and value recovered from better handling.</p>
+      <div class="flow">
+        <div class="step reveal"><b>Audit</b><span>Find leakage</span></div>
+        <div class="step reveal"><b>Baseline</b><span>Estimate value</span></div>
+        <div class="step reveal"><b>Fix</b><span>Install controls</span></div>
+        <div class="step reveal"><b>Measure</b><span>Track response</span></div>
+        <div class="step reveal"><b>Scale</b><span>Managed OS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER LADDER -->
+  <section class="section pad">
+    <div class="container">
+      <h2 class="h-sec reveal">Offer ladder</h2>
+      <div class="grid three" style="margin-top:30px">
+        <div class="card scard hoverable reveal"><span class="price">Free</span><h3>Healthcare Growth Audit</h3><p>Quick review of website trust, patient journey, enquiry capture, follow-up gaps, and visible leakage.</p></div>
+        <div class="card scard hoverable reveal"><span class="price">Sprint</span><h3>GrowthOS Setup</h3><p>Focused setup: landing/service page, enquiry flow, follow-up tracker, trust basics, and owner dashboard.</p></div>
+        <div class="card scard hoverable reveal"><span class="price">Monthly</span><h3>Managed Desk</h3><p>Ongoing improvement of digital presence, follow-up discipline, AI content, trust controls, and reporting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section ctaband pad" id="audit">
+    <div class="container">
+      <div class="box reveal">
+        <div>
+          <h2 style="margin:0 0 8px">Ready to see where patient enquiries are leaking?</h2>
+          <p style="margin:0;color:#d6edf8">Start with a Healthcare Growth Audit. No exaggerated promises — just a practical view of trust, capture, follow-up, and visibility gaps.</p>
+        </div>
+        <a class="btn primary" href="/free-business-review/?service=healthcare-growthos">Request Audit <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (home style) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="/home-core-growth/"><span class="mark">AI</span><span>AICloudStrategist</span></a>
+          <p>Practical digital growth services for businesses worldwide.</p>
+          <p class="footer-disclaimer">Safe claim: AICloudStrategist does not guarantee patient bookings or medical outcomes. We improve digital trust, enquiry capture, follow-up discipline, content quality, and owner visibility.</p>
+        </div>
+        <div class="footer-links-group">
+          <h3>Quick Links</h3>
+          <a href="/how-we-work/">How it works</a>
+          <a href="/home-core-growth/#services">Services</a>
+          <a href="/industries.html">Industries</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about/">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/free-business-review/">Get free Business Growth Review</a>
+        </div>
+        <div class="footer-links-group">
+          <h3>Services</h3>
+          <a href="/services/website-digital-presence/">Website &amp; Digital Presence</a>
+          <a href="/lead-capture-follow-up/">Lead Capture &amp; Follow-up</a>
+          <a href="/trust-compliance/">Trust &amp; Compliance</a>
+          <a href="/ai-creative-studio/">AI Creative Studio</a>
+          <a href="/growth-control-os/">Growth &amp; Control OS</a>
+        </div>
+        <div class="footer-links-group">
+          <h3>Specialist Tools</h3>
+          <a href="/healthcare-growthos/">Healthcare GrowthOS</a>
+          <a href="/roi-calculator/">Business ROI Calculator</a>
+          <a href="/healthcare-roi-leakage-calculator/">Healthcare ROI Calculator</a>
+        </div>
+        <div class="footer-contact-block">
+          <h3>Contact</h3>
+          <div class="footer-contact-pills">
+            <a href="tel:+918065480898">Phone: +91 80654 80898</a>
+            <a href="https://wa.me/918796302608">WhatsApp: +91 87963 02608</a>
+            <a href="mailto:contact@aicloudstrategist.com">Email: contact@aicloudstrategist.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>© AICloudStrategist</span>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <span>Serving businesses worldwide</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // mobile nav (home-style toggle)
+  const mt = document.getElementById('mobileToggle');
+  const nl = document.getElementById('navLinks');
+  mt.addEventListener('click', () => nl.classList.toggle('open'));
+  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
+
+  // reveal on scroll + dashboard metric stagger
+  if (!RM && 'IntersectionObserver' in window){
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    const dash = document.getElementById('dash');
+    if (dash){
+      const dio = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){dash.classList.add('in');dio.unobserve(dash);}});},{threshold:.3});
+      dio.observe(dash);
+    }
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    document.getElementById('dash')?.classList.add('in');
+  }
+
+  // soft parallax on background orbs (desktop, motion-on)
+  if (!RM && window.matchMedia('(pointer:fine)').matches){
+    const orbs = document.querySelectorAll('.orb'); let raf=null;
+    window.addEventListener('pointermove', e=>{
+      if(raf) return;
+      raf=requestAnimationFrame(()=>{
+        const dx=(e.clientX/window.innerWidth-.5), dy=(e.clientY/window.innerHeight-.5);
+        orbs.forEach((o,i)=>{const f=(i+1)*8;o.style.translate=(dx*f)+'px '+(dy*f)+'px';});
+        raf=null;
+      });
+    });
+  }
+</script>
 </body>
 </html>
