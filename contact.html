@@ -166,6 +166,8 @@
   .form select option{background:#06202b;color:var(--ink);}
   .form textarea{min-height:124px;resize:vertical;}
   .form button{margin-top:24px;width:100%;}
+  .form-status{display:none;margin-top:16px;padding:13px 15px;border-radius:14px;border:1px solid rgba(37,230,200,.35);background:rgba(37,230,200,.09);color:#dffff9;font-size:.92rem;line-height:1.45;}
+  .form-status.error{border-color:rgba(255,138,138,.5);background:rgba(255,93,93,.1);color:#ffe1e1;}
 
   /* ===== response times ===== */
   .sla-head{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
@@ -344,24 +346,26 @@
         </div>
 
         <div class="form-wrap reveal d1">
-          <form class="form lead-form premium-form" action="/free-business-review" method="GET">
+          <form id="contactForm" class="form lead-form premium-form" action="/api/contact" method="POST" novalidate>
             <div class="formhead"><span class="d"></span> Start your review</div>
             <p class="formsub">Tell us a little and we'll point you to the most useful next step.</p>
-            <label>Name</label>
-            <input name="name" required />
-            <label>Email, WhatsApp or preferred channel</label>
-            <input name="contact" required />
-            <label>I want help with</label>
-            <select name="need">
+            <label for="contact_name">Name</label>
+            <input id="contact_name" name="name" autocomplete="name" required />
+            <label for="contact_channel">Email, WhatsApp or preferred channel</label>
+            <input id="contact_channel" name="contact" autocomplete="email" required />
+            <label for="contact_need">I want help with</label>
+            <select id="contact_need" name="need">
               <option>Website &amp; Digital Presence</option>
               <option>Lead Capture &amp; Follow-up</option>
               <option>Trust &amp; Compliance</option>
               <option>AI Creative Studio</option>
               <option>Not sure yet</option>
             </select>
-            <label>Message</label>
-            <textarea name="message" placeholder="Tell us your business type, website, preferred contact channel and what you want improved."></textarea>
-            <button class="btn btn-primary" type="submit">Get free Business Growth Review <span class="arrow">→</span></button>
+            <label for="contact_message">Message</label>
+            <textarea id="contact_message" name="message" placeholder="Tell us your business type, website, preferred contact channel and what you want improved."></textarea>
+            <button id="contactSubmitButton" class="btn btn-primary" type="submit">Get free Business Growth Review <span class="arrow">→</span></button>
+            <div id="contactSuccess" class="form-status" role="status">Request received. We will reply on your preferred channel within 1 business day. For urgent requests, WhatsApp +91 87963 02608.</div>
+            <div id="contactError" class="form-status error" role="alert">We could not submit the enquiry. Please retry, or WhatsApp us at +91 87963 02608.</div>
           </form>
         </div>
       </div>
@@ -449,6 +453,43 @@
   const nl = document.getElementById('navLinks');
   mt.addEventListener('click', () => nl.classList.toggle('open'));
   nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
+
+  // contact enquiry submission
+  const contactForm = document.getElementById('contactForm');
+  const contactSuccess = document.getElementById('contactSuccess');
+  const contactError = document.getElementById('contactError');
+  const contactSubmitButton = document.getElementById('contactSubmitButton');
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    contactSuccess.style.display = 'none';
+    contactError.style.display = 'none';
+    contactError.textContent = 'We could not submit the enquiry. Please retry, or WhatsApp us at +91 87963 02608.';
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+    const originalText = contactSubmitButton.innerHTML;
+    contactSubmitButton.disabled = true;
+    contactSubmitButton.textContent = 'Submitting...';
+    try {
+      const payload = Object.fromEntries(new FormData(contactForm).entries());
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || 'Submission failed');
+      contactForm.reset();
+      contactSuccess.style.display = 'block';
+    } catch (error) {
+      contactError.textContent = (error.message || 'We could not submit the enquiry.') + ' Please retry, or WhatsApp us at +91 87963 02608.';
+      contactError.style.display = 'block';
+    } finally {
+      contactSubmitButton.disabled = false;
+      contactSubmitButton.innerHTML = originalText;
+    }
+  });
 
   // reveal + timeline draw
   if (!RM && 'IntersectionObserver' in window){
