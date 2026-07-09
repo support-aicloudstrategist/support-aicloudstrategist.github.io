@@ -123,11 +123,12 @@ def check_repo() -> dict:
         parser = LinkParser()
         parser.feed(text)
         jsonld_blocks += parse_jsonld(text, rel, findings)
+        noindex = "name=\"robots\"" in lower and "noindex" in lower
 
         if rel != "404.html" and not parser.canonicals:
             findings.append(Finding("warn", "canonical", rel, "Missing canonical link"))
             urls_from_pages.add(normalize_url(page_url(path)))
-        elif parser.canonicals:
+        elif parser.canonicals and not noindex:
             urls_from_pages.add(normalize_url(parser.canonicals[0]))
         if rel != "404.html" and parser.descriptions == 0:
             findings.append(Finding("warn", "metadata", rel, "Missing meta description"))
@@ -178,6 +179,55 @@ def check_live(urls: list[str]) -> list[dict]:
     return [http_status(url) for url in urls]
 
 
+def exists(*parts: str) -> bool:
+    return (ROOT.joinpath(*parts)).exists()
+
+
+def scorecard(repo: dict, live: list[dict] | None = None) -> dict:
+    """Percentage-wise brand monitor.
+
+    Scores are evidence-based. External proof/search/analytics items are deliberately
+    capped until credentials or third-party URLs exist; the monitor must never fake 100%.
+    """
+    findings = repo.get("findings", [])
+    warn_categories = {f.get("category") for f in findings if f.get("level") == "warn"}
+    live_ok = bool(live) and all(item.get("status") == 200 for item in live)
+    pages = {
+        "home": exists("index.html"),
+        "about": exists("about", "index.html") or exists("about.html"),
+        "contact": exists("contact.html"),
+        "pricing": exists("pricing.html"),
+        "resources": exists("resources", "index.html") or exists("resources.html"),
+        "healthcare": exists("healthcare-growthos", "index.html"),
+        "cloud": exists("cloud-trust-finops", "index.html"),
+        "growth": exists("growth-control-os", "index.html"),
+        "case_studies": exists("case-studies", "index.html"),
+        "monitoring": exists("resources", "brand-trust-monitoring", "index.html"),
+        "llms": exists("llms.txt"),
+        "robots": exists("robots.txt"),
+    }
+    parameters = [
+        {"parameter": "Category clarity", "percentage": 100 if all(pages[k] for k in ["home", "about", "growth", "healthcare", "cloud"]) else 70, "status": "verified", "evidence": "Core positioning pages exist."},
+        {"parameter": "Google topic authority", "percentage": 90 if repo.get("sitemap_urls", 0) >= 100 and pages["resources"] else 70, "status": "needs more external/index evidence", "evidence": f"Sitemap URLs: {repo.get('sitemap_urls', 0)}."},
+        {"parameter": "High-intent landing pages", "percentage": 92 if all(pages[k] for k in ["healthcare", "cloud", "growth", "pricing"]) else 70, "status": "verified site-side", "evidence": "Commercial landing pages present."},
+        {"parameter": "Tools/calculators/templates", "percentage": 100 if exists("roi-calculator", "index.html") and exists("lead-leakage-calculator.html") and exists("assets", "dpdp-sprint", "privacy-policy-clinic-paste-ready.html") else 75, "status": "verified", "evidence": "ROI, lead leakage and DPDP template assets present."},
+        {"parameter": "AI chatbot/search readiness", "percentage": 95 if pages["llms"] and pages["robots"] and pages["monitoring"] else 70, "status": "site-side verified", "evidence": "llms.txt, robots.txt and monitoring explainer present."},
+        {"parameter": "Trust signals", "percentage": 92 if all(pages[k] for k in ["about", "contact", "case_studies", "monitoring"]) and exists("privacy.html") and exists("terms.html") else 70, "status": "verified, proof still building", "evidence": "About/contact/legal/proof areas present without fake claims."},
+        {"parameter": "External web presence", "percentage": 35, "status": "blocked", "evidence": "Needs verified third-party profile/distribution URLs; cannot be fabricated."},
+        {"parameter": "Proof-of-thinking portfolio", "percentage": 78 if pages["case_studies"] else 45, "status": "needs stronger demos", "evidence": "Case-study/proof hub exists; more public demo audits needed."},
+        {"parameter": "Daily advertisement/distribution engine", "percentage": 65, "status": "internal engine active, publishing approval needed", "evidence": "Organic content/ad jobs exist; external publishing still needs approval/channel access."},
+        {"parameter": "Search and visit monitoring", "percentage": 45, "status": "blocked", "evidence": "No Search Console/Analytics/Cloudflare telemetry credentials connected to Hermes."},
+        {"parameter": "Conversion layer", "percentage": 100 if "conversion" not in warn_categories and repo.get("fail_count") == 0 else 80, "status": "verified repo-side", "evidence": "No CTA/contact warnings in monitor."},
+        {"parameter": "Backlinks/authority references", "percentage": 25, "status": "blocked", "evidence": "Needs live third-party backlinks/mentions; cannot be faked."},
+        {"parameter": "Brand-search demand creation", "percentage": 40, "status": "blocked", "evidence": "Needs real Search Console/search-volume evidence after distribution."},
+        {"parameter": "Paid-ad readiness", "percentage": 80 if exists("free-business-review", "index.html") or exists("free-business-review.html") else 55, "status": "landing ready, spend/tracking not approved", "evidence": "Offer landing exists; ad spend and conversion tracking need approval/access."},
+        {"parameter": "Technical health", "percentage": 100 if repo.get("fail_count") == 0 and repo.get("warn_count") == 0 and live_ok else 85, "status": "verified" if repo.get("warn_count") == 0 else "warnings remain", "evidence": f"Repo failures: {repo.get('fail_count')}; warnings: {repo.get('warn_count')}; live ok: {live_ok}."},
+    ]
+    overall = round(sum(p["percentage"] for p in parameters) / len(parameters), 1)
+    blockers = [p for p in parameters if p["status"] == "blocked"]
+    return {"overall_percentage": overall, "parameters": parameters, "blockers": blockers}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run safe AICS brand/trust monitoring checks.")
     parser.add_argument("--live", action="store_true", help="Also check selected live URLs.")
@@ -194,6 +244,7 @@ def main() -> int:
             f"{BASE_URL}/llms.txt",
             f"{BASE_URL}/robots.txt",
         ])
+    report["scorecard"] = scorecard(report["repo"], report.get("live"))
 
     text = json.dumps(report, indent=2, sort_keys=True)
     if args.output:
