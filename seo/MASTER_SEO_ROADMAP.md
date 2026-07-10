@@ -57,7 +57,7 @@ Status: In progress
 ### Phase 2 — Commercial SEO architecture
 Status: In progress
 - [x] Create `/ai-automation-agency/` hub.
-- [ ] Create `/ai-chatbot-development-services/`.
+- [x] Create `/ai-chatbot-development-services/`.
 - [ ] Create `/ai-voice-agents/`.
 - [ ] Create `/crm-automation-services/`.
 - [ ] Create `/lead-generation-automation/`.
@@ -96,7 +96,7 @@ Status: Not started
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 17%
+Overall SEO roadmap completion: 20%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -104,13 +104,18 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-Build the next dedicated commercial service page: `/ai-chatbot-development-services/`, linking it from the AI automation hub and resources hub without repositioning the homepage as only an AI automation agency.
+Build the next dedicated commercial service page: `/ai-voice-agents/`, linking it from the AI automation hub and resources hub without repositioning the homepage as only an AI automation agency.
 
 ## 2026-07-10 update — AI automation hub
 - Created and pushed `/ai-automation-agency/` as the first Phase 2 commercial service hub.
 - Added Service + FAQ schema, resources-hub link and sitemap entry.
 - Preserved homepage brand-positioning rule: homepage remains broad; service-specific targeting now starts on a dedicated page.
 - Verification: JSON-LD parsed, one H1, sitemap XML parsed, brand trust monitor fail_count 0 / warn_count 0 / score 98.3%.
+
+## 2026-07-10 update — AI chatbot service page
+- Created `/ai-chatbot-development-services/` for high-intent chatbot development, website chatbot, WhatsApp chatbot, CRM handoff and appointment-routing searches.
+- Added Service + FAQ schema, sitemap entry, resources-hub card and AI automation hub internal links.
+- Preserved proof boundaries: no AI accuracy, revenue, ranking or compliance guarantees; page uses human-handoff language.
 
 ## Homepage brand-positioning rule
 - Do not reposition AICloudStrategist as only an AI Automation Agency.
