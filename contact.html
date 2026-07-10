@@ -238,7 +238,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","@id":"https://aicloudstrategist.com/contact#contact","url":"https://aicloudstrategist.com/contact","name":"Contact AICloudStrategist","description":"Contact AICloudStrategist for business growth, lead capture, automation, trust readiness and cloud cost control.","mainEntity":{"@type":"Organization","@id":"https://aicloudstrategist.com/#organization","name":"AICloudStrategist","url":"https://aicloudstrategist.com/","email":"contact@aicloudstrategist.com","telephone":"+918****0898","contactPoint":[{"@type":"ContactPoint","telephone":"+918****0898","contactType":"customer support","areaServed":"IN","availableLanguage":["en-IN","hi-IN"]}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aicloudstrategist.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://aicloudstrategist.com/contact"}]}</script>
-<script defer src="https://analytics.aicloudstrategist.com/js/pa-7YTJLFYOt1CCZH6TY2g_w.js"></script>
+<script defer src="/js/aics-analytics-shim.js"></script>
 <script defer src="/js/aics-conversion-tracking.js"></script>
 </head>
 <body>
@@ -352,7 +352,7 @@
         </div>
 
         <div class="form-wrap reveal d1">
-          <form id="contactForm" class="form lead-form premium-form" action="/api/contact" method="POST" novalidate>
+          <form id="contactForm" class="form lead-form premium-form" action="mailto:contact@aicloudstrategist.com" method="POST" novalidate>
             <div class="formhead"><span class="d"></span> Start your review</div>
             <p class="formsub">Tell us a little and we'll point you to the most useful next step.</p>
             <label for="contact_name">Name</label>
@@ -476,25 +476,14 @@
     }
     const originalText = contactSubmitButton.innerHTML;
     contactSubmitButton.disabled = true;
-    contactSubmitButton.textContent = 'Submitting...';
-    try {
-      const payload = Object.fromEntries(new FormData(contactForm).entries());
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json().catch(() => ({}));
-      if (!response.ok || !result.ok) throw new Error(result.error || 'Submission failed');
-      contactForm.reset();
-      contactSuccess.style.display = 'block';
-    } catch (error) {
-      contactError.textContent = (error.message || 'We could not submit the enquiry.') + ' Please retry, or WhatsApp us at +91 87963 02608.';
-      contactError.style.display = 'block';
-    } finally {
-      contactSubmitButton.disabled = false;
-      contactSubmitButton.innerHTML = originalText;
-    }
+    contactSubmitButton.textContent = 'Opening email...';
+    const payload = Object.fromEntries(new FormData(contactForm).entries());
+    if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Attempt', { props: { page: location.pathname, service: payload.service || '' } });
+    const body = Object.entries(payload).map(([k,v]) => `${k}: ${v || ''}`).join('\n') + '\nPage: ' + location.href;
+    window.location.href = 'mailto:contact@aicloudstrategist.com?subject=' + encodeURIComponent('AICloudStrategist website enquiry') + '&body=' + encodeURIComponent(body);
+    contactSuccess.innerHTML = 'Your email app should open with the enquiry. If it does not, email <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a> or WhatsApp <a href="https://wa.me/918796302608">+91 87963 02608</a>.';
+    contactSuccess.style.display = 'block';
+    setTimeout(() => { contactSubmitButton.disabled = false; contactSubmitButton.innerHTML = originalText; }, 2500);
   });
 
   // reveal + timeline draw

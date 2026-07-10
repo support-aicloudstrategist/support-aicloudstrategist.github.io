@@ -16,7 +16,7 @@
     props.page=location.pathname;
     props.url=location.href;
     props.ts=now();
-    if(window.plausible){ try{ window.plausible(name,{props:props}); }catch(e){} }
+    if(window.aicsAnalytics&&window.aicsAnalytics.track){try{window.aicsAnalytics.track(name,{props:props});}catch(e){}} else if(window.plausible){ try{ window.plausible(name,{props:props}); }catch(e){} }
     window.dataLayer=window.dataLayer||[];
     window.dataLayer.push({event:name.replace(/\s+/g,'_').toLowerCase(), aics:name, aics_props:props});
   }

@@ -116,7 +116,14 @@
   });
 
   function trackEvent(name, props = {}) {
-    if (window.plausible) window.plausible(name, { props });
+    if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track(name, { props });
+    else if (window.plausible) window.plausible(name, { props });
+  }
+  function openPrefilledMail(subject, fields) {
+    const lines = Object.entries(fields || {}).filter(([k,v]) => String(v || '').trim()).map(([k,v]) => `${k}: ${v}`);
+    lines.push('Page: ' + location.href);
+    const mail = 'mailto:contact@aicloudstrategist.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    window.location.href = mail;
   }
 
   document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => trackEvent('Phone CTA Click', { page: location.pathname })));
@@ -169,26 +176,16 @@
   }
   async function askAics(message) {
     addChatMessage('user', `<p>${escapeHtml(message)}</p>`);
-    addChatMessage('bot typing', '<p>Checking…</p>');
-    try {
-      const res = await fetch('https://api.aicloudstrategist.com/rag/v1/website/respond', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, session_id: chatSession })
-      });
-      if (!res.ok) throw new Error('Chat response failed');
-      const data = await res.json();
-      const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
-      if (typing) typing.remove();
-      const answer = escapeHtml(data.answer || 'I can map this to the right AICloudStrategist module after a short business review.').replace(/\n/g, '<br>');
-      addChatMessage('bot', `<p>${answer}</p><a class="chat-cta" href="/free-business-review">Book free review</a>`);
-      trackEvent('Chatbot Question', { page: location.pathname });
-    } catch (error) {
-      const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
-      if (typing) typing.remove();
-      addChatMessage('bot', '<p>I could not answer that right now. Please WhatsApp us with your business type, city and problem — we will respond there.</p><a class="chat-cta" href="https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20to%20map%20my%20business%20problem%20to%20the%20right%20AI%20module.">WhatsApp AICS</a>');
-      console.error(error);
-    }
+    const q = String(message || '').toLowerCase();
+    let answer = 'AICloudStrategist can start with a short business review: we check your website, enquiry capture, WhatsApp/phone flow, trust/privacy basics, automation gaps and cloud cost/control needs. Share your business type, city and main problem on WhatsApp or the free review page.';
+    if (/aws|cloud|bill|cost|finops/.test(q)) answer = 'For cloud cost problems, start with a bill and usage review: idle resources, over-sized compute, storage growth, data transfer, reserved/savings coverage, monitoring and owner reporting. AICloudStrategist can map this into a Cloud Trust/FinOps review without promising fake savings.';
+    else if (/clinic|patient|dental|doctor|ivf|diagnostic/.test(q)) answer = 'For clinics, the first check is enquiry leakage: missed calls, slow WhatsApp replies, weak treatment pages, low trust signals, review flow, and follow-up reminders. AICS can run a patient-growth leakage review and create a practical fix plan.';
+    else if (/manual|excel|staff|automation|factory|office/.test(q)) answer = 'For manual-work issues, the first check is where staff repeat the same task: Excel updates, WhatsApp follow-ups, approvals, reminders and reports. AICS can convert that into a simple automation and owner-dashboard plan.';
+    else if (/privacy|dpdp|compliance|consent|data/.test(q)) answer = 'For privacy/DPDP basics, start with what customer data you collect, where it goes, who can access it, consent wording, privacy page, vendor tools and deletion/complaint flow. AICS gives practical readiness support, not fake legal guarantees.';
+    else if (/shop|restaurant|school|coaching|admission|customer/.test(q)) answer = 'For local business growth, start with discovery, trust and follow-up: can customers find you, understand your offer, contact quickly, and get a fast response? AICS maps the leakage and gives a simple fix plan.';
+    const safe = escapeHtml(answer).replace(/\n/g, '<br>');
+    addChatMessage('bot', `<p>${safe}</p><a class="chat-cta" href="/free-business-review/">Book free review</a> <a class="chat-cta" href="https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20to%20map%20my%20business%20problem%20to%20the%20right%20solution.">WhatsApp AICS</a>`);
+    trackEvent('Chatbot Static Answer', { page: location.pathname, length: String(message || '').length });
   }
   if (launcher) launcher.addEventListener('click', openChat);
   document.querySelectorAll('[data-open-chat]').forEach(btn => btn.addEventListener('click', openChat));
@@ -220,20 +217,12 @@
       if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
       if (status) { status.textContent = ''; status.className = 'form-status'; }
       const formData = new FormData(this);
-      fetch(this.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
-        .then(response => {
-          if (!response.ok) throw new Error('Form submission failed');
-          trackEvent('Contact Form Submit', { page: window.location.pathname || '/', service: String(formData.get('service') || 'not_selected') });
-          if (btn) { btn.textContent = 'Message Sent!'; btn.style.background = '#10B981'; }
-          if (status) { status.textContent = 'Thanks. Your request was sent successfully.'; status.classList.add('success'); }
-          this.reset();
-        })
-        .catch(error => {
-          if (btn) btn.textContent = 'Try Again';
-          if (status) { status.textContent = 'Sorry, the message did not send. Please email contact@aicloudstrategist.com directly.'; status.classList.add('error'); }
-          console.error(error);
-        })
-        .finally(() => setTimeout(() => { if (btn) { btn.textContent = originalText; btn.style.background = ''; btn.disabled = false; } }, 3000));
+      const fields = Object.fromEntries(formData.entries());
+      trackEvent('Contact Form Submit Attempt', { page: window.location.pathname || '/', service: String(formData.get('service') || 'not_selected') });
+      openPrefilledMail('AICloudStrategist enquiry from website', fields);
+      if (btn) { btn.textContent = 'Email opened'; btn.style.background = '#10B981'; }
+      if (status) { status.innerHTML = 'Your email app should open with the enquiry. If it does not, email <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a> or WhatsApp <a href="https://wa.me/918796302608">+91 87963 02608</a>.'; status.classList.add('success'); }
+      setTimeout(() => { if (btn) { btn.textContent = originalText; btn.style.background = ''; btn.disabled = false; } }, 3000);
     });
   }
 })();

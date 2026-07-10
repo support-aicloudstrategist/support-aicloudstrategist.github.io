@@ -1,0 +1,21 @@
+{
+  "updated": "2026-07-10T08:35:00Z",
+  "fixed": [
+    "Removed broken analytics.aicloudstrategist.com browser dependency after live HTTP 525 verification.",
+    "Added self-hosted analytics fail-safe shim so CTA/form events no longer depend on a failing third-party script.",
+    "Changed contact and free-review forms to resilient mailto/WhatsApp fallback because /api/contact and /api/lead returned 404 on live site.",
+    "Replaced broken API-dependent chatbot flow with local static guidance and WhatsApp/free-review CTA fallback."
+  ],
+  "live_failures_observed": {
+    "analytics_script": "HTTP 525",
+    "api_root": "timeout",
+    "api_contact_same_origin": "404",
+    "api_lead_same_origin": "404 implied by static /api check",
+    "rag_api": "timeout"
+  },
+  "remaining_external_boundaries": [
+    "Server-side analytics collection needs a healthy collector or Cloudflare/GA/Search Console credentials.",
+    "Google Search Console OAuth/token is not present on this machine; HTML verification file exists.",
+    "Real customer proof still requires real inbound/approved outreach; no fake proof created."
+  ]
+}

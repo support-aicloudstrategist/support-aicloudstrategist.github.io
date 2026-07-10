@@ -100,26 +100,7 @@
   }
   async function askAics(message) {
     addChatMessage('user', `<p>${escapeHtml(message)}</p>`);
-    addChatMessage('bot typing', '<p>Checking…</p>');
-    try {
-      const res = await fetch('https://api.aicloudstrategist.com/rag/v1/website/respond', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, session_id: chatSession })
-      });
-      if (!res.ok) throw new Error('Chat response failed');
-      const data = await res.json();
-      const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
-      if (typing) typing.remove();
-      const answer = escapeHtml(data.answer || 'I can map this to the right AICloudStrategist module after a short business review.').replace(/\n/g, '<br>');
-      addChatMessage('bot', `<p>${answer}</p><a class="chat-cta" href="/free-business-review">Book free review</a>`);
-      trackEvent('Chatbot Question', { page: location.pathname });
-    } catch (error) {
-      const typing = chatMessages && chatMessages.querySelector('.chat-msg.typing');
-      if (typing) typing.remove();
-      addChatMessage('bot', '<p>I could not answer that right now. Please WhatsApp us with your business type, city and problem — we will respond there.</p><a class="chat-cta" href="https://wa.me/918796302608?text=Namaste%20AICloudStrategist%2C%20I%20want%20to%20map%20my%20business%20problem%20to%20the%20right%20AI%20module.">WhatsApp AICS</a>');
-      console.error(error);
-    }
+    addChatMessage('bot', '<p>AICloudStrategist can map your problem through a free business review. Please use WhatsApp or the review form for the fastest response.</p><a class="chat-cta" href="/free-business-review/">Book free review</a>');
   }
   if (launcher) launcher.addEventListener('click', openChat);
   document.querySelectorAll('[data-open-chat]').forEach(btn => btn.addEventListener('click', openChat));
