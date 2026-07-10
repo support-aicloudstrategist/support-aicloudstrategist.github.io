@@ -21,6 +21,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Growth & Control OS: https://aicloudstrategist.com/growth-control-os/
 - Healthcare GrowthOS: https://aicloudstrategist.com/healthcare-growthos/
 - Cloud Trust & FinOps: https://aicloudstrategist.com/cloud-trust-finops/
+- North America FinOps tools comparison: https://aicloudstrategist.com/resources/finops-cloud-cost-management-tools-usa/
 
 ## Useful tools and resources
 
