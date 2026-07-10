@@ -9,7 +9,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/0b1aa7500e73b791ece012a75ac93953",
       "target_url_found": true,
-      "bytes_sampled": 104504
+      "bytes_sampled": 104510
     },
     {
       "title": "AICloudStrategist Dental Lead Leakage Demo Audit",
@@ -19,7 +19,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/1ed1c6af6fee2f2813ea09dba6596634",
       "target_url_found": true,
-      "bytes_sampled": 104483
+      "bytes_sampled": 104484
     },
     {
       "title": "AICloudStrategist SaaS Cloud FinOps Control Demo",
@@ -29,7 +29,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/cb076ad90a94c4acf371bed95bbb2650",
       "target_url_found": true,
-      "bytes_sampled": 104482
+      "bytes_sampled": 104483
     },
     {
       "title": "AICloudStrategist D2C Revenue Trust Stack Demo",
@@ -39,7 +39,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/4ab1c9000f76814035eec2a83ec718a6",
       "target_url_found": true,
-      "bytes_sampled": 104428
+      "bytes_sampled": 104433
     },
     {
       "title": "AICloudStrategist Daily Growth Distribution Engine",
@@ -49,7 +49,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/09fe9c9331f16b5cd96861bc30a28da2",
       "target_url_found": true,
-      "bytes_sampled": 104520
+      "bytes_sampled": 104521
     },
     {
       "title": "AICloudStrategist Paid Ad Readiness Conversion Plan",
@@ -59,7 +59,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/b04783752b60abc4228b51bf28f56654",
       "target_url_found": true,
-      "bytes_sampled": 104545
+      "bytes_sampled": 104546
     },
     {
       "title": "AICloudStrategist Website Source Repository",
@@ -69,7 +69,7 @@
       "status": 200,
       "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io",
       "target_url_found": false,
-      "bytes_sampled": 199996
+      "bytes_sampled": 249963
     },
     {
       "title": "AICloudStrategist Instagram Profile",
@@ -79,7 +79,7 @@
       "status": 200,
       "final_url": "https://www.instagram.com/aicloudstrategist/",
       "target_url_found": false,
-      "bytes_sampled": 199998
+      "bytes_sampled": 249998
     },
     {
       "title": "AICloudStrategist YouTube Handle",
@@ -89,7 +89,7 @@
       "status": 200,
       "final_url": "https://www.youtube.com/@aicloudstrategist",
       "target_url_found": false,
-      "bytes_sampled": 200000
+      "bytes_sampled": 250000
     },
     {
       "title": "AICloudStrategist DEV Profile",
@@ -99,7 +99,7 @@
       "status": 200,
       "final_url": "https://dev.to/aicloudstrategist",
       "target_url_found": false,
-      "bytes_sampled": 199940
+      "bytes_sampled": 249923
     },
     {
       "title": "AICS brand trust proof pack GitHub release",
@@ -109,7 +109,75 @@
       "status": 200,
       "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/releases/tag/aics-brand-trust-proof-2026-07-10",
       "target_url_found": true,
-      "bytes_sampled": 199993
+      "bytes_sampled": 208804
+    },
+    {
+      "title": "AICS public proof asset: IVF Patient GrowthOS demo audit",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/16",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-ivf-clinic-patient-growthos/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/16",
+      "target_url_found": true,
+      "bytes_sampled": 237184
+    },
+    {
+      "title": "AICS public proof asset: Dental Lead Leakage demo audit",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/17",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-dental-clinic-lead-leakage/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/17",
+      "target_url_found": true,
+      "bytes_sampled": 237172
+    },
+    {
+      "title": "AICS public proof asset: SaaS Cloud FinOps Control demo",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/18",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-saas-cloud-finops-control/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/18",
+      "target_url_found": true,
+      "bytes_sampled": 237161
+    },
+    {
+      "title": "AICS public proof asset: D2C Revenue Trust Stack demo",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/19",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-d2c-revenue-trust-stack/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/19",
+      "target_url_found": true,
+      "bytes_sampled": 237133
+    },
+    {
+      "title": "AICS public monitoring asset: authority evidence tracker",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/20",
+      "target": "https://aicloudstrategist.com/resources/verified-public-presence-authority-tracker/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/20",
+      "target_url_found": true,
+      "bytes_sampled": 237212
+    },
+    {
+      "title": "AICS public monitoring asset: daily distribution engine",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/21",
+      "target": "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/21",
+      "target_url_found": true,
+      "bytes_sampled": 237137
+    },
+    {
+      "title": "AICS public GitHub Actions brand trust monitor workflow",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/.github/workflows/brand-trust-monitor.yml",
+      "target": "https://aicloudstrategist.com/resources/brand-trust-monitoring/",
+      "type": "github_public_monitoring_workflow",
+      "status": null,
+      "error": "HTTP Error 404: Not Found"
     }
   ]
 }
