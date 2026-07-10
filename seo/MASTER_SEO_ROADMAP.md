@@ -44,8 +44,8 @@ Status: In progress
 - [x] Audit live sitemap and identify polluted `.workspace-snapshots/` exposure.
 - [x] Remove tracked `.workspace-snapshots/` artifacts from website repo.
 - [x] Add robots disallow rules for internal/legacy paths.
-- [ ] Push cleanup and verify live sitemap no longer includes internal URLs.
-- [ ] Verify internal snapshot URLs return 404/blocked after deployment.
+- [x] Push cleanup and verify live sitemap no longer includes internal URLs.
+- [x] Verify internal snapshot URLs return 404/blocked after deployment.
 - [ ] Standardize duplicate/old URL redirects/canonicals where possible.
 - [ ] Add canonical to homepage and `/choose/` if missing.
 - [ ] Fix homepage multiple-H1 issue.
@@ -92,7 +92,7 @@ Status: Not started
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 6%
+Overall SEO roadmap completion: 9%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -100,4 +100,4 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-Finish deployment/validation of technical cleanup, then create the AI Automation Agency hub page.
+Fix homepage SEO fundamentals: one H1, commercial title/meta, and clear internal links to the upcoming AI Automation Agency hub.
