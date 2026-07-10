@@ -23,6 +23,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Cloud Trust & FinOps: https://aicloudstrategist.com/cloud-trust-finops/
 - North America FinOps tools comparison: https://aicloudstrategist.com/resources/finops-cloud-cost-management-tools-usa/
 - Workflow Automation Services: https://aicloudstrategist.com/workflow-automation-services/
+- Appointment Booking Automation Services: https://aicloudstrategist.com/appointment-booking-automation-services/
 - CRM Automation Services: https://aicloudstrategist.com/crm-automation-services/
 
 ## Useful tools and resources
