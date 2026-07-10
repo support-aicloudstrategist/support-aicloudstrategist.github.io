@@ -55,8 +55,8 @@ Status: In progress
 - [ ] Fix homepage multiple-H1 issue.
 
 ### Phase 2 — Commercial SEO architecture
-Status: Not started
-- [ ] Create `/ai-automation-agency/` hub.
+Status: In progress
+- [x] Create `/ai-automation-agency/` hub.
 - [ ] Create `/ai-chatbot-development-services/`.
 - [ ] Create `/ai-voice-agents/`.
 - [ ] Create `/crm-automation-services/`.
@@ -96,7 +96,7 @@ Status: Not started
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 12%
+Overall SEO roadmap completion: 17%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -104,7 +104,13 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-Build the dedicated commercial service-page architecture next, starting with an approval-ready AI Automation services hub/page brief that keeps the homepage broad and uses service pages for keyword targeting.
+Build the next dedicated commercial service page: `/ai-chatbot-development-services/`, linking it from the AI automation hub and resources hub without repositioning the homepage as only an AI automation agency.
+
+## 2026-07-10 update — AI automation hub
+- Created and pushed `/ai-automation-agency/` as the first Phase 2 commercial service hub.
+- Added Service + FAQ schema, resources-hub link and sitemap entry.
+- Preserved homepage brand-positioning rule: homepage remains broad; service-specific targeting now starts on a dedicated page.
+- Verification: JSON-LD parsed, one H1, sitemap XML parsed, brand trust monitor fail_count 0 / warn_count 0 / score 98.3%.
 
 ## Homepage brand-positioning rule
 - Do not reposition AICloudStrategist as only an AI Automation Agency.
