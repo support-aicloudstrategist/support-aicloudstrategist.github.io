@@ -19,7 +19,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/1ed1c6af6fee2f2813ea09dba6596634",
       "target_url_found": true,
-      "bytes_sampled": 104484
+      "bytes_sampled": 104483
     },
     {
       "title": "AICloudStrategist SaaS Cloud FinOps Control Demo",
@@ -29,7 +29,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/cb076ad90a94c4acf371bed95bbb2650",
       "target_url_found": true,
-      "bytes_sampled": 104478
+      "bytes_sampled": 104482
     },
     {
       "title": "AICloudStrategist D2C Revenue Trust Stack Demo",
@@ -39,7 +39,7 @@
       "status": 200,
       "final_url": "https://gist.github.com/support-aicloudstrategist/4ab1c9000f76814035eec2a83ec718a6",
       "target_url_found": true,
-      "bytes_sampled": 104427
+      "bytes_sampled": 104428
     },
     {
       "title": "AICloudStrategist Daily Growth Distribution Engine",
@@ -100,6 +100,16 @@
       "final_url": "https://dev.to/aicloudstrategist",
       "target_url_found": false,
       "bytes_sampled": 199940
+    },
+    {
+      "title": "AICS brand trust proof pack GitHub release",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/releases/tag/aics-brand-trust-proof-2026-07-10",
+      "target": "https://aicloudstrategist.com/",
+      "type": "github_public_release",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/releases/tag/aics-brand-trust-proof-2026-07-10",
+      "target_url_found": true,
+      "bytes_sampled": 199993
     }
   ]
 }
