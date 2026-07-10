@@ -1,0 +1,3 @@
+
+# Internal workspace snapshots must never be published
+.workspace-snapshots/

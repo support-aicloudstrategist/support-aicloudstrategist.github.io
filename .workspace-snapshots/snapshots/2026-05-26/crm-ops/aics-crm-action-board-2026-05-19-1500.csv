@@ -1,7 +1,0 @@
-priority,workstream,item,status,approval_needed,next_safe_action,blocker
-1,CRM/outreach pilot,NKPC Kidney Clinic + Aastha Dental Care 2-prospect healthcare pilot,pending_exact_approval,"Raj approval of exact target+channel+copy","Use exact approved WhatsApp drafts once per target and record status","No outreach approval; WhatsApp automation scan-required"
-2,Website conversion,Healthcare landing page + FAQ,pending_website_approval,"Raj approval for implementation diff or deployment preview","Prepare final website implementation diff only if approved","Public deployment approval missing"
-3,Brand/presence,About page polish local diff,ready_pending_publish,"Raj approval to publish /about diff","Publish only after exact approval and final screenshot QA","Public website change approval missing"
-4,Trust/presence,Trust page HTML draft,ready_pending_publish,"Raj approval to add /trust page","Prepare/publish only after exact approval and final QA","Public website change approval missing"
-5,Onboarding readiness,Positive-reply healthcare onboarding packet,ready_internal,"Approval for use after positive prospect reply","Use only after inbound positive reply and approved channel","No prospect replies yet"
-6,Social distribution,LinkedIn/X/WhatsApp Status remaining channels,blocked_access,"Raj/platform access or session readiness","Resume only after access/session readiness and duplicate-post check","LinkedIn company route missing; X login blocked; WhatsApp Status QR required"

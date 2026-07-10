@@ -1,1 +1,0 @@
-Welcome to this AICloudStrategist demo. In this video, we will explain the Starter Clinic Follow-up Board in simple business language: the clinic problem, the solution we build, the components included, and the benefits for the customer.

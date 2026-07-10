@@ -1,1 +1,0 @@
-Components included. Growth dashboard plus official WhatsApp API setup support. Message template design for appointment, reminder, follow-up, and review request. Webhook-based intake from website forms, calls, and other sources. Multi-staff roles, escalation rules, opt-out handling, and audit logs. Advanced reporting for response time, source quality, and unresolved queue.

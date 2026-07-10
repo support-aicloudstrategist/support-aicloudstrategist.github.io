@@ -90,5 +90,12 @@ User-agent: *
 Allow: /
 Allow: /resources/
 Allow: /services/
+Disallow: /.workspace-snapshots/
+Disallow: /preview/
+Disallow: /about-old/
+Disallow: /growth-control-os-old/
+Disallow: /healthcare-growthos-old/
+Disallow: /ai-cloud-cost-efficiency-old/
+Disallow: /roi-calculator-old/
 
 Sitemap: https://aicloudstrategist.com/sitemap.xml
