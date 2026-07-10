@@ -58,7 +58,7 @@ Status: In progress
 Status: In progress
 - [x] Create `/ai-automation-agency/` hub.
 - [x] Create `/ai-chatbot-development-services/`.
-- [ ] Create `/ai-voice-agents/`.
+- [x] Create `/ai-voice-agents/`.
 - [ ] Create `/crm-automation-services/`.
 - [ ] Create `/lead-generation-automation/`.
 - [ ] Create `/appointment-booking-automation/`.
@@ -96,7 +96,7 @@ Status: Not started
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 20%
+Overall SEO roadmap completion: 24%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -104,7 +104,7 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-Build the next dedicated commercial service page: `/ai-voice-agents/`, linking it from the AI automation hub and resources hub without repositioning the homepage as only an AI automation agency.
+Build the next dedicated commercial service page: `/crm-automation-services/`, linking it from the AI automation hub and resources hub without repositioning the homepage as only an AI automation agency.
 
 ## 2026-07-10 update — AI automation hub
 - Created and pushed `/ai-automation-agency/` as the first Phase 2 commercial service hub.
@@ -116,6 +116,11 @@ Build the next dedicated commercial service page: `/ai-voice-agents/`, linking i
 - Created `/ai-chatbot-development-services/` for high-intent chatbot development, website chatbot, WhatsApp chatbot, CRM handoff and appointment-routing searches.
 - Added Service + FAQ schema, sitemap entry, resources-hub card and AI automation hub internal links.
 - Preserved proof boundaries: no AI accuracy, revenue, ranking or compliance guarantees; page uses human-handoff language.
+
+## 2026-07-10 update — AI voice agents service page
+- Created `/ai-voice-agents/` for high-intent AI voice agent, appointment booking automation, missed-call automation and voice AI receptionist searches.
+- Added Service + FAQ schema, sitemap entry, resources-hub card and AI automation hub internal links.
+- Preserved proof boundaries: no AI accuracy, booked-revenue, legal/medical/financial advice or compliance guarantees; page requires human escalation for sensitive calls.
 
 ## Homepage brand-positioning rule
 - Do not reposition AICloudStrategist as only an AI Automation Agency.
