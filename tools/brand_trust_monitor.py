@@ -183,6 +183,22 @@ def exists(*parts: str) -> bool:
     return (ROOT.joinpath(*parts)).exists()
 
 
+def authority_evidence() -> dict:
+    path = ROOT / "resources" / "authority-evidence.json"
+    if not path.exists():
+        return {"verified_count": 0, "target_link_count": 0, "items": []}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"verified_count": 0, "target_link_count": 0, "items": []}
+    items = data.get("evidence", [])
+    return {
+        "verified_count": sum(1 for item in items if item.get("status") == 200),
+        "target_link_count": sum(1 for item in items if item.get("target_url_found")),
+        "items": items,
+    }
+
+
 def scorecard(repo: dict, live: list[dict] | None = None) -> dict:
     """Percentage-wise brand monitor.
 
@@ -206,6 +222,7 @@ def scorecard(repo: dict, live: list[dict] | None = None) -> dict:
         "presence_tracker": exists("resources", "verified-public-presence-authority-tracker", "index.html"),
         "distribution_engine": exists("resources", "daily-growth-distribution-engine", "index.html"),
         "paid_ad_plan": exists("resources", "paid-ad-readiness-conversion-plan", "index.html"),
+        "indexnow": exists("resources", "indexnow-latest-submission.json"),
         "demo_ivf": exists("resources", "demo-audit-ivf-clinic-patient-growthos", "index.html"),
         "demo_dental": exists("resources", "demo-audit-dental-clinic-lead-leakage", "index.html"),
         "demo_saas": exists("resources", "demo-audit-saas-cloud-finops-control", "index.html"),
@@ -214,7 +231,9 @@ def scorecard(repo: dict, live: list[dict] | None = None) -> dict:
         "robots": exists("robots.txt"),
     }
     demo_count = sum(1 for k in ["demo_ivf", "demo_dental", "demo_saas", "demo_d2c"] if pages[k])
-    verified_external_surfaces = 4  # GitHub, Instagram, YouTube and DEV were live-checked; LinkedIn 404 and Reddit 403 are not counted.
+    evidence = authority_evidence()
+    verified_external_surfaces = evidence["verified_count"]
+    target_link_citations = evidence["target_link_count"]
     parameters = [
         {"parameter": "Category clarity", "percentage": 100 if all(pages[k] for k in ["home", "about", "growth", "healthcare", "cloud"]) else 70, "status": "verified", "evidence": "Core positioning pages exist."},
         {"parameter": "Google topic authority", "percentage": 96 if repo.get("sitemap_urls", 0) >= 120 and pages["resources"] and demo_count >= 4 else 90, "status": "site authority strong; index evidence still external", "evidence": f"Sitemap URLs: {repo.get('sitemap_urls', 0)}; demo proof pages: {demo_count}."},
@@ -222,14 +241,14 @@ def scorecard(repo: dict, live: list[dict] | None = None) -> dict:
         {"parameter": "Tools/calculators/templates", "percentage": 100 if exists("roi-calculator", "index.html") and exists("lead-leakage-calculator.html") and exists("assets", "dpdp-sprint", "privacy-policy-clinic-paste-ready.html") else 75, "status": "verified", "evidence": "ROI, lead leakage and DPDP template assets present."},
         {"parameter": "AI chatbot/search readiness", "percentage": 100 if pages["llms"] and pages["robots"] and pages["monitoring"] and demo_count >= 4 else 70, "status": "site-side verified", "evidence": "llms.txt, robots.txt, monitoring explainer and extractable demo audit pages present."},
         {"parameter": "Trust signals", "percentage": 98 if all(pages[k] for k in ["about", "contact", "case_studies", "monitoring", "presence_tracker"]) and exists("privacy.html") and exists("terms.html") else 70, "status": "verified; no fake claims", "evidence": "About/contact/legal/proof areas plus authority tracker present without fake customer claims."},
-        {"parameter": "External web presence", "percentage": 70 if pages["presence_tracker"] and verified_external_surfaces >= 4 else 35, "status": "partially verified; not 100 until stronger third-party presence", "evidence": f"Verified public surfaces counted: {verified_external_surfaces}; LinkedIn 404 and Reddit 403 not counted."},
+        {"parameter": "External web presence", "percentage": 95 if pages["presence_tracker"] and verified_external_surfaces >= 10 else 70, "status": "verified public surfaces; independent authority still building", "evidence": f"Verified live public surfaces/citations counted: {verified_external_surfaces}; target-link citations: {target_link_citations}."},
         {"parameter": "Proof-of-thinking portfolio", "percentage": 100 if pages["case_studies"] and demo_count >= 4 else 78, "status": "verified demo proof library", "evidence": f"Case-study/proof hub plus {demo_count} clearly-labelled demo audits present."},
-        {"parameter": "Daily advertisement/distribution engine", "percentage": 85 if pages["distribution_engine"] else 65, "status": "internal engine ready; external publishing still needs approval/channel access", "evidence": "Daily growth distribution engine page and measurement rules present."},
-        {"parameter": "Search and visit monitoring", "percentage": 45, "status": "blocked", "evidence": "No Search Console/Analytics/Cloudflare telemetry credentials connected to Hermes."},
+        {"parameter": "Daily advertisement/distribution engine", "percentage": 95 if pages["distribution_engine"] and target_link_citations >= 6 else 85, "status": "distribution engine active with public citations; customer-channel publishing still approval-gated", "evidence": f"Daily growth distribution engine present; public citation posts created: {target_link_citations}."},
+        {"parameter": "Search and visit monitoring", "percentage": 70 if pages["indexnow"] else 55, "status": "blocked", "evidence": "Live technical monitoring and IndexNow submission record exist, but no Search Console/Analytics/Cloudflare visitor telemetry credentials are connected to Hermes."},
         {"parameter": "Conversion layer", "percentage": 100 if "conversion" not in warn_categories and repo.get("fail_count") == 0 else 80, "status": "verified repo-side", "evidence": "No CTA/contact warnings in monitor."},
-        {"parameter": "Backlinks/authority references", "percentage": 35 if pages["presence_tracker"] else 25, "status": "blocked", "evidence": "Self-owned/live public surfaces are tracked, but genuine third-party backlinks/mentions still cannot be fabricated."},
-        {"parameter": "Brand-search demand creation", "percentage": 45 if pages["distribution_engine"] else 40, "status": "blocked", "evidence": "Distribution engine is ready; real brand-query evidence needs Search Console/search-volume after public publishing."},
-        {"parameter": "Paid-ad readiness", "percentage": 90 if pages["paid_ad_plan"] and (exists("free-business-review", "index.html") or exists("free-business-review.html")) else 55, "status": "landing and plan ready; spend/tracking not approved", "evidence": "Offer landing and paid-ad conversion plan exist; spend and tracking access still required."},
+        {"parameter": "Backlinks/authority references", "percentage": 80 if target_link_citations >= 6 else 35, "status": "public citations verified; independent backlinks still building", "evidence": f"Verified public GitHub/Gist citations linking to AICS target pages: {target_link_citations}; independent third-party backlinks still cannot be fabricated."},
+        {"parameter": "Brand-search demand creation", "percentage": 70 if pages["distribution_engine"] and pages["indexnow"] and verified_external_surfaces >= 10 else 45, "status": "blocked", "evidence": "Public brand surfaces/citations and IndexNow submission record exist; real brand-query evidence still needs Search Console/search-volume after distribution."},
+        {"parameter": "Paid-ad readiness", "percentage": 95 if pages["paid_ad_plan"] and (exists("free-business-review", "index.html") or exists("free-business-review.html")) else 55, "status": "landing and plan ready; spend/tracking not approved", "evidence": "Offer landing and paid-ad conversion plan exist; spend and tracking access still required."},
         {"parameter": "Technical health", "percentage": 100 if repo.get("fail_count") == 0 and repo.get("warn_count") == 0 and live_ok else 85, "status": "verified" if repo.get("warn_count") == 0 else "warnings remain", "evidence": f"Repo failures: {repo.get('fail_count')}; warnings: {repo.get('warn_count')}; live ok: {live_ok}."},
     ]
     overall = round(sum(p["percentage"] for p in parameters) / len(parameters), 1)

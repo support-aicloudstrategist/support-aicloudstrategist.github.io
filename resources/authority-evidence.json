@@ -1,0 +1,105 @@
+{
+  "updated": "2026-07-10",
+  "evidence": [
+    {
+      "title": "AICloudStrategist IVF Patient GrowthOS Demo Audit",
+      "url": "https://gist.github.com/support-aicloudstrategist/0b1aa7500e73b791ece012a75ac93953",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-ivf-clinic-patient-growthos/",
+      "type": "github_gist_public_citation",
+      "status": 200,
+      "final_url": "https://gist.github.com/support-aicloudstrategist/0b1aa7500e73b791ece012a75ac93953",
+      "target_url_found": true,
+      "bytes_sampled": 104504
+    },
+    {
+      "title": "AICloudStrategist Dental Lead Leakage Demo Audit",
+      "url": "https://gist.github.com/support-aicloudstrategist/1ed1c6af6fee2f2813ea09dba6596634",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-dental-clinic-lead-leakage/",
+      "type": "github_gist_public_citation",
+      "status": 200,
+      "final_url": "https://gist.github.com/support-aicloudstrategist/1ed1c6af6fee2f2813ea09dba6596634",
+      "target_url_found": true,
+      "bytes_sampled": 104484
+    },
+    {
+      "title": "AICloudStrategist SaaS Cloud FinOps Control Demo",
+      "url": "https://gist.github.com/support-aicloudstrategist/cb076ad90a94c4acf371bed95bbb2650",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-saas-cloud-finops-control/",
+      "type": "github_gist_public_citation",
+      "status": 200,
+      "final_url": "https://gist.github.com/support-aicloudstrategist/cb076ad90a94c4acf371bed95bbb2650",
+      "target_url_found": true,
+      "bytes_sampled": 104478
+    },
+    {
+      "title": "AICloudStrategist D2C Revenue Trust Stack Demo",
+      "url": "https://gist.github.com/support-aicloudstrategist/4ab1c9000f76814035eec2a83ec718a6",
+      "target": "https://aicloudstrategist.com/resources/demo-audit-d2c-revenue-trust-stack/",
+      "type": "github_gist_public_citation",
+      "status": 200,
+      "final_url": "https://gist.github.com/support-aicloudstrategist/4ab1c9000f76814035eec2a83ec718a6",
+      "target_url_found": true,
+      "bytes_sampled": 104427
+    },
+    {
+      "title": "AICloudStrategist Daily Growth Distribution Engine",
+      "url": "https://gist.github.com/support-aicloudstrategist/09fe9c9331f16b5cd96861bc30a28da2",
+      "target": "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
+      "type": "github_gist_public_citation",
+      "status": 200,
+      "final_url": "https://gist.github.com/support-aicloudstrategist/09fe9c9331f16b5cd96861bc30a28da2",
+      "target_url_found": true,
+      "bytes_sampled": 104520
+    },
+    {
+      "title": "AICloudStrategist Paid Ad Readiness Conversion Plan",
+      "url": "https://gist.github.com/support-aicloudstrategist/b04783752b60abc4228b51bf28f56654",
+      "target": "https://aicloudstrategist.com/resources/paid-ad-readiness-conversion-plan/",
+      "type": "github_gist_public_citation",
+      "status": 200,
+      "final_url": "https://gist.github.com/support-aicloudstrategist/b04783752b60abc4228b51bf28f56654",
+      "target_url_found": true,
+      "bytes_sampled": 104545
+    },
+    {
+      "title": "AICloudStrategist Website Source Repository",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io",
+      "target": "https://aicloudstrategist.com/",
+      "type": "github_public_repository",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io",
+      "target_url_found": false,
+      "bytes_sampled": 199996
+    },
+    {
+      "title": "AICloudStrategist Instagram Profile",
+      "url": "https://www.instagram.com/aicloudstrategist/",
+      "target": "https://aicloudstrategist.com/",
+      "type": "social_profile",
+      "status": 200,
+      "final_url": "https://www.instagram.com/aicloudstrategist/",
+      "target_url_found": false,
+      "bytes_sampled": 199998
+    },
+    {
+      "title": "AICloudStrategist YouTube Handle",
+      "url": "https://www.youtube.com/@aicloudstrategist",
+      "target": "https://aicloudstrategist.com/",
+      "type": "social_profile",
+      "status": 200,
+      "final_url": "https://www.youtube.com/@aicloudstrategist",
+      "target_url_found": false,
+      "bytes_sampled": 200000
+    },
+    {
+      "title": "AICloudStrategist DEV Profile",
+      "url": "https://dev.to/aicloudstrategist",
+      "target": "https://aicloudstrategist.com/",
+      "type": "developer_profile",
+      "status": 200,
+      "final_url": "https://dev.to/aicloudstrategist",
+      "target_url_found": false,
+      "bytes_sampled": 199940
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "pending_deploy_payload": {
+    "host": "aicloudstrategist.com",
+    "key": "aics-185191caa6dc478f9a51c18e905d5d1d",
+    "keyLocation": "https://aicloudstrategist.com/aics-185191caa6dc478f9a51c18e905d5d1d.txt",
+    "urlList": [
+      "https://aicloudstrategist.com/",
+      "https://aicloudstrategist.com/resources/",
+      "https://aicloudstrategist.com/resources/demo-audit-ivf-clinic-patient-growthos/",
+      "https://aicloudstrategist.com/resources/demo-audit-dental-clinic-lead-leakage/",
+      "https://aicloudstrategist.com/resources/demo-audit-saas-cloud-finops-control/",
+      "https://aicloudstrategist.com/resources/demo-audit-d2c-revenue-trust-stack/",
+      "https://aicloudstrategist.com/resources/verified-public-presence-authority-tracker/",
+      "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
+      "https://aicloudstrategist.com/resources/paid-ad-readiness-conversion-plan/"
+    ]
+  }
+}
