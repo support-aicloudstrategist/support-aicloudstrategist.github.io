@@ -22,10 +22,14 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Healthcare GrowthOS: https://aicloudstrategist.com/healthcare-growthos/
 - Cloud Trust & FinOps: https://aicloudstrategist.com/cloud-trust-finops/
 - North America FinOps tools comparison: https://aicloudstrategist.com/resources/finops-cloud-cost-management-tools-usa/
+
 - Workflow Automation Services: https://aicloudstrategist.com/workflow-automation-services/
 - Appointment Booking Automation Services: https://aicloudstrategist.com/appointment-booking-automation-services/
 - WhatsApp Automation Services: https://aicloudstrategist.com/whatsapp-automation-services/
 - CRM Automation Services: https://aicloudstrategist.com/crm-automation-services/
+
+- North America Cloud and AI cost waste register template: https://aicloudstrategist.com/resources/cloud-ai-cost-waste-register-template-usa/
+
 
 ## Useful tools and resources
 
