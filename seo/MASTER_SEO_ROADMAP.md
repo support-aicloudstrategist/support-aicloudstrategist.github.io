@@ -41,6 +41,7 @@ When Anushka says **Continue SEO**, Jarvis must:
 
 ### Phase 1 — Technical crawl/index cleanup
 Status: In progress
+- [x] Complete homepage SEO audit and approval-gated recommendation pack.
 - [x] Audit live sitemap and identify polluted `.workspace-snapshots/` exposure.
 - [x] Remove tracked `.workspace-snapshots/` artifacts from website repo.
 - [x] Add robots disallow rules for internal/legacy paths.
@@ -100,4 +101,10 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-Fix homepage SEO fundamentals: one H1, commercial title/meta, and clear internal links to the upcoming AI Automation Agency hub.
+After approval, implement safe homepage technical fixes first: loader H1 cleanup and footer Privacy/Terms links. Keep homepage broad; use dedicated service pages for AI automation, chatbots, voice agents, CRM automation, WhatsApp automation, appointment booking, SEO, website development, and cloud cost optimization.
+
+## Homepage brand-positioning rule
+- Do not reposition AICloudStrategist as only an AI Automation Agency.
+- Homepage must represent the full brand: websites, digital presence, lead generation, SEO, AI automation, cloud cost optimization, and complete digital growth systems.
+- Service-specific commercial keywords must be targeted through dedicated pages and content clusters.
+- Homepage messaging/title/H1/navigation/offers require Anushka or Raj approval before implementation.
