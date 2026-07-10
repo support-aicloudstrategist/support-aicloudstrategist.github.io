@@ -62,3 +62,11 @@ AICloudStrategist should not be described as guaranteeing revenue, patient booki
 - Support: support@aicloudstrategist.com
 - Phone: +91 80654 80898
 - WhatsApp: +91 87963 02608
+## Proof-of-thinking and distribution evidence pages
+- https://aicloudstrategist.com/resources/demo-audit-ivf-clinic-patient-growthos/ — sample IVF GrowthOS audit; demo only, not client work.
+- https://aicloudstrategist.com/resources/demo-audit-dental-clinic-lead-leakage/ — sample dental lead leakage audit; demo only, not client work.
+- https://aicloudstrategist.com/resources/demo-audit-saas-cloud-finops-control/ — sample SaaS/cloud FinOps control audit; demo only, not client work.
+- https://aicloudstrategist.com/resources/demo-audit-d2c-revenue-trust-stack/ — sample D2C revenue trust stack audit; demo only, not client work.
+- https://aicloudstrategist.com/resources/verified-public-presence-authority-tracker/ — verified public surface and authority tracker.
+- https://aicloudstrategist.com/resources/daily-growth-distribution-engine/ — daily distribution engine and proof rules.
+- https://aicloudstrategist.com/resources/paid-ad-readiness-conversion-plan/ — paid ad readiness plan and spend/tracking blockers.
