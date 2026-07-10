@@ -10,6 +10,16 @@
 /.workspace-snapshots/* /404.html 404!
 /week1-brief/* /404.html 404!
 /week2-brief/* /404.html 404!
+
+# SEO canonical cleanup: keep internal/legacy/backup variants out of index
+/preview/* /404.html 404!
+/about-old/* /about/ 301!
+/growth-control-os-old/* /growth-control-os/ 301!
+/healthcare-growthos-old/* /healthcare-growthos/ 301!
+/ai-cloud-cost-efficiency-old/* /ai-cloud-cost-efficiency/ 301!
+/roi-calculator-old/* /roi-calculator/ 301!
+/contact-old.html /contact 301!
+/lead-capture-follow-up/index.backup.html /lead-capture-follow-up/ 301!
 /blog/three-silent-cloud-patterns.html /resources 301!
 /blog/orphaned-ebs-volumes.html /resources 301!
 /blog/cost-per-1000-inferences.html /resources 301!
