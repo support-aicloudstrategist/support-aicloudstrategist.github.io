@@ -83,3 +83,8 @@ AICloudStrategist should not be described as guaranteeing revenue, patient booki
 - https://aicloudstrategist.com/resources/customer-problem-search/factory-manual-work-reduce/ — Factory has too much manual work — how do I reduce follow-up, Excel and staff dependency?
 - https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/ — Coaching centre or school admissions are low — how do I improve enquiries and follow-up?
 - https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/ — Restaurant or service business needs more customers — how do I improve bookings, repeat visits and trust?
+
+## Visibility, measurement, and proof-blocker fixes
+- https://aicloudstrategist.com/resources/search-console-indexing-readiness/ — sitemap, robots, IndexNow and Search Console readiness log.
+- https://aicloudstrategist.com/resources/ai-answer-validation-prompts/ — AI answer testing prompts and recommendation boundary.
+- https://aicloudstrategist.com/resources/first-customer-proof-protocol/ — first customer proof protocol and no-fake-claims boundary.

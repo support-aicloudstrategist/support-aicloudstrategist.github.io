@@ -1,21 +1,23 @@
 {
-  "pending_deploy_payload": {
+  "payload": {
     "host": "aicloudstrategist.com",
     "key": "aics-185191caa6dc478f9a51c18e905d5d1d",
     "keyLocation": "https://aicloudstrategist.com/aics-185191caa6dc478f9a51c18e905d5d1d.txt",
     "urlList": [
-      "https://aicloudstrategist.com/",
-      "https://aicloudstrategist.com/resources/",
-      "https://aicloudstrategist.com/resources/demo-audit-ivf-clinic-patient-growthos/",
-      "https://aicloudstrategist.com/resources/demo-audit-dental-clinic-lead-leakage/",
-      "https://aicloudstrategist.com/resources/demo-audit-saas-cloud-finops-control/",
-      "https://aicloudstrategist.com/resources/demo-audit-d2c-revenue-trust-stack/",
-      "https://aicloudstrategist.com/resources/verified-public-presence-authority-tracker/",
-      "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
-      "https://aicloudstrategist.com/resources/paid-ad-readiness-conversion-plan/"
+      "https://aicloudstrategist.com/resources/customer-problem-search/",
+      "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
+      "https://aicloudstrategist.com/resources/customer-problem-search/factory-manual-work-reduce/",
+      "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
+      "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
+      "https://aicloudstrategist.com/resources/search-console-indexing-readiness/",
+      "https://aicloudstrategist.com/resources/ai-answer-validation-prompts/",
+      "https://aicloudstrategist.com/resources/first-customer-proof-protocol/",
+      "https://aicloudstrategist.com/sitemap.xml",
+      "https://aicloudstrategist.com/llms.txt"
     ]
   },
-  "submitted_at": "2026-07-10T00:00:00Z",
-  "indexnow_status": 202,
-  "indexnow_result": "Accepted by IndexNow API after key file returned HTTP 200."
+  "submitted_at": "2026-07-10T07:52:39Z",
+  "indexnow_status": 200,
+  "indexnow_result": "Accepted",
+  "note": "If status is not 200/202 before deploy, resubmit after deployment; sitemap and key file remain ready."
 }

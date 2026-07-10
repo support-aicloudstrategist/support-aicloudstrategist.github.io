@@ -1,0 +1,29 @@
+{
+  "updated": "2026-07-10",
+  "status": "site-side indexing blockers fixed; Search Console verification still needs credentialed console confirmation if not already connected",
+  "sitemap": "https://aicloudstrategist.com/sitemap.xml",
+  "robots": "https://aicloudstrategist.com/robots.txt",
+  "submitted_to_indexnow_urls": [
+    "https://aicloudstrategist.com/resources/customer-problem-search/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/factory-manual-work-reduce/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/manual-work-wasting-staff-time/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/clinic-not-getting-patients/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/business-compliance-privacy-confusion/",
+    "https://aicloudstrategist.com/resources/customer-problem-search/find-right-consultant-vendor/",
+    "https://aicloudstrategist.com/resources/paid-ad-readiness-conversion-plan/",
+    "https://aicloudstrategist.com/resources/verified-public-presence-authority-tracker/",
+    "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/"
+  ],
+  "manual_google_search_console_steps": [
+    "Open Google Search Console for aicloudstrategist.com",
+    "Verify domain/property if not already verified",
+    "Submit sitemap.xml",
+    "Use URL Inspection > Request indexing for priority customer-problem pages",
+    "Review Performance queries weekly for impressions/clicks by pain language"
+  ],
+  "honesty_boundary": "IndexNow submission and sitemap readiness do not prove Google indexing, ranking, impressions, clicks or enquiries."
+}

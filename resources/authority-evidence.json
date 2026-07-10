@@ -178,6 +178,77 @@
       "type": "github_public_monitoring_workflow",
       "status": null,
       "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "title": "AICS public customer-problem asset: small shop/local business growth",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/22",
+      "target": "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/22",
+      "target_url_found": true,
+      "bytes_sampled": 237619
+    },
+    {
+      "title": "AICS public customer-problem asset: factory manual work reduction",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/23",
+      "target": "https://aicloudstrategist.com/resources/customer-problem-search/factory-manual-work-reduce/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/23",
+      "target_url_found": true,
+      "bytes_sampled": 237493
+    },
+    {
+      "title": "AICS public customer-problem asset: school/coaching admission leakage",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/24",
+      "target": "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/24",
+      "target_url_found": true,
+      "bytes_sampled": 237525
+    },
+    {
+      "title": "AICS public customer-problem asset: restaurant/local service customer growth",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/25",
+      "target": "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/25",
+      "target_url_found": true,
+      "bytes_sampled": 237698
+    },
+    {
+      "title": "AICS public visibility asset: search console and indexing readiness",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/26",
+      "target": "https://aicloudstrategist.com/resources/search-console-indexing-readiness/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/26",
+      "target_url_found": true,
+      "bytes_sampled": 237438
+    },
+    {
+      "title": "AICS public AI-answer asset: recommendation validation prompts",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/27",
+      "target": "https://aicloudstrategist.com/resources/ai-answer-validation-prompts/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/27",
+      "target_url_found": true,
+      "bytes_sampled": 237284
+    },
+    {
+      "title": "AICS public proof asset: first customer proof protocol",
+      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/28",
+      "target": "https://aicloudstrategist.com/resources/first-customer-proof-protocol/",
+      "type": "github_public_issue_citation",
+      "status": 200,
+      "final_url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/28",
+      "target_url_found": true,
+      "bytes_sampled": 237369
     }
-  ]
+  ],
+  "latest_blocker_fix": "Added public citations for expanded customer-discovery pages, indexing readiness, AI-answer validation, and first-customer proof protocol."
 }
