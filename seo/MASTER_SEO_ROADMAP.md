@@ -42,12 +42,15 @@ When Anushka says **Continue SEO**, Jarvis must:
 ### Phase 1 — Technical crawl/index cleanup
 Status: In progress
 - [x] Complete homepage SEO audit and approval-gated recommendation pack.
+- [x] Fix homepage duplicate H1 caused by loader wordmark.
+- [x] Fix homepage footer Privacy/Terms links.
+- [x] Remove legacy old/preview/backup pages from public deploy.
 - [x] Audit live sitemap and identify polluted `.workspace-snapshots/` exposure.
 - [x] Remove tracked `.workspace-snapshots/` artifacts from website repo.
 - [x] Add robots disallow rules for internal/legacy paths.
 - [x] Push cleanup and verify live sitemap no longer includes internal URLs.
 - [x] Verify internal snapshot URLs return 404/blocked after deployment.
-- [ ] Standardize duplicate/old URL redirects/canonicals where possible.
+- [x] Standardize duplicate/old URL handling where possible by removing public legacy/preview/backup files and keeping sitemap clean.
 - [ ] Add canonical to homepage and `/choose/` if missing.
 - [ ] Fix homepage multiple-H1 issue.
 
@@ -93,7 +96,7 @@ Status: Not started
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 9%
+Overall SEO roadmap completion: 12%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -101,7 +104,7 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-After approval, implement safe homepage technical fixes first: loader H1 cleanup and footer Privacy/Terms links. Keep homepage broad; use dedicated service pages for AI automation, chatbots, voice agents, CRM automation, WhatsApp automation, appointment booking, SEO, website development, and cloud cost optimization.
+Build the dedicated commercial service-page architecture next, starting with an approval-ready AI Automation services hub/page brief that keeps the homepage broad and uses service pages for keyword targeting.
 
 ## Homepage brand-positioning rule
 - Do not reposition AICloudStrategist as only an AI Automation Agency.
