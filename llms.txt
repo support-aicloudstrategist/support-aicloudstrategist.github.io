@@ -53,6 +53,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Singapore PDPA consent and data protection automation checklist: https://aicloudstrategist.com/resources/singapore-pdpa-consent-data-protection-automation-checklist/
 - Europe SaaS AI FinOps allocation checklist: https://aicloudstrategist.com/resources/europe-saas-ai-finops-allocation-checklist/
 - US SaaS AI vendor risk and SOC 2 readiness checklist: https://aicloudstrategist.com/resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/
+- US digital health vendor-risk diagnostic package: https://aicloudstrategist.com/resources/us-digital-health-vendor-risk-diagnostic-package/
 - US digital health HIPAA vendor-risk checklist: https://aicloudstrategist.com/resources/us-digital-health-hipaa-vendor-risk-checklist/
 - US law firm AI intake and confidentiality checklist: https://aicloudstrategist.com/resources/us-law-firm-ai-intake-confidentiality-checklist/
 
