@@ -331,7 +331,35 @@
     <priority>0.7</priority>
   </url>
   <url>
+<<<<<<< Updated upstream
     <loc>https://aicloudstrategist.com/ai-automation-agency-south-africa/</loc>
+=======
+    <loc>https://aicloudstrategist.com/workflow-automation-services/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aicloudstrategist.com/appointment-booking-automation-services/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aicloudstrategist.com/whatsapp-automation-services/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aicloudstrategist.com/resources/canada-clinic-patient-growthos-missed-call-checklist/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aicloudstrategist.com/resources/dental-ai-receptionist-missed-call-checklist-usa/</loc>
+>>>>>>> Stashed changes
     <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
