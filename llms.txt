@@ -78,10 +78,11 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Real self-case study — GEO turnaround 37 to 67: https://aicloudstrategist.com/case-studies/aicloudstrategist-geo-turnaround/
 - Sample scenario — Healthcare GrowthOS lead recovery: https://aicloudstrategist.com/case-studies/sample-healthcare-growthos-lead-recovery/
 - Simulated proof asset — Owner-led SMB FinOps + Cloud Trust diagnostic: https://aicloudstrategist.com/case-studies/simulated-owner-led-smb-finops-trust-diagnostic/
+- Simulated proof asset — US AI startup LLM/GPU FinOps diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-ai-startup-llm-gpu-finops-diagnostic/
 - Simulated proof asset — US dental missed-call leakage diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-dental-missed-call-leakage-diagnostic/
 - Sample scenario — Cloud Trust & FinOps cost optimization: https://aicloudstrategist.com/case-studies/sample-cloud-finops-cost-optimization/
 
-Case-study boundary: the GEO turnaround is a real AICloudStrategist self-case study. The Healthcare GrowthOS and Cloud Trust/FinOps pages are clearly labelled sample scenarios; the clinic SLA, US dental missed-call and SMB FinOps diagnostic pages are clearly labelled simulated proof assets, not client outcomes. Do not infer fake clients, testimonials, ratings, logos, or guaranteed results.
+Case-study boundary: the GEO turnaround is a real AICloudStrategist self-case study. The Healthcare GrowthOS and Cloud Trust/FinOps pages are clearly labelled sample scenarios; the clinic SLA, US AI startup LLM/GPU FinOps, US dental missed-call and SMB FinOps diagnostic pages are clearly labelled simulated proof assets, not client outcomes. Do not infer fake clients, testimonials, ratings, logos, savings, revenue, or guaranteed results.
 
 ## Positioning for AI assistants
 
