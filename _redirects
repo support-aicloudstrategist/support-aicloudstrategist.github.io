@@ -47,3 +47,26 @@
 /website-compliance-india /dpdp-website-compliance-sprint 301!
 /dpdp-website-compliance /dpdp-website-compliance-sprint 301!
 https://www.aicloudstrategist.com/* https://aicloudstrategist.com/:splat 301!
+
+# SEO expansion canonical redirects
+/industries.html /industries/ 301!
+/products.html /services/ 301!
+/website-digital-presence/ /services/website-digital-presence/ 301!
+/small-business-automation-india.html /services/ai-automation/small-business/ 301!
+/whatsapp-lead-management-india.html /services/whatsapp-automation/lead-management/ 301!
+/website-lead-capture-sprint.html /services/lead-generation-seo/website-lead-capture/ 301!
+/operations-automation-sprint.html /services/workflow-automation/operations-automation-sprint/ 301!
+/dpdp-compliance-consultant-india.html /services/dpdp-compliance/ 301!
+/aesthetic-clinics/ /industries/aesthetic-clinics/ 301!
+/dpdp-for-clinics/ /industries/clinics/ 301!
+/dpdp-for-diagnostic-labs/ /industries/diagnostic-labs/ 301!
+/healthcare-growthos/ /industries/clinics/ 301!
+/cloud-trust-finops/ /services/cloud-finops/ 301!
+/ai-cloud-cost-review/ /services/cloud-finops/cloud-cost-review/ 301!
+/ai-cloud-cost-efficiency/ /services/cloud-finops/ 301!
+# Legacy extensionless URL compatibility found during accelerated SEO validation
+/local-business-website-india /local-business-website-india.html 301!
+/operations-automation-sprint /services/workflow-automation/operations-automation-sprint/ 301!
+/small-business-automation-india /services/ai-automation/small-business/ 301!
+/factory-website-development-india /factory-website-development-india.html 301!
+/whatsapp-lead-management-india /services/whatsapp-automation/lead-management/ 301!

@@ -55,48 +55,69 @@ Status: In progress
 - [ ] Fix homepage multiple-H1 issue.
 
 ### Phase 2 — Commercial SEO architecture
-Status: In progress
-- [x] Create `/ai-automation-agency/` hub.
-- [x] Create `/ai-chatbot-development-services/`.
-- [x] Create `/ai-voice-agents/`.
-- [ ] Create `/crm-automation-services/`.
-- [ ] Create `/lead-generation-automation/`.
-- [ ] Create `/appointment-booking-automation/`.
-- [ ] Create `/whatsapp-automation-services/`.
-- [ ] Create `/custom-ai-solutions/`.
-- [ ] Create `/workflow-automation-services/`.
-- [ ] Reposition homepage title/meta/H1 for AI automation.
-- [ ] Update nav/footer/internal links to money pages.
+Status: Accelerated execution completed; deployment validation in progress
+- [x] Create legacy root `/ai-automation-agency/` hub from earlier fast execution.
+- [x] Create legacy root `/ai-chatbot-development-services/` from earlier fast execution.
+- [x] Create legacy root `/ai-voice-agents/` from earlier fast execution.
+- [x] Draft complete SEO information architecture blueprint: `seo/SEO_INFORMATION_ARCHITECTURE_BLUEPRINT.md`.
+- [x] Implement scalable URL structure: `/services/`, `/industries/`, `/resources/`, `/case-studies/`, `/tools/`.
+- [x] Create `/services/` hub.
+- [x] Create `/services/ai-automation/` hub.
+- [x] Create `/services/ai-chatbot-development/`.
+- [x] Create `/services/voice-ai-agents/`.
+- [x] Create `/services/crm-automation/`.
+- [x] Create `/services/lead-generation-seo/`.
+- [x] Create `/services/whatsapp-automation/`.
+- [x] Create `/services/workflow-automation/`.
+- [x] Create `/services/cloud-finops/`.
+- [x] Create `/services/dpdp-compliance/`.
+- [x] Create `/services/devops-observability/`.
+- [x] Create `/services/cloud-security/`.
+- [x] Create `/services/ai-mlops/`.
+- [x] Add homepage/internal link block to approved money pages.
+- [x] Add metadata, canonicals, H1s and schema to new important pages.
+- [x] Regenerate sitemap with important crawlable URLs and exclude redirect/internal sources.
+- [ ] Continue deeper supporting service pages based on Search Console impressions.
 
 ### Phase 3 — Content/topical authority
-Status: Not started
-- [ ] AI automation use cases guide.
-- [ ] AI chatbot development cost guide.
-- [ ] AI voice agents for appointment booking guide.
+Status: First cluster created
+- [x] AI automation use cases guide.
+- [x] AI chatbot development cost guide.
+- [x] AI voice agents for appointment booking guide.
+- [x] WhatsApp automation API vs app guide.
+- [x] Lead follow-up automation guide.
+- [x] Small business website checklist guide.
+- [x] AWS cost optimization checklist guide.
+- [x] DPDP compliance checklist for small businesses guide.
 - [ ] CRM automation examples guide.
-- [ ] WhatsApp automation API vs app guide.
-- [ ] Lead follow-up automation guide.
 - [ ] Custom AI solutions vs off-the-shelf AI tools guide.
 
 ### Phase 4 — Industry landing pages
-Status: Not started
-- [ ] Clinics AI automation page.
+Status: Highest-priority pages created
+- [x] Clinics AI automation page.
+- [x] Diagnostic labs automation page.
+- [x] Aesthetic clinics digital growth page.
+- [x] Dental clinics lead automation page.
+- [x] Real estate AI automation page.
+- [x] Education/coaching automation page.
+- [x] Retail/D2C WhatsApp automation page.
+- [x] Local services website/automation page.
+- [x] SaaS/startups cloud FinOps page.
 - [ ] Law firm AI automation page.
-- [ ] Real estate AI automation page.
-- [ ] Education AI automation page.
-- [ ] Startup AI automation page.
-- [ ] Small business AI automation page.
+- [ ] Manufacturing/exporters digital transformation page.
+- [ ] Financial services automation page.
 
 ### Phase 5 — Proof, EEAT, and backlinks
-Status: Not started
-- [ ] Create honest demo case studies for chatbot, voice agent, WhatsApp+CRM, lead recovery.
+Status: Proof/demo layer started
+- [x] Create honest demo/proof pages for dental lead leakage, WhatsApp+CRM lead recovery, SaaS FinOps control, plus existing internal GEO proof.
+- [x] Create `/trust-security/` page for trust, approval gates, privacy, cloud security and honest proof positioning.
 - [ ] Improve About/author/entity trust signals.
 - [ ] Build free profile/entity citations.
-- [ ] Publish reusable templates/checklists/calculators for natural backlinks.
+- [ ] Publish more reusable templates/checklists/calculators for natural backlinks.
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 24%
+Overall SEO roadmap completion: 46%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -104,7 +125,7 @@ Completed milestones:
 - Repository cleanup started for internal snapshot exposure.
 
 Next single highest-value task:
-Build the next dedicated commercial service page: `/crm-automation-services/`, linking it from the AI automation hub and resources hub without repositioning the homepage as only an AI automation agency.
+Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
 
 ## 2026-07-10 update — AI automation hub
 - Created and pushed `/ai-automation-agency/` as the first Phase 2 commercial service hub.
@@ -127,3 +148,10 @@ Build the next dedicated commercial service page: `/crm-automation-services/`, l
 - Homepage must represent the full brand: websites, digital presence, lead generation, SEO, AI automation, cloud cost optimization, and complete digital growth systems.
 - Service-specific commercial keywords must be targeted through dedicated pages and content clusters.
 - Homepage messaging/title/H1/navigation/offers require Anushka or Raj approval before implementation.
+
+
+## Global default positioning clarification — 2026-07-11
+- AICloudStrategist is a global business by default, not India-only.
+- Core service pages must target global buyer intent unless a country modifier is deliberately selected for SEO opportunity.
+- DPDP is one regional compliance service alongside GDPR, privacy compliance, consent management and other relevant frameworks; it must not dominate the overall compliance positioning.
+- Continue competitor/gap research for underserved high-intent commercial keywords instead of copying competitor IA.

@@ -110,3 +110,6 @@ AICloudStrategist should not be described as guaranteeing revenue, patient booki
 - https://aicloudstrategist.com/resources/search-console-indexing-readiness/ — sitemap, robots, IndexNow and Search Console readiness log.
 - https://aicloudstrategist.com/resources/ai-answer-validation-prompts/ — AI answer testing prompts and recommendation boundary.
 - https://aicloudstrategist.com/resources/first-customer-proof-protocol/ — first customer proof protocol and no-fake-claims boundary.
+
+## SEO service architecture
+AICloudStrategist core commercial pages live under /services/: AI automation, WhatsApp automation, AI chatbot development, voice AI agents, CRM automation, workflow automation, website digital presence, lead generation SEO, cloud FinOps, DevOps observability, cloud security, DPDP compliance, and AI/MLOps. Industry pages live under /industries/. Topical resources live under /resources/. Proof and demo pages live under /case-studies/.
