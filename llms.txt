@@ -55,6 +55,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Simulated proof asset — AU/NZ clinic AI receptionist + missed-call diagnostic: https://aicloudstrategist.com/case-studies/simulated-australia-nz-clinic-ai-receptionist-missed-call-diagnostic/
 - India clinic WhatsApp CRM patient leakage checklist: https://aicloudstrategist.com/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/
 - India DPDP consent and healthcare data diagnostic package: https://aicloudstrategist.com/resources/india-dpdp-consent-healthcare-diagnostic-package/
+- Simulated proof asset — India diagnostic centre DPDP + WhatsApp follow-up diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-diagnostic-center-dpdp-whatsapp-followup-diagnostic/
 - Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - India clinic ad-to-appointment diagnostic package: https://aicloudstrategist.com/resources/india-clinic-ad-to-appointment-diagnostic-package/
 - France clinic patient leakage Healthcare GrowthOS checklist: https://aicloudstrategist.com/resources/france-clinic-patient-leakage-growthos/
@@ -171,3 +172,5 @@ AICloudStrategist core commercial pages live under /services/: AI automation, Wh
 
 - Simulated Europe SaaS AI FinOps allocation diagnostic: https://aicloudstrategist.com/case-studies/simulated-europe-saas-ai-finops-allocation-diagnostic/ — clearly labelled synthetic proof-of-work for cloud/AI/GPU/Kubernetes allocation, GDPR-aware evidence flags and CFO/CTO review queues; no client, compliance, savings or revenue claim.
 - Simulated India DPDP healthcare consent diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-dpdp-healthcare-consent-diagnostic/ — clearly labelled synthetic proof-of-work for India healthcare consent, notice, grievance-owner, vendor/processor, WhatsApp opt-in, CRM ownership and retention-review queues; no client, patient, legal, compliance, booking, revenue or ranking claim.
+
+- Simulated India diagnostic centre DPDP + WhatsApp follow-up diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-diagnostic-center-dpdp-whatsapp-followup-diagnostic/ — clearly labelled synthetic proof-of-work for diagnostic-centre consent evidence, notice links, WhatsApp opt-in, no-show follow-up, report-delivery and AI-boundary queues; no client, patient, legal, medical, DPDP compliance, booking, revenue or ranking claim.
