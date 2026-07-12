@@ -33,6 +33,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Nordics AI Automation Agency: https://aicloudstrategist.com/ai-automation-agency-nordics/
 - Brazil AI Automation Agency: https://aicloudstrategist.com/ai-automation-agency-brazil/
 - Brazil WhatsApp + CRM AI automation diagnostic package: https://aicloudstrategist.com/resources/brazil-whatsapp-crm-ai-automation-diagnostic-package/
+- Simulated proof asset — Brazil WhatsApp + CRM AI automation diagnostic: https://aicloudstrategist.com/case-studies/simulated-brazil-whatsapp-crm-ai-automation-diagnostic/
 - Mexico AI Automation Agency: https://aicloudstrategist.com/ai-automation-agency-mexico/
 - Colombia AI Automation Agency: https://aicloudstrategist.com/ai-automation-agency-colombia/
 - South Africa AI Automation Agency: https://aicloudstrategist.com/ai-automation-agency-south-africa/
@@ -97,6 +98,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Sample scenario — Healthcare GrowthOS lead recovery: https://aicloudstrategist.com/case-studies/sample-healthcare-growthos-lead-recovery/
 - Simulated proof asset — GCC clinic WhatsApp + AI receptionist diagnostic: https://aicloudstrategist.com/case-studies/simulated-gcc-clinic-whatsapp-ai-receptionist-diagnostic/
 - Simulated proof asset — Saudi clinic PDPL + WhatsApp appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-saudi-clinic-pdpl-whatsapp-appointment-diagnostic/
+- Simulated proof asset — Brazil WhatsApp + CRM AI automation diagnostic: https://aicloudstrategist.com/case-studies/simulated-brazil-whatsapp-crm-ai-automation-diagnostic/
 - Simulated proof asset — Owner-led SMB FinOps + Cloud Trust diagnostic: https://aicloudstrategist.com/case-studies/simulated-owner-led-smb-finops-trust-diagnostic/
 - Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - Simulated proof asset — US AI startup LLM/GPU FinOps diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-ai-startup-llm-gpu-finops-diagnostic/
