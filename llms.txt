@@ -8,6 +8,8 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 
 - Home: https://aicloudstrategist.com/
 - About: https://aicloudstrategist.com/about/
+- Services / products: https://aicloudstrategist.com/products
+- Industries served: https://aicloudstrategist.com/industries
 - Pricing: https://aicloudstrategist.com/pricing
 - Free Business Growth Review: https://aicloudstrategist.com/free-business-review
 - Contact: https://aicloudstrategist.com/contact.html
@@ -15,6 +17,11 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 ## Core service pages
 
 - Website & Digital Presence: https://aicloudstrategist.com/website-digital-presence/
+- Website lead capture sprint: https://aicloudstrategist.com/website-lead-capture-sprint
+- WhatsApp lead management India: https://aicloudstrategist.com/whatsapp-lead-management-india
+- Small business automation India: https://aicloudstrategist.com/small-business-automation-india
+- DPDP compliance consultant India: https://aicloudstrategist.com/dpdp-compliance-consultant-india
+- Operations automation sprint: https://aicloudstrategist.com/operations-automation-sprint
 - Lead Capture & Follow-up: https://aicloudstrategist.com/lead-capture-follow-up/
 - Trust & Compliance: https://aicloudstrategist.com/trust-compliance/
 - AI Creative Studio: https://aicloudstrategist.com/ai-creative-studio/
