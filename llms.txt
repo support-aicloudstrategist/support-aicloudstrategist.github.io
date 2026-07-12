@@ -48,6 +48,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Simulated proof asset — AU/NZ clinic AI receptionist + missed-call diagnostic: https://aicloudstrategist.com/case-studies/simulated-australia-nz-clinic-ai-receptionist-missed-call-diagnostic/
 - India clinic WhatsApp CRM patient leakage checklist: https://aicloudstrategist.com/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/
 - India DPDP consent and healthcare data diagnostic package: https://aicloudstrategist.com/resources/india-dpdp-consent-healthcare-diagnostic-package/
+- Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - France clinic patient leakage Healthcare GrowthOS checklist: https://aicloudstrategist.com/resources/france-clinic-patient-leakage-growthos/
 - Canada clinic Patient GrowthOS missed-call checklist: https://aicloudstrategist.com/resources/canada-clinic-patient-growthos-missed-call-checklist/
 - US clinic AI receptionist HIPAA patient follow-up checklist: https://aicloudstrategist.com/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/
@@ -88,6 +89,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Sample scenario — Healthcare GrowthOS lead recovery: https://aicloudstrategist.com/case-studies/sample-healthcare-growthos-lead-recovery/
 - Simulated proof asset — GCC clinic WhatsApp + AI receptionist diagnostic: https://aicloudstrategist.com/case-studies/simulated-gcc-clinic-whatsapp-ai-receptionist-diagnostic/
 - Simulated proof asset — Owner-led SMB FinOps + Cloud Trust diagnostic: https://aicloudstrategist.com/case-studies/simulated-owner-led-smb-finops-trust-diagnostic/
+- Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - Simulated proof asset — US AI startup LLM/GPU FinOps diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-ai-startup-llm-gpu-finops-diagnostic/
 - Simulated proof asset — US dental missed-call leakage diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-dental-missed-call-leakage-diagnostic/
 - Sample scenario — Cloud Trust & FinOps cost optimization: https://aicloudstrategist.com/case-studies/sample-cloud-finops-cost-optimization/
