@@ -71,6 +71,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 
 - North America Cloud and AI cost waste register template: https://aicloudstrategist.com/resources/cloud-ai-cost-waste-register-template-usa/
 - US AI startup LLM and GPU FinOps diagnostic package: https://aicloudstrategist.com/resources/us-ai-startup-llm-gpu-finops-diagnostic-package/
+- Singapore PDPA consent automation vs privacy GRC tools comparison: https://aicloudstrategist.com/resources/singapore-pdpa-consent-automation-vs-grc-tools-comparison/
 - Singapore PDPA consent and data protection diagnostic package: https://aicloudstrategist.com/resources/singapore-pdpa-consent-data-protection-diagnostic-package/
 - Simulated proof asset — Singapore PDPA consent and data protection diagnostic: https://aicloudstrategist.com/case-studies/simulated-singapore-pdpa-consent-data-protection-diagnostic/
 - Singapore PDPA consent and data protection automation checklist: https://aicloudstrategist.com/resources/singapore-pdpa-consent-data-protection-automation-checklist/
