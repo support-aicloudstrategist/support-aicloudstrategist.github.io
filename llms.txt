@@ -59,6 +59,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - US digital health vendor-risk diagnostic package: https://aicloudstrategist.com/resources/us-digital-health-vendor-risk-diagnostic-package/
 - US digital health HIPAA vendor-risk checklist: https://aicloudstrategist.com/resources/us-digital-health-hipaa-vendor-risk-checklist/
 - US law firm AI intake confidentiality diagnostic package: https://aicloudstrategist.com/resources/us-law-firm-ai-intake-confidentiality-diagnostic-package/
+- Simulated proof asset — US law firm AI intake confidentiality diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-law-firm-ai-intake-confidentiality-diagnostic/
 - US law firm AI intake and confidentiality checklist: https://aicloudstrategist.com/resources/us-law-firm-ai-intake-confidentiality-checklist/
 
 
