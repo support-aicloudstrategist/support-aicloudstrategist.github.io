@@ -63,6 +63,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Simulated proof asset — AU/NZ clinic AI receptionist + missed-call diagnostic: https://aicloudstrategist.com/case-studies/simulated-australia-nz-clinic-ai-receptionist-missed-call-diagnostic/
 - India clinic WhatsApp CRM patient leakage checklist: https://aicloudstrategist.com/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/
 - India DPDP consent and healthcare data diagnostic package: https://aicloudstrategist.com/resources/india-dpdp-consent-healthcare-diagnostic-package/
+- India healthcare DPDP consent vs GRC and DPO advisers comparison: https://aicloudstrategist.com/resources/india-healthcare-dpdp-consent-vs-grc-dpo-comparison/
 - Simulated proof asset — India diagnostic centre DPDP + WhatsApp follow-up diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-diagnostic-center-dpdp-whatsapp-followup-diagnostic/
 - Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - India clinic ad-to-appointment diagnostic package: https://aicloudstrategist.com/resources/india-clinic-ad-to-appointment-diagnostic-package/
