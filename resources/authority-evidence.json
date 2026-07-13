@@ -172,14 +172,6 @@
       "bytes_sampled": 237137
     },
     {
-      "title": "AICS public GitHub Actions brand trust monitor workflow",
-      "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/.github/workflows/brand-trust-monitor.yml",
-      "target": "https://aicloudstrategist.com/resources/brand-trust-monitoring/",
-      "type": "github_public_monitoring_workflow",
-      "status": null,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
       "title": "AICS public customer-problem asset: small shop/local business growth",
       "url": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/issues/22",
       "target": "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
