@@ -91,6 +91,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Singapore PDPA consent and data protection automation checklist: https://aicloudstrategist.com/resources/singapore-pdpa-consent-data-protection-automation-checklist/
 - UAE SaaS Cloud FinOps and Trust diagnostic package: https://aicloudstrategist.com/resources/uae-saas-cloud-finops-trust-diagnostic-package/
 - Europe SaaS AI FinOps diagnostic package: https://aicloudstrategist.com/resources/europe-saas-ai-finops-diagnostic-package/
+- Europe SaaS AI Governance Evidence diagnostic package: https://aicloudstrategist.com/resources/europe-saas-ai-governance-evidence-diagnostic-package/
 - Europe SaaS AI FinOps allocation checklist: https://aicloudstrategist.com/resources/europe-saas-ai-finops-allocation-checklist/
 - Europe SaaS AI governance vs GRC tools comparison: https://aicloudstrategist.com/resources/europe-saas-ai-governance-vs-grc-tools-comparison/
 - US SaaS AI vendor risk and SOC 2 readiness checklist: https://aicloudstrategist.com/resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/
