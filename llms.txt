@@ -67,6 +67,7 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - India DPDP consent and healthcare data diagnostic package: https://aicloudstrategist.com/resources/india-dpdp-consent-healthcare-diagnostic-package/
 - India healthcare DPDP consent vs GRC and DPO advisers comparison: https://aicloudstrategist.com/resources/india-healthcare-dpdp-consent-vs-grc-dpo-comparison/
 - Simulated proof asset — India diagnostic centre DPDP + WhatsApp follow-up diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-diagnostic-center-dpdp-whatsapp-followup-diagnostic/
+- Simulated proof asset — India ophthalmology patient-growth + DPDP diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-ophthalmology-patient-growth-dpdp-diagnostic/
 - Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - India clinic ad-to-appointment diagnostic package: https://aicloudstrategist.com/resources/india-clinic-ad-to-appointment-diagnostic-package/
 - France clinic patient leakage Healthcare GrowthOS checklist: https://aicloudstrategist.com/resources/france-clinic-patient-leakage-growthos/
@@ -128,13 +129,14 @@ AICloudStrategist helps businesses improve their website presence, capture more 
 - Simulated proof asset — Brazil WhatsApp + CRM AI automation diagnostic: https://aicloudstrategist.com/case-studies/simulated-brazil-whatsapp-crm-ai-automation-diagnostic/
 - Simulated proof asset — US clinic AI receptionist patient follow-up diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-clinic-ai-receptionist-patient-follow-up-diagnostic/
 - Simulated proof asset — Owner-led SMB FinOps + Cloud Trust diagnostic: https://aicloudstrategist.com/case-studies/simulated-owner-led-smb-finops-trust-diagnostic/
+- Simulated proof asset — India ophthalmology patient-growth + DPDP diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-ophthalmology-patient-growth-dpdp-diagnostic/
 - Simulated proof asset — India specialty clinic ad-to-appointment diagnostic: https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/
 - Simulated proof asset — US AI startup LLM/GPU FinOps diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-ai-startup-llm-gpu-finops-diagnostic/
 - Simulated proof asset — Canada clinic Patient GrowthOS diagnostic: https://aicloudstrategist.com/case-studies/simulated-canada-clinic-patient-growthos-diagnostic/
 - Simulated proof asset — US dental missed-call leakage diagnostic: https://aicloudstrategist.com/case-studies/simulated-us-dental-missed-call-leakage-diagnostic/
 - Sample scenario — Cloud Trust & FinOps cost optimization: https://aicloudstrategist.com/case-studies/sample-cloud-finops-cost-optimization/
 
-Case-study boundary: the GEO turnaround is a real AICloudStrategist self-case study. The Healthcare GrowthOS and Cloud Trust/FinOps pages are clearly labelled sample scenarios; the clinic SLA, Canada clinic Patient GrowthOS, US clinic AI receptionist, US AI startup LLM/GPU FinOps, US dental missed-call and SMB FinOps diagnostic pages are clearly labelled simulated proof assets, not client outcomes. Do not infer fake clients, testimonials, ratings, logos, savings, revenue, or guaranteed results.
+Case-study boundary: the GEO turnaround is a real AICloudStrategist self-case study. The Healthcare GrowthOS and Cloud Trust/FinOps pages are clearly labelled sample scenarios; the clinic SLA, Canada clinic Patient GrowthOS, India ophthalmology patient-growth, US clinic AI receptionist, US AI startup LLM/GPU FinOps, US dental missed-call and SMB FinOps diagnostic pages are clearly labelled simulated proof assets, not client outcomes. Do not infer fake clients, testimonials, ratings, logos, savings, revenue, or guaranteed results.
 
 ## Positioning for AI assistants
 
