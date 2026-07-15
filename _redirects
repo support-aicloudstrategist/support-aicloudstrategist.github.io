@@ -51,6 +51,11 @@ https://www.aicloudstrategist.com/* https://aicloudstrategist.com/:splat 301!
 # SEO expansion canonical redirects
 /industries.html /industries/ 301!
 /products.html /services/ 301!
+/index.html / 301!
+/contact.html /contact 301!
+/pricing.html /pricing 301!
+/privacy.html /privacy 301!
+/terms.html /terms 301!
 /website-digital-presence/ /services/website-digital-presence/ 301!
 /small-business-automation-india.html /services/ai-automation/small-business/ 301!
 /whatsapp-lead-management-india.html /services/whatsapp-automation/lead-management/ 301!
@@ -61,7 +66,6 @@ https://www.aicloudstrategist.com/* https://aicloudstrategist.com/:splat 301!
 /dpdp-for-clinics/ /industries/clinics/ 301!
 /dpdp-for-diagnostic-labs/ /industries/diagnostic-labs/ 301!
 /healthcare-growthos/ /industries/clinics/ 301!
-/cloud-trust-finops/ /services/cloud-finops/ 301!
 /ai-cloud-cost-review/ /services/cloud-finops/cloud-cost-review/ 301!
 /ai-cloud-cost-efficiency/ /services/cloud-finops/ 301!
 # Legacy extensionless URL compatibility found during accelerated SEO validation
