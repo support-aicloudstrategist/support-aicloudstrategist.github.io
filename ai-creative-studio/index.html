@@ -406,6 +406,8 @@
 <!-- AICS GEO metadata end -->
 <script defer src="/js/aics-analytics-shim.js"></script>
 <script defer src="/js/aics-conversion-tracking.js"></script>
+<link rel="stylesheet" href="/css/site-navigation.css">
+<script defer src="/js/site-navigation.js"></script>
 </head>
 <body>
 
@@ -437,15 +439,12 @@
         </span>
         AICloud<span>Strategist</span>
       </a>
-      <nav class="main">
-        <a href="https://aicloudstrategist.com/">Home</a>
-        <a href="https://aicloudstrategist.com/#services">Services</a>
-        <a href="https://aicloudstrategist.com/industries.html">Industries</a>
-        <a href="https://aicloudstrategist.com/pricing.html">Pricing</a>
-        <a href="https://aicloudstrategist.com/about/">About</a>
-        <a href="https://aicloudstrategist.com/contact.html">Contact</a>
-        <a class="nav-cta" href="https://aicloudstrategist.com/free-business-review/">Get free growth review</a>
-      </nav>
+      <div data-aics-site-nav>
+  <nav class="aics-nav-fallback" aria-label="Primary navigation">
+    <a class="aics-nav-fallback-brand" href="/">AICloudStrategist</a>
+    <div><a href="/services/">What We Do</a><a href="/case-studies/">Proof</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/contact.html">Contact</a></div>
+  </nav>
+</div>
       <button class="burger" id="burger" aria-label="Open menu">☰</button>
     </div>
   </header>

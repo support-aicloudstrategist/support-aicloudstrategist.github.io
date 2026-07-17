@@ -11,6 +11,8 @@
 /week1-brief/* /404.html 404!
 /week2-brief/* /404.html 404!
 
+/home-core-growth/* / 301!
+
 # SEO canonical cleanup: keep internal/legacy/backup variants out of index
 /preview/* /404.html 404!
 /about-old/* /about/ 301!

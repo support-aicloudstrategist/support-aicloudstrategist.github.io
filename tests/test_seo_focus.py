@@ -21,11 +21,11 @@ class SeoFocusTests(unittest.TestCase):
 
     def test_homepage_has_a_clear_primary_commercial_topic(self):
         self.assertIn(
-            "<title>AI Automation for Indian Businesses | AICloudStrategist</title>",
+            "<title>AICloudStrategist | Digital Growth System for Businesses Worldwide</title>",
             self.home,
         )
         self.assertIn(
-            "AI automation for lead follow-up, appointments and business operations.",
+            "Growth you can measure. Control you can see.",
             self.home,
         )
         self.assertIn('name="robots" content="index, follow, max-image-preview:large"', self.home)
