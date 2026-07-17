@@ -443,10 +443,8 @@
   // mobile nav (home-style toggle)
   const mt = document.getElementById('mobileToggle');
   const nl = document.getElementById('navLinks');
-  if (mt && nl) {
-    mt.addEventListener('click', () => nl.classList.toggle('open'));
-    nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
-  }
+  mt.addEventListener('click', () => nl.classList.toggle('open'));
+  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
 
   // reveal on scroll + dashboard metric stagger
   if (!RM && 'IntersectionObserver' in window){
