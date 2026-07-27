@@ -45,8 +45,7 @@ body.how-work-page .footer a {
     padding-right: 16px;
   }
 
-  body.how-work-page .topbar-inner,
-  body.how-work-page .nav-inner {
+  body.how-work-page .topbar-inner{
     max-width: 100%;
     min-width: 0;
   }
@@ -110,10 +109,7 @@ body.how-work-page .footer a {
     margin-right: auto !important;
   }
 
-  body.how-work-page .topbar-inner,
-  body.how-work-page .nav-inner,
-  body.how-work-page .process-step,
-  body.how-work-page .footer .container {
+  body.how-work-page .topbar-inner, body.how-work-page .process-step, body.how-work-page .footer .container{
     width: min(100%, 390px) !important;
     max-width: 390px !important;
   }

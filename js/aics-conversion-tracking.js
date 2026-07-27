@@ -8,7 +8,7 @@
     if(href.indexOf('mailto:')===0) return 'CTA Email Click';
     if(href.indexOf('/free-business-review')>-1) return 'CTA Free Review Click';
     if(href.indexOf('/pricing')>-1) return 'CTA Pricing Click';
-    if(a.classList && (a.classList.contains('btn') || a.classList.contains('nav-cta'))) return 'CTA Button Click';
+    if(a.classList && (a.classList.contains('btn') || a.classList.contains('aics-nav-cta'))) return 'CTA Button Click';
     return null;
   }
   function send(name, props){

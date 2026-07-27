@@ -21,20 +21,20 @@ class SeoFocusTests(unittest.TestCase):
 
     def test_homepage_has_a_clear_primary_commercial_topic(self):
         self.assertIn(
-            "<title>AI Automation for Indian Businesses | AICloudStrategist</title>",
+            "<title>Enterprise AI Services &amp; Managed AI | AICloudStrategist</title>",
             self.home,
         )
         self.assertIn(
-            "AI automation for lead follow-up, appointments and business operations.",
+            "Build, govern and operate AI with confidence.",
             self.home,
         )
         self.assertIn('name="robots" content="index, follow, max-image-preview:large"', self.home)
         self.assertIn('property="og:title"', self.home)
         self.assertIn('name="twitter:card" content="summary_large_image"', self.home)
         self.assertEqual(self.home.count('<meta name="description"'), 1)
-        self.assertEqual(self.home.count('"@type":"Organization"'), 1)
-        self.assertEqual(self.home.count('"@type":"WebSite"'), 1)
-        self.assertIn('"@type":"Service"', self.home)
+        self.assertEqual(len(re.findall(r'"@type"\s*:\s*"Organization"', self.home)), 1)
+        self.assertEqual(len(re.findall(r'"@type"\s*:\s*"WebSite"', self.home)), 1)
+        self.assertRegex(self.home, r'"@type"\s*:\s*"Service"')
 
     def test_sitemap_is_curated_unique_and_canonical(self):
         self.assertGreaterEqual(len(self.paths), 30)

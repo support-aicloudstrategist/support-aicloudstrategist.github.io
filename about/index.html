@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About AICloudStrategist</title>
@@ -12,7 +13,7 @@
   "architecture / blueprint" signature treatment and an animated credential
   stack. Company first (who we are, what we do, how we work, what we stand for),
   then the people (Anushka, Rajiv).
-  Navbar, footer, logo, padding, and font match /home-core-growth/.
+  Navbar, footer, logo, padding, and font match /.
   All original About copy is preserved; the added company copy is drawn from the
   live site (services, positioning, honesty stance) — no invented metrics,
   history, logos, or testimonials.
@@ -86,25 +87,25 @@
   .btn-light{color:#eaf6fb;border-color:rgba(88,200,255,.28);background:rgba(255,255,255,.055);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);}
   .btn-light:hover{transform:translateY(-3px);border-color:rgba(88,200,255,.6);background:linear-gradient(90deg,rgba(88,200,255,.13),rgba(141,108,255,.13));}
 
-  /* ===== top bar / nav (home style) ===== */
+  /* top bar */
   .topbar{position:relative;z-index:41;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,8,15,.88);backdrop-filter:blur(10px);font-size:13px;color:#c9d8e6;}
   .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:38px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
   .topbar a{color:#eaf6fb;font-weight:600;transition:color .25s;}
   .topbar a:hover{color:var(--cyan);}
   .topbar-sep{opacity:.5;}
-  nav.nav{position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(4,19,26,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px;}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;}
-  .brand .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;font-size:.82rem;font-weight:900;letter-spacing:.01em;color:#04131a;background:var(--grad);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px -10px rgba(88,200,255,.6);}
-  .nav-links{display:flex;align-items:center;gap:22px;}
-  .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500;position:relative;transition:color .25s;}
-  .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;border-radius:2px;background:var(--grad);transition:width .3s ease;}
-  .nav-links a:not(.nav-cta):hover{color:var(--ink);} .nav-links a:not(.nav-cta):hover::after{width:100%;}
-  .nav-links a[aria-current]{color:var(--ink);} .nav-links a[aria-current]:not(.nav-cta)::after{width:100%;}
-  .nav-cta{color:#04131a!important;background:var(--grad);padding:10px 16px;border-radius:11px;font-weight:600;transition:transform .25s,box-shadow .3s;box-shadow:0 12px 30px -14px rgba(88,200,255,.8);}
-  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(141,108,255,.8);}
-  .nav-cta-short{display:none;}
-  .mobile-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--glass);color:var(--ink);font-size:1.3rem;cursor:pointer;align-items:center;justify-content:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* ===== hero ===== */
   .hero .reveal{opacity:1;transform:none;}
@@ -287,15 +288,7 @@
 
   /* responsive */
   @media(max-width:900px){.footer-main-grid{grid-template-columns:1fr 1fr;} .ghost{display:none;}.section{padding:58px 0}.hero-grid{grid-template-columns:1fr;gap:30px}.ctaband .box{padding:30px 24px}}
-  @media(max-width:860px){
-    .mobile-toggle{display:flex;}
-    .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;background:rgba(4,19,26,.98);border-bottom:1px solid var(--line);padding:6px 0;backdrop-filter:blur(16px);}
-    .nav-links.open{display:flex;}
-    .nav-links a{padding:13px 22px;}
-    .nav-links a:not(.nav-cta)::after{display:none;}
-    .nav-cta{margin:8px 22px 6px;text-align:center;}
-    .nav-cta-full{display:none;} .nav-cta-short{display:inline;}
-  }
+
   @media(max-width:600px){
     .footer-main-grid{grid-template-columns:1fr;}
     .footer-bottom-row{flex-direction:column;align-items:flex-start;} .footer-bottom-row span:last-child{margin-left:0;}
@@ -309,7 +302,7 @@
 </style>
 <script defer src="/js/aics-analytics-shim.js"></script>
 <script defer src="/js/aics-conversion-tracking.js"></script>
-</head>
+<link rel="stylesheet" href="/css/site-navigation.css"><script defer src="/js/site-navigation.js"></script></head>
 <body>
 
 <div class="bg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div></div>
@@ -328,30 +321,9 @@
         <a href="https://wa.me/918796302608">WA +91 87963 02608</a>
       </span>
     </div>
-  </div>
+  </div><div data-aics-navigation-mount></div>
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="/home-core-growth/">
-        <span class="mark">AI</span>
-        <span>AICloudStrategist</span>
-      </a>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="/home-core-growth/">Home</a>
-        <a href="/home-core-growth/#services">Services</a>
-        <a href="/industries.html">Industries</a>
-        <a href="/pricing.html">Pricing</a>
-        <a href="/about/" aria-current="page">About</a>
-        <a href="/contact.html">Contact</a>
-        <a class="nav-cta" href="/free-business-review/">
-          <span class="nav-cta-full">Get free growth review</span>
-          <span class="nav-cta-short">Free review</span>
-        </a>
-      </div>
-    </div>
-  </nav>
+
 
   <main>
 
@@ -485,7 +457,7 @@
           </div>
           <div class="actions">
             <a class="btn btn-primary" href="/free-business-review/">Get my free growth review <span class="arrow">→</span></a>
-            <a class="btn btn-light" href="/home-core-growth/#services">See services</a>
+            <a class="btn btn-light" href="/#services">See services</a>
           </div>
         </div>
       </div>
@@ -498,13 +470,13 @@
     <div class="container">
       <div class="footer-main-grid">
         <div class="footer-brand-block">
-          <a class="footer-brand" href="/home-core-growth/"><span class="mark">AI</span><span>AICloudStrategist</span></a>
+          <a class="footer-brand" href="/"><span class="mark">AI</span><span>AICloudStrategist</span></a>
           <p>Practical digital growth services for businesses worldwide.</p>
         </div>
         <div class="footer-links-group">
           <h3>Quick Links</h3>
           <a href="/how-we-work/">How it works</a>
-          <a href="/home-core-growth/#services">Services</a>
+          <a href="/#services">Services</a>
           <a href="/industries.html">Industries</a>
           <a href="/pricing.html">Pricing</a>
           <a href="/about/">About</a>
@@ -547,12 +519,6 @@
 
 <script>
   const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // mobile nav
-  const mt = document.getElementById('mobileToggle');
-  const nl = document.getElementById('navLinks');
-  mt.addEventListener('click', () => nl.classList.toggle('open'));
-  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
 
   // reveal + staged groups
   if (!RM && 'IntersectionObserver' in window){

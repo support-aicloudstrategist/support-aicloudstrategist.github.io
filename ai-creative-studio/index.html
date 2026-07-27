@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Creative Studio — Cinematic AI Ads & Premium Brand Visuals</title>
@@ -47,7 +48,7 @@
   body{
     margin:0;background:var(--bg-0);color:var(--ink);font-family:var(--font);
     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-    overflow-x:hidden;line-height:1.6;
+    overflow-x:clip;line-height:1.6;
   }
   a{color:inherit;text-decoration:none;}
   img,video{display:block;max-width:100%;}
@@ -105,27 +106,24 @@
   .topbar a{color:var(--ink);font-weight:600;}
   .topbar .tb-links{display:inline-flex;gap:16px;white-space:nowrap;}
 
-  /* ---------- header ---------- */
-  header.site{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);
-    background:rgba(4,19,26,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
-  header.site .container{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px;}
+
+
   .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.05rem;letter-spacing:.2px;}
   .logo .mk{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
     background:linear-gradient(145deg,rgba(88,200,255,.22),rgba(141,108,255,.22));border:1px solid var(--line);
     box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 22px -10px rgba(88,200,255,.5);}
   .logo .mk svg{width:20px;height:20px;}
   .logo span{color:var(--cyan);}
-  nav.main{display:flex;align-items:center;gap:26px;}
-  nav.main a{font-size:.92rem;color:var(--muted);font-weight:500;transition:color .25s;}
-  nav.main a:hover{color:var(--ink);}
-  nav.main a.nav-cta{color:#04131a;background:var(--grad);padding:9px 16px;border-radius:10px;font-weight:600;}
-  nav.main a.nav-cta:hover{transform:translateY(-2px);}
-  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:var(--glass);
-    color:var(--ink);font-size:1.3rem;cursor:pointer;align-items:center;justify-content:center;}
-  .mobile-nav{display:none;border-bottom:1px solid var(--line);background:rgba(4,19,26,.96);position:sticky;top:67px;z-index:39;}
-  .mobile-nav.open{display:block;}
-  .mobile-nav a{display:block;padding:13px clamp(18px,4vw,40px);border-top:1px solid var(--line);color:var(--muted);font-weight:500;}
-  .mobile-nav a:first-child{border-top:0;}
+
+
+
+
+
+
+
+
+
+
 
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;}
@@ -352,25 +350,25 @@
     .foot-inner{grid-template-columns:1fr 1fr;gap:26px;}
   }
   @media(max-width:860px){
-    nav.main{display:none;}
-    .burger{display:flex;}
+
+
     .hero-points{grid-template-columns:repeat(2,1fr);}
     .grid-3,.steps,.trust-grid,.price-grid{grid-template-columns:1fr;}
     .ba-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
     .grid-2{grid-template-columns:1fr;}
   }
   @media(max-width:700px){
-    html,body{width:100%;max-width:100%;overflow-x:hidden;}
+    html,body{width:100%;max-width:100%;overflow-x:clip;}
     body{padding-bottom:78px;}
-    .wrap,section,header.site,.topbar,footer.site{max-width:100vw;overflow:hidden;}
+    .wrap, section, .topbar, footer.site{max-width:100vw;overflow:hidden;}
     .container{width:100%;max-width:100%;min-width:0;padding-left:16px;padding-right:16px;}
     .topbar .container{display:block;line-height:1.45;}
     .topbar .container > span:first-child{display:block;max-width:min(100%,358px);white-space:normal;overflow-wrap:break-word;}
     .topbar .tb-links{display:none;}
-    header.site .container{gap:10px;}
+
     .logo{min-width:0;font-size:.98rem;}
     .logo .mk{width:34px;height:34px;}
-    .burger{display:flex;flex:0 0 auto;}
+
     .hero .container{max-width:100%;padding-top:30px;padding-bottom:40px;}
     .hero h1{font-size:clamp(1.78rem,8.1vw,2.25rem);max-width:min(100%,358px);overflow-wrap:break-word;word-break:normal;}
     .hero p.sub,.hero-note,.lead{max-width:min(100%,358px);overflow-wrap:break-word;}
@@ -406,7 +404,7 @@
 <!-- AICS GEO metadata end -->
 <script defer src="/js/aics-analytics-shim.js"></script>
 <script defer src="/js/aics-conversion-tracking.js"></script>
-</head>
+<link rel="stylesheet" href="/css/site-navigation.css"><script defer src="/js/site-navigation.js"></script></head>
 <body>
 
 <!-- atmosphere -->
@@ -427,37 +425,12 @@
       </span>
     </div>
   </div>
+</div>
+<div data-aics-navigation-mount></div>
+<div class="wrap">
 
-  <!-- HEADER -->
-  <header class="site">
-    <div class="container">
-      <a class="logo" href="https://aicloudstrategist.com/">
-        <span class="mk" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M6.5 15.5a3.5 3.5 0 0 1 .4-6.98A4.5 4.5 0 0 1 16 8.2a3.6 3.6 0 0 1 1.5 6.98" stroke="url(#lg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11v6m0 0 2.4-2.4M12 17l-2.4-2.4" stroke="url(#lg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="4" y1="6" x2="20" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#58c8ff"/><stop offset="1" stop-color="#8d6cff"/></linearGradient></defs></svg>
-        </span>
-        AICloud<span>Strategist</span>
-      </a>
-      <nav class="main">
-        <a href="https://aicloudstrategist.com/">Home</a>
-        <a href="https://aicloudstrategist.com/#services">Services</a>
-        <a href="https://aicloudstrategist.com/industries.html">Industries</a>
-        <a href="https://aicloudstrategist.com/pricing.html">Pricing</a>
-        <a href="https://aicloudstrategist.com/about/">About</a>
-        <a href="https://aicloudstrategist.com/contact.html">Contact</a>
-        <a class="nav-cta" href="https://aicloudstrategist.com/free-business-review/">Get free growth review</a>
-      </nav>
-      <button class="burger" id="burger" aria-label="Open menu">☰</button>
-    </div>
-  </header>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="https://aicloudstrategist.com/">Home</a>
-    <a href="https://aicloudstrategist.com/#services">Services</a>
-    <a href="https://aicloudstrategist.com/industries.html">Industries</a>
-    <a href="https://aicloudstrategist.com/pricing.html">Pricing</a>
-    <a href="https://aicloudstrategist.com/about/">About</a>
-    <a href="https://aicloudstrategist.com/contact.html">Contact</a>
-    <a href="https://aicloudstrategist.com/free-business-review/">Get free growth review</a>
-  </div>
+
+
 
   <!-- HERO -->
   <section class="hero" id="hero">
@@ -814,12 +787,6 @@
 <script>
   const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const FINE = window.matchMedia('(pointer: fine)').matches;
-
-  // mobile nav
-  const burger = document.getElementById('burger');
-  const mnav = document.getElementById('mobileNav');
-  burger.addEventListener('click', () => mnav.classList.toggle('open'));
-  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mnav.classList.remove('open')));
 
   // reveal on scroll
   if (!RM && 'IntersectionObserver' in window){

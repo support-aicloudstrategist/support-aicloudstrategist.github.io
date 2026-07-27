@@ -37,21 +37,6 @@
     window.setTimeout(complete, safeFallbackMs);
   }
 
-  const navbar = document.getElementById('navbar') || document.querySelector('.nav');
-  if (navbar) {
-    const setScrolled = () => navbar.classList.toggle('scrolled', window.scrollY > 24);
-    setScrolled();
-    window.addEventListener('scroll', setScrolled, { passive: true });
-  }
-
-  const mobileToggle = document.getElementById('mobileToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
-  }
-
-
   const revealItems = document.querySelectorAll('.reveal, .section, .section-head, .subhero, .pricing-hero, .customer-industry-hero, .offer-card, .evidence-item, .process-step, .mini-panel, .contact-card, .card, .service-card, .actual-tile, .deliverable-tile, .before-after-card, .process-card, .industry-card, .deep-industry-card, .industry-flow-card, .pricing-card, .aics-price-card');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -70,8 +55,6 @@
   } else {
     revealItems.forEach(el => el.classList.add('visible'));
   }
-
-
 
   const reduceMotionPref = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.body.classList.add('motion-ready');
@@ -108,7 +91,8 @@
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
-      const navHeight = navbar ? navbar.offsetHeight : 0;
+      const navigation = document.querySelector('[data-aics-global-nav]');
+      const navHeight = navigation ? navigation.offsetHeight : 0;
       const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
       const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
