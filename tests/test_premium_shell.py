@@ -97,6 +97,43 @@ class PremiumShellPreservationTests(unittest.TestCase):
                 self.assertEqual(source.count('data-aics-page-disclosure'), 1)
                 self.assertIn(text, source)
 
+    def test_approved_homepage_capability_sections_survive_shell_migration(self):
+        home = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "css/homepage-enterprise.css").read_text(encoding="utf-8")
+
+        self.assertIn('<section class="section ea-services" id="services">', home)
+        self.assertEqual(home.count("data-enterprise-service"), 5)
+        self.assertEqual(home.count('class="ea-card-top"'), 5)
+        for marker in (
+            "ea-visual-assure",
+            "ea-visual-build",
+            "ea-visual-finance",
+            "ea-visual-secure",
+            "ea-visual-operate",
+        ):
+            self.assertIn(marker, home)
+        self.assertIn("Enterprise AI capabilities", home)
+
+        self.assertIn('id="business-growth-systems"', home)
+        self.assertEqual(home.count('class="ea-growth-card"'), 4)
+        self.assertIn('id="ai-creative-studio"', home)
+        self.assertIn("ea-creative-studio-showcase", home)
+        self.assertIn("ea-creative-stage", home)
+
+        self.assertNotIn('id="specialist-practices"', home)
+        self.assertNotIn("ea-practice-grid", home)
+        self.assertNotIn("Five disciplines for production AI.", home)
+        self.assertNotIn("Focused capabilities for distinct commercial needs.", home)
+
+        for marker in (
+            ".ea-service-visual",
+            ".ea-growth-grid",
+            ".ea-creative-studio-showcase",
+            ".ea-creative-stage",
+        ):
+            self.assertIn(marker, css)
+        self.assertIn("approved-capabilities-20260727", home)
+
     def test_shell_styles_include_refinement_primitives(self):
         css = (ROOT / "css/site-navigation.css").read_text()
         for token in (

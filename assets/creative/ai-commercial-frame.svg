@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cinematic commercial preview</title>
+  <desc id="desc">A futuristic electric performance vehicle travelling through a city at blue hour.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#050a18"/><stop offset=".55" stop-color="#0a1c35"/><stop offset="1" stop-color="#151336"/></linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#02050b"/><stop offset=".52" stop-color="#111827"/><stop offset="1" stop-color="#05040c"/></linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6fbff"/><stop offset=".28" stop-color="#3daee9"/><stop offset=".68" stop-color="#1d4ed8"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="trail"><stop stop-color="#22d3ee" stop-opacity="0"/><stop offset=".65" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="15"/></filter>
+    <filter id="carShadow"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity=".75"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#sky)"/>
+  <g opacity=".72">
+    <path d="M0 330V178h106v152m18 0V89h128v241m18 0V145h86v185m20 0V47h158v283m21 0V121h113v209m26 0V72h151v258m20 0V166h91v164m19 0V103h146v227" fill="#07111f" stroke="#263c5d" stroke-width="3"/>
+    <g fill="#65e9f5" opacity=".35"><path d="M155 132h55v7h-55zm0 34h55v7h-55zm251-71h94v8h-94zm0 42h94v8h-94zm318-10h78v8h-78zm0 40h78v8h-78zm274-18h71v8h-71z"/></g>
+  </g>
+  <path d="M0 338h1200v337H0z" fill="url(#road)"/>
+  <path d="M0 520c312-88 676-104 1200-74" fill="none" stroke="#fff" stroke-opacity=".13" stroke-width="3"/>
+  <path d="M0 589c338-99 702-109 1200-63" fill="none" stroke="#22d3ee" stroke-opacity=".3" stroke-width="3"/>
+  <path d="M0 429h425" stroke="url(#trail)" stroke-width="8" filter="url(#glow)"/>
+  <path d="M0 464h520" stroke="url(#trail)" stroke-width="4"/>
+  <g transform="translate(420 302)" filter="url(#carShadow)">
+    <path d="M38 180c24-89 73-124 171-142l221-21c73 2 139 49 180 128l36 74H0Z" fill="url(#car)" stroke="#a5f3fc" stroke-opacity=".52" stroke-width="3"/>
+    <path d="M202 54c74-26 176-27 238-8 42 13 78 44 102 85H140c12-34 31-59 62-77Z" fill="#05101f" stroke="#67e8f9" stroke-opacity=".46" stroke-width="4"/>
+    <path d="M270 49l-31 82m135-94 20 94" stroke="#8bdcf0" stroke-opacity=".32" stroke-width="3"/>
+    <path d="M29 177h582" stroke="#e6fdff" stroke-opacity=".45" stroke-width="5"/>
+    <ellipse cx="142" cy="223" rx="63" ry="63" fill="#030711" stroke="#55708d" stroke-width="11"/>
+    <ellipse cx="514" cy="223" rx="63" ry="63" fill="#030711" stroke="#55708d" stroke-width="11"/>
+    <circle cx="142" cy="223" r="24" fill="#22d3ee" opacity=".72"/><circle cx="514" cy="223" r="24" fill="#8b5cf6" opacity=".72"/>
+    <path d="M542 153h61" stroke="#f7fbff" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="740" cy="570" rx="340" ry="48" fill="#22d3ee" opacity=".12" filter="url(#glow)"/>
+</svg>

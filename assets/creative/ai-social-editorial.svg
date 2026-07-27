@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial social campaign preview</title>
+  <desc id="desc">An abstract luxury editorial composition with translucent fabric and chrome forms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#040b17"/><stop offset=".52" stop-color="#101333"/><stop offset="1" stop-color="#230e3c"/></linearGradient>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bffaff" stop-opacity=".9"/><stop offset=".42" stop-color="#22d3ee" stop-opacity=".52"/><stop offset="1" stop-color="#8b5cf6" stop-opacity=".2"/></linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".19" stop-color="#5f728e"/><stop offset=".39" stop-color="#dffaff"/><stop offset=".66" stop-color="#343b68"/><stop offset="1" stop-color="#f3e8ff"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#22d3ee" stop-opacity=".43"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="34"/></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="28" stdDeviation="25" flood-color="#000" flood-opacity=".62"/></filter>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <circle cx="122" cy="292" r="260" fill="url(#light)" filter="url(#soft)"/>
+  <circle cx="630" cy="720" r="280" fill="#8b5cf6" opacity=".15" filter="url(#soft)"/>
+  <g filter="url(#shadow)">
+    <path d="M128 747c48-184 47-312 187-491 80-103 175-143 268-134-79 78-116 157-96 238 18 73 84 124 76 217-12 131-161 245-435 170Z" fill="url(#silk)" opacity=".78"/>
+    <path d="M252 811c-49-144-25-296 70-408 79-93 180-147 295-162-55 75-58 150-8 222 43 62 38 137-13 224-68 116-183 158-344 124Z" fill="#cab7ff" opacity=".22"/>
+    <ellipse cx="365" cy="477" rx="116" ry="226" transform="rotate(28 365 477)" fill="none" stroke="url(#chrome)" stroke-width="38"/>
+    <ellipse cx="414" cy="499" rx="67" ry="159" transform="rotate(28 414 499)" fill="none" stroke="#effcff" stroke-opacity=".24" stroke-width="7"/>
+    <circle cx="279" cy="293" r="72" fill="url(#chrome)"/>
+  </g>
+  <path d="M75 821h570" stroke="#fff" stroke-opacity=".18"/>
+  <path d="M75 847h390" stroke="#67e8f9" stroke-opacity=".42" stroke-width="3"/>
+</svg>
