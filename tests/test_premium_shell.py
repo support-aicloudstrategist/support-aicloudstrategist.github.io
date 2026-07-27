@@ -132,7 +132,7 @@ class PremiumShellPreservationTests(unittest.TestCase):
             ".ea-creative-stage",
         ):
             self.assertIn(marker, css)
-        self.assertIn("approved-capabilities-20260727", home)
+        self.assertIn("enterprise-visual-20260727", home)
 
     def test_shell_styles_include_refinement_primitives(self):
         css = (ROOT / "css/site-navigation.css").read_text()
