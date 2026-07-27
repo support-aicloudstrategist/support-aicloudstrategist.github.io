@@ -142,4 +142,27 @@ html,body{max-width:100%;overflow-x:hidden}
 <!-- AICS GEO metadata end -->
 <script defer src="/js/aics-analytics-shim.js"></script>
 <script defer src="/js/aics-conversion-tracking.js"></script>
-<link rel="stylesheet" href="/css/site-navigation.css"><script defer src="/js/site-navigation.js"></script></head><body class="reform-site"><div data-aics-navigation-mount></div><main><section class="subhero"><div class="container"><span class="eyebrow">Tool</span><h1>Lead Leakage Calculator</h1><p>Estimate how many enquiries may be going cold because calls, WhatsApp and forms are not tracked.</p></div></section><section class="section"><div class="container"><div class="calculator"><label>Monthly enquiries<input id="q" type="number" value="100" min="0"></label><label>Estimated missed / unanswered %<input id="m" type="number" value="25" min="0" max="100"></label><label>Average value per converted customer (₹)<input id="v" type="number" value="5000" min="0"></label><label>Conversion chance after good follow-up %<input id="c" type="number" value="10" min="0" max="100"></label><div class="estimate"><span>Estimated monthly recoverable opportunity</span><strong id="out">—</strong><small>This is a planning estimate, not a guarantee.</small></div><a class="btn btn-primary" href="/free-business-review">Get free leakage review</a></div></div></section><script>function money(n){return '₹'+Math.round(n).toLocaleString('en-IN')}function upd(){let leaked=(+q.value||0)*(+m.value||0)/100;let opp=leaked*(+v.value||0)*(+c.value||0)/100;out.textContent=money(opp)+' / month'}['q','m','v','c'].forEach(id=>document.getElementById(id).addEventListener('input',upd));upd()</script></main><div data-aics-footer-mount></div></body></html>
+<link rel="stylesheet" href="/css/site-navigation.css?v=premium-shell-20260727"><script defer src="/js/site-navigation.js?v=premium-shell-20260727"></script></head><body class="reform-site"><div data-aics-navigation-mount></div><main><section class="subhero"><div class="container"><span class="eyebrow">Tool</span><h1>Lead Leakage Calculator</h1><p>Estimate how many enquiries may be going cold because calls, WhatsApp and forms are not tracked.</p></div></section><section class="section"><div class="container"><div class="calculator"><label>Monthly enquiries<input id="q" type="number" value="100" min="0"></label><label>Estimated missed / unanswered %<input id="m" type="number" value="25" min="0" max="100"></label><label>Average value per converted customer (₹)<input id="v" type="number" value="5000" min="0"></label><label>Conversion chance after good follow-up %<input id="c" type="number" value="10" min="0" max="100"></label><div class="estimate"><span>Estimated monthly recoverable opportunity</span><strong id="out">—</strong><small>This is a planning estimate, not a guarantee.</small></div><a class="btn btn-primary" href="/free-business-review">Get free leakage review</a></div></div></section><script>function money(n){return '₹'+Math.round(n).toLocaleString('en-IN')}function upd(){let leaked=(+q.value||0)*(+m.value||0)/100;let opp=leaked*(+v.value||0)*(+c.value||0)/100;out.textContent=money(opp)+' / month'}['q','m','v','c'].forEach(id=>document.getElementById(id).addEventListener('input',upd));upd()</script></main><footer class="aics-global-footer" data-aics-global-footer>
+  <div class="aics-footer-inner">
+    <div class="aics-footer-grid">
+      <section class="aics-footer-brand-block">
+        <a class="aics-footer-brand" href="/" aria-label="AICloudStrategist home"><span class="aics-footer-mark" aria-hidden="true">AI</span><span>AICloudStrategist</span></a>
+        <p>Enterprise AI systems, controls, economics and managed operations for business-critical initiatives.</p>
+        <a class="aics-footer-primary-link" href="/contact.html?service=enterprise-ai">Discuss your AI initiative<span aria-hidden="true">→</span></a>
+      </section>
+      <section class="aics-footer-group"><h2>Enterprise AI</h2>
+        <a href="/services/ai-mlops/">Production AI Assurance</a><a href="/services/ai-automation/">AI Systems &amp; Agents</a><a href="/services/cloud-finops/">AI FinOps &amp; Economics</a><a href="/services/cloud-security/">AI Security &amp; Sovereignty</a><a href="/services/devops-observability/">Managed AI Operations</a>
+      </section>
+      <section class="aics-footer-group"><h2>Company</h2>
+        <a href="/#why-aics">Why AICloudStrategist</a><a href="/case-studies/">Evidence</a><a href="/#engagement">How we engage</a><a href="/about/">About</a><a href="/contact.html?service=enterprise-ai">Contact</a>
+      </section>
+      <section class="aics-footer-group aics-footer-practices"><h2>Specialist Practices</h2>
+        <a href="/contact.html?service=business-growth-systems">Business Growth Systems</a><a href="/ai-creative-studio/">AI Creative Studio</a><a href="/resources/">Enterprise AI resources</a><a href="/case-studies/">Proof policy</a>
+      </section>
+      <section class="aics-footer-contact"><h2>Contact</h2>
+        <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><a href="tel:+918065480898">+91 80654 80898</a><p>Serving enterprises, mid-market companies and scale-ups worldwide.</p>
+      </section>
+    </div>
+    <div class="aics-footer-bottom"><span>© AICloudStrategist</span><span class="aics-footer-legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></span><span>Enterprise-grade, not enterprise-exclusive.</span></div>
+  </div>
+</footer></body></html>

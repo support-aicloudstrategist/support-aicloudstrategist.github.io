@@ -43,12 +43,17 @@ class PremiumShellPreservationTests(unittest.TestCase):
             source = (ROOT / rel).read_text(errors="replace")
             with self.subTest(page=rel):
                 self.assertEqual(source.count('data-aics-navigation-mount'), 1)
-                self.assertEqual(source.count('data-aics-footer-mount'), 1)
-                self.assertEqual(source.count('/css/site-navigation.css'), 1)
-                self.assertEqual(source.count('/js/site-navigation.js'), 1)
-                self.assertRegex(source, r'<div data-aics-footer-mount></div>\s*</body>')
+                self.assertEqual(source.count('data-aics-global-footer'), 1)
+                self.assertEqual(source.count('data-aics-footer-mount'), 0)
+                self.assertEqual(source.count('/css/site-navigation.css?v=premium-shell-20260727'), 1)
+                self.assertEqual(source.count('/js/site-navigation.js?v=premium-shell-20260727'), 1)
+                self.assertRegex(source, r'(?s)<footer\b[^>]*data-aics-global-footer[^>]*>.*?</footer>\s*</body>')
+                self.assertIn('href="mailto:contact@aicloudstrategist.com"', source)
+                self.assertIn('href="tel:+918065480898"', source)
+                self.assertIn('href="/privacy.html"', source)
+                self.assertIn('href="/terms.html"', source)
+                self.assertIsNone(re.search(r'tel:[^"\']*\*', source))
                 self.assertIsNone(re.search(r'class=["\'][^"\']*\btopbar\b', source, re.I))
-                self.assertIsNone(re.search(r'<footer\b', source, re.I))
 
     def test_shell_source_contains_approved_information_architecture(self):
         js = (ROOT / "js/site-navigation.js").read_text()
@@ -75,8 +80,22 @@ class PremiumShellPreservationTests(unittest.TestCase):
         self.assertIn('heading: "AI Creative Studio"', js)
         self.assertIn('contact@aicloudstrategist.com', js)
         self.assertIn('+91 80654 80898', js)
+        self.assertEqual(js.count('tel:+918065480898'), 2)
+        self.assertNotRegex(js, r'tel:[^"\']*\*')
         self.assertIn('data-aics-utility-bar', js)
         self.assertIn('data-aics-global-footer', js)
+
+    def test_page_specific_outcome_disclosures_are_preserved(self):
+        expected = {
+            "growth-control-os/index.html": "We do not guarantee revenue outcomes or fabricate proof.",
+            "healthcare-growthos/index.html": "does not guarantee patient bookings or medical outcomes.",
+            "website-digital-presence/index.html": "does not guarantee traffic or sales.",
+        }
+        for rel, text in expected.items():
+            source = (ROOT / rel).read_text(errors="replace")
+            with self.subTest(page=rel):
+                self.assertEqual(source.count('data-aics-page-disclosure'), 1)
+                self.assertIn(text, source)
 
     def test_shell_styles_include_refinement_primitives(self):
         css = (ROOT / "css/site-navigation.css").read_text()

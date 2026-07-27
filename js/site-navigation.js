@@ -170,7 +170,7 @@
           <span class="aics-utility-contacts">
             <a href="mailto:contact@aicloudstrategist.com" aria-label="Email AICloudStrategist at contact@aicloudstrategist.com">${ICONS.mail}<span class="aics-utility-email">contact@aicloudstrategist.com</span><span class="aics-utility-email-short">Email</span></a>
             <span class="aics-utility-divider" aria-hidden="true"></span>
-            <a href="tel:+918****0898" aria-label="Call AICloudStrategist on +91 80654 80898">${ICONS.phone}<span>+91 80654 80898</span></a>
+            <a href="tel:+918065480898" aria-label="Call AICloudStrategist on +91 80654 80898">${ICONS.phone}<span>+91 80654 80898</span></a>
           </span>
         </div>
       </div>
@@ -245,7 +245,7 @@
           <section class="aics-footer-contact">
             <h2>Contact</h2>
             <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>
-            <a href="tel:+918****0898">+91 80654 80898</a>
+            <a href="tel:+918065480898">+91 80654 80898</a>
             <p>Serving enterprises, mid-market companies and scale-ups worldwide.</p>
           </section>
         </div>

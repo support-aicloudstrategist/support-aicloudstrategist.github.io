@@ -14,8 +14,8 @@ class CloudTrustFinOpsDesignTests(unittest.TestCase):
     def test_uses_the_shared_site_shell_assets(self):
         self.assertIn('href="/css/styles.css?v=clean-navbar-20260604"', self.html)
         self.assertIn('src="/js/main.js?v=clean-navbar-20260604"', self.html)
-        self.assertIn('href="/css/site-navigation.css"', self.html)
-        self.assertIn('src="/js/site-navigation.js"', self.html)
+        self.assertIn('href="/css/site-navigation.css?v=premium-shell-20260727"', self.html)
+        self.assertIn('src="/js/site-navigation.js?v=premium-shell-20260727"', self.html)
         self.assertIn('data-aics-navigation-mount', self.html)
         self.assertNotIn('class="topbar"', self.html)
         self.assertRegex(self.html, r'<body class="[^"]*reform-site[^"]*cloud-finops-page[^"]*">')
@@ -28,9 +28,10 @@ class CloudTrustFinOpsDesignTests(unittest.TestCase):
         self.assertNotRegex(style, r"(?:^|})\s*\.btn\s*\{")
 
     def test_uses_consistent_premium_footer(self):
-        self.assertEqual(self.html.count('data-aics-footer-mount'), 1)
-        self.assertNotRegex(self.html, r'<footer\b')
-        self.assertRegex(self.html, r'<div data-aics-footer-mount></div>\s*</body>')
+        self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+        self.assertNotIn('data-aics-footer-mount', self.html)
+        self.assertRegex(self.html, r'(?s)<footer\b[^>]*data-aics-global-footer[^>]*>.*?</footer>\s*</body>')
+        self.assertIn('href="tel:+918065480898"', self.html)
 
     def test_page_sections_override_shared_shell_vertical_padding(self):
         style = re.search(r"<style>(.*?)</style>", self.html, re.S).group(1)

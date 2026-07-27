@@ -99,7 +99,7 @@ body.trust-compliance-page .d1{animation-delay:.05s}body.trust-compliance-page .
 <!-- AICS GEO metadata end -->
 <script defer src="/js/aics-analytics-shim.js"></script>
 <script defer src="/js/aics-conversion-tracking.js"></script>
-<link rel="stylesheet" href="/css/site-navigation.css"><script defer src="/js/site-navigation.js"></script></head>
+<link rel="stylesheet" href="/css/site-navigation.css?v=premium-shell-20260727"><script defer src="/js/site-navigation.js?v=premium-shell-20260727"></script></head>
 <body class="reform-site home-dark-theme trust-compliance-page">
 <div data-aics-navigation-mount></div>
 
@@ -142,5 +142,28 @@ body.trust-compliance-page .d1{animation-delay:.05s}body.trust-compliance-page .
  if(!reduce&&!touch){document.querySelectorAll('#featureGrid .tc-card').forEach(function(card){card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;card.style.setProperty('--rx',((0.5-py)*10).toFixed(2)+'deg');card.style.setProperty('--ry',((px-0.5)*10).toFixed(2)+'deg');card.style.setProperty('--sc','1.03');card.style.setProperty('--gx',(px*100).toFixed(1)+'%');card.style.setProperty('--gy',(py*100).toFixed(1)+'%');card.classList.add('tilt');});card.addEventListener('mouseleave',function(){card.style.setProperty('--rx','0deg');card.style.setProperty('--ry','0deg');card.style.setProperty('--sc','1');card.classList.remove('tilt');});});}
 })();
 </script>
-<div data-aics-footer-mount></div></body>
+<footer class="aics-global-footer" data-aics-global-footer>
+  <div class="aics-footer-inner">
+    <div class="aics-footer-grid">
+      <section class="aics-footer-brand-block">
+        <a class="aics-footer-brand" href="/" aria-label="AICloudStrategist home"><span class="aics-footer-mark" aria-hidden="true">AI</span><span>AICloudStrategist</span></a>
+        <p>Enterprise AI systems, controls, economics and managed operations for business-critical initiatives.</p>
+        <a class="aics-footer-primary-link" href="/contact.html?service=enterprise-ai">Discuss your AI initiative<span aria-hidden="true">→</span></a>
+      </section>
+      <section class="aics-footer-group"><h2>Enterprise AI</h2>
+        <a href="/services/ai-mlops/">Production AI Assurance</a><a href="/services/ai-automation/">AI Systems &amp; Agents</a><a href="/services/cloud-finops/">AI FinOps &amp; Economics</a><a href="/services/cloud-security/">AI Security &amp; Sovereignty</a><a href="/services/devops-observability/">Managed AI Operations</a>
+      </section>
+      <section class="aics-footer-group"><h2>Company</h2>
+        <a href="/#why-aics">Why AICloudStrategist</a><a href="/case-studies/">Evidence</a><a href="/#engagement">How we engage</a><a href="/about/">About</a><a href="/contact.html?service=enterprise-ai">Contact</a>
+      </section>
+      <section class="aics-footer-group aics-footer-practices"><h2>Specialist Practices</h2>
+        <a href="/contact.html?service=business-growth-systems">Business Growth Systems</a><a href="/ai-creative-studio/">AI Creative Studio</a><a href="/resources/">Enterprise AI resources</a><a href="/case-studies/">Proof policy</a>
+      </section>
+      <section class="aics-footer-contact"><h2>Contact</h2>
+        <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><a href="tel:+918065480898">+91 80654 80898</a><p>Serving enterprises, mid-market companies and scale-ups worldwide.</p>
+      </section>
+    </div>
+    <div class="aics-footer-bottom"><span>© AICloudStrategist</span><span class="aics-footer-legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></span><span>Enterprise-grade, not enterprise-exclusive.</span></div>
+  </div>
+</footer></body>
 </html>
