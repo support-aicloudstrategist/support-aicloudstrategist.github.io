@@ -229,7 +229,7 @@ class ProductionAiAssurancePageTests(unittest.TestCase):
 
     def test_assets_and_accessibility_contracts(self):
         self.assertIn('<body class="paa-page">', self.source)
-        self.assertIn('<link rel="stylesheet" href="/css/production-ai-assurance.css?v=20260727-1">', self.source)
+        self.assertIn('<link rel="stylesheet" href="/css/production-ai-assurance.css?v=20260727-2">', self.source)
         self.assertIn('<script src="/js/production-ai-assurance.js?v=20260727-1" defer></script>', self.source)
         self.assertTrue(STYLES.exists(), "Dedicated page stylesheet is missing")
         self.assertTrue(self.script, "Route-level accessibility script is missing")
@@ -264,7 +264,20 @@ class ProductionAiAssurancePageTests(unittest.TestCase):
         self.assertIn("@keyframes paaDataFlow", self.styles)
         self.assertIn("@keyframes paaReveal", self.styles)
         self.assertIn(".paa-page .paa-evidence-map", self.styles)
+        self.assertIn("grid-template-columns: minmax(270px, .57fr) minmax(0, 1.43fr);", self.styles)
         self.assertNotRegex(self.styles, r"\.paa-page \.paa-diagnostic-result\s*\{[^}]*display:\s*none")
+        compact_pipeline_css = self.styles.split("@media (max-width: 1023px)", 1)[1].split("@media (max-width: 900px)", 1)[0]
+        self.assertRegex(
+            compact_pipeline_css,
+            r"\.paa-page \.paa-workflow-step,\s*\.paa-page \.paa-workflow-step:last-child\s*\{[^}]*border:\s*0;[^}]*background:\s*transparent;",
+        )
+        self.assertRegex(
+            compact_pipeline_css,
+            r"\.paa-page \.paa-workflow-track\s*\{[^}]*display:\s*none;",
+        )
+        compact_css = self.styles.split("@media (max-width: 420px)", 1)[1].split("@media (max-width: 380px)", 1)[0]
+        self.assertIn(".paa-page .paa-why-statement h2", compact_css)
+        self.assertIn("font-size: clamp(1.68rem, calc(10vw - .32rem), 2.31rem)", compact_css)
 
         for selector_group in qualified_selectors(self.styles):
             for selector in selector_group.split(","):

@@ -260,7 +260,7 @@
         </div>
 
         <div class="form-wrap reveal d1">
-          <form id="contactForm" class="form lead-form premium-form" action="mailto:contact@aicloudstrategist.com" method="POST" novalidate>
+          <form id="contactForm" class="form lead-form premium-form" action="/api/contact" method="POST" novalidate>
             <div class="formhead"><span class="d"></span> Share your initiative</div>
             <p class="formsub">A short brief helps us route the conversation to the right Enterprise AI service or specialist practice.</p>
             <label for="contact_name">Name</label>
@@ -294,8 +294,8 @@
             <label for="contact_message">Initiative brief</label>
             <textarea id="contact_message" name="message" placeholder="What outcome matters, what exists today, what decision is blocked, and what timeline are you working to?"></textarea>
             <button id="contactSubmitButton" class="btn btn-primary" type="submit">Send initiative enquiry <span class="arrow">→</span></button>
-            <div id="contactSuccess" class="form-status" role="status">Your email app should open with the enquiry. We reply within one business day.</div>
-            <div id="contactError" class="form-status error" role="alert">We could not open your email app. Please retry or email contact@aicloudstrategist.com.</div>
+            <div id="contactSuccess" class="form-status" role="status">Enquiry received. We reply within one business day.</div>
+            <div id="contactError" class="form-status error" role="alert">We could not submit your enquiry. Please retry or use a contact channel below.</div>
           </form>
         </div>
       </div>
@@ -368,21 +368,56 @@
     event.preventDefault();
     contactSuccess.style.display = 'none';
     contactError.style.display = 'none';
-    contactError.textContent = 'We could not open your email app. Please retry or email contact@aicloudstrategist.com.';
     if (!contactForm.checkValidity()) {
       contactForm.reportValidity();
       return;
     }
+
     const originalText = contactSubmitButton.innerHTML;
     contactSubmitButton.disabled = true;
-    contactSubmitButton.textContent = 'Opening email...';
+    contactSubmitButton.textContent = 'Sending securely...';
     const payload = Object.fromEntries(new FormData(contactForm).entries());
     if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Attempt', { props: { page: location.pathname, service: payload.service || '' } });
-    const body = Object.entries(payload).map(([k,v]) => `${k}: ${v || ''}`).join('\n') + '\nPage: ' + location.href;
-    window.location.href = 'mailto:contact@aicloudstrategist.com?subject=' + encodeURIComponent('AICloudStrategist initiative enquiry') + '&body=' + encodeURIComponent(body);
-    contactSuccess.innerHTML = 'Your email app should open with the enquiry. If it does not, email <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a> or WhatsApp <a href="https://wa.me/918796302608">+91 87963 02608</a>.';
-    contactSuccess.style.display = 'block';
-    setTimeout(() => { contactSubmitButton.disabled = false; contactSubmitButton.innerHTML = originalText; }, 2500);
+
+    const need = [
+      `Service: ${payload.service || 'not specified'}`,
+      `Company: ${payload.company || 'not provided'}`,
+      payload.role ? `Role: ${payload.role}` : '',
+      `Stage: ${payload.stage || 'not specified'}`
+    ].filter(Boolean).join(' | ');
+    const requestPayload = {
+      name: payload.name,
+      contact: payload.email,
+      need,
+      message: payload.message || ''
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestPayload)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || 'The enquiry could not be delivered.');
+      }
+
+      contactSuccess.textContent = `Enquiry received. We will reply within one business day. Reference: ${result.contact_id}`;
+      contactSuccess.style.display = 'block';
+      contactForm.reset();
+      if (requestedService && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
+        serviceSelect.value = requestedService;
+      }
+      if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Success', { props: { page: location.pathname, service: payload.service || '' } });
+    } catch (error) {
+      contactError.innerHTML = 'We could not submit your enquiry. Please retry, email <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>, or use WhatsApp below.';
+      contactError.style.display = 'block';
+      if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Error', { props: { page: location.pathname, service: payload.service || '', reason: error instanceof Error ? error.message : 'unknown' } });
+    } finally {
+      contactSubmitButton.disabled = false;
+      contactSubmitButton.innerHTML = originalText;
+    }
   });
 
   // reveal + timeline draw
