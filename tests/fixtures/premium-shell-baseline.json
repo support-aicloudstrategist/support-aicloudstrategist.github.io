@@ -1,5 +1,4 @@
 {
-  "baseline_commit": "4a93313df20b14c9d3a319e70ab5f43c07b60f44",
   "pages": {
     "404.html": {
       "canonical": null,
@@ -450,17 +449,17 @@
       "title": "Cloud Trust & FinOps | AICloudStrategist"
     },
     "contact.html": {
-      "canonical": "https://aicloudstrategist.com/contact/",
+      "canonical": "https://aicloudstrategist.com/contact",
       "forms": 1,
-      "forms_sha256": "cae9877c8f21e296756b72299c1a56cf4a3bd7629f08d4e5f1e85390e0a4da1d",
-      "main_sha256": "b4967cfe192d9f9c00c131f2971a6a70416d327f706669414dfc224271653a5a",
+      "forms_sha256": "7b2eae36c43160aaf666d26cc9cd553ea5609bff744613547b6b337b0ee521c0",
+      "main_sha256": "e10c5f8afbe976750cb906c3a169a23f2858268ab46d9fff12e233a5f6cf88d3",
       "title": "Discuss an AI Initiative | AICloudStrategist"
     },
     "contact/index.html": {
-      "canonical": "https://aicloudstrategist.com/contact/",
+      "canonical": "https://aicloudstrategist.com/contact",
       "forms": 1,
-      "forms_sha256": "0b79a3154d9f4d84b64e858fca97c46a847401215ddb5dddbe60f52f63ae812b",
-      "main_sha256": "fd34c9afead481993ce070837d42e0db08c251b515fa354b747a22e7d8de58f4",
+      "forms_sha256": "7b2eae36c43160aaf666d26cc9cd553ea5609bff744613547b6b337b0ee521c0",
+      "main_sha256": "e10c5f8afbe976750cb906c3a169a23f2858268ab46d9fff12e233a5f6cf88d3",
       "title": "Discuss an AI Initiative | AICloudStrategist"
     },
     "crm-automation-services/index.html": {
@@ -562,17 +561,17 @@
       "title": "Factory Website Development India | AICloudStrategist"
     },
     "free-business-review.html": {
-      "canonical": "https://aicloudstrategist.com/free-business-review",
+      "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
-      "forms_sha256": "e4e4710841b30c4f3cec87394429e6c8f4b7d5ecc6d8abd8683788bbe8a4dc26",
-      "main_sha256": "bde33859c63cfd86f568f74295a275907fadd49b141ab1a59b9f5ff26045e6a8",
+      "forms_sha256": "57800baf546c228f6fecdbc46ac019ebd5c2b7a406bc18f28d7e400e74356920",
+      "main_sha256": "574f66a58b6d26ae6bf1e146f19b83d8cf7d06f5e748abd5efe319c611825221",
       "title": "Free Trust & Growth Audit | AICloudStrategist"
     },
     "free-business-review/index.html": {
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
-      "forms_sha256": "e4e4710841b30c4f3cec87394429e6c8f4b7d5ecc6d8abd8683788bbe8a4dc26",
-      "main_sha256": "0c85e2881c1c90461416b565fecfbe8bbfbf053ac2e7fd25428694b24d80f6fe",
+      "forms_sha256": "57800baf546c228f6fecdbc46ac019ebd5c2b7a406bc18f28d7e400e74356920",
+      "main_sha256": "574f66a58b6d26ae6bf1e146f19b83d8cf7d06f5e748abd5efe319c611825221",
       "title": "Free Trust & Growth Audit | AICloudStrategist"
     },
     "growth-control-os/index.html": {
@@ -747,7 +746,7 @@
       "canonical": "https://aicloudstrategist.com/partners/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "12123d00796024479fb5a0957d721002c83567a343541a0479b74f1d082d44c6",
+      "main_sha256": "aaa299b605172acb189133c26e06152a4c3054c7468d8244aeddac52b68fcd59",
       "title": "Partner with AICloudStrategist | AICloudStrategist"
     },
     "payments.html": {
@@ -768,14 +767,14 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1dddbef7750515fdcce90a8c5fcf37e9c5b331f7847870450556fe9ff7b3753c",
+      "main_sha256": "8c172d28b37b28e5e0be4e84d622af6cebf740dfc59293631a22d0dfe70749e4",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
       "canonical": "https://aicloudstrategist.com/privacy",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "eff7df2dc32c335ffa5f3dbde1744dcb59e9454e3bd7dc8f78be76916e82b911",
+      "main_sha256": "2b5e9b3f3ef5513d7804388e5ed3758356eb1af6256c17781a5e709cca09f409",
       "title": "Privacy Policy | AICloudStrategist"
     },
     "products.html": {
@@ -1789,8 +1788,8 @@
     "webinars/dpdp-for-clinics-2026/index.html": {
       "canonical": "https://aicloudstrategist.com/webinars/dpdp-for-clinics-2026/",
       "forms": 1,
-      "forms_sha256": "65a36c9ce1f2d115184a9c2c2b8a0a2601b0b8d2b569e1815e78b272dd230252",
-      "main_sha256": "a0a98fbb3b8f4f2e0d9961868049130d60172be5f41ed34e4366d2234ed58ad1",
+      "forms_sha256": "24a030ace719d33b8345848c9538a0e0714981991e0f6dc1193f5e6f45581b07",
+      "main_sha256": "81a4faf10476ad7e77799bed210c62e955e74b22ab6c853126307f4514efa9b4",
       "title": "DPDP for Indian Clinics Webinar | AICloudStrategist"
     },
     "website-digital-presence/index.html": {

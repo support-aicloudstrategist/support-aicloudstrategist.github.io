@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Discuss an AI Initiative | AICloudStrategist</title>
 <meta name="description" content="Discuss a business-critical AI initiative with AICloudStrategist, from production assurance and AI systems to economics, security and managed operations.">
-<link rel="canonical" href="https://aicloudstrategist.com/contact/">
+<link rel="canonical" href="https://aicloudstrategist.com/contact">
 
 <!--
   Enterprise AI contact and qualification path.
@@ -207,7 +207,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","@id":"https://aicloudstrategist.com/contact#contact","url":"https://aicloudstrategist.com/contact","name":"Contact AICloudStrategist","description":"Discuss business-critical AI systems, assurance, economics, security and managed operations with AICloudStrategist.","mainEntity":{"@type":"Organization","@id":"https://aicloudstrategist.com/#organization","name":"AICloudStrategist","url":"https://aicloudstrategist.com/","email":"contact@aicloudstrategist.com","telephone":"+918****0898","contactPoint":[{"@type":"ContactPoint","telephone":"+918****0898","contactType":"customer support","areaServed":"IN","availableLanguage":["en-IN","hi-IN"]}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aicloudstrategist.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://aicloudstrategist.com/contact"}]}</script>
 <script defer src="/js/aics-analytics-shim.js"></script>
-<script defer src="/js/aics-conversion-tracking.js"></script>
+<script src="/js/aics-conversion-tracking.js"></script>
 <link rel="stylesheet" href="/css/site-navigation.css?v=premium-shell-20260727"><script defer src="/js/site-navigation.js?v=premium-shell-20260727"></script></head>
 <body>
 
@@ -263,6 +263,12 @@
           <form id="contactForm" class="form lead-form premium-form" action="/api/contact" method="POST" novalidate>
             <div class="formhead"><span class="d"></span> Share your initiative</div>
             <p class="formsub">A short brief helps us route the conversation to the right Enterprise AI service or specialist practice.</p>
+            <input name="landing_page" type="hidden" />
+            <input name="referrer" type="hidden" />
+            <input name="utm_source" type="hidden" />
+            <input name="utm_medium" type="hidden" />
+            <input name="utm_campaign" type="hidden" />
+            <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label for="company_website">Leave this field empty</label><input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off" /></div>
             <label for="contact_name">Name</label>
             <input id="contact_name" name="name" autocomplete="name" required />
             <label for="contact_email">Work email</label>
@@ -361,6 +367,17 @@
   if (requestedService && serviceSelect && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
     serviceSelect.value = requestedService;
   }
+  const attribution = window.aicsAttribution || {
+    landing_page: location.origin + location.pathname,
+    referrer: '',
+    utm_source: params.get('utm_source') || '',
+    utm_medium: params.get('utm_medium') || '',
+    utm_campaign: params.get('utm_campaign') || ''
+  };
+  for (const [field, value] of Object.entries(attribution)) {
+    const input = contactForm.elements.namedItem(field);
+    if (input) input.value = value;
+  }
   const contactSuccess = document.getElementById('contactSuccess');
   const contactError = document.getElementById('contactError');
   const contactSubmitButton = document.getElementById('contactSubmitButton');
@@ -373,7 +390,7 @@
       return;
     }
 
-    const originalText = contactSubmitButton.innerHTML;
+    const originalText = contactSubmitButton.textContent;
     contactSubmitButton.disabled = true;
     contactSubmitButton.textContent = 'Sending securely...';
     const payload = Object.fromEntries(new FormData(contactForm).entries());
@@ -388,8 +405,18 @@
     const requestPayload = {
       name: payload.name,
       contact: payload.email,
+      company: payload.company,
+      role: payload.role,
+      service: payload.service,
+      stage: payload.stage,
       need,
-      message: payload.message || ''
+      message: payload.message || '',
+      landing_page: payload.landing_page,
+      referrer: payload.referrer,
+      utm_source: payload.utm_source,
+      utm_medium: payload.utm_medium,
+      utm_campaign: payload.utm_campaign,
+      company_website: payload.company_website
     };
 
     try {
@@ -411,12 +438,12 @@
       }
       if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Success', { props: { page: location.pathname, service: payload.service || '' } });
     } catch (error) {
-      contactError.innerHTML = 'We could not submit your enquiry. Please retry, email <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>, or use WhatsApp below.';
+      contactError.textContent = 'We could not submit your enquiry. Please retry, email contact@aicloudstrategist.com, or use WhatsApp below.';
       contactError.style.display = 'block';
       if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Error', { props: { page: location.pathname, service: payload.service || '', reason: error instanceof Error ? error.message : 'unknown' } });
     } finally {
       contactSubmitButton.disabled = false;
-      contactSubmitButton.innerHTML = originalText;
+      contactSubmitButton.textContent = originalText;
     }
   });
 

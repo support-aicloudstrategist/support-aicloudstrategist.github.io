@@ -23,8 +23,12 @@ BASE_URL = "https://aicloudstrategist.com"
 PUBLIC_SKIP_PARTS = {
     ".git",
     ".workspace-snapshots",
+    ".venv",
+    ".pytest_cache",
+    "__pycache__",
     "preview",
     "node_modules",
+    "venv",
 }
 COMMERCIAL_HINTS = (
     "free-business-review",
