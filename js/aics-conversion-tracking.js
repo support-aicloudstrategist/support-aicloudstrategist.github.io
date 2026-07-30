@@ -1,5 +1,28 @@
 (function(){
   function now(){return new Date().toISOString();}
+  function currentAttribution(){
+    var params=new URLSearchParams(location.search);
+    var referrer='';
+    try{if(document.referrer){var ref=new URL(document.referrer);referrer=ref.origin+ref.pathname;}}catch(e){}
+    return {
+      landing_page:location.origin+location.pathname,
+      referrer:referrer,
+      utm_source:params.get('utm_source')||'',
+      utm_medium:params.get('utm_medium')||'',
+      utm_campaign:params.get('utm_campaign')||'',
+      captured_at:now()
+    };
+  }
+  function firstTouch(){
+    var key='aics:first-touch:v1', value=null;
+    try{value=JSON.parse(sessionStorage.getItem(key)||'null');}catch(e){}
+    if(!value||!value.landing_page){
+      value=currentAttribution();
+      try{sessionStorage.setItem(key,JSON.stringify(value));}catch(e){}
+    }
+    return value;
+  }
+  window.aicsAttribution=firstTouch();
   function safeText(el){return (el.getAttribute('aria-label') || el.innerText || el.textContent || '').trim().slice(0,120);}
   function eventNameFor(a){
     var href=(a.getAttribute('href')||'').toLowerCase();
@@ -14,7 +37,6 @@
   function send(name, props){
     props=props||{};
     props.page=location.pathname;
-    props.url=location.href;
     props.ts=now();
     if(window.aicsAnalytics&&window.aicsAnalytics.track){try{window.aicsAnalytics.track(name,{props:props});}catch(e){}} else if(window.plausible){ try{ window.plausible(name,{props:props}); }catch(e){} }
     window.dataLayer=window.dataLayer||[];

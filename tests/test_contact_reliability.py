@@ -41,7 +41,7 @@ class ContactReliabilityTests(unittest.TestCase):
     def test_server_endpoint_validates_and_returns_a_contact_reference(self):
         self.assertIn('Missing required field(s)', self.endpoint)
         self.assertIn('contact_id: contactId', self.endpoint)
-        self.assertIn('JSON.stringify({ ok: true, contact_id: contactId })', self.endpoint)
+        self.assertIn('JSON.stringify({ ok: true, contact_id: contactId, notification_sent: false, notification_mode: "manual-review" })', self.endpoint)
 
 
 if __name__ == "__main__":

@@ -22,6 +22,64 @@ const jsonHeaders = {
 
 const clean = (value: unknown) => String(value ?? "").trim();
 
+const sanitizeAttributionUrl = (value: unknown) => {
+  const raw = clean(value);
+  if (!raw) return "";
+  try {
+    const parsed = new URL(raw);
+    return `${parsed.origin}${parsed.pathname}`;
+  } catch {
+    return raw.split(/[?#]/, 1)[0];
+  }
+};
+
+async function readPayload(request: Request): Promise<Record<string, unknown>> {
+  const contentType = request.headers.get("content-type") || "";
+  if (contentType.includes("application/json")) {
+    return (await request.json()) as Record<string, unknown>;
+  }
+
+  const formData = await request.formData();
+  const payload: Record<string, unknown> = {};
+  formData.forEach((value, key) => {
+    if (typeof value === "string") payload[key] = value;
+  });
+  return payload;
+}
+
+async function sha256(value: string) {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return Array.from(new Uint8Array(digest)).map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+async function enforceRateLimit(env: LeadEnv, request: Request) {
+  if (!env.LEAD_LOG) return;
+  const clientIp = clean(request.headers.get("CF-Connecting-IP"));
+  if (!clientIp) return;
+  const minute = new Date().toISOString().slice(0, 16);
+  const key = `rate:audit:${minute}:${await sha256(clientIp)}`;
+  const count = Number(await env.LEAD_LOG.get(key)) || 0;
+  if (count >= 5) throw new Error("RATE_LIMITED");
+  await env.LEAD_LOG.put(key, String(count + 1), { expirationTtl: 120 });
+}
+
+function hasTrustedBrowserProvenance(request: Request) {
+  const origin = clean(request.headers.get("Origin"));
+  const fetchSite = clean(request.headers.get("Sec-Fetch-Site"));
+  if (!origin) return false;
+  try {
+    const host = new URL(origin).hostname.toLowerCase();
+    const trustedHost = host === "aicloudstrategist.com" || host === "www.aicloudstrategist.com" || host.endsWith(".aicloudstrategist-site.pages.dev");
+    return trustedHost && (!fetchSite || fetchSite === "same-origin" || fetchSite === "same-site");
+  } catch {
+    return false;
+  }
+}
+
+async function submissionId(prefix: string, _request: Request, submittedAt: string) {
+  return `${prefix}-${submittedAt.replace(/[:.]/g, "-")}-${crypto.randomUUID()}`;
+}
+
 async function getGraphToken(env: LeadEnv): Promise<string> {
   const tenantId = clean(env.M365_TENANT_ID);
   const clientId = clean(env.M365_CLIENT_ID);
@@ -93,7 +151,7 @@ async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBod
     throw new Error("Microsoft Graph recipient is not configured.");
   }
 
-  const subject = `Free Trust & Growth Audit request — ${lead.business_name}`;
+  const subject = `[AICS-LEAD][AUDIT-REQUEST] ${lead.business_name}`;
   return sendGraphMail(env, {
     subject,
     body: { contentType: "Text", content: textBody },
@@ -102,39 +160,16 @@ async function sendLeadEmail(env: LeadEnv, lead: Record<string, string>, textBod
   });
 }
 
-function buildProspectConfirmationBody(lead: Record<string, string>) {
-  return `Hi ${lead.full_name || "there"},
-
-Thank you for requesting your Free Trust & Growth Audit for ${lead.business_name}. I have your details and the audit is now in motion.
-
-You can expect the report within 48 working hours. We will check website clarity, enquiry capture, WhatsApp/call follow-up, trust signals, and basic privacy/consent readiness.
-
-If something urgent needs to be added before we review it, WhatsApp us at +91 87963 02608 with your business name.
-
-Warmly,
-Anushka Bhattacharya
-Director, AICloudStrategist`;
-}
-
-async function sendProspectConfirmationEmail(env: LeadEnv, lead: Record<string, string>) {
-  if (!lead.prospect_email) {
-    return { status: 0, responseText: "skipped: prospect email not provided" };
+export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
+  if (!hasTrustedBrowserProvenance(context.request)) {
+    return new Response(JSON.stringify({ ok: false, error: "Untrusted submission source." }), { status: 403, headers: jsonHeaders });
   }
 
-  return sendGraphMail(env, {
-    subject: "Your Free Trust & Growth Audit is in motion — AICloudStrategist",
-    body: { contentType: "Text", content: buildProspectConfirmationBody(lead) },
-    toRecipients: [{ emailAddress: { address: lead.prospect_email, name: lead.full_name || lead.business_name } }],
-    replyTo: [{ emailAddress: { address: clean(env.M365_RECIPIENT || env.M365_SENDER), name: "AICloudStrategist" } }],
-  });
-}
-
-export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   let payload: Record<string, unknown>;
   try {
-    payload = await context.request.json();
+    payload = await readPayload(context.request);
   } catch {
-    return new Response(JSON.stringify({ ok: false, error: "Invalid JSON payload." }), { status: 400, headers: jsonHeaders });
+    return new Response(JSON.stringify({ ok: false, error: "Invalid submission payload." }), { status: 400, headers: jsonHeaders });
   }
 
   const businessName = clean(payload.business_name);
@@ -144,6 +179,41 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   const prospectEmail = clean(payload.prospect_email || payload.email);
   const notes = clean(payload.notes || payload.specific_notes);
   const fullName = clean(payload.full_name);
+  const packageContext = clean(payload.package_context);
+  const serviceContext = clean(payload.service_context);
+  const landingPage = sanitizeAttributionUrl(payload.landing_page);
+  const referrer = sanitizeAttributionUrl(payload.referrer);
+  const utmSource = clean(payload.utm_source);
+  const utmMedium = clean(payload.utm_medium);
+  const utmCampaign = clean(payload.utm_campaign);
+  const websiteTrap = clean(payload.company_website);
+  const formLoadedAt = Number(clean(payload.form_loaded_at));
+
+  // Suspicious form submission: silently accept the honeypot without delivering mail.
+  if (websiteTrap) {
+    return new Response(JSON.stringify({ ok: true, lead_id: "accepted" }), { status: 200, headers: jsonHeaders });
+  }
+
+  if (Number.isFinite(formLoadedAt) && formLoadedAt > 0 && Date.now() - formLoadedAt < 1_500) {
+    return new Response(JSON.stringify({ ok: true, lead_id: "accepted" }), { status: 200, headers: jsonHeaders });
+  }
+
+  try {
+    await enforceRateLimit(context.env, context.request);
+  } catch {
+    return new Response(JSON.stringify({ ok: false, error: "Too many requests. Please wait and retry." }), { status: 429, headers: jsonHeaders });
+  }
+
+  const oversized = [
+    ["business_name", businessName, 160], ["website", website, 2048], ["whatsapp_number", whatsappNumber, 32],
+    ["vertical", vertical, 80], ["prospect_email", prospectEmail, 320], ["notes", notes, 4000],
+    ["full_name", fullName, 160], ["package_context", packageContext, 160], ["service_context", serviceContext, 160],
+    ["landing_page", landingPage, 2048], ["referrer", referrer, 2048], ["utm_source", utmSource, 256],
+    ["utm_medium", utmMedium, 256], ["utm_campaign", utmCampaign, 256],
+  ].find(([, value, max]) => String(value).length > Number(max));
+  if (oversized) {
+    return new Response(JSON.stringify({ ok: false, error: `${oversized[0]} is too long.` }), { status: 422, headers: jsonHeaders });
+  }
 
   const missing = [
     ["business_name", businessName],
@@ -184,7 +254,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   }
 
   const submittedAt = new Date().toISOString();
-  const leadId = `lead-${submittedAt.replace(/[:.]/g, "-")}-${crypto.randomUUID()}`;
+  const leadId = await submissionId("lead", context.request, submittedAt);
   const lead = {
     lead_id: leadId,
     submitted_at: submittedAt,
@@ -196,40 +266,40 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     prospect_email: prospectEmail,
     email: prospectEmail,
     notes,
+    package_context: packageContext,
+    service_context: serviceContext,
+    landing_page: landingPage,
+    referrer,
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_campaign: utmCampaign,
     source: "free-trust-growth-audit",
+    pipeline_stage: "new",
+    lead_status: "audit-requested",
+    owner: "AICloudStrategist Growth Operations",
   };
 
-  const textBody = `New AICloudStrategist Free Trust & Growth Audit request\n\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nNotes: ${notes || "not provided"}\n`;
+  const textBody = `New AICloudStrategist Free Trust & Growth Audit request\n\nPipeline stage: NEW\nLead status: AUDIT REQUESTED\nOwner: AICloudStrategist Growth Operations\nLead ID: ${leadId}\nSubmitted at: ${submittedAt}\nFull name: ${fullName || "not provided"}\nBusiness name: ${businessName}\nWebsite: ${website}\nWhatsApp: ${whatsappNumber}\nVertical: ${vertical}\nEmail: ${prospectEmail}\nPackage context: ${packageContext || "not set"}\nService context: ${serviceContext || "not set"}\nLanding page: ${landingPage || "not captured"}\nReferrer: ${referrer || "direct or unavailable"}\nUTM source: ${utmSource || "not set"}\nUTM medium: ${utmMedium || "not set"}\nUTM campaign: ${utmCampaign || "not set"}\nNotes: ${notes || "not provided"}\n`;
 
-  let internalGraphResult: { status: number; responseText: string };
-  let prospectGraphResult: { status: number; responseText: string };
+  if (!context.env.LEAD_LOG) {
+    return new Response(JSON.stringify({ ok: false, error: "Lead storage is temporarily unavailable. Please use WhatsApp or email." }), {
+      status: 503,
+      headers: jsonHeaders,
+    });
+  }
+
+  const initialRecord = { ...lead, notification_status: "manual_review_pending" };
   try {
-    internalGraphResult = await sendLeadEmail(context.env, lead, textBody);
-    prospectGraphResult = await sendProspectConfirmationEmail(context.env, lead);
+    await context.env.LEAD_LOG.put(leadId, JSON.stringify(initialRecord), { metadata: { submitted_at: submittedAt, business_name: businessName } });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Email delivery failed.";
-    return new Response(JSON.stringify({ ok: false, error: "Email delivery failed. Please retry or WhatsApp us directly.", details: message.slice(0, 300) }), {
+    const message = error instanceof Error ? error.message : "Lead storage failed.";
+    return new Response(JSON.stringify({ ok: false, error: "Lead storage failed. Please retry or use WhatsApp.", details: message.slice(0, 300) }), {
       status: 502,
       headers: jsonHeaders,
     });
   }
 
-  const logRecord = {
-    ...lead,
-    graph_status: internalGraphResult.status,
-    graph_response: internalGraphResult.responseText.slice(0, 500),
-    prospect_confirmation_status: prospectGraphResult.status,
-    prospect_confirmation_response: prospectGraphResult.responseText.slice(0, 500),
-  };
-  try {
-    if (context.env.LEAD_LOG) {
-      await context.env.LEAD_LOG.put(leadId, JSON.stringify(logRecord), { metadata: { submitted_at: submittedAt, business_name: businessName } });
-    }
-  } catch {
-    // Email delivery is the primary pipeline. KV logging failure should not create a false failure for the prospect.
-  }
-
-  return new Response(JSON.stringify({ ok: true, lead_id: leadId, confirmation_sent: prospectGraphResult.status > 0 }), { status: 200, headers: jsonHeaders });
+  return new Response(JSON.stringify({ ok: true, lead_id: leadId, notification_sent: false, notification_mode: "manual-review" }), { status: 200, headers: jsonHeaders });
 };
 
 export const onRequestOptions: PagesFunction = async () =>
@@ -241,3 +311,12 @@ export const onRequestOptions: PagesFunction = async () =>
       "Access-Control-Allow-Headers": "Content-Type",
     },
   });
+
+export const onRequestGet: PagesFunction<LeadEnv> = async (context) => {
+  const storageConfigured = Boolean(context.env.LEAD_LOG);
+  const ok = storageConfigured;
+  return new Response(JSON.stringify({ ok, storage_configured: storageConfigured, notification_mode: "manual-review" }), {
+    status: ok ? 200 : 503,
+    headers: jsonHeaders,
+  });
+};
