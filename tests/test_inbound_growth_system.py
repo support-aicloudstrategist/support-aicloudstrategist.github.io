@@ -78,10 +78,31 @@ def test_contact_form_has_a_non_intrusive_spam_trap_and_restricted_cors():
 def test_cloudflare_redirects_and_internal_artifact_denials_are_valid():
     assert "301!" not in REDIRECTS
     assert "404!" not in REDIRECTS
-    for path in ("/CLAUDE.md", "/contact-channels.json", "/internal.html", "/preview/"):
+    for path in (
+        "/CLAUDE.md",
+        "/contact-channels.json",
+        "/client-desk",
+        "/client-desk.html",
+        "/phase-",
+        "/internal",
+        "/internal.html",
+        "/preview/",
+        "/tests/",
+        "/scripts/",
+        "/seo/",
+        "/tools/brand_trust_monitor.py",
+        "/tools/layman_problem_search_score.py",
+        "/docs/",
+        "/.github/",
+        "/_redirects",
+    ):
         assert f'"{path}"' in MIDDLEWARE
     assert "status: 404" in MIDDLEWARE
     assert "X-Robots-Tag" in MIDDLEWARE
+    assert "decodeURIComponent(decoded)" in MIDDLEWARE
+    assert 'replace(/\\\\/g, "/")' in MIDDLEWARE
+    assert 'replace(/\\/{2,}/g, "/")' in MIDDLEWARE
+    assert 'pathname === prefix.slice(0, -1)' in MIDDLEWARE
 
 
 def test_webinar_registration_is_durable_manual_review_not_public_email_relay():
