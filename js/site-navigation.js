@@ -176,7 +176,7 @@
       </aside>
       <nav class="aics-nav-shell" aria-label="Primary navigation">
         <div class="aics-nav-bar">
-          <a class="aics-nav-brand" href="/" aria-label="AICloudStrategist home">
+          <a class="aics-nav-brand" href="/" aria-label="AI AICloudStrategist home">
             <span class="aics-nav-mark" aria-hidden="true">AI</span>
             <span class="aics-nav-name">AICloudStrategist</span>
           </a>
@@ -218,7 +218,7 @@
       <div class="aics-footer-inner">
         <div class="aics-footer-grid">
           <section class="aics-footer-brand-block">
-            <a class="aics-footer-brand" href="/" aria-label="AICloudStrategist home"><span class="aics-footer-mark" aria-hidden="true">AI</span><span>AICloudStrategist</span></a>
+            <a class="aics-footer-brand" href="/" aria-label="AIAICloudStrategist home"><span class="aics-footer-mark" aria-hidden="true">AI</span><span>AICloudStrategist</span></a>
             <p>Enterprise AI systems, controls, economics and managed operations for business-critical initiatives.</p>
             <a class="aics-footer-primary-link" href="${CTA.href}">${CTA.label}<span aria-hidden="true">→</span></a>
           </section>

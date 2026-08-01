@@ -12,6 +12,7 @@ PAGE = ROOT / "services" / "ai-automation" / "index.html"
 STYLES = ROOT / "css" / "ai-systems-agents.css"
 SCRIPT = ROOT / "js" / "ai-systems-agents.js"
 TRACKER = ROOT / "js" / "aics-conversion-tracking.js"
+NAVIGATION = ROOT / "js" / "site-navigation.js"
 CONTACT = ROOT / "contact.html"
 
 
@@ -66,6 +67,7 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         cls.styles = STYLES.read_text(encoding="utf-8") if STYLES.exists() else ""
         cls.script = SCRIPT.read_text(encoding="utf-8") if SCRIPT.exists() else ""
         cls.tracker = TRACKER.read_text(encoding="utf-8")
+        cls.navigation = NAVIGATION.read_text(encoding="utf-8")
         cls.contact = CONTACT.read_text(encoding="utf-8")
 
     def test_metadata_preserves_route_and_search_intent(self):
@@ -112,6 +114,7 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
             "delivery",
             "evidence",
             "engagement",
+            "connected",
             "final-cta",
         ]
         positions = []
@@ -124,7 +127,7 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         if main is None:
             self.fail("Missing main landmark")
         self.assertEqual(len(re.findall(r"<main\b[^>]*>.*?</main>", self.source, re.I | re.S)), 1)
-        self.assertEqual(len(re.findall(r"<section\b", main.group(1))), 9)
+        self.assertEqual(len(re.findall(r"<section\b", main.group(1))), 10)
 
     def test_problem_and_diagnosis_prioritize_control_over_tool_sales(self):
         problem = text_content(extract_section(self.source, "problem")).lower()
@@ -218,6 +221,8 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertNotIn("small business plan", copy)
         self.assertNotIn("enterprise plan", copy)
         self.assertEqual(len(re.findall(r"<details\b", block, re.I)), 4)
+
+        connected = extract_section(self.source, "connected")
         connected_routes = {
             "/services/ai-mlops/": ROOT / "services" / "ai-mlops" / "index.html",
             "/services/cloud-security/": ROOT / "services" / "cloud-security" / "index.html",
@@ -225,7 +230,7 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
             "/services/devops-observability/": ROOT / "services" / "devops-observability" / "index.html",
         }
         for href, target in connected_routes.items():
-            self.assertIn(f'href="{href}"', block)
+            self.assertIn(f'href="{href}"', connected)
             self.assertTrue(target.exists(), f"Connected capability has no local page: {href}")
 
     def test_visible_faq_and_schema_are_exactly_aligned(self):
@@ -281,6 +286,11 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertNotIn("overflow-x:hidden", self.styles)
         self.assertRegex(self.source, r'<noscript>\s*<nav\b[^>]*class="asa-nojs-navigation"')
         self.assertIn('aria-label="Primary navigation fallback"', self.source)
+        self.assertNotIn('aria-label="AICloudStrategist home"', self.source)
+        self.assertNotIn('aria-label="AICloudStrategist home"', self.navigation)
+        self.assertIn('aria-label="AI AICloudStrategist home"', self.navigation)
+        self.assertIn('aria-label="AIAICloudStrategist home"', self.source)
+        self.assertIn('aria-label="AIAICloudStrategist home"', self.navigation)
         for group in css_selectors(self.styles):
             for selector in group.split(","):
                 selector = selector.strip()
@@ -292,6 +302,8 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
     def test_landmarks_breadcrumb_headings_and_static_shell_are_preserved(self):
         self.assertEqual(self.source.count("data-aics-navigation-mount"), 1)
         self.assertEqual(self.source.count("data-aics-global-footer"), 1)
+        self.assertIn('<a class="asa-skip-link" href="#main-content">Skip to content</a>', self.source)
+        self.assertIn('<main id="main-content">', self.source)
         self.assertIn('<nav class="asa-shell asa-breadcrumb" aria-label="Breadcrumb">', self.source)
         self.assertIn('aria-current="page">Enterprise AI Systems &amp; Agents</li>', self.source)
         for title_id in [
@@ -303,6 +315,7 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
             "delivery-title",
             "evidence-title",
             "engagement-title",
+            "connected-title",
             "final-title",
         ]:
             self.assertIn(f'id="{title_id}"', self.source)

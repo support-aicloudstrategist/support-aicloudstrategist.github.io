@@ -102,6 +102,25 @@ body.asa-page {
   outline-offset: 4px;
 }
 
+.asa-page .asa-skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  transform: translateY(-180%);
+  border: 1px solid var(--asa-cyan);
+  border-radius: 8px;
+  background: #031019;
+  color: var(--asa-ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.asa-page .asa-skip-link:focus {
+  transform: translateY(0);
+}
+
 .asa-page .asa-shell {
   width: min(calc(100% - 48px), var(--asa-max));
   margin-inline: auto;
@@ -1595,32 +1614,53 @@ body.asa-page {
   line-height: 1.7;
 }
 
+.asa-page .asa-connected-section {
+  padding-block: clamp(78px, 8vw, 112px);
+  border-top: 1px solid var(--asa-line);
+  background: linear-gradient(180deg, rgba(74, 168, 255, .035), transparent 72%);
+}
+
+.asa-page .asa-connected-intro {
+  max-width: 860px;
+  margin-bottom: 42px;
+}
+
 .asa-page .asa-connected {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 13px 24px;
-  padding: 23px 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-block: 1px solid var(--asa-line);
 }
 
-.asa-page .asa-connected > span {
-  margin-right: auto;
-  color: var(--asa-dim);
-  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: .63rem;
-  letter-spacing: .07em;
-  text-transform: uppercase;
+.asa-page .asa-connected a {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+  border-right: 1px solid var(--asa-line);
+  color: var(--asa-muted);
+  font-size: .82rem;
+  font-weight: 650;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease;
 }
 
-.asa-page .asa-connected a {
-  color: var(--asa-muted);
-  font-size: .78rem;
-  text-decoration: none;
+.asa-page .asa-connected a:last-child {
+  border-right: 0;
+}
+
+.asa-page .asa-connected a span {
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .62rem;
+  letter-spacing: .08em;
 }
 
 .asa-page .asa-connected a:hover {
-  color: var(--asa-cyan);
+  background: rgba(64, 224, 208, .045);
+  color: var(--asa-ink);
 }
 
 /* Final CTA */
@@ -1799,6 +1839,18 @@ body.asa-page {
     gap: 30px;
   }
 
+  .asa-page .asa-connected {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .asa-page .asa-connected a:nth-child(2) {
+    border-right: 0;
+  }
+
+  .asa-page .asa-connected a:nth-child(-n+2) {
+    border-bottom: 1px solid var(--asa-line);
+  }
+
   .asa-page .asa-final-field {
     grid-template-columns: 1fr;
     align-items: start;
@@ -1825,6 +1877,20 @@ body.asa-page {
 
   .asa-page .asa-nojs-inner > div {
     gap: 0 18px;
+  }
+
+  .asa-page .asa-connected {
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-connected a {
+    min-height: 92px;
+    border-right: 0;
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-connected a:last-child {
+    border-bottom: 0;
   }
 
   .asa-page .asa-section {
