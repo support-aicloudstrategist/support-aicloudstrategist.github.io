@@ -107,6 +107,42 @@ body.asa-page {
   margin-inline: auto;
 }
 
+.asa-page .asa-nojs-navigation {
+  border-bottom: 1px solid var(--asa-line);
+  background: #031019;
+}
+
+.asa-page .asa-nojs-inner {
+  display: flex;
+  width: min(calc(100% - 48px), var(--asa-max));
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-inline: auto;
+}
+
+.asa-page .asa-nojs-brand {
+  color: var(--asa-ink);
+  font-weight: 720;
+  text-decoration: none;
+}
+
+.asa-page .asa-nojs-inner > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.asa-page .asa-nojs-inner > div a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--asa-muted);
+  font-weight: 620;
+  text-decoration: none;
+}
+
 .asa-page .asa-section {
   position: relative;
   padding: clamp(96px, 10vw, 152px) 0;
@@ -1776,6 +1812,19 @@ body.asa-page {
 @media (max-width: 760px) {
   .asa-page .asa-shell {
     width: min(calc(100% - 36px), var(--asa-max));
+  }
+
+  .asa-page .asa-nojs-inner {
+    width: min(calc(100% - 36px), var(--asa-max));
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 0 10px;
+  }
+
+  .asa-page .asa-nojs-inner > div {
+    gap: 0 18px;
   }
 
   .asa-page .asa-section {

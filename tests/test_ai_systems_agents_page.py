@@ -83,6 +83,9 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         )
         self.assertIn('name="robots" content="index, follow, max-image-preview:large"', self.source)
         self.assertEqual(self.source.count('<meta name="description"'), 1)
+        social_image = "https://aicloudstrategist.com/assets/brand/aics-enterprise-ai-og.png"
+        self.assertEqual(self.source.count(f'content="{social_image}"'), 2)
+        self.assertTrue((ROOT / "assets" / "brand" / "aics-enterprise-ai-og.png").exists())
 
     def test_one_executive_h1_and_consistent_hero_actions(self):
         h1s = re.findall(r"<h1\b[^>]*>(.*?)</h1>", self.source, re.I | re.S)
@@ -276,6 +279,8 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertIn("@media (prefers-reduced-motion: reduce)", self.styles)
         self.assertNotIn("overflow-x: hidden", self.styles)
         self.assertNotIn("overflow-x:hidden", self.styles)
+        self.assertRegex(self.source, r'<noscript>\s*<nav\b[^>]*class="asa-nojs-navigation"')
+        self.assertIn('aria-label="Primary navigation fallback"', self.source)
         for group in css_selectors(self.styles):
             for selector in group.split(","):
                 selector = selector.strip()
