@@ -259,6 +259,8 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertIn('value="ai-systems-agents"', self.contact)
         self.assertIn("Enterprise AI Systems &amp; Agents", self.contact)
         self.assertIn("requestedService", self.contact)
+        self.assertIn('/js/site-navigation.js?v=20260801-ai-systems', self.source)
+        self.assertIn('/js/aics-conversion-tracking.js?v=20260801-ai-systems', self.source)
 
     def test_original_visuals_have_accessible_semantic_equivalents(self):
         figures = re.findall(r'<figure\b[^>]*data-asa-diagram="([^"]+)"[^>]*>(.*?)</figure>', self.source, re.I | re.S)
