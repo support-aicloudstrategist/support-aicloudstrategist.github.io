@@ -46,7 +46,13 @@ class PremiumShellPreservationTests(unittest.TestCase):
                 self.assertEqual(source.count('data-aics-global-footer'), 1)
                 self.assertEqual(source.count('data-aics-footer-mount'), 0)
                 self.assertEqual(source.count('/css/site-navigation.css?v=premium-shell-20260727'), 1)
-                self.assertEqual(source.count('/js/site-navigation.js?v=premium-shell-20260727'), 1)
+                expected_navigation_script = (
+                    '/js/site-navigation.js?v=20260801-ai-systems'
+                    if rel == 'services/ai-automation/index.html'
+                    else '/js/site-navigation.js?v=premium-shell-20260727'
+                )
+                self.assertEqual(source.count(expected_navigation_script), 1)
+                self.assertEqual(source.count('/js/site-navigation.js?v='), 1)
                 self.assertRegex(source, r'(?s)<footer\b[^>]*data-aics-global-footer[^>]*>.*?</footer>\s*</body>')
                 self.assertIn('href="mailto:contact@aicloudstrategist.com"', source)
                 self.assertIn('href="tel:+918065480898"', source)
