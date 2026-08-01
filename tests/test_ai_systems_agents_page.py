@@ -215,13 +215,15 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertNotIn("small business plan", copy)
         self.assertNotIn("enterprise plan", copy)
         self.assertEqual(len(re.findall(r"<details\b", block, re.I)), 4)
-        for href in [
-            "/services/ai-mlops/",
-            "/services/cloud-security/",
-            "/services/cloud-finops/",
-            "/services/devops-observability/",
-        ]:
+        connected_routes = {
+            "/services/ai-mlops/": ROOT / "services" / "ai-mlops" / "index.html",
+            "/services/cloud-security/": ROOT / "services" / "cloud-security" / "index.html",
+            "/services/cloud-finops/": ROOT / "services" / "cloud-finops" / "index.html",
+            "/services/devops-observability/": ROOT / "services" / "devops-observability" / "index.html",
+        }
+        for href, target in connected_routes.items():
             self.assertIn(f'href="{href}"', block)
+            self.assertTrue(target.exists(), f"Connected capability has no local page: {href}")
 
     def test_visible_faq_and_schema_are_exactly_aligned(self):
         engagement = extract_section(self.source, "engagement")

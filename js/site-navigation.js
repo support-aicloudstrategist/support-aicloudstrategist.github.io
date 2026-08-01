@@ -164,7 +164,7 @@
     root.className = "aics-global-nav";
     root.setAttribute(ROOT_ATTRIBUTE, "");
     root.innerHTML = `
-      <div class="aics-utility-bar" data-aics-utility-bar>
+      <aside class="aics-utility-bar" data-aics-utility-bar aria-label="Contact and delivery information">
         <div class="aics-utility-inner">
           <span class="aics-utility-trust"><span class="aics-utility-status" aria-hidden="true"></span><span class="aics-utility-trust-copy">Enterprise AI systems, controls and managed operations</span><span class="aics-utility-mobile-copy">Enterprise AI · Global delivery</span></span>
           <span class="aics-utility-contacts">
@@ -173,7 +173,7 @@
             <a href="tel:+918065480898" aria-label="Call AICloudStrategist on +91 80654 80898">${ICONS.phone}<span>+91 80654 80898</span></a>
           </span>
         </div>
-      </div>
+      </aside>
       <nav class="aics-nav-shell" aria-label="Primary navigation">
         <div class="aics-nav-bar">
           <a class="aics-nav-brand" href="/" aria-label="AICloudStrategist home">
