@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "services" / "ai-automation" / "index.html"
 STYLES = ROOT / "css" / "ai-systems-agents.css"
 SCRIPT = ROOT / "js" / "ai-systems-agents.js"
+TRACKER = ROOT / "js" / "aics-conversion-tracking.js"
 CONTACT = ROOT / "contact.html"
 
 
@@ -64,6 +65,7 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         cls.text = text_content(cls.source)
         cls.styles = STYLES.read_text(encoding="utf-8") if STYLES.exists() else ""
         cls.script = SCRIPT.read_text(encoding="utf-8") if SCRIPT.exists() else ""
+        cls.tracker = TRACKER.read_text(encoding="utf-8")
         cls.contact = CONTACT.read_text(encoding="utf-8")
 
     def test_metadata_preserves_route_and_search_intent(self):
@@ -242,6 +244,8 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertNotIn("/free-business-review/", self.source)
         self.assertNotIn("Map your AI automation opportunities", self.source)
         self.assertEqual(self.source.count('/js/aics-conversion-tracking.js'), 1)
+        self.assertIn("a.hasAttribute('data-aics-cta')", self.tracker)
+        self.assertIn("cta:a.getAttribute('data-aics-cta')||''", self.tracker)
         self.assertIn('value="ai-systems-agents"', self.contact)
         self.assertIn("Enterprise AI Systems &amp; Agents", self.contact)
         self.assertIn("requestedService", self.contact)
