@@ -1,0 +1,2287 @@
+/* Enterprise AI Systems & Agents — Controlled Intelligence */
+:root {
+  --asa-canvas: #041018;
+  --asa-canvas-deep: #020a10;
+  --asa-surface: #071923;
+  --asa-surface-strong: #0a202b;
+  --asa-surface-soft: rgba(255, 255, 255, .035);
+  --asa-ink: #f1f8fc;
+  --asa-muted: #a9bdc8;
+  --asa-dim: #76909e;
+  --asa-line: rgba(204, 235, 249, .14);
+  --asa-line-strong: rgba(204, 235, 249, .24);
+  --asa-blue: #4aa8ff;
+  --asa-cyan: #40e0d0;
+  --asa-warm: #f1c98c;
+  --asa-block: #ff8c92;
+  --asa-max: 1180px;
+  --asa-reading: 68ch;
+  --asa-radius: 20px;
+  --asa-shadow: 0 28px 80px -52px rgba(0, 0, 0, .9);
+}
+
+body.asa-page {
+  margin: 0;
+  color: var(--asa-ink);
+  background: var(--asa-canvas);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.asa-page *,
+.asa-page *::before,
+.asa-page *::after {
+  box-sizing: border-box;
+}
+
+.asa-page a {
+  color: inherit;
+}
+
+.asa-page .asa-hero h1,
+.asa-page main h2,
+.asa-page main h3,
+.asa-page .asa-hero p,
+.asa-page main p,
+.asa-page main ol,
+.asa-page main ul,
+.asa-page main dl,
+.asa-page main dd,
+.asa-page .asa-hero figure,
+.asa-page main figure {
+  margin-top: 0;
+}
+
+.asa-page .asa-hero h1,
+.asa-page main h2,
+.asa-page main h3 {
+  color: var(--asa-ink);
+  font-weight: 640;
+  text-wrap: balance;
+}
+
+.asa-page .asa-hero h1 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(2.7rem, 5.15vw, 5.2rem);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.asa-page main h2 {
+  max-width: 820px;
+  margin-bottom: 22px;
+  font-size: clamp(2.15rem, 4vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.asa-page main h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  letter-spacing: -.018em;
+}
+
+.asa-page .asa-hero p,
+.asa-page main p {
+  color: var(--asa-muted);
+}
+
+.asa-page .asa-hero strong,
+.asa-page main strong {
+  color: var(--asa-ink);
+  font-weight: 650;
+}
+
+.asa-page :focus-visible {
+  outline: 3px solid var(--asa-warm);
+  outline-offset: 4px;
+}
+
+.asa-page .asa-skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  transform: translateY(-180%);
+  border: 1px solid var(--asa-cyan);
+  border-radius: 8px;
+  background: #031019;
+  color: var(--asa-ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.asa-page .asa-skip-link:focus {
+  transform: translateY(0);
+}
+
+.asa-page .asa-shell {
+  width: min(calc(100% - 48px), var(--asa-max));
+  margin-inline: auto;
+}
+
+.asa-page .asa-nojs-navigation {
+  border-bottom: 1px solid var(--asa-line);
+  background: #031019;
+}
+
+.asa-page .asa-nojs-inner {
+  display: flex;
+  width: min(calc(100% - 48px), var(--asa-max));
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-inline: auto;
+}
+
+.asa-page .asa-nojs-brand {
+  color: var(--asa-ink);
+  font-weight: 720;
+  text-decoration: none;
+}
+
+.asa-page .asa-nojs-inner > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.asa-page .asa-nojs-inner > div a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--asa-muted);
+  font-weight: 620;
+  text-decoration: none;
+}
+
+.asa-page .asa-section {
+  position: relative;
+  padding: clamp(96px, 10vw, 152px) 0;
+}
+
+.asa-page .asa-kicker {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 20px;
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .75rem;
+  font-weight: 650;
+  letter-spacing: .13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-kicker > span {
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+}
+
+.asa-page .asa-section-lead {
+  max-width: var(--asa-reading);
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.asa-page .asa-intro {
+  margin-bottom: clamp(48px, 6vw, 78px);
+}
+
+.asa-page .asa-intro-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(300px, .64fr);
+  gap: clamp(48px, 8vw, 112px);
+  align-items: end;
+}
+
+.asa-page .asa-intro-split > p {
+  max-width: 470px;
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+}
+
+.asa-page .asa-intro-centred {
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.asa-page .asa-intro-centred .asa-kicker {
+  justify-content: center;
+}
+
+.asa-page .asa-intro-centred p:last-child {
+  max-width: 670px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.asa-page .asa-button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 21px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: .94rem;
+  font-weight: 680;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.asa-page .asa-button:hover {
+  transform: translateY(-2px);
+}
+
+.asa-page .asa-button-primary {
+  color: #031017;
+  background: var(--asa-cyan);
+  border-color: var(--asa-cyan);
+  box-shadow: 0 12px 30px -20px rgba(64, 224, 208, .85);
+}
+
+.asa-page .asa-button-primary:hover {
+  background: #68eadc;
+  border-color: #68eadc;
+}
+
+.asa-page .asa-button-secondary {
+  color: var(--asa-ink);
+  background: rgba(255, 255, 255, .025);
+  border-color: var(--asa-line-strong);
+}
+
+.asa-page .asa-button-secondary:hover {
+  border-color: rgba(64, 224, 208, .55);
+}
+
+.asa-page .asa-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--asa-ink);
+  font-size: .94rem;
+  font-weight: 650;
+  text-decoration-color: rgba(64, 224, 208, .5);
+  text-underline-offset: 5px;
+}
+
+.asa-page .asa-text-link:hover {
+  color: var(--asa-cyan);
+}
+
+.asa-page figure > figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Breadcrumb */
+.asa-page .asa-breadcrumb {
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+
+.asa-page .asa-breadcrumb ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 0;
+  margin-bottom: 0;
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .73rem;
+  letter-spacing: .035em;
+  list-style: none;
+}
+
+.asa-page .asa-breadcrumb li + li::before {
+  margin-right: 9px;
+  color: rgba(169, 189, 200, .42);
+  content: "/";
+}
+
+.asa-page .asa-breadcrumb a {
+  text-decoration: none;
+}
+
+.asa-page .asa-breadcrumb a:hover {
+  color: var(--asa-cyan);
+}
+
+/* Hero */
+.asa-page .asa-hero {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(64px, 7vw, 108px) 0 0;
+  background:
+    radial-gradient(circle at 74% 24%, rgba(64, 224, 208, .075), transparent 27%),
+    radial-gradient(circle at 13% 8%, rgba(74, 168, 255, .1), transparent 34%),
+    linear-gradient(180deg, var(--asa-canvas) 0%, #05141d 100%);
+}
+
+.asa-page .asa-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--asa-line-strong) 20%, var(--asa-line-strong) 80%, transparent);
+  content: "";
+}
+
+.asa-page .asa-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(430px, .98fr);
+  gap: clamp(52px, 6vw, 92px);
+  align-items: center;
+}
+
+.asa-page .asa-hero-copy {
+  padding-bottom: 60px;
+}
+
+.asa-page .asa-hero-lead {
+  max-width: 700px;
+  margin-bottom: 31px;
+  color: #b7cad4;
+  font-size: clamp(1.08rem, 1.65vw, 1.3rem);
+  line-height: 1.62;
+}
+
+.asa-page .asa-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 33px;
+}
+
+.asa-page .asa-trust-anchors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 22px;
+  padding: 0;
+  margin-bottom: 0;
+  color: var(--asa-muted);
+  font-size: .85rem;
+  list-style: none;
+}
+
+.asa-page .asa-trust-anchors li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.asa-page .asa-trust-anchors li > span {
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--asa-cyan);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--asa-canvas);
+  background: var(--asa-cyan);
+}
+
+.asa-page .asa-control-map {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 52px;
+  border: 1px solid var(--asa-line-strong);
+  border-radius: 18px;
+  background: rgba(2, 10, 16, .72);
+  box-shadow: var(--asa-shadow);
+}
+
+.asa-page .asa-control-map::before {
+  position: absolute;
+  inset: 8px;
+  z-index: -1;
+  border: 1px solid rgba(64, 224, 208, .09);
+  border-radius: 13px;
+  content: "";
+}
+
+.asa-page .asa-map-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 3px 4px 13px;
+  border-bottom: 1px solid var(--asa-line);
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .65rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-map-topline span:last-child {
+  color: var(--asa-cyan);
+}
+
+.asa-page .asa-map-topline i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.asa-page .asa-control-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.asa-page .asa-map-grid path {
+  fill: none;
+  stroke: #36505d;
+  stroke-width: .7;
+}
+
+.asa-page .asa-map-glow {
+  fill: none;
+  stroke: var(--asa-cyan);
+  stroke-width: 8;
+  opacity: .32;
+}
+
+.asa-page .asa-map-path {
+  fill: none;
+  stroke: url(#asa-flow);
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.asa-page .asa-map-inputs rect,
+.asa-page .asa-map-outputs rect,
+.asa-page .asa-map-human rect {
+  fill: #071923;
+  stroke: #36505d;
+}
+
+.asa-page .asa-map-inputs circle {
+  fill: var(--asa-blue);
+}
+
+.asa-page .asa-map-inputs path,
+.asa-page .asa-map-outputs path,
+.asa-page .asa-map-human path {
+  fill: none;
+  stroke: #7593a2;
+  stroke-width: 2;
+}
+
+.asa-page .asa-map-core circle:first-child {
+  fill: rgba(64, 224, 208, .045);
+  stroke: rgba(64, 224, 208, .34);
+}
+
+.asa-page .asa-map-core circle:nth-child(2) {
+  fill: #071d26;
+  stroke: var(--asa-cyan);
+}
+
+.asa-page .asa-map-core path {
+  fill: none;
+  stroke: var(--asa-cyan);
+  stroke-width: 2;
+}
+
+.asa-page .asa-map-human circle {
+  fill: rgba(241, 201, 140, .16);
+  stroke: var(--asa-warm);
+}
+
+.asa-page .asa-map-labels text {
+  fill: #7d98a6;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.asa-page .asa-hero-proofline {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  border-top: 1px solid var(--asa-line);
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-hero-proofline i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(64, 224, 208, .62);
+}
+
+/* Problem */
+.asa-page .asa-problem {
+  background: #06151e;
+}
+
+.asa-page .asa-fault-sequence {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-fault-sequence::before {
+  position: absolute;
+  top: 82px;
+  right: 10%;
+  left: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--asa-blue), rgba(255, 140, 146, .8));
+  content: "";
+}
+
+.asa-page .asa-fault-sequence article {
+  position: relative;
+  min-height: 330px;
+  padding: 30px 27px 34px;
+  border-right: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-fault-sequence article:last-child {
+  border-right: 0;
+}
+
+.asa-page .asa-sequence-index {
+  display: block;
+  margin-bottom: 21px;
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .69rem;
+}
+
+.asa-page .asa-fault-symbol {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(74, 168, 255, .42);
+  border-radius: 50%;
+  background: #06151e;
+}
+
+.asa-page .asa-fault-symbol i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--asa-blue);
+}
+
+.asa-page .asa-fault-symbol-decision i {
+  width: 19px;
+  height: 19px;
+  border: 1px solid var(--asa-blue);
+  border-radius: 2px;
+  background: transparent;
+  transform: rotate(45deg);
+}
+
+.asa-page .asa-fault-symbol-exception {
+  border-color: rgba(255, 140, 146, .5);
+}
+
+.asa-page .asa-fault-symbol-exception i {
+  width: 2px;
+  height: 21px;
+  border-radius: 0;
+  background: var(--asa-block);
+  box-shadow: 0 15px 0 0 var(--asa-block);
+}
+
+.asa-page .asa-fault-symbol-owner {
+  border-color: rgba(241, 201, 140, .5);
+}
+
+.asa-page .asa-fault-symbol-owner i {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--asa-warm);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.asa-page .asa-fault-sequence h3 {
+  font-size: 1.2rem;
+}
+
+.asa-page .asa-fault-sequence p {
+  margin-bottom: 0;
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+.asa-page .asa-impact-line {
+  display: flex;
+  gap: 20px;
+  padding: 23px 27px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--asa-line-strong);
+  color: var(--asa-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .75rem;
+  letter-spacing: .035em;
+}
+
+.asa-page .asa-impact-line span {
+  color: var(--asa-block);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Diagnosis */
+.asa-page .asa-diagnosis {
+  background:
+    linear-gradient(90deg, transparent 0, transparent 49.95%, rgba(204, 235, 249, .055) 50%, transparent 50.05%),
+    var(--asa-canvas);
+}
+
+.asa-page .asa-diagnosis-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, .76fr) minmax(500px, 1.24fr);
+  gap: clamp(54px, 9vw, 130px);
+  align-items: center;
+}
+
+.asa-page .asa-lens-definitions {
+  margin: 40px 0 34px;
+}
+
+.asa-page .asa-lens-definitions > div {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 18px;
+  padding: 17px 0;
+  border-top: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-lens-definitions > div:last-child {
+  border-bottom: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-lens-definitions dt {
+  color: var(--asa-ink);
+  font-size: .96rem;
+  font-weight: 650;
+}
+
+.asa-page .asa-lens-definitions dt span {
+  display: inline-grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  margin-right: 10px;
+  border: 1px solid var(--asa-line-strong);
+  border-radius: 50%;
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .7rem;
+}
+
+.asa-page .asa-lens-definitions dd {
+  margin-bottom: 0;
+  color: var(--asa-muted);
+  font-size: .91rem;
+  line-height: 1.55;
+}
+
+.asa-page .asa-boundary {
+  padding-left: 17px;
+  margin-bottom: 0;
+  border-left: 2px solid var(--asa-warm);
+  font-size: .91rem;
+}
+
+.asa-page .asa-lens {
+  position: relative;
+  padding: 24px;
+  margin-bottom: 0;
+  border: 1px solid var(--asa-line);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(64, 224, 208, .035), transparent 63%);
+}
+
+.asa-page .asa-lens svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.asa-page .asa-lens-field {
+  fill: rgba(255, 255, 255, .01);
+  stroke: rgba(204, 235, 249, .08);
+}
+
+.asa-page .asa-lens-ring {
+  fill: rgba(74, 168, 255, .025);
+  stroke-width: 1.4;
+}
+
+.asa-page .asa-lens-value {
+  stroke: rgba(74, 168, 255, .62);
+}
+
+.asa-page .asa-lens-feasibility {
+  stroke: rgba(64, 224, 208, .62);
+}
+
+.asa-page .asa-lens-control {
+  stroke: rgba(241, 201, 140, .6);
+}
+
+.asa-page .asa-lens-core {
+  stroke: var(--asa-cyan);
+}
+
+.asa-page .asa-lens-letter,
+.asa-page .asa-lens-word,
+.asa-page .asa-lens-centre {
+  fill: var(--asa-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+.asa-page .asa-lens-letter {
+  fill: var(--asa-ink);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.asa-page .asa-lens-word {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.asa-page .asa-lens-centre {
+  fill: var(--asa-ink);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 2px;
+  text-anchor: middle;
+}
+
+.asa-page .asa-lens-axis {
+  stroke: var(--asa-line-strong);
+}
+
+.asa-page .asa-lens-point {
+  fill: var(--asa-canvas);
+  stroke: var(--asa-cyan);
+}
+
+.asa-page .asa-decision-outcomes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 0 30px 20px;
+  margin: -15px 0 0;
+  color: var(--asa-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .64rem;
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-decision-outcomes span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: var(--asa-cyan);
+}
+
+.asa-page .asa-decision-outcomes li:nth-child(3) span {
+  background: var(--asa-warm);
+}
+
+.asa-page .asa-decision-outcomes li:nth-child(4) span {
+  background: var(--asa-block);
+}
+
+/* Solution */
+.asa-page .asa-solution {
+  background: #06161f;
+  border-block: 1px solid rgba(204, 235, 249, .06);
+}
+
+.asa-page .asa-operating-bands {
+  margin-bottom: 0;
+}
+
+.asa-page .asa-operating-bands svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.asa-page .asa-band {
+  stroke: rgba(204, 235, 249, .16);
+}
+
+.asa-page .asa-band-flow,
+.asa-page .asa-band-input-art,
+.asa-page .asa-band-decision-art,
+.asa-page .asa-band-output-art {
+  fill: none;
+  stroke: #7594a3;
+  stroke-width: 2;
+}
+
+.asa-page .asa-band-flow {
+  stroke: url(#asa-band-b);
+}
+
+.asa-page .asa-band-node {
+  fill: var(--asa-cyan);
+}
+
+.asa-page .asa-band-decision-art circle:first-child {
+  fill: rgba(64, 224, 208, .04);
+  stroke: rgba(64, 224, 208, .38);
+}
+
+.asa-page .asa-band-decision-art circle:nth-child(2),
+.asa-page .asa-band-decision-art path {
+  stroke: var(--asa-cyan);
+}
+
+.asa-page .asa-band-number,
+.asa-page .asa-band-title,
+.asa-page .asa-control-label,
+.asa-page .asa-control-copy {
+  fill: var(--asa-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+.asa-page .asa-band-number {
+  fill: var(--asa-cyan);
+  font-size: 11px;
+}
+
+.asa-page .asa-band-title {
+  fill: var(--asa-ink);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 1.3px;
+}
+
+.asa-page .asa-control-spine {
+  fill: rgba(64, 224, 208, .045);
+  stroke: rgba(64, 224, 208, .3);
+}
+
+.asa-page .asa-control-label {
+  fill: var(--asa-cyan);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.asa-page .asa-control-copy {
+  fill: var(--asa-muted);
+  font-size: 11px;
+}
+
+.asa-page .asa-band-copy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 61px;
+  padding: 0 22px;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.asa-page .asa-band-copy li {
+  display: grid;
+  gap: 5px;
+}
+
+.asa-page .asa-band-copy strong {
+  color: var(--asa-ink);
+  font-size: .95rem;
+}
+
+.asa-page .asa-band-copy span {
+  color: var(--asa-muted);
+  font-size: .82rem;
+  line-height: 1.55;
+}
+
+.asa-page .asa-outcome-strip {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  padding: 24px 28px;
+  margin-top: 120px;
+  border-block: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-outcome-strip > span {
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .66rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-outcome-strip p {
+  margin-bottom: 0;
+  font-size: .87rem;
+}
+
+/* Circuit */
+.asa-page .asa-circuit {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(74, 168, 255, .05), transparent 33%),
+    var(--asa-canvas-deep);
+}
+
+.asa-page .asa-operating-circuit {
+  margin-bottom: 0;
+  border-top: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-operating-circuit svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-circuit-track {
+  fill: none;
+  stroke: url(#asa-circuit-flow);
+  stroke-width: 2;
+}
+
+.asa-page .asa-circuit-review {
+  fill: none;
+  stroke: var(--asa-warm);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 7;
+}
+
+.asa-page .asa-circuit-fallback {
+  fill: none;
+  stroke: var(--asa-block);
+  stroke-width: 1.3;
+  stroke-dasharray: 4 7;
+}
+
+.asa-page .asa-circuit-nodes circle {
+  fill: #071923;
+  stroke: var(--asa-cyan);
+  stroke-width: 1.5;
+}
+
+.asa-page .asa-circuit-nodes .asa-human-node {
+  stroke: var(--asa-warm);
+}
+
+.asa-page .asa-circuit-nodes .asa-fallback-node {
+  stroke: var(--asa-block);
+}
+
+.asa-page .asa-circuit-arrows path {
+  fill: none;
+  stroke: var(--asa-cyan);
+}
+
+.asa-page .asa-circuit-labels text {
+  fill: var(--asa-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-anchor: middle;
+}
+
+.asa-page .asa-circuit-labels .asa-human-text {
+  fill: var(--asa-warm);
+}
+
+.asa-page .asa-circuit-labels .asa-fallback-text {
+  fill: var(--asa-block);
+}
+
+.asa-page .asa-circuit-steps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.asa-page .asa-circuit-steps li {
+  min-height: 235px;
+  padding: 27px 20px 24px;
+  border-right: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-circuit-steps li:last-child {
+  border-right: 0;
+}
+
+.asa-page .asa-circuit-steps li > span {
+  display: block;
+  margin-bottom: 21px;
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .67rem;
+}
+
+.asa-page .asa-circuit-steps li:nth-child(4) > span {
+  color: var(--asa-warm);
+}
+
+.asa-page .asa-circuit-steps p {
+  margin-bottom: 0;
+  font-size: .82rem;
+  line-height: 1.55;
+}
+
+/* Governance */
+.asa-page .asa-governance {
+  background: #061721;
+}
+
+.asa-page .asa-governance-grid {
+  display: grid;
+  grid-template-columns: minmax(310px, .68fr) minmax(540px, 1.32fr);
+  gap: clamp(64px, 9vw, 132px);
+  align-items: center;
+}
+
+.asa-page .asa-truth-note {
+  max-width: 520px;
+  padding: 18px 0 18px 18px;
+  margin-top: 34px;
+  border-left: 2px solid var(--asa-warm);
+  color: #b9c8cf;
+  font-size: .91rem;
+}
+
+.asa-page .asa-control-plane {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.asa-page .asa-control-plane svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.asa-page .asa-control-field {
+  stroke: rgba(64, 224, 208, .24);
+}
+
+.asa-page .asa-control-flow,
+.asa-page .asa-control-lines {
+  fill: none;
+  stroke: #5b7a88;
+  stroke-width: 1.5;
+}
+
+.asa-page .asa-control-work rect {
+  fill: #071923;
+  stroke: rgba(64, 224, 208, .46);
+}
+
+.asa-page .asa-control-points circle {
+  fill: var(--asa-canvas);
+  stroke: var(--asa-cyan);
+  stroke-width: 1.5;
+}
+
+.asa-page .asa-control-plane-labels text {
+  fill: var(--asa-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: .8px;
+}
+
+.asa-page .asa-control-plane-labels text:nth-of-type(1) {
+  fill: var(--asa-cyan);
+  text-anchor: middle;
+}
+
+.asa-page .asa-control-list {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Delivery */
+.asa-page .asa-delivery {
+  background: var(--asa-canvas);
+}
+
+.asa-page .asa-delivery-path {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.asa-page .asa-delivery-path > li {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  border-top: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-delivery-path > li:last-child {
+  border-bottom: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-delivery-marker {
+  position: relative;
+  padding: 42px 26px;
+  border-right: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-delivery-marker span {
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .78rem;
+}
+
+.asa-page .asa-delivery-marker i {
+  position: absolute;
+  top: 68px;
+  right: -5px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--asa-canvas);
+  border-radius: 50%;
+  background: var(--asa-cyan);
+  box-shadow: 0 0 0 1px var(--asa-line-strong);
+}
+
+.asa-page .asa-delivery-copy {
+  display: grid;
+  grid-template-columns: 180px minmax(250px, .8fr) minmax(360px, 1.2fr);
+  gap: 34px;
+  align-items: start;
+  padding: 38px 0 38px 40px;
+}
+
+.asa-page .asa-delivery-state {
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .68rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-delivery-copy > p:not(.asa-delivery-state) {
+  margin-bottom: 0;
+  font-size: .93rem;
+}
+
+.asa-page .asa-delivery-copy dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-bottom: 0;
+  background: var(--asa-line);
+}
+
+.asa-page .asa-delivery-copy dl > div {
+  padding: 16px;
+  background: var(--asa-canvas);
+}
+
+.asa-page .asa-delivery-copy dt {
+  margin-bottom: 6px;
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .62rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-delivery-copy dd {
+  margin-bottom: 0;
+  color: var(--asa-muted);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+/* Evidence */
+.asa-page .asa-evidence {
+  background:
+    radial-gradient(circle at 79% 50%, rgba(64, 224, 208, .06), transparent 30%),
+    #05141d;
+  border-block: 1px solid rgba(204, 235, 249, .06);
+}
+
+.asa-page .asa-evidence-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, .86fr) minmax(430px, 1.14fr);
+  gap: clamp(72px, 10vw, 145px);
+  align-items: center;
+}
+
+.asa-page .asa-output-index {
+  padding: 0;
+  margin: 38px 0 30px;
+  border-top: 1px solid var(--asa-line);
+  list-style: none;
+}
+
+.asa-page .asa-output-index li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 11px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--asa-line);
+  color: var(--asa-muted);
+  font-size: .88rem;
+}
+
+.asa-page .asa-output-index span {
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .66rem;
+}
+
+.asa-page .asa-representative-note {
+  max-width: 610px;
+  padding: 17px 18px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(241, 201, 140, .28);
+  border-radius: 8px;
+  background: rgba(241, 201, 140, .035);
+  font-size: .82rem;
+}
+
+.asa-page .asa-dossier {
+  position: relative;
+  min-height: 620px;
+  perspective: 1200px;
+}
+
+.asa-page .asa-document {
+  position: absolute;
+  width: min(100%, 500px);
+  min-height: 570px;
+  border: 1px solid var(--asa-line-strong);
+  border-radius: 10px;
+  background: #081a23;
+  box-shadow: var(--asa-shadow);
+}
+
+.asa-page .asa-document-back {
+  top: 13px;
+  left: 55px;
+  transform: rotate(5deg);
+  opacity: .38;
+}
+
+.asa-page .asa-document-mid {
+  top: 22px;
+  left: 22px;
+  transform: rotate(-3deg);
+  opacity: .68;
+}
+
+.asa-page .asa-document-front {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 25px;
+}
+
+.asa-page .asa-document-front > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--asa-line);
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .6rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-document-front > header span:last-child {
+  color: var(--asa-warm);
+}
+
+.asa-page .asa-document-title {
+  padding: 30px 0 25px;
+}
+
+.asa-page .asa-document-title p,
+.asa-page .asa-document-title span {
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .65rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-document-title p {
+  margin-bottom: 8px;
+}
+
+.asa-page .asa-document-title h3 {
+  margin-bottom: 8px;
+  font-size: 1.55rem;
+}
+
+.asa-page .asa-document-system {
+  display: flex;
+  height: 88px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border: 1px solid var(--asa-line);
+  background: rgba(255, 255, 255, .018);
+}
+
+.asa-page .asa-document-system span {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--asa-cyan);
+  border-radius: 50%;
+}
+
+.asa-page .asa-document-system span:nth-of-type(2) {
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.asa-page .asa-document-system i {
+  width: 60px;
+  height: 1px;
+  background: var(--asa-line-strong);
+}
+
+.asa-page .asa-document-front dl {
+  margin-bottom: 26px;
+}
+
+.asa-page .asa-document-front dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--asa-line);
+  font-size: .77rem;
+}
+
+.asa-page .asa-document-front dt {
+  color: var(--asa-muted);
+}
+
+.asa-page .asa-document-front dd {
+  margin-bottom: 0;
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .65rem;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-document-front > footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--asa-line-strong);
+  color: var(--asa-dim);
+  font-size: .69rem;
+}
+
+.asa-page .asa-document-front > footer strong {
+  color: var(--asa-ink);
+}
+
+/* Engagement */
+.asa-page .asa-engagement {
+  background: var(--asa-canvas);
+}
+
+.asa-page .asa-engagement-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-bottom: 0;
+  background: var(--asa-line-strong);
+  border: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-engagement-path {
+  padding: clamp(32px, 4vw, 54px);
+  background: #06151e;
+}
+
+.asa-page .asa-engagement-path-critical {
+  background: linear-gradient(145deg, rgba(64, 224, 208, .04), transparent 50%), #071923;
+}
+
+.asa-page .asa-engagement-path > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  margin-bottom: 31px;
+  border-bottom: 1px solid var(--asa-line);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .65rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-engagement-path > header span {
+  color: var(--asa-cyan);
+}
+
+.asa-page .asa-engagement-path > header p {
+  margin-bottom: 0;
+  color: var(--asa-dim);
+}
+
+.asa-page .asa-engagement-path h3 {
+  margin-bottom: 17px;
+  font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+}
+
+.asa-page .asa-engagement-path > p {
+  max-width: 530px;
+}
+
+.asa-page .asa-engagement-path ul {
+  padding: 0;
+  margin: 27px 0 33px;
+  border-top: 1px solid var(--asa-line);
+  list-style: none;
+}
+
+.asa-page .asa-engagement-path li {
+  position: relative;
+  padding: 12px 0 12px 23px;
+  border-bottom: 1px solid var(--asa-line);
+  color: var(--asa-muted);
+  font-size: .88rem;
+}
+
+.asa-page .asa-engagement-path li::before {
+  position: absolute;
+  top: 19px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--asa-cyan);
+  border-radius: 50%;
+  content: "";
+}
+
+.asa-page .asa-engagement-path .asa-path-outcome {
+  padding: 17px;
+  margin-bottom: 0;
+  border-left: 2px solid var(--asa-cyan);
+  background: rgba(64, 224, 208, .025);
+  font-size: .84rem;
+}
+
+.asa-page .asa-path-outcome span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .61rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.asa-page .asa-engagement-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 28px clamp(32px, 4vw, 54px);
+  border: 1px solid var(--asa-line-strong);
+  border-top: 0;
+}
+
+.asa-page .asa-engagement-action p {
+  max-width: 700px;
+  margin-bottom: 0;
+  font-size: .92rem;
+}
+
+.asa-page .asa-engagement-action .asa-button {
+  flex: 0 0 auto;
+}
+
+.asa-page .asa-faq-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, .62fr) minmax(480px, 1.38fr);
+  gap: clamp(50px, 8vw, 120px);
+  padding: clamp(80px, 9vw, 125px) 0 65px;
+}
+
+.asa-page .asa-faq-layout h3 {
+  max-width: 390px;
+  font-size: clamp(1.7rem, 2.7vw, 2.5rem);
+}
+
+.asa-page .asa-faqs {
+  border-top: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-faqs details {
+  border-bottom: 1px solid var(--asa-line-strong);
+}
+
+.asa-page .asa-faqs summary {
+  position: relative;
+  padding: 23px 50px 23px 0;
+  color: var(--asa-ink);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.asa-page .asa-faqs summary::-webkit-details-marker {
+  display: none;
+}
+
+.asa-page .asa-faqs summary::before,
+.asa-page .asa-faqs summary::after {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  width: 15px;
+  height: 1px;
+  background: var(--asa-cyan);
+  content: "";
+  transition: transform 160ms ease;
+}
+
+.asa-page .asa-faqs summary::after {
+  transform: rotate(90deg);
+}
+
+.asa-page .asa-faqs details[open] summary::after {
+  transform: rotate(0deg);
+}
+
+.asa-page .asa-faq-answer {
+  max-width: 730px;
+  padding: 0 50px 24px 0;
+  color: var(--asa-muted);
+  font-size: .92rem;
+  line-height: 1.7;
+}
+
+.asa-page .asa-connected-section {
+  padding-block: clamp(78px, 8vw, 112px);
+  border-top: 1px solid var(--asa-line);
+  background: linear-gradient(180deg, rgba(74, 168, 255, .035), transparent 72%);
+}
+
+.asa-page .asa-connected-intro {
+  max-width: 860px;
+  margin-bottom: 42px;
+}
+
+.asa-page .asa-connected {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid var(--asa-line);
+}
+
+.asa-page .asa-connected a {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+  border-right: 1px solid var(--asa-line);
+  color: var(--asa-muted);
+  font-size: .82rem;
+  font-weight: 650;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease;
+}
+
+.asa-page .asa-connected a:last-child {
+  border-right: 0;
+}
+
+.asa-page .asa-connected a span {
+  color: var(--asa-cyan);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .62rem;
+  letter-spacing: .08em;
+}
+
+.asa-page .asa-connected a:hover {
+  background: rgba(64, 224, 208, .045);
+  color: var(--asa-ink);
+}
+
+/* Final CTA */
+.asa-page .asa-final {
+  padding-top: 0;
+  padding-bottom: clamp(96px, 10vw, 150px);
+  background: var(--asa-canvas);
+}
+
+.asa-page .asa-final-field {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(48px, 8vw, 115px);
+  align-items: end;
+  padding: clamp(48px, 7vw, 88px);
+  border: 1px solid rgba(64, 224, 208, .27);
+  background:
+    linear-gradient(125deg, rgba(74, 168, 255, .06), transparent 45%),
+    linear-gradient(305deg, rgba(64, 224, 208, .05), transparent 38%),
+    #061721;
+}
+
+.asa-page .asa-final-field::before,
+.asa-page .asa-final-field::after {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--asa-cyan);
+  content: "";
+}
+
+.asa-page .asa-final-field::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.asa-page .asa-final-field::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.asa-page .asa-final-field h2 {
+  max-width: 750px;
+}
+
+.asa-page .asa-final-field > div:first-child > p:last-child {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.asa-page .asa-final-action {
+  display: grid;
+  gap: 12px;
+  min-width: 230px;
+}
+
+.asa-page .asa-final-action > span {
+  color: var(--asa-dim);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .63rem;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .asa-page .asa-hero-grid {
+    grid-template-columns: minmax(0, .95fr) minmax(400px, 1.05fr);
+    gap: 38px;
+  }
+
+  .asa-page .asa-diagnosis-grid,
+  .asa-page .asa-governance-grid {
+    grid-template-columns: minmax(290px, .76fr) minmax(460px, 1.24fr);
+    gap: 55px;
+  }
+
+  .asa-page .asa-delivery-copy {
+    grid-template-columns: 150px minmax(220px, .75fr) minmax(300px, 1.25fr);
+    gap: 24px;
+  }
+
+  .asa-page .asa-document-back {
+    left: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .asa-page .asa-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-hero-copy {
+    max-width: 760px;
+    padding-bottom: 0;
+  }
+
+  .asa-page .asa-control-map {
+    width: min(100%, 700px);
+    margin: 0 auto 52px;
+  }
+
+  .asa-page .asa-intro-split,
+  .asa-page .asa-diagnosis-grid,
+  .asa-page .asa-governance-grid,
+  .asa-page .asa-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-intro-split {
+    gap: 18px;
+  }
+
+  .asa-page .asa-intro-split > p {
+    max-width: 700px;
+  }
+
+  .asa-page .asa-fault-sequence {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .asa-page .asa-fault-sequence::before {
+    display: none;
+  }
+
+  .asa-page .asa-fault-sequence article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .asa-page .asa-fault-sequence article:nth-child(-n+2) {
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-lens,
+  .asa-page .asa-control-plane {
+    width: min(100%, 680px);
+    margin-inline: auto;
+  }
+
+  .asa-page .asa-circuit-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .asa-page .asa-circuit-steps li:nth-child(3) {
+    border-right: 0;
+  }
+
+  .asa-page .asa-circuit-steps li:nth-child(-n+3) {
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-delivery-path > li {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+
+  .asa-page .asa-delivery-copy {
+    grid-template-columns: 130px minmax(0, 1fr);
+    padding-left: 30px;
+  }
+
+  .asa-page .asa-delivery-copy dl {
+    grid-column: 1 / -1;
+  }
+
+  .asa-page .asa-dossier {
+    width: min(100%, 560px);
+    margin-inline: auto;
+  }
+
+  .asa-page .asa-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .asa-page .asa-connected {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .asa-page .asa-connected a:nth-child(2) {
+    border-right: 0;
+  }
+
+  .asa-page .asa-connected a:nth-child(-n+2) {
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-final-field {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .asa-page .asa-final-action {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 760px) {
+  .asa-page .asa-shell {
+    width: min(calc(100% - 36px), var(--asa-max));
+  }
+
+  .asa-page .asa-nojs-inner {
+    width: min(calc(100% - 36px), var(--asa-max));
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 0 10px;
+  }
+
+  .asa-page .asa-nojs-inner > div {
+    gap: 0 18px;
+  }
+
+  .asa-page .asa-connected {
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-connected a {
+    min-height: 92px;
+    border-right: 0;
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-connected a:last-child {
+    border-bottom: 0;
+  }
+
+  .asa-page .asa-section {
+    padding: 82px 0;
+  }
+
+  .asa-page .asa-hero h1 {
+    font-size: clamp(2.5rem, 11.5vw, 4.15rem);
+  }
+
+  .asa-page main h2 {
+    font-size: clamp(2rem, 9.5vw, 3.2rem);
+  }
+
+  .asa-page .asa-breadcrumb {
+    padding-top: 14px;
+  }
+
+  .asa-page .asa-breadcrumb li:nth-child(2) {
+    display: none;
+  }
+
+  .asa-page .asa-hero {
+    padding-top: 52px;
+  }
+
+  .asa-page .asa-hero-lead {
+    font-size: 1.06rem;
+  }
+
+  .asa-page .asa-hero-actions {
+    display: grid;
+  }
+
+  .asa-page .asa-button {
+    width: 100%;
+  }
+
+  .asa-page .asa-trust-anchors {
+    display: grid;
+    gap: 10px;
+  }
+
+  .asa-page .asa-control-map {
+    padding: 10px;
+    border-radius: 13px;
+  }
+
+  .asa-page .asa-map-topline {
+    font-size: .56rem;
+  }
+
+  .asa-page .asa-map-topline span:last-child {
+    display: none;
+  }
+
+  .asa-page .asa-hero-proofline {
+    justify-content: flex-start;
+    gap: 9px;
+    padding-block: 18px;
+    font-size: .59rem;
+  }
+
+  .asa-page .asa-fault-sequence {
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-fault-sequence article {
+    min-height: auto;
+    padding: 27px 5px 30px;
+    border-right: 0;
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-fault-sequence article:last-child {
+    border-bottom: 0;
+  }
+
+  .asa-page .asa-impact-line {
+    display: grid;
+    gap: 7px;
+    padding-inline: 5px;
+    line-height: 1.7;
+  }
+
+  .asa-page .asa-diagnosis {
+    background: var(--asa-canvas);
+  }
+
+  .asa-page .asa-lens-definitions > div {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .asa-page .asa-lens {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .asa-page .asa-lens svg {
+    display: none;
+  }
+
+  .asa-page .asa-decision-outcomes {
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    padding: 1px;
+    margin: 0;
+    background: var(--asa-line);
+  }
+
+  .asa-page .asa-decision-outcomes li {
+    padding: 19px 10px;
+    background: var(--asa-surface);
+  }
+
+  .asa-page .asa-operating-bands svg {
+    display: none;
+  }
+
+  .asa-page .asa-band-copy {
+    grid-template-columns: 1fr;
+    gap: 1px;
+    padding: 1px;
+    margin: 0;
+    background: var(--asa-line);
+  }
+
+  .asa-page .asa-band-copy li {
+    position: relative;
+    min-height: 145px;
+    padding: 27px;
+    background: var(--asa-surface);
+  }
+
+  .asa-page .asa-band-copy li::before {
+    position: absolute;
+    top: 30px;
+    right: 27px;
+    color: var(--asa-cyan);
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: .65rem;
+    content: "0" counter(list-item);
+  }
+
+  .asa-page .asa-outcome-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-inline: 0;
+    margin-top: 45px;
+  }
+
+  .asa-page .asa-outcome-strip .asa-text-link {
+    margin-top: 10px;
+  }
+
+  .asa-page .asa-operating-circuit svg {
+    display: none;
+  }
+
+  .asa-page .asa-circuit-steps {
+    position: relative;
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-circuit-steps::before {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 20px;
+    width: 1px;
+    background: linear-gradient(var(--asa-blue), var(--asa-cyan));
+    content: "";
+  }
+
+  .asa-page .asa-circuit-steps li,
+  .asa-page .asa-circuit-steps li:nth-child(3),
+  .asa-page .asa-circuit-steps li:last-child {
+    position: relative;
+    min-height: auto;
+    padding: 24px 5px 24px 54px;
+    border-right: 0;
+    border-bottom: 1px solid var(--asa-line);
+  }
+
+  .asa-page .asa-circuit-steps li > span {
+    position: absolute;
+    top: 25px;
+    left: 9px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--asa-cyan);
+    border-radius: 50%;
+    background: var(--asa-canvas-deep);
+    font-size: .55rem;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .asa-page .asa-circuit-steps li:nth-child(4) > span {
+    border-color: var(--asa-warm);
+  }
+
+  .asa-page .asa-control-plane svg {
+    display: none;
+  }
+
+  .asa-page .asa-control-list {
+    display: grid;
+    gap: 1px;
+    background: var(--asa-line);
+  }
+
+  .asa-page .asa-control-list li {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 3px 13px;
+    padding: 20px;
+    background: var(--asa-surface);
+  }
+
+  .asa-page .asa-control-list span {
+    grid-row: span 2;
+    color: var(--asa-cyan);
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: .64rem;
+  }
+
+  .asa-page .asa-control-list strong {
+    font-size: .92rem;
+  }
+
+  .asa-page .asa-control-list small {
+    color: var(--asa-muted);
+    font-size: .78rem;
+  }
+
+  .asa-page .asa-delivery-path > li {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .asa-page .asa-delivery-marker {
+    padding: 29px 0;
+  }
+
+  .asa-page .asa-delivery-marker i {
+    top: 52px;
+  }
+
+  .asa-page .asa-delivery-copy {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 26px 0 28px 20px;
+  }
+
+  .asa-page .asa-delivery-copy dl {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    margin-top: 15px;
+  }
+
+  .asa-page .asa-dossier {
+    min-height: 0;
+  }
+
+  .asa-page .asa-document {
+    min-height: 540px;
+  }
+
+  .asa-page .asa-document-back,
+  .asa-page .asa-document-mid {
+    display: none;
+  }
+
+  .asa-page .asa-document-front {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    left: auto;
+    padding: 19px;
+  }
+
+  .asa-page .asa-document-front > header,
+  .asa-page .asa-document-front > footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .asa-page .asa-document-title h3 {
+    font-size: 1.32rem;
+  }
+
+  .asa-page .asa-engagement-paths {
+    grid-template-columns: 1fr;
+  }
+
+  .asa-page .asa-engagement-action {
+    align-items: stretch;
+    flex-direction: column;
+    padding-inline: 25px;
+  }
+
+  .asa-page .asa-faq-layout {
+    padding-top: 75px;
+  }
+
+  .asa-page .asa-connected {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .asa-page .asa-connected > span {
+    margin: 0 0 5px;
+  }
+
+  .asa-page .asa-final {
+    padding-bottom: 82px;
+  }
+
+  .asa-page .asa-final-field {
+    gap: 34px;
+    padding: 38px 24px;
+  }
+
+  .asa-page .asa-final-action {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .asa-page .asa-shell {
+    width: min(calc(100% - 28px), var(--asa-max));
+  }
+
+  .asa-page .asa-hero h1 {
+    font-size: clamp(2.28rem, 11.7vw, 3.15rem);
+  }
+
+  .asa-page .asa-control-map {
+    margin-inline: -3px;
+  }
+
+  .asa-page .asa-control-map svg {
+    min-height: 310px;
+  }
+
+  .asa-page .asa-hero-proofline span {
+    width: calc(50% - 14px);
+  }
+
+  .asa-page .asa-hero-proofline i:nth-of-type(2) {
+    display: none;
+  }
+
+  .asa-page .asa-engagement-path {
+    padding: 30px 22px;
+  }
+
+  .asa-page .asa-faq-answer {
+    padding-right: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .asa-page *,
+  .asa-page *::before,
+  .asa-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  body.asa-page {
+    color: #111;
+    background: #fff;
+  }
+
+  .asa-page .asa-section,
+  .asa-page .asa-hero {
+    background: #fff;
+  }
+
+  .asa-page .asa-button {
+    color: #111;
+    border-color: #111;
+    background: transparent;
+  }
+}
