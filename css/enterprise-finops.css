@@ -1,0 +1,1226 @@
+/* Enterprise FinOps Advisory — Economic Decision System
+   Phase 2 visual authority. Page-scoped, static, and dependency-free. */
+
+:root {
+  --finops-canvas: #041018;
+  --finops-canvas-deep: #020b11;
+  --finops-surface: #081a24;
+  --finops-surface-raised: #0b202b;
+  --finops-surface-soft: rgba(255, 255, 255, .032);
+  --finops-ink: #f1f8fb;
+  --finops-ink-soft: #c5d6dc;
+  --finops-muted: #91aab4;
+  --finops-dim: #68848f;
+  --finops-line: rgba(176, 218, 229, .14);
+  --finops-line-strong: rgba(116, 216, 220, .3);
+  --finops-cyan: #45dfcf;
+  --finops-cyan-bright: #7af1e4;
+  --finops-blue: #60bfff;
+  --finops-gold: #d9bd76;
+  --finops-red: #d9958c;
+  --finops-max: 1240px;
+  --finops-reading: 68ch;
+  --finops-radius-lg: 24px;
+  --finops-radius-md: 14px;
+  --finops-shadow: 0 30px 80px -56px rgba(0, 0, 0, .95);
+}
+
+body.enterprise-finops-page {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--finops-ink);
+  background:
+    radial-gradient(circle at 7% 4%, rgba(38, 149, 174, .12), transparent 30rem),
+    linear-gradient(180deg, #061722 0, var(--finops-canvas) 42rem, var(--finops-canvas-deep) 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.enterprise-finops-page *,
+.enterprise-finops-page *::before,
+.enterprise-finops-page *::after {
+  box-sizing: border-box;
+}
+
+.enterprise-finops-page::selection {
+  color: #021016;
+  background: var(--finops-cyan);
+}
+
+.enterprise-finops-page a {
+  color: inherit;
+}
+
+.enterprise-finops-page main {
+  display: block;
+  overflow: clip;
+}
+
+.enterprise-finops-page .finops-skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 12px;
+  left: 12px;
+  padding: 11px 16px;
+  transform: translateY(-180%);
+  border: 1px solid var(--finops-cyan);
+  border-radius: 8px;
+  background: #031018;
+  color: var(--finops-ink);
+  font-size: .9rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.enterprise-finops-page .finops-skip-link:focus {
+  transform: translateY(0);
+}
+
+.enterprise-finops-page .wrap.finops-shell {
+  width: min(calc(100% - 48px), var(--finops-max));
+  max-width: none;
+  margin-inline: auto;
+  padding: 0;
+}
+
+.enterprise-finops-page .finops-breadcrumb {
+  width: auto;
+  margin: 0;
+  padding: 27px 0 0;
+  color: var(--finops-dim);
+  font-size: .76rem;
+  letter-spacing: .025em;
+}
+
+.enterprise-finops-page .finops-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.enterprise-finops-page .finops-breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.enterprise-finops-page .finops-breadcrumb a {
+  color: var(--finops-dim);
+  text-decoration: none;
+}
+
+.enterprise-finops-page .finops-breadcrumb a:hover {
+  color: var(--finops-ink-soft);
+}
+
+.enterprise-finops-page :focus-visible {
+  outline: 3px solid var(--finops-gold);
+  outline-offset: 4px;
+}
+
+.enterprise-finops-page .finops-hero {
+  position: relative;
+  padding: clamp(68px, 8vw, 108px) 0 clamp(92px, 10vw, 144px);
+}
+
+.enterprise-finops-page .finops-hero::before {
+  position: absolute;
+  z-index: -1;
+  top: 2rem;
+  right: -12rem;
+  width: 42rem;
+  height: 42rem;
+  border: 1px solid rgba(97, 190, 214, .07);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 143, 164, .1), transparent 66%);
+  content: "";
+}
+
+.enterprise-finops-page .finops-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(390px, .72fr);
+  align-items: center;
+  gap: clamp(54px, 8vw, 110px);
+  min-height: 570px;
+}
+
+.enterprise-finops-page .finops-hero-copy {
+  min-width: 0;
+}
+
+.enterprise-finops-page .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 19px;
+  color: var(--finops-cyan-bright);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.enterprise-finops-page .eyebrow::before {
+  width: 19px;
+  height: 1px;
+  flex: 0 0 auto;
+  background: currentColor;
+  content: "";
+}
+
+.enterprise-finops-page .finops-hero h1,
+.enterprise-finops-page .finops-section h2,
+.enterprise-finops-page .finops-section h3 {
+  color: var(--finops-ink);
+  font-weight: 630;
+  text-wrap: balance;
+}
+
+.enterprise-finops-page .finops-hero h1 {
+  max-width: 790px;
+  margin: 0;
+  font-size: clamp(3.25rem, 5.35vw, 5.4rem);
+  letter-spacing: -.058em;
+  line-height: .98;
+}
+
+.enterprise-finops-page .finops-hero .lead {
+  max-width: 730px;
+  margin: 29px 0 0;
+  color: #abc1ca;
+  font-size: clamp(1.06rem, 1.35vw, 1.2rem);
+  line-height: 1.72;
+}
+
+.enterprise-finops-page .finops-hero .note {
+  display: grid;
+  max-width: 710px;
+  margin: 34px 0 0;
+  padding: 18px 0 0 45px;
+  border: 0;
+  border-top: 1px solid var(--finops-line);
+  color: #8099a3;
+  font-size: .84rem;
+  line-height: 1.6;
+}
+
+.enterprise-finops-page .finops-hero .note::before {
+  position: absolute;
+  margin: 1px 0 0 -45px;
+  color: var(--finops-cyan);
+  content: "CONTROL";
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .57rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  writing-mode: vertical-rl;
+}
+
+.enterprise-finops-page .finops-hero .note strong {
+  color: var(--finops-ink-soft);
+  font-weight: 700;
+}
+
+.enterprise-finops-page .cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.enterprise-finops-page .finops-button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 21px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: .88rem;
+  font-weight: 760;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color .18s ease, background-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+.enterprise-finops-page .finops-button:hover {
+  transform: translateY(-2px);
+}
+
+.enterprise-finops-page .finops-button-primary {
+  color: #031116;
+  background: linear-gradient(105deg, #6fc8ff, #52e2d3);
+  box-shadow: 0 20px 42px -30px rgba(72, 226, 211, .9);
+}
+
+.enterprise-finops-page .finops-button-primary:hover {
+  background: linear-gradient(105deg, #88d3ff, #70e8dc);
+}
+
+.enterprise-finops-page .finops-button-secondary {
+  border-color: var(--finops-line-strong);
+  background: rgba(8, 28, 38, .56);
+  color: var(--finops-ink-soft);
+}
+
+.enterprise-finops-page .finops-button-secondary:hover {
+  border-color: rgba(117, 227, 220, .5);
+  background: rgba(13, 42, 53, .75);
+  color: var(--finops-ink);
+}
+
+.enterprise-finops-page .finops-control-brief {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(116, 216, 220, .22);
+  border-radius: var(--finops-radius-lg);
+  background:
+    linear-gradient(rgba(103, 207, 218, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 207, 218, .045) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(13, 46, 58, .94), rgba(5, 22, 31, .96));
+  background-size: 30px 30px, 30px 30px, auto;
+  box-shadow: 0 40px 100px -60px #000;
+}
+
+.enterprise-finops-page .finops-control-brief::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--finops-cyan));
+  content: "";
+}
+
+.enterprise-finops-page .finops-control-brief figcaption {
+  display: grid;
+  gap: 7px;
+  padding: 24px 26px 20px;
+  border-bottom: 1px solid var(--finops-line);
+  background: rgba(3, 15, 22, .58);
+}
+
+.enterprise-finops-page .finops-control-brief figcaption span {
+  color: var(--finops-cyan);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.enterprise-finops-page .finops-control-brief figcaption strong {
+  max-width: 330px;
+  color: var(--finops-ink);
+  font-size: 1.18rem;
+  font-weight: 620;
+  line-height: 1.35;
+}
+
+.enterprise-finops-page .finops-brief-flow {
+  padding: 12px 26px 14px;
+}
+
+.enterprise-finops-page .finops-brief-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 1px 13px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--finops-line);
+}
+
+.enterprise-finops-page .finops-brief-stage:last-child {
+  border-bottom: 0;
+}
+
+.enterprise-finops-page .finops-brief-stage > span {
+  grid-row: 1 / span 2;
+  color: var(--finops-gold);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .66rem;
+  letter-spacing: .08em;
+}
+
+.enterprise-finops-page .finops-brief-stage > span::after {
+  display: block;
+  width: 1px;
+  height: 24px;
+  margin: 9px 0 0 8px;
+  background: linear-gradient(var(--finops-cyan), transparent);
+  content: "";
+}
+
+.enterprise-finops-page .finops-brief-stage:last-child > span::after {
+  display: none;
+}
+
+.enterprise-finops-page .finops-brief-stage strong {
+  color: var(--finops-ink-soft);
+  font-size: .86rem;
+  font-weight: 650;
+}
+
+.enterprise-finops-page .finops-brief-stage small {
+  color: var(--finops-dim);
+  font-size: .72rem;
+}
+
+.enterprise-finops-page .finops-control-brief > p {
+  margin: 0;
+  padding: 16px 26px;
+  border-top: 1px solid var(--finops-line-strong);
+  background: rgba(52, 188, 185, .075);
+  color: #91b5bb;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .66rem;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.enterprise-finops-page .finops-section {
+  position: relative;
+  padding: clamp(88px, 9vw, 132px) 0;
+  border-top: 1px solid var(--finops-line);
+}
+
+.enterprise-finops-page .finops-section > .eyebrow,
+.enterprise-finops-page .finops-section > h2,
+.enterprise-finops-page .finops-section > .lead {
+  max-width: 820px;
+}
+
+.enterprise-finops-page .finops-section h2 {
+  margin: 0;
+  font-size: clamp(2.15rem, 4.15vw, 4rem);
+  letter-spacing: -.045em;
+  line-height: 1.03;
+}
+
+.enterprise-finops-page .finops-section h3 {
+  margin: 0 0 11px;
+  font-size: 1.06rem;
+  letter-spacing: -.016em;
+  line-height: 1.3;
+}
+
+.enterprise-finops-page .finops-section p,
+.enterprise-finops-page .finops-section li {
+  color: var(--finops-muted);
+}
+
+.enterprise-finops-page .finops-section > .lead {
+  margin: 23px 0 0;
+  font-size: clamp(1.04rem, 1.4vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.enterprise-finops-page .finops-grid {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(42px, 5vw, 66px);
+}
+
+.enterprise-finops-page .grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.enterprise-finops-page .grid2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.enterprise-finops-page .card {
+  min-width: 0;
+  margin: 0;
+  padding: 28px;
+  border: 0;
+  border-right: 1px solid var(--finops-line);
+  border-bottom: 1px solid var(--finops-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.enterprise-finops-page .card p {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+.enterprise-finops-page .card ul,
+.enterprise-finops-page .card ol {
+  margin: 18px 0 0;
+  padding-left: 19px;
+}
+
+.enterprise-finops-page .card li {
+  margin: 8px 0;
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+.enterprise-finops-page .tag {
+  display: inline-flex;
+  margin: 0 0 17px;
+  padding: 5px 9px;
+  border: 1px solid rgba(217, 189, 118, .24);
+  border-radius: 4px;
+  color: var(--finops-gold);
+  background: rgba(217, 189, 118, .045);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .61rem;
+  font-weight: 700;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.enterprise-finops-page .finops-section > .note {
+  margin: 34px 0 0;
+  padding: 18px 0 18px 24px;
+  border: 0;
+  border-left: 2px solid var(--finops-cyan);
+  color: var(--finops-muted);
+  font-size: .87rem;
+}
+
+.enterprise-finops-page .finops-section > .note strong {
+  color: var(--finops-ink-soft);
+}
+
+/* Executive triggers: concise issue register, not a card gallery. */
+.enterprise-finops-page .finops-trigger-grid {
+  counter-reset: trigger;
+  border-top: 1px solid var(--finops-line-strong);
+}
+
+.enterprise-finops-page .finops-trigger-grid .card {
+  position: relative;
+  min-height: 176px;
+  padding: 30px 34px 30px 76px;
+  counter-increment: trigger;
+}
+
+.enterprise-finops-page .finops-trigger-grid .card:nth-child(2n) {
+  border-right: 0;
+}
+
+.enterprise-finops-page .finops-trigger-grid .card::before {
+  position: absolute;
+  top: 31px;
+  left: 26px;
+  color: var(--finops-gold);
+  content: "0" counter(trigger);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .65rem;
+  letter-spacing: .08em;
+}
+
+.enterprise-finops-page .finops-trigger-grid .card:hover {
+  background: linear-gradient(90deg, rgba(63, 204, 199, .04), transparent);
+}
+
+/* Operating method: a connected governance sequence. */
+.enterprise-finops-page #economic-control {
+  isolation: isolate;
+}
+
+.enterprise-finops-page #economic-control::before {
+  position: absolute;
+  z-index: -1;
+  top: 5rem;
+  right: -45vw;
+  bottom: 5rem;
+  left: -45vw;
+  background: linear-gradient(180deg, rgba(10, 31, 42, .48), rgba(5, 20, 28, .12));
+  content: "";
+}
+
+.enterprise-finops-page .finops-control-stages {
+  position: relative;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--finops-line-strong);
+  background: rgba(4, 18, 26, .7);
+}
+
+.enterprise-finops-page .finops-control-stages::before {
+  position: absolute;
+  top: 54px;
+  right: 8%;
+  left: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--finops-cyan), var(--finops-blue), transparent);
+  content: "";
+}
+
+.enterprise-finops-page .finops-control-stages .card {
+  position: relative;
+  min-height: 288px;
+  padding: 82px 25px 28px;
+  border-bottom: 0;
+}
+
+.enterprise-finops-page .finops-control-stages .card:last-child {
+  border-right: 0;
+}
+
+.enterprise-finops-page .finops-control-stages .card::before {
+  position: absolute;
+  z-index: 1;
+  top: 48px;
+  left: 26px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--finops-cyan);
+  border-radius: 50%;
+  background: var(--finops-canvas);
+  box-shadow: 0 0 0 5px rgba(69, 223, 207, .08);
+  content: "";
+}
+
+.enterprise-finops-page .finops-control-stages .tag {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.enterprise-finops-page .finops-method-artifacts {
+  margin-top: 28px;
+  border-top: 1px solid var(--finops-line);
+  border-bottom: 1px solid var(--finops-line);
+}
+
+.enterprise-finops-page .finops-method-artifacts .card {
+  padding: 27px 30px;
+  border-bottom: 0;
+}
+
+.enterprise-finops-page .finops-method-artifacts .card:last-child {
+  border-right: 0;
+}
+
+/* Cloud and AI scope: two coordinated but distinct economic domains. */
+.enterprise-finops-page #economic-scope .finops-grid {
+  overflow: hidden;
+  border: 1px solid var(--finops-line);
+  border-radius: var(--finops-radius-lg);
+  background: linear-gradient(135deg, rgba(10, 34, 45, .74), rgba(5, 21, 30, .62));
+  box-shadow: var(--finops-shadow);
+}
+
+.enterprise-finops-page #economic-scope .card {
+  min-height: 480px;
+  padding: clamp(34px, 4vw, 54px);
+  border-bottom: 0;
+}
+
+.enterprise-finops-page #economic-scope .card:last-child {
+  border-right: 0;
+  background: linear-gradient(145deg, rgba(23, 67, 74, .26), rgba(6, 24, 33, .2));
+}
+
+.enterprise-finops-page #economic-scope h3 {
+  margin-bottom: 22px;
+  color: var(--finops-cyan-bright);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .77rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.enterprise-finops-page #economic-scope .card > p {
+  color: var(--finops-ink-soft);
+  font-size: 1rem;
+}
+
+/* Decision portfolio: a board-level option register. */
+.enterprise-finops-page #decisions .finops-grid {
+  counter-reset: decision;
+  border-top: 1px solid var(--finops-line-strong);
+}
+
+.enterprise-finops-page #decisions .card {
+  min-height: 190px;
+  padding: 32px 30px;
+  counter-increment: decision;
+}
+
+.enterprise-finops-page #decisions .card:nth-child(3n) {
+  border-right: 0;
+}
+
+.enterprise-finops-page #decisions .card::before {
+  display: block;
+  margin-bottom: 31px;
+  color: var(--finops-dim);
+  content: "D / 0" counter(decision);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .61rem;
+  letter-spacing: .12em;
+}
+
+.enterprise-finops-page #decisions .card:hover::before {
+  color: var(--finops-cyan);
+}
+
+/* Deliverables: an inspectable evidence register rather than tiles. */
+.enterprise-finops-page #deliverables::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -45vw;
+  bottom: 0;
+  left: -45vw;
+  border-block: 1px solid rgba(177, 218, 228, .05);
+  background: rgba(9, 27, 37, .38);
+  content: "";
+}
+
+.enterprise-finops-page .finops-output-grid {
+  counter-reset: evidence;
+  border-top: 1px solid var(--finops-line-strong);
+  background: rgba(3, 15, 22, .28);
+}
+
+.enterprise-finops-page .finops-output-grid .card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 5px 18px;
+  min-height: 145px;
+  align-content: center;
+  padding: 25px 30px;
+  counter-increment: evidence;
+}
+
+.enterprise-finops-page .finops-output-grid .card:nth-child(2n) {
+  border-right: 0;
+}
+
+.enterprise-finops-page .finops-output-grid .card::before {
+  grid-row: 1 / span 2;
+  color: var(--finops-gold);
+  content: "E" counter(evidence, decimal-leading-zero);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .66rem;
+  letter-spacing: .08em;
+}
+
+.enterprise-finops-page .finops-output-grid h3 {
+  margin-bottom: 5px;
+}
+
+/* Method authority: strong editorial split with restrained surfaces. */
+.enterprise-finops-page #why-aics > .lead {
+  max-width: 900px;
+}
+
+.enterprise-finops-page #why-aics .finops-grid {
+  gap: 1px;
+  padding: 1px;
+  background: var(--finops-line);
+}
+
+.enterprise-finops-page #why-aics .card {
+  min-height: 210px;
+  padding: 34px;
+  border: 0;
+  background: #061823;
+}
+
+.enterprise-finops-page #why-aics .card h3 {
+  max-width: 360px;
+  font-size: 1.18rem;
+}
+
+.enterprise-finops-page #why-aics .card:last-child {
+  background: linear-gradient(145deg, rgba(33, 87, 89, .3), #061823 70%);
+}
+
+/* Buying committee: a compact responsibility matrix. */
+.enterprise-finops-page #buyer-committee .finops-grid {
+  border-top: 1px solid var(--finops-line-strong);
+}
+
+.enterprise-finops-page #buyer-committee .card {
+  min-height: 166px;
+  padding: 28px 29px;
+}
+
+.enterprise-finops-page #buyer-committee .card:nth-child(3n) {
+  border-right: 0;
+}
+
+.enterprise-finops-page #buyer-committee h3 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--finops-line);
+  color: var(--finops-ink-soft);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: .74rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+/* Qualification: deliberately clear positive and negative boundaries. */
+.enterprise-finops-page #fit .finops-grid {
+  overflow: hidden;
+  border: 1px solid var(--finops-line);
+  border-radius: var(--finops-radius-lg);
+  background: rgba(5, 21, 29, .76);
+}
+
+.enterprise-finops-page #fit .card {
+  padding: clamp(35px, 4vw, 52px);
+  border-bottom: 0;
+}
+
+.enterprise-finops-page #fit .card:last-child {
+  border-right: 0;
+  background: rgba(2, 12, 18, .48);
+}
+
+.enterprise-finops-page #fit .money {
+  box-shadow: inset 3px 0 var(--finops-cyan);
+}
+
+.enterprise-finops-page #fit h3 {
+  margin-bottom: 24px;
+  font-size: 1.35rem;
+}
+
+.enterprise-finops-page #fit li::marker {
+  color: var(--finops-cyan);
+}
+
+.enterprise-finops-page #fit .card:last-child li::marker {
+  color: var(--finops-red);
+}
+
+/* Commercial entry: the signature advisory product. */
+.enterprise-finops-page #engagement {
+  isolation: isolate;
+}
+
+.enterprise-finops-page #engagement::before {
+  position: absolute;
+  z-index: -1;
+  top: 2rem;
+  right: -45vw;
+  bottom: 2rem;
+  left: -45vw;
+  background:
+    linear-gradient(90deg, rgba(29, 116, 122, .11), transparent 45%),
+    #061721;
+  content: "";
+}
+
+.enterprise-finops-page #engagement .finops-grid {
+  overflow: hidden;
+  border: 1px solid var(--finops-line-strong);
+  border-radius: var(--finops-radius-lg);
+  background: #071a24;
+  box-shadow: 0 42px 100px -72px #000;
+}
+
+.enterprise-finops-page #engagement .card {
+  min-height: 430px;
+  padding: clamp(38px, 4.5vw, 62px);
+  border-bottom: 0;
+}
+
+.enterprise-finops-page #engagement .card:last-child {
+  border-right: 0;
+  background: rgba(3, 14, 20, .47);
+}
+
+.enterprise-finops-page #engagement .money {
+  box-shadow: inset 0 3px var(--finops-cyan);
+}
+
+.enterprise-finops-page #engagement h3 {
+  max-width: 440px;
+  margin-bottom: 20px;
+  font-size: clamp(1.55rem, 2.5vw, 2.3rem);
+  letter-spacing: -.035em;
+  line-height: 1.08;
+}
+
+.enterprise-finops-page #engagement .card:last-child h3 {
+  font-size: 1.35rem;
+}
+
+/* Enterprise diligence: documentation-grade, intentionally quiet. */
+.enterprise-finops-page #procurement .finops-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--finops-line-strong);
+}
+
+.enterprise-finops-page #procurement .card {
+  min-height: 370px;
+  padding: 32px 28px;
+}
+
+.enterprise-finops-page #procurement .card:last-child {
+  border-right: 0;
+}
+
+.enterprise-finops-page #procurement h3 {
+  min-height: 58px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--finops-line);
+}
+
+/* Connected services: portfolio handoffs, not product cards. */
+.enterprise-finops-page #connected-capabilities .finops-grid {
+  gap: 14px 34px;
+}
+
+.enterprise-finops-page #connected-capabilities .card {
+  position: relative;
+  min-height: 142px;
+  padding: 24px 54px 24px 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--finops-line);
+}
+
+.enterprise-finops-page #connected-capabilities .card::after {
+  position: absolute;
+  top: 27px;
+  right: 4px;
+  color: var(--finops-dim);
+  content: "↗";
+  font-size: 1rem;
+}
+
+.enterprise-finops-page #connected-capabilities h3 a {
+  text-decoration-color: rgba(69, 223, 207, .3);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.enterprise-finops-page #connected-capabilities h3 a:hover {
+  color: var(--finops-cyan-bright);
+  text-decoration-color: currentColor;
+}
+
+/* Final decision: executive close, not a generic footer CTA. */
+.enterprise-finops-page #final-decision {
+  margin-bottom: clamp(72px, 8vw, 110px);
+  padding: clamp(64px, 8vw, 106px);
+  overflow: hidden;
+  border: 1px solid var(--finops-line-strong);
+  border-radius: var(--finops-radius-lg);
+  background:
+    linear-gradient(120deg, rgba(18, 74, 84, .62), rgba(5, 22, 31, .9) 56%),
+    #071a24;
+  box-shadow: 0 42px 110px -74px #000;
+}
+
+.enterprise-finops-page #final-decision::after {
+  position: absolute;
+  right: -6rem;
+  bottom: -9rem;
+  width: 27rem;
+  height: 27rem;
+  border: 1px solid rgba(97, 208, 209, .11);
+  border-radius: 50%;
+  content: "";
+}
+
+.enterprise-finops-page #final-decision > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enterprise-finops-page #final-decision h2 {
+  max-width: 860px;
+}
+
+.enterprise-finops-page #final-decision .lead {
+  max-width: 720px;
+}
+
+.enterprise-finops-page #final-decision > .note {
+  max-width: 780px;
+  margin-top: 28px;
+}
+
+@media (max-width: 1080px) {
+  .enterprise-finops-page .finops-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, .68fr);
+    gap: 48px;
+  }
+
+  .enterprise-finops-page .finops-hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .enterprise-finops-page .finops-control-stages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .enterprise-finops-page .finops-control-stages::before {
+    display: none;
+  }
+
+  .enterprise-finops-page .finops-control-stages .card {
+    min-height: 238px;
+    padding-top: 70px;
+    border-bottom: 1px solid var(--finops-line);
+  }
+
+  .enterprise-finops-page .finops-control-stages .card:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .enterprise-finops-page .finops-control-stages .card:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .enterprise-finops-page #procurement .finops-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .enterprise-finops-page #procurement .card:last-child {
+    border-top: 1px solid var(--finops-line);
+  }
+}
+
+@media (max-width: 840px) {
+  .enterprise-finops-page .wrap.finops-shell {
+    width: min(calc(100% - 36px), var(--finops-max));
+  }
+
+  .enterprise-finops-page .finops-hero {
+    padding-top: 56px;
+  }
+
+  .enterprise-finops-page .finops-hero-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .enterprise-finops-page .finops-control-brief {
+    max-width: 610px;
+  }
+
+  .enterprise-finops-page .grid,
+  .enterprise-finops-page .grid2,
+  .enterprise-finops-page #procurement .finops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enterprise-finops-page .card,
+  .enterprise-finops-page .finops-trigger-grid .card,
+  .enterprise-finops-page #decisions .card,
+  .enterprise-finops-page .finops-output-grid .card,
+  .enterprise-finops-page #buyer-committee .card,
+  .enterprise-finops-page #procurement .card {
+    border-right: 0;
+  }
+
+  .enterprise-finops-page .finops-control-stages {
+    grid-template-columns: 1fr;
+  }
+
+  .enterprise-finops-page .finops-control-stages .card,
+  .enterprise-finops-page .finops-control-stages .card:nth-last-child(2) {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--finops-line);
+  }
+
+  .enterprise-finops-page .finops-control-stages .card:last-child {
+    border-bottom: 0;
+  }
+
+  .enterprise-finops-page #economic-scope .card,
+  .enterprise-finops-page #engagement .card {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--finops-line);
+  }
+
+  .enterprise-finops-page #economic-scope .card:last-child,
+  .enterprise-finops-page #engagement .card:last-child {
+    border-bottom: 0;
+  }
+
+  .enterprise-finops-page #procurement .card {
+    min-height: 0;
+  }
+
+  .enterprise-finops-page #procurement .card:last-child {
+    border-top: 0;
+  }
+
+  .enterprise-finops-page #final-decision {
+    padding: clamp(42px, 8vw, 68px);
+  }
+}
+
+@media (max-width: 560px) {
+  .enterprise-finops-page .wrap.finops-shell {
+    width: min(calc(100% - 28px), var(--finops-max));
+  }
+
+  .enterprise-finops-page .finops-breadcrumb {
+    padding-top: 20px;
+  }
+
+  .enterprise-finops-page .finops-hero {
+    padding: 48px 0 88px;
+  }
+
+  .enterprise-finops-page .finops-hero h1 {
+    font-size: clamp(2.65rem, 13vw, 3.7rem);
+    line-height: .99;
+  }
+
+  .enterprise-finops-page .finops-hero .lead {
+    font-size: 1rem;
+  }
+
+  .enterprise-finops-page .finops-hero .note {
+    padding-left: 34px;
+  }
+
+  .enterprise-finops-page .finops-hero .note::before {
+    margin-left: -34px;
+  }
+
+  .enterprise-finops-page .finops-button {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .enterprise-finops-page .finops-control-brief figcaption,
+  .enterprise-finops-page .finops-brief-flow,
+  .enterprise-finops-page .finops-control-brief > p {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .enterprise-finops-page .finops-section {
+    padding: 82px 0;
+  }
+
+  .enterprise-finops-page .finops-section h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .enterprise-finops-page .card,
+  .enterprise-finops-page .finops-trigger-grid .card,
+  .enterprise-finops-page #decisions .card,
+  .enterprise-finops-page .finops-output-grid .card,
+  .enterprise-finops-page #why-aics .card,
+  .enterprise-finops-page #buyer-committee .card,
+  .enterprise-finops-page #fit .card,
+  .enterprise-finops-page #engagement .card,
+  .enterprise-finops-page #procurement .card {
+    padding: 26px 22px;
+  }
+
+  .enterprise-finops-page .finops-trigger-grid .card {
+    padding-left: 60px;
+  }
+
+  .enterprise-finops-page .finops-trigger-grid .card::before {
+    left: 20px;
+  }
+
+  .enterprise-finops-page .finops-output-grid .card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 5px 12px;
+  }
+
+  .enterprise-finops-page #final-decision {
+    margin-inline: -1px;
+    padding: 40px 24px;
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enterprise-finops-page *,
+  .enterprise-finops-page *::before,
+  .enterprise-finops-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body.enterprise-finops-page {
+    --finops-muted: #c4d8df;
+    --finops-dim: #a9c1ca;
+    --finops-line: rgba(220, 246, 250, .34);
+    --finops-line-strong: rgba(117, 240, 227, .65);
+  }
+
+  .enterprise-finops-page .card,
+  .enterprise-finops-page .finops-control-brief,
+  .enterprise-finops-page #final-decision {
+    border-color: var(--finops-line-strong);
+  }
+}
+
+@media print {
+  body.enterprise-finops-page {
+    color: #111;
+    background: #fff;
+  }
+
+  .enterprise-finops-page [data-aics-navigation-mount],
+  .enterprise-finops-page .aics-global-footer,
+  .enterprise-finops-page .finops-hero-actions,
+  .enterprise-finops-page #final-decision .cta {
+    display: none !important;
+  }
+
+  .enterprise-finops-page .wrap.finops-shell {
+    width: 100%;
+  }
+
+  .enterprise-finops-page .finops-hero,
+  .enterprise-finops-page .finops-section,
+  .enterprise-finops-page #final-decision {
+    padding: 32px 0;
+    border-color: #bbb;
+    color: #111;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .enterprise-finops-page .finops-hero h1,
+  .enterprise-finops-page .finops-section h2,
+  .enterprise-finops-page .finops-section h3,
+  .enterprise-finops-page .finops-section p,
+  .enterprise-finops-page .finops-section li,
+  .enterprise-finops-page .finops-control-brief * {
+    color: #111;
+  }
+
+  .enterprise-finops-page .finops-control-brief,
+  .enterprise-finops-page .card,
+  .enterprise-finops-page .finops-grid {
+    border-color: #bbb;
+    background: #fff;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}

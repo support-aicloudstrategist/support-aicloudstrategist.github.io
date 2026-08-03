@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "services" / "cloud-finops" / "index.html"
+PHASE_TWO_CSS = ROOT / "css" / "enterprise-finops.css"
 
 
 def text_content(source):
@@ -32,6 +33,55 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
         cls.source = PAGE.read_text(encoding="utf-8")
         cls.text = text_content(cls.source)
         cls.contact = (ROOT / "contact.html").read_text(encoding="utf-8")
+
+    def test_phase_two_visual_system_is_page_scoped_and_external(self):
+        self.assertIn(
+            'href="/css/enterprise-finops.css?v=20260803-1"',
+            self.source,
+        )
+        self.assertNotRegex(self.source, r"<style\b")
+        css = PHASE_TWO_CSS.read_text(encoding="utf-8")
+        self.assertGreater(len(css), 12000)
+        for selector in [
+            "body.enterprise-finops-page",
+            ".enterprise-finops-page .finops-hero-grid",
+            ".enterprise-finops-page .finops-control-brief",
+            ".enterprise-finops-page .finops-control-stages",
+            ".enterprise-finops-page .finops-output-grid",
+            ".enterprise-finops-page #engagement",
+            ".enterprise-finops-page #final-decision",
+        ]:
+            self.assertIn(selector, css)
+
+    def test_phase_two_adds_semantic_executive_control_visual_without_fake_metrics(self):
+        hero = re.search(
+            r'<header\b[^>]*class="[^"]*finops-hero[^"]*"[^>]*>(.*?)</header>',
+            self.source,
+            flags=re.I | re.S,
+        )
+        assert hero is not None
+        self.assertIn('class="finops-hero-grid"', hero.group(1))
+        self.assertIn('<figure class="finops-control-brief"', hero.group(1))
+        self.assertIn('<figcaption', hero.group(1))
+        self.assertEqual(hero.group(1).count('class="finops-brief-stage"'), 4)
+        self.assertNotRegex(hero.group(1), r"\b\d+%\b|\$\d|£\d|€\d")
+
+    def test_visual_system_respects_accessibility_and_motion_preferences(self):
+        css = PHASE_TWO_CSS.read_text(encoding="utf-8")
+        self.assertIn(":focus-visible", css)
+        self.assertIn("@media (prefers-reduced-motion: reduce)", css)
+        self.assertIn("@media (prefers-contrast: more)", css)
+        self.assertIn("@media print", css)
+        self.assertIn('class="finops-skip-link" href="#main-content"', self.source)
+
+    def test_visual_hierarchy_preserves_phase_one_section_architecture(self):
+        expected = [
+            "decision-triggers", "economic-control", "economic-scope", "decisions",
+            "deliverables", "why-aics", "buyer-committee", "fit", "engagement",
+            "procurement", "connected-capabilities", "final-decision",
+        ]
+        actual = re.findall(r'<section\b[^>]*class="[^"]*finops-section[^"]*"[^>]*id="([^"]+)"', self.source)
+        self.assertEqual(actual, expected)
 
     def test_one_outcome_led_h1_and_context_preserving_hero_actions(self):
         h1s = re.findall(r"<h1\b[^>]*>(.*?)</h1>", self.source, flags=re.I | re.S)
