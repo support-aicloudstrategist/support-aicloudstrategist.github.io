@@ -722,6 +722,24 @@ body.enterprise-finops-page {
   margin-bottom: 5px;
 }
 
+.enterprise-finops-page .finops-evidence-action {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 24px 28px;
+  border: 1px solid var(--finops-line-strong);
+  background: linear-gradient(100deg, rgba(34, 102, 111, .2), rgba(5, 21, 30, .74));
+}
+
+.enterprise-finops-page .finops-evidence-action p {
+  max-width: 640px;
+  margin: 0;
+  color: var(--finops-muted);
+  font-size: .91rem;
+}
+
 /* Method authority: strong editorial split with restrained surfaces. */
 .enterprise-finops-page #why-aics > .lead {
   max-width: 900px;
@@ -1064,6 +1082,11 @@ body.enterprise-finops-page {
 
   .enterprise-finops-page #procurement .card:last-child {
     border-top: 0;
+  }
+
+  .enterprise-finops-page .finops-evidence-action {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .enterprise-finops-page #final-decision {

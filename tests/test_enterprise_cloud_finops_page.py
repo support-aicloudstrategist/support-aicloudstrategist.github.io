@@ -105,8 +105,8 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
         self.assertEqual(len(actions), 2)
         self.assertEqual(actions[0][0], "/contact.html?service=ai-finops-cloud-economics")
         self.assertEqual(text_content(actions[0][1]), "Request a Cloud & AI Economics Review")
-        self.assertEqual(actions[1][0], "#economic-control")
-        self.assertEqual(text_content(actions[1][1]), "See the economic control method")
+        self.assertEqual(actions[1][0], "/resources/cloud-ai-economics-decision-pack/")
+        self.assertEqual(text_content(actions[1][1]), "Inspect the Cloud & AI Economics Decision Pack")
 
     def test_customer_questions_are_answered_in_decision_order(self):
         required = [

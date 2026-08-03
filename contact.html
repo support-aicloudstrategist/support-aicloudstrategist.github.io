@@ -145,6 +145,11 @@
   .form select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 18px) center,calc(100% - 13px) center;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:36px;}
   .form select option{background:#06202b;color:var(--ink);}
   .form textarea{min-height:124px;resize:vertical;}
+  .form .service-qualification{margin:24px 0 4px;padding:22px 20px 20px;border:1px solid rgba(88,200,255,.28);border-radius:16px;background:rgba(3,14,20,.34);}
+  .form .service-qualification[hidden]{display:none;}
+  .form .service-qualification legend{padding:0 8px;color:var(--cyan);font-size:.78rem;font-weight:850;letter-spacing:.8px;text-transform:uppercase;}
+  .form .service-qualification .qualification-boundary{margin:0 0 16px;padding:12px 14px;border-left:3px solid var(--teal);background:rgba(37,230,200,.06);color:#cfe3ec;font-size:.82rem;line-height:1.5;}
+  .form .service-qualification textarea{min-height:92px;}
   .form button{margin-top:24px;width:100%;}
   .form-status{display:none;margin-top:16px;padding:13px 15px;border-radius:14px;border:1px solid rgba(37,230,200,.35);background:rgba(37,230,200,.09);color:#dffff9;font-size:.92rem;line-height:1.45;}
   .form-status.error{border-color:rgba(255,138,138,.5);background:rgba(255,93,93,.1);color:#ffe1e1;}
@@ -282,7 +287,7 @@
               <option value="enterprise-ai">Enterprise AI initiative — help me choose</option>
               <option value="production-ai-assurance">Production AI Assurance</option>
               <option value="ai-systems-agents">Enterprise AI Systems &amp; Agents</option>
-              <option value="ai-finops-cloud-economics">AI FinOps &amp; Cloud Economics</option>
+              <option value="ai-finops-cloud-economics">Enterprise FinOps Advisory — Cloud &amp; AI Economics</option>
               <option value="ai-security-sovereignty">AI Security, Compliance &amp; Sovereign Platforms</option>
               <option value="managed-ai-operations">Managed AI Platforms &amp; Operations</option>
               <option value="business-growth-systems">Business Growth Systems</option>
@@ -297,6 +302,48 @@
               <option value="production">Already in production</option>
               <option value="recovery">Recovering a stalled initiative</option>
             </select>
+            <fieldset id="finopsQualification" class="service-qualification" hidden>
+              <legend>Cloud &amp; AI Economics decision context</legend>
+              <p class="qualification-boundary">No billing files or credentials are requested here. Share only enough context to qualify the decision and appropriate stakeholders.</p>
+              <label for="economics_trigger">Primary decision or trigger</label>
+              <select id="economics_trigger" name="economics_trigger">
+                <option value="">Select the closest decision</option>
+                <option value="budget-forecast">Budget variance or forecast confidence</option>
+                <option value="allocation-ownership">Allocation or ownership gap</option>
+                <option value="commitment-sourcing">Provider commitment or commercial decision</option>
+                <option value="architecture">Architecture or platform economics</option>
+                <option value="ai-economics">AI, GPU, token or inference economics</option>
+                <option value="value-verification">Realised-value verification</option>
+              </select>
+              <label for="platforms_in_scope">Cloud and AI platforms in scope</label>
+              <input id="platforms_in_scope" name="platforms_in_scope" type="text" maxlength="400" placeholder="For example: AWS, Azure, GCP, Kubernetes, model or GPU providers" />
+              <label for="ai_workloads_material">Are AI workloads economically material?</label>
+              <select id="ai_workloads_material" name="ai_workloads_material">
+                <option value="not-sure">Not sure yet</option>
+                <option value="yes">Yes</option>
+                <option value="emerging">Emerging or planned</option>
+                <option value="no">No — cloud economics only</option>
+              </select>
+              <label for="decision_timeline">Decision date or planning window</label>
+              <input id="decision_timeline" name="decision_timeline" type="text" maxlength="240" placeholder="For example: before renewal, next planning quarter, or within 90 days" />
+              <label for="finops_capability">Current FinOps capability</label>
+              <select id="finops_capability" name="finops_capability">
+                <option value="unknown">Not established or not sure</option>
+                <option value="distributed">Distributed across cloud, finance and engineering</option>
+                <option value="practitioner">Dedicated practitioner or small team</option>
+                <option value="mature">Established cross-functional practice</option>
+              </select>
+              <label for="spend_band">Approximate monthly technology spend <span aria-hidden="true">(optional)</span></label>
+              <select id="spend_band" name="spend_band">
+                <option value="not-disclosed">Prefer not to disclose</option>
+                <option value="under-100k">Under USD 100k equivalent</option>
+                <option value="100k-500k">USD 100k–500k equivalent</option>
+                <option value="500k-2m">USD 500k–2m equivalent</option>
+                <option value="over-2m">Over USD 2m equivalent</option>
+              </select>
+              <label for="access_constraints">Known geography, access or procurement constraints <span aria-hidden="true">(optional)</span></label>
+              <textarea id="access_constraints" name="access_constraints" maxlength="800" placeholder="No sensitive data: note residency, access, security, NDA or procurement constraints only."></textarea>
+            </fieldset>
             <label for="contact_message">Initiative brief</label>
             <textarea id="contact_message" name="message" placeholder="What outcome matters, what exists today, what decision is blocked, and what timeline are you working to?"></textarea>
             <button id="contactSubmitButton" class="btn btn-primary" type="submit">Send initiative enquiry <span class="arrow">→</span></button>
@@ -367,6 +414,18 @@
   if (requestedService && serviceSelect && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
     serviceSelect.value = requestedService;
   }
+  const finopsQualification = document.getElementById('finopsQualification');
+  function syncFinOpsQualification() {
+    const active = serviceSelect && serviceSelect.value === 'ai-finops-cloud-economics';
+    if (!finopsQualification) return;
+    finopsQualification.hidden = !active;
+    finopsQualification.setAttribute('aria-hidden', String(!active));
+    finopsQualification.querySelectorAll('input, select, textarea').forEach(field => {
+      field.disabled = !active;
+    });
+  }
+  if (serviceSelect) serviceSelect.addEventListener('change', syncFinOpsQualification);
+  syncFinOpsQualification();
   const attribution = window.aicsAttribution || {
     landing_page: location.origin + location.pathname,
     referrer: '',
@@ -400,7 +459,14 @@
       `Service: ${payload.service || 'not specified'}`,
       `Company: ${payload.company || 'not provided'}`,
       payload.role ? `Role: ${payload.role}` : '',
-      `Stage: ${payload.stage || 'not specified'}`
+      `Stage: ${payload.stage || 'not specified'}`,
+      payload.economics_trigger ? `Economic decision: ${payload.economics_trigger}` : '',
+      payload.platforms_in_scope ? `Platforms: ${payload.platforms_in_scope}` : '',
+      payload.ai_workloads_material ? `AI workloads material: ${payload.ai_workloads_material}` : '',
+      payload.decision_timeline ? `Decision timeline: ${payload.decision_timeline}` : '',
+      payload.finops_capability ? `FinOps capability: ${payload.finops_capability}` : '',
+      payload.spend_band ? `Spend band: ${payload.spend_band}` : '',
+      payload.access_constraints ? `Access constraints: ${payload.access_constraints}` : ''
     ].filter(Boolean).join(' | ');
     const requestPayload = {
       name: payload.name,
@@ -436,6 +502,7 @@
       if (requestedService && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
         serviceSelect.value = requestedService;
       }
+      syncFinOpsQualification();
       if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Success', { props: { page: location.pathname, service: payload.service || '' } });
     } catch (error) {
       contactError.textContent = 'We could not submit your enquiry. Please retry, email contact@aicloudstrategist.com, or use WhatsApp below.';
