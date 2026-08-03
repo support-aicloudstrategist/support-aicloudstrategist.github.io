@@ -31,6 +31,7 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
     def setUpClass(cls):
         cls.source = PAGE.read_text(encoding="utf-8")
         cls.text = text_content(cls.source)
+        cls.contact = (ROOT / "contact.html").read_text(encoding="utf-8")
 
     def test_one_outcome_led_h1_and_context_preserving_hero_actions(self):
         h1s = re.findall(r"<h1\b[^>]*>(.*?)</h1>", self.source, flags=re.I | re.S)
@@ -64,7 +65,9 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
             ("economic-scope", "One economic system across cloud and AI"),
             ("decisions", "Decisions this service is designed to support"),
             ("deliverables", "Decision evidence your teams can use"),
+            ("why-aics", "Why AICloudStrategist for this decision"),
             ("buyer-committee", "Built for a cross-functional decision"),
+            ("fit", "Where Enterprise FinOps Advisory creates the most value"),
             ("engagement", "Start with a decision baseline, not a free audit"),
             ("procurement", "Designed for enterprise diligence"),
             ("connected-capabilities", "Connected Enterprise AI capabilities"),
@@ -151,8 +154,52 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
             "confidentiality",
             "decision ownership",
             "no guaranteed savings",
+            "accounting policy",
+            "product-value definitions",
+            "vendor authority",
+            "final commitment approval",
         ]:
             self.assertIn(phrase, procurement)
+
+    def test_method_authority_and_fit_boundaries_are_explicit(self):
+        why = text_content(section(self.source, "why-aics")).lower()
+        for phrase in [
+            "vendor-neutral",
+            "economic evidence",
+            "cloud and ai",
+            "decision boundaries",
+            "verified profiles",
+        ]:
+            self.assertIn(phrase, why)
+
+        fit = text_content(section(self.source, "fit")).lower()
+        for phrase in [
+            "material to budget, margin or investment",
+            "cross-functional ownership",
+            "one-off bill cleanup",
+            "reseller discount",
+            "accounting, tax or legal opinion",
+            "24/7 operations",
+        ]:
+            self.assertIn(phrase, fit)
+
+    def test_aics_facilitates_evidence_while_client_retains_final_authority(self):
+        connected = text_content(section(self.source, "connected-capabilities")).lower()
+        self.assertIn("owns and facilitates the economic evidence layer", connected)
+        self.assertIn("client retains final decision authority", connected)
+        self.assertNotIn("finops owns the economic decision system", connected)
+
+    def test_signature_terms_are_defined_before_they_are_used_as_outputs(self):
+        method = text_content(section(self.source, "economic-control")).lower()
+        self.assertIn("economic leakage map identifies", method)
+        self.assertIn("spend-to-value topology connects", method)
+        self.assertLess(method.index("economic leakage map identifies"), method.index("cloud economics ledger"))
+
+    def test_contact_route_accepts_the_service_query_value(self):
+        self.assertRegex(
+            self.contact,
+            r'<option value="ai-finops-cloud-economics">[^<]+</option>',
+        )
 
     def test_connected_capabilities_preserve_portfolio_boundaries(self):
         block = section(self.source, "connected-capabilities")
@@ -173,7 +220,8 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
         for href, label in expected.items():
             self.assertEqual(links.get(href), label)
         copy = text_content(block).lower()
-        self.assertIn("finops owns the economic decision system", copy)
+        self.assertIn("owns and facilitates the economic evidence layer", copy)
+        self.assertIn("client retains final decision authority", copy)
         self.assertIn("stand-alone engagement", copy)
 
     def test_legacy_low_trust_language_is_removed(self):
@@ -201,6 +249,7 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
         self.assertNotRegex(lowered, r"(?<!no )guaranteed savings")
 
     def test_route_shell_and_semantic_page_boundaries_are_preserved(self):
+        self.assertIn("Enterprise FinOps Advisory", self.text)
         self.assertIn('<body class="enterprise-finops-page">', self.source)
         self.assertEqual(len(re.findall(r"<main\b", self.source, flags=re.I)), 1)
         self.assertIn('<main id="main-content">', self.source)
