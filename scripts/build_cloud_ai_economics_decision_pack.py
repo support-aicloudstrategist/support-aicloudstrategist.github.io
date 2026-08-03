@@ -86,7 +86,7 @@ def build_html() -> str:
           <article class="pack-panel pack-confidence"><h3>Confidence: moderate</h3><p>Provider totals are 96% reconciled in the synthetic source register. Product allocation is 72% covered; the successful-outcome denominator is 64% evidenced and still requires owner acceptance.</p><ul><li>Allocated product consumption: USD 1.78m monthly</li><li>Shared platform pool: USD 0.44m monthly</li><li>Unallocated evidence backlog: USD 0.25m monthly</li></ul></article>
         </div>
         <div class="pack-register"><h3>Source register</h3><div class="pack-register-row"><span>AWS Cost and Usage Report</span><strong>Observed</strong><small>USD 1.12m monthly · synthetic</small></div><div class="pack-register-row"><span>Azure Cost Management export</span><strong>Observed</strong><small>USD 0.62m monthly · synthetic</small></div><div class="pack-register-row"><span>Google Cloud billing export</span><strong>Observed</strong><small>USD 0.31m monthly · synthetic</small></div><div class="pack-register-row"><span>Kubernetes allocation export</span><strong>Qualified</strong><small>USD 0.71m provider-cost subset</small></div><div class="pack-register-row"><span>AI provider usage export</span><strong>Qualified</strong><small>USD 0.42m monthly · synthetic</small></div></div>
-        <aside class="pack-callout" aria-label="Unresolved evidence"><strong>Unresolved evidence</strong><p>Customer-level allocation, AI task-success denominator, commitment portability and finance acceptance remain open. No value claim advances until the relevant owner approves the evidence.</p></aside>'''),
+        <div class="pack-callout" role="note" aria-label="Unresolved evidence"><strong>Unresolved evidence</strong><p>Customer-level allocation, AI task-success denominator, commitment portability and finance acceptance remain open. No value claim advances until the relevant owner approves the evidence.</p></div>'''),
         output_section(2, OUTPUTS[1], "Accountability · allocation", '''
         <ul class="ownership-map" aria-label="Representative allocation and ownership path">
           <li><span>Provider</span><strong>Cloud and AI vendors</strong><small>Invoice and usage origin</small></li><li class="map-arrow" aria-hidden="true">→</li>
@@ -105,17 +105,17 @@ def build_html() -> str:
         <p class="pack-decision-note">The pack does not present a universal unit cost. The unit is only valid after product, finance and technical owners accept its definition and constraints.</p>'''),
         output_section(4, OUTPUTS[3], "Guardrails · decision admissibility", '''
         <div class="constraint-grid"><article><span>Quality</span><strong>Task success remains above the agreed acceptance threshold</strong><small>Owner: product or AI programme</small></article><article><span>Reliability</span><strong>Availability and recovery objectives remain protected</strong><small>Owner: platform or service</small></article><article><span>Security</span><strong>Controls, residency and access boundaries are not traded away</strong><small>Owner: security and risk</small></article><article><span>Commercial</span><strong>Contract, lock-in and exit exposure are visible before approval</strong><small>Owner: procurement and finance</small></article></div>
-        <aside class="pack-callout" aria-label="Decision rule"><strong>Decision rule</strong><p>An option that reduces theoretical spend but breaches an accepted quality, reliability, security or commercial constraint is not an admissible optimisation.</p></aside>'''),
+        <div class="pack-callout" role="note" aria-label="Decision rule"><strong>Decision rule</strong><p>An option that reduces theoretical spend but breaches an accepted quality, reliability, security or commercial constraint is not an admissible optimisation.</p></div>'''),
         output_section(5, OUTPUTS[4], "Decision portfolio · accountable action", '''
         <div class="pack-register decision-register"><div class="pack-register-row"><span>Shared Kubernetes platform</span><strong>Optimise safely</strong><small>Qualified · owner assigned · reliability guardrail open</small></div><div class="pack-register-row"><span>AI routing policy</span><strong>Rearchitect</strong><small>Observed · quality comparison required</small></div><div class="pack-register-row"><span>Database commitment</span><strong>Hold</strong><small>Demand confidence below approval boundary</small></div><div class="pack-register-row"><span>Legacy analytics workload</span><strong>Retire</strong><small>Qualified · business owner confirmation required</small></div><div class="pack-register-row"><span>Customer-facing inference</span><strong>Scale</strong><small>Unit economics acceptable · capacity decision pending</small></div></div>
         <p class="pack-decision-note">Representative decisions show the method. They are not recommendations for any real estate and do not imply realised outcomes.</p>'''),
         output_section(6, OUTPUTS[5], "Planning · scenario comparison", '''
         <table class="pack-table scenario-table" tabindex="0" aria-label="Representative forecast and scenario comparison"><thead><tr><th>Scenario</th><th>Quantified assumption</th><th>Monthly planning range</th><th>Variance from base</th><th>Decision consequence</th></tr></thead><tbody><tr><td>Base</td><td>Approved product forecast</td><td>USD 2.47m</td><td>Reference</td><td>Maintain flexibility</td></tr><tr><td>Growth</td><td>Successful-task demand +18%</td><td>USD 2.74m–2.82m after qualified decisions</td><td>Growth counterfactual: USD 2.91m monthly</td><td>Stage commitment after evidence</td></tr><tr><td>Downside</td><td>Demand −15%</td><td>USD 2.18m–2.28m</td><td>−8% to −12%</td><td>Preserve exit options</td></tr><tr><td>Quality shift</td><td>Accepted quality 90% → 94%</td><td>USD 2.55m–2.63m</td><td>+3% to +6%</td><td>Revalidate AI architecture</td></tr></tbody></table>
         <div class="pack-split"><article class="pack-panel"><h3>Assumptions and exclusions</h3><ul><li>No tax, accounting or FX treatment.</li><li>No provider-price forecast.</li><li>No revenue or savings guarantee.</li><li>No production change authority.</li></ul></article><article class="pack-panel"><h3>Confidence boundary</h3><p>Scenario confidence depends on workload seasonality, demand ownership, contract terms, architecture feasibility and accepted business units.</p></article></div>
-        <aside class="pack-callout" aria-label="Synthetic expected value range"><strong>Expected-value range: USD 0.09m–0.17m monthly cost avoidance</strong><p>Qualified decision range: USD 2.74m–2.82m monthly. Low-confidence synthetic range against the USD 2.91m growth counterfactual, only if the qualified decisions are approved and quality, reliability and security constraints remain satisfied. It is not realised value or a client savings claim.</p></aside>'''),
+        <div class="pack-callout" role="note" aria-label="Synthetic expected value range"><strong>Expected-value range: USD 0.09m–0.17m monthly cost avoidance</strong><p>Qualified decision range: USD 2.74m–2.82m monthly. Low-confidence synthetic range against the USD 2.91m growth counterfactual, only if the qualified decisions are approved and quality, reliability and security constraints remain satisfied. It is not realised value or a client savings claim.</p></div>'''),
         output_section(7, OUTPUTS[6], "Commercial exposure · commitment", '''
         <div class="commitment-boundary"><div><span>Demand confidence</span><strong>Is material usage sufficiently stable?</strong></div><div><span>Coverage</span><strong>Which usage should remain flexible?</strong></div><div><span>Utilisation</span><strong>Can the organisation operate the commitment?</strong></div><div><span>Downside</span><strong>What happens if demand or architecture changes?</strong></div><div><span>Authority</span><strong>Who can approve the commercial exposure?</strong></div></div>
-        <aside class="pack-callout pack-warning" aria-label="Representative commitment disposition"><strong>Representative disposition: hold</strong><p>Commitment approval is withheld until demand confidence, portability and authorised owner evidence are complete. AICS does not broker, resell or automatically recommend provider commitments.</p></aside>'''),
+        <div class="pack-callout pack-warning" role="note" aria-label="Representative commitment disposition"><strong>Representative disposition: hold</strong><p>Commitment approval is withheld until demand confidence, portability and authorised owner evidence are complete. AICS does not broker, resell or automatically recommend provider commitments.</p></div>'''),
         output_section(8, OUTPUTS[7], "Execution · 90-day portfolio", '''
         <div class="action-portfolio">
           <article data-action-record="allocation-policy"><span>D+15</span><h3>Approve allocation policy</h3><p>Owner: Technology Finance<br>Dependency: product and shared-platform mapping<br>Decision date: day 15</p><small>Exit: 72% coverage policy accepted or rejected</small></article>
@@ -132,7 +132,7 @@ def build_html() -> str:
         <div class="pack-split"><article class="pack-panel"><h3>Synthetic planning record—not realised value</h3><ul class="value-entry-fields"><li><strong>Action:</strong> retire the representative legacy analytics workload</li><li><strong>Baseline: USD 86k monthly</strong> · synthetic 90-day observed run-rate</li><li><strong>Counterfactual: USD 84k–90k monthly</strong> · seasonality range if no action occurs</li><li><strong>Expected-value range: USD 62k–74k monthly cashable reduction</strong> · before one-time migration cost of USD 18k–26k</li><li><strong>Evidence state: qualified—not implemented</strong></li><li><strong>Finance acceptance: pending</strong></li><li><strong>Persistence window: 90 days after implementation</strong></li></ul></article><article class="pack-panel"><h3>Evidence record and counterfactual</h3><p>Source IDs: CUR-SYN-01, workload inventory SYN-WL-17 and business-owner confirmation pending. The counterfactual uses the synthetic workload's trailing range; it is not an external benchmark.</p><p>An opportunity estimate is not delivered value. No amount advances to finance-accepted until implementation, measurement and persistence evidence exist.</p></article></div>'''),
         output_section(10, OUTPUTS[9], "Executive brief · unresolved approvals", '''
         <div class="executive-brief"><article><span>Decision now</span><h3>Approve evidence resolution and bounded technical qualification</h3><p>Do not approve a broad commitment or claim value yet.</p></article><article><span>Why</span><h3>Material ownership and unit-evidence gaps remain</h3><p>The estate can be governed without pretending uncertainty has disappeared.</p></article><article><span>Owners required</span><h3>CTO/CIO, finance, FinOps, architecture, product and procurement</h3><p>Each retains the authority defined for its decision boundary.</p></article><article><span>Next gate</span><h3>Decision workshop with approved source and constraint register</h3><p>Outcome may be action, hold, referral or no further work.</p></article></div>
-        <aside class="pack-callout" aria-label="First conversation boundary"><strong>First conversation boundary</strong><p>No billing files, credentials or work email are required to inspect this pack. A review conversation validates fit, decision urgency, stakeholders and scope before any data-access agreement.</p></aside>'''),
+        <div class="pack-callout" role="note" aria-label="First conversation boundary"><strong>First conversation boundary</strong><p>No billing files, credentials or work email are required to inspect this pack. A review conversation validates fit, decision urgency, stakeholders and scope before any data-access agreement.</p></div>'''),
     ]
 
     toc = "".join(f'<a href="#output-{i:02d}"><span>{i:02d}</span>{escape(title)}</a>' for i, title in enumerate(OUTPUTS, 1))
@@ -144,7 +144,59 @@ def build_html() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cloud &amp; AI Economics Decision Pack | AICloudStrategist</title>
 <meta name="description" content="Inspect a clearly labelled synthetic Cloud and AI Economics decision dossier: baseline, ownership, unit economics, commitments, decision records and value verification.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="{PACK_URL}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AICloudStrategist">
+<meta property="og:title" content="Cloud &amp; AI Economics Decision Pack">
+<meta property="og:description" content="Inspect ten connected, explicitly synthetic decision outputs before sharing sensitive cloud or AI data.">
+<meta property="og:url" content="{PACK_URL}">
+<meta property="og:image" content="https://aicloudstrategist.com/assets/brand/aics-logo.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloud &amp; AI Economics Decision Pack">
+<meta name="twitter:description" content="An inspectable representative dossier for accountable cloud and AI economic decisions.">
+<meta name="twitter:image" content="https://aicloudstrategist.com/assets/brand/aics-logo.svg">
+<script type="application/ld+json">{{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{
+      "@type": "WebPage",
+      "@id": "{PACK_URL}#webpage",
+      "url": "{PACK_URL}",
+      "name": "Cloud & AI Economics Decision Pack",
+      "description": "An inspectable, explicitly synthetic Cloud and AI Economics decision dossier.",
+      "isPartOf": {{"@id": "https://aicloudstrategist.com/#website"}},
+      "breadcrumb": {{"@id": "{PACK_URL}#breadcrumb"}},
+      "mainEntity": {{"@id": "{PACK_URL}#work"}},
+      "inLanguage": "en"
+    }},
+    {{
+      "@type": "BreadcrumbList",
+      "@id": "{PACK_URL}#breadcrumb",
+      "itemListElement": [
+        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicloudstrategist.com/"}},
+        {{"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://aicloudstrategist.com/resources/"}},
+        {{"@type": "ListItem", "position": 3, "name": "Cloud & AI Economics Decision Pack", "item": "{PACK_URL}"}}
+      ]
+    }},
+    {{
+      "@type": "CreativeWork",
+      "@id": "{PACK_URL}#work",
+      "name": "Cloud & AI Economics Decision Pack",
+      "url": "{PACK_URL}",
+      "abstract": "A representative dossier built entirely from synthetic data; not client work, a benchmark, a case study or a savings claim.",
+      "creator": {{"@id": "https://aicloudstrategist.com/#organization"}},
+      "isPartOf": {{"@id": "{SERVICE_URL}#service"}},
+      "encoding": {{
+        "@type": "MediaObject",
+        "encodingFormat": "application/pdf",
+        "contentUrl": "https://aicloudstrategist.com/downloads/cloud-ai-economics-decision-pack.pdf"
+      }},
+      "inLanguage": "en"
+    }}
+  ]
+}}</script>
 <link rel="stylesheet" href="/css/site-navigation.css?v=premium-shell-20260727">
 <link rel="stylesheet" href="/css/cloud-ai-economics-decision-pack.css?v=20260803-1">
 <script defer src="/js/site-navigation.js?v=premium-shell-20260727"></script>

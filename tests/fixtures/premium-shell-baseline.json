@@ -998,7 +998,7 @@
       "canonical": "https://aicloudstrategist.com/resources/cloud-ai-economics-decision-pack/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "48abc97ac168aeff3cb99198c751b5181c41edfff91019a85ad4b90af1b05a63",
+      "main_sha256": "8396cba9d4ede3aee27b89d28194717bbf001b9b1afa1fa99a0a0cdc14a87d5d",
       "title": "Cloud &amp; AI Economics Decision Pack | AICloudStrategist"
     },
     "resources/cloud-cost-optimization-finops-control/index.html": {
@@ -1292,7 +1292,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c6922bbfd6fe81a644e2f3ad70c2a4c66b27284dae09c908d8b82d939be75d02",
+      "main_sha256": "4174c5944038f0949d77cd6f9f4f1fbf767321dcc4c936121836e987a834998d",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1636,7 +1636,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
-      "title": "Cloud FinOps &amp; Cost Optimization Services | AICloudStrategist"
+      "title": "Enterprise FinOps Advisory \u2014 Cloud &amp; AI Economics"
     },
     "services/cloud-security/index.html": {
       "canonical": "https://aicloudstrategist.com/services/cloud-security/",
@@ -1670,7 +1670,7 @@
       "canonical": "https://aicloudstrategist.com/services/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "586c05808bfe12c6c4d9a9a5b3378d15fbc46be6f2cc09f417006c4f29f1d840",
+      "main_sha256": "a5de4f0d457678c8a8bf223d7156cf021ea5b336edb3db9604e4911c89d285e5",
       "title": "AICloudStrategist Services"
     },
     "services/lead-generation-seo/index.html": {

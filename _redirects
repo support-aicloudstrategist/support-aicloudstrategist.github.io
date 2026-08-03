@@ -16,10 +16,10 @@
 /papers/* /resources 301
 /audit.html /dpdp-readiness-assessment 301
 /book.html /dpdp-readiness-assessment 301
-/cloud-cost /resources 301
-/cloud-cost/* /resources 301
-/finops /resources 301
-/finops/* /resources 301
+/cloud-cost /services/cloud-finops/ 301
+/cloud-cost/* /services/cloud-finops/ 301
+/finops /services/cloud-finops/ 301
+/finops/* /services/cloud-finops/ 301
 /papers/state-of-cloud-cost-india-2026.pdf /resources 301
 /website-development-for-small-business-india /website-lead-capture-sprint 301
 /website-design-for-factory-india /website-lead-capture-sprint 301
@@ -55,7 +55,9 @@
 /dpdp-for-clinics/ /industries/clinics/ 301
 /dpdp-for-diagnostic-labs/ /industries/diagnostic-labs/ 301
 /healthcare-growthos/ /industries/clinics/ 301
-/ai-cloud-cost-review/ /services/cloud-finops/cloud-cost-review/ 301
+/cloud-trust-finops/ /services/cloud-finops/ 301
+/services/cloud-finops/cloud-cost-review/ /services/cloud-finops/ 301
+/ai-cloud-cost-review/ /services/cloud-finops/ 301
 /ai-cloud-cost-efficiency/ /services/cloud-finops/ 301
 # Legacy extensionless URL compatibility found during accelerated SEO validation
 /operations-automation-sprint /services/workflow-automation/operations-automation-sprint/ 301
