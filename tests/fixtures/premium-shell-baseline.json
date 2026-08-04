@@ -451,8 +451,8 @@
     "contact.html": {
       "canonical": "https://aicloudstrategist.com/contact",
       "forms": 1,
-      "forms_sha256": "d813ee3b1c768c81250d2705a8c93c512a7aebeea9d7f9e261a44723cbc045e0",
-      "main_sha256": "fb62bd17bdc2c08f68f0941fd48dd7053db19557944802d138fea60017704aa6",
+      "forms_sha256": "f33364c2e9ba21a43de48b86466343accb70764f759b344ebe1a1c0640bd8314",
+      "main_sha256": "3feff7108b0170f86d4837eaed59d3b7622fc5b25c51be36ce0daef96cdcc052",
       "title": "Discuss an AI Initiative | AICloudStrategist"
     },
     "contact/index.html": {
