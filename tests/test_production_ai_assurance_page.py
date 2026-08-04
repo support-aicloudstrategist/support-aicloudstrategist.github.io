@@ -228,8 +228,9 @@ class ProductionAiAssurancePageTests(unittest.TestCase):
         self.assertIn("when required", copy)
 
     def test_assets_and_accessibility_contracts(self):
-        self.assertIn('<body class="paa-page">', self.source)
+        self.assertIn('<body class="paa-page aics-brand-system">', self.source)
         self.assertIn('<link rel="stylesheet" href="/css/production-ai-assurance.css?v=20260727-2">', self.source)
+        self.assertIn('<link rel="stylesheet" href="/css/enterprise-brand-system.css?v=20260804-v1">', self.source)
         self.assertIn('<script src="/js/production-ai-assurance.js?v=20260727-1" defer></script>', self.source)
         self.assertTrue(STYLES.exists(), "Dedicated page stylesheet is missing")
         self.assertTrue(self.script, "Route-level accessibility script is missing")

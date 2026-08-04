@@ -1,0 +1,61 @@
+{
+  "baseline_commit": "b190206ca097d6dbf07111a28ca552d37f0e5b50",
+  "pages": {
+    "contact.html": {
+      "main_sha256": "a7038a121580ec5fff4acccb11af431216659980622598ed27a4d09df8411cc2",
+      "body_inner_sha256": "e1ef33d56a6414f3e723d562a6f96d3294a173509a9931d05749db51a2756825",
+      "forms_sha256": "f33364c2e9ba21a43de48b86466343accb70764f759b344ebe1a1c0640bd8314",
+      "executable_inline_scripts_sha256": "0f17b9da12b67f90e760ae65613d6015587d1815279a46bffae8be044959e4d8",
+      "seo_sha256": "891f25113e9caf9ce79f2bb9885124f6498ebafb3207923d364513fb790a003a"
+    },
+    "services/cloud-finops/index.html": {
+      "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
+      "body_inner_sha256": "076d9a965707a0d4eb46b0db730e7d8fc00b8c3f2e4a9ec9289c0ed594c5c1fe",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "32f9b438b4b8d2a49b57d776f1ee939a2289b80d4a6382d3b76110077b19dc54"
+    },
+    "resources/cloud-ai-economics-decision-pack/index.html": {
+      "main_sha256": "8396cba9d4ede3aee27b89d28194717bbf001b9b1afa1fa99a0a0cdc14a87d5d",
+      "body_inner_sha256": "628457d8994bf3a4710c9ec5a976833c92af6f2db49d240b60a60d42b19f7016",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "567a6c18e68905541888e1cfadd1f77c2da3528008061c36ba384177ba90c7b8"
+    },
+    "services/ai-automation/index.html": {
+      "main_sha256": "2b54f69ae80a39b15fd7e7eedd03af4159cd9a35cbb9525b62f0c69af1056851",
+      "body_inner_sha256": "c879b06f600f43166dbe85e33d5e8fdef265ac7cb6fbe484d7d75737f07f2ce4",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "0a0d91ce41c5936addfcee5afdb27b92a1b001e16f1155ba362885d2aceff431"
+    },
+    "services/ai-mlops/index.html": {
+      "main_sha256": "96e7de6e470ae47c4ef9d66217f9340e5637a8472bc062b35e371a928da8838a",
+      "body_inner_sha256": "b20b41580367eade5fa6f938beacb5af03d485e054c44a4142321237c458910e",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "3f7b193ca8310640676f50f7f11e84b7c5e726b6f1a66f5f88fff39437910004"
+    },
+    "services/cloud-security/index.html": {
+      "main_sha256": "c73847dc87626410a50bcc700a55e056621246c3118675d15ad49e8981e1d6df",
+      "body_inner_sha256": "f3d197999ea19d8d139eb9d9846b907d515e6176a7de2248b117372f332de2e7",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "5f3400a0bee8eb435618c166342adf18efa94eb2ab71b8a2452cb1aeaa177260"
+    },
+    "services/devops-observability/index.html": {
+      "main_sha256": "6e002c130618cb38766c75d6372ed39f60e0d0fd3a60db957467dd2a9a188d4d",
+      "body_inner_sha256": "5d189b7903fb21e40679a90314ca823241990b5ed66cff28cec1428731b47d24",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "a7f4d11e6fbbd9dcd0b186a2272423160c75580242bebb89cb716bbd4aee6d8a"
+    },
+    "trust-security/index.html": {
+      "main_sha256": "df3cb42bc8f53d76b7a16f7590448189d589c50238da05850309c010357c5def",
+      "body_inner_sha256": "40c6f29b5e981f7d78196ac21a0fbde99b88c35a1db58e3ca16fc20892abd9d3",
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable_inline_scripts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seo_sha256": "e1d2e23c4154dae08dde82545eb041b230f3daad986817ad4387789186e6d279"
+    }
+  }
+}

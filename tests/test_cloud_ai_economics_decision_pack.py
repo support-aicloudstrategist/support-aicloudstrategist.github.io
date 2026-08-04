@@ -143,9 +143,10 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
         self.assertTrue(PACK_BUILDER.exists(), "Decision Pack PDF builder must exist")
 
     def test_pack_uses_a_scoped_static_accessible_visual_system(self):
-        self.assertIn('<body class="economics-pack-page">', self.pack)
+        self.assertIn('<body class="economics-pack-page aics-brand-system">', self.pack)
         self.assertIn('class="pack-skip-link" href="#main-content"', self.pack)
         self.assertIn('href="/css/cloud-ai-economics-decision-pack.css?v=20260803-1"', self.pack)
+        self.assertIn('href="/css/enterprise-brand-system.css?v=20260804-v1"', self.pack)
         self.assertTrue(PACK_CSS.exists())
         css = PACK_CSS.read_text(encoding="utf-8") if PACK_CSS.exists() else ""
         self.assertIn(".economics-pack-page", css)
