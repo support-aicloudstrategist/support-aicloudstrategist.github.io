@@ -108,14 +108,17 @@ class SeoFocusTests(unittest.TestCase):
                 self.assertIsNotNone(canonical, f"missing canonical for {path}")
                 self.assertEqual(canonical.group(1), f"https://aicloudstrategist.com{path}")
 
-    def test_cloud_finops_landing_page_consolidates_search_signals_without_redirecting(self):
+    def test_cloud_finops_legacy_landing_page_consolidates_to_authority_route(self):
         html = (ROOT / "cloud-trust-finops" / "index.html").read_text(encoding="utf-8")
         redirects = (ROOT / "_redirects").read_text(encoding="utf-8")
         self.assertIn(
             '<link rel="canonical" href="https://aicloudstrategist.com/services/cloud-finops/">',
             html,
         )
-        self.assertNotRegex(redirects, r"(?m)^/cloud-trust-finops/\s+")
+        self.assertRegex(
+            redirects,
+            r"(?m)^/cloud-trust-finops/\s+/services/cloud-finops/\s+301$",
+        )
 
     def test_simulated_cases_and_internal_status_pages_are_noindex(self):
         simulated = sorted((ROOT / "case-studies").glob("simulated-*/index.html"))

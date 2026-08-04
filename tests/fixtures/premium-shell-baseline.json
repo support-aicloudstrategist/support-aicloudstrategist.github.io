@@ -451,8 +451,8 @@
     "contact.html": {
       "canonical": "https://aicloudstrategist.com/contact",
       "forms": 1,
-      "forms_sha256": "7b2eae36c43160aaf666d26cc9cd553ea5609bff744613547b6b337b0ee521c0",
-      "main_sha256": "e10c5f8afbe976750cb906c3a169a23f2858268ab46d9fff12e233a5f6cf88d3",
+      "forms_sha256": "d813ee3b1c768c81250d2705a8c93c512a7aebeea9d7f9e261a44723cbc045e0",
+      "main_sha256": "fb62bd17bdc2c08f68f0941fd48dd7053db19557944802d138fea60017704aa6",
       "title": "Discuss an AI Initiative | AICloudStrategist"
     },
     "contact/index.html": {
@@ -994,6 +994,13 @@
       "main_sha256": "bea61c0a18f28d750ee0f38b782f3c72e619174ea5a2801eac6524fd660a9735",
       "title": "Cloud and AI Cost Waste Register Template for US SaaS Teams | AICloudStrategist"
     },
+    "resources/cloud-ai-economics-decision-pack/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/cloud-ai-economics-decision-pack/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "8396cba9d4ede3aee27b89d28194717bbf001b9b1afa1fa99a0a0cdc14a87d5d",
+      "title": "Cloud &amp; AI Economics Decision Pack | AICloudStrategist"
+    },
     "resources/cloud-cost-optimization-finops-control/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/cloud-cost-optimization-finops-control/",
       "forms": 0,
@@ -1285,7 +1292,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c6922bbfd6fe81a644e2f3ad70c2a4c66b27284dae09c908d8b82d939be75d02",
+      "main_sha256": "4174c5944038f0949d77cd6f9f4f1fbf767321dcc4c936121836e987a834998d",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1628,8 +1635,8 @@
       "canonical": "https://aicloudstrategist.com/services/cloud-finops/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "0cf4cb871656dbd9b09aa55f5368cd21c89f541ad284b10e5ff854cf0df1c489",
-      "title": "Cloud FinOps &amp; Cost Optimization Services | AICloudStrategist"
+      "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
+      "title": "Enterprise FinOps Advisory \u2014 Cloud &amp; AI Economics"
     },
     "services/cloud-security/index.html": {
       "canonical": "https://aicloudstrategist.com/services/cloud-security/",
@@ -1663,7 +1670,7 @@
       "canonical": "https://aicloudstrategist.com/services/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "586c05808bfe12c6c4d9a9a5b3378d15fbc46be6f2cc09f417006c4f29f1d840",
+      "main_sha256": "a5de4f0d457678c8a8bf223d7156cf021ea5b336edb3db9604e4911c89d285e5",
       "title": "AICloudStrategist Services"
     },
     "services/lead-generation-seo/index.html": {
