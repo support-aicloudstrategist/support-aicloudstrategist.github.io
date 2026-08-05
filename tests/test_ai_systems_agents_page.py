@@ -277,9 +277,8 @@ class AiSystemsAgentsPageTests(unittest.TestCase):
         self.assertNotRegex(self.source, r'<img\b[^>]*src="https?://')
 
     def test_page_assets_are_dedicated_scoped_and_resilient(self):
-        self.assertIn('<body class="asa-page aics-brand-system">', self.source)
+        self.assertIn('<body class="asa-page">', self.source)
         self.assertEqual(self.source.count('/css/ai-systems-agents.css'), 1)
-        self.assertEqual(self.source.count('/css/enterprise-brand-system.css?v=20260804-v1'), 1)
         self.assertLessEqual(self.source.count('/js/ai-systems-agents.js'), 1)
         self.assertTrue(STYLES.exists(), "Missing route stylesheet")
         self.assertTrue(self.styles, "Route stylesheet is empty")

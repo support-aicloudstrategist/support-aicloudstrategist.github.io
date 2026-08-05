@@ -300,13 +300,12 @@ class EnterpriseCloudFinOpsPageTests(unittest.TestCase):
 
     def test_route_shell_and_semantic_page_boundaries_are_preserved(self):
         self.assertIn("Enterprise FinOps Advisory", self.text)
-        self.assertIn('<body class="enterprise-finops-page aics-brand-system">', self.source)
+        self.assertIn('<body class="enterprise-finops-page">', self.source)
         self.assertEqual(len(re.findall(r"<main\b", self.source, flags=re.I)), 1)
         self.assertIn('<main id="main-content">', self.source)
         self.assertIn('data-aics-navigation-mount', self.source)
         self.assertEqual(self.source.count('data-aics-global-footer'), 1)
         self.assertIn('href="/css/site-navigation.css?v=premium-shell-20260727"', self.source)
-        self.assertIn('href="/css/enterprise-brand-system.css?v=20260804-v1"', self.source)
         self.assertIn('src="/js/site-navigation.js?v=premium-shell-20260727"', self.source)
         self.assertIn('<link rel="canonical" href="https://aicloudstrategist.com/services/cloud-finops/">', self.source)
         self.assertRegex(
