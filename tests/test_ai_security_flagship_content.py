@@ -117,7 +117,7 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
             "compliance evidence",
             "sovereign platform decisions",
             "does not provide legal advice",
-            "client retains final risk",
+            "client approves production change",
             "least privilege",
             "vendor-neutral",
             "can stand alone",
@@ -147,6 +147,49 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
         ]:
             self.assertIn(f'href="{route}"', self.source)
             self.assertTrue((ROOT / route.strip("/") / "index.html").exists())
+
+    def test_approved_editorial_refinements_improve_flow_without_scope_drift(self):
+        opening = (
+            "AICloudStrategist helps leaders decide what AI systems may access, what actions they may take and where they may run. "
+            "We turn those decisions into controls and evidence the organisation can use."
+        )
+        self.assertIn(f'<p class="lead">{opening}</p>', self.source)
+        self.assertNotIn("operate across cloud and jurisdictional boundaries", self.source)
+
+        sovereignty = (
+            "Define where data and models may run, which providers and jurisdictions are acceptable, who controls encryption keys and operations, "
+            "and how the organisation can change or exit the platform."
+        )
+        self.assertIn(f"<p>{sovereignty}</p>", self.source)
+
+        method = "Each stage clarifies what the system may do, who owns the decision and what evidence is still required."
+        self.assertIn(method, self.source)
+        self.assertNotIn("Each stage produces a clearer boundary", self.source)
+
+        fit_start = self.source.index('id="fit"')
+        fit_end = self.source.index('id="enterprise-diligence"')
+        fit = self.source[fit_start:fit_end]
+        self.assertIn(
+            "The work typically brings together the CIO, CISO, CTO or Head of AI with architecture, platform, data, compliance, legal and procurement teams.",
+            fit,
+        )
+        self.assertNotIn("The client retains final risk", fit)
+        diligence = self.source[fit_end:self.source.index('id="why-aics"')]
+        self.assertIn("The client approves production change, accepts residual risk", diligence)
+
+        why = self.source[self.source.index('id="why-aics"'):self.source.index('id="connected-capabilities"')]
+        merged = (
+            "Recommendations connect to available evidence, explicit assumptions and named gaps. "
+            "Credentials and client evidence are used only when verified and approved."
+        )
+        self.assertIn(f"<p>{merged}</p>", why)
+        self.assertNotIn("<h3>Honest claims</h3>", why)
+        self.assertEqual(why.count("<article"), 5)
+
+        connected = self.source[self.source.index('id="connected-capabilities"'):self.source.index('id="final-cta"')]
+        self.assertIn("can stand alone", text_content(connected).lower())
+        self.assertIn("connect only when the system and decision require them", text_content(connected).lower())
+        self.assertNotIn("Start with the security decision", connected)
 
 
 if __name__ == "__main__":
