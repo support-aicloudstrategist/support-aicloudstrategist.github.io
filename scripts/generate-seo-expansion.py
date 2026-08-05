@@ -6,6 +6,7 @@ import html, json, re
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://aicloudstrategist.com"
 TODAY = date.today().isoformat()
+HANDCRAFTED_FLAGSHIP_SLUGS = {"ai-automation", "ai-mlops", "cloud-finops", "cloud-security"}
 
 PRIMARY_SERVICES = [
     {"title":"Website & Digital Presence Services","slug":"website-digital-presence","kw":"website development services for small business India","desc":"Professional websites, trust pages, lead capture and digital presence systems for Indian small businesses that need to look credible and generate enquiries.","group":"Digital Growth","support":["lead-generation-seo","dpdp-compliance","whatsapp-automation"],"benefits":["Launch a credible business website with clear service, trust and contact sections.","Turn visitors into enquiries through forms, WhatsApp CTAs and lead capture journeys.","Add privacy, terms and basic compliance pages so customers trust the business."],"audience":"local businesses, clinics, consultants, education providers, manufacturers and service companies"},
@@ -144,6 +145,8 @@ write_page('/services/', layout('AICloudStrategist Services', 'Explore AICloudSt
 
 # Individual service pages
 for s in PRIMARY_SERVICES:
+    if s["slug"] in HANDCRAFTED_FLAGSHIP_SLUGS:
+        continue
     related = [SERVICE_BY_SLUG[x] for x in s.get('support',[]) if x in SERVICE_BY_SLUG]
     rel_cards='\n'.join(card(r['title'], r['desc'], service_path(r['slug'])) for r in related)
     inds=[i for i in INDUSTRIES if s['slug'] in i['services']][:5]
