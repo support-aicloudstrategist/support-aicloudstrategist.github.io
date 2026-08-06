@@ -100,7 +100,7 @@ class AiSecurityFlagshipDesignTests(unittest.TestCase):
         ]
         self.assertIn('class="ais-evidence-system"', deliverables)
         self.assertIn('class="ais-evidence-brief"', deliverables)
-        self.assertIn("Representative structure — not previous client work", deliverables)
+        self.assertIn("Representative synthetic scenario — not previous client work", deliverables)
         for field in [
             "Decision required",
             "Boundary reviewed",
@@ -132,7 +132,7 @@ class AiSecurityFlagshipDesignTests(unittest.TestCase):
 
         final_cta = self.source[self.source.index('id="final-cta"'):self.source.index("</main>")]
         self.assertIn('class="ais-engagement-brief"', final_cta)
-        for label in ["Bring", "First conversation", "Boundary"]:
+        for label in ["Bring", "You receive", "Boundary"]:
             self.assertIn(label, final_cta)
         self.assertLess(
             final_cta.index("ais-engagement-brief"),

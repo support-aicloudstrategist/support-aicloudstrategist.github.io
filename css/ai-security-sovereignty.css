@@ -724,6 +724,20 @@ body.ai-security-page {
   line-height: 1.5;
 }
 
+.ai-security-page .ais-evidence-rationale {
+  margin: 0;
+  padding: 22px 28px;
+  border-top: 1px solid var(--ais-line-strong);
+  background: rgba(67, 229, 202, 0.055);
+  color: var(--ais-muted-strong);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.ai-security-page .ais-evidence-rationale strong {
+  color: var(--ais-teal);
+}
+
 .ai-security-page .ais-evidence-register {
   border-top: 1px solid var(--ais-line-strong);
 }

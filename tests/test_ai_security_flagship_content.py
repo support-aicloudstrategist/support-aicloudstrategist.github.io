@@ -109,6 +109,39 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
         self.assertIn("representative outputs", copy)
         self.assertIn("not presented as previous client work", copy)
 
+    def test_hero_identifies_the_buyer_outcome_and_inspectable_proof_path(self):
+        hero = self.source[self.source.index('<header class="ais-hero hero">'):self.source.index("</header>")]
+        self.assertIn("enterprise technology and security leaders", hero)
+        self.assertIn("support approval, procurement and ongoing operation", hero)
+        self.assertIn('href="#representative-decision-brief"', hero)
+        self.assertIn("Inspect a representative decision brief", hero)
+
+    def test_representative_decision_brief_instantiates_one_coherent_scenario(self):
+        evidence = self.source[self.source.index('id="deliverables"'):self.source.index('id="fit"')]
+        for phrase in [
+            'id="representative-decision-brief"',
+            "Representative synthetic scenario — not previous client work",
+            "EU-hosted customer-service agent",
+            "Controlled pilot",
+            "provider retention and subprocessors unverified",
+            "No autonomous write access",
+            "CISO with AI product owner",
+            "Least-privilege tools",
+            "Why controlled pilot",
+        ]:
+            self.assertIn(phrase, evidence)
+
+    def test_final_cta_defines_a_bounded_purchasable_starting_engagement(self):
+        final_cta = self.source[self.source.index('id="final-cta"'):self.source.index("</main>")]
+        for phrase in [
+            "Security and Sovereignty Decision Baseline",
+            "fixed-scope starting engagement",
+            "one material AI security, compliance or sovereignty decision",
+            "A decision brief, boundary map, priority gaps, accountable owners and recommended path",
+            "Scope a Decision Baseline",
+        ]:
+            self.assertIn(phrase, final_cta)
+
     def test_scope_trust_and_authority_boundaries_are_clear(self):
         lowered = self.text.lower()
         for phrase in [
@@ -150,8 +183,8 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
 
     def test_approved_editorial_refinements_improve_flow_without_scope_drift(self):
         opening = (
-            "AICloudStrategist helps leaders decide what AI systems may access, what actions they may take and where they may run. "
-            "We turn those decisions into controls and evidence the organisation can use."
+            "AICloudStrategist helps enterprise technology and security leaders decide what AI systems may access, what actions they may take and where they may run. "
+            "We turn those decisions into controls and evidence that support approval, procurement and ongoing operation."
         )
         self.assertIn(f'<p class="lead">{opening}</p>', self.source)
         self.assertNotIn("operate across cloud and jurisdictional boundaries", self.source)
