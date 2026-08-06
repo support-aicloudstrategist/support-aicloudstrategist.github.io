@@ -61,8 +61,8 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
             "how-it-works",
             "deliverables",
             "fit",
-            "enterprise-diligence",
             "why-aics",
+            "enterprise-diligence",
             "connected-capabilities",
             "final-cta",
         ]
@@ -167,17 +167,14 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
         self.assertNotIn("Each stage produces a clearer boundary", self.source)
 
         fit_start = self.source.index('id="fit"')
-        fit_end = self.source.index('id="enterprise-diligence"')
+        fit_end = self.source.index('id="why-aics"')
         fit = self.source[fit_start:fit_end]
         self.assertIn(
             "The work typically brings together the CIO, CISO, CTO or Head of AI with architecture, platform, data, compliance, legal and procurement teams.",
             fit,
         )
         self.assertNotIn("The client retains final risk", fit)
-        diligence = self.source[fit_end:self.source.index('id="why-aics"')]
-        self.assertIn("The client approves production change, accepts residual risk", diligence)
-
-        why = self.source[self.source.index('id="why-aics"'):self.source.index('id="connected-capabilities"')]
+        why = self.source[fit_end:self.source.index('id="enterprise-diligence"')]
         merged = (
             "Recommendations connect to available evidence, explicit assumptions and named gaps. "
             "Credentials and client evidence are used only when verified and approved."
@@ -185,6 +182,9 @@ class AiSecurityFlagshipContentTests(unittest.TestCase):
         self.assertIn(f"<p>{merged}</p>", why)
         self.assertNotIn("<h3>Honest claims</h3>", why)
         self.assertEqual(why.count("<article"), 5)
+
+        diligence = self.source[self.source.index('id="enterprise-diligence"'):self.source.index('id="connected-capabilities"')]
+        self.assertIn("The client approves production change, accepts residual risk", diligence)
 
         connected = self.source[self.source.index('id="connected-capabilities"'):self.source.index('id="final-cta"')]
         self.assertIn("can stand alone", text_content(connected).lower())
