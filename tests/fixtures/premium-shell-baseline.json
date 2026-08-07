@@ -451,8 +451,8 @@
     "contact.html": {
       "canonical": "https://aicloudstrategist.com/contact",
       "forms": 1,
-      "forms_sha256": "f33364c2e9ba21a43de48b86466343accb70764f759b344ebe1a1c0640bd8314",
-      "main_sha256": "a7038a121580ec5fff4acccb11af431216659980622598ed27a4d09df8411cc2",
+      "forms_sha256": "d382577f85f5b6fb523cdae32fca21ba5ea6f96e6261f468b56a9c848b6816a6",
+      "main_sha256": "d43b40bafc39aaf53c4e54c9bfb7af5df5a99dbb80398668d8a69f19dcc067c6",
       "title": "Discuss an AI Initiative | AICloudStrategist"
     },
     "contact/index.html": {
@@ -1656,8 +1656,8 @@
       "canonical": "https://aicloudstrategist.com/services/devops-observability/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "6e002c130618cb38766c75d6372ed39f60e0d0fd3a60db957467dd2a9a188d4d",
-      "title": "DevOps &amp; Observability Services | AICloudStrategist"
+      "main_sha256": "ccc023c66b117a0d7a42ac42f5c260ea0be087547cecd9a6d255c0eb612da337",
+      "title": "AI Platform Reliability &amp; Operations | AICloudStrategist"
     },
     "services/dpdp-compliance/index.html": {
       "canonical": "https://aicloudstrategist.com/services/dpdp-compliance/",

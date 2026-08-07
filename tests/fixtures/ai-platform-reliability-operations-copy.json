@@ -1,0 +1,253 @@
+{
+  "sections": [
+    {
+      "number": 1,
+      "architecture_title": "Executive orientation",
+      "content": [
+        "AI PLATFORM RELIABILITY & OPERATIONS",
+        "Keep live AI services observable, recoverable and accountable",
+        "AICloudStrategist helps technology leaders establish the operating discipline for a specific AI-enabled business service. The work connects technical health, AI and workflow health, response, recovery, change control and named ownership.",
+        "This service is for organisations operating, launching or expanding an AI service where degradation could interrupt a customer journey, employee workflow or consequential business process.",
+        "The first engagement is an AI Service Reliability Baseline: a fixed 10-business-day assessment of one live or production-bound service using read-only evidence and one validated failure scenario.",
+        "Discuss an AI Service Reliability Baseline",
+        "View representative operating artifacts",
+        "Coverage, service hours, change authority and response expectations are defined for each engagement. The service does not imply universal 24/7 support or responsibility for every client system."
+      ]
+    },
+    {
+      "number": 2,
+      "architecture_title": "The production operating gap",
+      "content": [
+        "Infrastructure health does not prove that the AI service is working",
+        "An AI-enabled service depends on more than compute, storage and network availability. It may rely on a model provider, retrieval layer, changing knowledge sources, tools, queues, external APIs and human escalation. Those dependencies can remain reachable while the business workflow deteriorates.",
+        "Conventional monitoring may confirm that an endpoint is available. It may not show that retrieval is stale, tool calls are failing, fallbacks are accumulating or users are no longer completing the intended workflow.",
+        "The gap becomes clear when teams can see individual components but cannot answer four service-level questions:",
+        "What has degraded?",
+        "What business workflow is affected?",
+        "Who has authority to respond?",
+        "How will the service recover or enter a controlled degraded mode?",
+        "The following are representative operating conditions, not verified customer incidents:",
+        "A model endpoint remains available, but higher latency causes timeouts, retries and an expanding fallback queue.",
+        "The application responds normally, but retrieval freshness drops and the service begins using incomplete context.",
+        "A tool integration fails selectively. Infrastructure dashboards remain healthy while users cannot complete the business process.",
+        "Several teams own individual components, but no named owner coordinates restoration of the complete service.",
+        "Reliable operation starts at the service boundary. It requires technical signals, workflow evidence and accountable response to be connected before an incident occurs."
+      ]
+    },
+    {
+      "number": 3,
+      "architecture_title": "The AICS operating model",
+      "content": [
+        "Operate the service, not only its components",
+        "AICloudStrategist treats the AI-enabled business service as the unit of operation. That boundary combines three operating realities.",
+        "Technical health",
+        "This includes availability, latency, errors, capacity, dependency condition, deployment state, rollback readiness and recovery mechanisms. These signals show whether the technical path can support operation.",
+        "AI and workflow health",
+        "This includes provider behaviour, retrieval condition, tool execution, queue growth, fallback use, escalation and workflow completion. These signals show whether the AI-enabled process continues to function in production.",
+        "Operations observes these conditions and routes concerns to the appropriate authority. Independent evaluation of output correctness, safety or release evidence remains with Production AI Assurance or the client’s authorised owner.",
+        "Operational accountability",
+        "This defines who observes, decides, responds, communicates, restores and approves production change. It connects alerts and runbooks to people with defined authority.",
+        "Together, these realities create one operating boundary. Teams can see how a dependency affects the workflow, which signal matters, who must act and what evidence must be preserved."
+      ]
+    },
+    {
+      "number": 4,
+      "architecture_title": "The continuity mechanism",
+      "content": [
+        "Turn production signals into controlled action",
+        "Observability is useful when a meaningful signal leads to a decision, authorised response and verified recovery. AICS uses a five-stage cycle within the agreed service boundary.",
+        "Observe",
+        "Collect technical, AI and workflow evidence that can reveal material degradation. Record the signal source, affected service path and level of confidence.",
+        "Decide",
+        "Assess impact, confidence, reversibility and authority. Determine whether to investigate, escalate, enter a degraded mode, restore a previous state or continue monitoring.",
+        "Respond",
+        "Execute the approved runbook or coordinate the named responders. Actions remain within the authority defined for the engagement.",
+        "Recover",
+        "Restore normal service or establish an approved degraded mode. Verify the service path, not only the recovered component.",
+        "Improve",
+        "Preserve the incident record, identify missing signals or controls, update the backlog and route specialist findings to the correct owner.",
+        "The cycle does not assume automatic remediation. It defines how evidence moves through an accountable operating process."
+      ]
+    },
+    {
+      "number": 5,
+      "architecture_title": "Responsibility and authority boundary",
+      "content": [
+        "Clear responsibility before an incident",
+        "Operational responsibility must be explicit. AICS does not use the term \"managed operations\" to imply unrestricted ownership of client infrastructure, business risk or specialist decisions.",
+        "Within an agreed scope, AICS may be responsible for:",
+        "Operational readiness for the named service",
+        "Service indicators, alerts and runbooks",
+        "Triage and incident coordination",
+        "Restoration, rollback or degraded-mode execution where authorised",
+        "Approved production changes",
+        "Production records and evidence handoffs",
+        "Responsibility is shared when an incident requires client platform teams, business owners, external providers or several technical domains to act together.",
+        "The client retains authority for:",
+        "Business-risk acceptance",
+        "Release approval",
+        "Ownership of the business workflow",
+        "Security policy and compliance interpretation",
+        "FinOps policy and investment decisions",
+        "Changes or consequences outside the contracted service boundary",
+        "Specialist decisions remain with the appropriate authority:",
+        "Production AI Assurance evaluates release and behaviour evidence.",
+        "AI Security, Compliance & Sovereign Platforms owns security architecture, control design and specialist risk decisions.",
+        "AI FinOps & Cloud Economics owns economic analysis, allocation policy and optimisation decisions.",
+        "Enterprise AI Systems & Agents owns workflow and system redesign.",
+        "The engagement statement defines covered systems, service hours, response expectations, change authority, supplier dependencies and exclusions. If these conditions are not agreed, AICS does not represent the service as managed operations."
+      ]
+    },
+    {
+      "number": 6,
+      "architecture_title": "Evidence and representative operating artifacts",
+      "content": [
+        "See what the work produces",
+        "The work must produce artifacts that an operator can use. A maturity score or presentation is not enough.",
+        "These representative artifacts show the expected structure of an AI Service Reliability Baseline Pack. They are not customer results, production records or evidence of measured client outcomes.",
+        "Service boundary and dependency map",
+        "Defines the named service, principal user-to-outcome path, model and platform dependencies, data and retrieval services, tool integrations, fallback routes, detection points and accountable owners.",
+        "Signal and failure-coverage matrix",
+        "Links material failure conditions to available signals, alert logic, diagnostic evidence, response paths and unresolved gaps.",
+        "Ownership and escalation map",
+        "Records who observes, decides, responds, communicates, restores and approves change. It also identifies specialist and supplier escalation paths.",
+        "Validated failure-scenario record",
+        "Captures the expected response, observed or evidenced response, detection route, decision, recovery gap and required correction for one agreed failure scenario.",
+        "Every representative artifact states its assumptions, evidence provenance, owner and decision use. Verified customer evidence will be identified as such and published only with authorisation.",
+        "Review the AI Service Reliability Baseline"
+      ]
+    },
+    {
+      "number": 7,
+      "architecture_title": "AI Service Reliability Baseline",
+      "content": [
+        "Start with one service and one operating decision",
+        "The AI Service Reliability Baseline is a fixed 10-business-day engagement for one live or production-bound AI service. It determines whether the current operating model can support the service at its present or planned level of production dependence.",
+        "Fixed scope",
+        "The Baseline covers:",
+        "One named AI service",
+        "One production or production-bound environment",
+        "One principal user-to-outcome path",
+        "Directly supporting runtime dependencies",
+        "Up to six stakeholder interviews",
+        "Available evidence from an agreed recent operating period",
+        "One high-value failure scenario",
+        "One findings workshop and one consolidated revision",
+        "Delivery is read-only by default. The failure scenario uses existing incident evidence, a safe non-production exercise or a facilitated tabletop. The Baseline does not change production.",
+        "What the customer provides",
+        "The customer provides the service and architecture overview, dependency information, available monitoring evidence and incident records. It also provides service objectives, recovery procedures, runbooks, escalation routes and access to the service owner and operating lead.",
+        "AICS uses customer-exported evidence, customer-controlled read-only access or evidence walkthroughs. It does not require unrestricted production access.",
+        "What AICS examines",
+        "AICS establishes the service boundary, reviews technical and workflow signals, examines response and recovery paths, maps ownership and authority, and validates one agreed failure scenario.",
+        "Missing telemetry can be a material finding. If neither reliable evidence nor safe access is available, AICS will not present the work as an evidence-led reliability baseline.",
+        "What the customer receives",
+        "The AI Service Reliability Baseline Pack includes:",
+        "Executive operating decision brief",
+        "Service boundary and dependency map",
+        "Evidence-backed reliability baseline",
+        "Signal and failure-coverage matrix",
+        "Ownership and escalation map",
+        "Validated failure-scenario record",
+        "Prioritised stabilisation backlog, limited to ten material actions",
+        "Target operating recommendation",
+        "Each backlog action states the supporting evidence, operational consequence, proposed owner, dependency, effort band, acceptance test and consequence of deferral.",
+        "The decision it enables",
+        "The Baseline answers one question:",
+        "Can the current operating model support this service at its present or planned level of production dependence, or must the organisation fund a defined stabilisation and operating-control tranche first?",
+        "The recommendation may support maintaining the current boundary under stated conditions, continuing while named controls are completed, or stabilising the operating foundation before production exposure increases.",
+        "This is an operating recommendation. It is not release approval, business-risk acceptance, an assurance opinion, a security assessment or an availability commitment.",
+        "Fit requirements",
+        "The Baseline requires a named service with a meaningful production consequence and an accountable owner. It also requires usable evidence or safe access and an executive sponsor able to act on the findings.",
+        "It is not the right first engagement for a conceptual AI idea, an enterprise-wide maturity review, independent output evaluation, a security assessment or a cost-optimisation question.",
+        "Discuss an AI Service Reliability Baseline"
+      ]
+    },
+    {
+      "number": 8,
+      "architecture_title": "From baseline to sustained operation",
+      "content": [
+        "Move forward only when the evidence supports it",
+        "The Baseline is a complete engagement. The customer may stop after receiving the decision and artifacts. Any further work is separately scoped and approved.",
+        "AI Service Reliability Baseline",
+        "Establish the evidence, service boundary, operating gaps and executive decision for one service.",
+        "Entry condition: a live or production-bound service with an accountable owner and available evidence.",
+        "Output: the Baseline Pack and prioritised operating decision.",
+        "Decision gate: maintain the current boundary, complete named controls or fund stabilisation.",
+        "Stabilise and Establish",
+        "Implement the approved controls from the Baseline backlog. Work may include signal coverage, alerts, runbooks, escalation paths, fallback behaviour, rollback, recovery and change control.",
+        "Entry condition: an approved, evidence-backed backlog.",
+        "Output: implemented controls with defined owners and acceptance results.",
+        "Decision gate: return ownership to the customer or define a bounded operating agreement.",
+        "Operate and Improve",
+        "Run the agreed operating practices for the named service, preserve production evidence and improve controls as conditions change.",
+        "Entry condition: an operable service boundary, established controls and an executed operating agreement.",
+        "Output: agreed operating records, incident evidence, lifecycle control and improvement actions.",
+        "Decision gate: continue, change or end the operating scope under the contract.",
+        "The Baseline creates no implied ongoing coverage. Service hours, response expectations, authority, dependencies and retained client duties are agreed separately."
+      ]
+    },
+    {
+      "number": 9,
+      "architecture_title": "Enterprise operating diligence",
+      "content": [
+        "Define the delivery conditions before work begins",
+        "The delivery boundary must be clear before an enterprise shares evidence or places a service within operating scope.",
+        "Access",
+        "The Baseline uses the minimum access required. The customer may provide exported evidence, read-only access or controlled walkthroughs. AICS does not require unrestricted production access.",
+        "Data handling",
+        "The engagement defines what evidence is needed, how it will be transferred, where it will be stored, who can access it and when it will be removed or returned. Sensitive content should be minimised or redacted where it is not required for the operating decision.",
+        "Production change",
+        "The Baseline makes no production changes. Any later change requires an approved implementation scope, named authority, rollback condition and acceptance test.",
+        "Coverage and service hours",
+        "A Baseline is a time-bounded assessment, not an incident-response retainer. Any ongoing service must define support hours, response expectations, escalation paths and exclusions in the operating agreement.",
+        "Supplier dependencies",
+        "Model providers, cloud platforms, data services and external tools may constrain detection, recovery or response. The engagement records these dependencies and the responsibilities that remain with the customer or supplier.",
+        "Client-retained duties",
+        "The client retains business-risk acceptance, release authority, specialist policy decisions and responsibilities outside the agreed service boundary.",
+        "Discuss Baseline delivery requirements"
+      ]
+    },
+    {
+      "number": 10,
+      "architecture_title": "Portfolio handoffs and related flagships",
+      "content": [
+        "Route each decision to the right authority",
+        "Production operations may expose a design, assurance, security or economic issue. AICS routes the evidence to the relevant capability rather than expanding scope without approval.",
+        "Enterprise AI Systems & Agents",
+        "Trigger: the operating evidence shows that the workflow, agent behaviour, integration pattern or system design must change.",
+        "Handoff: service evidence, affected workflow and operating constraint move to the system-design owner.",
+        "Enterprise AI Systems & Agents",
+        "Production AI Assurance",
+        "Trigger: the issue requires independent evaluation of output behaviour, release evidence or acceptance criteria.",
+        "Handoff: production findings and relevant records move to the assurance authority. Operations does not approve the release.",
+        "Production AI Assurance",
+        "AI FinOps & Cloud Economics",
+        "Trigger: the evidence requires economic interpretation, allocation policy, optimisation analysis or an investment decision.",
+        "Handoff: operating telemetry and usage evidence move to the FinOps authority. Operations executes only approved operational actions.",
+        "AI FinOps & Cloud Economics",
+        "AI Security, Compliance & Sovereign Platforms",
+        "Trigger: the issue requires security control design, compliance interpretation, sovereignty decisions or specialist risk authority.",
+        "Handoff: operational evidence and incident context move to the security authority. Operations follows the approved containment and escalation path.",
+        "AI Security, Compliance & Sovereign Platforms"
+      ]
+    },
+    {
+      "number": 11,
+      "architecture_title": "Final conversion decision",
+      "content": [
+        "Start with one named AI service",
+        "The AI Service Reliability Baseline gives the accountable technology owner an evidence-backed view of how one service is observed, recovered, changed and owned.",
+        "In 10 business days, AICS reviews read-only evidence, validates one failure scenario and produces the Baseline Pack and a prioritised operating decision.",
+        "The initial scoping conversation confirms:",
+        "The named AI service and production path",
+        "The executive sponsor and service owner",
+        "The available evidence and access method",
+        "The operational decision the Baseline must support",
+        "Any security, data-handling or supplier constraints",
+        "After the inquiry, AICS confirms whether the service fits the Baseline, identifies any missing prerequisites and defines the evidence request. The customer can then decide whether to proceed with the fixed engagement.",
+        "Discuss an AI Service Reliability Baseline",
+        "The Baseline is the first purchase. It does not commit the customer to implementation or managed operations."
+      ]
+    }
+  ]
+}

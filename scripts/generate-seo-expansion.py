@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://aicloudstrategist.com"
 TODAY = date.today().isoformat()
 HANDCRAFTED_FLAGSHIP_SLUGS = {"ai-automation", "ai-mlops", "cloud-finops", "cloud-security"}
+HANDCRAFTED_FLAGSHIP_SLUGS.add("devops-observability")
 
 PRIMARY_SERVICES = [
     {"title":"Website & Digital Presence Services","slug":"website-digital-presence","kw":"website development services for small business India","desc":"Professional websites, trust pages, lead capture and digital presence systems for Indian small businesses that need to look credible and generate enquiries.","group":"Digital Growth","support":["lead-generation-seo","dpdp-compliance","whatsapp-automation"],"benefits":["Launch a credible business website with clear service, trust and contact sections.","Turn visitors into enquiries through forms, WhatsApp CTAs and lead capture journeys.","Add privacy, terms and basic compliance pages so customers trust the business."],"audience":"local businesses, clinics, consultants, education providers, manufacturers and service companies"},

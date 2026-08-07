@@ -27,11 +27,11 @@ class EnterpriseContactVisualTests(unittest.TestCase):
         frozen = {
             "form": (
                 r'<form\b[^>]*id="contactForm"[^>]*>.*?</form>',
-                "f33364c2e9ba21a43de48b86466343accb70764f759b344ebe1a1c0640bd8314",
+                "d382577f85f5b6fb523cdae32fca21ba5ea6f96e6261f468b56a9c848b6816a6",
             ),
             "submit_script": (
                 r"const contactForm = document.getElementById\('contactForm'\);.*?// reveal \+ timeline draw",
-                "bb39d6c66bc9b494fed309e0100eac54faf1bf21c2f0cc7e32adc12955741801",
+                "2f33f97539908d42524e541534ebf243fbc16b9cbd1b3a4dcfbd7122df2756e9",
             ),
             "hero": (
                 r'<section class="subhero">.*?</section>',
