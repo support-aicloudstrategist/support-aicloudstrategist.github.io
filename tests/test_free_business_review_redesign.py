@@ -83,9 +83,8 @@ def test_service_context_and_attribution_are_preserved():
 
 
 def test_representative_preview_is_decision_grade_and_truthfully_labelled():
-    preview = re.search(r'<section[^>]+class="[^"]*fbr-preview[^"]*".*?</section>', PAGE, re.S)
-    assert preview
-    source = preview.group(0)
+    preview_start = PAGE.index('<section class="fbr-preview"')
+    source = PAGE[preview_start:PAGE.index('id="review-workflow"', preview_start)]
     for phrase in (
         "Business Health Score",
         "Lead Capture Score",
@@ -98,6 +97,22 @@ def test_representative_preview_is_decision_grade_and_truthfully_labelled():
     ):
         assert phrase in source
     assert "placeholder" not in source.lower()
+
+
+def test_selected_board_brief_artifact_replaces_the_generic_card_grid():
+    for component in (
+        "fbr-board",
+        "fbr-board-health",
+        "fbr-board-risk",
+        "fbr-board-signals",
+        "fbr-board-findings",
+        "fbr-board-priority",
+        "fbr-board-action",
+    ):
+        assert component in PAGE
+    assert "fbr-report-grid" not in PAGE
+    assert "AICLOUDSTRATEGIST®" in PAGE
+    assert "BUSINESS GROWTH REVIEW" in PAGE
 
 
 def test_compact_workflow_combines_scope_output_and_process():
