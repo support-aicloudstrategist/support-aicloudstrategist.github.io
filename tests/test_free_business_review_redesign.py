@@ -1,4 +1,5 @@
 import hashlib
+import json
 import re
 from pathlib import Path
 
@@ -13,6 +14,15 @@ CANONICAL_OFFER = "Free Business Growth Review"
 def test_canonical_route_and_alias_remain_identical():
     assert PAGE == ALIAS
     assert '<link rel="canonical" href="https://aicloudstrategist.com/free-business-review/"' in PAGE
+
+
+def test_route_html_only_changes_the_dedicated_stylesheet_version():
+    normalized = re.sub(
+        r'free-business-review\.css\?v=[^"/]+',
+        'free-business-review.css?v={VERSION}',
+        PAGE,
+    )
+    assert hashlib.sha256(normalized.encode()).hexdigest() == "809e6521c64f5dd421e127033c5b61c7908f57a5bf51e8fbe30f61636434c603"
 
 
 def test_page_uses_one_canonical_offer_name():
@@ -127,6 +137,51 @@ def test_selected_board_brief_changes_design_without_rewriting_output_content():
         assert invented_metric not in PAGE
 
 
+def test_representative_output_html_and_visible_text_are_frozen():
+    start = PAGE.index('<div class="fbr-board"')
+    end = PAGE.index('</div>\n      </section>', start) + len('</div>')
+    board = PAGE[start:end]
+    visible_text = " ".join(re.sub(r"<[^>]+>", " ", board).split())
+    assert hashlib.sha256(board.encode()).hexdigest() == "045a20291876261bc8ad5c179d4a2541ee5c888c9eeadfcdeff8f28520c0ba84"
+    assert hashlib.sha256(visible_text.encode()).hexdigest() == "754571dd98c5902399c649e409ae425eb835813b206e60186d005b09f52d3845"
+
+
+def test_representative_output_uses_a_dark_decision_atlas_with_safe_motion():
+    css = CSS.read_text(encoding="utf-8")
+    board_start = css.index(".free-business-review-page .fbr-board{")
+    board_end = css.index(".free-business-review-page .fbr-workflow{", board_start)
+    board_css = css[board_start:board_end]
+    assert "grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)" in board_css
+    assert "@keyframes fbr-board-reveal" in css
+    assert "@keyframes fbr-board-trace" in css
+    assert "conic-gradient" not in board_css
+    signal_marker_rules = re.findall(r"\.free-business-review-page \.fbr-board-signal-grid i\{(.*?)\}", board_css, re.S)
+    assert signal_marker_rules
+    effective_marker_rule = signal_marker_rules[-1]
+    assert "width:8px" in effective_marker_rule
+    assert "height:8px" in effective_marker_rule
+    assert "rotate:45deg" in effective_marker_rule
+    reduced_motion = css[css.index("@media(prefers-reduced-motion:reduce)") :]
+    animation_start = reduced_motion.index(".free-business-review-page .fbr-board,")
+    animation_rule = reduced_motion[animation_start : reduced_motion.index("}", animation_start)]
+    for selector in (
+        ".free-business-review-page .fbr-board",
+        ".free-business-review-page .fbr-board-accent::after",
+        ".free-business-review-page .fbr-board-health-mark",
+        ".free-business-review-page .fbr-board-action-grid>div::before",
+    ):
+        assert selector in animation_rule
+    assert "animation:none" in animation_rule
+    hover_rule = reduced_motion[reduced_motion.index(".free-business-review-page .fbr-board-signal-grid>div:hover") :]
+    for selector in (
+        ".free-business-review-page .fbr-board-signal-grid>div:hover",
+        ".free-business-review-page .fbr-board-priority-grid span:hover",
+        ".free-business-review-page .fbr-board-action-grid>div:hover",
+    ):
+        assert selector in hover_rule
+    assert "transform:none" in hover_rule
+
+
 def test_compact_workflow_combines_scope_output_and_process():
     assert PAGE.count('id="review-workflow"') == 1
     workflow = re.search(r'<section[^>]+id="review-workflow".*?</section>', PAGE, re.S)
@@ -163,7 +218,7 @@ def test_tablet_workflow_is_a_compact_stepped_list():
 
 def test_page_uses_dedicated_scoped_stylesheet_without_inline_css():
     assert CSS.exists()
-    assert '/css/free-business-review.css?v=20260807' in PAGE
+    assert '/css/free-business-review.css?v=20260808' in PAGE
     assert "<style" not in PAGE
     css = CSS.read_text(encoding="utf-8")
     import tinycss2
@@ -174,10 +229,37 @@ def test_page_uses_dedicated_scoped_stylesheet_without_inline_css():
                 selector = tinycss2.serialize(rule.prelude).strip()
                 for item in selector.split(","):
                     assert item.strip().startswith(".free-business-review-page"), item.strip()
-            elif rule.type == "at-rule" and rule.content is not None:
+            elif rule.type == "at-rule" and rule.content is not None and rule.lower_at_keyword != "keyframes":
                 assert_scoped(tinycss2.parse_rule_list(rule.content, skip_whitespace=True, skip_comments=True))
 
     assert_scoped(tinycss2.parse_stylesheet(css, skip_whitespace=True, skip_comments=True))
+
+
+def test_non_representative_output_css_is_semantically_frozen():
+    import tinycss2
+
+    allowed = (".fbr-preview", ".fbr-evidence-label", ".fbr-board")
+    frozen_rules = []
+
+    def collect(rules, context=()):
+        for rule in rules:
+            if rule.type == "qualified-rule":
+                selector = tinycss2.serialize(rule.prelude).strip()
+                if not any(component in selector for component in allowed):
+                    frozen_rules.append((context, selector, tinycss2.serialize(rule.content).strip()))
+            elif rule.type == "at-rule" and rule.content is not None:
+                prelude = tinycss2.serialize(rule.prelude).strip()
+                if rule.lower_at_keyword == "keyframes" and prelude.startswith("fbr-board-"):
+                    continue
+                collect(
+                    tinycss2.parse_rule_list(rule.content, skip_whitespace=True, skip_comments=True),
+                    context + ((rule.lower_at_keyword, prelude),),
+                )
+
+    collect(tinycss2.parse_stylesheet(CSS.read_text(encoding="utf-8"), skip_whitespace=True, skip_comments=True))
+    fingerprint = hashlib.sha256(json.dumps(frozen_rules, separators=(",", ":")).encode()).hexdigest()
+    assert len(frozen_rules) == 98
+    assert fingerprint == "2972c70dc0e8af816bc0d8e7b3d30f924c8e15310966aa9287326413d02eee04"
 
 
 def test_current_navigation_and_footer_are_preserved():
