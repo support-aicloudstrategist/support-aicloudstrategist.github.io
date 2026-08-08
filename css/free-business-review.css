@@ -388,9 +388,10 @@
   justify-content:center;
   border-right:1px solid #d8d5cd;
 }
-.free-business-review-page .fbr-board-health strong{
+.free-business-review-page .fbr-board-health-mark{
   color:#115edc;
   font-size:3.8rem;
+  font-style:normal;
   font-weight:780;
   letter-spacing:-.07em;
   line-height:.85;
@@ -470,7 +471,7 @@
 }
 .free-business-review-page .fbr-board-signal-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:1px;
   margin-top:12px;
   background:#d8d5cd;
@@ -491,26 +492,38 @@
 }
 .free-business-review-page .fbr-board-signal-grid strong{
   display:block;
-  margin-top:4px;
+  min-height:34px;
+  margin-top:6px;
   color:#173a5b;
-  font-size:1.15rem;
+  font-size:.68rem;
+  line-height:1.3;
 }
 .free-business-review-page .fbr-board-signal-grid i{
   display:block;
-  height:3px;
+  width:100%;
+  height:4px;
   margin-top:8px;
-  background:#dbe2e8;
+  background:#c7d2db;
 }
-.free-business-review-page .fbr-board-signal-grid i::after{
-  display:block;
-  width:var(--fbr-value);
-  height:100%;
+.free-business-review-page .fbr-board-signal-grid .is-attention{
+  background:#d47b31;
+}
+.free-business-review-page .fbr-board-signal-grid .is-unclear{
+  background:#7890a2;
+}
+.free-business-review-page .fbr-board-signal-grid .is-present{
   background:#1769ef;
-  content:'';
+}
+.free-business-review-page .fbr-board-findings h3{
+  margin:14px 0 2px;
+  color:#102337;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1rem;
+  line-height:1.3;
 }
 .free-business-review-page .fbr-board-findings article{
   display:grid;
-  grid-template-columns:30px 1fr 68px;
+  grid-template-columns:30px 1fr;
   gap:10px;
   align-items:start;
   padding:14px 0;
@@ -826,7 +839,7 @@
     gap:14px;
     padding:19px 16px;
   }
-  .free-business-review-page .fbr-board-health strong{
+  .free-business-review-page .fbr-board-health-mark{
     font-size:2.8rem;
   }
   .free-business-review-page .fbr-board-summary h3{
@@ -846,6 +859,9 @@
   .free-business-review-page .fbr-board-signal-grid,
   .free-business-review-page .fbr-board-priority-grid{
     grid-template-columns:1fr 1fr;
+  }
+  .free-business-review-page .fbr-board-signal-grid>div:last-child{
+    grid-column:1/-1;
   }
   .free-business-review-page .fbr-board-findings article{
     grid-template-columns:24px 1fr;

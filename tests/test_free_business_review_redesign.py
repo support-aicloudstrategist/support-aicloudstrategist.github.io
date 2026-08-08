@@ -99,11 +99,10 @@ def test_representative_preview_is_decision_grade_and_truthfully_labelled():
     assert "placeholder" not in source.lower()
 
 
-def test_selected_board_brief_artifact_replaces_the_generic_card_grid():
+def test_selected_board_brief_changes_design_without_rewriting_output_content():
     for component in (
         "fbr-board",
         "fbr-board-health",
-        "fbr-board-risk",
         "fbr-board-signals",
         "fbr-board-findings",
         "fbr-board-priority",
@@ -111,8 +110,21 @@ def test_selected_board_brief_artifact_replaces_the_generic_card_grid():
     ):
         assert component in PAGE
     assert "fbr-report-grid" not in PAGE
-    assert "AICLOUDSTRATEGIST®" in PAGE
-    assert "BUSINESS GROWTH REVIEW" in PAGE
+    for original_phrase in (
+        "Buyer journey needs attention",
+        "Needs attention",
+        "Follow-up ownership",
+        "Trust foundation",
+        "High-intent enquiries have no visible response expectation.",
+        "Uncertain response time and channel ownership",
+        "Clarify the handoff before adding more traffic",
+        "Define channel ownership",
+        "Repair enquiry confirmation",
+        "Instrument response tracking",
+    ):
+        assert original_phrase in PAGE
+    for invented_metric in (">68<", ">74<", ">46<", ">63<", ">51<"):
+        assert invented_metric not in PAGE
 
 
 def test_compact_workflow_combines_scope_output_and_process():
