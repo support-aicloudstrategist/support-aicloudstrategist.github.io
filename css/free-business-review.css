@@ -1,0 +1,738 @@
+.free-business-review-page{
+  --fbr-bg:#050a12;
+  --fbr-bg-raised:#08111d;
+  --fbr-panel:#0b1624;
+  --fbr-panel-soft:#0e1b2b;
+  --fbr-ink:#f4f8fb;
+  --fbr-muted:#a8b8c8;
+  --fbr-faint:#718397;
+  --fbr-line:rgba(147,181,210,.18);
+  --fbr-line-strong:rgba(102,195,255,.38);
+  --fbr-blue:#64c5ff;
+  --fbr-teal:#71dfce;
+  --fbr-warning:#ffd38a;
+  margin:0;
+  background:var(--fbr-bg);
+  color:var(--fbr-ink);
+}
+.free-business-review-page main{
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 14% 4%,rgba(50,123,184,.16),transparent 29rem),
+    linear-gradient(180deg,#07101c 0,#050a12 52%,#060c15 100%);
+}
+.free-business-review-page .fbr-container{
+  width:min(1180px,calc(100% - 48px));
+  margin-inline:auto;
+}
+.free-business-review-page .fbr-hero{
+  position:relative;
+  padding:clamp(72px,8vw,116px) 0 clamp(62px,7vw,96px);
+  border-bottom:1px solid var(--fbr-line);
+}
+.free-business-review-page .fbr-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(145,187,221,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(145,187,221,.035) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(to bottom,black,transparent 78%);
+}
+.free-business-review-page .fbr-hero-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(310px,.55fr);
+  gap:clamp(52px,8vw,112px);
+  align-items:end;
+}
+.free-business-review-page .fbr-kicker,
+.free-business-review-page .fbr-section-index{
+  margin:0 0 18px;
+  color:var(--fbr-blue);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-hero h1{
+  max-width:12ch;
+  margin:0;
+  color:var(--fbr-ink);
+  font-size:clamp(3.35rem,6.5vw,6.6rem);
+  font-weight:600;
+  letter-spacing:-.067em;
+  line-height:.92;
+  text-wrap:balance;
+}
+.free-business-review-page .fbr-hero-outcome{
+  max-width:760px;
+  margin:30px 0 0;
+  color:#dce8f1;
+  font-size:clamp(1.22rem,2vw,1.58rem);
+  line-height:1.45;
+  letter-spacing:-.022em;
+}
+.free-business-review-page .fbr-hero-deliverable{
+  max-width:690px;
+  margin:16px 0 0;
+  color:var(--fbr-muted);
+  font-size:1rem;
+  line-height:1.7;
+}
+.free-business-review-page .fbr-hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 24px;
+  align-items:center;
+  margin-top:34px;
+}
+.free-business-review-page .fbr-hero-actions>span{
+  color:#91a5b7;
+  font-size:.82rem;
+}
+.free-business-review-page .fbr-button{
+  display:inline-flex;
+  min-height:50px;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  padding:13px 19px;
+  border:1px solid transparent;
+  border-radius:7px;
+  font-size:.9rem;
+  font-weight:700;
+  letter-spacing:.01em;
+  text-decoration:none;
+  transition:background-color .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
+}
+.free-business-review-page .fbr-button-primary{
+  color:#03101a;
+  background:#7bd8ff;
+  box-shadow:0 14px 34px -22px rgba(88,193,255,.8);
+}
+.free-business-review-page .fbr-button-primary:hover{
+  color:#020b12;
+  background:#a0e4ff;
+  transform:translateY(-1px);
+}
+.free-business-review-page .fbr-button:focus-visible,
+.free-business-review-page .fbr-form input:focus-visible,
+.free-business-review-page .fbr-form select:focus-visible{
+  outline:3px solid rgba(113,223,206,.55);
+  outline-offset:3px;
+}
+.free-business-review-page .fbr-confidence{
+  padding:24px;
+  border:1px solid var(--fbr-line);
+  border-radius:14px;
+  background:rgba(9,20,34,.86);
+  box-shadow:0 28px 70px -50px #000;
+}
+.free-business-review-page .fbr-confidence-label{
+  margin:0 0 17px;
+  color:#d9e5ef;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-confidence ul{
+  display:grid;
+  gap:16px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.free-business-review-page .fbr-confidence li{
+  display:grid;
+  grid-template-columns:30px 1fr;
+  gap:2px 10px;
+  padding-top:16px;
+  border-top:1px solid var(--fbr-line);
+}
+.free-business-review-page .fbr-confidence li>span{
+  grid-row:1/3;
+  color:var(--fbr-blue);
+  font-size:.72rem;
+  font-weight:700;
+}
+.free-business-review-page .fbr-confidence strong{
+  color:#edf4f9;
+  font-size:.93rem;
+  font-weight:620;
+}
+.free-business-review-page .fbr-confidence small{
+  color:#8093a5;
+  font-size:.76rem;
+}
+.free-business-review-page .fbr-conversion{
+  padding:clamp(64px,7vw,96px) 0;
+}
+.free-business-review-page .fbr-conversion-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:clamp(28px,4vw,54px);
+  align-items:start;
+}
+.free-business-review-page .fbr-form-panel{
+  scroll-margin-top:110px;
+  overflow:hidden;
+  border:1px solid var(--fbr-line);
+  border-radius:16px;
+  background:linear-gradient(180deg,#0d1929,#091321);
+  box-shadow:0 38px 90px -58px #000;
+}
+.free-business-review-page .fbr-panel-heading{
+  padding:clamp(26px,3vw,38px) clamp(24px,3vw,36px) 26px;
+  border-bottom:1px solid var(--fbr-line);
+}
+.free-business-review-page .fbr-panel-heading h2,
+.free-business-review-page .fbr-preview-head h2,
+.free-business-review-page .fbr-workflow-heading h2,
+.free-business-review-page .fbr-final h2{
+  margin:0;
+  color:var(--fbr-ink);
+  font-size:clamp(1.8rem,3vw,2.65rem);
+  font-weight:590;
+  letter-spacing:-.045em;
+  line-height:1.04;
+  text-wrap:balance;
+}
+.free-business-review-page .fbr-panel-heading>p:last-child{
+  margin:13px 0 0;
+  color:var(--fbr-muted);
+  font-size:.94rem;
+  line-height:1.62;
+}
+.free-business-review-page .fbr-form{
+  padding:clamp(24px,3vw,36px);
+}
+.free-business-review-page .fbr-honeypot{
+  position:absolute;
+  left:-10000px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.free-business-review-page .fbr-context{
+  margin:0 0 22px;
+  padding:12px 14px;
+  border:1px solid rgba(100,197,255,.25);
+  border-radius:8px;
+  color:#bde6ff;
+  background:rgba(63,154,214,.08);
+  font-size:.82rem;
+}
+.free-business-review-page .fbr-field-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.free-business-review-page .fbr-field{
+  margin-bottom:18px;
+}
+.free-business-review-page .fbr-field label{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 0 8px;
+  color:#dfeaf2;
+  font-size:.82rem;
+  font-weight:650;
+}
+.free-business-review-page .fbr-field label span{
+  color:#71879a;
+  font-size:.7rem;
+  font-weight:500;
+}
+.free-business-review-page .fbr-form input,
+.free-business-review-page .fbr-form select{
+  width:100%;
+  min-height:50px;
+  box-sizing:border-box;
+  padding:13px 14px;
+  border:1px solid rgba(145,179,207,.21);
+  border-radius:8px;
+  color:#eff6fb;
+  background:#060e18;
+  font:inherit;
+  font-size:.92rem;
+}
+.free-business-review-page .fbr-form input::placeholder{
+  color:#667b8d;
+}
+.free-business-review-page .fbr-form select{
+  appearance:auto;
+}
+.free-business-review-page .fbr-field small{
+  display:block;
+  margin-top:7px;
+  color:#8296a8;
+  font-size:.72rem;
+  line-height:1.5;
+}
+.free-business-review-page .fbr-submit{
+  width:100%;
+  margin-top:2px;
+  border:0;
+  cursor:pointer;
+}
+.free-business-review-page .fbr-submit:disabled{
+  cursor:wait;
+  opacity:.7;
+  transform:none;
+}
+.free-business-review-page .fbr-privacy{
+  margin:13px 0 0;
+  color:#7f93a5;
+  font-size:.7rem;
+  line-height:1.55;
+}
+.free-business-review-page .fbr-privacy a{
+  color:#a6dfff;
+}
+.free-business-review-page .fbr-success,
+.free-business-review-page .fbr-error{
+  margin-top:16px;
+  padding:12px 14px;
+  border-radius:8px;
+  font-size:.82rem;
+  line-height:1.5;
+}
+.free-business-review-page .fbr-success{
+  border:1px solid rgba(113,223,206,.33);
+  color:#bcefe6;
+  background:rgba(49,155,136,.1);
+}
+.free-business-review-page .fbr-error{
+  border:1px solid rgba(255,145,145,.34);
+  color:#ffd1d1;
+  background:rgba(168,55,55,.12);
+}
+.free-business-review-page .fbr-preview{
+  min-width:0;
+  padding:clamp(26px,3vw,38px);
+  border:1px solid var(--fbr-line);
+  border-radius:16px;
+  background:#07101b;
+  box-shadow:0 38px 90px -58px #000;
+}
+.free-business-review-page .fbr-preview-head{
+  display:flex;
+  gap:24px;
+  align-items:flex-end;
+  justify-content:space-between;
+  margin-bottom:24px;
+}
+.free-business-review-page .fbr-preview-head h2{
+  max-width:14ch;
+  font-size:clamp(1.65rem,2.5vw,2.3rem);
+}
+.free-business-review-page .fbr-evidence-label{
+  max-width:190px;
+  padding:8px 10px;
+  border:1px solid rgba(147,181,210,.2);
+  border-radius:6px;
+  color:#8fa3b5;
+  background:#0b1725;
+  font-size:.65rem;
+  line-height:1.45;
+}
+.free-business-review-page .fbr-report{
+  overflow:hidden;
+  border:1px solid rgba(149,189,221,.24);
+  border-radius:10px;
+  background:#e9eef2;
+  color:#0a1420;
+  box-shadow:0 25px 60px -40px #000;
+}
+.free-business-review-page .fbr-report-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:17px 20px;
+  color:#edf5fa;
+  background:#0a1725;
+}
+.free-business-review-page .fbr-report-header div{
+  display:grid;
+  gap:3px;
+}
+.free-business-review-page .fbr-report-header div span{
+  color:#87a1b6;
+  font-size:.58rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-report-header strong{
+  font-size:.92rem;
+  font-weight:650;
+}
+.free-business-review-page .fbr-report-status{
+  padding:6px 8px;
+  border:1px solid rgba(255,211,138,.36);
+  border-radius:5px;
+  color:#ffe0a8;
+  font-size:.61rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-report-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:#cbd5dc;
+}
+.free-business-review-page .fbr-report article{
+  min-width:0;
+  padding:20px;
+  background:#f5f7f9;
+}
+.free-business-review-page .fbr-report article>p{
+  margin:0 0 11px;
+  color:#3d5d74;
+  font-size:.61rem;
+  font-weight:750;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-report h3{
+  margin:0 0 17px;
+  color:#0a1723;
+  font-size:1rem;
+  font-weight:680;
+  line-height:1.3;
+}
+.free-business-review-page .fbr-score-row{
+  display:flex;
+  gap:12px;
+  justify-content:space-between;
+  padding:9px 0;
+  border-top:1px solid #d7dee4;
+  font-size:.68rem;
+}
+.free-business-review-page .fbr-score-row span{
+  color:#526979;
+}
+.free-business-review-page .fbr-score-row strong{
+  color:#183c54;
+  font-weight:720;
+  text-align:right;
+}
+.free-business-review-page .fbr-finding ul,
+.free-business-review-page .fbr-action-plan ol{
+  display:grid;
+  gap:9px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.free-business-review-page .fbr-finding li,
+.free-business-review-page .fbr-action-plan li{
+  padding-top:9px;
+  border-top:1px solid #d7dee4;
+  color:#203341;
+  font-size:.68rem;
+  line-height:1.45;
+}
+.free-business-review-page .fbr-finding li span,
+.free-business-review-page .fbr-action-plan li span{
+  display:block;
+  margin-bottom:3px;
+  color:#31556d;
+  font-size:.56rem;
+  font-weight:750;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-matrix-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+}
+.free-business-review-page .fbr-matrix-grid span{
+  min-height:58px;
+  padding:9px;
+  border:1px solid #cbd7df;
+  border-radius:4px;
+  color:#3f5668;
+  background:#edf2f5;
+  font-size:.56rem;
+  line-height:1.4;
+}
+.free-business-review-page .fbr-matrix-grid span:first-child{
+  border-color:#85afc8;
+  background:#e0eff7;
+}
+.free-business-review-page .fbr-matrix-grid strong{
+  color:#183d54;
+  font-size:.64rem;
+  font-weight:720;
+}
+.free-business-review-page .fbr-workflow{
+  padding:clamp(60px,7vw,92px) 0;
+  border-block:1px solid var(--fbr-line);
+  background:#07101a;
+}
+.free-business-review-page .fbr-workflow-heading{
+  display:grid;
+  grid-template-columns:.45fr 1fr;
+  gap:24px;
+  align-items:end;
+  margin-bottom:34px;
+}
+.free-business-review-page .fbr-workflow-heading p{
+  margin:0;
+}
+.free-business-review-page .fbr-workflow-heading h2{
+  max-width:19ch;
+}
+.free-business-review-page .fbr-flow{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:20px;
+  align-items:stretch;
+}
+.free-business-review-page .fbr-flow article{
+  min-width:0;
+  padding:24px;
+  border:1px solid var(--fbr-line);
+  border-radius:10px;
+  background:#0a1522;
+}
+.free-business-review-page .fbr-flow-number{
+  color:var(--fbr-blue);
+  font-size:.68rem;
+  font-weight:750;
+}
+.free-business-review-page .fbr-flow article>p{
+  margin:20px 0 4px;
+  color:#8094a6;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.free-business-review-page .fbr-flow h3{
+  margin:0;
+  color:#edf4f9;
+  font-size:1.25rem;
+  font-weight:620;
+}
+.free-business-review-page .fbr-flow small{
+  display:block;
+  margin-top:14px;
+  color:#8396a7;
+  font-size:.72rem;
+  line-height:1.5;
+}
+.free-business-review-page .fbr-flow ul{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin:13px 0 0;
+  padding:0;
+  list-style:none;
+}
+.free-business-review-page .fbr-flow li{
+  color:#d5e2eb;
+  font-size:.78rem;
+}
+.free-business-review-page .fbr-flow li::before{
+  content:"✓";
+  margin-right:7px;
+  color:var(--fbr-teal);
+}
+.free-business-review-page .fbr-flow-arrow{
+  align-self:center;
+  color:#4c7592;
+  font-size:1.3rem;
+}
+.free-business-review-page .fbr-final{
+  padding:clamp(58px,7vw,90px) 0;
+}
+.free-business-review-page .fbr-final-inner{
+  display:flex;
+  gap:36px;
+  align-items:center;
+  justify-content:space-between;
+  padding:clamp(30px,4vw,48px);
+  border:1px solid var(--fbr-line-strong);
+  border-radius:14px;
+  background:#0a1624;
+}
+.free-business-review-page .fbr-final h2{
+  max-width:22ch;
+  font-size:clamp(1.7rem,3vw,2.5rem);
+}
+.free-business-review-page .fbr-final .fbr-button{
+  flex:0 0 auto;
+}
+.free-business-review-page [hidden]{
+  display:none!important;
+}
+@media(max-width:980px){
+  .free-business-review-page .fbr-hero-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .free-business-review-page .fbr-hero h1{
+    max-width:13ch;
+  }
+  .free-business-review-page .fbr-confidence{
+    display:none;
+  }
+  .free-business-review-page .fbr-conversion-grid{
+    display:flex;
+    flex-direction:column;
+  }
+  .free-business-review-page .fbr-form-panel{
+    width:100%;
+    order:1;
+  }
+  .free-business-review-page .fbr-preview{
+    width:100%;
+    box-sizing:border-box;
+    order:2;
+  }
+  .free-business-review-page .fbr-workflow-heading{
+    grid-template-columns:1fr;
+  }
+  .free-business-review-page .fbr-flow{
+    overflow:hidden;
+    grid-template-columns:1fr;
+    gap:0;
+    border:1px solid var(--fbr-line);
+    border-radius:10px;
+    background:#0a1522;
+  }
+  .free-business-review-page .fbr-flow article{
+    padding:18px 20px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+  }
+  .free-business-review-page .fbr-flow article:not(:first-child){
+    border-top:1px solid var(--fbr-line);
+  }
+  .free-business-review-page .fbr-flow article>p{
+    margin:8px 0 2px;
+  }
+  .free-business-review-page .fbr-flow small{
+    margin-top:7px;
+  }
+  .free-business-review-page .fbr-flow ul{
+    margin-top:8px;
+  }
+  .free-business-review-page .fbr-flow-arrow{
+    display:none;
+  }
+}
+@media(max-width:640px){
+  .free-business-review-page .fbr-container{
+    width:min(100% - 32px,1180px);
+  }
+  .free-business-review-page .fbr-hero{
+    padding:54px 0 48px;
+  }
+  .free-business-review-page .fbr-hero h1{
+    max-width:10ch;
+    font-size:clamp(2.75rem,14vw,4.25rem);
+    line-height:.93;
+  }
+  .free-business-review-page .fbr-hero-outcome{
+    margin-top:23px;
+    font-size:1.08rem;
+  }
+  .free-business-review-page .fbr-hero-deliverable{
+    font-size:.9rem;
+    line-height:1.62;
+  }
+  .free-business-review-page .fbr-hero-actions{
+    align-items:flex-start;
+    flex-direction:column;
+    margin-top:27px;
+  }
+  .free-business-review-page .fbr-button{
+    width:100%;
+    box-sizing:border-box;
+  }
+  .free-business-review-page .fbr-conversion{
+    padding:42px 0 52px;
+  }
+  .free-business-review-page .fbr-field-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .free-business-review-page .fbr-preview{
+    padding:22px 16px 16px;
+  }
+  .free-business-review-page .fbr-preview-head{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:14px;
+  }
+  .free-business-review-page .fbr-preview-head h2{
+    max-width:18ch;
+  }
+  .free-business-review-page .fbr-evidence-label{
+    max-width:none;
+  }
+  .free-business-review-page .fbr-report-grid{
+    grid-template-columns:1fr;
+  }
+  .free-business-review-page .fbr-report article{
+    padding:17px;
+  }
+  .free-business-review-page .fbr-workflow{
+    padding:44px 0;
+  }
+  .free-business-review-page .fbr-flow{
+    overflow:hidden;
+    gap:0;
+    border:1px solid var(--fbr-line);
+    border-radius:10px;
+    background:#0a1522;
+  }
+  .free-business-review-page .fbr-flow article{
+    padding:18px 20px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+  }
+  .free-business-review-page .fbr-flow article:not(:first-child){
+    border-top:1px solid var(--fbr-line);
+  }
+  .free-business-review-page .fbr-flow article>p{
+    margin:8px 0 2px;
+  }
+  .free-business-review-page .fbr-flow small{
+    margin-top:7px;
+  }
+  .free-business-review-page .fbr-flow ul{
+    grid-template-columns:1fr 1fr;
+    margin-top:8px;
+  }
+  .free-business-review-page .fbr-flow-arrow{
+    display:none;
+  }
+  .free-business-review-page .fbr-final{
+    padding:46px 0 54px;
+  }
+  .free-business-review-page .fbr-final-inner{
+    align-items:stretch;
+    flex-direction:column;
+    padding:27px 22px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .free-business-review-page .fbr-button{
+    scroll-behavior:auto;
+    transition:none;
+  }
+}
