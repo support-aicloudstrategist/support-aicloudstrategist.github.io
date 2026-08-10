@@ -8,18 +8,18 @@
       "title": "Not found \u2014 AICloudStrategist"
     },
     "about.html": {
-      "canonical": "https://aicloudstrategist.com/about",
-      "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "717475578863c01b7e16a60657df86d1b59c77536c5fc62cfb0a938f4b7bcad6",
-      "title": "About AICloudStrategist | Practical Business Automation, Cloud & AI Safety Help"
-    },
-    "about/index.html": {
+      "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
+      "title": "About AICloudStrategist | Production AI Engineering &amp; Operations",
       "canonical": "https://aicloudstrategist.com/about/",
       "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1ac80e2dc46c8c3184680971fd3e69eec91388f77e57586cff941fc18f0c8ff3",
-      "title": "About AICloudStrategist"
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "about/index.html": {
+      "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
+      "title": "About AICloudStrategist | Production AI Engineering &amp; Operations",
+      "canonical": "https://aicloudstrategist.com/about/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "advisory.html": {
       "canonical": "https://aicloudstrategist.com/advisory",
