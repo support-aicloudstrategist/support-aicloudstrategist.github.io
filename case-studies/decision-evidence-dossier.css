@@ -1,0 +1,790 @@
+/* Decision Evidence Dossier — route-scoped to /case-studies/ */
+body.case-evidence-dossier {
+  --dossier-ink: #050b13;
+  --dossier-navy: #071827;
+  --dossier-navy-2: #0a2234;
+  --dossier-slate: #102a3c;
+  --dossier-line: rgba(167, 208, 225, 0.2);
+  --dossier-line-strong: rgba(167, 208, 225, 0.36);
+  --dossier-text: #f4f9fb;
+  --dossier-muted: #a9c0cc;
+  --dossier-cyan: #49d5e7;
+  --dossier-cyan-soft: #a9f2f4;
+  --dossier-verified: #71e0c1;
+  --dossier-representative: #e5c778;
+  --dossier-simulated: #aab7c3;
+  --dossier-paper: #f2f6f6;
+  --dossier-paper-2: #e6eeee;
+  --dossier-paper-ink: #081421;
+  margin: 0;
+  background: var(--dossier-ink);
+  color: var(--dossier-text);
+}
+
+.case-evidence-dossier main {
+  overflow: clip;
+  background:
+    linear-gradient(rgba(73, 213, 231, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 213, 231, 0.025) 1px, transparent 1px),
+    var(--dossier-ink);
+  background-size: 48px 48px;
+}
+
+.case-evidence-dossier main *,
+.case-evidence-dossier main *::before,
+.case-evidence-dossier main *::after {
+  box-sizing: border-box;
+}
+
+.case-evidence-dossier main h1,
+.case-evidence-dossier main h2,
+.case-evidence-dossier main h3,
+.case-evidence-dossier main p,
+.case-evidence-dossier main ol,
+.case-evidence-dossier main ul,
+.case-evidence-dossier main dl {
+  margin-top: 0;
+}
+
+.case-evidence-dossier main h1,
+.case-evidence-dossier main h2,
+.case-evidence-dossier main h3 {
+  color: inherit;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.case-evidence-dossier main p,
+.case-evidence-dossier main li,
+.case-evidence-dossier main dd {
+  text-wrap: pretty;
+}
+
+.case-evidence-dossier main a {
+  color: inherit;
+}
+
+.case-evidence-dossier code {
+  padding: 0.08em 0.3em;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  font: 0.88em/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.dossier-skip-link {
+  position: fixed;
+  z-index: 9999;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.8rem 1rem;
+  color: #041018;
+  background: #fff;
+  border-radius: 0.45rem;
+  font-weight: 800;
+  transform: translateY(-160%);
+}
+
+.dossier-skip-link:focus {
+  transform: translateY(0);
+}
+
+.case-evidence-dossier .dossier-shell {
+  width: min(100% - 3rem, 1240px);
+  margin-inline: auto;
+}
+
+.case-evidence-dossier .dossier-kicker,
+.case-evidence-dossier .evidence-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--dossier-cyan-soft);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.35;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.case-evidence-dossier .dossier-kicker::before,
+.case-evidence-dossier .evidence-label::before {
+  width: 1.8rem;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.case-evidence-dossier .evidence-label-verified { color: #14725d; }
+.case-evidence-dossier .evidence-label-representative { color: var(--dossier-representative); }
+.case-evidence-dossier .evidence-label-simulated { color: #c2d0d8; }
+
+.case-evidence-dossier .dossier-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.78rem 1.15rem;
+  border: 1px solid var(--dossier-line-strong);
+  border-radius: 0.45rem;
+  color: #e9f5f8;
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.case-evidence-dossier .dossier-button:hover {
+  border-color: var(--dossier-cyan);
+  background: rgba(73, 213, 231, 0.08);
+  transform: translateY(-1px);
+}
+
+.case-evidence-dossier .dossier-button-primary {
+  border-color: var(--dossier-cyan);
+  color: #04131b;
+  background: var(--dossier-cyan);
+}
+
+.case-evidence-dossier .dossier-button-primary:hover {
+  color: #020b11;
+  background: #7ae4ee;
+}
+
+.case-evidence-dossier .dossier-button:focus-visible,
+.case-evidence-dossier .text-link:focus-visible,
+.case-evidence-dossier details summary:focus-visible,
+.dossier-skip-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+/* Hero */
+.case-evidence-dossier .dossier-hero {
+  position: relative;
+  padding: clamp(5.2rem, 10vw, 8.5rem) 0 clamp(4.5rem, 8vw, 7rem);
+  border-bottom: 1px solid var(--dossier-line);
+  background:
+    linear-gradient(118deg, rgba(4, 12, 20, 0.98) 0%, rgba(7, 26, 41, 0.95) 62%, rgba(7, 39, 51, 0.88) 100%);
+}
+
+.case-evidence-dossier .dossier-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dossier-cyan), transparent);
+  content: "";
+  opacity: 0.55;
+}
+
+.case-evidence-dossier .dossier-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.case-evidence-dossier .dossier-hero h1 {
+  max-width: 12ch;
+  margin-bottom: 1.6rem;
+  font-size: clamp(3.3rem, 6.4vw, 6rem);
+  line-height: 0.98;
+}
+
+.case-evidence-dossier .dossier-intro {
+  max-width: 760px;
+  margin-bottom: 1.8rem;
+  color: #bed0d9;
+  font-size: clamp(1.05rem, 1.55vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.case-evidence-dossier .dossier-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.case-evidence-dossier .dossier-hero-boundary {
+  max-width: 650px;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--dossier-line);
+  color: #92abb7;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.case-evidence-dossier .dossier-hero-boundary strong { color: #e7f4f7; }
+
+.case-evidence-dossier .evidence-spine {
+  border: 1px solid var(--dossier-line-strong);
+  border-radius: 0.55rem;
+  background: rgba(4, 13, 21, 0.66);
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.22);
+}
+
+.case-evidence-dossier .evidence-spine-heading {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--dossier-line);
+}
+
+.case-evidence-dossier .evidence-spine-heading span {
+  color: var(--dossier-cyan);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.case-evidence-dossier .evidence-spine-heading h2 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.case-evidence-dossier .evidence-spine ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-evidence-dossier .evidence-spine li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.1rem 1fr;
+  min-height: 68px;
+  align-items: center;
+  border-bottom: 1px solid var(--dossier-line);
+}
+
+.case-evidence-dossier .evidence-spine li:last-child { border-bottom: 0; }
+
+.case-evidence-dossier .evidence-spine li > span {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--dossier-line);
+  color: var(--dossier-cyan);
+  font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.case-evidence-dossier .evidence-spine li > div { padding: 0.85rem 1rem; }
+.case-evidence-dossier .evidence-spine strong { display: block; font-size: 0.96rem; }
+.case-evidence-dossier .evidence-spine small { display: block; margin-top: 0.2rem; color: #8fa8b5; font-size: 0.8rem; }
+
+/* Classification */
+.case-evidence-dossier .classification-section {
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  background: #07131e;
+}
+
+.case-evidence-dossier .compact-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.case-evidence-dossier .compact-heading .dossier-kicker { margin-bottom: 0.4rem; }
+.case-evidence-dossier .compact-heading h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.8rem); }
+
+.case-evidence-dossier .classification-ledger {
+  margin-top: 2.4rem;
+  border-top: 1px solid var(--dossier-line-strong);
+}
+
+.case-evidence-dossier .classification-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(260px, 1.2fr) minmax(280px, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+  min-height: 116px;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--dossier-line);
+}
+
+.case-evidence-dossier .classification-code {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.case-evidence-dossier .classification-code > span {
+  display: grid;
+  width: 2.7rem;
+  height: 2.7rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font: 850 0.85rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.case-evidence-dossier .classification-code strong { font-size: 1.05rem; }
+.case-evidence-dossier .classification-verified .classification-code { color: var(--dossier-verified); }
+.case-evidence-dossier .classification-representative .classification-code { color: var(--dossier-representative); }
+.case-evidence-dossier .classification-simulated .classification-code { color: var(--dossier-simulated); }
+.case-evidence-dossier .classification-row > p { margin: 0; color: #b1c4ce; line-height: 1.6; }
+
+.case-evidence-dossier .classification-row dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.case-evidence-dossier .classification-row dl div { border-left: 1px solid var(--dossier-line-strong); padding-left: 0.8rem; }
+.case-evidence-dossier .classification-row dt { color: #89a4b0; font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase; }
+.case-evidence-dossier .classification-row dd { margin: 0.25rem 0 0; color: #eef7f9; font-size: 0.9rem; }
+
+/* Verified proof */
+.case-evidence-dossier .verified-section {
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  color: var(--dossier-paper-ink);
+  background:
+    linear-gradient(90deg, rgba(8, 20, 33, 0.055) 1px, transparent 1px),
+    var(--dossier-paper);
+  background-size: 72px 100%;
+}
+
+.case-evidence-dossier .verified-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) auto;
+  gap: 3rem;
+  align-items: end;
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid #0c2231;
+}
+
+.case-evidence-dossier .verified-header h2 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(2.5rem, 5.1vw, 5.2rem);
+  line-height: 1;
+}
+
+.case-evidence-dossier .verified-measure {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding-bottom: 0.4rem;
+}
+
+.case-evidence-dossier .verified-measure span { min-width: 116px; }
+.case-evidence-dossier .verified-measure small { display: block; color: #496572; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.case-evidence-dossier .verified-measure strong { display: block; margin-top: 0.25rem; font-size: clamp(2.4rem, 4.3vw, 4rem); line-height: 1; }
+.case-evidence-dossier .verified-measure em { color: #57717d; font-size: 0.35em; font-style: normal; }
+.case-evidence-dossier .verified-measure b { color: #1e6472; font-size: 2rem; }
+
+.case-evidence-dossier .correction-loop {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 3rem 0;
+  border-top: 1px solid #9db2bb;
+  border-bottom: 1px solid #9db2bb;
+}
+
+.case-evidence-dossier .correction-loop article {
+  position: relative;
+  min-height: 330px;
+  padding: 2rem clamp(1.3rem, 2.4vw, 2.4rem) 2.2rem 0;
+}
+
+.case-evidence-dossier .correction-loop article + article {
+  padding-left: clamp(1.3rem, 2.4vw, 2.4rem);
+  border-left: 1px solid #b9c9cf;
+}
+
+.case-evidence-dossier .loop-index {
+  display: block;
+  margin-bottom: 2.2rem;
+  color: #347583;
+  font: 800 0.78rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.case-evidence-dossier .loop-state {
+  margin-bottom: 0.55rem;
+  color: #246673;
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-evidence-dossier .correction-loop h3 { margin-bottom: 1rem; font-size: clamp(1.35rem, 2vw, 1.9rem); line-height: 1.15; }
+.case-evidence-dossier .correction-loop p,
+.case-evidence-dossier .correction-loop li { color: #405765; font-size: 0.96rem; line-height: 1.62; }
+.case-evidence-dossier .correction-loop ul { margin-bottom: 0; padding-left: 1.2rem; }
+
+.case-evidence-dossier .verified-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: 3rem;
+  align-items: end;
+}
+
+.case-evidence-dossier .verified-limitations {
+  padding-left: 1.2rem;
+  border-left: 3px solid #1c7883;
+}
+
+.case-evidence-dossier .verified-limitations .dossier-kicker { color: #1b6270; }
+.case-evidence-dossier .verified-limitations p:last-child { max-width: 850px; margin-bottom: 0; color: #344c59; font-size: 1.05rem; line-height: 1.65; }
+
+.case-evidence-dossier .text-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--dossier-cyan-soft);
+  font-weight: 850;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.case-evidence-dossier .verified-section .text-link { justify-self: end; color: #0e6270; }
+.case-evidence-dossier .text-link span { transition: transform 160ms ease; }
+.case-evidence-dossier .text-link:hover span { transform: translateX(0.25rem); }
+
+/* Representative artifact */
+.case-evidence-dossier .representative-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: linear-gradient(135deg, #081622 0%, #0a2232 100%);
+}
+
+.case-evidence-dossier .representative-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(520px, 1.28fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.case-evidence-dossier .representative-copy h2 {
+  max-width: 11ch;
+  margin-bottom: 1.4rem;
+  font-size: clamp(2.6rem, 5.2vw, 5rem);
+  line-height: 1;
+}
+
+.case-evidence-dossier .representative-copy > p:not(.evidence-label) { color: #b6c9d2; font-size: 1.08rem; line-height: 1.7; }
+
+.case-evidence-dossier .representative-boundary {
+  margin: 1.8rem 0;
+  padding: 1.15rem 1.3rem;
+  border-left: 3px solid var(--dossier-representative);
+  background: rgba(229, 199, 120, 0.065);
+}
+
+.case-evidence-dossier .representative-boundary strong { color: #f2d98e; }
+.case-evidence-dossier .representative-boundary p { margin: 0.35rem 0 0; color: #c8d3d8; font-size: 0.93rem; line-height: 1.55; }
+
+.case-evidence-dossier .artifact-document {
+  position: relative;
+  color: #102331;
+  background: #f2f5f3;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.28);
+}
+
+.case-evidence-dossier .artifact-document::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--dossier-representative);
+  content: "";
+}
+
+.case-evidence-dossier .artifact-document > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.4rem 1.5rem 1.3rem 1.8rem;
+  border-bottom: 1px solid #c3d0d3;
+}
+
+.case-evidence-dossier .artifact-document header span,
+.case-evidence-dossier .artifact-document header p,
+.case-evidence-dossier .artifact-status span {
+  display: block;
+  margin: 0;
+  color: #657985;
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-evidence-dossier .artifact-document header strong { display: block; margin-top: 0.25rem; font-size: 1rem; }
+.case-evidence-dossier .artifact-status { display: flex; justify-content: space-between; gap: 2rem; padding: 1rem 1.5rem 1rem 1.8rem; color: #f1f8f8; background: #0e2a39; }
+.case-evidence-dossier .artifact-status span { color: #9bb4bf; }
+.case-evidence-dossier .artifact-status strong { font-size: 0.9rem; }
+
+.case-evidence-dossier .artifact-ledger { margin: 0; }
+.case-evidence-dossier .artifact-ledger div { display: grid; grid-template-columns: 116px 1fr; gap: 1rem; padding: 1rem 1.5rem 1rem 1.8rem; border-bottom: 1px solid #d2dcde; }
+.case-evidence-dossier .artifact-ledger dt { color: #315969; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+.case-evidence-dossier .artifact-ledger dd { margin: 0; color: #304753; font-size: 0.87rem; line-height: 1.5; }
+.case-evidence-dossier .artifact-document > footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.5rem 1.1rem 1.8rem; color: #dcebed; background: #102632; font-size: 0.78rem; }
+.case-evidence-dossier .artifact-document > footer span { color: #8faab5; }
+
+/* Five disciplines */
+.case-evidence-dossier .disciplines-section {
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  background: #050c14;
+}
+
+.case-evidence-dossier .section-heading { max-width: 900px; margin-bottom: 3rem; }
+.case-evidence-dossier .section-heading h2 { margin-bottom: 1.2rem; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1; }
+.case-evidence-dossier .section-heading > p:last-child { max-width: 760px; margin-bottom: 0; color: #9fb5c0; font-size: 1.05rem; line-height: 1.68; }
+
+.case-evidence-dossier .discipline-ledger { margin: 0; padding: 0; border-top: 1px solid var(--dossier-line-strong); list-style: none; }
+.case-evidence-dossier .discipline-ledger li { display: grid; grid-template-columns: 64px minmax(280px, 0.8fr) minmax(320px, 1.2fr); gap: 2rem; align-items: center; min-height: 126px; padding: 1.25rem 0; border-bottom: 1px solid var(--dossier-line); }
+.case-evidence-dossier .discipline-ledger > li > span { color: var(--dossier-cyan); font: 800 0.76rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.case-evidence-dossier .discipline-ledger h3 { margin-bottom: 0.35rem; font-size: 1.35rem; }
+.case-evidence-dossier .discipline-ledger li > div p { margin: 0; color: #8da7b3; font-size: 0.92rem; }
+.case-evidence-dossier .discipline-ledger dl { margin: 0; padding-left: 1.5rem; border-left: 1px solid var(--dossier-line-strong); }
+.case-evidence-dossier .discipline-ledger dt { color: #87a2ad; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.11em; text-transform: uppercase; }
+.case-evidence-dossier .discipline-ledger dd { margin: 0.35rem 0 0; color: #bed0d8; font-size: 0.94rem; line-height: 1.55; }
+
+/* Selected methods */
+.case-evidence-dossier .selected-methods-section {
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  border-top: 1px solid var(--dossier-line);
+  background: #0a1824;
+}
+
+.case-evidence-dossier .selected-methods { border-top: 1px solid var(--dossier-line-strong); }
+.case-evidence-dossier .method-record { display: grid; grid-template-columns: 150px minmax(0, 1fr) 210px; gap: clamp(1.5rem, 4vw, 4rem); align-items: start; padding: 2.5rem 0; border-bottom: 1px solid var(--dossier-line); }
+.case-evidence-dossier .method-record-index span { display: block; color: #c7d4d9; font: 850 0.78rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.case-evidence-dossier .method-record-index small { display: block; margin-top: 0.55rem; color: #8ca5b0; font-size: 0.75rem; text-transform: uppercase; }
+.case-evidence-dossier .method-record-main h3 { margin-bottom: 0.8rem; font-size: clamp(1.55rem, 2.5vw, 2.4rem); }
+.case-evidence-dossier .method-record-main > p { max-width: 820px; color: #aabfc8; line-height: 1.65; }
+.case-evidence-dossier .method-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1.5rem 0 0; padding: 0; border-top: 1px solid var(--dossier-line); list-style: none; }
+.case-evidence-dossier .method-fields li { padding: 0.85rem 1rem 0.85rem 0; border-bottom: 1px solid var(--dossier-line); }
+.case-evidence-dossier .method-fields li:nth-child(even) { padding-left: 1rem; border-left: 1px solid var(--dossier-line); }
+.case-evidence-dossier .method-fields span { display: block; color: #89a4af; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+.case-evidence-dossier .method-fields strong { display: block; margin-top: 0.28rem; color: #d9e6ea; font-size: 0.82rem; font-weight: 650; line-height: 1.45; }
+.case-evidence-dossier .method-record > .text-link { align-self: center; }
+
+/* Library */
+.case-evidence-dossier .library-section {
+  padding: clamp(4.5rem, 8vw, 8rem) 0;
+  color: var(--dossier-paper-ink);
+  background: var(--dossier-paper-2);
+}
+
+.case-evidence-dossier .library-layout { display: grid; grid-template-columns: minmax(250px, 0.55fr) minmax(560px, 1.45fr); gap: clamp(3rem, 7vw, 7rem); align-items: start; }
+.case-evidence-dossier .library-heading { position: sticky; top: 2rem; }
+.case-evidence-dossier .library-heading .dossier-kicker { color: #266773; }
+.case-evidence-dossier .library-heading h2 { margin-bottom: 1.2rem; font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1; }
+.case-evidence-dossier .library-heading > p:not(.dossier-kicker):not(.library-count) { color: #526a77; line-height: 1.65; }
+.case-evidence-dossier .library-count { display: flex; align-items: end; gap: 0.8rem; margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid #aebfc5; }
+.case-evidence-dossier .library-count strong { font-size: 2.8rem; line-height: 1; }
+.case-evidence-dossier .library-count span { max-width: 130px; color: #3e5965; font-size: 0.78rem; line-height: 1.35; }
+
+.case-evidence-dossier .library-groups { border-top: 2px solid #102431; }
+.case-evidence-dossier .library-groups details { border-bottom: 1px solid #9fb3bb; }
+.case-evidence-dossier .library-groups summary { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem 0; cursor: pointer; color: #102330; list-style: none; }
+.case-evidence-dossier .library-groups summary::-webkit-details-marker { display: none; }
+.case-evidence-dossier .library-groups summary > span { display: flex; align-items: center; gap: 1rem; }
+.case-evidence-dossier .library-groups summary b { color: #185b68; font: 800 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.case-evidence-dossier .library-groups summary strong { font-size: 1.06rem; }
+.case-evidence-dossier .library-groups summary em { color: #3d5a66; font-size: 0.78rem; font-style: normal; font-weight: 750; white-space: nowrap; }
+.case-evidence-dossier .library-groups summary::after { width: 0.7rem; height: 0.7rem; margin-left: 0.3rem; border-right: 2px solid #3c6570; border-bottom: 2px solid #3c6570; content: ""; transform: rotate(45deg) translateY(-0.2rem); transition: transform 160ms ease; }
+.case-evidence-dossier .library-groups details[open] summary::after { transform: rotate(225deg) translate(-0.1rem, -0.1rem); }
+.case-evidence-dossier .library-groups ul { margin: 0 0 1.5rem; padding: 0; border-top: 1px solid #c3d0d4; list-style: none; }
+.case-evidence-dossier .library-groups li { display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: center; min-height: 50px; padding: 0.55rem 0; border-bottom: 1px solid #c8d4d7; }
+.case-evidence-dossier .library-groups li span { color: #425d69; font-size: 0.75rem; font-weight: 850; letter-spacing: 0.07em; text-transform: uppercase; }
+.case-evidence-dossier .library-groups li a { min-height: 40px; display: flex; align-items: center; color: #183a47; font-size: 0.9rem; font-weight: 750; text-decoration: none; }
+.case-evidence-dossier .library-groups li a:hover { color: #006e7f; text-decoration: underline; text-underline-offset: 0.2em; }
+
+/* Policy and conversion */
+.case-evidence-dossier .policy-section { padding: clamp(4.5rem, 8vw, 7.5rem) 0; background: #081520; }
+.case-evidence-dossier .policy-document { max-width: 1020px; padding-left: clamp(1.5rem, 4vw, 3.5rem); border-left: 3px solid var(--dossier-cyan); }
+.case-evidence-dossier .policy-document h2 { margin-bottom: 1.5rem; font-size: clamp(2.6rem, 5vw, 4.8rem); }
+.case-evidence-dossier .policy-document > p:not(.dossier-kicker) { color: #c2d2d9; font-size: clamp(1rem, 1.5vw, 1.16rem); line-height: 1.72; }
+.case-evidence-dossier .policy-document > p:last-child { margin-bottom: 0; }
+
+.case-evidence-dossier .conversion-section { padding: clamp(4.5rem, 8vw, 8rem) 0; border-top: 1px solid var(--dossier-line-strong); background: linear-gradient(130deg, #071725, #0a3141); }
+.case-evidence-dossier .conversion-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr); gap: clamp(3rem, 7vw, 7rem); align-items: end; }
+.case-evidence-dossier .conversion-layout h2 { max-width: 900px; margin-bottom: 1.2rem; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1; }
+.case-evidence-dossier .conversion-layout p:last-child { max-width: 820px; margin-bottom: 0; color: #aec2cb; font-size: 1.03rem; line-height: 1.68; }
+.case-evidence-dossier .conversion-actions { display: grid; gap: 0.8rem; }
+
+@media (max-width: 1050px) {
+  .case-evidence-dossier .dossier-hero-layout,
+  .case-evidence-dossier .representative-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .case-evidence-dossier .dossier-hero h1,
+  .case-evidence-dossier .representative-copy h2 { max-width: 14ch; }
+  .case-evidence-dossier .evidence-spine { max-width: 760px; }
+  .case-evidence-dossier .representative-copy { max-width: 800px; }
+  .case-evidence-dossier .artifact-document { max-width: 900px; }
+
+  .case-evidence-dossier .verified-header { grid-template-columns: 1fr; }
+  .case-evidence-dossier .verified-measure { justify-self: start; }
+
+  .case-evidence-dossier .classification-row { grid-template-columns: minmax(220px, 0.8fr) minmax(260px, 1.2fr); }
+  .case-evidence-dossier .classification-row dl { grid-column: 2; }
+
+  .case-evidence-dossier .method-record { grid-template-columns: 110px 1fr; }
+  .case-evidence-dossier .method-record > .text-link { grid-column: 2; justify-self: start; }
+
+  .case-evidence-dossier .library-layout { grid-template-columns: 1fr; }
+  .case-evidence-dossier .library-heading { position: static; max-width: 760px; }
+  .case-evidence-dossier .library-count { max-width: 260px; }
+}
+
+@media (max-width: 800px) {
+  .case-evidence-dossier .dossier-shell { width: min(100% - 2rem, 1240px); }
+  .case-evidence-dossier .dossier-hero { padding-top: 4.5rem; }
+  .case-evidence-dossier .dossier-hero-layout { gap: 2.5rem; }
+  .case-evidence-dossier .dossier-hero h1 { font-size: clamp(2.85rem, 12.5vw, 4.8rem); }
+
+  .case-evidence-dossier .compact-heading { display: block; }
+  .case-evidence-dossier .compact-heading h2 { margin-top: 0.3rem; }
+  .case-evidence-dossier .classification-row { grid-template-columns: 1fr; gap: 0.9rem; padding: 1.5rem 0; }
+  .case-evidence-dossier .classification-row dl { grid-column: auto; }
+
+  .case-evidence-dossier .correction-loop { grid-template-columns: 1fr; }
+  .case-evidence-dossier .correction-loop article { min-height: 0; padding: 1.5rem 0; }
+  .case-evidence-dossier .correction-loop article + article { padding-left: 0; border-top: 1px solid #b9c9cf; border-left: 0; }
+  .case-evidence-dossier .loop-index { margin-bottom: 1rem; }
+  .case-evidence-dossier .verified-footer { grid-template-columns: 1fr; gap: 1.5rem; }
+  .case-evidence-dossier .verified-section .text-link { justify-self: start; }
+
+  .case-evidence-dossier .discipline-ledger li { grid-template-columns: 44px 1fr; gap: 1rem; padding: 1.4rem 0; }
+  .case-evidence-dossier .discipline-ledger dl { grid-column: 2; padding: 0.8rem 0 0; border-top: 1px solid var(--dossier-line); border-left: 0; }
+
+  .case-evidence-dossier .method-record { grid-template-columns: 1fr; gap: 1rem; }
+  .case-evidence-dossier .method-record > .text-link { grid-column: auto; }
+  .case-evidence-dossier .method-fields { grid-template-columns: 1fr; }
+  .case-evidence-dossier .method-fields li:nth-child(even) { padding-left: 0; border-left: 0; }
+
+  .case-evidence-dossier .conversion-layout { grid-template-columns: 1fr; }
+  .case-evidence-dossier .conversion-actions { max-width: 520px; }
+}
+
+@media (max-width: 520px) {
+  .case-evidence-dossier .dossier-shell { width: min(100% - 1.5rem, 1240px); }
+  .case-evidence-dossier .dossier-hero { padding: 3.25rem 0 3.1rem; }
+  .case-evidence-dossier .dossier-hero h1 { max-width: none; margin-bottom: 1.2rem; font-size: clamp(2.65rem, 13.5vw, 3.55rem); }
+  .case-evidence-dossier .dossier-intro { font-size: 1rem; line-height: 1.58; }
+  .case-evidence-dossier .dossier-actions { display: grid; }
+  .case-evidence-dossier .dossier-button { width: 100%; }
+  .case-evidence-dossier .evidence-spine-heading { padding: 1rem; }
+  .case-evidence-dossier .evidence-spine-heading h2 { font-size: 1.25rem; }
+  .case-evidence-dossier .evidence-spine li { grid-template-columns: 2.75rem 1fr; }
+  .case-evidence-dossier .evidence-spine li { min-height: 58px; }
+  .case-evidence-dossier .evidence-spine li > div { padding: 0.65rem 0.8rem; }
+  .case-evidence-dossier .evidence-spine small { font-size: 0.75rem; }
+
+  .case-evidence-dossier .classification-section,
+  .case-evidence-dossier .verified-section,
+  .case-evidence-dossier .representative-section,
+  .case-evidence-dossier .disciplines-section,
+  .case-evidence-dossier .selected-methods-section,
+  .case-evidence-dossier .library-section,
+  .case-evidence-dossier .policy-section,
+  .case-evidence-dossier .conversion-section { padding: 3.35rem 0; }
+
+  .case-evidence-dossier .classification-ledger { margin-top: 1.65rem; }
+  .case-evidence-dossier .classification-row { gap: 0.65rem; min-height: 0; padding: 1.1rem 0; }
+  .case-evidence-dossier .classification-row > p { font-size: 0.9rem; line-height: 1.5; }
+  .case-evidence-dossier .classification-row dl { gap: 0.65rem; }
+  .case-evidence-dossier .classification-row dd { font-size: 0.84rem; }
+
+  .case-evidence-dossier .verified-header h2,
+  .case-evidence-dossier .representative-copy h2,
+  .case-evidence-dossier .section-heading h2,
+  .case-evidence-dossier .library-heading h2,
+  .case-evidence-dossier .policy-document h2,
+  .case-evidence-dossier .conversion-layout h2 { font-size: clamp(2.25rem, 11.5vw, 3.2rem); }
+
+  .case-evidence-dossier .verified-measure { width: 100%; justify-content: space-between; gap: 0.5rem; }
+  .case-evidence-dossier .verified-measure span { min-width: 0; }
+  .case-evidence-dossier .verified-measure strong { font-size: 2.65rem; }
+  .case-evidence-dossier .verified-measure b { font-size: 1.4rem; }
+  .case-evidence-dossier .verified-header { gap: 1.5rem; padding-bottom: 1.5rem; }
+  .case-evidence-dossier .correction-loop { margin: 1.8rem 0; }
+  .case-evidence-dossier .correction-loop article { padding: 1.15rem 0; }
+  .case-evidence-dossier .correction-loop h3 { margin-bottom: 0.65rem; font-size: 1.22rem; }
+  .case-evidence-dossier .correction-loop p,
+  .case-evidence-dossier .correction-loop li { font-size: 0.9rem; line-height: 1.5; }
+  .case-evidence-dossier .verified-footer { gap: 1rem; }
+  .case-evidence-dossier .verified-limitations p:last-child { font-size: 0.92rem; line-height: 1.55; }
+
+  .case-evidence-dossier .artifact-document > header,
+  .case-evidence-dossier .artifact-status,
+  .case-evidence-dossier .artifact-document > footer { align-items: flex-start; flex-direction: column; gap: 0.45rem; }
+  .case-evidence-dossier .representative-copy > p:not(.evidence-label) { font-size: 0.94rem; line-height: 1.55; }
+  .case-evidence-dossier .representative-boundary { margin: 1.2rem 0; }
+  .case-evidence-dossier .artifact-document > header { padding: 1rem 1rem 0.9rem 1.25rem; }
+  .case-evidence-dossier .artifact-status { padding: 0.75rem 1rem 0.75rem 1.25rem; }
+  .case-evidence-dossier .artifact-ledger div { grid-template-columns: 88px 1fr; gap: 0.65rem; padding: 0.68rem 1rem 0.68rem 1.25rem; }
+  .case-evidence-dossier .artifact-ledger dd { font-size: 0.79rem; line-height: 1.38; }
+  .case-evidence-dossier .artifact-document > footer { padding: 0.8rem 1rem 0.8rem 1.25rem; }
+
+  .case-evidence-dossier .section-heading { margin-bottom: 1.8rem; }
+  .case-evidence-dossier .section-heading > p:last-child { font-size: 0.92rem; line-height: 1.55; }
+  .case-evidence-dossier .discipline-ledger li { grid-template-columns: 34px 1fr; gap: 0.65rem; min-height: 0; padding: 0.95rem 0; }
+  .case-evidence-dossier .discipline-ledger h3 { font-size: 1.1rem; }
+  .case-evidence-dossier .discipline-ledger li > div p { font-size: 0.82rem; line-height: 1.4; }
+  .case-evidence-dossier .discipline-ledger dl { padding-top: 0.55rem; }
+  .case-evidence-dossier .discipline-ledger dd { font-size: 0.83rem; line-height: 1.4; }
+
+  .case-evidence-dossier .method-record { gap: 0.7rem; padding: 1.5rem 0; }
+  .case-evidence-dossier .method-record-main h3 { font-size: 1.35rem; }
+  .case-evidence-dossier .method-record-main > p { font-size: 0.88rem; line-height: 1.48; }
+  .case-evidence-dossier .method-fields { grid-template-columns: 1fr 1fr; margin-top: 1rem; }
+  .case-evidence-dossier .method-fields li { padding: 0.65rem 0.65rem 0.65rem 0; }
+  .case-evidence-dossier .method-fields li:nth-child(even) { padding-left: 0.65rem; border-left: 1px solid var(--dossier-line); }
+  .case-evidence-dossier .method-fields strong { font-size: 0.78rem; line-height: 1.35; }
+
+  .case-evidence-dossier .library-groups summary { align-items: flex-start; min-height: 72px; }
+  .case-evidence-dossier .library-groups summary > span { align-items: flex-start; }
+  .case-evidence-dossier .library-groups summary em { display: none; }
+  .case-evidence-dossier .library-groups li { grid-template-columns: 1fr; gap: 0.15rem; padding: 0.8rem 0; }
+  .case-evidence-dossier .library-groups li a { min-height: 44px; }
+
+  .case-evidence-dossier .policy-document { padding-left: 1rem; }
+  .case-evidence-dossier .policy-document > p:not(.dossier-kicker) { font-size: 0.92rem; line-height: 1.55; }
+  .case-evidence-dossier .conversion-layout p:last-child { font-size: 0.92rem; line-height: 1.55; }
+}
+
+@media (max-width: 420px) {
+  .case-evidence-dossier .artifact-ledger div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .case-evidence-dossier .method-fields { grid-template-columns: 1fr; }
+  .case-evidence-dossier .method-fields li:nth-child(even) {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-evidence-dossier *,
+  .case-evidence-dossier *::before,
+  .case-evidence-dossier *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .case-evidence-dossier .dossier-button:hover,
+  .case-evidence-dossier .text-link:hover span {
+    transform: none;
+  }
+}
