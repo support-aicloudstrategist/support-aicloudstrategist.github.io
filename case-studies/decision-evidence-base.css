@@ -1,25 +1,6 @@
 /* Route-critical foundation extracted from the shared stylesheet for /case-studies/ only. */
 :root {
   --ink: #05111f;
-  --ink2: #0b1d32;
-  --slate: #24364c;
-  --muted: #6e7d90;
-  --line: #dce7f0;
-  --soft: #f4f8fc;
-  --white: #fff;
-  --teal: #25e6c8;
-  --cyan: #58c8ff;
-  --blue: #3157d5;
-  --violet: #8d6cff;
-  --amber: #f6b640;
-  --red: #ff647c;
-  --green: #20c997;
-  --shadow: 0 28px 90px rgba(5, 17, 31, 0.2);
-  --soft-shadow: 0 16px 48px rgba(5, 17, 31, 0.08);
-  --radius: 28px;
-  --radius-sm: 18px;
-  --max: 1280px;
-  --aics-container-pad: clamp(18px, 3vw, 42px);
 }
 
 *,
@@ -35,7 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body.case-evidence-dossier {
+body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
@@ -43,31 +24,41 @@ body.case-evidence-dossier {
   line-height: 1.55;
 }
 
-.case-evidence-dossier a {
+a {
   color: inherit;
   text-decoration: none;
   overflow-wrap: anywhere;
 }
 
-.case-evidence-dossier img,
-.case-evidence-dossier video,
-.case-evidence-dossier canvas,
-.case-evidence-dossier svg {
+img,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.case-evidence-dossier h1,
-.case-evidence-dossier h2,
-.case-evidence-dossier h3 {
+h1,
+h2,
+h3 {
   margin-top: 0;
   color: var(--ink);
   line-height: 1.06;
   letter-spacing: -0.045em;
 }
 
-.case-evidence-dossier p { margin-top: 0; }
+p { margin-top: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 @media (max-width: 640px) {
   html,
