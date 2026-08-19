@@ -40,6 +40,19 @@ COMMERCIAL_HINTS = (
 )
 
 
+def is_noindex_redirect(text: str, lower: str) -> bool:
+    """Return True for intentional legacy redirect shims.
+
+    These pages should keep canonical/redirect coverage, but they should not be
+    scored as standalone commercial landing pages.
+    """
+    return (
+        "noindex" in lower
+        and "http-equiv=\"refresh\"" in lower
+        and "window.location.replace" in lower
+    )
+
+
 @dataclass
 class Finding:
     level: str
@@ -128,16 +141,18 @@ def check_repo() -> dict:
         parser.feed(text)
         jsonld_blocks += parse_jsonld(text, rel, findings)
         noindex = "name=\"robots\"" in lower and "noindex" in lower
+        redirect_shim = is_noindex_redirect(text, lower)
 
         if rel != "404.html" and not parser.canonicals:
             findings.append(Finding("warn", "canonical", rel, "Missing canonical link"))
             urls_from_pages.add(normalize_url(page_url(path)))
         elif parser.canonicals and not noindex:
             urls_from_pages.add(normalize_url(parser.canonicals[0]))
-        if rel != "404.html" and parser.descriptions == 0:
-            findings.append(Finding("warn", "metadata", rel, "Missing meta description"))
-        if not any(hint in lower for hint in COMMERCIAL_HINTS):
-            findings.append(Finding("warn", "conversion", rel, "No obvious contact/free-review/WhatsApp CTA"))
+        if not redirect_shim:
+            if rel != "404.html" and parser.descriptions == 0:
+                findings.append(Finding("warn", "metadata", rel, "Missing meta description"))
+            if not any(hint in lower for hint in COMMERCIAL_HINTS):
+                findings.append(Finding("warn", "conversion", rel, "No obvious contact/free-review/WhatsApp CTA"))
 
         for href in parser.hrefs:
             if href.startswith(("#", "mailto:", "tel:", "https://wa.me", "http://", "https://")):
