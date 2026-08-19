@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">After-hours lead leakage: the 6-step evening checklist</title>
+  <desc id="desc">Bento-grid infographic showing six steps from capture to weekly review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4fbff"/><stop offset="1" stop-color="#fff7ec"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#10223f" flood-opacity="0.14"/></filter>
+    <style>
+      .h{font-family:Inter,Segoe UI,Arial,sans-serif;font-weight:900;fill:#10223f}.t{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#203047}.m{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#5d6b82}.card{fill:#fff;stroke:#d9e5f2;stroke-width:3}.pill{fill:#e8f8f7;stroke:#bfe9e6;stroke-width:2}.n{fill:#10223f}.w{fill:#fff;font-family:Inter,Segoe UI,Arial,sans-serif;font-weight:900}.teal{fill:#0f9f9a}.orange{fill:#ff9f43}.line{stroke:#86a6c4;stroke-width:5;stroke-linecap:round;fill:none;stroke-dasharray:10 12}.icon{stroke:#10223f;stroke-width:8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1440" cy="90" r="150" fill="#e8f8f7" opacity="0.85"/><circle cx="120" cy="760" r="210" fill="#fff0d8" opacity="0.72"/>
+  <text x="80" y="92" class="h" font-size="54">After-hours lead leakage</text>
+  <text x="80" y="146" class="h" font-size="42">The 6-step evening checklist</text>
+  <rect x="80" y="176" rx="26" ry="26" width="640" height="54" class="pill"/>
+  <text x="108" y="211" class="t" font-size="24" font-weight="800">Educational workflow — no legal, compliance, or performance advice</text>
+  <text x="1220" y="92" class="h" font-size="30">AICloudStrategist</text>
+  <text x="1220" y="128" class="m" font-size="22">Evening authority post</text>
+
+  <path d="M200 440 C420 300, 640 600, 850 444 S1260 300, 1400 438" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="270" width="445" height="210" rx="34" class="card"/>
+    <circle cx="130" cy="325" r="28" class="n"/><text x="121" y="335" class="w" font-size="28">1</text>
+    <text x="178" y="322" class="h" font-size="30">Capture every channel</text>
+    <text x="112" y="376" class="t" font-size="24">Phone, forms, WhatsApp, chat,</text><text x="112" y="410" class="t" font-size="24">and email land in one visible queue.</text>
+    <path d="M425 354 h42 m-21-21 v42" class="icon"/><rect x="388" y="318" width="48" height="74" rx="12" class="icon"/>
+
+    <rect x="580" y="250" width="445" height="210" rx="34" class="card"/>
+    <circle cx="630" cy="305" r="28" class="n"/><text x="621" y="315" class="w" font-size="28">2</text>
+    <text x="678" y="302" class="h" font-size="30">Acknowledge safely</text>
+    <text x="612" y="356" class="t" font-size="24">Confirm receipt and response</text><text x="612" y="390" class="t" font-size="24">window without risky promises.</text>
+    <path d="M885 332 h72 v54 h-72z M897 346 l24 18 24-18" class="icon"/>
+
+    <rect x="1080" y="270" width="445" height="210" rx="34" class="card"/>
+    <circle cx="1130" cy="325" r="28" class="n"/><text x="1121" y="335" class="w" font-size="28">3</text>
+    <text x="1178" y="322" class="h" font-size="30">Tag urgency</text>
+    <text x="1112" y="376" class="t" font-size="24">Mark service type, location,</text><text x="1112" y="410" class="t" font-size="24">requested time, and review need.</text>
+    <path d="M1412 330 l42 42 -42 42 -42-42z M1412 352 v24" class="icon"/><circle cx="1412" cy="392" r="3" fill="#10223f"/>
+
+    <rect x="80" y="555" width="445" height="210" rx="34" class="card"/>
+    <circle cx="130" cy="610" r="28" class="n"/><text x="121" y="620" class="w" font-size="28">4</text>
+    <text x="178" y="607" class="h" font-size="30">Assign one owner</text>
+    <text x="112" y="661" class="t" font-size="24">Every enquiry needs one person</text><text x="112" y="695" class="t" font-size="24">or role responsible for next step.</text>
+    <circle cx="430" cy="633" r="30" class="icon"/><path d="M380 715 c10-46 90-46 100 0" class="icon"/>
+
+    <rect x="580" y="575" width="445" height="210" rx="34" class="card"/>
+    <circle cx="630" cy="630" r="28" class="n"/><text x="621" y="640" class="w" font-size="28">5</text>
+    <text x="678" y="627" class="h" font-size="30">Create morning queue</text>
+    <text x="612" y="681" class="t" font-size="24">Callbacks, replies, booking checks,</text><text x="612" y="715" class="t" font-size="24">quotes, and no-response follow-ups.</text>
+    <path d="M896 642 h70 m-70 34 h70 m-70 34 h48" class="icon"/><rect x="865" y="610" width="132" height="128" rx="16" class="icon"/>
+
+    <rect x="1080" y="555" width="445" height="210" rx="34" class="card"/>
+    <circle cx="1130" cy="610" r="28" class="n"/><text x="1121" y="620" class="w" font-size="28">6</text>
+    <text x="1178" y="607" class="h" font-size="30">Review lost reasons</text>
+    <text x="1112" y="661" class="t" font-size="24">Weekly review shows whether calls,</text><text x="1112" y="695" class="t" font-size="24">forms, or delayed replies leak demand.</text>
+    <path d="M1400 708 a58 58 0 1 1 42-18 M1442 690 v44 h44" class="icon"/>
+  </g>
+
+  <rect x="80" y="810" width="1445" height="52" rx="26" fill="#10223f"/>
+  <text x="110" y="844" class="w" font-size="24">Simple rule: every after-hours enquiry should have a safe acknowledgement, an owner, and a next-day action — not an unverified promise.</text>
+</svg>
