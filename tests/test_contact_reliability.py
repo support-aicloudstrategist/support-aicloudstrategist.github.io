@@ -71,6 +71,12 @@ class ContactReliabilityTests(unittest.TestCase):
         self.assertNotIn('id="response-time-sla"', self.source)
         self.assertNotIn('class="channels"', self.source)
 
+    def test_click_to_call_and_contact_schema_use_dialable_phone_number(self):
+        self.assertNotIn('tel:+918****0898', self.source)
+        self.assertNotIn('telephone":"+918****0898', self.source)
+        self.assertEqual(self.source.count('tel:+918065480898'), 2)
+        self.assertEqual(self.source.count('telephone":"+918065480898'), 2)
+
 
 if __name__ == "__main__":
     unittest.main()
