@@ -121,18 +121,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aicloudstrategist.com/ai-cloud-cost-efficiency</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://aicloudstrategist.com/ai-cloud-cost-review</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://aicloudstrategist.com/ai-creative-studio</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -835,7 +823,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicloudstrategist.com/resources/cloud-ai-economics-decision-pack</loc>
+    <loc>https://aicloudstrategist.com/resources/cloud-ai-economics-decision-pack/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1381,13 +1369,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aicloudstrategist.com/services/cloud-finops</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://aicloudstrategist.com/services/cloud-finops/cloud-cost-review</loc>
+    <loc>https://aicloudstrategist.com/services/cloud-finops/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
