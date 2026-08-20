@@ -90,6 +90,7 @@ User-agent: *
 Allow: /
 Allow: /resources/
 Allow: /services/
+Disallow: /api/
 Disallow: /.workspace-snapshots/
 Disallow: /preview/
 Disallow: /about-old/
