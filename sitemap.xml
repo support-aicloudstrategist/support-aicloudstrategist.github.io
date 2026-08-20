@@ -301,6 +301,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aicloudstrategist.com/case-studies/simulated-india-physiotherapy-clinic-lead-source-no-show-dpdp-diagnostic</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1541,5 +1547,17 @@
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicloudstrategist.com/publications/2026-08-20</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aicloudstrategist.com/publications/2026-08-20/ai-workflow-handoff-map.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
