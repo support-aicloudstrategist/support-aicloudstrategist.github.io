@@ -249,8 +249,10 @@ auditForm.addEventListener('submit',async(event)=>{
   try{businessName.value=new URL(payload.website).hostname.replace(/^www\./,'');}catch{businessName.value=payload.website;}
   payload.business_name=businessName.value;
   payload.vertical='other';
-  payload.notes=payload.primary_issue?'Primary review focus: '+payload.primary_issue+'.':'';
-  if(window.aicsAnalytics&&window.aicsAnalytics.track)window.aicsAnalytics.track('Free Review Form Submit Attempt',{props:{page:location.pathname,service_context:payload.service_context||'',primary_issue:payload.primary_issue||''}});
+  const contextNote=payload.package_context?'Requested package: '+payload.package_context+'.':(payload.service_context?'Requested service: '+payload.service_context+'.':'');
+  const issueNote=payload.primary_issue?'Primary review focus: '+payload.primary_issue+'.':'';
+  payload.notes=[contextNote,issueNote].filter(Boolean).join(' ');
+  if(window.aicsAnalytics&&window.aicsAnalytics.track)window.aicsAnalytics.track('Free Review Form Submit Attempt',{props:{page:location.pathname,package_context:payload.package_context||'',service_context:payload.service_context||'',primary_issue:payload.primary_issue||''}});
   auditSubmitButton.disabled=true;auditSubmitButton.textContent='Submitting securely…';
   try{
     const response=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});

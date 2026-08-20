@@ -141,6 +141,15 @@ def test_free_review_leads_preserve_attribution_and_pipeline_state():
     assert "[AICS-LEAD][AUDIT-REQUEST]" in LEAD_API
 
 
+def test_free_review_package_context_survives_cta_to_pipeline_notes_and_analytics():
+    assert 'name="package_context"' in FREE_REVIEW
+    assert "const requestedPackage=reviewParams.get('package')||'';" in FREE_REVIEW
+    assert "payload.package_context?'Requested package: '+payload.package_context+'.'" in FREE_REVIEW
+    assert "package_context:payload.package_context||''" in FREE_REVIEW
+    assert "const packageContext = clean(payload.package_context)" in LEAD_API
+    assert "Package context: ${packageContext || \"not set\"}" in LEAD_API
+
+
 def test_llms_map_is_curated_around_current_public_positioning():
     assert "Enterprise AI" in LLMS
     assert "Business Growth Systems" in LLMS
