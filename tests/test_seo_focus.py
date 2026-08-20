@@ -82,6 +82,11 @@ class SeoFocusTests(unittest.TestCase):
             "/resources/customer-problem-search/factory-manual-work-reduce/",
             "/resources/customer-problem-search/coaching-school-admission-increase/",
             "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
+            "/healthcare-growthos/",
+            "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/",
+            "/resources/us-clinic-ai-receptionist-vs-patient-engagement-platforms-comparison/",
+            "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-diagnostic-package/",
+            "/resources/us-clinic-top-5-consideration-proof-pack/",
             "/case-studies/",
             "/case-studies/aicloudstrategist-geo-turnaround/",
         }
