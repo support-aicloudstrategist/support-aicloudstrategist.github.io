@@ -12,6 +12,7 @@ AICloudStrategist connects business outcomes, AI engineering, assurance, economi
 - How we work: https://aicloudstrategist.com/how-we-work/
 - About: https://aicloudstrategist.com/about/
 - Contact: https://aicloudstrategist.com/contact
+- Pricing: https://aicloudstrategist.com/pricing
 - Free Trust & Growth Audit: https://aicloudstrategist.com/free-business-review/
 
 ## Enterprise AI
