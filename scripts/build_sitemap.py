@@ -59,7 +59,7 @@ CURATED_PATHS = [
     "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
     "/resources/customer-problem-search/coaching-school-admission-increase/",
     "/resources/singapore-saas-ai-security-review-evidence-pack-checklist/",
-    "/resources/ivf-clinic-lead-leakage-checklist/",
+    "/resources/europe-saas-ai-evidence-room-template/",
     "/resources/europe-saas-ai-governance-evidence-diagnostic-package/",
     "/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
     "/case-studies/",
