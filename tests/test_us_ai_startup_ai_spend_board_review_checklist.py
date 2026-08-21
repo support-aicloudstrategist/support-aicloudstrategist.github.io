@@ -50,6 +50,20 @@ class USAIStartupAISpendBoardReviewChecklistTests(unittest.TestCase):
         for forbidden in ["trusted by", "certified partner", "guaranteed 30%", "case study results"]:
             self.assertNotIn(forbidden, self.html.lower())
 
+    def test_intake_worksheet_qualifies_scope_without_sensitive_data(self):
+        for phrase in [
+            "Copy/paste intake worksheet",
+            "Review deadline",
+            "Included systems",
+            "Top spend drivers",
+            "Decision needed",
+            "Proof boundary",
+            "Redaction gate",
+            "no credentials, tokens, keys or private URLs",
+            "qualified owner approves broader sharing",
+        ]:
+            self.assertIn(phrase, self.html)
+
     def test_json_ld_article_faq_and_breadcrumb_are_valid(self):
         docs = json_ld_documents(self.html)
         types = {doc.get("@type") for doc in docs if isinstance(doc, dict)}
@@ -68,6 +82,7 @@ class USAIStartupAISpendBoardReviewChecklistTests(unittest.TestCase):
         self.assertIn(path, self.diagnostic)
         self.assertIn(path, self.comparison)
         self.assertIn('/free-business-review/?package=us-ai-startup-ai-spend-board-review', self.html)
+        self.assertEqual(self.html.count('data-aics-global-footer'), 1)
 
 
 if __name__ == "__main__":
