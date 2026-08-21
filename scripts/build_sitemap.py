@@ -59,9 +59,9 @@ CURATED_PATHS = [
     "/resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/",
     "/resources/ivf-clinic-lead-leakage-checklist/",
     "/resources/india-clinic-ad-to-appointment-diagnostic-package/",
-    "/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/",
     "/resources/europe-saas-ai-governance-evidence-diagnostic-package/",
     "/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
+    "/resources/europe-saas-ai-evidence-room-faq/",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
 ]
