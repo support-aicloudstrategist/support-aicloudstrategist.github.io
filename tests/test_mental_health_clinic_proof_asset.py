@@ -30,6 +30,6 @@ def test_mental_health_proof_asset_is_linked_from_evidence_hub_and_llms():
 
     assert route in hub
     assert "India mental-health counselling triage and DPDP evidence diagnostic" in hub
-    assert "<strong>36</strong>" in hub
-    assert "<em>12 methods</em>" in hub
+    assert "<strong>37</strong>" in hub
+    assert "<em>13 methods</em>" in hub
     assert f"https://aicloudstrategist.com{route}" in llms
