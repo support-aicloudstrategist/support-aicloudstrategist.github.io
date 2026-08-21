@@ -18,6 +18,7 @@ class USAIStartupAISpendBoardReviewChecklistTests(unittest.TestCase):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+        cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         cls.diagnostic = (ROOT / "resources" / "us-ai-startup-llm-gpu-finops-diagnostic-package" / "index.html").read_text(encoding="utf-8")
         cls.comparison = (ROOT / "resources" / "us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison" / "index.html").read_text(encoding="utf-8")
 
@@ -79,6 +80,7 @@ class USAIStartupAISpendBoardReviewChecklistTests(unittest.TestCase):
         path = "/resources/us-ai-startup-ai-spend-board-review-checklist/"
         self.assertIn(path, self.resources)
         self.assertIn(f"US AI startup AI spend board review checklist: {URL}", self.llms)
+        self.assertIn(f"<loc>{URL}</loc>", self.sitemap)
         self.assertIn(path, self.diagnostic)
         self.assertIn(path, self.comparison)
         self.assertIn('/free-business-review/?package=us-ai-startup-ai-spend-board-review', self.html)
