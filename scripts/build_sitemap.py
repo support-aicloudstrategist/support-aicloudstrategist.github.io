@@ -57,11 +57,11 @@ CURATED_PATHS = [
     "/resources/us-clinic-top-5-consideration-proof-pack/",
     "/resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/",
     "/resources/us-law-firm-ai-intake-answering-service-faq/",
+    "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
     "/resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/",
     "/resources/ivf-clinic-lead-leakage-checklist/",
     "/resources/europe-saas-ai-governance-evidence-diagnostic-package/",
     "/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
-    "/resources/europe-saas-ai-evidence-room-faq/",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
 ]
