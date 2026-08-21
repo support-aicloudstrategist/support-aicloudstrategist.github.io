@@ -56,6 +56,7 @@ CURATED_PATHS = [
     "/resources/us-clinic-top-5-consideration-proof-pack/",
     "/resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/",
     "/resources/us-law-firm-ai-intake-answering-service-faq/",
+    "/resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/",
     "/resources/ivf-clinic-lead-leakage-checklist/",
     "/resources/india-clinic-ad-to-appointment-diagnostic-package/",
     "/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/",
