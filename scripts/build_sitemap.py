@@ -45,7 +45,6 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/find-right-consultant-vendor/",
     "/resources/customer-problem-search/small-shop-customer-increase/",
     "/resources/customer-problem-search/factory-manual-work-reduce/",
-    "/resources/customer-problem-search/coaching-school-admission-increase/",
     "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
     "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
     "/resources/uae-saas-cloud-finops-trust-diagnostic-package/",
@@ -62,6 +61,7 @@ CURATED_PATHS = [
     "/resources/ivf-clinic-lead-leakage-checklist/",
     "/resources/europe-saas-ai-governance-evidence-diagnostic-package/",
     "/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
+    "/resources/europe-saas-ai-evidence-room-template/",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
 ]
