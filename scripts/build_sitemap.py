@@ -46,6 +46,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/small-shop-customer-increase/",
     "/resources/customer-problem-search/factory-manual-work-reduce/",
     "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
+    "/resources/property-management-maintenance-request-follow-up-checklist/",
     "/resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/",
     "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
     "/resources/uae-saas-cloud-finops-trust-diagnostic-package/",
@@ -61,7 +62,6 @@ CURATED_PATHS = [
     "/resources/singapore-saas-ai-security-review-evidence-pack-checklist/",
     "/resources/europe-saas-ai-evidence-room-template/",
     "/resources/europe-saas-ai-governance-evidence-diagnostic-package/",
-    "/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
 ]
