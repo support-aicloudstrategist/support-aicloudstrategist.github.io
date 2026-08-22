@@ -46,3 +46,4 @@ def test_home_care_asset_is_linked_from_discovery_surfaces():
     rel = "/resources/global-home-care-referral-intake-caregiver-scheduling-evidence-checklist/"
     assert rel in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert "https://aicloudstrategist.com" + rel in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "https://aicloudstrategist.com" + rel in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
