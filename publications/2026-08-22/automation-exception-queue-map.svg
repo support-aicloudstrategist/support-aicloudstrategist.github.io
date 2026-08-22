@@ -1,0 +1,81 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900' role='img' aria-labelledby='title desc'>
+<title id='title'>Automation Exception Queue Map: 7 labels before a human hands work to AI</title><desc id='desc'>Seven exception queue labels before human-to-AI handoff: routine, needs owner, sensitive, missing context, customer upset, evidence saved, and human reply.</desc>
+<defs><pattern id='grid' width='36' height='36' patternUnits='userSpaceOnUse'><path d='M36 0H0V36' fill='none' stroke='#173b63' stroke-width='1'/></pattern><filter id='glow'><feGaussianBlur stdDeviation='4' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter></defs>
+<rect width='1200' height='900' fill='#081626'/><rect width='1200' height='900' fill='url(#grid)' opacity='.8'/>
+<circle cx='600' cy='420' r='118' fill='#0f2540' stroke='#36d1dc' stroke-width='4' filter='url(#glow)'/>
+<circle cx='600' cy='420' r='82' fill='#0b1c30' stroke='#ffd166' stroke-width='2'/>
+<text x='600' y='394' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='900' fill='#e7f5ff'>HUMAN</text>
+<text x='600' y='426' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='900' fill='#e7f5ff'>REVIEW HUB</text>
+<text x='600' y='460' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' fill='#a8c3d8'>route before AI follows up</text>
+<text x='66' y='84' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='900' fill='#36d1dc'>AICloudStrategist • safe educational workflow</text>
+<text x='66' y='142' font-family='Inter,Arial,sans-serif' font-size='43' font-weight='900' fill='#e7f5ff'>Automation Exception Queue Map</text>
+<text x='66' y='188' font-family='Inter,Arial,sans-serif' font-size='22' fill='#a8c3d8'>7 labels before a human hands work to AI</text>
+<g font-family='Inter,Arial,sans-serif'><g transform='translate(156 248)'>
+<line x1='0' y1='72' x2='444' y2='172' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#4ade80' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#4ade80'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>1</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Routine</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#4ade80' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>Approved facts, simple status updates, and low-risk</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>reminders that match current team rules.</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'></text>
+</g><g transform='translate(432 202)'>
+<line x1='0' y1='72' x2='168' y2='218' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#ffd166' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#ffd166'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>2</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Needs owner</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#ffd166' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>Pricing, refunds, contracts, promises, unusual requests, or</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>anything the team has not approved.</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'></text>
+</g><g transform='translate(708 202)'>
+<line x1='0' y1='72' x2='-108' y2='218' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#fb7185' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#fb7185'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>3</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Sensitive</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#fb7185' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>Personal data, health, finance, identity, credentials, OTPs,</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>access, or private documents.</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'></text>
+</g><g transform='translate(984 248)'>
+<line x1='0' y1='72' x2='-384' y2='172' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#a78bfa' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#a78bfa'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>4</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Missing context</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#a78bfa' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>The request cannot be answered safely because</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>source, record, timestamp, or owner note is</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'>missing.</text>
+</g><g transform='translate(984 542)'>
+<line x1='0' y1='72' x2='-384' y2='-122' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#f97316' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#f97316'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>5</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Customer upset</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#f97316' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>Complaint, escalation, urgent tone, repeated follow-up, or</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>a promise that may already be late.</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'></text>
+</g><g transform='translate(708 628)'>
+<line x1='0' y1='72' x2='-108' y2='-208' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#36d1dc' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#36d1dc'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>6</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Evidence saved</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#36d1dc' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>Conversation link, source system, status, owner, next</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>step, and timestamp are recorded.</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'></text>
+</g><g transform='translate(432 628)'>
+<line x1='0' y1='72' x2='168' y2='-208' stroke='#5eead455' stroke-width='3' stroke-dasharray='8 8'/>
+<rect x='-124' y='-6' width='248' height='168' rx='22' fill='#0f2540' stroke='#93c5fd' stroke-width='2'/>
+<circle cx='-88' cy='34' r='22' fill='#93c5fd'/><text x='-88' y='43' text-anchor='middle' font-size='22' font-weight='900' fill='#081626'>7</text>
+<text x='-52' y='31' font-size='22' font-weight='900' fill='#e7f5ff'>Human reply</text>
+<rect x='-52' y='48' width='126' height='22' rx='11' fill='#93c5fd' opacity='.18'/><text x='-40' y='64' font-size='12' font-weight='800' fill='#e7f5ff'>QUEUE LABEL</text>
+<text x='-96' y='102' font-size='15' fill='#a8c3d8'>A named person reviews the exception before</text>
+<text x='-96' y='124' font-size='15' fill='#a8c3d8'>any external answer or customer commitment.</text>
+<text x='-96' y='146' font-size='15' fill='#a8c3d8'></text>
+</g></g>
+<rect x='66' y='780' width='1068' height='76' rx='22' fill='#0b1c30' stroke='#173b63'/>
+<text x='96' y='824' font-family='Inter,Arial,sans-serif' font-size='20' font-weight='900' fill='#ffd166'>Truth boundary:</text>
+<text x='264' y='824' font-family='Inter,Arial,sans-serif' font-size='18' fill='#e7f5ff'>Educational workflow only — no legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice.</text>
+<text x='66' y='882' font-family='Inter,Arial,sans-serif' font-size='16' fill='#a8c3d8'>support-aicloudstrategist.github.io/publications/2026-08-22/automation-exception-queue-map.html</text>
+</svg>
