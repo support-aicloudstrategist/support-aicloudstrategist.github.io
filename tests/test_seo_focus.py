@@ -80,7 +80,7 @@ class SeoFocusTests(unittest.TestCase):
             "/resources/customer-problem-search/find-right-consultant-vendor/",
             "/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
             "/resources/customer-problem-search/factory-manual-work-reduce/",
-            "/resources/customer-problem-search/coaching-school-admission-increase/",
+            "/resources/global-hotel-direct-booking-enquiry-follow-up-checklist/",
             "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
             "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
             "/healthcare-growthos/",

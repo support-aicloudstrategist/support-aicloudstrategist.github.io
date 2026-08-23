@@ -28,7 +28,7 @@ CURATED_PATHS = [
     "/growth-control-os/",
     "/trust-compliance/",
     "/healthcare-growthos/",
-    "/resources/customer-problem-search/coaching-school-admission-increase/",
+    "/resources/global-hotel-direct-booking-enquiry-follow-up-checklist/",
     "/resources/lead-follow-up-automation-guide/",
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/cloud-ai-economics-decision-pack/",
