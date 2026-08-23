@@ -46,6 +46,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
     "/resources/us-ai-startup-llm-gpu-finops-diagnostic-package/",
     "/resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/",
+    "/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
     "/resources/global-home-services-missed-call-dispatch-evidence-checklist/",
     "/resources/global-manufacturing-production-follow-up-excel-evidence-checklist/",
     "/resources/global-home-care-referral-intake-caregiver-scheduling-evidence-checklist/",
@@ -60,7 +61,7 @@ CURATED_PATHS = [
     "/resources/us-law-firm-ai-intake-answering-service-faq/",
     "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
     "/resources/us-ai-startup-ai-spend-board-review-checklist/",
-    "/resources/aics-vs-alternatives-comparison/",
+
     "/resources/europe-saas-ai-evidence-room-template/",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
