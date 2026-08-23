@@ -47,7 +47,7 @@ CURATED_PATHS = [
     "/resources/us-ai-startup-ai-spend-board-review-checklist/",
     "/resources/us-ai-startup-llm-gpu-finops-diagnostic-package/",
     "/resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/",
-    "/resources/europe-saas-ai-evidence-room-template/",
+    "/resources/global-gym-fitness-membership-lead-follow-up-checklist/",
     "/resources/uae-saas-cloud-ai-spend-evidence-template/",
     "/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
     "/resources/global-home-services-missed-call-dispatch-evidence-checklist/",
@@ -65,6 +65,10 @@ CURATED_PATHS = [
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
 ]
+
+# Regression note: /resources/europe-saas-ai-evidence-room-template/ remains a
+# public resource linked from the hub and llms.txt, but it is outside the current
+# 50-URL sitemap queue while the gym/fitness buyer-intent route is promoted.
 
 
 def local_page(path: str) -> Path:
