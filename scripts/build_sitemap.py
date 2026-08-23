@@ -39,6 +39,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/aws-cloud-bill-too-high/",
     "/resources/customer-problem-search/manual-work-wasting-staff-time/",
     "/resources/customer-problem-search/clinic-not-getting-patients/",
+    "/resources/clinic-website-not-converting-patients-checklist/",
     "/resources/customer-problem-search/business-compliance-privacy-confusion/",
     "/resources/customer-problem-search/find-right-consultant-vendor/",
     "/resources/customer-problem-search/small-shop-customer-increase/",
@@ -61,7 +62,6 @@ CURATED_PATHS = [
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",
-    "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
 ]
@@ -141,11 +141,6 @@ def discover_paths() -> list[str]:
         validate_path(path)
         paths.append(path)
         seen.add(path)
-    for page in html_pages():
-        path = canonical_path_for(page)
-        if path and path not in seen:
-            paths.append(path)
-            seen.add(path)
     return paths
 
 
