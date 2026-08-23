@@ -739,8 +739,15 @@
       "canonical": "https://aicloudstrategist.com/industries/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c05e9e1acc04b2b695d86290cbda5d2e751f3f8f26d288bc20df49ae313cc4b5",
+      "main_sha256": "8cd0abfb579ecc413e1a9e86211e540b721b569009aa6e4548848cd7650eb8ce",
       "title": "Industries Served | AICloudStrategist"
+    },
+    "industries/law-firms/index.html": {
+      "canonical": "https://aicloudstrategist.com/industries/law-firms/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "69695a38dfb96815313bbf5787200b87df3c1e8c7368073ec4827adfc489ab03",
+      "title": "AI Automation for Law Firms | AICloudStrategist"
     },
     "industries/local-services/index.html": {
       "canonical": "https://aicloudstrategist.com/industries/local-services/",
@@ -844,7 +851,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "fa7fbec5efaf10041a9887c2048dac6b89139c28f3a3fb1674f5b1030a865686",
+      "main_sha256": "66d51ef4d85661d79dcd43efe9bc1efac189d28c04584a355d73d5292011bb0e",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1267,6 +1274,13 @@
       "main_sha256": "8ebfe5a5ecc2368be149c6d69a73261c18233192cc2b4351eb64ed1101d1b7e1",
       "title": "DPDP for Diagnostic Labs: What Every Indian Lab Owner Must Do Before May 2027"
     },
+    "resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "366e911419390bcc51b49ea14f8d42654077ec6b994eed784d1ffd9b1f0301a6",
+      "title": "Europe Private Clinic GDPR Patient GrowthOS Evidence Checklist | AICS"
+    },
     "resources/europe-saas-ai-evidence-room-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-evidence-room-faq/",
       "forms": 0,
@@ -1418,7 +1432,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "6b7541c3117e53e72fde38b4bde21afb3123e88e886d8194db3ee9799a98bae7",
+      "main_sha256": "5cb79a780af198bc59523a2317613692f18f5c9c776ad4f089a18813539116a7",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
