@@ -20,6 +20,11 @@ def test_lead_leakage_calculator_has_canonical_conversion_route_and_boundaries()
     assert "This is a planning estimate, not a guarantee." in html
     assert '/free-business-review' in html
     assert html.count('<h1>') == 1
+    assert '"@type":"SoftwareApplication"' in html
+    assert '"applicationCategory":"BusinessApplication"' in html
+    assert '"isAccessibleForFree":true' in html
+    assert '"@type":"FAQPage"' in html
+    assert 'not a guaranteed revenue, recovery or conversion claim' in html
 
 
 def test_lead_leakage_calculator_is_discoverable_without_html_suffix():
