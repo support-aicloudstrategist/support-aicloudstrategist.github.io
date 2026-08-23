@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""Build the AICS sitemap from indexable public HTML canonical URLs.
-
-The brand/trust monitor checks every public HTML page. A curated 50-URL
-sitemap created false technical warnings as the site grew, so this script now
-keeps sitemap coverage aligned with real indexable pages while excluding
-noindex redirects, backups, local previews, and non-public build folders.
-"""
+"""Build the curated AICS sitemap for public commercial/discoverability pages."""
 from __future__ import annotations
 
 import datetime as dt
@@ -18,89 +12,114 @@ BASE_URL = "https://aicloudstrategist.com"
 TODAY = dt.date.today().isoformat()
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
-PUBLIC_SKIP_PARTS = {
-    ".git",
-    ".workspace-snapshots",
-    ".venv",
-    ".pytest_cache",
-    "__pycache__",
-    "preview",
-    "node_modules",
-    "venv",
-}
+
+CURATED_PATHS = [
+    "/",
+    "/free-business-review/",
+    "/contact",
+    "/pricing",
+    "/services/ai-mlops/",
+    "/services/ai-automation/",
+    "/services/cloud-finops/",
+    "/services/cloud-security/",
+    "/services/devops-observability/",
+    "/services/website-digital-presence/",
+    "/services/lead-generation-seo/website-lead-capture/",
+    "/services/workflow-automation/",
+    "/services/us-law-firm-ai-intake-answering-service/",
+    "/ai-creative-studio/",
+    "/growth-control-os/",
+    "/trust-compliance/",
+    "/healthcare-growthos/",
+    "/resources/",
+    "/resources/customer-problem-search/coaching-school-admission-increase/",
+    "/resources/lead-follow-up-automation-guide/",
+    "/resources/cloud-cost-optimization-finops-control/",
+    "/resources/cloud-ai-economics-decision-pack/",
+    "/resources/customer-problem-search/aws-cloud-bill-too-high/",
+    "/resources/customer-problem-search/manual-work-wasting-staff-time/",
+    "/resources/customer-problem-search/clinic-not-getting-patients/",
+    "/resources/customer-problem-search/business-compliance-privacy-confusion/",
+    "/resources/customer-problem-search/find-right-consultant-vendor/",
+    "/resources/customer-problem-search/small-shop-customer-increase/",
+    "/resources/customer-problem-search/factory-manual-work-reduce/",
+    "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
+    "/resources/us-ai-startup-llm-gpu-finops-diagnostic-package/",
+    "/resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/",
+    "/resources/uae-saas-cloud-ai-spend-evidence-template/",
+    "/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
+    "/resources/global-home-services-missed-call-dispatch-evidence-checklist/",
+    "/resources/global-manufacturing-production-follow-up-excel-evidence-checklist/",
+    "/resources/global-home-care-referral-intake-caregiver-scheduling-evidence-checklist/",
+    "/resources/veterinary-clinic-missed-calls-after-hours-follow-up-checklist/",
+    "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
+    "/resources/uae-saas-cloud-finops-trust-diagnostic-package/",
+    "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/",
+    "/resources/us-clinic-ai-receptionist-vs-patient-engagement-platforms-comparison/",
+    "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-diagnostic-package/",
+    "/resources/us-clinic-top-5-consideration-proof-pack/",
+    "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
+    "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
+    "/lead-leakage-calculator",
+    "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
+    "/case-studies/",
+    "/case-studies/aicloudstrategist-geo-turnaround/",
+]
 
 
-def public_html_files() -> list[Path]:
-    pages: list[Path] = []
-    for path in ROOT.rglob("*.html"):
-        rel = path.relative_to(ROOT).as_posix()
-        parts = set(path.relative_to(ROOT).parts)
-        name = path.name.lower()
-        if parts & PUBLIC_SKIP_PARTS:
-            continue
-        if name.endswith(".backup.html") or "-old/" in rel or name.startswith("google"):
-            continue
-        pages.append(path)
-    return sorted(pages)
+def local_page(path: str) -> Path:
+    if path == "/":
+        return ROOT / "index.html"
+    if path.endswith("/"):
+        return ROOT / path.lstrip("/") / "index.html"
+    return ROOT / f"{path.lstrip('/')}.html"
 
 
-def is_indexable(source: str) -> bool:
+def validate_path(path: str) -> None:
+    page = local_page(path)
+    if not page.is_file():
+        raise SystemExit(f"missing page for {path}: {page.relative_to(ROOT)}")
+    source = page.read_text(encoding="utf-8", errors="ignore")
     robots = ROBOTS_RE.search(source)
-    return not (robots and "noindex" in robots.group(1).lower())
+    if robots and "noindex" in robots.group(1).lower():
+        raise SystemExit(f"noindex page cannot be in sitemap: {path}")
+    canonical = CANONICAL_RE.search(source)
+    expected = f"{BASE_URL}{path}"
+    if not canonical or canonical.group(1) != expected:
+        found = canonical.group(1) if canonical else "missing"
+        raise SystemExit(f"canonical mismatch for {path}: expected {expected}, found {found}")
 
 
-def canonical_url(path: Path, source: str) -> str:
-    rel = path.relative_to(ROOT).as_posix()
-    match = CANONICAL_RE.search(source)
-    if not match:
-        raise SystemExit(f"missing canonical: {rel}")
-    url = match.group(1).strip()
-    if not url.startswith(BASE_URL):
-        raise SystemExit(f"non-AICS canonical in public sitemap: {rel} -> {url}")
-    return url if url == f"{BASE_URL}/" else url.rstrip("/")
-
-
-def priority_for(url: str) -> str:
-    path = url.removeprefix(BASE_URL)
-    if path in {"", "/"}:
+def priority_for(path: str) -> str:
+    if path == "/":
         return "1.0"
-    if path in {"/free-business-review", "/free-business-review/", "/contact", "/pricing"}:
+    if path in {"/free-business-review/", "/contact", "/pricing"}:
         return "0.9"
-    if path.startswith("/services/") or path in {"/healthcare-growthos", "/growth-control-os", "/ai-cloud-cost-efficiency"}:
+    if path.startswith("/services/") or path in {"/healthcare-growthos/", "/growth-control-os/"}:
         return "0.8"
-    if path.startswith("/resources") or path.startswith("/case-studies") or path.startswith("/publications"):
+    if path.startswith("/resources/") or path.startswith("/case-studies/"):
         return "0.7"
     return "0.6"
 
 
-def changefreq_for(url: str) -> str:
-    path = url.removeprefix(BASE_URL)
-    if path in {"", "/", "/resources", "/case-studies"} or path.startswith("/publications"):
-        return "weekly"
-    return "monthly"
-
-
-def build_urls() -> list[str]:
-    urls: set[str] = set()
-    for path in public_html_files():
-        source = path.read_text(encoding="utf-8", errors="ignore")
-        if not is_indexable(source):
-            continue
-        urls.add(canonical_url(path, source))
-    return sorted(urls, key=lambda u: (u != f"{BASE_URL}/", u))
+def changefreq_for(path: str) -> str:
+    return "weekly" if path in {"/", "/resources/", "/case-studies/"} else "monthly"
 
 
 def main() -> None:
-    urls = build_urls()
+    if len(CURATED_PATHS) != len(set(CURATED_PATHS)):
+        raise SystemExit("duplicate sitemap paths")
+    if len(CURATED_PATHS) > 50:
+        raise SystemExit(f"curated sitemap too large: {len(CURATED_PATHS)}")
+    for path in CURATED_PATHS:
+        validate_path(path)
     lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>", '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for url in urls:
-        loc = html.escape(url)
-        lines.append(
-            f"  <url><loc>{loc}</loc><lastmod>{TODAY}</lastmod><changefreq>{changefreq_for(url)}</changefreq><priority>{priority_for(url)}</priority></url>"
-        )
+    for path in CURATED_PATHS:
+        loc = html.escape(f"{BASE_URL}{path}")
+        lines.append(f"  <url><loc>{loc}</loc><lastmod>{TODAY}</lastmod><changefreq>{changefreq_for(path)}</changefreq><priority>{priority_for(path)}</priority></url>")
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"wrote {len(urls)} sitemap URLs")
+    print(f"wrote {len(CURATED_PATHS)} curated sitemap URLs")
 
 
 if __name__ == "__main__":
