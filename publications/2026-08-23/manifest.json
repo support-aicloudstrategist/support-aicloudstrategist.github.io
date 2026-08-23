@@ -7,5 +7,14 @@
     "png": "https://support-aicloudstrategist.github.io/publications/2026-08-23/ai-inbox-triage-board.png",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-23",
     "boundary": "Educational workflow only \u2014 not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
+  },
+  {
+    "slot": "evening",
+    "slug": "ai-evening-review-board",
+    "title": "AI Evening Review Board: 6 checks before tomorrow gets noisy",
+    "url": "https://support-aicloudstrategist.github.io/publications/2026-08-23/ai-evening-review-board.html",
+    "png": "https://support-aicloudstrategist.github.io/publications/2026-08-23/ai-evening-review-board.png",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-23",
+    "boundary": "Educational workflow only \u2014 not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
   }
 ]
