@@ -78,7 +78,7 @@ class SeoFocusTests(unittest.TestCase):
             "/resources/customer-problem-search/clinic-not-getting-patients/",
             "/resources/customer-problem-search/business-compliance-privacy-confusion/",
             "/resources/customer-problem-search/find-right-consultant-vendor/",
-            "/resources/customer-problem-search/small-shop-customer-increase/",
+            "/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
             "/resources/customer-problem-search/factory-manual-work-reduce/",
             "/resources/customer-problem-search/coaching-school-admission-increase/",
             "/resources/customer-problem-search/restaurant-local-service-customers-increase/",

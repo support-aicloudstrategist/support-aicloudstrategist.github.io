@@ -40,7 +40,7 @@ CURATED_PATHS = [
     "/resources/saudi-private-clinic-whatsapp-appointment-follow-up-checklist/",
     "/resources/customer-problem-search/business-compliance-privacy-confusion/",
     "/resources/customer-problem-search/find-right-consultant-vendor/",
-    "/resources/customer-problem-search/small-shop-customer-increase/",
+    "/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
     "/resources/customer-problem-search/factory-manual-work-reduce/",
     "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
     "/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/",
