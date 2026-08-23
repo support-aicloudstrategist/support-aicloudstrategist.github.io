@@ -6,11 +6,18 @@ PRICING = (ROOT / "pricing.html").read_text(encoding="utf-8")
 
 
 def test_pricing_surfaces_canada_clinic_diagnostic_as_revenue_entry_point():
-    assert "Five concrete first offers" in PRICING
+    assert "Six concrete first offers" in PRICING
     assert "Canada clinic missed-call follow-up diagnostic" in PRICING
     assert "/resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/" in PRICING
     assert "without patient-growth, privacy, compliance or revenue claims" in PRICING
     assert "No revenue, ranking, lead volume or business outcome is guaranteed" in PRICING
+
+
+def test_pricing_surfaces_ecommerce_abandoned_cart_diagnostic_as_revenue_entry_point():
+    assert "Ecommerce abandoned-cart follow-up diagnostic" in PRICING
+    assert "/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/" in PRICING
+    assert "abandoned-cart, COD confirmation, WhatsApp opt-in, payment-failure" in PRICING
+    assert "without revenue, conversion-rate, recovery or ad-performance claims" in PRICING
 
 
 def test_pricing_surfaces_us_ai_startup_finops_as_revenue_entry_point():

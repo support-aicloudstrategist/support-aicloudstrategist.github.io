@@ -135,12 +135,16 @@ def canonical_path_for(page: Path) -> str | None:
 
 
 def discover_paths() -> list[str]:
+    """Return the deliberately curated crawler queue.
+
+    The site has many indexable pages, but sitemap.xml is intentionally capped at
+    the highest-commercial-intent routes so crawlers and AI answer engines see a
+    focused 50-URL queue instead of every long-tail page.
+    """
     paths = []
-    seen = set()
     for path in CURATED_PATHS:
         validate_path(path)
         paths.append(path)
-        seen.add(path)
     return paths
 
 
