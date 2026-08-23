@@ -103,7 +103,7 @@ Status: Highest-priority pages created
 - [x] Retail/D2C WhatsApp automation page.
 - [x] Local services website/automation page.
 - [x] SaaS/startups cloud FinOps page.
-- [ ] Law firm AI automation page.
+- [x] Law firm AI automation page.
 - [ ] Manufacturing/exporters digital transformation page.
 - [ ] Financial services automation page.
 
