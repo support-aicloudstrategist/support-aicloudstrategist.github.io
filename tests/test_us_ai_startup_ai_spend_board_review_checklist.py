@@ -51,6 +51,21 @@ class USAIStartupAISpendBoardReviewChecklistTests(unittest.TestCase):
         for forbidden in ["trusted by", "certified partner", "guaranteed 30%", "case study results"]:
             self.assertNotIn(forbidden, self.html.lower())
 
+    def test_paid_diagnostic_fit_gate_qualifies_revenue_ready_buyers(self):
+        for phrase in [
+            "When to request the paid diagnostic",
+            "Fit signal",
+            "What AICS needs first",
+            "What the diagnostic can produce",
+            "Board, investor or budget review is scheduled within 30 days",
+            "Engineering and finance disagree on what spend is product-critical",
+            "Tool purchase or commitment decision is being debated",
+            "Not a fit yet",
+            "No billing exports, no named decision owner",
+            "scope-before-quote recommendation",
+        ]:
+            self.assertIn(phrase, self.html)
+
     def test_intake_worksheet_qualifies_scope_without_sensitive_data(self):
         for phrase in [
             "Copy/paste intake worksheet",
