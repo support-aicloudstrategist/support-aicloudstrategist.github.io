@@ -16,7 +16,6 @@ ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\'
 CURATED_PATHS = [
     "/",
     "/free-business-review/",
-    "/contact",
     "/pricing",
     "/services/ai-mlops/",
     "/services/ai-automation/",
@@ -61,6 +60,7 @@ CURATED_PATHS = [
     "/lead-leakage-calculator",
     "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
     "/resources/us-ai-startup-ai-spend-board-review-checklist/",
+    "/resources/uae-saas-cloud-ai-spend-evidence-template/",
 
     "/resources/europe-saas-ai-evidence-room-template/",
     "/case-studies/",
