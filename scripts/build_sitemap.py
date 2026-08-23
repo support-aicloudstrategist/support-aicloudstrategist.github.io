@@ -106,20 +106,60 @@ def changefreq_for(path: str) -> str:
     return "weekly" if path in {"/", "/resources/", "/case-studies/"} else "monthly"
 
 
+def html_pages() -> list[Path]:
+    ignored_parts = {".git", "node_modules", "assets", "tests"}
+    pages: list[Path] = []
+    for page in ROOT.rglob("*.html"):
+        rel_parts = set(page.relative_to(ROOT).parts)
+        if ignored_parts & rel_parts:
+            continue
+        if page.name == "404.html":
+            continue
+        pages.append(page)
+    return sorted(pages)
+
+
+def canonical_path_for(page: Path) -> str | None:
+    source = page.read_text(encoding="utf-8", errors="ignore")
+    robots = ROBOTS_RE.search(source)
+    if robots and "noindex" in robots.group(1).lower():
+        return None
+    canonical = CANONICAL_RE.search(source)
+    if not canonical:
+        return None
+    url = canonical.group(1)
+    if not url.startswith(BASE_URL):
+        return None
+    path = url.removeprefix(BASE_URL)
+    return path or "/"
+
+
+def discover_paths() -> list[str]:
+    paths = []
+    seen = set()
+    for path in CURATED_PATHS:
+        validate_path(path)
+        paths.append(path)
+        seen.add(path)
+    for page in html_pages():
+        path = canonical_path_for(page)
+        if path and path not in seen:
+            paths.append(path)
+            seen.add(path)
+    return paths
+
+
 def main() -> None:
     if len(CURATED_PATHS) != len(set(CURATED_PATHS)):
         raise SystemExit("duplicate sitemap paths")
-    if len(CURATED_PATHS) > 50:
-        raise SystemExit(f"curated sitemap too large: {len(CURATED_PATHS)}")
-    for path in CURATED_PATHS:
-        validate_path(path)
+    paths = discover_paths()
     lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>", '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path in CURATED_PATHS:
+    for path in paths:
         loc = html.escape(f"{BASE_URL}{path}")
         lines.append(f"  <url><loc>{loc}</loc><lastmod>{TODAY}</lastmod><changefreq>{changefreq_for(path)}</changefreq><priority>{priority_for(path)}</priority></url>")
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"wrote {len(CURATED_PATHS)} curated sitemap URLs")
+    print(f"wrote {len(paths)} indexable sitemap URLs")
 
 
 if __name__ == "__main__":
