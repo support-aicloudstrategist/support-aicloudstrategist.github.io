@@ -38,11 +38,11 @@
     "css/cloud-ai-economics-decision-pack.css": "779aa0fcd1a803071f32641be22997fe3b152e9ec5cb4f8d189b35f4274bb1d7",
     "sitemap.xml": "66ae0eb18f05bbcff42c2a6db74ba8a6d87f50d48b9d7ccd458bcd89a2a5767c",
     "_redirects": "da3667086c9b7c2dfb564eacffbf3508bd9708e357824199a6e8c6e651748dbb",
-    "llms.txt": "e40731cf1f0e4de0be327007061533912dc6c8b5a8bcbf9aa9bda181a17d7693",
+    "llms.txt": "0c94f3daa4862d1909bfc19c43f3907251efeaaa8150a520d290268f1b23cd06",
     "favicon.svg": "95a5feae81c95ebb349e7d68f613a278434ec9727006513817fafe225b90a238",
-    "resources/index.html": "55056c0d8a856ab4b27493f30218a94560ae4ac2583dd82c314a46f0f44b7d85",
+    "resources/index.html": "9ad3eb27d630c5fde9faea519a7dae00a437ce70ef85abc05c91cc6c8c41eda6",
     "services/index.html": "ff6cc1b1783e4d0860b27e95ab9fac4453dc81d2059900dbad4d34e9c1cc99d3",
     "scripts/build_cloud_ai_economics_decision_pack.py": "88fe3ac06222b2da2000e9c74752c2f7dcf1ecc20a8fed4bd88cfa8cda0c277f",
-    "scripts/build_sitemap.py": "196144b8130f363c17462fc5b7ce961817d2ce362ce2c0715844f07e0b2a2f6f"
+    "scripts/build_sitemap.py": "8fb18634f4a6082ca435aff6a624e5ec93a52d7ababe0306d31638e8e527aa84"
   }
 }

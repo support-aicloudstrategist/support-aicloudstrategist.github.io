@@ -139,16 +139,23 @@ def canonical_path_for(page: Path) -> str | None:
 
 
 def discover_paths() -> list[str]:
-    """Return the deliberately curated crawler queue.
+    """Return the deliberately curated 50-URL crawler queue.
 
     The site has many indexable pages, but sitemap.xml is intentionally capped at
     the highest-commercial-intent routes so crawlers and AI answer engines see a
-    focused 50-URL queue instead of every long-tail page.
+    focused queue instead of every long-tail page. Long-tail assets can remain
+    discoverable through hubs and llms.txt until promoted here by replacing a
+    lower-priority curated path.
     """
     paths = []
+    seen: set[str] = set()
     for path in CURATED_PATHS:
         validate_path(path)
+        key = path.rstrip("/") or "/"
+        if key in seen:
+            raise SystemExit(f"duplicate sitemap path: {path}")
         paths.append(path)
+        seen.add(key)
     return paths
 
 
