@@ -26,7 +26,7 @@ CURATED_PATHS = [
     "/services/website-digital-presence/",
     "/services/lead-generation-seo/website-lead-capture/",
     "/services/workflow-automation/",
-    "/services/us-law-firm-ai-intake-answering-service/",
+    "/industries/law-firms/",
     "/ai-creative-studio/",
     "/growth-control-os/",
     "/trust-compliance/",
