@@ -141,8 +141,7 @@ body.trust-compliance-page .d1{animation-delay:.05s}body.trust-compliance-page .
  var touch=window.matchMedia&&window.matchMedia('(hover: none)').matches;
  if(!reduce&&!touch){document.querySelectorAll('#featureGrid .tc-card').forEach(function(card){card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;card.style.setProperty('--rx',((0.5-py)*10).toFixed(2)+'deg');card.style.setProperty('--ry',((px-0.5)*10).toFixed(2)+'deg');card.style.setProperty('--sc','1.03');card.style.setProperty('--gx',(px*100).toFixed(1)+'%');card.style.setProperty('--gy',(py*100).toFixed(1)+'%');card.classList.add('tilt');});card.addEventListener('mouseleave',function(){card.style.setProperty('--rx','0deg');card.style.setProperty('--ry','0deg');card.style.setProperty('--sc','1');card.classList.remove('tilt');});});}
 })();
-</script>
-<footer class="aics-global-footer" data-aics-global-footer>
+</script><footer class="aics-global-footer" data-aics-global-footer>
   <div class="aics-footer-inner">
     <div class="aics-footer-grid">
       <section class="aics-footer-brand-block">

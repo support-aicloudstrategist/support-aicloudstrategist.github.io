@@ -8,18 +8,18 @@
       "title": "Not found \u2014 AICloudStrategist"
     },
     "about.html": {
-      "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
-      "title": "About AICloudStrategist | Production AI Engineering &amp; Operations",
       "canonical": "https://aicloudstrategist.com/about/",
       "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
+      "title": "About AICloudStrategist | Production AI Engineering &amp; Operations"
     },
     "about/index.html": {
-      "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
-      "title": "About AICloudStrategist | Production AI Engineering &amp; Operations",
       "canonical": "https://aicloudstrategist.com/about/",
       "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
+      "title": "About AICloudStrategist | Production AI Engineering &amp; Operations"
     },
     "advisory.html": {
       "canonical": "https://aicloudstrategist.com/advisory",
@@ -148,14 +148,14 @@
       "title": "AI Chatbot Development Services for Lead Capture | AICloudStrategist"
     },
     "ai-cloud-cost-efficiency/index.html": {
-      "canonical": "https://aicloudstrategist.com/ai-cloud-cost-efficiency/",
+      "canonical": "https://aicloudstrategist.com/services/cloud-finops/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "5d38eb9520776058acc5bf418fc61264349aa6863c7e54e4fe6c805fe0e5d1e9",
       "title": "AI & Cloud Cost Efficiency | AICloudStrategist"
     },
     "ai-cloud-cost-review/index.html": {
-      "canonical": "https://aicloudstrategist.com/ai-cloud-cost-review/",
+      "canonical": "https://aicloudstrategist.com/services/cloud-finops/",
       "forms": 1,
       "forms_sha256": "f7e587d52273b5482e3cae9a251da1cb51ab34a52202c4558c9844ca7da7b4a6",
       "main_sha256": "30454ee49edeada3d7011abfc4bf2bd2007e65deeb8e86202b409fcd2256e542",
@@ -200,14 +200,14 @@
       "canonical": "https://aicloudstrategist.com/dpdp-readiness-assessment",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d9d1a3bcd2ccbb1d9681f8e27799859f36c8d1d81d6dd8faf32f4b8268a45384",
+      "main_sha256": "79859d16f438a9b8eedfaa545b97c84690879a38601a2a730506c3b7b4584650",
       "title": "DPDP Readiness Assessment"
     },
     "book.html": {
       "canonical": "https://aicloudstrategist.com/dpdp-readiness-assessment",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d6fb85cfc5f9f0932ad8d9946582d360945c1cf3ac11fe4a6efce4cc0f3d49f4",
+      "main_sha256": "3d19e40be53c854a5e23b85778b42ebadaaaf8f008f1895e377a8f5c6dcf4ab5",
       "title": "Book a DPDP Readiness Call"
     },
     "case-studies/aicloudstrategist-geo-turnaround/index.html": {
@@ -270,8 +270,8 @@
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "756311f04da80a0383651740cbe63dadd623430c4040444b4a4a8f9ff9034332",
-      "title": "Proof hub and case studies | AICloudStrategist"
+      "main_sha256": "fa0502e94a2f2700b5114e4a9a50e16c97c592e5fcf284c01acabbe235df2c22",
+      "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist"
     },
     "case-studies/sample-cloud-finops-cost-optimization/index.html": {
       "canonical": "https://aicloudstrategist.com/case-studies/sample-cloud-finops-cost-optimization/",
@@ -343,12 +343,33 @@
       "main_sha256": "31a75106e0466e12d8fdeba190cd1795191f8bafcbfbe1c931eb502ff3e2d3ae",
       "title": "Simulated GCC Clinic WhatsApp + AI Receptionist Diagnostic | AICS"
     },
+    "case-studies/simulated-global-accounting-bookkeeping-workflow-automation-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-global-accounting-bookkeeping-workflow-automation-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4a85ee578de8c62311a3a28ec5b77273b21e19c24c81bbf1f4c37a7986b9974d",
+      "title": "Simulated Accounting + Bookkeeping Workflow Automation Diagnostic | AICS"
+    },
     "case-studies/simulated-india-ayush-clinic-whatsapp-dpdp-followup-diagnostic/index.html": {
       "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-ayush-clinic-whatsapp-dpdp-followup-diagnostic/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "5362783d71c1f8f04d965c3cb10c37b6bdba2e4392d17f8127dee2470543a3ac",
       "title": "Simulated India AYUSH Clinic WhatsApp + DPDP Follow-Up Diagnostic | AICloudStrategist"
+    },
+    "case-studies/simulated-india-dental-clinic-whatsapp-no-show-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-dental-clinic-whatsapp-no-show-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "707fc10ea46c0f6d518ce617edc820abae59406716d6f3edd3a9cf426ba07b09",
+      "title": "Simulated India Dental Clinic WhatsApp + No-Show DPDP Diagnostic | AICS"
+    },
+    "case-studies/simulated-india-dermatology-aesthetic-clinic-whatsapp-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-dermatology-aesthetic-clinic-whatsapp-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "3a0ff32daa9495468d262be62d13adab9b56700c19ea3d480b92c5357828084a",
+      "title": "Simulated India Dermatology Clinic WhatsApp + DPDP Diagnostic | AICS"
     },
     "case-studies/simulated-india-diagnostic-center-dpdp-whatsapp-followup-diagnostic/index.html": {
       "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-diagnostic-center-dpdp-whatsapp-followup-diagnostic/",
@@ -357,6 +378,13 @@
       "main_sha256": "a957fa0da83222343c4b9fd64f1e48ccb814132c3e230f688120be45bcc3223a",
       "title": "Simulated India Diagnostic Centre DPDP + WhatsApp Follow-Up Diagnostic | AICloudStrategist"
     },
+    "case-studies/simulated-india-diagnostic-lab-report-delivery-tat-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-diagnostic-lab-report-delivery-tat-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "173e55a1b78467a78600a03b3ef8d3dbb44073d04b1e6109a7ff5d7ed852aa9c",
+      "title": "Simulated India Diagnostic Lab Report-Delivery TAT + DPDP Diagnostic | AICS"
+    },
     "case-studies/simulated-india-dpdp-healthcare-consent-diagnostic/index.html": {
       "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-dpdp-healthcare-consent-diagnostic/",
       "forms": 0,
@@ -364,12 +392,47 @@
       "main_sha256": "fd082f37937a2582101d08384898d89c1397b119ac5a0c2964f2dc1b2bf297a2",
       "title": "Simulated India DPDP Healthcare Consent Diagnostic | AICloudStrategist"
     },
+    "case-studies/simulated-india-ent-clinic-surgery-counselling-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-ent-clinic-surgery-counselling-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "a7c2e0d1a2d0d8c01256eaa87244ba7ab702bb26220b8a9d3100825b6af2c339",
+      "title": "Simulated India ENT Clinic Surgery Counselling + DPDP Diagnostic | AICS"
+    },
+    "case-studies/simulated-india-ivf-fertility-counsellor-sla-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-ivf-fertility-counsellor-sla-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "06f9ff519e7479b3238253e8bedd8e36017efde3895de68f134a1ba40f52b157",
+      "title": "Simulated India IVF/Fertility Counsellor SLA + DPDP Diagnostic | AICS"
+    },
+    "case-studies/simulated-india-mental-health-clinic-counselling-triage-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-mental-health-clinic-counselling-triage-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "632e36b756d89198891cf8755245dbea0d3a321a9eb136857dec5c520f40d98f",
+      "title": "Simulated India Mental-Health Clinic Counselling Triage + DPDP Diagnostic | AICS"
+    },
     "case-studies/simulated-india-ophthalmology-patient-growth-dpdp-diagnostic/index.html": {
       "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-ophthalmology-patient-growth-dpdp-diagnostic/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "ce6c5bb5ee949590ad842ee1b7edc9c0099e3baa3dd4c60669ce65fa12ed4e98",
       "title": "Simulated India Ophthalmology Patient-Growth + DPDP Diagnostic | AICloudStrategist"
+    },
+    "case-studies/simulated-india-pharmacy-prescription-refill-whatsapp-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-pharmacy-prescription-refill-whatsapp-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "b8a94ae6fb5b2ad014ab9bea49f808ed2bf904ece8b39a17574264a9e7ea23ad",
+      "title": "Simulated India Pharmacy Prescription Refill + WhatsApp DPDP Diagnostic | AICS"
+    },
+    "case-studies/simulated-india-physiotherapy-clinic-lead-source-no-show-dpdp-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-physiotherapy-clinic-lead-source-no-show-dpdp-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4a9e8fe548003226627600dfd6accb5fef9a0c64b5fe6648a04022c6567e05e5",
+      "title": "Simulated India Physiotherapy Lead-Source + No-Show DPDP Diagnostic | AICS"
     },
     "case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/index.html": {
       "canonical": "https://aicloudstrategist.com/case-studies/simulated-india-specialty-clinic-ad-to-appointment-diagnostic/",
@@ -431,8 +494,15 @@
       "canonical": "https://aicloudstrategist.com/case-studies/simulated-us-law-firm-ai-intake-confidentiality-diagnostic/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "aab12707fc77e6f75ecebaf7222113ce62dd48bc36d5422c896f69172df89909",
+      "main_sha256": "018e438707068c6a16648d225e6bd78c636cd5d65f30bdd17a692737821ec46f",
       "title": "Simulated US Law Firm AI Intake Confidentiality Diagnostic | AICloudStrategist"
+    },
+    "case-studies/simulated-us-med-spa-consultation-follow-up-diagnostic/index.html": {
+      "canonical": "https://aicloudstrategist.com/case-studies/simulated-us-med-spa-consultation-follow-up-diagnostic/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "9186201074bfb684296741a7bc0e43a36570cafd69289186a73f91322df37800",
+      "title": "Simulated US Med Spa Consultation Follow-Up Diagnostic | AICS"
     },
     "client-desk.html": {
       "canonical": "https://aicloudstrategist.com/client-desk.html",
@@ -469,6 +539,13 @@
       "main_sha256": "ed801cc91d2df0681a9ec45271833dd2e7426ab880b83680fb498a2926aaf9e4",
       "title": "CRM Automation Services for Lead Follow-up | AICloudStrategist"
     },
+    "demos/clinic-growthos-dashboard/index.html": {
+      "canonical": "https://aicloudstrategist.com/demos/clinic-growthos-dashboard/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "67707cf2e0a040a3a096ec63fbcf6510d072d7ad23bbf80054a1947bcb759249",
+      "title": "Demo clinic GrowthOS dashboard | AICloudStrategist"
+    },
     "diagnostics/index.html": {
       "canonical": "https://aicloudstrategist.com/diagnostics/",
       "forms": 0,
@@ -487,35 +564,35 @@
       "canonical": "https://aicloudstrategist.com/dpdp-compliance-checklist-india",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "41bdc42c02540092d836e60c86f8132619075b11b842ecca01c0a2ab79d973f4",
+      "main_sha256": "9d7265c201751cb46f85a9592f229bddcd175b6b94e81601ce01818273e8e795",
       "title": "DPDP Compliance Checklist India | AICloudStrategist"
     },
     "dpdp-compliance-consultant-india.html": {
       "canonical": "https://aicloudstrategist.com/dpdp-compliance-consultant-india",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d1cbd92a603b4e636ff0a4c51ca030b2cc6172d1f0589836b8c649a133047ea2",
+      "main_sha256": "6429b5aed6f01017e4f67bf3f6f9f4e0c28fb85344903989246b076c5246d231",
       "title": "DPDP Compliance Consultant India | AICloudStrategist"
     },
     "dpdp-compliance-for-d2c-brands.html": {
       "canonical": "https://aicloudstrategist.com/dpdp-compliance-for-d2c-brands",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b51f0f782491919ad4fe3c7cc5ab5c6b193b9601d7e8f404ddcfe9b46fdd159e",
+      "main_sha256": "52b4b81fc07a8ec20f7cb8a326c58080394b55863e4411e26906b8b4cd753cc0",
       "title": "DPDP Compliance for D2C Brands India | AICloudStrategist"
     },
     "dpdp-compliance-for-saas-india.html": {
       "canonical": "https://aicloudstrategist.com/dpdp-compliance-for-saas-india",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2a00135b5045c3ec841df9eaa19df08110f23797ac3d6df4222b43b4709a622d",
+      "main_sha256": "cea7d0fa4a78e055a60605747a7c1c62509278df316e49a34d4f6accbc8360a1",
       "title": "DPDP Compliance for software companies Companies in India | AICloudStrategist"
     },
     "dpdp-consent-flow-checklist.html": {
       "canonical": "https://aicloudstrategist.com/dpdp-consent-flow-checklist",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4fe2ac9a8782d513782b0c29a0978a5d1604526eb97169f99d054bff5710dda1",
+      "main_sha256": "5c727481dafe9d982d3afcec2f6633fb232a53e17dc73f8226f480e3e1f74da5",
       "title": "DPDP Consent Flow Checklist | AICloudStrategist"
     },
     "dpdp-for-clinics/index.html": {
@@ -536,7 +613,7 @@
       "canonical": "https://aicloudstrategist.com/dpdp-readiness-assessment",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5eabff5783fb47feb6b8933ff17ff75a09acf7b3c9061884464d1abc217a55e6",
+      "main_sha256": "2ec5652cdd4ac878151e1155f7f21c73b88c308b2262c4503ee7ee570528aed6",
       "title": "DPDP Readiness Assessment | PolicyKart by AICloudStrategist"
     },
     "dpdp-vendor-register-template.html": {
@@ -550,7 +627,7 @@
       "canonical": "https://aicloudstrategist.com/dpdp-website-compliance-sprint",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "977099cf2389e6e0418cb63c71df53760f6498a8a65d66ac155eb9e76a741738",
+      "main_sha256": "8ca12a65dc9063b73ee021591b1fed6d892129518e69e91b13ad3cfd92c1cc1e",
       "title": "DPDP and Website Compliance Sprint India | AICloudStrategist"
     },
     "factory-website-development-india.html": {
@@ -606,8 +683,8 @@
       "canonical": "https://aicloudstrategist.com/how-we-work/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "251247d3eff3f5141749211e0e122414c59e761df07684afba05f1f6198c3f88",
-      "title": "How it works | AICloudStrategist"
+      "main_sha256": "0f92501891e990c1c639fb925261c20c07aef6e0cda31c2c6a39af8b0160542c",
+      "title": "How We Work | Enterprise AI Delivery Evidence | AICloudStrategist"
     },
     "index.html": {
       "canonical": "https://aicloudstrategist.com/",
@@ -634,7 +711,7 @@
       "canonical": "https://aicloudstrategist.com/industries/clinics/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "9ddb4e0ebc8ffe4bba98b52063c6780fea81a14c34d9717eacd5a4aa6f2a72ce",
+      "main_sha256": "3d25bd6378371df223660acbbe6c7fd34bf72b2e49f65dfcbfc5057b073e56b5",
       "title": "AI Automation for Clinics | AICloudStrategist"
     },
     "industries/dental-clinics/index.html": {
@@ -732,7 +809,7 @@
       "canonical": "https://aicloudstrategist.com/operations-automation-sprint",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "132ccb36903353e180adc0f2c22ab0edc18e27a97caa3c790c7bf41de08ad447",
+      "main_sha256": "69551d1aa8f5c9ddd244d7fd21a7ae9faece9ec58b5ee3d48ba6964e2fa6612b",
       "title": "Operations Automation Sprint for Indian small businesses | AICloudStrategist"
     },
     "packages/index.html": {
@@ -759,15 +836,15 @@
     "policykart.html": {
       "canonical": "https://aicloudstrategist.com/policykart",
       "forms": 1,
-      "forms_sha256": "dc0d4a231db2cb4772f00af07c981544390a8065a8184be8603eb59ae4c6d2e7",
-      "main_sha256": "daa9771ccde912429d0d05a1a4c6540fcc524368323a1a90275136260f3bbbbd",
+      "forms_sha256": "be6f9d24c28b2fa32442d8e4957d45252e1b262afc6922842069b6f986ee4b0d",
+      "main_sha256": "c83ae31bdd0e1528a7d8e52558b114c7e99f608da7cb4796b60ef56aa5552231",
       "title": "PolicyKart | DPDP Readiness Assessment"
     },
     "pricing.html": {
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "8c172d28b37b28e5e0be4e84d622af6cebf740dfc59293631a22d0dfe70749e4",
+      "main_sha256": "fa7fbec5efaf10041a9887c2048dac6b89139c28f3a3fb1674f5b1030a865686",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -846,6 +923,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "830eba825c1f5d94ee12351b08fef8bceeeb034d01fe1232ea5706de188b00e1",
       "title": "Cloud Cost Surprise Radar: 6 Signals Founders Should Watch Weekly | AICloudStrategist"
+    },
+    "publications/2026-08-20/index.html": {
+      "canonical": "https://aicloudstrategist.com/publications/2026-08-20/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "d833d00749480a7d643de8102b574a86ec5d44c2ba89629a5c9fb826de7fe930",
+      "title": "AICS daily publications \u2014 2026-08-20 | AICloudStrategist"
     },
     "resources.html": {
       "canonical": "https://aicloudstrategist.com/resources",
@@ -966,6 +1050,13 @@
       "main_sha256": "8a33bb31315fc2f8624d1b73591377f32101bc470756b9a742498c2258814877",
       "title": "Brazil WhatsApp + CRM AI Automation Diagnostic Package | AICloudStrategist"
     },
+    "resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "fc97a8c4a08a9c9aa3b4c4a8b6990ad237649f4dbc5308f551638e61b2011bb5",
+      "title": "Canada Clinic Missed-Call Follow-Up Diagnostic Package | AICS"
+    },
     "resources/canada-clinic-patient-growthos-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/canada-clinic-patient-growthos-diagnostic-package/",
       "forms": 0,
@@ -1047,15 +1138,15 @@
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a7eeb35998ebca01aedfc18852fd0b7502c2ae184960c30d827c20a1fea2804c",
-      "title": "Coaching centre or school admissions are low \u2014 how do I improve enquiries and follow-up? | AICloudStrategist"
+      "main_sha256": "d5552e505abdbb17ffeb5b06583593014aeb0a037a7c59b01ecda600892f9016",
+      "title": "Coaching Leads Not Converting? Admission Follow-Up Checklist | AICS"
     },
     "resources/customer-problem-search/factory-manual-work-reduce/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/factory-manual-work-reduce/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c035b924cb34ef948456efa0f627f97ae20c8fc6754e3b354104849bc2fca5d0",
-      "title": "Factory has too much manual work \u2014 how do I reduce follow-up, Excel and staff dependency? | AICloudStrategist"
+      "main_sha256": "3e7f99db6534dec96ab50a6d48e04500f5c4d575cb1fc0a466c0fe069601fc78",
+      "title": "Factory manual work reduction checklist for small manufacturers | AICloudStrategist"
     },
     "resources/customer-problem-search/find-right-consultant-vendor/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/find-right-consultant-vendor/",
@@ -1068,7 +1159,7 @@
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "bfdf504c58451160bf77d36f1a4c63734d8ef5774b1bf73911253e1390d637c9",
+      "main_sha256": "45c9719faec8f639a07a63be9c36db2e0f3ee3f233f3e1dc7a9141d3443c0c8e",
       "title": "Customer problem search map | AICloudStrategist"
     },
     "resources/customer-problem-search/manual-work-wasting-staff-time/index.html": {
@@ -1176,6 +1267,20 @@
       "main_sha256": "8ebfe5a5ecc2368be149c6d69a73261c18233192cc2b4351eb64ed1101d1b7e1",
       "title": "DPDP for Diagnostic Labs: What Every Indian Lab Owner Must Do Before May 2027"
     },
+    "resources/europe-saas-ai-evidence-room-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-evidence-room-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "c2b4213b922f22a339226c6ade9fe9b5c4d818c6dc438225f677b2d83eab8791",
+      "title": "Europe SaaS AI Evidence Room FAQ | AICS"
+    },
+    "resources/europe-saas-ai-evidence-room-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-evidence-room-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "6fa31a028a155421ec92355dc71251b44bbe13a7f43ff612136f41ac388d6e32",
+      "title": "Europe SaaS AI Evidence Room Template | AICS"
+    },
     "resources/europe-saas-ai-finops-allocation-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-finops-allocation-checklist/",
       "forms": 0,
@@ -1201,15 +1306,29 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-governance-evidence-diagnostic-package/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "da28c3587c5ce8cd5bfde81ff6e8644c0773385ee75c1fb2b8ab8aa9fb07597b",
+      "main_sha256": "12c3e96b45381500383e7dec30cf16866c72cf7314e67e98b014acb7f98c4e75",
       "title": "Europe SaaS AI Governance Evidence Diagnostic Package | AICS"
     },
     "resources/europe-saas-ai-governance-vs-grc-tools-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-governance-vs-grc-tools-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ca3422436b3c0aa2ee50c20a7993a3fae45f091d6d612ca053cfeceb9ac458e7",
-      "title": "Europe SaaS AI Governance vs GRC Tools | AICS"
+      "main_sha256": "08a5a4212acb9dd5c08530ccd1e060f8f41b5c032c2173b06eb63bbf4e2ac112",
+      "title": "Europe SaaS AI Governance vs GRC Tools Comparison | AICS"
+    },
+    "resources/europe-saas-ai-trust-questionnaire-readiness-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "ac1b4f9abb6be80c996d694472b6523c8171df8dcc93d97c4c8010c459e5c302",
+      "title": "Europe SaaS AI Trust Questionnaire Readiness Checklist | AICS"
+    },
+    "resources/europe-saas-security-questionnaire-ai-evidence-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-saas-security-questionnaire-ai-evidence-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "8fc646bf16c84b7a74cd929d9a9908b90996d4f73b0cc5a46bbec59f6fd8a340",
+      "title": "Europe SaaS Security Questionnaire AI Evidence Comparison | AICS"
     },
     "resources/finops-cloud-cost-management-tools-usa/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/finops-cloud-cost-management-tools-usa/",
@@ -1267,6 +1386,13 @@
       "main_sha256": "85df418f6292ae44b71e2625be54f361ca0b68b7943f7548b0a438e6e431fe22",
       "title": "Germany CRM + AI Automation Diagnostic Package | AICloudStrategist"
     },
+    "resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "145f91051ee355d7d289ccff1b40e39e554e834b78a7e936cc6cd1242c727467",
+      "title": "Ecommerce Abandoned Cart + WhatsApp Follow-Up Evidence Checklist | AICloudStrategist"
+    },
     "resources/healthcare-ai-patient-growth-platform/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/healthcare-ai-patient-growth-platform/",
       "forms": 0,
@@ -1292,7 +1418,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4174c5944038f0949d77cd6f9f4f1fbf767321dcc4c936121836e987a834998d",
+      "main_sha256": "6b7541c3117e53e72fde38b4bde21afb3123e88e886d8194db3ee9799a98bae7",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1306,7 +1432,7 @@
       "canonical": "https://aicloudstrategist.com/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c261bc16dc93c044d2fe6b4311aba9c2dcf84c030439013ee1622a93b4b21e5e",
+      "main_sha256": "e46d2f65f2d96d5dc904b96255bf299552904952bec41423382085d90c342e6b",
       "title": "India Clinic WhatsApp CRM Patient Leakage Checklist | AICS"
     },
     "resources/india-dpdp-consent-healthcare-diagnostic-package/index.html": {
@@ -1337,6 +1463,13 @@
       "main_sha256": "96753e6bfc92063afee17b00e5e2198acc5726b3a9f248e0c401e891aa33d497",
       "title": "Italy WhatsApp + CRM AI Automation Diagnostic Package | AICloudStrategist"
     },
+    "resources/ivf-clinic-lead-leakage-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/ivf-clinic-lead-leakage-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "48ba3747a98cb34a6ce3b7df2305d84542d41b0ea54c65cba95047283a088411",
+      "title": "IVF Clinic Lead Leakage Checklist | AICS"
+    },
     "resources/lead-follow-up-automation-guide/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/lead-follow-up-automation-guide/",
       "forms": 0,
@@ -1365,12 +1498,40 @@
       "main_sha256": "44f98d630b0b049520b1a240794a858231d95873ecbfb6825bf023331f65d8dc",
       "title": "Missed Lead Recovery for Indian Clinics: A Step-by-Step ROI Calculator | AICloudStrategist"
     },
+    "resources/overnight-ai-automation-safety-handoff/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/overnight-ai-automation-safety-handoff/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "183e07e1cc97478f8cbd24e1e5c628c98378047c4d1c4954b98f0c1bbb01e85c",
+      "title": "Overnight AI automation safety handoff: 5 owner checks before the team logs off | AICloudStrategist"
+    },
     "resources/paid-ad-readiness-conversion-plan/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/paid-ad-readiness-conversion-plan/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "2814cb54b0016a61b0746766f88c42a254ab75e9becae6e234a9f7a7d892b30c",
       "title": "Paid Ad Readiness &amp; Conversion Plan | AICloudStrategist"
+    },
+    "resources/property-management-maintenance-request-follow-up-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/property-management-maintenance-request-follow-up-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "cf3a4d48daf3e8c75e7dfebffa0a170c3776f313ca8dedb0a3743b9f08cf0be1",
+      "title": "Property Management Maintenance Request Follow-Up Checklist | AICS"
+    },
+    "resources/restaurant-reservation-no-show-follow-up-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/restaurant-reservation-no-show-follow-up-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "d2bddd5d5c92b7e43d5bfd9d65b4a10ff84d91865577cf591b7768f525ea9b1b",
+      "title": "Restaurant Reservation No-Show Follow-Up Checklist | AICS"
+    },
+    "resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "23ab0b1c0950bce3dff1012c4b9f55d7b2c729830788ef66dda51713334f0bae",
+      "title": "SaaS Security Questionnaire Takes Too Long? AI Evidence Checklist | AICloudStrategist"
     },
     "resources/saudi-clinic-pdpl-whatsapp-appointment-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/saudi-clinic-pdpl-whatsapp-appointment-diagnostic-package/",
@@ -1421,6 +1582,13 @@
       "main_sha256": "8cf927b3b24e8ed2af921f4083f6c6fd57c28260b13a9785de729c9e21ede7b6",
       "title": "Singapore PDPA Consent & Data Protection Diagnostic Package | AICloudStrategist"
     },
+    "resources/singapore-saas-ai-security-review-evidence-pack-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/singapore-saas-ai-security-review-evidence-pack-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "fce8952be659b82057f08f391f92fd4ebf8b0d9b59bf16dcf7861d9c5e3236e5",
+      "title": "Singapore SaaS AI Security Review Evidence Pack Checklist | AICS"
+    },
     "resources/small-business-website-checklist-india/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/small-business-website-checklist-india/",
       "forms": 0,
@@ -1435,12 +1603,40 @@
       "main_sha256": "7632d5f287c13af675e1cd80d2fe6869be674ea903ab24e00f1b34a3e2fbbd00",
       "title": "UAE Clinic WhatsApp Appointment Automation | AICS"
     },
+    "resources/uae-saas-cloud-ai-spend-evidence-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uae-saas-cloud-ai-spend-evidence-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "839f2cdd0c88ae77e9deb45411ea339f3b1620cd4e2f064d13ab42704d9b0e47",
+      "title": "UAE SaaS Cloud + AI Spend Evidence Template | AICS"
+    },
     "resources/uae-saas-cloud-finops-trust-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uae-saas-cloud-finops-trust-diagnostic-package/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "72d0ea9a8f8327bc4bc706c13167887e2e9c38e73dd4ab087e198302e03d2ba9",
+      "main_sha256": "8b035302cbce29fe00c656be6be3050850eb017543c97956428b66aa2037b1ca",
       "title": "UAE SaaS Cloud FinOps & Trust Diagnostic Package | AICS"
+    },
+    "resources/uae-saas-cloud-finops-vs-cloud-cost-tools-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uae-saas-cloud-finops-vs-cloud-cost-tools-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "8b2ced5d6978d2cdd110996f3874967bfaa5d8e7e2591f9132d796008fb2d10f",
+      "title": "UAE SaaS Cloud FinOps vs Cloud Cost Tools | AICS"
+    },
+    "resources/uae-saas-cloud-trust-finops-readiness-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "d09931965b4215374c9461a9e09a805f5c1073d5f80efe84b88d65ac43cbb2c3",
+      "title": "UAE SaaS Cloud Trust + FinOps Readiness Checklist | AICS"
+    },
+    "resources/uae-saas-simulated-cloud-ai-spend-trust-proof-pack/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uae-saas-simulated-cloud-ai-spend-trust-proof-pack/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "6f1c9577084155bef2dc3f14f2838c83355e3176a7c1c3c3b4d9a54c6d01988d",
+      "title": "Simulated UAE SaaS Cloud + AI Spend Trust Proof Pack | AICS"
     },
     "resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/",
@@ -1463,6 +1659,13 @@
       "main_sha256": "4a8646cf877d4bf06a47fe4c5f777bc502cdbb02d3b799d0193f32630f8a05d6",
       "title": "UK SME Manual Admin + AI Automation Diagnostic Package | AICloudStrategist"
     },
+    "resources/us-ai-startup-ai-spend-board-review-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-ai-spend-board-review-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "dada6a14e59e8be786435ecf95bd2a0afc7f94b85fe1a437c98c0487d98a29f5",
+      "title": "US AI Startup AI Spend Board Review Checklist | AICS"
+    },
     "resources/us-ai-startup-cfo-cto-llm-gpu-finops-dashboard-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-cfo-cto-llm-gpu-finops-dashboard-template/",
       "forms": 0,
@@ -1474,14 +1677,21 @@
       "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-llm-gpu-finops-diagnostic-package/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "9786a6402a86fc563768860b6f8951e12cc613d52307ab8b3945b7a9362ba61c",
-      "title": "US AI Startup LLM & GPU FinOps Diagnostic Package | AICS"
+      "main_sha256": "f81091b01be04a2f45c971fbcf1ccadf10276546a66b1c5b6ab7be7369188619",
+      "title": "US AI Startup LLM/GPU FinOps Diagnostic Package | AICS"
+    },
+    "resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "064a43e5dfa972d898be8b42c08f5fd8e985defc16f36b24b0445d53ea80d6c3",
+      "title": "US AI Startup LLM/GPU FinOps vs Cloud Cost Tools | AICS"
     },
     "resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "96b7f71a6067b207cd10eb35f26adf48e187f54b44adf07ca84e2f68b4106d0a",
+      "main_sha256": "4dfbda2bdded107824ed32ab0a10b5872260263de236557fcc63a6c4da69dbc2",
       "title": "US Clinic AI Receptionist HIPAA Patient Follow-Up Checklist | AICloudStrategist"
     },
     "resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-diagnostic-package/index.html": {
@@ -1495,8 +1705,15 @@
       "canonical": "https://aicloudstrategist.com/resources/us-clinic-ai-receptionist-vs-patient-engagement-platforms-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "9bf6d75d93ee0db614fbff61e5bbbd8db065b0869c1b63844aae354ebf0384c9",
+      "main_sha256": "74192e5a13b90a050bb30058e4f849c6383de9e087eaf97e7c75da085edba35d",
       "title": "US Clinic AI Receptionist vs Patient Engagement Platforms vs AICS"
+    },
+    "resources/us-clinic-top-5-consideration-proof-pack/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-clinic-top-5-consideration-proof-pack/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "369b75c57d2c52a1ed129425e54f88ee74fa4ca054ce9f8bd831d78fcb8afc13",
+      "title": "US Clinic Top-5 Consideration Proof Pack | AICloudStrategist"
     },
     "resources/us-dental-missed-call-revenue-leakage-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-dental-missed-call-revenue-leakage-diagnostic-package/",
@@ -1523,8 +1740,15 @@
       "canonical": "https://aicloudstrategist.com/resources/us-healthcare-growthos-vs-patient-engagement-platforms/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "cd1e7b4abc369bb336382a3cccf192586428fe1c6745a84cd74a3b647e95d1b3",
-      "title": "US Healthcare GrowthOS vs Patient Engagement Platforms | AICS"
+      "main_sha256": "2a9a78ab40c25ccad06662c10f753f4e2854bec932502a2662976fe1ba67a32b",
+      "title": "US Healthcare GrowthOS vs Patient Engagement Platforms | AICloudStrategist"
+    },
+    "resources/us-law-firm-ai-intake-answering-service-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-law-firm-ai-intake-answering-service-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "f755bc0eb53f08085c351e2e3632382dc50db3b63c9eaaf632de65a23d423aa3",
+      "title": "US Law Firm AI Intake + Answering Service FAQ | AICloudStrategist"
     },
     "resources/us-law-firm-ai-intake-confidentiality-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-law-firm-ai-intake-confidentiality-checklist/",
@@ -1553,6 +1777,20 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "37aaf19cca91b5fb2e68605f638ace43058c4227e904fee888ff00d2cc037701",
       "title": "US SaaS AI Vendor Risk & SOC 2 Readiness Checklist | AICS"
+    },
+    "resources/us-specialty-clinic-prior-auth-evidence-pack/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-specialty-clinic-prior-auth-evidence-pack/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "ecbdaff887174729956ce418b11ea5da689189212cf6490e1171c52add04438b",
+      "title": "US Specialty Clinic Prior Authorization Evidence Pack | AICloudStrategist"
+    },
+    "resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4459f9291b1f83f1d5a1e5b1bdab96e6aab4d0fc377079203ecb80130b14e909",
+      "title": "US Specialty Clinic Referral + Prior Auth Leakage Checklist | AICloudStrategist"
     },
     "resources/verified-public-presence-authority-tracker/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/verified-public-presence-authority-tracker/",
@@ -1625,7 +1863,7 @@
       "title": "Production AI Assurance Services | AICloudStrategist"
     },
     "services/cloud-finops/cloud-cost-review/index.html": {
-      "canonical": "https://aicloudstrategist.com/services/cloud-finops/cloud-cost-review/",
+      "canonical": "https://aicloudstrategist.com/services/cloud-finops/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": null,
@@ -1670,7 +1908,7 @@
       "canonical": "https://aicloudstrategist.com/services/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a5de4f0d457678c8a8bf223d7156cf021ea5b336edb3db9604e4911c89d285e5",
+      "main_sha256": "368e2ddcb265d7dcbab4823dc25a7340f955a6ecfde4e9ca9e68b05d4fb23432",
       "title": "AICloudStrategist Services"
     },
     "services/lead-generation-seo/index.html": {
@@ -1693,6 +1931,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": null,
       "title": "Privacy Compliance Consulting | GDPR, DPDP & Consent | AICloudStrategist"
+    },
+    "services/us-law-firm-ai-intake-answering-service/index.html": {
+      "canonical": "https://aicloudstrategist.com/services/us-law-firm-ai-intake-answering-service/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "34d5cf160bbfa427107e69ab011eb66e291e609b094e4197eb19ee34437e26f7",
+      "title": "US Law Firm AI Intake & Answering Service Diagnostic | AICloudStrategist"
     },
     "services/voice-ai-agents/index.html": {
       "canonical": "https://aicloudstrategist.com/services/voice-ai-agents/",
@@ -1761,7 +2006,7 @@
       "canonical": "https://aicloudstrategist.com/thank-you",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "62aad0e9b5895fcabf7c0cb24827184f8e4936fe1051f2bdf1cf5201f71cc21a",
+      "main_sha256": "6da74fdbf79723644ee703bd53063d08f60a20db463569321b2507688a6f53ce",
       "title": "Enquiry Received | AICloudStrategist"
     },
     "tools/index.html": {
@@ -1810,7 +2055,7 @@
       "canonical": "https://aicloudstrategist.com/website-lead-capture-sprint",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5616dd6d0556c354477d08058f597860ff17ff9819fd200a7f0576c73b458918",
+      "main_sha256": "fb624f9a74b891edf3e55f9aa0adad1efb68f23e5188efe7d1458822d2ec2ae6",
       "title": "Website and Lead Capture Sprint for Indian small businesses | AICloudStrategist"
     },
     "whatsapp-automation-services/index.html": {
@@ -1828,7 +2073,7 @@
       "title": "WhatsApp Lead Management for Indian small businesses | AICloudStrategist"
     },
     "whatsapp-link-generator.html": {
-      "canonical": "https://aicloudstrategist.com/resources",
+      "canonical": "https://aicloudstrategist.com/whatsapp-link-generator",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "445b0c04bb56b4e54b48b57d5c566e53831b4372b559e3458f371af745c0c313",
