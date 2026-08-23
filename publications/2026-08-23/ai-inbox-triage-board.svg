@@ -1,0 +1,57 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#eff6ff'/><stop offset='55%' stop-color='#f0fdfa'/><stop offset='100%' stop-color='#fff7ed'/></linearGradient>
+    <filter id='shadow' x='-20%' y='-20%' width='140%' height='140%'><feDropShadow dx='0' dy='12' stdDeviation='12' flood-color='#0f172a' flood-opacity='.14'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='url(#bg)'/>
+  <rect x='42' y='42' width='1116' height='816' rx='38' fill='rgba(255,255,255,.72)' stroke='#bfdbfe'/>
+  <text x='75' y='105' font-family='Inter,Arial,sans-serif' font-size='20' font-weight='900' fill='#0f766e' letter-spacing='3'>AICLOUDSTRATEGIST · SAFE AI OPERATIONS</text>
+  <text x='75' y='164' font-family='Inter,Arial,sans-serif' font-size='54' font-weight='950' fill='#111827'>The 10-Minute AI Inbox Triage Board</text>
+  <text x='75' y='204' font-family='Inter,Arial,sans-serif' font-size='22' fill='#334155'>A safe educational checklist for deciding what an AI assistant can answer, what needs owner review, and what should stay untouched.</text>
+  
+    <g filter='url(#shadow)'>
+      <rect x='75' y='228' width='500' height='132' rx='24' fill='#ffffff' stroke='#d8e6f3'/>
+      <circle cx='133' cy='294' r='38' fill='#0f766e'/>
+      <text x='133' y='305' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='900' fill='#fff'>1</text>
+      <text x='191' y='273' font-family='Inter,Arial,sans-serif' font-size='27' font-weight='900' fill='#152033'>Collect</text>
+      <text x='191' y='306' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='191' dy='0'>Group new messages by sender, topic, and urgency before</tspan><tspan x='191' dy='25'>any AI draft is prepared.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='640' y='228' width='500' height='132' rx='24' fill='#ffffff' stroke='#d8e6f3'/>
+      <circle cx='698' cy='294' r='38' fill='#2563eb'/>
+      <text x='698' y='305' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='900' fill='#fff'>2</text>
+      <text x='756' y='273' font-family='Inter,Arial,sans-serif' font-size='27' font-weight='900' fill='#152033'>Classify</text>
+      <text x='756' y='306' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='756' dy='0'>Mark each item as routine FAQ, customer-specific, risky,</tspan><tspan x='756' dy='25'>sales, support, or unclear.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='75' y='400' width='500' height='132' rx='24' fill='#ffffff' stroke='#d8e6f3'/>
+      <circle cx='133' cy='466' r='38' fill='#7c3aed'/>
+      <text x='133' y='477' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='900' fill='#fff'>3</text>
+      <text x='191' y='445' font-family='Inter,Arial,sans-serif' font-size='27' font-weight='900' fill='#152033'>Match facts</text>
+      <text x='191' y='478' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='191' dy='0'>Only use approved public facts, product pages, policies,</tspan><tspan x='191' dy='25'>and owner-confirmed answers.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='640' y='400' width='500' height='132' rx='24' fill='#ffffff' stroke='#d8e6f3'/>
+      <circle cx='698' cy='466' r='38' fill='#dc2626'/>
+      <text x='698' y='477' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='900' fill='#fff'>4</text>
+      <text x='756' y='445' font-family='Inter,Arial,sans-serif' font-size='27' font-weight='900' fill='#152033'>Escalate risk</text>
+      <text x='756' y='478' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='756' dy='0'>Pause pricing commitments, legal or compliance questions,</tspan><tspan x='756' dy='25'>credentials, disputes, and identity-sensitive items.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='75' y='572' width='500' height='132' rx='24' fill='#ffffff' stroke='#d8e6f3'/>
+      <circle cx='133' cy='638' r='38' fill='#0891b2'/>
+      <text x='133' y='649' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='900' fill='#fff'>5</text>
+      <text x='191' y='617' font-family='Inter,Arial,sans-serif' font-size='27' font-weight='900' fill='#152033'>Reply safely</text>
+      <text x='191' y='650' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='191' dy='0'>Send only low-risk routine answers with a clear</tspan><tspan x='191' dy='25'>human-review path for anything uncertain.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='640' y='572' width='500' height='132' rx='24' fill='#ffffff' stroke='#d8e6f3'/>
+      <circle cx='698' cy='638' r='38' fill='#475569'/>
+      <text x='698' y='649' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='900' fill='#fff'>6</text>
+      <text x='756' y='617' font-family='Inter,Arial,sans-serif' font-size='27' font-weight='900' fill='#152033'>Log evidence</text>
+      <text x='756' y='650' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='756' dy='0'>Record message type, action taken, owner handoff, and the</tspan><tspan x='756' dy='25'>exact boundary used for the response.</tspan></text>
+    </g>
+  <rect x='75' y='772' width='1050' height='76' rx='22' fill='#0f172a'/>
+  <text x='100' y='805' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='800' fill='#bae6fd'>Truth boundary</text>
+  <text x='100' y='832' font-family='Inter,Arial,sans-serif' font-size='17' fill='#e5f0ff'>Educational workflow only — not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice.</text>
+</svg>
