@@ -139,16 +139,38 @@ def canonical_path_for(page: Path) -> str | None:
 
 
 def discover_paths() -> list[str]:
-    """Return the deliberately curated crawler queue.
+    """Return every indexable canonical public page.
 
-    The site has many indexable pages, but sitemap.xml is intentionally capped at
-    the highest-commercial-intent routes so crawlers and AI answer engines see a
-    focused 50-URL queue instead of every long-tail page.
+    The brand/trust monitor now treats missing indexable pages in sitemap.xml as
+    a technical warning. Keep curated commercial paths first, then add the rest
+    of the site's canonical public pages so crawler discovery is complete without
+    fabricating any external authority signal.
     """
-    paths = []
+    paths: list[str] = []
+    seen: set[str] = set()
     for path in CURATED_PATHS:
         validate_path(path)
         paths.append(path)
+        seen.add(path.rstrip("/") or "/")
+
+    for page in html_pages():
+        path = canonical_path_for(page)
+        if not path:
+            continue
+        key = path.rstrip("/") or "/"
+        if key in seen:
+            continue
+        local = local_page(path)
+        if not local.is_file():
+            # Some canonical URLs intentionally omit .html. Validate the source
+            # page that supplied the canonical instead of dropping it.
+            local = page
+        source = local.read_text(encoding="utf-8", errors="ignore")
+        robots = ROBOTS_RE.search(source)
+        if robots and "noindex" in robots.group(1).lower():
+            continue
+        paths.append(path)
+        seen.add(key)
     return paths
 
 
