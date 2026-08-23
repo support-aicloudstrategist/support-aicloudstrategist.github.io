@@ -58,7 +58,7 @@ CURATED_PATHS = [
     "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-diagnostic-package/",
     "/resources/us-clinic-top-5-consideration-proof-pack/",
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
-    "/resources/us-law-firm-ai-intake-answering-service-faq/",
+    "/lead-leakage-calculator",
     "/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
     "/resources/us-ai-startup-ai-spend-board-review-checklist/",
 
