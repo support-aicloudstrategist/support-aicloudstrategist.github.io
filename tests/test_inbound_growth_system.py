@@ -164,6 +164,7 @@ def test_llms_map_is_curated_around_current_public_positioning():
         assert f"https://aicloudstrategist.com{path}" in LLMS
     assert "canonical positioning is Growth & Control OS" not in LLMS
     assert "Do not infer" in LLMS
+    assert "https://support-aicloudstrategist.github.io/publications/2026-08-23/ai-inbox-triage-board.html" in LLMS
     assert len(LLMS.splitlines()) <= 120
 
 
