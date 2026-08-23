@@ -16,7 +16,6 @@ ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\'
 CURATED_PATHS = [
     "/",
     "/free-business-review/",
-    "/contact",
     "/services/ai-mlops/",
     "/services/ai-automation/",
     "/services/cloud-finops/",
@@ -38,6 +37,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/manual-work-wasting-staff-time/",
     "/resources/customer-problem-search/clinic-not-getting-patients/",
     "/resources/clinic-website-not-converting-patients-checklist/",
+    "/resources/saudi-private-clinic-whatsapp-appointment-follow-up-checklist/",
     "/resources/customer-problem-search/business-compliance-privacy-confusion/",
     "/resources/customer-problem-search/find-right-consultant-vendor/",
     "/resources/customer-problem-search/small-shop-customer-increase/",
