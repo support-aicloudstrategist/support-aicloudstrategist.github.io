@@ -1,6 +1,6 @@
 # The AI Task Intake Clarity Map
 
-![Infographic: The AI Task Intake Clarity Map](https://support-aicloudstrategist.github.io/publications/2026-08-24/ai-task-intake-clarity-map.png)
+![Infographic: The AI Task Intake Clarity Map](https://aicloudstrategist.com/publications/2026-08-24/ai-task-intake-clarity-map.png)
 
 A safe educational checklist for deciding what an AI workflow is allowed to do before anyone automates a business task.
 
@@ -19,4 +19,4 @@ Use this map before building or buying an AI workflow. It keeps the discussion f
 
 **Truth boundary:** Educational workflow only — not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice.
 
-Public checklist and infographic: https://support-aicloudstrategist.github.io/publications/2026-08-24/ai-task-intake-clarity-map.html
+Public checklist and infographic: https://aicloudstrategist.com/publications/2026-08-24/ai-task-intake-clarity-map.html
