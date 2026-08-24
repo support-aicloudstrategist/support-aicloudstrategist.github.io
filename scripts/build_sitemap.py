@@ -53,6 +53,8 @@ CURATED_PATHS = [
     "/resources/uae-saas-cloud-ai-spend-evidence-template/",
     "/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
     "/resources/global-home-services-missed-call-dispatch-evidence-checklist/",
+    "/resources/global-freight-forwarding-shipment-exception-follow-up-checklist/",
+    "/resources/global-construction-contractor-quote-change-order-follow-up-checklist/",
     "/resources/global-manufacturing-production-follow-up-excel-evidence-checklist/",
     "/resources/global-home-care-referral-intake-caregiver-scheduling-evidence-checklist/",
     "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
