@@ -1,0 +1,6 @@
+row_type,synthetic_source,synthetic_signal,unit_metric,data_boundary_flag,evidence_gap,adviser_needed_flag,decision_owner,claim_boundary
+cloud_cost,AWS production account,Compute spend movement after release,Tenant workflow run,unknown,Customer and environment tags incomplete,no,Product and engineering,Synthetic row only no savings or real bill claim
+ai_spend,LLM API provider,Usage spike after patient support pilot,Message or inference,review_required,Prompt data handling and retention note missing,yes,AI product owner,Synthetic row only no AI accuracy or patient outcome claim
+questionnaire,Security questionnaire,HIPAA or SOC2 style answer needed,Evidence row ageing,review_required,Adviser or security owner question unresolved,yes,Security and privacy,Synthetic row only no compliance certification or legal advice claim
+vendor_model,Vendor and model register,New AI vendor used in workflow test,Workflow dependency,review_required,Region retention and fallback path unclear,yes,Operations and legal privacy adviser,Synthetic row only no vendor approval or procurement claim
+human_review,Human review route,Clinical billing or coverage content possible,Review required queue,review_required,Escalation owner and response SLA not documented,yes,Clinical or billing owner,Synthetic row only no clinical billing legal or safety outcome claim

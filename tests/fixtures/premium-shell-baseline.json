@@ -145,7 +145,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": null,
-      "title": "AI Creative Studio — Cinematic AI Ads & Premium Brand Visuals"
+      "title": "AI Creative Studio \u2014 Cinematic AI Ads & Premium Brand Visuals"
     },
     "ai-voice-agents/index.html": {
       "canonical": "https://aicloudstrategist.com/ai-voice-agents/",
@@ -684,7 +684,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "d833d00749480a7d643de8102b574a86ec5d44c2ba89629a5c9fb826de7fe930",
-      "title": "AICS daily publications — 2026-08-20 | AICloudStrategist"
+      "title": "AICS daily publications \u2014 2026-08-20 | AICloudStrategist"
     },
     "resources.html": {
       "canonical": "https://aicloudstrategist.com/resources",
@@ -873,7 +873,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "f206e71973d5eea64faadcaa943f7f4e1b02c11f3bc2a18e3e26732eb08e7361",
-      "title": "My AWS or cloud bill is too high — how do I reduce it? | AICloudStrategist"
+      "title": "My AWS or cloud bill is too high \u2014 how do I reduce it? | AICloudStrategist"
     },
     "resources/customer-problem-search/business-compliance-privacy-confusion/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/business-compliance-privacy-confusion/",
@@ -887,7 +887,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "75b83509acef6a62bddbdfbbe4353983260466c151a2ba33346ce4a003c13b69",
-      "title": "Clinic not getting enough patients — how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist"
+      "title": "Clinic not getting enough patients \u2014 how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist"
     },
     "resources/customer-problem-search/coaching-school-admission-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
@@ -922,21 +922,21 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "aeaae75f76ae3fc518a987a1e6fa766da3a0132e4af07ad50018f26d0974ad11",
-      "title": "Too much manual work in office — how do I reduce staff workload? | AICloudStrategist"
+      "title": "Too much manual work in office \u2014 how do I reduce staff workload? | AICloudStrategist"
     },
     "resources/customer-problem-search/restaurant-local-service-customers-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "d4d1737d321489b7a1365804f530ba738b565dfc5413f85b0d1797f606c208f6",
-      "title": "Restaurant or service business needs more customers — how do I improve bookings, repeat visits and trust? | AICloudStrategist"
+      "title": "Restaurant or service business needs more customers \u2014 how do I improve bookings, repeat visits and trust? | AICloudStrategist"
     },
     "resources/customer-problem-search/small-shop-customer-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "70a95ec090cd7aa2d4209a738857cbae9c9a9e0b084713fab49ae818e17d3ac2",
-      "title": "Small shop or local business not getting enough customers — what should I fix first? | AICloudStrategist"
+      "title": "Small shop or local business not getting enough customers \u2014 what should I fix first? | AICloudStrategist"
     },
     "resources/daily-growth-distribution-engine/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
@@ -1208,7 +1208,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1996f55b821dbefe7beffa70f961339982e44f1d10aec980fdd9a27358bb2575",
+      "main_sha256": "658fc57cbfa60979e16a365570bcd056c60d0a3257a61635f6e03245002988a4",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1287,6 +1287,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "44f98d630b0b049520b1a240794a858231d95873ecbfb6825bf023331f65d8dc",
       "title": "Missed Lead Recovery for Indian Clinics: A Step-by-Step ROI Calculator | AICloudStrategist"
+    },
+    "resources/north-america-healthtech-ai-cloud-finops-trust-evidence-room/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-finops-trust-evidence-room/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "a9e3fe458a6ffe5ba86229c7869c91888f7767cb1f026834d638a272479e4100",
+      "title": "North America Healthtech AI Cloud FinOps Trust Evidence Room | AICS"
     },
     "resources/overnight-ai-automation-safety-handoff/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/overnight-ai-automation-safety-handoff/",
@@ -1664,7 +1671,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
-      "title": "Enterprise FinOps Advisory — Cloud &amp; AI Economics"
+      "title": "Enterprise FinOps Advisory \u2014 Cloud &amp; AI Economics"
     },
     "services/cloud-security/index.html": {
       "canonical": "https://aicloudstrategist.com/services/cloud-security/",
