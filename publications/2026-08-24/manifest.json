@@ -7,5 +7,14 @@
     "png": "https://aicloudstrategist.com/publications/2026-08-24/ai-task-intake-clarity-map.png",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-24",
     "boundary": "Educational workflow only \u2014 not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
+  },
+  {
+    "slot": "evening",
+    "slug": "ai-reply-safety-stoplight",
+    "title": "The AI Reply Safety Stoplight",
+    "url": "https://aicloudstrategist.com/publications/2026-08-24/ai-reply-safety-stoplight.html",
+    "png": "https://aicloudstrategist.com/publications/2026-08-24/ai-reply-safety-stoplight.png",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-24",
+    "boundary": "Educational workflow only \u2014 not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
   }
 ]
