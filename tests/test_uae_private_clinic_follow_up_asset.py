@@ -24,6 +24,9 @@ def test_uae_private_clinic_asset_has_public_seo_and_schema_markers():
         "Abu Dhabi clinic no-show reminders",
         "UAE PDPL adviser questions",
         "Patient GrowthOS owner dashboard",
+        "Malaffi / health-information exchange readiness",
+        "UAE Government data-protection law page",
+        "health-information-exchange readiness",
         "What AICS must publish/build to enter top-3/top-5 consideration",
         "Truth boundary",
     ]:
