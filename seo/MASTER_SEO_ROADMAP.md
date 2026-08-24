@@ -105,7 +105,7 @@ Status: Highest-priority pages created
 - [x] SaaS/startups cloud FinOps page.
 - [x] Law firm AI automation page.
 - [x] Manufacturing/exporters digital transformation page.
-- [ ] Financial services automation page.
+- [x] Financial services automation page.
 
 ### Phase 5 — Proof, EEAT, and backlinks
 Status: Proof/demo layer started
