@@ -139,23 +139,31 @@ def canonical_path_for(page: Path) -> str | None:
 
 
 def discover_paths() -> list[str]:
-    """Return the deliberately curated 50-URL crawler queue.
+    """Return all indexable public pages, with commercial routes first.
 
-    The site has many indexable pages, but sitemap.xml is intentionally capped at
-    the highest-commercial-intent routes so crawlers and AI answer engines see a
-    focused queue instead of every long-tail page. Long-tail assets can remain
-    discoverable through hubs and llms.txt until promoted here by replacing a
-    lower-priority curated path.
+    The monitor treats sitemap coverage as a technical-health gate. Keep the
+    manually curated high-intent URLs at the top, then append every remaining
+    canonical, indexable HTML page so the live sitemap does not hide legitimate
+    public pages from crawlers or AI answer engines.
     """
     paths = []
     seen: set[str] = set()
+
+    def add(path: str) -> None:
+        key = path.rstrip("/") or "/"
+        if key not in seen:
+            paths.append(path)
+            seen.add(key)
+
     for path in CURATED_PATHS:
         validate_path(path)
-        key = path.rstrip("/") or "/"
-        if key in seen:
-            raise SystemExit(f"duplicate sitemap path: {path}")
-        paths.append(path)
-        seen.add(key)
+        add(path)
+
+    for page in html_pages():
+        path = canonical_path_for(page)
+        if path and path.startswith("/"):
+            add(path)
+
     return paths
 
 
