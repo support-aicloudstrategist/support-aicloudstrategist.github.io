@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HOME = ROOT / "index.html"
 STYLES = ROOT / "css" / "homepage-enterprise.css"
 SECTION_SHA256 = {
-    "hero": "ffc176afec2844cf4de07825fea2fe4d193745331d829041559c8599c910f7bf",
+    "hero": "f4288a2cfd574f77c4fd02b5b04a075c561eda3f5e4c70db3729630e186b0fb8",
     "services": "9f33638ecf0c196e6eab0a22ef819465159bcf8acbb5198f4363ce1974cf8bbd",
 }
 REFINEMENT_MARKER = "/* AICS Enterprise AI visual refinement — 2026-07-27"
