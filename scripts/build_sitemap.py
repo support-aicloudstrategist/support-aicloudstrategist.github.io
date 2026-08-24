@@ -29,6 +29,7 @@ CURATED_PATHS = [
     "/trust-compliance/",
     "/healthcare-growthos/",
     "/resources/global-hotel-direct-booking-enquiry-follow-up-checklist/",
+    "/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
     "/resources/lead-follow-up-automation-guide/",
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/cloud-ai-economics-decision-pack/",
