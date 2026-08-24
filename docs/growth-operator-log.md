@@ -51,3 +51,13 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 scripts/build_sitemap.py` returned `wrote 290 indexable sitemap URLs`.
   - `python3 -m pytest tests/test_financial_services_industry_page.py tests/test_manufacturing_exporters_industry_page.py tests/test_seo_focus.py` returned `12 passed in 0.16s`.
 - Proof boundary: no client, testimonial, regulated approval, certification, production result, ranking, revenue, cost saving, investment performance, lending outcome or legal/financial advice claim was made.
+
+## 2026-08-24 About entity trust signals
+
+- Decision: improve Phase 5 entity trust by making the About page's Organization schema match the already-published homepage entity signals.
+- Updated: `/about/` and `/about.html`
+  - Added verified public `sameAs` links for LinkedIn and YouTube already present in homepage schema.
+  - Added sales `ContactPoint` with existing public email, phone, worldwide service area and languages already present in homepage schema.
+- Updated: `tests/test_about_capability_dossier.py` to prevent regression of parseable Organization/WebPage JSON-LD, sameAs links and contactPoint metadata.
+- Updated: `seo/MASTER_SEO_ROADMAP.md` marking About/entity trust signals complete.
+- Proof boundary: no founder/person claims, customer proof, testimonials, certifications, awards, partnerships, revenue, rankings or delivery results were added.

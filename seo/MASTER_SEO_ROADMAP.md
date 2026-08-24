@@ -111,7 +111,7 @@ Status: Highest-priority pages created
 Status: Proof/demo layer started
 - [x] Create honest demo/proof pages for dental lead leakage, WhatsApp+CRM lead recovery, SaaS FinOps control, plus existing internal GEO proof.
 - [x] Create `/trust-security/` page for trust, approval gates, privacy, cloud security and honest proof positioning.
-- [ ] Improve About/author/entity trust signals.
+- [x] Improve About/author/entity trust signals.
 - [ ] Build free profile/entity citations.
 - [ ] Publish more reusable templates/checklists/calculators for natural backlinks.
 - [ ] Weekly competitor/ranking review process.
@@ -142,6 +142,11 @@ Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit
 - Created `/ai-voice-agents/` for high-intent AI voice agent, appointment booking automation, missed-call automation and voice AI receptionist searches.
 - Added Service + FAQ schema, sitemap entry, resources-hub card and AI automation hub internal links.
 - Preserved proof boundaries: no AI accuracy, booked-revenue, legal/medical/financial advice or compliance guarantees; page requires human escalation for sensitive calls.
+
+## 2026-08-24 update — About entity trust signals
+- Improved `/about/` and `/about.html` Organization structured data with verified public sameAs profiles and sales contactPoint aligned with homepage schema.
+- Added regression coverage so both About aliases keep parseable JSON-LD, identical content, entity links and worldwide contact metadata.
+- Preserved proof boundary: no founder/person claims, certifications, partnerships, awards, testimonials or customer results were added.
 
 ## Homepage brand-positioning rule
 - Do not reposition AICloudStrategist as only an AI Automation Agency.

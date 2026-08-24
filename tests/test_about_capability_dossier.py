@@ -119,6 +119,16 @@ class AboutCapabilityDossierTests(unittest.TestCase):
             parsed = [json.loads(block) for block in blocks]
             self.assertEqual({item["@type"] for item in parsed}, {"Organization", "WebPage"})
             self.assertTrue(all(item["@context"] == "https://schema.org" for item in parsed))
+            organization = next(item for item in parsed if item["@type"] == "Organization")
+            self.assertEqual(
+                organization["sameAs"],
+                [
+                    "https://www.linkedin.com/company/aicloudstrategist/",
+                    "https://www.youtube.com/@aicloudstrategist",
+                ],
+            )
+            self.assertEqual(organization["contactPoint"]["contactType"], "sales")
+            self.assertEqual(organization["contactPoint"]["areaServed"], "Worldwide")
 
     def test_finite_flow_selectors_reference_existing_sections(self):
         self.assertIn('id="contact"', self.sources[0])

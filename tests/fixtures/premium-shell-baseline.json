@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c8dd20c87163dae10588061c7732143643133ec16a9ba0ae90e1d0e0133b1fe9",
+      "main_sha256": "7cc204088692923f7046ed72022a0e795d7513841d96181be82d949a9636322c",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -469,11 +469,18 @@
       "main_sha256": "982737a43c7c5e67b5f4a632630d8f42406bef1f7e471743b042eab4ea443c80",
       "title": "Automation for Education &amp; Coaching Institutes | AICloudStrategist"
     },
+    "industries/financial-services/index.html": {
+      "canonical": "https://aicloudstrategist.com/industries/financial-services/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "32bfe9a0e57762fd9cfbd7438bdd992836ffd2891e7f5df462074f00a47e1595",
+      "title": "AI Automation for Financial Services | AICloudStrategist"
+    },
     "industries/index.html": {
       "canonical": "https://aicloudstrategist.com/industries/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b4f68ba5cba9c52c964374b3d9e22a43e39064ecd3981311dc3ebff5b02004ed",
+      "main_sha256": "c52c14955de404161ab3318b8646e0c8c95b2ee71de8b4038ceb8fa64a3da705",
       "title": "Industries Served | AICloudStrategist"
     },
     "industries/law-firms/index.html": {
@@ -1173,7 +1180,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5658752c3ee619cd2dd74f5b397223af8584b9da9011bd15ee7411a5aebb556c",
+      "main_sha256": "d09897c9f8efcd3e44c4a461f858d32e8ef83bfdd1670156969fb8906f6e5427",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
