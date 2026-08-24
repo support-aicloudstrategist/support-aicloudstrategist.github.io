@@ -221,7 +221,7 @@
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "13270b4f82358a1f745ecea26d21c71009ff6e801b2c0a68f8e89817cd288987",
+      "main_sha256": "7684377726769e17d5248a293b3cc69f8da31e4b3822445410c9ace1d79be57e",
       "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist"
     },
     "case-studies/sample-cloud-finops-cost-optimization/index.html": {
@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "915a712c1b1d119fdf13c936e08914555687928f6ae1e589a98017a51a83a944",
+      "main_sha256": "541eb704d06aa1b3b4cff6912badfbe8208226bff815ee4a5ce5a68784c2369d",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -1215,7 +1215,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "658fc57cbfa60979e16a365570bcd056c60d0a3257a61635f6e03245002988a4",
+      "main_sha256": "5e43dadd6c5ab00c81ed232209bbe8ba0b86277664ab58781546dae242766400",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1581,6 +1581,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "76f6ab1149866b4fcabd09dd80f16f80def9747c4353533b7244bbe3746bce19",
       "title": "US Medical Group Healthcare GrowthOS Vendor Shortlist Checklist | AICloudStrategist"
+    },
+    "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "b19f6eeaa409e37a22462792963c17c24fdc2226912fd43eafeffe01cbe5ab85",
+      "title": "US Outpatient Imaging Referral + Prior Auth Leakage Checklist | AICloudStrategist"
     },
     "resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/",
