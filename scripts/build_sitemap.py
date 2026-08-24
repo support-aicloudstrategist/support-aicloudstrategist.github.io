@@ -41,6 +41,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/business-compliance-privacy-confusion/",
     "/resources/customer-problem-search/find-right-consultant-vendor/",
     "/industries/law-firms/",
+    "/resources/global-law-firm-missed-call-client-intake-follow-up-checklist/",
     "/industries/manufacturing-exporters/",
     "/industries/financial-services/",
     "/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
