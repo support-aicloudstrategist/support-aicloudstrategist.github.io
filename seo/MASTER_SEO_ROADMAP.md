@@ -104,7 +104,7 @@ Status: Highest-priority pages created
 - [x] Local services website/automation page.
 - [x] SaaS/startups cloud FinOps page.
 - [x] Law firm AI automation page.
-- [ ] Manufacturing/exporters digital transformation page.
+- [x] Manufacturing/exporters digital transformation page.
 - [ ] Financial services automation page.
 
 ### Phase 5 — Proof, EEAT, and backlinks
