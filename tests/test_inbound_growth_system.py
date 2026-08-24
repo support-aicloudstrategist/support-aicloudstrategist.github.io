@@ -193,6 +193,19 @@ def test_no_customer_journey_points_to_the_dead_calendly_route():
         assert dead not in path.read_text(encoding="utf-8", errors="replace"), path
 
 
+def test_customer_click_to_call_links_are_not_masked_or_invalid():
+    masked_tel = "tel:+918****0898"
+    canonical_tel = "tel:+918065480898"
+    click_to_call_pages = 0
+    for path in ROOT.rglob("*.html"):
+        html = path.read_text(encoding="utf-8", errors="replace")
+        assert masked_tel not in html, path
+        if "href=\"tel:" in html and "+91 80654 80898" in html:
+            assert canonical_tel in html, path
+            click_to_call_pages += 1
+    assert click_to_call_pages >= 5
+
+
 def test_audit_endpoint_is_not_an_arbitrary_confirmation_email_relay():
     assert "async function readPayload" in LEAD_API
     assert "request.formData()" in LEAD_API
