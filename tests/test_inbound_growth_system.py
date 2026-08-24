@@ -187,6 +187,13 @@ def test_lead_endpoints_expose_side_effect_free_readiness_checks():
         assert 'notification_mode: "manual-review"' in endpoint
 
 
+def test_live_customer_facing_html_has_no_unresolved_template_placeholders():
+    placeholder = re.compile(r"\{\{\s*[A-Za-z_][A-Za-z0-9_\-.]*\s*\}\}")
+    for path in ROOT.rglob("*.html"):
+        html = path.read_text(encoding="utf-8", errors="replace")
+        assert not placeholder.search(html), path
+
+
 def test_no_customer_journey_points_to_the_dead_calendly_route():
     dead = "calendly.com/aicloudstrategist/15min"
     for path in ROOT.rglob("*.html"):
