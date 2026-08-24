@@ -58,4 +58,4 @@ def test_uae_private_clinic_asset_is_linked_from_discovery_surfaces_without_over
     assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     sitemap_script = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
-    assert "deliberately curated 50-URL crawler queue" in sitemap_script
+    assert "remaining" in sitemap_script and "canonical, indexable HTML page" in sitemap_script

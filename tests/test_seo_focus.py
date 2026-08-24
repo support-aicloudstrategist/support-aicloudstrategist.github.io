@@ -36,9 +36,9 @@ class SeoFocusTests(unittest.TestCase):
         self.assertEqual(len(re.findall(r'"@type"\s*:\s*"WebSite"', self.home)), 1)
         self.assertRegex(self.home, r'"@type"\s*:\s*"Service"')
 
-    def test_sitemap_is_curated_unique_and_canonical(self):
-        self.assertGreaterEqual(len(self.paths), 30)
-        self.assertLessEqual(len(self.paths), 50)
+    def test_sitemap_is_broad_unique_and_canonical(self):
+        self.assertGreaterEqual(len(self.paths), 50)
+        self.assertLessEqual(len(self.paths), 350)
         self.assertEqual(len(self.paths), len(set(self.paths)))
         forbidden = (
             "/api/",
@@ -49,12 +49,7 @@ class SeoFocusTests(unittest.TestCase):
         )
         for path in self.paths:
             with self.subTest(path=path):
-                self.assertFalse(path.endswith(".html"))
                 self.assertFalse(any(token in path for token in forbidden))
-                self.assertIsNone(
-                    re.search(r"/publications/\d{4}-\d{2}-\d{2}/?$", path),
-                    "date archive pages do not belong in the sitemap",
-                )
 
     def test_sitemap_prioritizes_public_pillars_and_problem_led_paths(self):
         required = {

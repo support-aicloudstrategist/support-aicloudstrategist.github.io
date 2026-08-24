@@ -36,13 +36,13 @@
     "downloads/cloud-ai-economics-decision-pack.pdf": "eb993183c64256dbe3082b0fbc52514d43d1a8a34745a617e9fb5c4c38d2a51a",
     "css/enterprise-finops.css": "fcfdde53d529b1f201c566b2a0326481390f472f75ce53cd278a89b2e8efb522",
     "css/cloud-ai-economics-decision-pack.css": "779aa0fcd1a803071f32641be22997fe3b152e9ec5cb4f8d189b35f4274bb1d7",
-    "sitemap.xml": "ac882fd415a39feab4408e620af7e35a6e307a90fa4cbe5cbc3a085fee5d6a07",
+    "sitemap.xml": "8feff2fd6f450bb0e73364fb92c26e12f276ae767031a11930dc43bf7f3e9231",
     "_redirects": "da3667086c9b7c2dfb564eacffbf3508bd9708e357824199a6e8c6e651748dbb",
-    "llms.txt": "be22938ddafc799540d16ca15b02f2f144e3f911b1ebabee181cb46429ce8020",
+    "llms.txt": "2c75f0057af58bd643b3584ddf98355ba1233663944faa07cee8c9d8105abbf9",
     "favicon.svg": "95a5feae81c95ebb349e7d68f613a278434ec9727006513817fafe225b90a238",
-    "resources/index.html": "7946b16e657865f5f192d46f4a12e83da297e93a587ded8acb3b3c39ebe8eb5b",
+    "resources/index.html": "bf9f50b28c5b709c2fc456512acf1c54d0771ea0dead8352dbc15b33f598755d",
     "services/index.html": "ff6cc1b1783e4d0860b27e95ab9fac4453dc81d2059900dbad4d34e9c1cc99d3",
     "scripts/build_cloud_ai_economics_decision_pack.py": "88fe3ac06222b2da2000e9c74752c2f7dcf1ecc20a8fed4bd88cfa8cda0c277f",
-    "scripts/build_sitemap.py": "738a24c46ad6484ba8d3ece7e613a3a54726b38509c85dae06c212d67be7d3c2"
+    "scripts/build_sitemap.py": "afeedcba7fb0791189333c956fbd1e21937244c95537f978f5067eb1fb8e8a21"
   }
 }

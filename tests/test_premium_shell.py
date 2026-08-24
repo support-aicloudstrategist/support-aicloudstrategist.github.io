@@ -22,6 +22,8 @@ class PremiumShellPreservationTests(unittest.TestCase):
             source = path.read_text(errors="replace")
             if "data-aics-navigation-mount" not in source:
                 continue
+            if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+noindex', source, re.I):
+                continue
             rel = path.relative_to(ROOT).as_posix()
             main = re.search(r"<main\b[^>]*>.*?</main\s*>", source, re.I | re.S)
             forms = re.findall(r"<form\b[^>]*>.*?</form\s*>", source, re.I | re.S)
