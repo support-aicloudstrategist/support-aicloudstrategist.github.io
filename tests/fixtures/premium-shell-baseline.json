@@ -142,7 +142,7 @@
     },
     "ai-creative-studio/index.html": {
       "main_sha256": null,
-      "title": "AI Creative Studio — Cinematic AI Ads & Premium Brand Visuals",
+      "title": "AI Creative Studio \u2014 Cinematic AI Ads & Premium Brand Visuals",
       "canonical": "https://aicloudstrategist.com/ai-creative-studio/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -681,7 +681,7 @@
     },
     "publications/2026-08-20/index.html": {
       "main_sha256": "d833d00749480a7d643de8102b574a86ec5d44c2ba89629a5c9fb826de7fe930",
-      "title": "AICS daily publications — 2026-08-20 | AICloudStrategist",
+      "title": "AICS daily publications \u2014 2026-08-20 | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/publications/2026-08-20/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -863,7 +863,7 @@
     },
     "resources/customer-problem-search/aws-cloud-bill-too-high/index.html": {
       "main_sha256": "f206e71973d5eea64faadcaa943f7f4e1b02c11f3bc2a18e3e26732eb08e7361",
-      "title": "My AWS or cloud bill is too high — how do I reduce it? | AICloudStrategist",
+      "title": "My AWS or cloud bill is too high \u2014 how do I reduce it? | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -877,7 +877,7 @@
     },
     "resources/customer-problem-search/clinic-not-getting-patients/index.html": {
       "main_sha256": "75b83509acef6a62bddbdfbbe4353983260466c151a2ba33346ce4a003c13b69",
-      "title": "Clinic not getting enough patients — how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist",
+      "title": "Clinic not getting enough patients \u2014 how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/clinic-not-getting-patients/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -912,21 +912,21 @@
     },
     "resources/customer-problem-search/manual-work-wasting-staff-time/index.html": {
       "main_sha256": "aeaae75f76ae3fc518a987a1e6fa766da3a0132e4af07ad50018f26d0974ad11",
-      "title": "Too much manual work in office — how do I reduce staff workload? | AICloudStrategist",
+      "title": "Too much manual work in office \u2014 how do I reduce staff workload? | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/manual-work-wasting-staff-time/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "resources/customer-problem-search/restaurant-local-service-customers-increase/index.html": {
       "main_sha256": "d4d1737d321489b7a1365804f530ba738b565dfc5413f85b0d1797f606c208f6",
-      "title": "Restaurant or service business needs more customers — how do I improve bookings, repeat visits and trust? | AICloudStrategist",
+      "title": "Restaurant or service business needs more customers \u2014 how do I improve bookings, repeat visits and trust? | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "resources/customer-problem-search/small-shop-customer-increase/index.html": {
       "main_sha256": "70a95ec090cd7aa2d4209a738857cbae9c9a9e0b084713fab49ae818e17d3ac2",
-      "title": "Small shop or local business not getting enough customers — what should I fix first? | AICloudStrategist",
+      "title": "Small shop or local business not getting enough customers \u2014 what should I fix first? | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -1148,10 +1148,24 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
+    "resources/global-auto-dealer-internet-lead-follow-up-checklist/index.html": {
+      "main_sha256": "b3067f0324ff9b36e885d97a2f1b62958646aa982b0675b45fd982fc38e354bb",
+      "title": "Auto Dealer Internet Lead Follow-Up Evidence Checklist | AICloudStrategist",
+      "canonical": "https://aicloudstrategist.com/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/index.html": {
       "main_sha256": "145f91051ee355d7d289ccff1b40e39e554e834b78a7e936cc6cd1242c727467",
       "title": "Ecommerce Abandoned Cart + WhatsApp Follow-Up Evidence Checklist | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resources/global-insurance-agency-quote-claims-follow-up-checklist/index.html": {
+      "main_sha256": "68cfb2f26566179fd8bace241776931efdf18284f8fc1842b53ee50c6d0f2f0d",
+      "title": "Insurance Agency Quote + Claims Follow-Up Evidence Checklist | AICloudStrategist",
+      "canonical": "https://aicloudstrategist.com/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
@@ -1184,7 +1198,7 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "resources/index.html": {
-      "main_sha256": "232b7944656b41c350f8797175c1be3915ab3adc6d157ef72cd5aa5bb8f0b723",
+      "main_sha256": "1996f55b821dbefe7beffa70f961339982e44f1d10aec980fdd9a27358bb2575",
       "title": "Resources | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
@@ -1400,6 +1414,13 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
+    "resources/uk-care-home-family-enquiry-follow-up-evidence-checklist/index.html": {
+      "main_sha256": "b2e6be893f6a5df077da77d77832bee2bbcf13d6bd627985698f9e05d3a14688",
+      "title": "UK Care Home Family Enquiry Follow-Up Evidence Checklist | AICloudStrategist",
+      "canonical": "https://aicloudstrategist.com/resources/uk-care-home-family-enquiry-follow-up-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/index.html": {
       "main_sha256": "a594f109ca25fdc63148a563bd79b3ec6ac8ce7acfed55facc4f13e60c309f3c",
       "title": "UK Private Clinic Patient GrowthOS vs Practice Management Software | AICS",
@@ -1533,6 +1554,13 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
+    "resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/index.html": {
+      "main_sha256": "76f6ab1149866b4fcabd09dd80f16f80def9747c4353533b7244bbe3746bce19",
+      "title": "US Medical Group Healthcare GrowthOS Vendor Shortlist Checklist | AICloudStrategist",
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/index.html": {
       "main_sha256": "37aaf19cca91b5fb2e68605f638ace43058c4227e904fee888ff00d2cc037701",
       "title": "US SaaS AI Vendor Risk & SOC 2 Readiness Checklist | AICS",
@@ -1633,7 +1661,7 @@
     },
     "services/cloud-finops/index.html": {
       "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
-      "title": "Enterprise FinOps Advisory — Cloud &amp; AI Economics",
+      "title": "Enterprise FinOps Advisory \u2014 Cloud &amp; AI Economics",
       "canonical": "https://aicloudstrategist.com/services/cloud-finops/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"

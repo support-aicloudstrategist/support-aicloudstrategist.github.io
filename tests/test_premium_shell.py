@@ -57,7 +57,7 @@ class PremiumShellPreservationTests(unittest.TestCase):
                 self.assertEqual(source.count('/js/site-navigation.js?v='), 1)
                 self.assertRegex(source, r'(?s)<footer\b[^>]*data-aics-global-footer[^>]*>.*?</footer>\s*</body>')
                 self.assertIn('href="mailto:contact@aicloudstrategist.com"', source)
-                self.assertIn('href="tel:+918065480898"', source)
+                self.assertIn('href="/contact.html?service=enterprise-ai"', source)
                 self.assertIn('href="/privacy.html"', source)
                 self.assertIn('href="/terms.html"', source)
                 self.assertIsNone(re.search(r'tel:[^"\']*\*', source))
