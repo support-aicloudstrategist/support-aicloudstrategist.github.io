@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Simulated UAE SaaS Cloud and AI Spend Trust Dashboard</title>
+  <desc id="desc">Demo-only dashboard showing synthetic cost, AI spend, access, backup and vendor evidence queues. No real client, savings, compliance or certification claim.</desc>
+  <rect width="1200" height="720" fill="#07111f"/>
+  <text x="56" y="62" fill="#eaf6fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">UAE SaaS Cloud + AI Spend Trust Pack</text>
+  <text x="56" y="96" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="16">DEMO / INTERNAL / SIMULATED ONLY — no real client, savings, compliance, certification or security attestation</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="56" y="132" width="250" height="120" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <text x="78" y="168" fill="#93c5fd" font-size="14" font-weight="700">Synthetic monthly signal</text>
+    <text x="78" y="207" fill="#ffffff" font-size="36" font-weight="800">8 rows</text>
+    <text x="78" y="232" fill="#cbd5e1" font-size="14">cost, AI, vendor, access evidence</text>
+    <rect x="336" y="132" width="250" height="120" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <text x="358" y="168" fill="#93c5fd" font-size="14" font-weight="700">Unowned decision queue</text>
+    <text x="358" y="207" fill="#ffffff" font-size="36" font-weight="800">5</text>
+    <text x="358" y="232" fill="#cbd5e1" font-size="14">owners, thresholds, renewals</text>
+    <rect x="616" y="132" width="250" height="120" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <text x="638" y="168" fill="#93c5fd" font-size="14" font-weight="700">Adviser questions</text>
+    <text x="638" y="207" fill="#ffffff" font-size="36" font-weight="800">8</text>
+    <text x="638" y="232" fill="#cbd5e1" font-size="14">PDPL, privacy, security, procurement</text>
+    <rect x="896" y="132" width="250" height="120" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <text x="918" y="168" fill="#93c5fd" font-size="14" font-weight="700">Claim status</text>
+    <text x="918" y="207" fill="#ffffff" font-size="36" font-weight="800">0 claims</text>
+    <text x="918" y="232" fill="#cbd5e1" font-size="14">no savings/compliance proof asserted</text>
+    <rect x="56" y="292" width="1090" height="330" rx="22" fill="#0b1828" stroke="#334155"/>
+    <text x="86" y="336" fill="#e2e8f0" font-size="20" font-weight="700">Evidence queue shape AICS should publish before outreach</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="88" y="382">1. Cost exports tied to owner, workload, release and decision status</text>
+      <text x="88" y="424">2. AI/API/GPU usage tied to pilot purpose, approval threshold and human review</text>
+      <text x="88" y="466">3. Data-category and region questions separated from legal/privacy conclusions</text>
+      <text x="88" y="508">4. Backup, restore-test, privileged-access and vendor renewal evidence gaps visible</text>
+      <text x="88" y="550">5. Competitor-aware wedge: proof-before-platform around AWS, Azure, GCP, CloudZero, Vantage, Apptio Cloudability and nOps</text>
+    </g>
+  </g>
+  <text x="56" y="676" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13">AICloudStrategist demo artifact generated 2026-08-25 for Middle East business-hours visibility.</text>
+</svg>
