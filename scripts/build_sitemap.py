@@ -70,6 +70,7 @@ CURATED_PATHS = [
     "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-diagnostic-package/",
     "/resources/us-clinic-top-5-consideration-proof-pack/",
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
+    "/resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/",
     "/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",
