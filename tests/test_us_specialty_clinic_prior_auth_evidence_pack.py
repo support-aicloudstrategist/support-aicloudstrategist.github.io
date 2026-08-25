@@ -21,6 +21,7 @@ class USSpecialtyClinicPriorAuthEvidencePackTests(unittest.TestCase):
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         cls.related = (ROOT / "resources" / "us-specialty-clinic-referral-prior-auth-leakage-checklist" / "index.html").read_text(encoding="utf-8")
+        cls.sample_csv = (ROOT / "resources" / "us-specialty-clinic-prior-auth-evidence-pack" / "sample.csv").read_text(encoding="utf-8")
 
     def test_page_is_indexable_canonical_and_single_h1(self):
         self.assertIn('<meta name="robots" content="index, follow"/>', self.html)
@@ -82,6 +83,27 @@ class USSpecialtyClinicPriorAuthEvidencePackTests(unittest.TestCase):
         self.assertIn(f"US specialty clinic prior authorization evidence pack: {URL}", self.llms)
         self.assertIn(URL, self.sitemap)
         self.assertIn(PATH, self.related)
+
+    def test_demo_csv_is_downloadable_safe_and_actionable(self):
+        self.assertIn('/resources/us-specialty-clinic-prior-auth-evidence-pack/sample.csv', self.html)
+        for column in [
+            "demo_record_id",
+            "request_source",
+            "clinic_specialty",
+            "payer_category",
+            "queue_owner",
+            "status",
+            "age_bucket",
+            "blocked_reason",
+            "next_safe_action",
+            "ai_boundary",
+            "human_review_required",
+            "demo_only_note",
+        ]:
+            self.assertIn(column, self.sample_csv.splitlines()[0])
+        self.assertIn("synthetic demo row; no PHI; not a real clinic record", self.sample_csv)
+        for unsafe in ["patient_name", "date_of_birth", "dob", "ssn", "member_id", "medical_record_number", "mrn"]:
+            self.assertNotIn(unsafe, self.sample_csv.lower())
 
 
 if __name__ == "__main__":
