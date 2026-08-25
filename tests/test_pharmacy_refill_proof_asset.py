@@ -34,6 +34,6 @@ def test_pharmacy_refill_proof_asset_is_linked_from_evidence_hub_and_llms():
 
     assert route in hub
     assert "India pharmacy prescription refill and WhatsApp DPDP evidence diagnostic" in hub
-    assert "<strong>42</strong>" in hub
-    assert "<em>17 methods</em>" in hub
+    assert "<strong>43</strong>" in hub
+    assert "<em>18 methods</em>" in hub
     assert f"https://aicloudstrategist.com{route}" in llms
