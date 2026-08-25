@@ -145,7 +145,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": null,
-      "title": "AI Creative Studio — Cinematic AI Ads & Premium Brand Visuals"
+      "title": "AI Creative Studio \u2014 Cinematic AI Ads & Premium Brand Visuals"
     },
     "ai-voice-agents/index.html": {
       "canonical": "https://aicloudstrategist.com/ai-voice-agents/",
@@ -221,7 +221,7 @@
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "7684377726769e17d5248a293b3cc69f8da31e4b3822445410c9ace1d79be57e",
+      "main_sha256": "81403eab086b17f0b90bfe8fce862f0113471e1c8b418bda72fcdaa9e4e8a6a3",
       "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist"
     },
     "case-studies/sample-cloud-finops-cost-optimization/index.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "dad7322d1267a70e39cbdf8e55e388da8083bd3548a9f6d11504f639a86e2cb3",
+      "main_sha256": "8cbde3f0cc5ce869624e3295d3e20cd28a2764d4fd02e4422a088c8dece4ad2f",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -684,7 +684,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "d833d00749480a7d643de8102b574a86ec5d44c2ba89629a5c9fb826de7fe930",
-      "title": "AICS daily publications — 2026-08-20 | AICloudStrategist"
+      "title": "AICS daily publications \u2014 2026-08-20 | AICloudStrategist"
     },
     "resources.html": {
       "canonical": "https://aicloudstrategist.com/resources",
@@ -873,7 +873,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "f206e71973d5eea64faadcaa943f7f4e1b02c11f3bc2a18e3e26732eb08e7361",
-      "title": "My AWS or cloud bill is too high — how do I reduce it? | AICloudStrategist"
+      "title": "My AWS or cloud bill is too high \u2014 how do I reduce it? | AICloudStrategist"
     },
     "resources/customer-problem-search/business-compliance-privacy-confusion/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/business-compliance-privacy-confusion/",
@@ -887,7 +887,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "75b83509acef6a62bddbdfbbe4353983260466c151a2ba33346ce4a003c13b69",
-      "title": "Clinic not getting enough patients — how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist"
+      "title": "Clinic not getting enough patients \u2014 how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist"
     },
     "resources/customer-problem-search/coaching-school-admission-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
@@ -922,21 +922,21 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "aeaae75f76ae3fc518a987a1e6fa766da3a0132e4af07ad50018f26d0974ad11",
-      "title": "Too much manual work in office — how do I reduce staff workload? | AICloudStrategist"
+      "title": "Too much manual work in office \u2014 how do I reduce staff workload? | AICloudStrategist"
     },
     "resources/customer-problem-search/restaurant-local-service-customers-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "d4d1737d321489b7a1365804f530ba738b565dfc5413f85b0d1797f606c208f6",
-      "title": "Restaurant or service business needs more customers — how do I improve bookings, repeat visits and trust? | AICloudStrategist"
+      "title": "Restaurant or service business needs more customers \u2014 how do I improve bookings, repeat visits and trust? | AICloudStrategist"
     },
     "resources/customer-problem-search/small-shop-customer-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "70a95ec090cd7aa2d4209a738857cbae9c9a9e0b084713fab49ae818e17d3ac2",
-      "title": "Small shop or local business not getting enough customers — what should I fix first? | AICloudStrategist"
+      "title": "Small shop or local business not getting enough customers \u2014 what should I fix first? | AICloudStrategist"
     },
     "resources/daily-growth-distribution-engine/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
@@ -1077,6 +1077,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "08a5a4212acb9dd5c08530ccd1e060f8f41b5c032c2173b06eb63bbf4e2ac112",
       "title": "Europe SaaS AI Governance vs GRC Tools Comparison | AICS"
+    },
+    "resources/europe-saas-ai-security-questionnaire-evidence-gap-matrix/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-security-questionnaire-evidence-gap-matrix/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "f18ac7c5cd9294e09c43933fc6ac96425659f1fa2dfd24e05c1b58edcebde38a",
+      "title": "Europe SaaS AI Security Questionnaire Evidence Gap Matrix | AICS"
     },
     "resources/europe-saas-ai-trust-questionnaire-readiness-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-trust-questionnaire-readiness-checklist/",
@@ -1222,7 +1229,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "311a3e538fd7412508c018dc6288c6797e8903b24ea9abbb4570c102409cf690",
+      "main_sha256": "0847ebc701948d43422c717a7c16d39c4ba32137810692e675b0a926a04a60b8",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1341,8 +1348,8 @@
       "canonical": "https://aicloudstrategist.com/resources/saas-security-questionnaire-takes-too-long-ai-evidence-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "23ab0b1c0950bce3dff1012c4b9f55d7b2c729830788ef66dda51713334f0bae",
-      "title": "SaaS Security Questionnaire Takes Too Long? AI Evidence Checklist | AICloudStrategist"
+      "main_sha256": "ff6b28c2fe429bd80c731c2d7748cb0ddeaa37e7366a2cd5ca4e4c4fbb70385c",
+      "title": "SaaS Security Questionnaire Takes Too Long? AI Evidence Checklist | AICS"
     },
     "resources/saudi-clinic-pdpl-whatsapp-appointment-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/saudi-clinic-pdpl-whatsapp-appointment-diagnostic-package/",
@@ -1533,6 +1540,13 @@
       "main_sha256": "e7700b426132feb248330e97dfa2036d51e1343a6e832ad2615e338e8b24b85f",
       "title": "US Dental Missed-Call Revenue Leakage Diagnostic Package | AICloudStrategist"
     },
+    "resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "8bad05d83e369cf1a4036b955268ef1aac67f29e5ec35bd4ff1fad8e7f570201",
+      "title": "US Dental Practice Missed Call + Treatment Plan Follow-Up Checklist | AICS"
+    },
     "resources/us-digital-health-hipaa-vendor-risk-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-digital-health-hipaa-vendor-risk-checklist/",
       "forms": 0,
@@ -1692,7 +1706,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
-      "title": "Enterprise FinOps Advisory — Cloud &amp; AI Economics"
+      "title": "Enterprise FinOps Advisory \u2014 Cloud &amp; AI Economics"
     },
     "services/cloud-security/index.html": {
       "canonical": "https://aicloudstrategist.com/services/cloud-security/",
