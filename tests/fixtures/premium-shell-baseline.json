@@ -218,7 +218,7 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "case-studies/index.html": {
-      "main_sha256": "81403eab086b17f0b90bfe8fce862f0113471e1c8b418bda72fcdaa9e4e8a6a3",
+      "main_sha256": "e97290d3ef2ebcf8369b9e8b12fa5c553d1368caed0b1361dac36bebefef34db",
       "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
@@ -421,7 +421,7 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "index.html": {
-      "main_sha256": "541eb704d06aa1b3b4cff6912badfbe8208226bff815ee4a5ce5a68784c2369d",
+      "main_sha256": "82065ccc0e1fdfeeedc680a2820f96ce9d1036552067b51a30d8420f8035707e",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
@@ -1015,6 +1015,13 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
+    "resources/europe-healthtech-cloud-trust-finops-evidence-room/index.html": {
+      "main_sha256": "9279f34574b2dea0be145114e5d4ebb672205bb01c9d8f41b7b0bd12c56e5cc1",
+      "title": "Europe Healthtech Cloud Trust + FinOps Evidence Room | AICS",
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-evidence-room/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/index.html": {
       "main_sha256": "366e911419390bcc51b49ea14f8d42654077ec6b994eed784d1ffd9b1f0301a6",
       "title": "Europe Private Clinic GDPR Patient GrowthOS Evidence Checklist | AICS",
@@ -1183,6 +1190,13 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
+    "resources/global-clinic-after-hours-missed-call-follow-up-checklist/index.html": {
+      "main_sha256": "63725931b08c23829df9dc586d3c22aaa5b124d3d1828f4dc5b880944fda30a8",
+      "title": "Global Clinic After-Hours Missed-Call Follow-Up Checklist | AICloudStrategist",
+      "canonical": "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/index.html": {
       "main_sha256": "145f91051ee355d7d289ccff1b40e39e554e834b78a7e936cc6cd1242c727467",
       "title": "Ecommerce Abandoned Cart + WhatsApp Follow-Up Evidence Checklist | AICloudStrategist",
@@ -1226,7 +1240,7 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "resources/index.html": {
-      "main_sha256": "bdf107f4ddbb22007fd52d20527aff36510f4c97d87dee0062717874893f5930",
+      "main_sha256": "ffc67f8474df162588dc558b27ccc9738bf8b4bd900ec0bf8a376005b3a4e187",
       "title": "Resources | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
@@ -1611,7 +1625,7 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
-      "main_sha256": "b19f6eeaa409e37a22462792963c17c24fdc2226912fd43eafeffe01cbe5ab85",
+      "main_sha256": "34b9cd954b507c915db4640c8b428dca6aad685a816928bdb2f83bb4f6d7e7fe",
       "title": "US Outpatient Imaging Referral + Prior Auth Leakage Checklist | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
       "forms": 0,
