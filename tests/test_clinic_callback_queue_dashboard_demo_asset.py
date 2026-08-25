@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources" / "clinic-callback-queue-dashboard-demo" / "index.html"
 SAMPLE_CSV = ROOT / "resources" / "clinic-callback-queue-dashboard-demo" / "sample-callback-queue.csv"
+DASHBOARD_SVG = ROOT / "resources" / "clinic-callback-queue-dashboard-demo" / "demo-dashboard.svg"
 RESOURCES_INDEX = ROOT / "resources" / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 LLMS = ROOT / "llms.txt"
@@ -23,6 +24,9 @@ def test_clinic_callback_queue_dashboard_demo_is_publicly_discoverable():
     assert "missed call callback dashboard for clinics" in page
     assert "All example fields and metrics are demo-labelled and synthetic" in page
     assert "sample-callback-queue.csv" in page
+    assert "demo-dashboard.svg" in page
+    assert "Download the synthetic dashboard SVG" in page
+    assert "not a real clinic result" in page
     assert "not proof of search performance" in page
     assert f'link rel="canonical" href="{url}"' in page
     assert href in resources
@@ -37,3 +41,13 @@ def test_clinic_callback_queue_demo_csv_has_safe_synthetic_rows():
     assert "DEMO-001" in csv_text
     assert "Synthetic demo data only" in csv_text
     assert "No symptoms, diagnosis, treatment advice or PHI" in csv_text
+
+
+def test_clinic_callback_queue_dashboard_svg_is_safe_and_synthetic():
+    svg_text = DASHBOARD_SVG.read_text(encoding="utf-8")
+
+    assert "Synthetic clinic callback queue dashboard snapshot" in svg_text
+    assert "Synthetic demo data only" in svg_text
+    assert "no real clinic, patient, PHI, booking, revenue or compliance claim" in svg_text
+    assert "DEMO-004" in svg_text
+    assert "Automation boundary" in svg_text
