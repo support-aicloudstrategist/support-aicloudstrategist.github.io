@@ -1,0 +1,6 @@
+enquiry_id,source,enquiry_age_minutes,owner,status,next_safe_action,unresolved_reason,privacy_or_safety_note,demo_boundary
+DEMO-001,Website phone tap,138,Front desk lead,Pending callback,"Call back; if no answer, send approved WhatsApp prompt",No answer after first callback,"No symptoms, diagnosis, treatment advice or PHI in this demo row",Synthetic demo data only
+DEMO-002,Google Business Profile call,42,Receptionist,Booked,"Confirm appointment using approved wording",Already booked,"Do not infer condition or urgency from source",Synthetic demo data only
+DEMO-003,WhatsApp enquiry,186,Clinic manager,Escalation needed,"Human review before any response",Possible emergency wording,"Escalate urgent/emergency wording to clinic-approved protocol",Synthetic demo data only
+DEMO-004,Landing page form,74,Front desk lead,Pending callback,"Call during approved callback window",Staff action pending,"Consent and regional privacy wording must be verified locally",Synthetic demo data only
+DEMO-005,Ad click-to-call,221,Receptionist,Lost,"Log reason and review staffing/SLA gap",No answer after two attempts,"No revenue or booking outcome claimed",Synthetic demo data only
