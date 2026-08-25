@@ -221,7 +221,7 @@
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "e97290d3ef2ebcf8369b9e8b12fa5c553d1368caed0b1361dac36bebefef34db",
+      "main_sha256": "aa7cb7906fed9969168e488c51c81ec5649362e340582f12496750ef7341aa21",
       "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist"
     },
     "case-studies/sample-cloud-finops-cost-optimization/index.html": {
@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "82065ccc0e1fdfeeedc680a2820f96ce9d1036552067b51a30d8420f8035707e",
+      "main_sha256": "230011d2ed16f79ae1d67a644ee84e18ddd71a233fb523a70ffcfd7731585e2a",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -833,11 +833,18 @@
       "main_sha256": "feb8712974f66016e3516b53d422aa3a1731d3bc8b1d7a6b6f6aefeec3af77a9",
       "title": "Canada Clinic Patient GrowthOS vs Practice Management vs Patient Engagement"
     },
+    "resources/clinic-callback-queue-dashboard-demo/evidence-checklist.html": {
+      "canonical": "https://aicloudstrategist.com/resources/clinic-callback-queue-dashboard-demo/evidence-checklist.html",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "fbbf6ef0c8f1e7b0a59458899b9c4b3366a1956193d15125bf7eb070266cfa29",
+      "title": "Clinic Callback Queue Evidence Checklist | AICloudStrategist"
+    },
     "resources/clinic-callback-queue-dashboard-demo/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/clinic-callback-queue-dashboard-demo/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "066b4dd1fd877212bc3f717f928a42c8ea3e062e97c753b2bf905013bda81965",
+      "main_sha256": "cc20a3dd6e108f349d49bb2d770d4ed84e3b893c6669ae8134caf55ccae9a695",
       "title": "Clinic Callback Queue Dashboard Demo | AICloudStrategist"
     },
     "resources/cloud-ai-cost-waste-register-template-usa/index.html": {
@@ -1264,7 +1271,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1364a95779a2cec74bb5255d16b38e3d6741a3b83adf3631dedbe1ae3c69c066",
+      "main_sha256": "ae8079f4f63f7bdb1ec6ff955da937cacfa3a95ccd29908e8f7b21e24a938d15",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1323,6 +1330,20 @@
       "main_sha256": "48ba3747a98cb34a6ce3b7df2305d84542d41b0ea54c65cba95047283a088411",
       "title": "IVF Clinic Lead Leakage Checklist | AICS"
     },
+    "resources/kubernetes-cost-out-of-control-finops-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/kubernetes-cost-out-of-control-finops-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "310c5aef577cab0301705d6e1ac7eccbbe7b0e816f1b681b34d3c8216c9305c0",
+      "title": "Kubernetes Cost Out of Control FinOps Evidence Checklist | AICloudStrategist"
+    },
+    "resources/kubernetes-finops-vs-cost-tools-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/kubernetes-finops-vs-cost-tools-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "aa283da98525c1160cdcbdd55ec7d1ee5ff8b392882cb3382620e4dfad6814a9",
+      "title": "Kubernetes FinOps vs Cost Tools Comparison | AICloudStrategist"
+    },
     "resources/lead-follow-up-automation-guide/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/lead-follow-up-automation-guide/",
       "forms": 0,
@@ -1355,7 +1376,7 @@
       "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-finops-trust-evidence-room/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a9e3fe458a6ffe5ba86229c7869c91888f7767cb1f026834d638a272479e4100",
+      "main_sha256": "fce152e1e18149e79f2ba2809a1585214cb361074c1bb12fe1ed3adf634e1ef3",
       "title": "North America Healthtech AI Cloud FinOps Trust Evidence Room | AICS"
     },
     "resources/overnight-ai-automation-safety-handoff/index.html": {
@@ -1568,11 +1589,18 @@
       "main_sha256": "74192e5a13b90a050bb30058e4f849c6383de9e087eaf97e7c75da085edba35d",
       "title": "US Clinic AI Receptionist vs Patient Engagement Platforms vs AICS"
     },
+    "resources/us-clinic-source-to-owner-leak-map-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-clinic-source-to-owner-leak-map-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "c4566d191edb2504bb6c124eed5d32aff702ff3dada3c5eb3334a15e6f875a3f",
+      "title": "US Clinic Source-to-Owner Leak Map Template | AICloudStrategist"
+    },
     "resources/us-clinic-top-5-consideration-proof-pack/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-clinic-top-5-consideration-proof-pack/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "369b75c57d2c52a1ed129425e54f88ee74fa4ca054ce9f8bd831d78fcb8afc13",
+      "main_sha256": "04977064f3679b1c08a419f2b3cfe803ca881717de30a6029f8df25252b8ee94",
       "title": "US Clinic Top-5 Consideration Proof Pack | AICloudStrategist"
     },
     "resources/us-dental-missed-call-revenue-leakage-diagnostic-package/index.html": {
@@ -1609,6 +1637,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "2a9a78ab40c25ccad06662c10f753f4e2854bec932502a2662976fe1ba67a32b",
       "title": "US Healthcare GrowthOS vs Patient Engagement Platforms | AICloudStrategist"
+    },
+    "resources/us-healthtech-ai-vendor-risk-cloud-cost-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-healthtech-ai-vendor-risk-cloud-cost-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "0cb9c9fab3b04f530605077c6168c10f7160485f2da1751ae62e18368c85a787",
+      "title": "US Healthtech AI Vendor Risk + Cloud Cost Evidence Checklist | AICS"
     },
     "resources/us-law-firm-ai-intake-answering-service-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-law-firm-ai-intake-answering-service-faq/",
@@ -1663,7 +1698,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-specialty-clinic-prior-auth-evidence-pack/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ecbdaff887174729956ce418b11ea5da689189212cf6490e1171c52add04438b",
+      "main_sha256": "16cf407a6058f47155599ae5710f182cc4e153d0b9c2749eafede2d213cdbc52",
       "title": "US Specialty Clinic Prior Authorization Evidence Pack | AICloudStrategist"
     },
     "resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/index.html": {

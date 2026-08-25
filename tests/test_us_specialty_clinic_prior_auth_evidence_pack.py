@@ -44,6 +44,10 @@ class USSpecialtyClinicPriorAuthEvidencePackTests(unittest.TestCase):
             "Infinitus / Rivet / Kyruus Health / Experian-style RCM tools",
             "Downloadable sample CSV",
             "Owner dashboard mockup",
+            "Demo owner dashboard mockup",
+            "Demo prior authorization owner dashboard",
+            "Evidence needed before tool spend",
+            "Scope the owner dashboard diagnostic",
         ]:
             self.assertIn(phrase, self.html)
 
