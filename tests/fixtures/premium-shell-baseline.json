@@ -1226,7 +1226,7 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "resources/index.html": {
-      "main_sha256": "3897c17e20588a14f69dc6a8f68213a9663a192ec357d7308340932bb54a6d80",
+      "main_sha256": "bdf107f4ddbb22007fd52d20527aff36510f4c97d87dee0062717874893f5930",
       "title": "Resources | AICloudStrategist",
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
@@ -1243,6 +1243,13 @@
       "main_sha256": "e46d2f65f2d96d5dc904b96255bf299552904952bec41423382085d90c342e6b",
       "title": "India Clinic WhatsApp CRM Patient Leakage Checklist | AICS",
       "canonical": "https://aicloudstrategist.com/resources/india-clinic-whatsapp-crm-patient-leakage-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resources/india-coaching-centre-admission-follow-up-checklist/index.html": {
+      "main_sha256": "ebe0bdf67148c610ea2386182e85ea6f3c32245c7e7c638bdb37e360a1409aa9",
+      "title": "India Coaching Centre Admission Follow-Up Checklist | AICloudStrategist",
+      "canonical": "https://aicloudstrategist.com/resources/india-coaching-centre-admission-follow-up-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
