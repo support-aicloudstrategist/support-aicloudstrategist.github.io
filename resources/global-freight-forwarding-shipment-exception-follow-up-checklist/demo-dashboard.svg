@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic Freight Forwarding Exception Follow-Up Dashboard</title>
+  <desc id="desc">Demo-only dashboard mock for freight enquiry follow-up, quote ageing, document blockers, shipment exceptions, customer update gaps and human-review boundaries.</desc>
+  <rect width="1200" height="760" fill="#f5f8fb"/>
+  <rect x="48" y="42" width="1104" height="94" rx="20" fill="#061525"/>
+  <text x="82" y="86" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Freight Exception Follow-Up Evidence Board</text>
+  <text x="82" y="116" font-family="Inter, Arial, sans-serif" font-size="15" fill="#b7d5ea">Synthetic demo data only • no real shipper, shipment, customer, quote, invoice, customs entry or production export</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="48" y="166" width="252" height="126" rx="18" fill="#ffffff" stroke="#d8e5ef"/>
+    <text x="74" y="200" font-size="15" fill="#526579">Open quote follow-ups</text>
+    <text x="74" y="246" font-size="44" font-weight="800" fill="#0e4f9e">37</text>
+    <text x="74" y="273" font-size="14" fill="#d85d27">14 aged &gt;48h need owner action</text>
+    <rect x="324" y="166" width="252" height="126" rx="18" fill="#ffffff" stroke="#d8e5ef"/>
+    <text x="350" y="200" font-size="15" fill="#526579">Document blockers</text>
+    <text x="350" y="246" font-size="44" font-weight="800" fill="#a14c00">22</text>
+    <text x="350" y="273" font-size="14" fill="#526579">invoice • KYC • MSDS • PO</text>
+    <rect x="600" y="166" width="252" height="126" rx="18" fill="#ffffff" stroke="#d8e5ef"/>
+    <text x="626" y="200" font-size="15" fill="#526579">Shipment exceptions</text>
+    <text x="626" y="246" font-size="44" font-weight="800" fill="#b91c1c">18</text>
+    <text x="626" y="273" font-size="14" fill="#526579">6 require human review</text>
+    <rect x="876" y="166" width="276" height="126" rx="18" fill="#ffffff" stroke="#d8e5ef"/>
+    <text x="902" y="200" font-size="15" fill="#526579">Customer update gaps</text>
+    <text x="902" y="246" font-size="44" font-weight="800" fill="#0b7774">29</text>
+    <text x="902" y="273" font-size="14" fill="#526579">next-update promise missing</text>
+  </g>
+  <rect x="48" y="326" width="704" height="342" rx="20" fill="#ffffff" stroke="#d8e5ef"/>
+  <text x="78" y="364" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="750" fill="#0a2239">Owner review queue</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="14">
+    <rect x="78" y="388" width="644" height="42" rx="10" fill="#eef5fb"/>
+    <text x="96" y="415" font-weight="700" fill="#32465a">Lane / item</text><text x="292" y="415" font-weight="700" fill="#32465a">Blocker</text><text x="468" y="415" font-weight="700" fill="#32465a">Owner</text><text x="610" y="415" font-weight="700" fill="#32465a">Age</text>
+    <text x="96" y="466" fill="#0a2239">IN→AE pharma cartons</text><text x="292" y="466" fill="#a14c00">MSDS missing</text><text x="468" y="466" fill="#0a2239">Ops lead</text><text x="610" y="466" fill="#b91c1c">72h</text>
+    <line x1="78" y1="484" x2="722" y2="484" stroke="#e7eef5"/>
+    <text x="96" y="522" fill="#0a2239">VN→US apparel quote</text><text x="292" y="522" fill="#0e4f9e">pricing follow-up</text><text x="468" y="522" fill="#0a2239">Sales</text><text x="610" y="522" fill="#d85d27">51h</text>
+    <line x1="78" y1="540" x2="722" y2="540" stroke="#e7eef5"/>
+    <text x="96" y="578" fill="#0a2239">EU→UK machinery</text><text x="292" y="578" fill="#b91c1c">customs query</text><text x="468" y="578" fill="#0a2239">Broker</text><text x="610" y="578" fill="#b91c1c">30h</text>
+    <line x1="78" y1="596" x2="722" y2="596" stroke="#e7eef5"/>
+    <text x="96" y="634" fill="#0a2239">BR→NL coffee</text><text x="292" y="634" fill="#0b7774">portal mismatch</text><text x="468" y="634" fill="#0a2239">Customer desk</text><text x="610" y="634" fill="#526579">18h</text>
+  </g>
+  <rect x="784" y="326" width="368" height="342" rx="20" fill="#061525"/>
+  <text x="814" y="364" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="750" fill="#ffffff">Automation boundary</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#d6e9f7">
+    <circle cx="825" cy="406" r="7" fill="#ffcc66"/><text x="844" y="411">Customs, HS-code or permit question</text>
+    <circle cx="825" cy="452" r="7" fill="#ffcc66"/><text x="844" y="457">Dangerous goods / MSDS uncertainty</text>
+    <circle cx="825" cy="498" r="7" fill="#ffcc66"/><text x="844" y="503">Pricing exception or payment dispute</text>
+    <circle cx="825" cy="544" r="7" fill="#ffcc66"/><text x="844" y="549">Insurance, claim or damage statement</text>
+    <circle cx="825" cy="590" r="7" fill="#ffcc66"/><text x="844" y="595">Contractual delivery commitment</text>
+  </g>
+  <text x="814" y="636" font-family="Inter, Arial, sans-serif" font-size="14" fill="#9ec4dd">AI drafts can support low-risk status summaries only after approved human-review rules.</text>
+  <text x="48" y="716" font-family="Inter, Arial, sans-serif" font-size="13" fill="#607589">AICS demo asset: buyer education only; no delivery, clearance, savings, revenue, ROI, ranking, compliance or AI-accuracy claim.</text>
+</svg>

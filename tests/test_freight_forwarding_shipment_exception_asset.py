@@ -58,6 +58,25 @@ def test_freight_forwarding_asset_has_truth_boundaries_and_conversion_route():
     assert "/llms.txt" in source
 
 
+def test_freight_forwarding_asset_has_demo_dashboard_visual():
+    source = html()
+    svg = PAGE.with_name("demo-dashboard.svg")
+    visual = svg.read_text(encoding="utf-8")
+    assert "demo-dashboard.svg" in source
+    assert "Synthetic freight forwarding exception follow-up dashboard" in source
+    for marker in [
+        "Synthetic Freight Forwarding Exception Follow-Up Dashboard",
+        "Open quote follow-ups",
+        "Document blockers",
+        "Shipment exceptions",
+        "Customer update gaps",
+        "Automation boundary",
+        "no real shipper, shipment, customer, quote, invoice, customs entry or production export",
+        "no delivery, clearance, savings, revenue, ROI, ranking, compliance or AI-accuracy claim",
+    ]:
+        assert marker in visual
+
+
 def test_freight_forwarding_asset_is_linked_from_discovery_surfaces():
     assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
