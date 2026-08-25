@@ -45,8 +45,9 @@ def test_kubernetes_cost_asset_has_truth_boundaries_and_conversion_route():
         "not a guarantee of lower Kubernetes cost",
         "No outreach was sent",
         "/free-business-review/?package=kubernetes-finops-evidence-checklist",
+        "/resources/kubernetes-finops-vs-cost-tools-comparison/",
         "/services/cloud-finops/",
-        "/case-studies/",
+        "/resources/cloud-cost-optimization-finops-control/",
     ]:
         assert marker in source
 
