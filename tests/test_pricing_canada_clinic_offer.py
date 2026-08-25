@@ -6,7 +6,7 @@ PRICING = (ROOT / "pricing.html").read_text(encoding="utf-8")
 
 
 def test_pricing_surfaces_canada_clinic_diagnostic_as_revenue_entry_point():
-    assert "Ten concrete first offers" in PRICING
+    assert "Eleven concrete first offers" in PRICING
     assert "Canada clinic missed-call follow-up diagnostic" in PRICING
     assert "/resources/canada-clinic-missed-calls-appointment-follow-up-diagnostic-package/" in PRICING
     assert "without patient-growth, privacy, compliance or revenue claims" in PRICING

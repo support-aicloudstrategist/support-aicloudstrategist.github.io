@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,7 +17,7 @@ def test_pricing_page_surfaces_b2b_saas_demo_followup_as_sellable_offer():
     html = PRICING.read_text(encoding="utf-8")
     section = _fixed_scope_section(html)
 
-    assert "Ten concrete first offers buyers can understand before a custom build." in section
+    assert "Eleven concrete first offers buyers can understand before a custom build." in section
     assert "B2B SaaS demo-to-security-questionnaire follow-up diagnostic" in section
     assert ROUTE in section
     assert "stalled demo, pilot, expansion, procurement, vendor-risk" in section
@@ -30,7 +31,25 @@ def test_fixed_scope_diagnostic_count_matches_public_heading():
     section = _fixed_scope_section(html)
     cards = re.findall(r'<article class="card">', section)
 
-    assert len(cards) == 10
+    assert len(cards) == 11
+
+
+def test_fixed_scope_diagnostics_have_discovery_itemlist_schema():
+    html = PRICING.read_text(encoding="utf-8")
+    schema_blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html)
+    itemlists = [json.loads(block) for block in schema_blocks if 'pricing#fixed-scope-diagnostics' in block]
+
+    assert len(itemlists) == 1
+    itemlist = itemlists[0]
+    assert itemlist["@type"] == "ItemList"
+    assert itemlist["@id"] == "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics"
+    assert itemlist["numberOfItems"] == 11
+    assert len(itemlist["itemListElement"]) == 11
+    first = itemlist["itemListElement"][0]
+    assert first["position"] == 1
+    assert first["url"] == URL
+    assert first["item"]["@type"] == "Service"
+    assert first["item"]["offers"]["priceSpecification"]["description"] == "Scope before quote; pass-through costs and implementation work are confirmed separately."
 
 
 def test_b2b_saas_demo_followup_page_is_public_buyer_safe_and_linked():
