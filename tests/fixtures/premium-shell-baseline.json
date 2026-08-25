@@ -1,13 +1,13 @@
 {
   "pages": {
-    "about.html": {
+    "about/index.html": {
       "canonical": "https://aicloudstrategist.com/about/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "15d1ccdd4fc7065877ade07f2e424d6dbcbe60354719c31d035ac5ec49019563",
       "title": "About AICloudStrategist | Production AI Engineering &amp; Operations"
     },
-    "about/index.html": {
+    "about.html": {
       "canonical": "https://aicloudstrategist.com/about/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -27,6 +27,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "f1d13d4511927c407c0341f3f58234e5dbf4c28e6dcbd2f35c6a9ac16b8eb5dd",
       "title": "AI lead recovery + DPDP readiness for Indian aesthetic clinics | AICloudStrategist"
+    },
+    "ai-automation-agency/index.html": {
+      "canonical": "https://aicloudstrategist.com/ai-automation-agency/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "b4429b9cf0e7aca6ba69960f7d7116f0d3649208548daa9b70d5389ed72d670a",
+      "title": "AI Automation Agency for Small Business Growth | AICloudStrategist"
     },
     "ai-automation-agency-australia/index.html": {
       "canonical": "https://aicloudstrategist.com/ai-automation-agency-australia/",
@@ -126,13 +133,6 @@
       "main_sha256": "cbed1a8fa1e92b9565c6aa8fc51596d5c18dc5e8b6a61fc569380507455f4bfb",
       "title": "AI Automation Agency UK | AICloudStrategist"
     },
-    "ai-automation-agency/index.html": {
-      "canonical": "https://aicloudstrategist.com/ai-automation-agency/",
-      "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b4429b9cf0e7aca6ba69960f7d7116f0d3649208548daa9b70d5389ed72d670a",
-      "title": "AI Automation Agency for Small Business Growth | AICloudStrategist"
-    },
     "ai-chatbot-development-services/index.html": {
       "canonical": "https://aicloudstrategist.com/ai-chatbot-development-services/",
       "forms": 0,
@@ -145,7 +145,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": null,
-      "title": "AI Creative Studio \u2014 Cinematic AI Ads & Premium Brand Visuals"
+      "title": "AI Creative Studio — Cinematic AI Ads & Premium Brand Visuals"
     },
     "ai-voice-agents/index.html": {
       "canonical": "https://aicloudstrategist.com/ai-voice-agents/",
@@ -252,18 +252,18 @@
       "main_sha256": "d32b028f3af17b3460289f3e9269efc55bac3535463586b107bdb90f9f6d7463",
       "title": "Cloud Trust & FinOps | AICloudStrategist"
     },
-    "contact.html": {
-      "canonical": "https://aicloudstrategist.com/contact",
-      "forms": 1,
-      "forms_sha256": "d382577f85f5b6fb523cdae32fca21ba5ea6f96e6261f468b56a9c848b6816a6",
-      "main_sha256": "d43b40bafc39aaf53c4e54c9bfb7af5df5a99dbb80398668d8a69f19dcc067c6",
-      "title": "Discuss an AI Initiative | AICloudStrategist"
-    },
     "contact/index.html": {
       "canonical": "https://aicloudstrategist.com/contact",
       "forms": 1,
       "forms_sha256": "7b2eae36c43160aaf666d26cc9cd553ea5609bff744613547b6b337b0ee521c0",
       "main_sha256": "e10c5f8afbe976750cb906c3a169a23f2858268ab46d9fff12e233a5f6cf88d3",
+      "title": "Discuss an AI Initiative | AICloudStrategist"
+    },
+    "contact.html": {
+      "canonical": "https://aicloudstrategist.com/contact",
+      "forms": 1,
+      "forms_sha256": "d382577f85f5b6fb523cdae32fca21ba5ea6f96e6261f468b56a9c848b6816a6",
+      "main_sha256": "d43b40bafc39aaf53c4e54c9bfb7af5df5a99dbb80398668d8a69f19dcc067c6",
       "title": "Discuss an AI Initiative | AICloudStrategist"
     },
     "crm-automation-services/index.html": {
@@ -371,14 +371,14 @@
       "main_sha256": "1db65c9b5451e97ab7c74681720e2091ea3268cebb4847db86ed169ea0657537",
       "title": "Factory Website Development India | AICloudStrategist"
     },
-    "free-business-review.html": {
+    "free-business-review/index.html": {
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
       "main_sha256": "85706ccaccb0aa8653b629aa2bd2503f9633ef2d87fc9168eeeb3ca7be657f43",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
-    "free-business-review/index.html": {
+    "free-business-review.html": {
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
@@ -426,13 +426,6 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "230011d2ed16f79ae1d67a644ee84e18ddd71a233fb523a70ffcfd7731585e2a",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
-    },
-    "industries.html": {
-      "canonical": "https://aicloudstrategist.com/industries/",
-      "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4a77f14efa3ab187f059415854ceef91e49b8112a9087a58c1a2136da256837d",
-      "title": "Industries | AICloudStrategist"
     },
     "industries/aesthetic-clinics/index.html": {
       "canonical": "https://aicloudstrategist.com/industries/aesthetic-clinics/",
@@ -524,6 +517,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "df8901a5749e1f1541ac7ccbbe575015c23e3f5926c5a486f0f933a52c75f7db",
       "title": "Cloud FinOps for SaaS &amp; Startups | AICloudStrategist"
+    },
+    "industries.html": {
+      "canonical": "https://aicloudstrategist.com/industries/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4a77f14efa3ab187f059415854ceef91e49b8112a9087a58c1a2136da256837d",
+      "title": "Industries | AICloudStrategist"
     },
     "lead-capture-follow-up/index.html": {
       "canonical": "https://aicloudstrategist.com/lead-capture-follow-up/",
@@ -684,14 +684,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "d833d00749480a7d643de8102b574a86ec5d44c2ba89629a5c9fb826de7fe930",
-      "title": "AICS daily publications \u2014 2026-08-20 | AICloudStrategist"
-    },
-    "resources.html": {
-      "canonical": "https://aicloudstrategist.com/resources/",
-      "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "bf95637cc4c13e599136f32feec6f89f991c050c33d93290781c2149bc76b967",
-      "title": "Resources | AICloudStrategist"
+      "title": "AICS daily publications — 2026-08-20 | AICloudStrategist"
     },
     "resources/47-cloud-cost-checks-before-finops-consultant/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/47-cloud-cost-checks-before-finops-consultant/",
@@ -887,7 +880,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "f206e71973d5eea64faadcaa943f7f4e1b02c11f3bc2a18e3e26732eb08e7361",
-      "title": "My AWS or cloud bill is too high \u2014 how do I reduce it? | AICloudStrategist"
+      "title": "My AWS or cloud bill is too high — how do I reduce it? | AICloudStrategist"
     },
     "resources/customer-problem-search/business-compliance-privacy-confusion/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/business-compliance-privacy-confusion/",
@@ -901,7 +894,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "75b83509acef6a62bddbdfbbe4353983260466c151a2ba33346ce4a003c13b69",
-      "title": "Clinic not getting enough patients \u2014 how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist"
+      "title": "Clinic not getting enough patients — how do I improve calls, WhatsApp follow-up and bookings? | AICloudStrategist"
     },
     "resources/customer-problem-search/coaching-school-admission-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/coaching-school-admission-increase/",
@@ -936,21 +929,21 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "aeaae75f76ae3fc518a987a1e6fa766da3a0132e4af07ad50018f26d0974ad11",
-      "title": "Too much manual work in office \u2014 how do I reduce staff workload? | AICloudStrategist"
+      "title": "Too much manual work in office — how do I reduce staff workload? | AICloudStrategist"
     },
     "resources/customer-problem-search/restaurant-local-service-customers-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/restaurant-local-service-customers-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "d4d1737d321489b7a1365804f530ba738b565dfc5413f85b0d1797f606c208f6",
-      "title": "Restaurant or service business needs more customers \u2014 how do I improve bookings, repeat visits and trust? | AICloudStrategist"
+      "title": "Restaurant or service business needs more customers — how do I improve bookings, repeat visits and trust? | AICloudStrategist"
     },
     "resources/customer-problem-search/small-shop-customer-increase/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/small-shop-customer-increase/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "70a95ec090cd7aa2d4209a738857cbae9c9a9e0b084713fab49ae818e17d3ac2",
-      "title": "Small shop or local business not getting enough customers \u2014 what should I fix first? | AICloudStrategist"
+      "title": "Small shop or local business not getting enough customers — what should I fix first? | AICloudStrategist"
     },
     "resources/daily-growth-distribution-engine/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/daily-growth-distribution-engine/",
@@ -1001,19 +994,19 @@
       "main_sha256": "a63db164fdffe4e77a87536dc2395993dd7ca588804281a1da9ee08280412f88",
       "title": "DPDP Compliance Automation Platforms India | AICS"
     },
-    "resources/dpdp-compliance-checklist-dental-clinics-india-2026/index.html": {
-      "canonical": "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-dental-clinics-india-2026/",
-      "forms": 0,
-      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "632f6b88583899bfbb9e96aa89716a03fc6c0989ba7541d12dec16f6d35645c1",
-      "title": "DPDP Compliance Checklist for Indian Dental Clinics: A 2026 Practical Guide | AICloudStrategist"
-    },
     "resources/dpdp-compliance-checklist-dental-clinics-india/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-dental-clinics-india/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "107e49d2ab63cfec959ddb7444e680cfa1ec56416e76544c8519512155e98851",
       "title": "DPDP Compliance Checklist for Indian Dental Clinics in 2026"
+    },
+    "resources/dpdp-compliance-checklist-dental-clinics-india-2026/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-dental-clinics-india-2026/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "632f6b88583899bfbb9e96aa89716a03fc6c0989ba7541d12dec16f6d35645c1",
+      "title": "DPDP Compliance Checklist for Indian Dental Clinics: A 2026 Practical Guide | AICloudStrategist"
     },
     "resources/dpdp-compliance-checklist-small-business-india/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/",
@@ -1271,7 +1264,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ae8079f4f63f7bdb1ec6ff955da937cacfa3a95ccd29908e8f7b21e24a938d15",
+      "main_sha256": "733d4c7d0a5f30c5145dde8a423b709d7f7f82d8e5cfbd0ddef09f46a1dbada0",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1645,6 +1638,13 @@
       "main_sha256": "0cb9c9fab3b04f530605077c6168c10f7160485f2da1751ae62e18368c85a787",
       "title": "US Healthtech AI Vendor Risk + Cloud Cost Evidence Checklist | AICS"
     },
+    "resources/us-healthtech-growthos-vs-patient-engagement-grc-finops-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-healthtech-growthos-vs-patient-engagement-grc-finops-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "113c96b477089f39998ba0422eeefb2ff82ce71ae572fad49ace76379c9993e1",
+      "title": "US Healthtech GrowthOS vs Patient Engagement, GRC and FinOps Tools | AICS"
+    },
     "resources/us-law-firm-ai-intake-answering-service-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-law-firm-ai-intake-answering-service-faq/",
       "forms": 0,
@@ -1736,6 +1736,13 @@
       "main_sha256": "a8c7f83683fc2a19033158dd8fda90b7ea32b38826081fb2023e1df263f1ef73",
       "title": "How Indian Dental Clinics Lose 30% of Bookings to Poor WhatsApp Follow-up"
     },
+    "resources.html": {
+      "canonical": "https://aicloudstrategist.com/resources/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "bf95637cc4c13e599136f32feec6f89f991c050c33d93290781c2149bc76b967",
+      "title": "Resources | AICloudStrategist"
+    },
     "roi-calculator/index.html": {
       "canonical": "https://aicloudstrategist.com/roi-calculator/",
       "forms": 0,
@@ -1783,7 +1790,7 @@
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "64a852ff509486fa6060b8a89dcf6d644ef0c2a3fef0938166249dc0de977319",
-      "title": "Enterprise FinOps Advisory \u2014 Cloud &amp; AI Economics"
+      "title": "Enterprise FinOps Advisory — Cloud &amp; AI Economics"
     },
     "services/cloud-security/index.html": {
       "canonical": "https://aicloudstrategist.com/services/cloud-security/",
