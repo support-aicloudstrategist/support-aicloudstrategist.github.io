@@ -28,6 +28,7 @@ CURATED_PATHS = [
     "/growth-control-os/",
     "/trust-compliance/",
     "/healthcare-growthos/",
+    "/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
     "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
     "/resources/global-hotel-direct-booking-enquiry-follow-up-checklist/",
     "/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
