@@ -36,6 +36,7 @@ CURATED_PATHS = [
     "/resources/lead-follow-up-automation-guide/",
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/cloud-ai-economics-decision-pack/",
+    "/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",
     "/resources/kubernetes-namespace-cost-owner-dashboard-demo/",
     "/resources/customer-problem-search/aws-cloud-bill-too-high/",
     "/resources/customer-problem-search/manual-work-wasting-staff-time/",
