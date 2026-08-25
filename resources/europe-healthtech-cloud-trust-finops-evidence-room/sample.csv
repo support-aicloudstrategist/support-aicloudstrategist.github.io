@@ -1,0 +1,9 @@
+source,synthetic_signal,unit_metric,evidence_gap,decision_owner,boundary_label
+AWS production account,compute spend movement after release,workflow run,environment and product tags incomplete,platform engineering,no savings claim
+Azure analytics workspace,diagnostic analytics workload,report or dashboard refresh,data category and retention note missing,data/analytics owner,no GDPR compliance claim
+LLM API provider,patient-support pilot usage spike,message or inference,prompt data handling and reviewer route unresolved,AI product owner,no AI accuracy claim
+GPU batch job,model tuning experiment,training job,approval threshold and owner review missing,ML engineering,no ROI claim
+Security questionnaire,GDPR and SOC 2-style buyer answer needed,evidence row ageing,policy link and adviser question unresolved,security plus privacy,no certification claim
+Vendor model register,new AI dependency used in workflow test,workflow dependency,region retention and fallback path unclear,operations plus privacy adviser,no procurement win claim
+Human review queue,clinical or billing content possible,review-required item,escalation owner and SLA not documented,clinical/business owner,no medical advice claim
+Trust centre draft,buyer asks for AI governance statement,questionnaire answer,claim boundary and proof source missing,RevOps plus security,no ranking claim
