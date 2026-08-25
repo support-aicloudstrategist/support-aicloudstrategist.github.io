@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic Kubernetes Namespace Cost Owner Dashboard Demo</title>
+  <desc id="desc">Demo-labelled dashboard for Kubernetes namespace cost allocation, chargeback, pod rightsizing, idle clusters and GPU waste review. No real client or production data.</desc>
+  <rect width="1280" height="760" fill="#f6fbff"/>
+  <rect x="48" y="40" width="1184" height="680" rx="28" fill="#ffffff" stroke="#cfe2f3"/>
+  <text x="86" y="94" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#102033">Kubernetes namespace cost owner dashboard demo</text>
+  <text x="86" y="128" font-family="Inter, Arial, sans-serif" font-size="17" fill="#526173">Synthetic AICS evidence format — not client data, not production workload data, not savings proof.</text>
+  <g transform="translate(86 166)">
+    <rect width="260" height="102" rx="18" fill="#eef7ff" stroke="#b8d8f6"/>
+    <text x="22" y="36" font-family="Inter, Arial" font-size="15" font-weight="700" fill="#0f375f">Unowned namespaces</text>
+    <text x="22" y="78" font-family="Inter, Arial" font-size="38" font-weight="900" fill="#0f6ddf">3</text>
+    <rect x="290" width="260" height="102" rx="18" fill="#effaf7" stroke="#b6eadc"/>
+    <text x="312" y="36" font-family="Inter, Arial" font-size="15" font-weight="700" fill="#0f513f">Approval-required actions</text>
+    <text x="312" y="78" font-family="Inter, Arial" font-size="38" font-weight="900" fill="#0f766e">5</text>
+    <rect x="580" width="260" height="102" rx="18" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="602" y="36" font-family="Inter, Arial" font-size="15" font-weight="700" fill="#7c2d12">GPU / AI spend to review</text>
+    <text x="602" y="78" font-family="Inter, Arial" font-size="38" font-weight="900" fill="#f97316">2</text>
+    <rect x="870" width="226" height="102" rx="18" fill="#fff1f2" stroke="#fecdd3"/>
+    <text x="892" y="36" font-family="Inter, Arial" font-size="15" font-weight="700" fill="#881337">Idle candidates</text>
+    <text x="892" y="78" font-family="Inter, Arial" font-size="38" font-weight="900" fill="#e11d48">4</text>
+  </g>
+  <g transform="translate(86 314)" font-family="Inter, Arial, sans-serif">
+    <rect width="1096" height="46" rx="10" fill="#0f375f"/>
+    <text x="20" y="30" fill="#fff" font-size="15" font-weight="800">Namespace</text>
+    <text x="220" y="30" fill="#fff" font-size="15" font-weight="800">Owner</text>
+    <text x="410" y="30" fill="#fff" font-size="15" font-weight="800">Signal</text>
+    <text x="725" y="30" fill="#fff" font-size="15" font-weight="800">Next action</text>
+    <text x="955" y="30" fill="#fff" font-size="15" font-weight="800">Boundary</text>
+    <g font-size="14" fill="#102033">
+      <rect y="56" width="1096" height="58" rx="10" fill="#f8fbff" stroke="#e2edf8"/>
+      <text x="20" y="91" font-weight="800">checkout-api</text><text x="220" y="91">Commerce platform</text><text x="410" y="91">CPU request above observed p95</text><text x="725" y="91">Rightsizing review</text><text x="955" y="91">SRE approval</text>
+      <rect y="124" width="1096" height="58" rx="10" fill="#ffffff" stroke="#e2edf8"/>
+      <text x="20" y="159" font-weight="800">gpu-experiment</text><text x="220" y="159">AI research</text><text x="410" y="159">Weekend GPU spend spike</text><text x="725" y="159">Confirm owner / pause</text><text x="955" y="159">Finance approval</text>
+      <rect y="192" width="1096" height="58" rx="10" fill="#f8fbff" stroke="#e2edf8"/>
+      <text x="20" y="227" font-weight="800">legacy-demo</text><text x="220" y="227">Unassigned</text><text x="410" y="227">Idle stale deployment</text><text x="725" y="227">Archive candidate</text><text x="955" y="227">Owner confirm</text>
+      <rect y="260" width="1096" height="58" rx="10" fill="#ffffff" stroke="#e2edf8"/>
+      <text x="20" y="295" font-weight="800">reporting-batch</text><text x="220" y="295">Data platform</text><text x="410" y="295">Memory request review</text><text x="725" y="295">Batch rightsizing</text><text x="955" y="295">SLA window</text>
+    </g>
+  </g>
+  <rect x="86" y="662" width="1096" height="34" rx="17" fill="#fffbeb" stroke="#fbbf24"/>
+  <text x="108" y="684" font-family="Inter, Arial" font-size="14" font-weight="700" fill="#92400e">Truth boundary: synthetic demo only. No client, production, savings, ROI, ranking, certification, endorsement or lower-cost guarantee.</text>
+</svg>
