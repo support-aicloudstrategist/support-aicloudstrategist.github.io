@@ -17,7 +17,7 @@ def test_pricing_page_surfaces_b2b_saas_demo_followup_as_sellable_offer():
     html = PRICING.read_text(encoding="utf-8")
     section = _fixed_scope_section(html)
 
-    assert "Twelve concrete first offers buyers can understand before a custom build." in section
+    assert "Thirteen concrete first offers buyers can understand before a custom build." in section
     assert "B2B SaaS demo-to-security-questionnaire follow-up diagnostic" in section
     assert ROUTE in section
     assert "stalled demo, pilot, expansion, procurement, vendor-risk" in section
@@ -31,7 +31,7 @@ def test_fixed_scope_diagnostic_count_matches_public_heading():
     section = _fixed_scope_section(html)
     cards = re.findall(r'<article class="card">', section)
 
-    assert len(cards) == 12
+    assert len(cards) == 13
 
 
 def test_fixed_scope_diagnostics_have_discovery_itemlist_schema():
@@ -43,8 +43,8 @@ def test_fixed_scope_diagnostics_have_discovery_itemlist_schema():
     itemlist = itemlists[0]
     assert itemlist["@type"] == "ItemList"
     assert itemlist["@id"] == "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics"
-    assert itemlist["numberOfItems"] == 12
-    assert len(itemlist["itemListElement"]) == 12
+    assert itemlist["numberOfItems"] == 13
+    assert len(itemlist["itemListElement"]) == 13
     first = itemlist["itemListElement"][0]
     assert first["position"] == 1
     assert first["url"] == URL

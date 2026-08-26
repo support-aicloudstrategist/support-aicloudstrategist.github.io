@@ -191,3 +191,16 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 scripts/build_sitemap.py` returned `wrote 339 indexable sitemap URLs`.
   - `python3 -m pytest -q` returned `499 passed, 1582 subtests passed in 2.52s` after refreshing release provenance and premium-shell baseline and cleaning an unrelated masked telephone regression on the AI pilot launch approval summary.
 - Proof boundary: synthetic/buyer-education evidence-room only; no real European healthtech client, patient data, health data, cloud bill, testimonial, certification, GDPR/EU AI Act/NHS compliance proof, legal/privacy/security/clinical advice, procurement approval, savings, ROI, ranking, revenue or outreach claimed.
+
+## 2026-08-26 pricing revenue-entry alignment
+
+- Decision: improve revenue readiness by moving the newly created North America healthtech AI Cloud Trust diagnostic from a proof/package asset into the public fixed-scope diagnostics pricing shelf.
+- Updated: `/pricing.html`
+  - Raised the fixed-scope diagnostics count from 12 to 13.
+  - Added a public card for the North America healthtech AI Cloud Trust diagnostic with US/Canada healthtech vendor-risk, HIPAA-style questionnaire, SOC 2/HITRUST-style evidence, AI data-boundary, human-review and cloud/LLM spend-owner buyer language.
+  - Added the same offer to the `ItemList` structured data with `United States` and `Canada` served areas.
+- Added: `tests/test_pricing_north_america_healthtech_offer.py` and updated existing pricing-count tests.
+- Verification performed:
+  - `python3 -m pytest -q` returned `503 passed, 1584 subtests passed`.
+  - Local HTTP checks returned 200 for `/pricing.html` and the linked healthtech diagnostic package with expected markers.
+- Proof boundary: no price, payment request, customer, patient data, PHI, testimonial, certification, compliance proof, audit approval, savings, ROI, ranking, procurement outcome, revenue claim or outreach was added.
