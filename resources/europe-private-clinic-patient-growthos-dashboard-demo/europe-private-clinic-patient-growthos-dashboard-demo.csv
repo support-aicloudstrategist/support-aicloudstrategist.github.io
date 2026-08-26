@@ -1,0 +1,7 @@
+source,country_context,patient_request_type,age_bucket,owner,follow_up_status,gdrp_adviser_question,ai_boundary,decision_status
+Website booking form,UK,Specialist consultation request,0-4 hours,Reception lead,Callback due,Privacy notice wording for optional SMS reminder,Human confirmation before clinical advice,Book or close reason needed
+Missed phone call,Germany,New patient enquiry,24-48 hours,Front desk manager,Overdue callback,Retention period for call metadata,Route symptoms to clinician-approved triage path,Owner escalation
+Marketplace booking listing,France,Reschedule request,4-24 hours,Patient access coordinator,Pending patient reply,Processor/subprocessor record check,No AI medical recommendation,Reminder cadence review
+WhatsApp click-to-chat,Spain,Price and availability question,0-4 hours,Clinic manager,Human reply sent,Consent basis for messaging channel,Human handles pricing and suitability,Monitor unresolved reason
+Referral email,Netherlands,Referral document missing,48+ hours,Referral coordinator,Blocked on document request,Secure transfer and deletion/access route,No automated diagnosis or prioritisation,Escalate blocker
+No-show list,Italy,Rebooking after missed appointment,24-48 hours,Reception lead,Second attempt due,Reminder consent and opt-out wording,Human review for vulnerable patient flag,Rebooking queue

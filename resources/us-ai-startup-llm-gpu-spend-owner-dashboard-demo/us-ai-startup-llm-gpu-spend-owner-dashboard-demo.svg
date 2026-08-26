@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic US AI startup LLM and GPU spend owner dashboard demo</title>
+  <desc id="desc">Demo dashboard showing synthetic spend bands, owner coverage, decision queue and proof boundary for AI startup LLM, GPU, Kubernetes and cloud cost review.</desc>
+  <rect width="1200" height="760" fill="#f8fbff"/>
+  <rect x="36" y="32" width="1128" height="696" rx="34" fill="#07152f"/>
+  <text x="72" y="92" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="800">AICS synthetic dashboard demo</text>
+  <text x="72" y="134" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="46" font-weight="900">LLM / GPU Spend Owner Review</text>
+  <text x="72" y="170" fill="#bfdbfe" font-family="Inter,Arial,sans-serif" font-size="19">US AI startup board-safe evidence shape · no client, investor, customer or production data</text>
+  <g transform="translate(72 216)">
+    <rect width="230" height="116" rx="22" fill="#102a54" stroke="#315b93"/>
+    <text x="22" y="40" fill="#93c5fd" font-family="Inter,Arial" font-size="15" font-weight="800">Monthly reviewed band</text>
+    <text x="22" y="82" fill="#fff" font-family="Inter,Arial" font-size="34" font-weight="900">$22k-$55k</text>
+  </g>
+  <g transform="translate(326 216)">
+    <rect width="230" height="116" rx="22" fill="#102a54" stroke="#315b93"/>
+    <text x="22" y="40" fill="#93c5fd" font-family="Inter,Arial" font-size="15" font-weight="800">Rows missing owners</text>
+    <text x="22" y="82" fill="#fff" font-family="Inter,Arial" font-size="34" font-weight="900">2 of 5</text>
+  </g>
+  <g transform="translate(580 216)">
+    <rect width="230" height="116" rx="22" fill="#102a54" stroke="#315b93"/>
+    <text x="22" y="40" fill="#93c5fd" font-family="Inter,Arial" font-size="15" font-weight="800">Approval required</text>
+    <text x="22" y="82" fill="#fff" font-family="Inter,Arial" font-size="34" font-weight="900">4 actions</text>
+  </g>
+  <g transform="translate(834 216)">
+    <rect width="230" height="116" rx="22" fill="#102a54" stroke="#315b93"/>
+    <text x="22" y="40" fill="#93c5fd" font-family="Inter,Arial" font-size="15" font-weight="800">Claim-safe savings</text>
+    <text x="22" y="82" fill="#fff" font-family="Inter,Arial" font-size="34" font-weight="900">0</text>
+  </g>
+  <g transform="translate(72 376)" font-family="Inter,Arial,sans-serif">
+    <rect width="1056" height="252" rx="24" fill="#ffffff"/>
+    <text x="28" y="44" fill="#0f375f" font-size="23" font-weight="900">Owner decision queue</text>
+    <g fill="#0f375f" font-size="15" font-weight="800"><text x="28" y="88">Source</text><text x="250" y="88">Product area</text><text x="470" y="88">Signal</text><text x="748" y="88">Decision</text></g>
+    <line x1="28" y1="104" x2="1028" y2="104" stroke="#dbeafe"/>
+    <g fill="#334155" font-size="14">
+      <text x="28" y="136">LLM API usage</text><text x="250" y="136">Support agent beta</text><text x="470" y="136">Token spend rising; beta seats flat</text><text x="748" y="136">Explain + label + cache review</text>
+      <text x="28" y="180">GPU training job</text><text x="250" y="180">Research evaluation</text><text x="470" y="180">Weekend run; no active ticket</text><text x="748" y="180">Owner confirm or pause</text>
+      <text x="28" y="224">Kubernetes namespace</text><text x="250" y="224">Demo environment</text><text x="470" y="224">Stale workload + storage cost</text><text x="748" y="224">Archive after sales sign-off</text>
+    </g>
+  </g>
+  <g transform="translate(72 660)">
+    <rect width="1056" height="44" rx="16" fill="#fffbeb" stroke="#f59e0b"/>
+    <text x="20" y="28" fill="#92400e" font-family="Inter,Arial" font-size="15" font-weight="800">Truth boundary: synthetic demo only; not savings, runway, ROI, ranking, investor, client or production proof.</text>
+  </g>
+</svg>

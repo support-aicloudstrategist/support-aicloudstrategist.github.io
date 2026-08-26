@@ -1,0 +1,6 @@
+source,product_area,environment,owner,monthly_spend_band,usage_signal,decision_status,approval_boundary,next_review
+LLM API usage,Customer support agent beta,beta,CTO + product lead,$5k-$10k,Token spend rising while beta seats are flat,"Explain; add request labels; review prompt/cache design",No savings or margin claim until baseline and follow-up measurement exist,2026-09-15
+GPU training job,Research evaluation,research,ML lead + founder,$10k-$25k,Recurring weekend GPU run with no active experiment decision,Confirm owner or pause schedule,Needs research lead and finance approval before shutdown,2026-09-08
+Kubernetes namespace,Demo environment,staging,Solutions engineering,$1k-$5k,Stale demo workload with persistent storage and observability cost,Archive/delete candidate after sales sign-off,Needs demo owner confirmation and rollback note,2026-09-10
+Vector database,Retrieval prototype,prototype,Engineering manager,$1k-$5k,Index storage growing after inactive pilot,Tag data retention owner and archive candidates,Needs privacy/security approval before deletion,2026-09-12
+Observability platform,AI service monitoring,production,SRE + CTO,$5k-$10k,High-cardinality traces on non-critical agent endpoints,Review sampling and retention policy,Needs production risk note before telemetry changes,2026-09-18

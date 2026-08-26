@@ -61,3 +61,37 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
 - Updated: `tests/test_about_capability_dossier.py` to prevent regression of parseable Organization/WebPage JSON-LD, sameAs links and contactPoint metadata.
 - Updated: `seo/MASTER_SEO_ROADMAP.md` marking About/entity trust signals complete.
 - Proof boundary: no founder/person claims, customer proof, testimonials, certifications, awards, partnerships, revenue, rankings or delivery results were added.
+
+## 2026-08-26 AI startup LLM/GPU owner-dashboard demo
+
+- Reviewed AICS site repo, growth operator log, resources hub, sitemap builder, `llms.txt`, and founder dashboard.
+- Decision: improve credibility/top-3 visibility/revenue readiness by turning the existing US AI startup FinOps checklist/package/comparison cluster into a more tangible proof-before-platform asset: a demo-labelled owner dashboard with downloadable synthetic CSV and SVG visual.
+- Created: `/resources/us-ai-startup-llm-gpu-spend-owner-dashboard-demo/`
+  - Targets buyer searches around LLM spend dashboard, GPU cost owner dashboard, AI startup FinOps board review, AI unit economics dashboard and cloud cost by product owner.
+  - Adds synthetic sample rows for LLM API usage, GPU training jobs, Kubernetes namespaces, vector databases and observability spend.
+  - Provides fields founders/CFOs/CTOs can expect in a review pack: source, product area, owner, monthly spend band, signal, decision status, approval boundary and next-review date.
+  - Adds Article, Dataset, FAQPage and BreadcrumbList structured data for discoverability.
+- Updated: `/resources/` with a card for the dashboard demo, and cross-linked the related US AI startup board-review checklist, diagnostic package and comparison page back to the new demo.
+- Updated: `scripts/build_sitemap.py`, regenerated `sitemap.xml`, and added a discovery route to `llms.txt`.
+- Added: `tests/test_us_ai_startup_llm_gpu_spend_owner_dashboard_demo.py` covering canonical/indexability, JSON-LD, CSV/SVG assets, truth-boundary language, resources hub link, sitemap-builder inclusion, sitemap URL, `llms.txt` route, related cluster links and backlink coverage from the existing startup cluster.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 324 indexable sitemap URLs`.
+  - `python3 -m pytest tests/test_us_ai_startup_llm_gpu_spend_owner_dashboard_demo.py tests/test_kubernetes_namespace_cost_owner_dashboard_demo.py tests/test_homepage_latest_publication_link.py` returned `12 passed in 0.08s`.
+- Proof boundary: no client, testimonial, production workload, cloud account data, investor data, customer data, savings, runway extension, ROI, ranking, certification, partnership, legal/security/accounting/tax/investor-relations advice or guaranteed lower LLM/GPU/Kubernetes/cloud cost was claimed; no outreach was sent.
+
+## 2026-08-26 Europe private clinic Patient GrowthOS dashboard demo
+
+- Region/timezone selected: Europe / UK-EU business morning.
+- Buyer pain-language targeted: private clinic patient engagement software, missed calls private clinic, online booking no-shows, GDPR appointment reminders, patient CRM, AI receptionist for clinics, Doctolib alternative, Semble/Pabau/Cliniko-style practice systems, Accurx-style patient communication, owner dashboard and human handoff.
+- Decision: improve proof-before-platform credibility by adding the tangible dashboard demo requested by the prior Europe checklist, without inventing clinic clients, outcomes or compliance proof.
+- Created: `/resources/europe-private-clinic-patient-growthos-dashboard-demo/`
+  - Adds synthetic CSV fields for source, country context, patient request type, age bucket, owner, follow-up status, GDPR adviser question, AI boundary and decision status.
+  - Adds a synthetic SVG dashboard visual showing open enquiries, overdue callbacks, adviser questions, AI human-review flags and a sample owner queue.
+  - Adds Article, Dataset and FAQPage structured data for search/answer-engine discoverability.
+- Updated: `/resources/` hub card, `llms.txt`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, and linked the Europe GDPR Patient GrowthOS evidence checklist to the new demo.
+- Added: `tests/test_europe_private_clinic_patient_growthos_dashboard_demo.py` covering canonical/indexability, JSON-LD, CSV/SVG assets, truth-boundary language, discovery wiring and related cluster links.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 325 indexable sitemap URLs`.
+  - `python3 -m pytest tests/test_europe_private_clinic_patient_growthos_dashboard_demo.py tests/test_us_ai_startup_llm_gpu_spend_owner_dashboard_demo.py -q` returned `13 passed in 0.07s`.
+  - Local HTTP checks returned 200 for page, CSV, SVG, resources hub, `llms.txt` and sitemap with expected markers.
+- Proof boundary: synthetic/demo only; no real clinic, patient data, GDPR proof, UK GDPR/RGPD proof, clinical/legal/privacy advice, booked appointment uplift, no-show reduction, revenue, ROI, ranking, certification, partnership or customer proof claimed. No outreach was sent.
