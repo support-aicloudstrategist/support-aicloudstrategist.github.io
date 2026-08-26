@@ -1260,6 +1260,13 @@
       "main_sha256": "0fc0d75c77edd74734d574204eb257557fafd29de16791e2df19d07e10de6f65",
       "title": "AI Procurement Risk Evidence Checklist | AICloudStrategist"
     },
+    "resources/global-ai-vendor-security-questionnaire-answer-source-map/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "ba9e1c77f28b6de4ebb5c8397335badd6f2b5eb1cd82ebd27b24d48693269ad1",
+      "title": "AI Vendor Security Questionnaire Answer Source Map | AICloudStrategist"
+    },
     "resources/global-auto-dealer-internet-lead-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
       "forms": 0,
@@ -1355,7 +1362,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b1c4044fa73eb0fe7c6aeb4b56d5ec961438525e61926b074aa4adb3840ff6d1",
+      "main_sha256": "1447342456918563f1834825af4fb52c2d8f5c2c47b5952f696287e92c327e1d",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1467,8 +1474,15 @@
       "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-finops-trust-evidence-room/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "fce152e1e18149e79f2ba2809a1585214cb361074c1bb12fe1ed3adf634e1ef3",
+      "main_sha256": "274d94e461985cda280bdcb9d40054263778a07711bb734ddea5285762aa1cca",
       "title": "North America Healthtech AI Cloud FinOps Trust Evidence Room | AICS"
+    },
+    "resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "478d1367fcdd6b72d6105bf7c92158e9f196d260929107980ff085c5dd072e3e",
+      "title": "North America Healthtech AI Cloud Trust Diagnostic Package | AICS"
     },
     "resources/overnight-ai-automation-safety-handoff/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/overnight-ai-automation-safety-handoff/",
