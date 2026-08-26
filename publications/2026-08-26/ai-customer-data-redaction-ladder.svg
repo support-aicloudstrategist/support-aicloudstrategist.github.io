@@ -1,0 +1,68 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#eff6ff'/><stop offset='48%' stop-color='#ecfeff'/><stop offset='100%' stop-color='#f0fdf4'/></linearGradient>
+    <filter id='shadow' x='-20%' y='-20%' width='140%' height='140%'><feDropShadow dx='0' dy='13' stdDeviation='13' flood-color='#0f172a' flood-opacity='.13'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='url(#bg)'/>
+  <rect x='42' y='42' width='1116' height='816' rx='42' fill='rgba(255,255,255,.80)' stroke='#bae6fd'/>
+  <text x='75' y='104' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='900' fill='#0369a1' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING DATA MINIMISATION CHECKLIST</text>
+  <text x='75' y='166' font-family='Inter,Arial,sans-serif' font-size='54' font-weight='950' fill='#111827'>The AI Customer Data Redaction Ladder</text>
+  <text x='75' y='211' font-family='Inter,Arial,sans-serif' font-size='22' fill='#334155'>A safe educational checklist for reducing sensitive customer details before using AI-assisted drafting, sorting, or analysis.</text>
+  <path d='M152 247 L152 760' stroke='#cbd5e1' stroke-width='5' stroke-linecap='round' stroke-dasharray='12 16'/>
+  
+    <g filter='url(#shadow)'>
+      <rect x='92' y='280' width='1016' height='94' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <circle cx='152' cy='327' r='35' fill='#0ea5e9'/>
+      <text x='152' y='339' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='950' fill='#fff'>1</text>
+      <text x='215' y='322' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#132033'>Remove direct identifiers</text>
+      <text x='265' y='351' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#334155'><tspan x='265' dy='0'>Names, phone numbers, email addresses, IDs, booking references,</tspan><tspan x='265' dy='22'>addresses, photos, and exact account labels.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='92' y='405' width='1016' height='94' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <circle cx='152' cy='452' r='35' fill='#6366f1'/>
+      <text x='152' y='464' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='950' fill='#fff'>2</text>
+      <text x='215' y='447' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#132033'>Generalise context</text>
+      <text x='265' y='476' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#334155'><tspan x='265' dy='0'>Replace exact dates, locations, employee names, case numbers, prices,</tspan><tspan x='265' dy='22'>and unusually specific events with safer ranges.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='92' y='530' width='1016' height='94' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <circle cx='152' cy='577' r='35' fill='#f97316'/>
+      <text x='152' y='589' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='950' fill='#fff'>3</text>
+      <text x='215' y='572' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#132033'>Limit business facts</text>
+      <text x='265' y='601' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#334155'><tspan x='265' dy='0'>Share only the minimum product, process, queue, or policy detail</tspan><tspan x='265' dy='22'>needed for the AI task to work.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='92' y='655' width='1016' height='94' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <circle cx='152' cy='702' r='35' fill='#16a34a'/>
+      <text x='152' y='714' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='950' fill='#fff'>4</text>
+      <text x='215' y='697' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#132033'>Keep a human gate</text>
+      <text x='265' y='726' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#334155'><tspan x='265' dy='0'>Require a named owner to review anything customer-facing, uncertain,</tspan><tspan x='265' dy='22'>emotional, regulated, or commercially sensitive.</tspan></text>
+    </g>
+  <text x='78' y='762' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'>Five questions before using real customer examples with AI</text>
+  
+      <g>
+        <rect x='72' y='794' width='186' height='76' rx='19' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='165' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Purpose</text>
+        <text x='86' y='851' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#475569'>Is the AI task narrow, internal, and necessary?</text>
+      </g>
+      <g>
+        <rect x='286' y='794' width='186' height='76' rx='19' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='379' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Minimum</text>
+        <text x='300' y='851' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#475569'>Can the example be synthetic, sampled, or shortened?</text>
+      </g>
+      <g>
+        <rect x='500' y='794' width='186' height='76' rx='19' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='593' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Access</text>
+        <text x='514' y='851' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#475569'>Who can see prompts, files, outputs, and logs?</text>
+      </g>
+      <g>
+        <rect x='714' y='794' width='186' height='76' rx='19' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='807' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Review</text>
+        <text x='728' y='851' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#475569'>Who approves before a message, report, or change leaves th</text>
+      </g>
+      <g>
+        <rect x='928' y='794' width='186' height='76' rx='19' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='1021' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Record</text>
+        <text x='942' y='851' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#475569'>Where is the redaction decision saved for later review?</text>
+      </g>
+</svg>
