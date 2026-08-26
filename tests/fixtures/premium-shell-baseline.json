@@ -1246,6 +1246,20 @@
       "main_sha256": "2bf75735d7e8a131bbb8e24df80243c1fe544ba06b4a999afc2024bfe2d01f6f",
       "title": "AI Pilot Proof-of-Value Scorecard | AICloudStrategist"
     },
+    "resources/global-ai-pilot-tools-vs-assurance-led-review-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-tools-vs-assurance-led-review-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "f076c24510c96ed88150cef0e8081001de6de8893212e8df186bb65dad3c980b",
+      "title": "AI Pilot Tools vs Assurance-Led Review | AICloudStrategist"
+    },
+    "resources/global-ai-procurement-risk-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-procurement-risk-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "0fc0d75c77edd74734d574204eb257557fafd29de16791e2df19d07e10de6f65",
+      "title": "AI Procurement Risk Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-auto-dealer-internet-lead-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
       "forms": 0,
@@ -1341,7 +1355,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "db098c065c5b2be74ceb33b3fe54f2bd0d9c7fd206a43b56aa85818809c5dbb3",
+      "main_sha256": "b1c4044fa73eb0fe7c6aeb4b56d5ec961438525e61926b074aa4adb3840ff6d1",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
