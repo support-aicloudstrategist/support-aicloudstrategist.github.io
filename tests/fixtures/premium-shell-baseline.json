@@ -1390,7 +1390,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4731a7bdf4e333086c741df9d313df3a53d8b6340b99757eb2aa19ba4e9036b5",
+      "main_sha256": "65bae5f42e5f0971ce32581faceb9ffed8b63cd8d7f8359f5107f299b555b205",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1791,6 +1791,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "113c96b477089f39998ba0422eeefb2ff82ce71ae572fad49ace76379c9993e1",
       "title": "US Healthtech GrowthOS vs Patient Engagement, GRC and FinOps Tools | AICS"
+    },
+    "resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "8d5d444535830c574ea50b86e46f14ebad267783e300b2931115c9d303c3cefe",
+      "title": "US Healthtech HIPAA AI Procurement Evidence Source Map | AICloudStrategist"
     },
     "resources/us-law-firm-ai-intake-answering-service-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-law-firm-ai-intake-answering-service-faq/",

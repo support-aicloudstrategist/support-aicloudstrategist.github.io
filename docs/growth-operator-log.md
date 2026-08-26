@@ -222,3 +222,14 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 -m pytest -q` returned `503 passed, 1584 subtests passed`.
   - Local HTTP checks returned 200 for `/pricing.html` and the linked healthtech diagnostic package with expected markers.
 - Proof boundary: no price, payment request, customer, patient data, PHI, testimonial, certification, compliance proof, audit approval, savings, ROI, ranking, procurement outcome, revenue claim or outreach was added.
+## 2026-08-26 US healthtech HIPAA AI procurement evidence source map
+
+- Region/timezone selected: North America / US business day (15:25 UTC; East Coast and Central business hours).
+- Buyer pain-language researched/targeted: HIPAA AI vendor risk questionnaire, PHI/ePHI AI data use, BAA/subprocessor register, SOC 2/HITRUST evidence, healthcare SaaS cloud cost allocation, LLM cost governance healthcare, AI human-review clinical boundary and patient-engagement AI procurement.
+- Competitor/consideration set mapped: CloudZero, IBM Apptio Cloudability, VMware/CloudHealth, Vantage, Datadog Cloud Cost Management, AWS Cost Explorer, Azure Cost Management, Vanta, Drata, Secureframe, HITRUST, OneTrust, TrustArc, Conveyor, SafeBase and Whistic. Public reference checks fetched ONC privacy/security, FinOps Foundation capabilities, HITRUST and Vanta healthcare pages; HHS HIPAA returned HTTP 403 in this environment, so no unreachable content was quoted.
+- Created: `/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/` with downloadable synthetic CSV.
+  - Positions AICS as proof-before-platform: evidence owner mapping before another FinOps/GRC/trust-center platform purchase.
+  - Adds Article, Dataset, FAQPage and BreadcrumbList JSON-LD for discoverability.
+  - Updates `/resources/`, `llms.txt`, curated sitemap paths and regenerated `sitemap.xml`.
+- Proof boundary: demo/synthetic template only; no clients, testimonials, PHI, patient data, HIPAA compliance proof, SOC 2/HITRUST certification, savings, ROI, ranking, procurement approval, partnership or patient outcome claimed; no outreach was sent.
+

@@ -80,6 +80,7 @@ CURATED_PATHS = [
     "/resources/us-clinic-top-5-consideration-proof-pack/",
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
     "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
+    "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
     "/resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/",
     "/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
     "/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
