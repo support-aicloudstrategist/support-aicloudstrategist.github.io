@@ -95,3 +95,13 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 -m pytest tests/test_europe_private_clinic_patient_growthos_dashboard_demo.py tests/test_us_ai_startup_llm_gpu_spend_owner_dashboard_demo.py -q` returned `13 passed in 0.07s`.
   - Local HTTP checks returned 200 for page, CSV, SVG, resources hub, `llms.txt` and sitemap with expected markers.
 - Proof boundary: synthetic/demo only; no real clinic, patient data, GDPR proof, UK GDPR/RGPD proof, clinical/legal/privacy advice, booked appointment uplift, no-show reduction, revenue, ROI, ranking, certification, partnership or customer proof claimed. No outreach was sent.
+
+## 2026-08-26 trust guard regression cleanup
+
+- Decision: fix the highest trust/revenue bottleneck found this run — the public-site verification suite was failing after recent proof-asset additions.
+- Fixed: normalized click-to-call links on three new proof assets, restored `llms.txt` to the curated 120-line guard, refreshed the Cloud FinOps release provenance hashes and updated the premium-shell baseline for the newly added indexable resource pages.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 329 indexable sitemap URLs`.
+  - `python3 -m pytest -q` returned `456 passed, 1552 subtests passed`.
+  - Public HTTP checks returned 200 with expected markers for the three proof assets and `llms.txt` after deployment.
+- Proof boundary: no customer, revenue, ranking, testimonial, certification, partnership, savings or deployment-result claim was added.
