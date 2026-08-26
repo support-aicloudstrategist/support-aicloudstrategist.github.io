@@ -473,7 +473,7 @@
       "canonical": "https://aicloudstrategist.com/industries/financial-services/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "32bfe9a0e57762fd9cfbd7438bdd992836ffd2891e7f5df462074f00a47e1595",
+      "main_sha256": "c1683da12922b140d5b19aacebb88be670e5654fd776ddb585af81c5dd7f1b8c",
       "title": "AI Automation for Financial Services | AICloudStrategist"
     },
     "industries/index.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2da802b93aa96fe92d474bffa4bc6c0cb0c50c05d3ec9b7d4fb0741d52a6926e",
+      "main_sha256": "99475217d7475ebf95a3d1c27aff7f4c6718542461a0c8184e76f98196bc4202",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1344,6 +1344,13 @@
       "main_sha256": "0925d8508134572b117e1c93c368ea063a7902c35bc9e2c7a012c6c04aeb7e36",
       "title": "Enterprise AI Model Evaluation Regression Evidence Checklist | AICloudStrategist"
     },
+    "resources/global-financial-services-ai-intake-approval-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-financial-services-ai-intake-approval-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4e1c3e01dbfdd1528caf83d800bcb17d536ff8d0761c45874ed8420168067c82",
+      "title": "Financial Services AI Intake + Approval Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-insurance-agency-quote-claims-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
       "forms": 0,
@@ -1383,7 +1390,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c9dca25120a59e0146f00e61710bfbbad2365dab22e1ff1a42ea7547608fb707",
+      "main_sha256": "4731a7bdf4e333086c741df9d313df3a53d8b6340b99757eb2aa19ba4e9036b5",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {

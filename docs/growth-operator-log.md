@@ -18,6 +18,15 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - Git diff reviewed after changes.
 - Proof boundary: no client, testimonial, production result, ROI number or certification was claimed.
 
+## 2026-08-26 financial services pricing entry
+
+- Decision: improve revenue readiness by turning the financial-services intake approval checklist into a visible fixed-scope diagnostic on the pricing page.
+- Updated: `/pricing` fixed-scope diagnostics from 13 to 14 offers with a buyer-safe "Financial services AI intake approval evidence review" card linked to `/resources/global-financial-services-ai-intake-approval-evidence-checklist/`.
+- Updated: pricing ItemList structured data so the offer is machine-readable as a scoped Service with scope-before-quote pricing language.
+- Added: `tests/test_pricing_financial_services_offer.py` and updated existing pricing count tests.
+- Verification performed: targeted pricing pytest returned `18 passed`.
+- Proof boundary: no legal, financial-advice, compliance, regulated-approval, ranking, revenue or ROI claims were made.
+
 ## 2026-08-26 financial services AI intake approval checklist
 
 - Decision: strengthen the new financial-services industry page with a concrete buyer-safe proof asset for client intake, document chasing, risk-review queues, AI draft boundaries, approval evidence and cloud/AI spend ownership.
