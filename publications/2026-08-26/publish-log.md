@@ -11,6 +11,7 @@
 - GitHub repository / deployment evidence — Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-26
 - AICS website / GitHub Pages — Evening: https://aicloudstrategist.com/publications/2026-08-26/ai-tool-output-review-gate.html
 - GitHub repository / deployment evidence — Evening: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-26
+- DEV.to — Evening: https://dev.to/aicloudstrategist/the-ai-tool-output-review-gate-4gpi
 
 ## Verification boundary
 Educational workflow only — not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice.
