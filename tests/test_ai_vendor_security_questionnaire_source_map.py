@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REL = "/resources/global-ai-vendor-security-questionnaire-answer-source-map/"
 URL = f"https://aicloudstrategist.com{REL}"
 PAGE = ROOT / "resources" / "global-ai-vendor-security-questionnaire-answer-source-map" / "index.html"
+CSV = ROOT / "resources" / "global-ai-vendor-security-questionnaire-answer-source-map" / "ai-vendor-security-questionnaire-answer-source-map.csv"
 
 
 def test_ai_vendor_security_questionnaire_source_map_is_buyer_safe():
@@ -17,6 +18,26 @@ def test_ai_vendor_security_questionnaire_source_map_is_buyer_safe():
     assert "not legal/security/compliance/procurement advice" in html
     assert "Request source-map fit check" in html
     assert "No outreach was sent" in html
+    assert "ai-vendor-security-questionnaire-answer-source-map.csv" in html
+
+
+def test_source_map_csv_is_downloadable_and_buyer_safe():
+    csv = CSV.read_text(encoding="utf-8")
+    required = [
+        "question_area,buyer_question,evidence_source_to_attach,named_owner,status,safe_answer_boundary,review_date",
+        "AI data use",
+        "Training use",
+        "Model risk",
+        "Security controls",
+        "Compliance posture",
+        "Commercial claims",
+        "Production ownership",
+        "Final approval",
+        "Do not claim revenue lift, rankings, savings or customer outcomes without verified proof.",
+        "Block any answer without a source, owner, status, limitation and review date.",
+    ]
+    for marker in required:
+        assert marker in csv
 
 
 def test_source_map_has_faq_and_article_structured_data():
