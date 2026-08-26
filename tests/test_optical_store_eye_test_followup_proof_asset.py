@@ -44,6 +44,6 @@ def test_optical_store_proof_asset_is_linked_from_evidence_hub_and_llms():
 
     assert route in hub
     assert "India optical-store eye-test follow-up and DPDP evidence diagnostic" in hub
-    assert "<strong>45</strong>" in hub
-    assert "<em>20 methods</em>" in hub
+    assert "<strong>46</strong>" in hub
+    assert "<em>21 methods</em>" in hub
     assert f"https://aicloudstrategist.com{route}" in llms
