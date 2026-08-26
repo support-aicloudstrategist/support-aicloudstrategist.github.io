@@ -90,7 +90,7 @@ Status: First cluster created
 - [x] AWS cost optimization checklist guide.
 - [x] DPDP compliance checklist for small businesses guide.
 - [x] CRM automation examples guide.
-- [ ] Custom AI solutions vs off-the-shelf AI tools guide.
+- [x] Custom AI solutions vs off-the-shelf AI tools guide.
 
 ### Phase 4 — Industry landing pages
 Status: Highest-priority pages created
@@ -131,6 +131,11 @@ Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit
 - Created `/resources/crm-automation-examples-guide/` for CRM automation examples, missed-lead workflow, WhatsApp follow-up, appointment no-show recovery, quote follow-up, renewal reminders, lead-source review and exception handoff searches.
 - Linked the guide from `/resources/` and `/services/crm-automation/`; promoted it in `scripts/build_sitemap.py` and regenerated `sitemap.xml`.
 - Verification: homepage canonical/single-H1 tracker items were checked against the live repo state; the new guide keeps a clear no-client/no-ROI/no-ranking/no-compliance-guarantee proof boundary.
+
+## 2026-08-26 update — Custom AI vs off-the-shelf AI guide
+- Created `/resources/custom-ai-solutions-vs-off-the-shelf-ai-tools-guide/` to close the Phase 3 custom-AI guide gap for build-vs-buy, packaged AI software, workflow integration, approval gates and process-redesign searches.
+- Linked the guide from `/resources/`, `/services/ai-automation/`, `llms.txt`; promoted it in `scripts/build_sitemap.py` and regenerated `sitemap.xml`.
+- Proof boundary: no customer, ROI, revenue, cost saving, ranking, model-accuracy, compliance approval or vendor-superiority claim was added.
 
 ## 2026-07-10 update — AI automation hub
 - Created and pushed `/ai-automation-agency/` as the first Phase 2 commercial service hub.

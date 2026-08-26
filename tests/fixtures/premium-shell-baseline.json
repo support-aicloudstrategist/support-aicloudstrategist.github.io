@@ -896,6 +896,13 @@
       "main_sha256": "f81597c53571cc7fea6ec042f115fb380704b40ea5916632c1a3b6c1d630901f",
       "title": "CRM Automation Examples for Service Businesses | AICloudStrategist"
     },
+    "resources/custom-ai-solutions-vs-off-the-shelf-ai-tools-guide/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/custom-ai-solutions-vs-off-the-shelf-ai-tools-guide/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "9bfc5244affbed88d2cabdc13a3063cad011cc337136c1cae2c91d184423ccf2",
+      "title": "Custom AI Solutions vs Off-the-Shelf AI Tools | AICloudStrategist"
+    },
     "resources/customer-problem-search/aws-cloud-bill-too-high/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/",
       "forms": 0,
@@ -1320,7 +1327,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4b01411d296505aa52b801fd428ba5f66d3faad712ca3efdcfccbe0f9505624d",
+      "main_sha256": "79b9322280510b0de5f1e6f01023419fc2590ab2322875ce4487ffebcced5d95",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1817,7 +1824,7 @@
       "canonical": "https://aicloudstrategist.com/services/ai-automation/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2b54f69ae80a39b15fd7e7eedd03af4159cd9a35cbb9525b62f0c69af1056851",
+      "main_sha256": "907d47d564f988cd43df8196082987ae240218de9fa1beb870d7fb24ab5b358f",
       "title": "Enterprise AI Automation &amp; AI Agents | AICloudStrategist"
     },
     "services/ai-automation/small-business/index.html": {
