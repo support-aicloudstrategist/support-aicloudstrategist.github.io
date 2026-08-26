@@ -735,6 +735,13 @@
       "main_sha256": "dfcbc34ac5ce5164c1e4cb547d18851dc6540093cbbf96a4f0da1474ad6c6bf9",
       "title": "AI Chatbot Development Cost in India | AICloudStrategist"
     },
+    "resources/ai-cost-savings-claim-boundary-worksheet/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/ai-cost-savings-claim-boundary-worksheet/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "de2309b3c68cc9ffdd86e9063062c4e33674874acf8c963185b2ed1f9b4080fb",
+      "title": "AI Cost Savings Claim Boundary Worksheet | AICloudStrategist"
+    },
     "resources/ai-operated-growth-systems/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/ai-operated-growth-systems/",
       "forms": 0,
@@ -1047,8 +1054,15 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "366e911419390bcc51b49ea14f8d42654077ec6b994eed784d1ffd9b1f0301a6",
+      "main_sha256": "d44dc8e038ec49b546cbd6d6a55a1d5d67c7b9358a57b28d311e150e608de360",
       "title": "Europe Private Clinic GDPR Patient GrowthOS Evidence Checklist | AICS"
+    },
+    "resources/europe-private-clinic-patient-growthos-dashboard-demo/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "dba9daf19d21a3012424212847dd506d2887efdf9e0bfcd372e4507c2ef33902",
+      "title": "Europe Private Clinic Patient GrowthOS Dashboard Demo | AICS"
     },
     "resources/europe-saas-ai-evidence-room-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-evidence-room-faq/",
@@ -1190,6 +1204,20 @@
       "main_sha256": "85c2e34d22708be6ff164140217c507b73e4b57b2bd18fc864908c76b2c3d130",
       "title": "Accounting Firm Tax Season Client Intake Follow-Up Checklist | AICloudStrategist"
     },
+    "resources/global-ai-pilot-production-readiness-evidence-room-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-production-readiness-evidence-room-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "92fa4ac1291f1896316a9611256faa35cb942c2addcb4b688bd6a79c210b2353",
+      "title": "AI Pilot Production Readiness Evidence Room Template | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-proof-of-value-scorecard/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-proof-of-value-scorecard/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "3ae189a14ff6d402e077ae4c61951edc623a6599d9291617bd1da16d473620a4",
+      "title": "AI Pilot Proof-of-Value Scorecard | AICloudStrategist"
+    },
     "resources/global-auto-dealer-internet-lead-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
       "forms": 0,
@@ -1239,6 +1267,13 @@
       "main_sha256": "96a27e29a893b421e8f303b2b38d420cac778fe054cf0b8eb745dcd8554e3973",
       "title": "Enterprise AI Incident Response Evidence Runbook | AICloudStrategist"
     },
+    "resources/global-enterprise-ai-model-evaluation-regression-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-enterprise-ai-model-evaluation-regression-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4b4681d5da0615e354803895265bcecaf3c025d0694ed35cea7819d6bb787da7",
+      "title": "Enterprise AI Model Evaluation Regression Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-insurance-agency-quote-claims-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
       "forms": 0,
@@ -1278,7 +1313,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "3c22a0581ba6f2aebff0052e299b1335922469137c60f42016c465a154080205",
+      "main_sha256": "28ac1a79b91962e94225e13369de48b3671954c22c006ec6440bc57e403baeb0",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
@@ -1558,7 +1593,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-ai-spend-board-review-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5c944c8efbade494e9de1cc54bac5351a29d8b147acb038bfa016dcfaca18c10",
+      "main_sha256": "2e8b552dc6347d652a42aeeccb6e9a5dab70f0adab89d03bb43a01ed395918fe",
       "title": "US AI Startup AI Spend Board Review Checklist | AICS"
     },
     "resources/us-ai-startup-cfo-cto-llm-gpu-finops-dashboard-template/index.html": {
@@ -1572,15 +1607,22 @@
       "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-llm-gpu-finops-diagnostic-package/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "f81091b01be04a2f45c971fbcf1ccadf10276546a66b1c5b6ab7be7369188619",
+      "main_sha256": "6c305c216c7b798c77904aadecfd9ea02ec69d9a7ffc2bc4be471bdc96f5f5e1",
       "title": "US AI Startup LLM/GPU FinOps Diagnostic Package | AICS"
     },
     "resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-llm-gpu-finops-vs-cloud-cost-tools-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "064a43e5dfa972d898be8b42c08f5fd8e985defc16f36b24b0445d53ea80d6c3",
+      "main_sha256": "6b28ecfbf6571e8193e7b112da298a39f19487926f1cee8a0f993e8c2aff2ae2",
       "title": "US AI Startup LLM/GPU FinOps vs Cloud Cost Tools | AICS"
+    },
+    "resources/us-ai-startup-llm-gpu-spend-owner-dashboard-demo/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-ai-startup-llm-gpu-spend-owner-dashboard-demo/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "4c53b96b70b6947d568814d32971daf2064ccf1f52bfbafc3f70980dd8dcf5db",
+      "title": "US AI Startup LLM/GPU Spend Owner Dashboard Demo | AICS"
     },
     "resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/",
