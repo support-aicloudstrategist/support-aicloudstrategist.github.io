@@ -1068,15 +1068,22 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d44dc8e038ec49b546cbd6d6a55a1d5d67c7b9358a57b28d311e150e608de360",
+      "main_sha256": "0a799881cbdd5225bba24106ddcb6a69eb38a374c91a76214b44442027ac6e22",
       "title": "Europe Private Clinic GDPR Patient GrowthOS Evidence Checklist | AICS"
     },
     "resources/europe-private-clinic-patient-growthos-dashboard-demo/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "dba9daf19d21a3012424212847dd506d2887efdf9e0bfcd372e4507c2ef33902",
+      "main_sha256": "4061fce1f2e4935148569721276880edaf2a775249e8ed2810281b74fa849b91",
       "title": "Europe Private Clinic Patient GrowthOS Dashboard Demo | AICS"
+    },
+    "resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "9957d2ec0503b0d8edbd387786086dd2dbd0e443375503e619dd682010d67d67",
+      "title": "Europe Private Clinic Patient GrowthOS vs Practice Management Platforms | AICS"
     },
     "resources/europe-saas-ai-evidence-room-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-saas-ai-evidence-room-faq/",
@@ -1327,7 +1334,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "79b9322280510b0de5f1e6f01023419fc2590ab2322875ce4487ffebcced5d95",
+      "main_sha256": "f0cb404c525f2bae5b73027712a8d93a1007f75cb448e6d2cbe69f48ea35aac2",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {

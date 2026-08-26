@@ -79,6 +79,7 @@ CURATED_PATHS = [
     "/resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/",
     "/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
     "/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
+    "/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",
     "/case-studies/",

@@ -132,3 +132,19 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 -m pytest -q` returned `464 passed, 1558 subtests passed`.
   - Public HTTP checks returned 200 for the guide, resources hub, AI automation service page and sitemap with expected markers after deployment.
 - Proof boundary: no customer, testimonial, revenue, cost saving, ROI, model accuracy, ranking, compliance approval, certification, partnership or vendor-superiority claim was added.
+
+## 2026-08-26 Europe private clinic Patient GrowthOS comparison
+
+- Region/timezone selected: Europe / UK-EU business morning (08:47 UTC).
+- Buyer pain-language targeted: private clinic patient engagement software, missed calls private clinic, online booking no-shows, GDPR appointment reminders, patient CRM, AI receptionist for clinics, Doctolib alternative, Semble practice management, Pabau clinic software, Cliniko reminders, Accurx patient communication, patient access dashboard and human handoff.
+- Competitor/reference snapshot from public pages: Accurx emphasizes patient-care communication; Pabau emphasizes all-in-one clinic/practice software, online booking, EMR, workflows, payments, marketing/growth insights, AI and trust; Semble emphasizes complete healthcare management, practice management, EHR, intelligent workflows, patient experience, scheduling, integrations and trust; Cliniko emphasizes practice-management for clinics/allied health with schedule, treatment records, invoices, payments, pricing, security and connected apps. Doctolib was treated only as recognized buyer vocabulary because the site blocked automated review.
+- Decision: improve top-3/top-5 consideration by adding a buyer-safe comparison page that positions AICS as the evidence/owner-dashboard layer around existing practice-management, booking, messaging, answering-service and AI-receptionist tools rather than claiming to replace them.
+- Created: `/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/`.
+- Updated: `/resources/` hub card, `llms.txt`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, and backlinks from the Europe dashboard demo and GDPR Patient GrowthOS checklist.
+- Added: `tests/test_europe_private_clinic_patient_growthos_comparison.py` covering canonical/indexability, structured data, truth-boundary language, competitor/pain-language markers, discovery wiring and backlinks.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 332 indexable sitemap URLs`.
+  - `python3 -m pytest tests/test_europe_private_clinic_patient_growthos_comparison.py tests/test_europe_private_clinic_patient_growthos_dashboard_demo.py -q` returned `9 passed in 0.07s`.
+  - Full regression after rebase, release-provenance and premium-shell baseline refresh returned `467 passed, 1561 subtests passed in 2.41s`.
+  - SHA256 page `9b96781e76f3ec52c0b1983cd9c2f6adec191a53d393601fc9e502568a29c7b3`; test `2392d3551f8a273d815f2a0dffd723502205c1c734f6bc3e1a130ba8f0616e33`; resources hub `d5ff45cc8b832bd9bdd04fb6b5113a248d522d4f4f4279cf8651c56744484b39`; `llms.txt` `f3931f170e7a0f80ebb2cdc57c7c2c13502a3928942e104d4dc91b810520c940`; sitemap `8d42dd4b4f8d97354bd7f7d17ee54192d6c1da4b5276fa517b6e3d996d90fcd1`.
+- Proof boundary: comparison/readiness asset only; no real clinic, patient, PHI, personal data, client proof, testimonial, logo, certification, platform partnership, GDPR/UK GDPR/RGPD compliance proof, legal/privacy/clinical advice, booked-appointment uplift, no-show reduction, revenue, ROI, ranking, ad-performance or AI-accuracy claim was added. No outreach was sent.
