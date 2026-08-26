@@ -118,3 +118,17 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 -m pytest -q` returned `460 passed, 1555 subtests passed`.
   - Local HTTP checks returned 200 for the guide, resources hub, CRM service page and sitemap with expected CRM guide markers.
 - Proof boundary: no client, testimonial, revenue uplift, conversion improvement, ROI, ranking, software recommendation, compliance approval or guarantee was claimed.
+
+## 2026-08-26 Custom AI build-vs-buy guide
+
+- Decision: close the remaining Phase 3 topical authority gap for custom AI solutions vs off-the-shelf AI tools, a high-intent buyer question that supports Enterprise AI Systems & Agents revenue readiness.
+- Created: `/resources/custom-ai-solutions-vs-off-the-shelf-ai-tools-guide/`
+  - Adds a practical decision matrix for off-the-shelf AI tools, integration-led automation, custom AI with controls and process redesign before AI.
+  - Adds buyer questions for workflow specificity, data location, approval boundaries and acceptance evidence.
+  - Adds Article, WebPage and FAQPage structured data for answer-engine discoverability.
+- Updated: `/resources/`, `/services/ai-automation/`, `llms.txt`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, SEO roadmap tracker, Cloud FinOps release provenance and premium-shell baseline.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 331 indexable sitemap URLs`.
+  - `python3 -m pytest -q` returned `464 passed, 1558 subtests passed`.
+  - Public HTTP checks returned 200 for the guide, resources hub, AI automation service page and sitemap with expected markers after deployment.
+- Proof boundary: no customer, testimonial, revenue, cost saving, ROI, model accuracy, ranking, compliance approval, certification, partnership or vendor-superiority claim was added.
