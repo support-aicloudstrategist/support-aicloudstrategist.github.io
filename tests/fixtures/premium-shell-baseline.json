@@ -1232,6 +1232,13 @@
       "main_sha256": "5a756383dc3cee729e26237d4ba69afb9a4a0384ab04d5f807b59b2d95683d7b",
       "title": "Accounting Firm Tax Season Owner Dashboard Demo | AICloudStrategist"
     },
+    "resources/global-ai-pilot-production-go-no-go-decision-record-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-production-go-no-go-decision-record-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "37220d0ba40d13e111dbd58ab2eb41543bd9349bbf474bc73e3ab414bf3a75fc",
+      "title": "AI Pilot Production Go/No-Go Decision Record Template | AICloudStrategist"
+    },
     "resources/global-ai-pilot-production-readiness-evidence-room-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-production-readiness-evidence-room-template/",
       "forms": 0,
@@ -1362,7 +1369,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1447342456918563f1834825af4fb52c2d8f5c2c47b5952f696287e92c327e1d",
+      "main_sha256": "b7b093d15f69f8abb68551e9ede46817a70a65ae0de31a09feb8114da0902fbf",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
