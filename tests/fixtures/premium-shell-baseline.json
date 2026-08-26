@@ -1232,6 +1232,13 @@
       "main_sha256": "5a756383dc3cee729e26237d4ba69afb9a4a0384ab04d5f807b59b2d95683d7b",
       "title": "Accounting Firm Tax Season Owner Dashboard Demo | AICloudStrategist"
     },
+    "resources/global-ai-pilot-incident-override-log-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-incident-override-log-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "059ed98ff5aab53b6a980f89d18e9708e3c041c182e7e5af89ca6d7d23f6beb4",
+      "title": "AI Pilot Incident and Human Override Log Template | AICloudStrategist"
+    },
     "resources/global-ai-pilot-launch-approval-one-page-summary/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-launch-approval-one-page-summary/",
       "forms": 0,
@@ -1266,6 +1273,20 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "2bf75735d7e8a131bbb8e24df80243c1fe544ba06b4a999afc2024bfe2d01f6f",
       "title": "AI Pilot Proof-of-Value Scorecard | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-remediation-decision-log-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-remediation-decision-log-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "380091ab53604fbfabe5b1f401463e5f76ab153b851428834410044f90fe5e12",
+      "title": "AI Pilot Remediation Decision Log Template | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-rollback-readiness-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-rollback-readiness-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "32d61117bcf7827107cfef4e8c9eca176b612bde173cec6205307997fae153e2",
+      "title": "AI Pilot Rollback Readiness Checklist | AICloudStrategist"
     },
     "resources/global-ai-pilot-tools-vs-assurance-led-review-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-tools-vs-assurance-led-review-comparison/",
@@ -1390,7 +1411,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "65bae5f42e5f0971ce32581faceb9ffed8b63cd8d7f8359f5107f299b555b205",
+      "main_sha256": "daa485720eaf8d8ea641029760366c76b15d63bc7ca7a4afebe1a9ca5564f403",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
