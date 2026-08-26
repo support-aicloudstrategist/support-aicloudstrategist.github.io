@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+  <title id="title">Europe Healthtech Cloud Trust and FinOps Owner Dashboard Demo</title>
+  <desc id="desc">Demo-only owner dashboard for European healthtech AI and cloud evidence rooms. It shows synthetic cost-owner, evidence-owner, adviser-question and human-review queues with no real patient data, savings, compliance or certification claim.</desc>
+  <rect width="1200" height="740" fill="#06111f"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="56" y="62" fill="#f8fafc" font-size="34" font-weight="800">Europe Healthtech Cloud Trust + FinOps Owner Dashboard</text>
+    <text x="56" y="96" fill="#86efac" font-size="16" font-weight="700">DEMO / SYNTHETIC ONLY — no patient data, real client, savings, GDPR/EU AI Act proof, certification or clinical claim</text>
+
+    <rect x="56" y="132" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="78" y="168" fill="#93c5fd" font-size="14" font-weight="800">Synthetic rows</text>
+    <text x="78" y="211" fill="#ffffff" font-size="38" font-weight="900">8</text>
+    <text x="78" y="238" fill="#cbd5e1" font-size="14">cost, AI, vendor, trust queues</text>
+
+    <rect x="336" y="132" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="358" y="168" fill="#93c5fd" font-size="14" font-weight="800">Named owner fields</text>
+    <text x="358" y="211" fill="#ffffff" font-size="38" font-weight="900">16</text>
+    <text x="358" y="238" fill="#cbd5e1" font-size="14">cost owner + evidence owner</text>
+
+    <rect x="616" y="132" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="638" y="168" fill="#93c5fd" font-size="14" font-weight="800">Adviser questions</text>
+    <text x="638" y="211" fill="#ffffff" font-size="38" font-weight="900">Open</text>
+    <text x="638" y="238" fill="#cbd5e1" font-size="14">privacy, security, legal, clinical</text>
+
+    <rect x="896" y="132" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="918" y="168" fill="#93c5fd" font-size="14" font-weight="800">Unsupported claims</text>
+    <text x="918" y="211" fill="#ffffff" font-size="38" font-weight="900">0</text>
+    <text x="918" y="238" fill="#cbd5e1" font-size="14">no savings/compliance asserted</text>
+
+    <rect x="56" y="300" width="1090" height="340" rx="24" fill="#0b1828" stroke="#334155"/>
+    <text x="88" y="344" fill="#e2e8f0" font-size="22" font-weight="800">Proof-before-platform queue</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="90" y="390">1. Map cloud and AI spend to cost owner, evidence owner and decision next step before optimization claims.</text>
+      <text x="90" y="434">2. Keep GDPR, DPIA, EU AI Act, security, legal, privacy, clinical and billing questions in adviser status.</text>
+      <text x="90" y="478">3. Separate human-review boundaries from automation scope for patient, payer, complaint and regulated wording.</text>
+      <text x="90" y="522">4. Block security-questionnaire or trust-centre answers until source, owner, limitation and review date exist.</text>
+      <text x="90" y="566">5. Give CFO, CTO, DPO/CISO and RevOps one buyer-safe evidence room around existing FinOps and GRC tools.</text>
+    </g>
+  </g>
+  <text x="56" y="694" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13">AICloudStrategist demo artifact generated 2026-08-26 for Europe / UK-EU healthtech buyer visibility.</text>
+</svg>

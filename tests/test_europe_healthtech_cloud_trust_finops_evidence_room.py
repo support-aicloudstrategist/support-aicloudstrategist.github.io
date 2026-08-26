@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "europe-healthtech-cloud-trust-finops-evidence-room"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "sample.csv"
+OWNER_CSV = ROOT / "resources" / SLUG / "owner-dashboard.csv"
+OWNER_SVG = ROOT / "resources" / SLUG / "owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -23,6 +25,8 @@ class EuropeHealthtechCloudTrustFinOpsEvidenceRoomTests(unittest.TestCase):
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         cls.csv_rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.owner_rows = list(csv.DictReader(OWNER_CSV.open(newline="", encoding="utf-8")))
+        cls.owner_svg = OWNER_SVG.read_text(encoding="utf-8")
 
     def test_page_is_indexable_canonical_and_single_h1(self):
         self.assertIn('<meta name="robots" content="index, follow"/>', self.html)
@@ -77,6 +81,11 @@ class EuropeHealthtechCloudTrustFinOpsEvidenceRoomTests(unittest.TestCase):
             "Security-questionnaire evidence index",
             "Human-review, escalation and claim-control map",
             "Executive dashboard wireframe",
+            "Owner dashboard demo artifacts",
+            "synthetic owner dashboard CSV",
+            "demo owner dashboard SVG",
+            "adviser-question status",
+            "human-review boundary",
             "Use this before buying another platform",
             "Europe procurement search-intent map",
             "EU AI Act overview",
@@ -127,6 +136,40 @@ class EuropeHealthtechCloudTrustFinOpsEvidenceRoomTests(unittest.TestCase):
         self.assertEqual(len(self.csv_rows), 8)
         self.assertEqual(set(self.csv_rows[0]), {"source", "synthetic_signal", "unit_metric", "evidence_gap", "decision_owner", "boundary_label"})
         self.assertTrue(all("claim" in row["boundary_label"] or "advice" in row["boundary_label"] or "certification" in row["boundary_label"] for row in self.csv_rows))
+
+    def test_owner_dashboard_csv_and_svg_are_synthetic_and_claim_safe(self):
+        self.assertEqual(len(self.owner_rows), 8)
+        self.assertEqual(
+            set(self.owner_rows[0]),
+            {
+                "dashboard_area",
+                "synthetic_signal",
+                "cost_owner",
+                "evidence_owner",
+                "adviser_question_status",
+                "human_review_boundary",
+                "decision_next_step",
+                "boundary_label",
+            },
+        )
+        for marker in [
+            "Open question",
+            "Human review required",
+            "Demo row only",
+            "no savings ROI or procurement claim",
+            "no GDPR EU AI Act or DPIA advice",
+            "no testimonial ranking customer result revenue",
+        ]:
+            self.assertIn(marker, OWNER_CSV.read_text(encoding="utf-8"))
+        for marker in [
+            "DEMO / SYNTHETIC ONLY",
+            "no patient data, real client, savings, GDPR/EU AI Act proof, certification or clinical claim",
+            "Proof-before-platform queue",
+            "Unsupported claims",
+        ]:
+            self.assertIn(marker, self.owner_svg)
+        self.assertIn("owner-dashboard.csv", self.html)
+        self.assertIn("owner-dashboard.svg", self.html)
 
     def test_json_ld_and_discovery_wiring_are_valid(self):
         docs = json_ld_documents(self.html)
