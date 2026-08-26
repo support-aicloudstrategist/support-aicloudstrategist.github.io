@@ -51,8 +51,8 @@ Status: In progress
 - [x] Push cleanup and verify live sitemap no longer includes internal URLs.
 - [x] Verify internal snapshot URLs return 404/blocked after deployment.
 - [x] Standardize duplicate/old URL handling where possible by removing public legacy/preview/backup files and keeping sitemap clean.
-- [ ] Add canonical to homepage and `/choose/` if missing.
-- [ ] Fix homepage multiple-H1 issue.
+- [x] Verified homepage and `/choose/` canonical tags; homepage has a single H1.
+- [x] Fix homepage multiple-H1 issue.
 
 ### Phase 2 — Commercial SEO architecture
 Status: Accelerated execution completed; deployment validation in progress
@@ -89,7 +89,7 @@ Status: First cluster created
 - [x] Small business website checklist guide.
 - [x] AWS cost optimization checklist guide.
 - [x] DPDP compliance checklist for small businesses guide.
-- [ ] CRM automation examples guide.
+- [x] CRM automation examples guide.
 - [ ] Custom AI solutions vs off-the-shelf AI tools guide.
 
 ### Phase 4 — Industry landing pages
@@ -117,7 +117,7 @@ Status: Proof/demo layer started
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
-Overall SEO roadmap completion: 46%
+Overall SEO roadmap completion: 48%
 
 Completed milestones:
 - Initial SEO audit and strategy report created.
@@ -126,6 +126,11 @@ Completed milestones:
 
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
+
+## 2026-08-26 update — CRM automation examples guide
+- Created `/resources/crm-automation-examples-guide/` for CRM automation examples, missed-lead workflow, WhatsApp follow-up, appointment no-show recovery, quote follow-up, renewal reminders, lead-source review and exception handoff searches.
+- Linked the guide from `/resources/` and `/services/crm-automation/`; promoted it in `scripts/build_sitemap.py` and regenerated `sitemap.xml`.
+- Verification: homepage canonical/single-H1 tracker items were checked against the live repo state; the new guide keeps a clear no-client/no-ROI/no-ranking/no-compliance-guarantee proof boundary.
 
 ## 2026-07-10 update — AI automation hub
 - Created and pushed `/ai-automation-agency/` as the first Phase 2 commercial service hub.

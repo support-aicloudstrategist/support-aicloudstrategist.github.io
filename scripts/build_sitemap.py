@@ -34,6 +34,7 @@ CURATED_PATHS = [
     "/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
     "/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
     "/resources/lead-follow-up-automation-guide/",
+    "/resources/crm-automation-examples-guide/",
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/cloud-ai-economics-decision-pack/",
     "/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",

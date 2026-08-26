@@ -105,3 +105,16 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 -m pytest -q` returned `456 passed, 1552 subtests passed`.
   - Public HTTP checks returned 200 with expected markers for the three proof assets and `llms.txt` after deployment.
 - Proof boundary: no customer, revenue, ranking, testimonial, certification, partnership, savings or deployment-result claim was added.
+
+## 2026-08-26 CRM automation examples guide
+
+- Decision: close the Phase 3 CRM automation examples gap with a buyer-safe content asset that supports the CRM automation money page and lost-lead follow-up cluster.
+- Created: `/resources/crm-automation-examples-guide/`
+  - Covers missed-call callback queues, WhatsApp enquiry capture, appointment no-show recovery, quote follow-up, renewal reminders, lead-source quality review and exception handoff.
+  - Adds Article, WebPage and FAQPage structured data for answer-engine discoverability.
+- Updated: `/resources/`, `/services/crm-automation/`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, SEO roadmap tracker, Cloud FinOps release provenance and premium-shell baseline.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 330 indexable sitemap URLs`.
+  - `python3 -m pytest -q` returned `460 passed, 1555 subtests passed`.
+  - Local HTTP checks returned 200 for the guide, resources hub, CRM service page and sitemap with expected CRM guide markers.
+- Proof boundary: no client, testimonial, revenue uplift, conversion improvement, ROI, ranking, software recommendation, compliance approval or guarantee was claimed.
