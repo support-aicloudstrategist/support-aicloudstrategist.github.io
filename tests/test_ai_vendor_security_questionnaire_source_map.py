@@ -1,0 +1,45 @@
+from pathlib import Path
+import json
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+REL = "/resources/global-ai-vendor-security-questionnaire-answer-source-map/"
+URL = f"https://aicloudstrategist.com{REL}"
+PAGE = ROOT / "resources" / "global-ai-vendor-security-questionnaire-answer-source-map" / "index.html"
+
+
+def test_ai_vendor_security_questionnaire_source_map_is_buyer_safe():
+    html = PAGE.read_text(encoding="utf-8")
+
+    assert "AI vendor security questionnaire answer source map" in html
+    assert "answer source, owner, current status, limitation, review date and safe claim boundary" in html
+    assert "not a real customer case study" in html
+    assert "not legal/security/compliance/procurement advice" in html
+    assert "Request source-map fit check" in html
+    assert "No outreach was sent" in html
+
+
+def test_source_map_has_faq_and_article_structured_data():
+    html = PAGE.read_text(encoding="utf-8")
+    blocks = [json.loads(block) for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html)]
+
+    graph = next(block["@graph"] for block in blocks if isinstance(block, dict) and "@graph" in block)
+    article = next(item for item in graph if item.get("@type") == "Article")
+    assert article["mainEntityOfPage"] == URL
+    assert "AI trust center evidence" in article["about"]
+
+    faq = next(block for block in blocks if isinstance(block, dict) and block.get("@type") == "FAQPage")
+    assert len(faq["mainEntity"]) == 3
+    assert "approved source" in faq["mainEntity"][0]["acceptedAnswer"]["text"]
+
+
+def test_source_map_is_discoverable_from_resource_hub_llms_and_sitemap_queue():
+    resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    sitemap_script = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
+    sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+
+    assert REL in resources
+    assert URL in llms
+    assert REL in sitemap_script
+    assert URL in sitemap
