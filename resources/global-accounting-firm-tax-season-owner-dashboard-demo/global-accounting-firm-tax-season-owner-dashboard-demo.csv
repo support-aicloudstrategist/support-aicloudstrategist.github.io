@@ -1,0 +1,8 @@
+source,service_line,client_stage,blocker,portal_state,owner,age_band,adviser_question,ai_boundary,decision_status
+Missed phone call,Individual tax,new enquiry,callback needed,not invited,admin,under 24 hours,none,draft callback only,open
+Website form,Business tax,document collection,prior return missing,invite accepted,preparer,3-7 days,tax position question,human review before advice,escalate
+Existing-client email,Bookkeeping,renewal,bank statements missing,active,bookkeeper,1-2 days,none,non-advice reminder allowed,waiting client
+Portal message,Payroll,review questions,payroll report unclear,active,partner,8-14 days,professional judgement,human review required,blocked
+Referral,Advisory,proposal,scope unclear,not invited,partner,under 24 hours,advisory scope,human review required,qualify
+WhatsApp/SMS,Sales tax/GST/VAT,payment,payment issue,invite accepted,finance,3-7 days,payment dispute,no automated decision,escalate
+Paid lead,Cleanup,engagement letter,e-signature missing,invite sent,client success,1-2 days,none,non-advice reminder allowed,follow up

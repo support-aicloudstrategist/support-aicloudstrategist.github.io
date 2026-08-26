@@ -1222,8 +1222,15 @@
       "canonical": "https://aicloudstrategist.com/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "85c2e34d22708be6ff164140217c507b73e4b57b2bd18fc864908c76b2c3d130",
+      "main_sha256": "c7ca88fb0c406175e9e48fe5c9f1194042482e81f1cb812cf1b0a77702dc7fcd",
       "title": "Accounting Firm Tax Season Client Intake Follow-Up Checklist | AICloudStrategist"
+    },
+    "resources/global-accounting-firm-tax-season-owner-dashboard-demo/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-accounting-firm-tax-season-owner-dashboard-demo/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "5a756383dc3cee729e26237d4ba69afb9a4a0384ab04d5f807b59b2d95683d7b",
+      "title": "Accounting Firm Tax Season Owner Dashboard Demo | AICloudStrategist"
     },
     "resources/global-ai-pilot-production-readiness-evidence-room-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-production-readiness-evidence-room-template/",
@@ -1334,7 +1341,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "f0cb404c525f2bae5b73027712a8d93a1007f75cb448e6d2cbe69f48ea35aac2",
+      "main_sha256": "db098c065c5b2be74ceb33b3fe54f2bd0d9c7fd206a43b56aa85818809c5dbb3",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {

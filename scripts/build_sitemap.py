@@ -53,6 +53,7 @@ CURATED_PATHS = [
     "/industries/manufacturing-exporters/",
     "/industries/financial-services/",
     "/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
+    "/resources/global-accounting-firm-tax-season-owner-dashboard-demo/",
     "/resources/customer-problem-search/factory-manual-work-reduce/",
     "/resources/customer-problem-search/restaurant-local-service-customers-increase/",
     "/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/",

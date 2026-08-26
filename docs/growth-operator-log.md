@@ -119,6 +119,19 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - Local HTTP checks returned 200 for the guide, resources hub, CRM service page and sitemap with expected CRM guide markers.
 - Proof boundary: no client, testimonial, revenue uplift, conversion improvement, ROI, ranking, software recommendation, compliance approval or guarantee was claimed.
 
+## 2026-08-26 accounting firm owner-dashboard demo
+
+- Decision: improve revenue readiness for the accounting/tax-season follow-up cluster by adding a proof-before-platform asset that makes the buyer deliverable tangible before software or AI automation recommendations.
+- Created: `/resources/global-accounting-firm-tax-season-owner-dashboard-demo/`
+  - Adds synthetic CSV and SVG owner-dashboard rows for missed calls, portal invites, missing documents, proposals, payment issues, owner ageing, adviser questions and human-review boundaries.
+  - Adds Article, Dataset, FAQPage and BreadcrumbList structured data for search/answer-engine discoverability.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, linked the existing accounting tax-season checklist to the demo, refreshed release provenance and premium-shell baseline.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 332 indexable sitemap URLs`.
+  - `python3 -m pytest -q` returned `470 passed, 1561 subtests passed`.
+  - Local HTTP checks returned 200 for the demo page, CSV, SVG, resources hub, `llms.txt` and sitemap with expected markers.
+- Proof boundary: synthetic/demo only; no real accounting firm, CPA firm, bookkeeper, taxpayer, client data, advice, faster-filing evidence, revenue, ROI, ranking, certification, customer outcome or outreach was claimed.
+
 ## 2026-08-26 Custom AI build-vs-buy guide
 
 - Decision: close the remaining Phase 3 topical authority gap for custom AI solutions vs off-the-shelf AI tools, a high-intent buyer question that supports Enterprise AI Systems & Agents revenue readiness.
