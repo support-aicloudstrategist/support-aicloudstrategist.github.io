@@ -18,6 +18,15 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - Git diff reviewed after changes.
 - Proof boundary: no client, testimonial, production result, ROI number or certification was claimed.
 
+## 2026-08-26 financial services AI intake approval checklist
+
+- Decision: strengthen the new financial-services industry page with a concrete buyer-safe proof asset for client intake, document chasing, risk-review queues, AI draft boundaries, approval evidence and cloud/AI spend ownership.
+- Created: `/resources/global-financial-services-ai-intake-approval-evidence-checklist/` with WebPage, BreadcrumbList and FAQPage structured data.
+- Updated: `/industries/financial-services/`, `/resources/`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, and `llms.txt` so the asset is discoverable from buyer, crawler and answer-engine paths.
+- Added: `tests/test_financial_services_ai_intake_approval_evidence_checklist.py` covering indexability, JSON-LD, buyer-intent language, proof boundaries, internal links, sitemap and `llms.txt`.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 342 indexable sitemap URLs`; targeted pytest returned `7 passed`; brand trust monitor repo check returned fail_count 0 / warn_count 0 / score 99.0%.
+- Proof boundary: no real financial-services client, customer data, regulated approval, certification, revenue, cost saving, ROI, ranking, testimonial, platform partnership or AI-accuracy claim was made.
+
 ## 2026-08-24
 
 - Reviewed AICS repo assets, `llms.txt`, resources hub, sitemap builder, industry hub and SEO roadmap.

@@ -53,6 +53,7 @@ CURATED_PATHS = [
     "/resources/global-law-firm-missed-call-client-intake-follow-up-checklist/",
     "/industries/manufacturing-exporters/",
     "/industries/financial-services/",
+    "/resources/global-financial-services-ai-intake-approval-evidence-checklist/",
     "/resources/global-accounting-firm-tax-season-client-intake-follow-up-checklist/",
     "/resources/global-accounting-firm-tax-season-owner-dashboard-demo/",
     "/resources/customer-problem-search/factory-manual-work-reduce/",
