@@ -78,6 +78,17 @@ class EuropeHealthtechCloudTrustFinOpsEvidenceRoomTests(unittest.TestCase):
             "Human-review, escalation and claim-control map",
             "Executive dashboard wireframe",
             "Use this before buying another platform",
+            "Europe procurement search-intent map",
+            "EU AI Act overview",
+            "ICO artificial-intelligence guidance hub",
+            "NHS Data Security and Protection Toolkit",
+            "UK DTAC returned HTTP 403",
+            "healthcare SaaS FinOps cost allocation",
+            "AI spend governance LLM cost owner dashboard",
+            "GDPR AI data protection evidence healthtech",
+            "NHS DSPT security questionnaire evidence",
+            "Why this improves top-3/top-5 credibility",
+            "what evidence supports the questionnaire answer",
         ]:
             self.assertIn(phrase, self.html)
 
@@ -124,7 +135,7 @@ class EuropeHealthtechCloudTrustFinOpsEvidenceRoomTests(unittest.TestCase):
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-25")
+        self.assertEqual(article["dateModified"], "2026-08-26")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(f"Europe healthtech cloud trust FinOps evidence room: {URL}", self.llms)

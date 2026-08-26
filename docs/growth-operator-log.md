@@ -176,3 +176,18 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
   - `python3 scripts/build_sitemap.py` returned `wrote 335 indexable sitemap URLs`.
   - `python3 -m pytest tests/test_north_america_healthtech_ai_cloud_trust_diagnostic_package.py tests/test_north_america_healthtech_finops_evidence_room.py -q` returned `9 passed in 0.06s`.
 - Proof boundary: package-readiness/proof-of-method asset only; no real client, patient data, PHI, cloud bill, testimonial, certification, HIPAA/SOC2/HITRUST proof, legal/privacy/security/clinical advice, partnership, procurement approval, savings, ROI, ranking, revenue or outreach claimed.
+
+## 2026-08-26 Europe healthtech cloud trust + FinOps evidence-room search-intent upgrade
+
+- Region/timezone selected: Europe / UK-EU business afternoon (13:16 UTC).
+- Buyer pain-language targeted: healthtech cloud cost optimisation Europe, healthcare SaaS FinOps cost allocation, AI spend governance LLM cost owner dashboard, cloud cost management healthcare AWS Azure GCP, GDPR AI data protection evidence healthtech, EU AI Act healthtech vendor risk questions, NHS DSPT security questionnaire evidence, DTAC evidence checklist digital health supplier, subprocessor data residency and human-review evidence.
+- Competitor/reference snapshot from public checks: EU AI Act overview, ICO AI guidance hub, NHS Data Security and Protection Toolkit, Vanta GDPR, Drata GDPR, OneTrust AI Governance, TrustArc AI Governance, Apptio Cloudability, Datadog Cloud Cost Management, AWS Healthcare & Life Sciences, Microsoft Cloud for Healthcare and Google Cloud healthcare/life-sciences all returned HTTP 200/readable pages. UK DTAC returned HTTP 403 from this environment and was used only as buyer-language signal, not verified source-detail.
+- Decision: improve top-3/top-5 consideration for the existing Europe healthtech evidence-room asset by making the research-language, competitor context and source-access boundary explicit, rather than claiming outcomes AICS cannot yet prove.
+- Improved: `/resources/europe-healthtech-cloud-trust-finops-evidence-room/`.
+  - Added procurement search-intent map split by CFO/CTO/platform and DPO/CISO/procurement searches.
+  - Added source-check transparency and a credibility-gap paragraph explaining AICS as a proof-before-platform evidence layer around hyperscaler, FinOps and GRC tools.
+  - Updated Article JSON-LD `dateModified` to `2026-08-26` and expanded regression coverage for the new buyer-language markers.
+- Verification performed:
+  - `python3 scripts/build_sitemap.py` returned `wrote 339 indexable sitemap URLs`.
+  - `python3 -m pytest -q` returned `499 passed, 1582 subtests passed in 2.52s` after refreshing release provenance and premium-shell baseline and cleaning an unrelated masked telephone regression on the AI pilot launch approval summary.
+- Proof boundary: synthetic/buyer-education evidence-room only; no real European healthtech client, patient data, health data, cloud bill, testimonial, certification, GDPR/EU AI Act/NHS compliance proof, legal/privacy/security/clinical advice, procurement approval, savings, ROI, ranking, revenue or outreach claimed.
