@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-27 AI pilot data residency and subprocessor evidence checklist
+
+- Decision: reduce AI pilot trust friction for buyers who need data-location, subprocessor, training-use, retention, deletion and cross-border adviser evidence before production approval.
+- Created: `/resources/global-ai-pilot-data-residency-subprocessor-evidence-checklist/` with downloadable CSV, Article/FAQ/Breadcrumb structured data, and explicit proof/legal/compliance boundaries.
+- Updated: `/resources/`, `llms.txt`, curated sitemap path, regenerated `sitemap.xml`, release provenance and premium-shell baseline.
+- Added: `tests/test_ai_pilot_data_residency_subprocessor_evidence_checklist.py`.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 350 indexable sitemap URLs`; full pytest returned `544 passed, 1619 subtests passed`; local HTTP checks returned 200 for page/CSV/resources/llms/sitemap; public HTTP checks returned 200 with expected markers on support GitHub Pages and `aicloudstrategist.com`.
+- Proof boundary: no customer, certification, compliance proof, privacy proof, security proof, revenue, ranking, testimonial or vendor approval was claimed.
+
 ## 2026-07-11
 
 - Reviewed live AICS site workspace, resource hub, proof hub, packages page and sitemap.
