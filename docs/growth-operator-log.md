@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-27 AI pilot vendor lock-in exit readiness FAQ
+
+- Decision: reduce AI pilot procurement/trust friction for buyers who need data export, prompt ownership, model portability, fallback operations and board-safe exit evidence before scale.
+- Created: `/resources/global-ai-pilot-vendor-lock-in-exit-readiness-faq/` with Article/FAQ/Breadcrumb structured data and explicit proof/legal/procurement boundaries.
+- Updated: `/resources/`, `llms.txt`, curated sitemap path, regenerated `sitemap.xml`, release provenance and premium-shell baseline.
+- Added: `tests/test_ai_pilot_vendor_lock_in_exit_readiness_faq.py`.
+- Verification performed: full pytest returned `565 passed, 1656 subtests passed`; Git push to `main` succeeded; public HTTP checks returned 200 for the new page and sitemap marker.
+- Proof boundary: no customer, switching guarantee, compliance proof, procurement approval, revenue, ranking, testimonial or certification was claimed.
+
 ## 2026-08-27 AI pilot budget overrun approval log
 
 - Decision: reduce revenue/trust friction for AI pilot buyers who see LLM, GPU, cloud, integration or support spend rising before production approval.
