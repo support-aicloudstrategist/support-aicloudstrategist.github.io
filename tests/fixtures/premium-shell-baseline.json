@@ -1239,6 +1239,13 @@
       "main_sha256": "5a756383dc3cee729e26237d4ba69afb9a4a0384ab04d5f807b59b2d95683d7b",
       "title": "Accounting Firm Tax Season Owner Dashboard Demo | AICloudStrategist"
     },
+    "resources/global-ai-pilot-board-review-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-board-review-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "0a5590802dc4f1fe9b19ba58ddc59f7018beb565f20c60e7203fc87917d95dbe",
+      "title": "AI Pilot Board Review FAQ: Evidence Before Go-Live | AICloudStrategist"
+    },
     "resources/global-ai-pilot-board-risk-register-demo-board-pack/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-board-risk-register-demo-board-pack/",
       "forms": 0,
@@ -1273,6 +1280,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "3b5c514a1c24c8d3650c3572f84056f19dcce4b36de46c8a8baa380ac1ba8cf5",
       "title": "AI Pilot Data Residency and Subprocessor Evidence Checklist | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-data-residency-subprocessor-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-data-residency-subprocessor-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "0a1af6ccef884916c9854301a86380febea982132bb34dac71ea5a96dec4275b",
+      "title": "AI Pilot Data Residency and Subprocessor FAQ | AICloudStrategist"
     },
     "resources/global-ai-pilot-external-claim-approval-log-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-external-claim-approval-log-template/",
@@ -1474,8 +1488,15 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "7ea6855b2234443395f87e130551a1710d7495638bb9bfb6ae1a804a79e84a25",
+      "main_sha256": "213fd27fa1c76e95374807f566dffd725e4aea7e9d0c0e444cbb8ef658debfae",
       "title": "Resources | AICloudStrategist"
+    },
+    "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "5e917b90befa504bea390bfc914b2a75e125abd6759bb13eb0f5252cb63312ef",
+      "title": "India Cardiology TMT + Echo Follow-Up DPDP Checklist | AICS"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/india-clinic-ad-to-appointment-diagnostic-package/",

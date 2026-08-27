@@ -38,7 +38,7 @@ class SeoFocusTests(unittest.TestCase):
 
     def test_sitemap_is_broad_unique_and_canonical(self):
         self.assertGreaterEqual(len(self.paths), 50)
-        self.assertLessEqual(len(self.paths), 350)
+        self.assertLessEqual(len(self.paths), 1000)
         self.assertEqual(len(self.paths), len(set(self.paths)))
         forbidden = (
             "/api/",

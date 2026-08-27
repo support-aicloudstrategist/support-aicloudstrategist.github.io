@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
 TODAY = dt.date.today().isoformat()
-MAX_SITEMAP_URLS = 350
+MAX_SITEMAP_URLS = 1000
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 
@@ -104,6 +104,16 @@ CURATED_PATHS = [
     "/lead-leakage-calculator",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",
+    "/tools/",
+    "/trust-assets/",
+    "/trust-security/",
+    "/webinars/dpdp-for-clinics-2026/",
+    "/website-digital-presence/",
+    "/website-lead-capture-sprint",
+    "/whatsapp-automation-services/",
+    "/whatsapp-lead-management-india",
+    "/whatsapp-link-generator",
+    "/workflow-automation-services/",
 ]
 
 # Regression note: /resources/europe-saas-ai-evidence-room-template/ remains a

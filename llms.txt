@@ -3,7 +3,6 @@
 AICloudStrategist connects business outcomes, AI engineering, assurance, economics, security, operations, digital presence, lead intelligence, trust, and creative production. The public portfolio has three pillars: Enterprise AI, Business Growth Systems, and AI Creative Studio.
 ## Canonical pages
 - Home: https://aicloudstrategist.com/
-- Services: https://aicloudstrategist.com/services/
 - Evidence and proof policy: https://aicloudstrategist.com/case-studies/
 - How we work: https://aicloudstrategist.com/how-we-work/
 - About: https://aicloudstrategist.com/about/
