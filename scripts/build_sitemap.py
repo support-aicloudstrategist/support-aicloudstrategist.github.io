@@ -81,6 +81,7 @@ CURATED_PATHS = [
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
     "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
     "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
+    "/resources/global-ai-pilot-board-risk-register-review-diagnostic-package/",
     "/resources/global-ai-pilot-board-risk-register-template/",
     "/resources/global-ai-pilot-rollback-readiness-checklist/",
     "/resources/global-ai-pilot-remediation-decision-log-template/",
