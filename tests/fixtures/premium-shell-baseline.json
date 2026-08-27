@@ -1302,6 +1302,13 @@
       "main_sha256": "68ac4ab0e413759903f8ae09626e399d418ff2cb92f627ee5c7729894dace2ca",
       "title": "AI Pilot Governance Checklist vs MLOps and GRC Tools | AICloudStrategist"
     },
+    "resources/global-ai-pilot-human-override-escalation-matrix/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-human-override-escalation-matrix/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "c8bbe60f177cde5bc4d4bfef41b5cfcc0f1fa6e0fe7281ca3f4c30b79b8e8e4d",
+      "title": "AI Pilot Human Override and Escalation Matrix | AICloudStrategist"
+    },
     "resources/global-ai-pilot-incident-override-log-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-incident-override-log-template/",
       "forms": 0,
@@ -1488,7 +1495,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "213fd27fa1c76e95374807f566dffd725e4aea7e9d0c0e444cbb8ef658debfae",
+      "main_sha256": "f05013b61a1cac61aa81e5996597cfc050047d2e80db12f7231895da4219388b",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
