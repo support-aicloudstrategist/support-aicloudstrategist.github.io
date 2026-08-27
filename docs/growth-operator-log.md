@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-27 AI pilot budget overrun approval log
+
+- Decision: reduce revenue/trust friction for AI pilot buyers who see LLM, GPU, cloud, integration or support spend rising before production approval.
+- Created: `/resources/global-ai-pilot-budget-overrun-approval-log-template/` with downloadable CSV, Article/FAQ/Breadcrumb structured data, and explicit proof/legal/financial boundaries.
+- Updated: `/resources/`, `llms.txt`, curated sitemap path, regenerated `sitemap.xml`, release provenance and premium-shell baseline.
+- Added: `tests/test_ai_pilot_budget_overrun_approval_log_template.py`.
+- Verification performed: full pytest returned `547 passed, 1620 subtests passed`; local HTTP checks returned 200 for page/CSV/resources/llms/sitemap; GitHub Pages deployment completed successfully; public HTTP checks returned 200 for page, CSV and sitemap markers.
+- Proof boundary: no customer, savings, ROI, revenue, ranking, testimonial, certification, legal, procurement or financial-advice claim was made.
+
 ## 2026-08-27 AI pilot data residency and subprocessor evidence checklist
 
 - Decision: reduce AI pilot trust friction for buyers who need data-location, subprocessor, training-use, retention, deletion and cross-border adviser evidence before production approval.
