@@ -82,6 +82,7 @@ CURATED_PATHS = [
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
     "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
     "/resources/north-america-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
+    "/resources/north-america-healthtech-redacted-cloud-ai-intake-template/",
     "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
     "/resources/global-ai-pilot-board-review-faq/",
     "/resources/global-ai-pilot-data-residency-subprocessor-faq/",
