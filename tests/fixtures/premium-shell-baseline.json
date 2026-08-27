@@ -1330,6 +1330,13 @@
       "main_sha256": "ffbaeca6588e13cc94a32d40b5adf5e8adffcfdb7ba96514d30e8992b1a5e5b0",
       "title": "AI Pilot Launch Approval One-Page Summary | AICloudStrategist"
     },
+    "resources/global-ai-pilot-model-evaluation-regression-drift-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-model-evaluation-regression-drift-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "b2b66f23255ab64109ec81447bd9746b776d376a8872083bd58f87b5596c2fe6",
+      "title": "AI Pilot Model Evaluation Regression and Drift FAQ | AICloudStrategist"
+    },
     "resources/global-ai-pilot-post-launch-30-day-control-review-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-post-launch-30-day-control-review-checklist/",
       "forms": 0,
@@ -1385,6 +1392,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "f076c24510c96ed88150cef0e8081001de6de8893212e8df186bb65dad3c980b",
       "title": "AI Pilot Tools vs Assurance-Led Review | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-vendor-lock-in-exit-readiness-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-vendor-lock-in-exit-readiness-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "373f442c8ae5db0df5c16d6e02c0560e0a6592971af2cd8526e67766f466be13",
+      "title": "AI Pilot Vendor Lock-In Exit Readiness FAQ | AICloudStrategist"
     },
     "resources/global-ai-procurement-risk-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-procurement-risk-evidence-checklist/",
@@ -1502,7 +1516,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2dede48330022966c25cee30dc08b8cd69effee8dd0faaf00837d92efd0ed62f",
+      "main_sha256": "d8274b621f3a4fd980afb57ac71eb2b3cf7363e672b158e1756f41404ca0f324",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
