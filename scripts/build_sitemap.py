@@ -111,6 +111,7 @@ CURATED_PATHS = [
     "/resources/europe-private-clinic-no-credentials-intake-policy/",
     "/resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
     "/resources/europe-healthtech-cloud-trust-finops-executive-summary/",
+    "/resources/europe-healthtech-gdpr-dpia-security-questionnaire-source-map/",
     "/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",
