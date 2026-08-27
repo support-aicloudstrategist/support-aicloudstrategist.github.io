@@ -1,0 +1,75 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#eef2ff'/><stop offset='50%' stop-color='#ecfeff'/><stop offset='100%' stop-color='#f0fdf4'/></linearGradient>
+    <filter id='shadow' x='-20%' y='-20%' width='140%' height='140%'><feDropShadow dx='0' dy='14' stdDeviation='13' flood-color='#0f172a' flood-opacity='.14'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='url(#bg)'/>
+  <rect x='42' y='42' width='1116' height='816' rx='42' fill='rgba(255,255,255,.78)' stroke='#bae6fd'/>
+  <text x='75' y='104' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='900' fill='#0369a1' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING PROMPT SAFETY CHECKLIST</text>
+  <text x='75' y='164' font-family='Inter,Arial,sans-serif' font-size='56' font-weight='950' fill='#111827'>The AI Prompt Scope Box</text>
+  <text x='75' y='210' font-family='Inter,Arial,sans-serif' font-size='22' fill='#334155'>A safe educational checklist for keeping AI tasks narrow, testable, and reviewable before teams use them in daily work.</text>
+  <path d='M600 236 C600 276 600 304 600 344' stroke='#93c5fd' stroke-width='6' stroke-linecap='round' stroke-dasharray='12 16'/>
+  
+    <g filter='url(#shadow)'>
+      <rect x='78' y='260' width='322' height='220' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='100' y='282' width='68' height='48' rx='17' fill='#0ea5e9'/>
+      <text x='134' y='315' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#fff'>01</text>
+      <text x='182' y='315' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#111827'>One job only</text>
+      <text x='108' y='370' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='108' dy='0'>Ask the AI to complete one clear task, not</tspan><tspan x='108' dy='21'>strategy, writing, analysis, and approval</tspan><tspan x='108' dy='21'>in the same instruction.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='260' width='322' height='220' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='460' y='282' width='68' height='48' rx='17' fill='#6366f1'/>
+      <text x='494' y='315' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#fff'>02</text>
+      <text x='542' y='315' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#111827'>Known inputs</text>
+      <text x='468' y='370' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='468' dy='0'>List the exact source notes, fields,</tspan><tspan x='468' dy='21'>documents, or examples the AI may use. If a</tspan><tspan x='468' dy='21'>fact is absent, require “not enough</tspan><tspan x='468' dy='21'>information”.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='798' y='260' width='322' height='220' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='820' y='282' width='68' height='48' rx='17' fill='#16a34a'/>
+      <text x='854' y='315' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#fff'>03</text>
+      <text x='902' y='315' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#111827'>Allowed output</text>
+      <text x='828' y='370' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='828' dy='0'>Define the format: bullets, table,</tspan><tspan x='828' dy='21'>checklist, draft, summary, or triage label.</tspan><tspan x='828' dy='21'>Ban unsupported claims and invented</tspan><tspan x='828' dy='21'>details.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='258' y='535' width='322' height='220' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='280' y='557' width='68' height='48' rx='17' fill='#f97316'/>
+      <text x='314' y='590' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#fff'>04</text>
+      <text x='362' y='590' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#111827'>Review owner</text>
+      <text x='288' y='645' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='288' dy='0'>Name who checks the result before it</tspan><tspan x='288' dy='21'>affects a customer, employee, vendor,</tspan><tspan x='288' dy='21'>payment, policy, system, or public page.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='618' y='535' width='322' height='220' rx='28' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='640' y='557' width='68' height='48' rx='17' fill='#dc2626'/>
+      <text x='674' y='590' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#fff'>05</text>
+      <text x='722' y='590' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#111827'>Stop rules</text>
+      <text x='648' y='645' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='648' dy='0'>Pause when the task involves sensitive</tspan><tspan x='648' dy='21'>data, regulated decisions, identity, legal</tspan><tspan x='648' dy='21'>meaning, pricing, security, or emotional</tspan><tspan x='648' dy='21'>customer replies.</tspan></text>
+    </g>
+  <text x='78' y='762' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'>Five checks before reusing a prompt inside the business</text>
+  
+      <g>
+        <rect x='72' y='795' width='186' height='72' rx='20' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='165' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Purpose</text>
+        <text x='86' y='850' font-family='Inter,Arial,sans-serif' font-size='12.5' fill='#475569'>What decision or workflow does this prompt support?</text>
+      </g>
+      <g>
+        <rect x='286' y='795' width='186' height='72' rx='20' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='379' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Evidence</text>
+        <text x='300' y='850' font-family='Inter,Arial,sans-serif' font-size='12.5' fill='#475569'>Which facts are allowed, and where did they come from?</text>
+      </g>
+      <g>
+        <rect x='500' y='795' width='186' height='72' rx='20' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='593' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Output</text>
+        <text x='514' y='850' font-family='Inter,Arial,sans-serif' font-size='12.5' fill='#475569'>What should the AI return, and what must it never claim?</text>
+      </g>
+      <g>
+        <rect x='714' y='795' width='186' height='72' rx='20' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='807' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Risk</text>
+        <text x='728' y='850' font-family='Inter,Arial,sans-serif' font-size='12.5' fill='#475569'>What makes the result unsafe or uncertain?</text>
+      </g>
+      <g>
+        <rect x='928' y='795' width='186' height='72' rx='20' fill='#f8fafc' stroke='#cbd5e1'/>
+        <text x='1021' y='823' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#0f172a'>Owner</text>
+        <text x='942' y='850' font-family='Inter,Arial,sans-serif' font-size='12.5' fill='#475569'>Who reviews, approves, and records the final use?</text>
+      </g>
+</svg>
