@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "309b3fdeb8be6575467d47c8c8384c6494837248da30a9f4046a284e55b203cf",
+      "main_sha256": "9500f18d0def549bc38c7ac548bb2679bf0c95e0514ba27a553a61cdfbc4f99d",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "99475217d7475ebf95a3d1c27aff7f4c6718542461a0c8184e76f98196bc4202",
+      "main_sha256": "201445adf26e404a12fdc6df0d35c197bb7081b8171c903480ba929a6eabc3f0",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1516,7 +1516,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d8274b621f3a4fd980afb57ac71eb2b3cf7363e672b158e1756f41404ca0f324",
+      "main_sha256": "3ad34daa17da3db0d54d8516e60432409b1a642a91165dd6fb04346649f1e28b",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -1635,8 +1635,22 @@
       "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-finops-trust-evidence-room/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "274d94e461985cda280bdcb9d40054263778a07711bb734ddea5285762aa1cca",
+      "main_sha256": "365e6eeee5e2135167bae0ba1fe4be5583fdc2f44fa8f897dfc0c69c4cf5952b",
       "title": "North America Healthtech AI Cloud FinOps Trust Evidence Room | AICS"
+    },
+    "resources/north-america-healthtech-ai-cloud-first-review-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-first-review-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "5434d7a4c615bfa95d8085aa878bbb915735f00a3fbd97cb717a22b332808569",
+      "title": "North America Healthtech AI + Cloud First-Review Checklist | AICS"
+    },
+    "resources/north-america-healthtech-ai-cloud-owner-dashboard-demo/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-owner-dashboard-demo/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "eac0ba81e6916f46572478117f0a7122b95930974570babbad87014228d9358e",
+      "title": "North America Healthtech AI + Cloud Owner Dashboard Demo | AICS"
     },
     "resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
@@ -1644,6 +1658,41 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "478d1367fcdd6b72d6105bf7c92158e9f196d260929107980ff085c5dd072e3e",
       "title": "North America Healthtech AI Cloud Trust Diagnostic Package | AICS"
+    },
+    "resources/north-america-healthtech-ai-human-review-escalation-policy-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-human-review-escalation-policy-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "50e1c70b80c7444a2e48094a7a4ea6c86aef932fcd833f2ba852bcd44d3c21b6",
+      "title": "North America Healthtech AI Human Review Escalation Policy Template | AICS"
+    },
+    "resources/north-america-healthtech-ai-procurement-questionnaire-owner-handoff/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-procurement-questionnaire-owner-handoff/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "22fce770719f96c83fc6d6d4e55824e78a20e86df3aee0ba15d67035f36cbab1",
+      "title": "North America Healthtech AI Procurement Questionnaire Owner Handoff | AICS"
+    },
+    "resources/north-america-healthtech-ai-trust-first-review/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-first-review/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "8aecffc9ba9be441563e45688ca4e8d46cc8060d6e4eac2cf302ba2cd025141f",
+      "title": "North America Healthtech AI Trust First Review | AICS"
+    },
+    "resources/north-america-healthtech-cloud-trust-finops-no-credentials-intake-policy/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "235236babe07598fc4d6e40746c34d29c2074015d627904cef769b4b6af56e6a",
+      "title": "North America Healthtech Cloud Trust + FinOps No-Credentials Intake Policy | AICS"
+    },
+    "resources/north-america-healthtech-redacted-cloud-ai-intake-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-redacted-cloud-ai-intake-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "47fca8d1d32207f870fb198c645819ae7ad0d516972d0d204c28bbe96ec5acc9",
+      "title": "North America Healthtech Redacted Cloud + AI Intake Template | AICS"
     },
     "resources/overnight-ai-automation-safety-handoff/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/overnight-ai-automation-safety-handoff/",
@@ -1922,7 +1971,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-healthtech-growthos-vs-patient-engagement-grc-finops-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "113c96b477089f39998ba0422eeefb2ff82ce71ae572fad49ace76379c9993e1",
+      "main_sha256": "5987b7295cf9dfb4aeec1e4c9c1cad37c6bce7fc60e3da2bc546fa573db78fdb",
       "title": "US Healthtech GrowthOS vs Patient Engagement, GRC and FinOps Tools | AICS"
     },
     "resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/index.html": {
