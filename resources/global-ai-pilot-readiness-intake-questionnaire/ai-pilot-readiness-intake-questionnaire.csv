@@ -1,0 +1,9 @@
+area,question,evidence_to_attach,owner,stop_or_escalate_signal
+Use case,What exact workflow or decision does this AI pilot support?,One-page brief; user journey; excluded decisions,Business owner,"Scope says all operations fully autonomous or regulated advice without controls"
+Users,Who uses the output and who can override it?,Role map; approval path; override log,Operations owner,No named human fallback or unclear accountability
+Data,Which customer employee financial or sensitive data touches the workflow?,Data inventory; vendor-processing notes; retention answer,Data/privacy owner,"Unknown sensitive data retention region or subprocessor treatment"
+Evaluation,How was output quality checked before expansion?,Test set; failure categories; retest cadence; sampled approvals,Product/AI owner,"No baseline no red-team examples or no regression plan"
+Cost,"What unit-cost LLM GPU cloud and support-load thresholds trigger review?",Spend estimate; alert owner; volume scenario; approval gate,Finance/FinOps owner,Costs can scale without approval or owner visibility
+Security,"What access secrets logs model/vendor and integration risks need review?",Access list; environment boundary; vendor answers; incident contact,Security owner,Production access without review or unclear incident ownership
+Rollback,"How is the AI path paused reversed or replaced if quality cost or risk changes?",Rollback checklist; manual fallback; rehearsal evidence,Operations owner,"No pause trigger fallback or recovery owner"
+External claims,"What can be safely said publicly in sales to investors or to customers?",Approved claim log; proof links; adviser review notes,Executive owner,"Claims of accuracy safety compliance savings or transformation without approved proof"
