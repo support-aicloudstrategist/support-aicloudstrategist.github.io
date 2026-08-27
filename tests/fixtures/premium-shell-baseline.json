@@ -1260,6 +1260,13 @@
       "main_sha256": "307963798bf21eb7008683e272d36b9c53ba1a95e3be653f5a0c60b3bf692d3a",
       "title": "AI Pilot Board Risk Register Template | AICloudStrategist"
     },
+    "resources/global-ai-pilot-budget-overrun-approval-log-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-budget-overrun-approval-log-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "fb55bdefa44dbf3289d89d0642b073e629ee6d44afcb6e9250427b0173ce1d41",
+      "title": "AI Pilot Budget Overrun Approval Log Template | AICloudStrategist"
+    },
     "resources/global-ai-pilot-data-residency-subprocessor-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-data-residency-subprocessor-evidence-checklist/",
       "forms": 0,
@@ -1467,7 +1474,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d87be57e892c2bb1346edd7e89d3db6635b7157d9ef53c1c8edca126132e6e78",
+      "main_sha256": "7ea6855b2234443395f87e130551a1710d7495638bb9bfb6ae1a804a79e84a25",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
