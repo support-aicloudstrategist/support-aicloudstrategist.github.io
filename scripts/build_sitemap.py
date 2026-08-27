@@ -91,6 +91,7 @@ CURATED_PATHS = [
     "/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
     "/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
     "/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/",
+    "/resources/europe-private-clinic-no-credentials-intake-policy/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",
     "/case-studies/",

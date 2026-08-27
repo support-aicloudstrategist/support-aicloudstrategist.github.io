@@ -1071,6 +1071,13 @@
       "main_sha256": "0a799881cbdd5225bba24106ddcb6a69eb38a374c91a76214b44442027ac6e22",
       "title": "Europe Private Clinic GDPR Patient GrowthOS Evidence Checklist | AICS"
     },
+    "resources/europe-private-clinic-no-credentials-intake-policy/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-no-credentials-intake-policy/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "2e835ff59ac28b2daa3ffbd92e9ad53d087f65b865f21febf8c8bc51ee3cf6a7",
+      "title": "Europe Private Clinic No-Credentials Intake Policy | AICS"
+    },
     "resources/europe-private-clinic-patient-growthos-dashboard-demo/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
       "forms": 0,
@@ -1082,7 +1089,7 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "9957d2ec0503b0d8edbd387786086dd2dbd0e443375503e619dd682010d67d67",
+      "main_sha256": "63f8837789898412837d82e1b8404a99a213aeb6b75f7034399255c9df183c7f",
       "title": "Europe Private Clinic Patient GrowthOS vs Practice Management Platforms | AICS"
     },
     "resources/europe-saas-ai-evidence-room-faq/index.html": {
@@ -1432,7 +1439,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "17fbbf43e0458f7ca18cec5898f0b755e10978ce8947b71eb0dc122df1fcdd50",
+      "main_sha256": "225bf77cf40615d8b40758116a9ea9ab21c961ae216a486215bf6fbae214aa34",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {

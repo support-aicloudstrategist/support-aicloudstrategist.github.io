@@ -1,0 +1,13 @@
+field,purpose,example_value,redaction_rule,owner
+source_channel,Identify where the enquiry or follow-up item originated,Website form,Do not include patient name or contact detail,Clinic operations
+received_time_band,Show ageing without exact personal timeline,2026-08 week 35 / morning,Use date band or hour band where possible,Clinic operations
+service_line,Group by operational queue,Dermatology consultation,Use broad service category not diagnosis,Clinic operations
+follow_up_owner,Name accountable internal role,Reception lead,Use role name unless individual owner approved,Clinic manager
+current_status,Track queue state,Callback pending,No clinical details,AICS review input
+ageing_bucket,Prioritise overdue items,24-48 hours,No direct identifiers,AICS review input
+blocker_reason,Show why conversion or follow-up is stuck,No appointment slot visible,Use operational blocker only,Clinic operations
+approved_template_flag,Separate approved reminders from review-required messages,Yes,Do not paste full patient message unless approved,Clinic operations
+adviser_question_flag,Mark GDPR/UK GDPR/RGPD/privacy/legal questions for clinic adviser,Yes,Do not seek legal advice from AICS,Clinic adviser
+ai_human_boundary_flag,Show where AI receptionist/chatbot must hand off to human,Symptom or complaint mentioned,Do not include symptom text in default intake,Clinical/reception lead
+evidence_link_or_screenshot_id,Connect row to redacted evidence,Screenshot-03,Store redacted files only,Clinic operations
+notes_safe_for_review,Optional operational note,Website form delivered but no owner assigned,No patient identifiers or medical information,AICS review input
