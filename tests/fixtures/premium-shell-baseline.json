@@ -1260,6 +1260,27 @@
       "main_sha256": "307963798bf21eb7008683e272d36b9c53ba1a95e3be653f5a0c60b3bf692d3a",
       "title": "AI Pilot Board Risk Register Template | AICloudStrategist"
     },
+    "resources/global-ai-pilot-data-residency-subprocessor-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-data-residency-subprocessor-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "3b5c514a1c24c8d3650c3572f84056f19dcce4b36de46c8a8baa380ac1ba8cf5",
+      "title": "AI Pilot Data Residency and Subprocessor Evidence Checklist | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-external-claim-approval-log-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-external-claim-approval-log-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "365a9e2e36e145cc2ed2a32328a9ea42684c284cc594e3b3b35403d4b91baf3b",
+      "title": "AI Pilot External Claim Approval Log Template | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-governance-checklist-vs-mlops-grc-tools-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-governance-checklist-vs-mlops-grc-tools-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "68ac4ab0e413759903f8ae09626e399d418ff2cb92f627ee5c7729894dace2ca",
+      "title": "AI Pilot Governance Checklist vs MLOps and GRC Tools | AICloudStrategist"
+    },
     "resources/global-ai-pilot-incident-override-log-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-incident-override-log-template/",
       "forms": 0,
@@ -1301,6 +1322,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "2bf75735d7e8a131bbb8e24df80243c1fe544ba06b4a999afc2024bfe2d01f6f",
       "title": "AI Pilot Proof-of-Value Scorecard | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-readiness-intake-questionnaire/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-readiness-intake-questionnaire/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "d41910b107ad2a67f698022d78337ebc1c0a2337c6fab9788ee7ab37b069c38e",
+      "title": "AI Pilot Readiness Intake Questionnaire | AICloudStrategist"
     },
     "resources/global-ai-pilot-remediation-decision-log-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-remediation-decision-log-template/",
@@ -1439,7 +1467,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "225bf77cf40615d8b40758116a9ea9ab21c961ae216a486215bf6fbae214aa34",
+      "main_sha256": "d87be57e892c2bb1346edd7e89d3db6635b7157d9ef53c1c8edca126132e6e78",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
