@@ -6,6 +6,15 @@
     "url": "https://aicloudstrategist.com/publications/2026-08-27/ai-prompt-scope-box.html",
     "png": "https://aicloudstrategist.com/publications/2026-08-27/ai-prompt-scope-box.png",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-27",
-    "boundary": "Educational workflow only \u2014 not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
+    "boundary": "Educational workflow only — not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
+  },
+  {
+    "slot": "evening",
+    "slug": "ai-answer-verification-loop",
+    "title": "The AI Answer Verification Loop",
+    "url": "https://aicloudstrategist.com/publications/2026-08-27/ai-answer-verification-loop.html",
+    "png": "https://aicloudstrategist.com/publications/2026-08-27/ai-answer-verification-loop.png",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-27",
+    "boundary": "Educational workflow only — not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice."
   }
 ]
