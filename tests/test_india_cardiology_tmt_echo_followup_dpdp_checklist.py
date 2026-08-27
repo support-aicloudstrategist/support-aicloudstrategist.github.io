@@ -5,6 +5,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "india-cardiology-tmt-echo-followup-dpdp-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / "india-cardiology-followup-intake-template.csv"
+DEMO_CSV = ROOT / "resources" / SLUG / "demo-owner-dashboard.csv"
+DEMO_SVG = ROOT / "resources" / SLUG / "demo-owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -81,3 +83,33 @@ def test_csv_template_is_redaction_first_and_linked():
     assert f"/resources/{SLUG}/" in text(ROOT / "resources" / "index.html")
     assert URL in text(ROOT / "llms.txt")
     assert f"/resources/{SLUG}/" in text(ROOT / "scripts" / "build_sitemap.py")
+
+
+def test_demo_owner_dashboard_is_synthetic_redacted_and_linked():
+    html = text(PAGE)
+    assert "Demo owner dashboard artifact" in html
+    assert f"/resources/{SLUG}/demo-owner-dashboard.svg" in html
+    assert f"/resources/{SLUG}/demo-owner-dashboard.csv" in html
+
+    rows = list(csv.DictReader(DEMO_CSV.open(encoding="utf-8")))
+    assert len(rows) >= 6
+    fields = set(rows[0])
+    assert {"queue_id", "source_channel", "diagnostic_or_service_type", "callback_sla_status", "human_review_flag", "dpdp_redaction_boundary"}.issubset(fields)
+    csv_text = DEMO_CSV.read_text(encoding="utf-8")
+    for phrase in ["TMT", "Echo", "ECG", "Holter", "Report pickup", "TPA"]:
+        assert phrase in csv_text
+    assert "no patient name phone symptoms diagnosis report or raw chat" in csv_text
+
+    svg = text(DEMO_SVG)
+    for phrase in [
+        "Synthetic dashboard",
+        "no real clinic",
+        "patient identifiers",
+        "TMT",
+        "Echo",
+        "TPA document blocked",
+        "human review",
+    ]:
+        assert phrase in svg
+
+    assert "demo-owner-dashboard.csv" in text(ROOT / "llms.txt")

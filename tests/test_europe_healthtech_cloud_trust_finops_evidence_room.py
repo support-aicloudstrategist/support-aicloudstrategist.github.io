@@ -178,7 +178,7 @@ class EuropeHealthtechCloudTrustFinOpsEvidenceRoomTests(unittest.TestCase):
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-26")
+        self.assertEqual(article["dateModified"], "2026-08-27")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(f"Europe healthtech cloud trust FinOps evidence room: {URL}", self.llms)

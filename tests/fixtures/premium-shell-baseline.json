@@ -1061,8 +1061,15 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-evidence-room/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4aa338a3b16688ebcfc4d39ce60313b751bfb02b34434cb1953682e8009a2662",
+      "main_sha256": "311da805381d97d1de325cd3a5f79cba2e5346dc83aa4c2dc77d9beaaa9e04a5",
       "title": "Europe Healthtech Cloud Trust + FinOps Evidence Room | AICS"
+    },
+    "resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "1545ab9fc431a1ba4a7b44cdc4dc328d3b6a85f6c9c3c467810e1733d4808472",
+      "title": "Europe Healthtech Cloud Trust + FinOps No-Credentials Intake Policy | AICS"
     },
     "resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
@@ -1495,14 +1502,14 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "f05013b61a1cac61aa81e5996597cfc050047d2e80db12f7231895da4219388b",
+      "main_sha256": "2dede48330022966c25cee30dc08b8cd69effee8dd0faaf00837d92efd0ed62f",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5e917b90befa504bea390bfc914b2a75e125abd6759bb13eb0f5252cb63312ef",
+      "main_sha256": "5688af46a48658e7d6d8c5b7d3e0a910eafcd5f9748fe00b5dbdefe42928a286",
       "title": "India Cardiology TMT + Echo Follow-Up DPDP Checklist | AICS"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {
