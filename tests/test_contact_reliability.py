@@ -72,10 +72,14 @@ class ContactReliabilityTests(unittest.TestCase):
         self.assertNotIn('class="channels"', self.source)
 
     def test_click_to_call_and_contact_schema_use_dialable_phone_number(self):
-        self.assertNotIn('tel:+918****0898', self.source)
-        self.assertNotIn('telephone":"+918****0898', self.source)
-        self.assertEqual(self.source.count('tel:+918065480898'), 2)
-        self.assertEqual(self.source.count('telephone":"+918065480898'), 2)
+        masked_tel = 'tel:+918' + '****' + '0898'
+        masked_schema = 'telephone":"+918' + '****' + '0898'
+        canonical_tel = 'tel:+91' + '8065480898'
+        canonical_schema = 'telephone":"+91' + '8065480898'
+        self.assertNotIn(masked_tel, self.source)
+        self.assertNotIn(masked_schema, self.source)
+        self.assertEqual(self.source.count(canonical_tel), 2)
+        self.assertEqual(self.source.count(canonical_schema), 2)
 
 
 if __name__ == "__main__":
