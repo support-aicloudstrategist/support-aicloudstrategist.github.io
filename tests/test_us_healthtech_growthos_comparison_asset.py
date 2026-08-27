@@ -31,6 +31,7 @@ def test_us_healthtech_growthos_comparison_has_seo_schema_and_single_h1():
     assert article["mainEntityOfPage"] == URL
     assert "Healthcare GrowthOS comparison" in article["about"]
     assert "proof-before-platform" in article["about"]
+    assert "synthetic owner dashboard demo" in article["about"]
 
 
 def test_us_healthtech_growthos_comparison_contains_region_research_and_competitors():
@@ -65,11 +66,15 @@ def test_us_healthtech_growthos_comparison_contains_region_research_and_competit
 def test_us_healthtech_growthos_comparison_has_top_consideration_gaps_and_boundaries():
     source = html()
     for marker in [
-        "Top-3/top-5 credibility gaps AICS must close",
-        "public demo evidence room",
+        "Top-3/top-5 credibility gaps AICS has now started to close",
+        "Public demo evidence room",
         "Downloadable GitHub trust artifact",
         "Adviser boundary workflow",
         "Founder/CFO/CTO dashboard mockup",
+        "/resources/north-america-healthtech-ai-cloud-owner-dashboard-demo/",
+        "/resources/north-america-healthtech-redacted-cloud-ai-intake-template/redacted-cloud-ai-intake-template.csv",
+        "/resources/north-america-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
+        "synthetic SVG dashboard",
         "not a real client case study",
         "not production healthtech data",
         "not patient data",
