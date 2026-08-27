@@ -24,6 +24,8 @@ def test_ai_pilot_model_evaluation_regression_drift_faq_discovery_links():
     resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     sitemap_script = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
+    assert "/free-business-review/?package=ai-pilot-regression-drift-review" in html
+    assert "Request regression drift review scope" in html
     assert "/resources/global-enterprise-ai-model-evaluation-regression-evidence-checklist/" in html
     assert "/resources/global-ai-pilot-rollback-readiness-checklist/" in html
     assert "/resources/global-ai-pilot-remediation-decision-log-template/" in html
