@@ -1,0 +1,13 @@
+field,purpose,example_value,redaction_rule,owner
+source_channel,Where the enquiry arrived,Google Business Profile / Practo-style listing / phone / WhatsApp / referral / website,Do not include patient name phone number or full message text,Reception lead
+diagnostic_or_service_type,Classify the request,TMT / Echo / ECG / Holter / consultation / report pickup / TPA query,Use service category only; do not include symptoms diagnosis report findings or clinical notes,Reception lead
+redacted_case_id,Stable non-identifying row ID,CARD-DEMO-001,Use synthetic or internal ID only; do not include MRN phone number email or patient identifier,Operations owner
+current_stage,Current follow-up status,callback_due / appointment_confirmed / report_ready / doctor_review_needed / TPA_blocked / closed,Use operational status only; do not include clinical result or treatment advice,Reception lead
+last_contact_channel,Most recent non-sensitive channel,phone / WhatsApp / SMS / email / in person,Do not paste raw chat call recording or message body,Reception lead
+callback_sla_bucket,Ageing bucket for owner dashboard,under_2_hours / same_day / next_business_day / over_48_hours,Use bucket not exact patient-identifying timestamps unless safely redacted,Operations owner
+whatsapp_opt_in_evidence,Whether WhatsApp communication is supported,opt_in_seen / notice_sent / not_recorded / adviser_question,Do not include screenshot with patient identifiers unless redacted and approved,Privacy or clinic adviser
+tpa_pre_auth_blocker,Insurance or document blocker category,referral_letter_missing / payer_form_pending / estimate_pending / ID_pending / none,Do not include policy number ID proof or insurer documents in public proof,TPA desk
+human_review_flag,Whether medical or adviser review is required,clinical_question / urgent_symptom / report_interpretation / DPDP_question / none,Do not put medical detail in this row; route to qualified staff,Clinical owner
+next_owner,Named role responsible for next action,reception / cardiologist / technician / TPA desk / admin owner,Use role or first name only if internal; avoid public staff identifiers,Clinic owner
+evidence_link_or_screenshot_id,Pointer to redacted proof,SCR-REDACTED-001 / SHEET-ROW-24,Only link redacted evidence with no patient identifiers symptoms diagnoses reports or raw chats,Operations owner
+unsupported_claim_risk,Flags unsafe public claims,patient_growth_claim / DPDP_compliance_claim / AI_accuracy_claim / none,Do not publish claims without documented approval and evidence,Raj or approved reviewer
