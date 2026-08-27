@@ -44,6 +44,6 @@ def test_veterinary_vaccination_proof_asset_is_linked_from_evidence_hub_and_llms
 
     assert route in hub
     assert "India veterinary-clinic vaccination follow-up and DPDP evidence diagnostic" in hub
-    assert "<strong>46</strong>" in hub
-    assert "<em>21 methods</em>" in hub
+    assert "<strong>47</strong>" in hub
+    assert "<em>22 methods</em>" in hub
     assert f"https://aicloudstrategist.com{route}" in llms

@@ -45,6 +45,6 @@ def test_multispecialty_referral_tpa_proof_asset_is_linked_from_evidence_hub_and
 
     assert route in hub
     assert "India multispecialty-clinic referral and TPA follow-up DPDP evidence diagnostic" in hub
-    assert "<strong>46</strong>" in hub
-    assert "<em>21 methods</em>" in hub
+    assert "<strong>47</strong>" in hub
+    assert "<em>22 methods</em>" in hub
     assert f"https://aicloudstrategist.com{route}" in llms
