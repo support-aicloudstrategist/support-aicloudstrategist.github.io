@@ -27,6 +27,6 @@ def test_gastroenterology_case_study_is_discoverable_from_proof_hub_but_not_site
     hub = HUB.read_text(encoding="utf-8")
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert f"/case-studies/{SLUG}/" in hub
-    assert "88</strong> synthetic enquiry and follow-up rows" in hub
-    assert "19 methods" in hub
+    assert "100</strong> synthetic enquiry and follow-up rows" in hub
+    assert "20 methods" in hub
     assert URL not in sitemap

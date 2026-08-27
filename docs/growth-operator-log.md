@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-27 India diabetology HbA1c + foot-care follow-up DPDP proof asset
+
+- Decision: reduce healthcare GrowthOS trust friction for diabetology clinic buyers evaluating HbA1c report follow-up, foot-care escalation, consent evidence, owner queues and safe admin automation boundaries.
+- Created: `/case-studies/simulated-india-diabetology-hba1c-footcare-followup-dpdp-diagnostic/` as a clearly labelled noindex simulated proof-of-method page with Article/FAQ/Breadcrumb structured data.
+- Updated: `/case-studies/` proof hub totals from 88 to 100 synthetic healthcare rows and from 47 to 48 child routes; updated `llms.txt`, release provenance and regression tests.
+- Added: `tests/test_diabetology_hba1c_footcare_followup_case_study.py`.
+- Verification performed: diagnostic script returned `rows=12`, `synthetic_monthly_items=1754`, `admin_safe_rows=1`; full pytest returned `568 passed`; local HTTP checks returned 200 for the new page, proof hub and `llms.txt` markers.
+- Proof boundary: no real clinic, doctor, patient, PHI, compliance proof, medical advice, legal advice, clinical outcome, appointment growth, no-show reduction, revenue, ROI, ranking, testimonial, logo or platform partnership was claimed.
+
 ## 2026-08-27 AI pilot vendor lock-in exit readiness FAQ
 
 - Decision: reduce AI pilot procurement/trust friction for buyers who need data export, prompt ownership, model portability, fallback operations and board-safe exit evidence before scale.

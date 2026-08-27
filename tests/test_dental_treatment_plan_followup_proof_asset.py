@@ -42,6 +42,6 @@ def test_dental_treatment_plan_proof_asset_is_linked_from_evidence_hub_and_llms(
 
     assert route in hub
     assert "India dental treatment-plan follow-up and DPDP evidence diagnostic" in hub
-    assert "<strong>47</strong>" in hub
-    assert "<em>22 methods</em>" in hub
+    assert "<strong>48</strong>" in hub
+    assert "<em>23 methods</em>" in hub
     assert f"https://aicloudstrategist.com{route}" in llms

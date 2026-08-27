@@ -29,9 +29,9 @@ def test_cardiology_case_study_is_discoverable_from_proof_hub_but_not_sitemap():
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert f"/case-studies/{SLUG}/" in hub
-    assert "88</strong> synthetic enquiry and follow-up rows" in hub
-    assert "19 methods" in hub
-    assert "47</strong><span>existing child routes retained here" in hub
-    assert "22 methods" in hub
+    assert "100</strong> synthetic enquiry and follow-up rows" in hub
+    assert "20 methods" in hub
+    assert "48</strong><span>existing child routes retained here" in hub
+    assert "23 methods" in hub
     assert URL in llms
     assert URL not in sitemap
