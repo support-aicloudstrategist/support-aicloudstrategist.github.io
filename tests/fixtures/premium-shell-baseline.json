@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b6ac8daf463a8ad3ec4e951eccaf4f2305857bf1b8960dba35e23b8ebc647e7a",
+      "main_sha256": "309b3fdeb8be6575467d47c8c8384c6494837248da30a9f4046a284e55b203cf",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -1232,6 +1232,27 @@
       "main_sha256": "5a756383dc3cee729e26237d4ba69afb9a4a0384ab04d5f807b59b2d95683d7b",
       "title": "Accounting Firm Tax Season Owner Dashboard Demo | AICloudStrategist"
     },
+    "resources/global-ai-pilot-board-risk-register-demo-board-pack/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-board-risk-register-demo-board-pack/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "1777a8c50c220dcd1e5c0ae1d98f29c48815fea662fad02dc27d3af2d6fd2c1e",
+      "title": "AI Pilot Board Risk Register Demo Board Pack | AICloudStrategist"
+    },
+    "resources/global-ai-pilot-board-risk-register-review-diagnostic-package/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-board-risk-register-review-diagnostic-package/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "d390c03481ac767771d931830cd79d85a7852d9bbaedd77b29f22496e5ab3ba9",
+      "title": "AI Pilot Board Risk Register Review Diagnostic Package | AICS"
+    },
+    "resources/global-ai-pilot-board-risk-register-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-board-risk-register-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "307963798bf21eb7008683e272d36b9c53ba1a95e3be653f5a0c60b3bf692d3a",
+      "title": "AI Pilot Board Risk Register Template | AICloudStrategist"
+    },
     "resources/global-ai-pilot-incident-override-log-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-incident-override-log-template/",
       "forms": 0,
@@ -1411,7 +1432,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "daa485720eaf8d8ea641029760366c76b15d63bc7ca7a4afebe1a9ca5564f403",
+      "main_sha256": "17fbbf43e0458f7ca18cec5898f0b755e10978ce8947b71eb0dc122df1fcdd50",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-clinic-ad-to-appointment-diagnostic-package/index.html": {

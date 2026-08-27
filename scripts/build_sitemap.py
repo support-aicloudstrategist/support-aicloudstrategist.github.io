@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
 TODAY = dt.date.today().isoformat()
+MAX_SITEMAP_URLS = 350
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 
@@ -194,6 +195,8 @@ def discover_paths() -> list[str]:
         if path and path.startswith("/"):
             add(path)
 
+    if len(paths) > MAX_SITEMAP_URLS:
+        paths = paths[:MAX_SITEMAP_URLS]
     return paths
 
 
