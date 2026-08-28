@@ -1614,7 +1614,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4a351b465f607f9ef91d213e283634d8b7dbe07b891b8cbd1caa71f9e74e04ac",
+      "main_sha256": "58f279adc48b913435b9866c7a4db156ea17b04c16c4ac5e2df21322d2699c4a",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -2148,6 +2148,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "90268cc11303a7cc716279d4412ab6417925e64bd624dc9602adc94e87319733",
       "title": "US Medical Group Healthcare GrowthOS Vendor Shortlist Checklist | AICS"
+    },
+    "resources/us-medical-group-no-show-recovery-owner-dashboard-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-group-no-show-recovery-owner-dashboard-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "87a74ab2a44b0095de7e2f5c6dce1fd338b137526704f2a29e0541a8be97937d",
+      "title": "US Medical Group No-Show Recovery Owner Dashboard Checklist | AICS"
     },
     "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
