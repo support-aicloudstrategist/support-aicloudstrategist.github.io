@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-medical-group-healthcare-growthos-vendor-shortlist-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
+SVG = ROOT / "resources" / SLUG / "us-medical-group-shortlist-owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -89,6 +90,31 @@ class UsMedicalGroupHealthcareGrowthosVendorShortlistChecklistTests(unittest.Tes
             self.assertTrue(row["owner"])
             self.assertIn("AICS", row["aics_position"])
             self.assertIn("Do not", row["unsafe_claim_boundary"])
+
+    def test_synthetic_owner_dashboard_svg_is_linked_and_bounded(self):
+        svg = SVG.read_text(encoding="utf-8")
+        self.assertIn("us-medical-group-shortlist-owner-dashboard.svg", self.html)
+        for phrase in [
+            "Demo owner dashboard for internal shortlist discussion",
+            "demo/synthetic",
+            "patient-access leakage",
+            "AI receptionist boundaries",
+            "cloud/LLM/SMS/voice spend ownership",
+            "questionnaire readiness",
+            "No real medical group",
+        ]:
+            self.assertIn(phrase, self.html)
+        for phrase in [
+            "DEMO / SYNTHETIC",
+            "no PHI",
+            "ePHI",
+            "Credentials requested",
+            "Unverified claims blocked",
+            "No savings or ROI claim",
+            "No top-3 ranking or buyer-preference claim",
+            "AICS positioning: proof-first diagnostic",
+        ]:
+            self.assertIn(phrase, svg)
 
     def test_truth_boundaries_prevent_fake_proof(self):
         for phrase in [

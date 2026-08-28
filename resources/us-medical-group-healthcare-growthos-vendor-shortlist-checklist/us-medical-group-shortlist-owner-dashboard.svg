@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic US medical group Healthcare GrowthOS owner dashboard</title>
+  <desc id="desc">Demo labelled visual dashboard showing eight evidence queues for patient access, AI receptionist boundary, HIPAA-style evidence owners, cloud and AI spend ownership, vendor questionnaire readiness and board decisions. It contains no real patient, PHI, ePHI, payer, cloud or customer data.</desc>
+  <rect width="1200" height="720" rx="34" fill="#06111f"/>
+  <rect x="36" y="34" width="1128" height="652" rx="26" fill="#0b1f33" stroke="#55d6be" stroke-opacity="0.34"/>
+  <text x="72" y="88" fill="#eaf6fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">US Medical Group Healthcare GrowthOS Shortlist Dashboard</text>
+  <text x="72" y="123" fill="#9fb7c6" font-family="Inter, Arial, sans-serif" font-size="18">DEMO / SYNTHETIC — no PHI, ePHI, patient lists, claims, recordings, credentials, production exports or client outcomes.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="72" y="154" width="246" height="96" rx="18" fill="#102b45" stroke="#244b68"/>
+    <text x="94" y="190" fill="#9fb7c6" font-size="15">Open owner queues</text>
+    <text x="94" y="226" fill="#ffffff" font-size="38" font-weight="700">8</text>
+    <rect x="342" y="154" width="246" height="96" rx="18" fill="#102b45" stroke="#244b68"/>
+    <text x="364" y="190" fill="#9fb7c6" font-size="15">Human-review lanes</text>
+    <text x="364" y="226" fill="#ffffff" font-size="38" font-weight="700">5</text>
+    <rect x="612" y="154" width="246" height="96" rx="18" fill="#102b45" stroke="#244b68"/>
+    <text x="634" y="190" fill="#9fb7c6" font-size="15">Unverified claims blocked</text>
+    <text x="634" y="226" fill="#ffffff" font-size="38" font-weight="700">8</text>
+    <rect x="882" y="154" width="246" height="96" rx="18" fill="#102b45" stroke="#244b68"/>
+    <text x="904" y="190" fill="#9fb7c6" font-size="15">Credentials requested</text>
+    <text x="904" y="226" fill="#55d6be" font-size="38" font-weight="700">0</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="16">
+    <rect x="72" y="286" width="1056" height="54" rx="14" fill="#132943"/>
+    <text x="94" y="320" fill="#eaf6fb" font-weight="700">Evidence queue</text><text x="410" y="320" fill="#eaf6fb" font-weight="700">Owner / next decision</text><text x="760" y="320" fill="#eaf6fb" font-weight="700">Unsafe public claim blocked</text>
+    <g fill="#9fb7c6">
+      <text x="94" y="376">Missed calls, web forms, chat and referrals</text><text x="410" y="376">Patient access lead maps source-to-owner age</text><text x="760" y="376">No appointment-growth or revenue claim</text>
+      <text x="94" y="421">AI receptionist safe-capture boundary</text><text x="410" y="421">Clinical ops + privacy/security review</text><text x="760" y="421">No clinical triage or HIPAA proof claim</text>
+      <text x="94" y="466">BAA, subprocessor, access and retention questions</text><text x="410" y="466">Privacy/security adviser owner handoff</text><text x="760" y="466">No SOC 2/HITRUST/BAA evidence claim</text>
+      <text x="94" y="511">Cloud, LLM, SMS, voice and platform spend</text><text x="410" y="511">CFO/CTO/vendor owner threshold review</text><text x="760" y="511">No savings or ROI claim</text>
+      <text x="94" y="556">Questionnaire, integration and EHR handoffs</text><text x="410" y="556">Procurement + IT answer source map</text><text x="760" y="556">No integration partnership claim</text>
+      <text x="94" y="601">Board-ready shortlist scorecard</text><text x="410" y="601">Executive sponsor chooses diagnostic path</text><text x="760" y="601">No top-3 ranking or buyer-preference claim</text>
+    </g>
+  </g>
+  <rect x="72" y="633" width="1056" height="32" rx="16" fill="#55d6be" fill-opacity="0.13"/>
+  <text x="94" y="655" fill="#b8fff2" font-family="Inter, Arial, sans-serif" font-size="15">AICS positioning: proof-first diagnostic + owner-handoff layer beside patient engagement, AI receptionist, GRC/trust, FinOps, EHR, call-center and agency options.</text>
+</svg>
