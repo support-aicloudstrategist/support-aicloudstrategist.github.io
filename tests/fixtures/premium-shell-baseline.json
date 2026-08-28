@@ -221,7 +221,7 @@
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "555e46332abb1dbf3f803250905bcd5a8f9f2f73584ca8018b33bde95fb32849",
+      "main_sha256": "c14d9f72a5f0bc88cf1f298ffb30b348ea84202627a0d682b1b7c6b05e35f72f",
       "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist"
     },
     "case-studies/sample-cloud-finops-cost-optimization/index.html": {
@@ -1579,7 +1579,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d1bfaad02b23269f6e95261f5172ea8ce38a8ac78b6ade56aa0c3e4515b94725",
+      "main_sha256": "efae58eae5e293b44432ac8c7c9532beeb5f25b3e1abb9bc48c5d370db40c67c",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -1882,6 +1882,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "fd63fca37a0a57768504d344e0ee7359a357b94c901d6747d02cc8392d1d318a",
       "title": "UAE Healthtech Cloud Trust + Patient Data Evidence Source Map | AICS"
+    },
+    "resources/uae-healthtech-no-credentials-patient-data-intake-policy/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uae-healthtech-no-credentials-patient-data-intake-policy/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "75c00a52de676f93faae305de5af117cf537df5f3e56dd4f0fd3224d67421817",
+      "title": "UAE Healthtech No-Credentials Patient Data Intake Policy | AICS"
     },
     "resources/uae-saas-cloud-ai-spend-evidence-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uae-saas-cloud-ai-spend-evidence-template/",
