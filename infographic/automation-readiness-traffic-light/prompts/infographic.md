@@ -1,0 +1,1 @@
+Create a clean corporate Memphis traffic-light dashboard infographic titled 'The Automation Readiness Traffic Light' using the three lights and five checks from structured-content.md. Aspect 16:9-ish wide educational worksheet. Keep all claims educational and avoid client/result/legal/compliance claims.
