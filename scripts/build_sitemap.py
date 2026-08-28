@@ -44,6 +44,7 @@ CURATED_PATHS = [
     "/resources/lead-follow-up-automation-guide/",
     "/resources/crm-automation-examples-guide/",
     "/resources/custom-ai-solutions-vs-off-the-shelf-ai-tools-guide/",
+    "/resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/",
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/cloud-ai-economics-decision-pack/",
     "/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",

@@ -1,0 +1,6 @@
+failure_mode,override_trigger,named_evidence_owner,safe_next_action,unsafe_claim_boundary
+"Unsafe or harmful answer","Policy, user harm or regulated-advice boundary is crossed","Risk/product owner","Pause response, route to human, preserve redacted evidence and retest","Do not claim autonomous safe handling"
+"Stale or missing source","Retrieval source is outdated, absent or conflicts with approved policy","Knowledge-base owner","Fallback to approved human script and block source-dependent answer","Do not claim current or authoritative answers"
+"Tool action blocked","API, workflow or permissions failure prevents task completion","Platform/tool owner","Create manual queue, notify affected owner and test rollback route","Do not claim end-to-end automation"
+"SLA breach or queue spike","Unreviewed human-review items exceed the agreed response window","Operations/support owner","Prioritize by user impact, add capacity and record accepted risk","Do not claim always-on coverage"
+"Customer dispute","User challenges output, decision or action taken by the agent","Customer-success owner","Escalate, preserve evidence, stop repeat action and approve wording","Do not claim dispute-free operation"
