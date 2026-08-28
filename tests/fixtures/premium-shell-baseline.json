@@ -1561,6 +1561,13 @@
       "main_sha256": "51fd4c5af6b5145836435faf0c9ae8d5131873258dc723b45ca178ea08ce0665",
       "title": "Law Firm Missed-Call + Client Intake Follow-Up Checklist | AICloudStrategist"
     },
+    "resources/global-retail-inventory-manual-work-diagnostic-package/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-retail-inventory-manual-work-diagnostic-package/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "52658ab935ba5236273a4d8bc4d412fa7b31835e7c240dc1621b02d4c691a485",
+      "title": "Retail Inventory Manual Work Diagnostic Package | AICS"
+    },
     "resources/global-retail-inventory-manual-work-owner-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-retail-inventory-manual-work-owner-evidence-checklist/",
       "forms": 0,
@@ -1593,7 +1600,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5f1096defe59d7bdd0e1abb1fbb81fe1f1678293b319ecbf1852284adc75e6ff",
+      "main_sha256": "425f861da2308926575acda0bcbc9e7aaeda70faa4b37228467183f35bf6e8e0",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {

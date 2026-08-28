@@ -34,6 +34,7 @@ CURATED_PATHS = [
     "/resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/",
     "/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
     "/resources/global-retail-inventory-manual-work-owner-evidence-checklist/",
+    "/resources/global-retail-inventory-manual-work-diagnostic-package/",
     "/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
     "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
     "/resources/global-hotel-direct-booking-enquiry-follow-up-checklist/",
