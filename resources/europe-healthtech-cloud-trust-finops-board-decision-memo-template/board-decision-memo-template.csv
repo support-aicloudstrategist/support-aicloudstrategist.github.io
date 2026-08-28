@@ -1,0 +1,6 @@
+memo_section,board_question,evidence_source_needed,accountable_owner,adviser_question_status,decision_options,claim_boundary
+Context,Why review cloud/AI trust and spend now?,Redacted cost trend or procurement trigger,Programme owner,Owner review,Accept scope | narrow scope | defer,No production outcome claim
+Owner map,Who owns cost evidence adviser routing and human review?,Owner interview notes and role list,CFO + CTO + DPO/CISO,Open adviser questions labelled,Assign owner | escalate gap | pause,No compliance advice claim
+Evidence readiness,What can be answered from approved sources?,Evidence-room index and questionnaire source map,Security + privacy owner,Adviser review needed for GDPR/DPIA/EU AI Act rows,Continue | investigate | adviser review,No certification claim
+Risk boundary,What must not be claimed externally yet?,Claim-control log and policy links,RevOps + legal/privacy adviser,Open question,Block claim | approve qualified wording | request proof,No savings ROI revenue ranking or AI-accuracy claim
+Next 30 days,What is the smallest safe next action?,Owner backlog stale evidence and cost-review rows,Programme owner + finance,Open adviser queue,Stop | continue | investigate | defer,No procurement-win or patient-data claim

@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-28 Europe healthtech board decision memo template
+
+- Decision: improve credibility, top-3/top-5 consideration and revenue readiness by adding a board-ready decision artifact to the European healthtech Cloud Trust + FinOps cluster, turning evidence-room and diagnostic outputs into stop/continue/investigate decisions.
+- Created: `/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/` with Article/FAQ structured data and downloadable `board-decision-memo-template.csv`.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, regenerated `sitemap.xml`, and kept the asset connected to the existing Europe healthtech diagnostic package and evidence-room routes.
+- Added: `tests/test_europe_healthtech_cloud_trust_finops_board_decision_memo_template.py`.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 379 indexable sitemap URLs`; targeted pytest for the memo, evidence-room, diagnostic package, executive summary and source-map cluster returned `22 passed`; local HTTP checks returned 200 with expected markers for the memo page, CSV, resources hub, `llms.txt` and `sitemap.xml`; GitHub Pages public checks returned 200 with expected markers for the memo page, CSV and sitemap.
+- Proof boundary: template/synthetic only; no real European healthtech client, patient data, health data, customer data, GDPR/EU AI Act/DPIA compliance proof, legal/privacy/security/clinical advice, audit result, certification, procurement approval, savings, revenue, ROI, ranking, AI-accuracy evidence, testimonial or outreach was claimed.
+
 ## 2026-08-27 India diabetology HbA1c + foot-care follow-up DPDP proof asset
 
 - Decision: reduce healthcare GrowthOS trust friction for diabetology clinic buyers evaluating HbA1c report follow-up, foot-care escalation, consent evidence, owner queues and safe admin automation boundaries.

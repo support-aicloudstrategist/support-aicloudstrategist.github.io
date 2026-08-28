@@ -110,6 +110,8 @@ CURATED_PATHS = [
     "/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/",
     "/resources/europe-private-clinic-no-credentials-intake-policy/",
     "/resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
+    "/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
+    "/resources/europe-healthtech-cloud-trust-finops-evidence-room/",
     "/resources/europe-healthtech-cloud-trust-finops-executive-summary/",
     "/resources/europe-healthtech-gdpr-dpia-security-questionnaire-source-map/",
     "/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",

@@ -113,7 +113,7 @@ Status: Proof/demo layer started
 - [x] Create `/trust-security/` page for trust, approval gates, privacy, cloud security and honest proof positioning.
 - [x] Improve About/author/entity trust signals.
 - [ ] Build free profile/entity citations.
-- [ ] Publish more reusable templates/checklists/calculators for natural backlinks.
+- [x] Publish more reusable templates/checklists/calculators for natural backlinks.
 - [ ] Weekly competitor/ranking review process.
 
 ## Progress estimate
@@ -126,6 +126,12 @@ Completed milestones:
 
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
+
+## 2026-08-28 update — Europe healthtech board decision memo template
+- Created `/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/` with a downloadable board decision memo CSV for European healthtech cloud trust, AI FinOps, GDPR/DPIA adviser-question, vendor-risk, security-questionnaire, human-review and stop/continue/investigate decision searches.
+- Linked the asset from `/resources/`, `llms.txt`, the curated sitemap builder and the existing Europe healthtech diagnostic/evidence-room cluster; regenerated `sitemap.xml`.
+- Verification: sitemap build wrote 379 indexable URLs; targeted Europe healthtech cluster pytest returned 22 passed; local HTTP checks returned 200 for the memo page, CSV, resources hub, llms.txt and sitemap markers; GitHub Pages public checks returned 200 for the memo page, CSV and sitemap markers.
+- Proof boundary: template/synthetic only; no client, patient data, health data, compliance proof, adviser opinion, certification, procurement approval, savings, revenue, ROI, ranking, AI-accuracy evidence or testimonial was claimed.
 
 ## 2026-08-26 update — CRM automation examples guide
 - Created `/resources/crm-automation-examples-guide/` for CRM automation examples, missed-lead workflow, WhatsApp follow-up, appointment no-show recovery, quote follow-up, renewal reminders, lead-source review and exception handoff searches.
