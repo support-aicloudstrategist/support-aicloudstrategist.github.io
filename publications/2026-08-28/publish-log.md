@@ -9,8 +9,10 @@
 ## Published / verified
 - AICS website / GitHub Pages — Morning: https://aicloudstrategist.com/publications/2026-08-28/ai-escalation-receipt.html
 - GitHub repository / deployment evidence — Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-28
-- AICS website / GitHub Pages — Evening: https://aicloudstrategist.com/publications/2026-08-28/automation-readiness-traffic-light.html
+- AICS website / GitHub Pages — Evening: https://support-aicloudstrategist.github.io/publications/2026-08-28/automation-readiness-traffic-light.html
 - GitHub repository / deployment evidence — Evening: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-08-28
+- DEV.to — Evening: https://dev.to/aicloudstrategist/the-automation-readiness-traffic-light-2lop
+- Quora — Evening: https://www.quora.com/How-can-businesses-automate-repetitive-sales-and-marketing-tasks-with-AI/answer/Support-AICloud?prompt_topic_bio=1
 
 ## Verification boundary
 Educational workflow only — not legal, compliance, medical, financial, security, certification, savings, ranking, revenue, booking, or guaranteed-performance advice.
