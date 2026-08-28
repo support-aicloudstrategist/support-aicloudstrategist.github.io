@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "9500f18d0def549bc38c7ac548bb2679bf0c95e0514ba27a553a61cdfbc4f99d",
+      "main_sha256": "1e552f816e3f25f0bdddf1537f48d75bc239fdad5553767644d70053f78e47d9",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "201445adf26e404a12fdc6df0d35c197bb7081b8171c903480ba929a6eabc3f0",
+      "main_sha256": "3587c61977acb9d3bb8f3c4ccdf84a7b2c1fd4097c50dedfe187918dab2ac163",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1057,6 +1057,20 @@
       "main_sha256": "8ebfe5a5ecc2368be149c6d69a73261c18233192cc2b4351eb64ed1101d1b7e1",
       "title": "DPDP for Diagnostic Labs: What Every Indian Lab Owner Must Do Before May 2027"
     },
+    "resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "84c508d282b3279df837f06b223db41116ea8bf9697223c7280519949bc92f0c",
+      "title": "Europe Healthtech Cloud Trust + FinOps Board Decision Memo Template | AICS"
+    },
+    "resources/europe-healthtech-cloud-trust-finops-diagnostic-package/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-diagnostic-package/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "1bc41599c9182d2f5fb7dd16beb70eaa9a87946acb96d712e5dfc3b5607b2e35",
+      "title": "Europe Healthtech Cloud Trust + FinOps Diagnostic Package | AICS"
+    },
     "resources/europe-healthtech-cloud-trust-finops-evidence-room/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-evidence-room/",
       "forms": 0,
@@ -1064,12 +1078,33 @@
       "main_sha256": "311da805381d97d1de325cd3a5f79cba2e5346dc83aa4c2dc77d9beaaa9e04a5",
       "title": "Europe Healthtech Cloud Trust + FinOps Evidence Room | AICS"
     },
+    "resources/europe-healthtech-cloud-trust-finops-executive-summary/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-executive-summary/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "0c38f3b75e79558f0aa9692d6f9145b18dc5ef82c65d34b1df8630df4d9b71e1",
+      "title": "Europe Healthtech Cloud Trust + FinOps Executive Summary | AICS"
+    },
     "resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "1545ab9fc431a1ba4a7b44cdc4dc328d3b6a85f6c9c3c467810e1733d4808472",
       "title": "Europe Healthtech Cloud Trust + FinOps No-Credentials Intake Policy | AICS"
+    },
+    "resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "514dba04e648a94f583d34e4144ec3a66bbb531056eb7727fabdecf0c589ee25",
+      "title": "Europe Healthtech EU AI Act High-Risk Decision Log Template | AICS"
+    },
+    "resources/europe-healthtech-gdpr-dpia-security-questionnaire-source-map/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-gdpr-dpia-security-questionnaire-source-map/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "ff7320649a2bce73a881b535d6c55b43311e40df4f043c4f30d1bfe637e4a3ee",
+      "title": "Europe Healthtech GDPR DPIA Security Questionnaire Source Map | AICS"
     },
     "resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
@@ -1516,7 +1551,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "3ad34daa17da3db0d54d8516e60432409b1a642a91165dd6fb04346649f1e28b",
+      "main_sha256": "a5d16f2300c79d4bf8d867c04af37b648d5ba30743ef773f94adfe081874d6fb",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -1672,6 +1707,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "22fce770719f96c83fc6d6d4e55824e78a20e86df3aee0ba15d67035f36cbab1",
       "title": "North America Healthtech AI Procurement Questionnaire Owner Handoff | AICS"
+    },
+    "resources/north-america-healthtech-ai-trust-first-review-executive-summary/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-first-review-executive-summary/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "28f013844c7dd0eeeb2d7b2e4c1f15285409b72d6e710d4e271f9fb61170bbdc",
+      "title": "Healthtech AI Trust First Review Executive Summary | AICS"
     },
     "resources/north-america-healthtech-ai-trust-first-review/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-first-review/",
