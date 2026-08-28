@@ -160,7 +160,10 @@ def check_repo() -> dict:
             target = href.split("#", 1)[0].split("?", 1)[0]
             if not target or target.startswith("javascript:"):
                 continue
-            candidate = (ROOT / target.lstrip("/")).resolve()
+            if target.startswith("/"):
+                candidate = (ROOT / target.lstrip("/")).resolve()
+            else:
+                candidate = (path.parent / target).resolve()
             exists = candidate.exists() or candidate.with_suffix(".html").exists() or (candidate / "index.html").exists()
             if not exists and not target.endswith("/"):
                 exists = (ROOT / f"{target.lstrip('/')}.html").exists()
