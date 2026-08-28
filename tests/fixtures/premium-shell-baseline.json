@@ -1057,6 +1057,13 @@
       "main_sha256": "8ebfe5a5ecc2368be149c6d69a73261c18233192cc2b4351eb64ed1101d1b7e1",
       "title": "DPDP for Diagnostic Labs: What Every Indian Lab Owner Must Do Before May 2027"
     },
+    "resources/europe-healthtech-ai-trust-questionnaire-answer-bank-template/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-ai-trust-questionnaire-answer-bank-template/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "e1b18e279a79e798c22b1ff1675c1c64566bd4ad2d3a4edd809a8508159d127e",
+      "title": "Europe Healthtech AI Trust Questionnaire Answer Bank Template | AICS"
+    },
     "resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
       "forms": 0,
@@ -1105,6 +1112,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "ff7320649a2bce73a881b535d6c55b43311e40df4f043c4f30d1bfe637e4a3ee",
       "title": "Europe Healthtech GDPR DPIA Security Questionnaire Source Map | AICS"
+    },
+    "resources/europe-healthtech-procurement-response-readiness-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-procurement-response-readiness-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "9d8d9f3748aee8912f5ce17eaa54ae986ddb770de5824342e89adc8daa9c203c",
+      "title": "Europe Healthtech Procurement Response Readiness Checklist | AICS"
     },
     "resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
@@ -1551,7 +1565,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a5d16f2300c79d4bf8d867c04af37b648d5ba30743ef773f94adfe081874d6fb",
+      "main_sha256": "967755a9a48b2952666dd157094cfd26af1ca62f7a82ccb70976feeb76983689",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
