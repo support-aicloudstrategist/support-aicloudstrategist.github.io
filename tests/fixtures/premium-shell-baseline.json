@@ -1614,7 +1614,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "58f279adc48b913435b9866c7a4db156ea17b04c16c4ac5e2df21322d2699c4a",
+      "main_sha256": "91ee3b88db6edb73b08ad0593b7bace0ac8d95c38a260b65c1010af2e0d4ffaf",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -2160,8 +2160,8 @@
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "34b9cd954b507c915db4640c8b428dca6aad685a816928bdb2f83bb4f6d7e7fe",
-      "title": "US Outpatient Imaging Referral + Prior Auth Leakage Checklist | AICloudStrategist"
+      "main_sha256": "09ca14f6fa5e020effcc05619b993789818e80f2b18bfe5e59aba46ecfaa9f4d",
+      "title": "US Outpatient Imaging Referral + Prior Auth Leakage Checklist | AICS"
     },
     "resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/",
