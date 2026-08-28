@@ -30,7 +30,7 @@ def test_europe_healthtech_cloud_trust_finops_diagnostic_is_discoverable_and_sel
     assert href in RESOURCES
     assert "Europe Healthtech Cloud Trust + FinOps Diagnostic Package" in RESOURCES
     assert href in PRICING
-    assert "Seventeen concrete first offers" in PRICING
-    assert 'numberOfItems":17' in PRICING
+    assert "Eighteen concrete first offers" in PRICING
+    assert 'numberOfItems":18' in PRICING
     assert "Scope before quote" in PRICING
     assert "europe-healthtech-cloud-trust-finops-diagnostic" in PRICING

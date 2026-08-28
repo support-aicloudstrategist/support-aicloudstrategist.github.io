@@ -16,7 +16,7 @@ def test_pricing_surfaces_north_america_healthtech_trust_diagnostic_as_revenue_e
     html = PRICING.read_text(encoding="utf-8")
     section = _fixed_scope_section(html)
 
-    assert "Seventeen concrete first offers buyers can understand before a custom build." in section
+    assert "Eighteen concrete first offers buyers can understand before a custom build." in section
     assert "North America healthtech AI Trust First Review" in section or "North America healthtech AI trust-first review" in section
     assert "/resources/north-america-healthtech-ai-trust-first-review/" in section
     assert "no-credentials evidence-room" in section
@@ -36,7 +36,7 @@ def test_pricing_itemlist_structured_data_includes_north_america_healthtech_offe
 
     assert len(itemlists) == 1
     itemlist = itemlists[0]
-    assert itemlist["numberOfItems"] == 17
+    assert itemlist["numberOfItems"] == 18
     urls = [item["url"] for item in itemlist["itemListElement"]]
     assert "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-first-review/" in urls
     trust_first = next(item for item in itemlist["itemListElement"] if item["url"] == "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-first-review/")
