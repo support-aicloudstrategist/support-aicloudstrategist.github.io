@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1e552f816e3f25f0bdddf1537f48d75bc239fdad5553767644d70053f78e47d9",
+      "main_sha256": "1eb6b387d9e58e36e8ee7817b0c9b013014d3234791851d64cbf38ae2dd2ba54",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -1575,6 +1575,13 @@
       "main_sha256": "8a149a7b84aac0ddbbda9ad9fe8080f21d7c71e88130a8825801d0ddef988e4a",
       "title": "Retail Inventory Manual Work Owner Evidence Checklist | AICS"
     },
+    "resources/global-retail-inventory-pos-erp-inventory-app-comparison-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-retail-inventory-pos-erp-inventory-app-comparison-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "c9fb292d068d39de5db28c93b83be42cbd2f3c152a9ac8ba73c880f7329f8129",
+      "title": "Retail Inventory POS vs ERP vs Inventory App Comparison Checklist | AICS"
+    },
     "resources/healthcare-ai-patient-growth-platform/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/healthcare-ai-patient-growth-platform/",
       "forms": 0,
@@ -1600,7 +1607,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "425f861da2308926575acda0bcbc9e7aaeda70faa4b37228467183f35bf6e8e0",
+      "main_sha256": "79c9f51f7bd4b176856fc234f97dd7e771e87fad602ace369f2f95773a322ed0",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
