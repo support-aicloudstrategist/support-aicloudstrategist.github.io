@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-retail-inventory-manual-work-owner-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
+SVG = ROOT / "resources" / SLUG / "owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -39,6 +40,8 @@ def test_retail_inventory_page_contains_buyer_language_and_boundaries():
         "POS ERP spreadsheet inventory gaps",
         "source-to-owner evidence layer",
         "no-credentials retail workflow review",
+        "demo owner dashboard SVG",
+        "buyer-safe visual queue",
         "Claim boundaries",
     ]:
         assert phrase in html
@@ -75,3 +78,22 @@ def test_retail_inventory_csv_and_discovery_surfaces_are_wired():
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert f'"{PATH}"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
+
+
+def test_retail_inventory_demo_owner_dashboard_svg_is_claim_safe():
+    html = PAGE.read_text(encoding="utf-8")
+    svg = SVG.read_text(encoding="utf-8")
+    assert "owner-dashboard.svg" in html
+    for phrase in [
+        "Retail Inventory Manual Work Owner Dashboard",
+        "DEMO / SYNTHETIC ONLY",
+        "no real store",
+        "no real store data",
+        "supplier follow-up",
+        "Purchase-order handoff",
+        "Claim gate",
+        "no savings or stockout results asserted",
+    ]:
+        assert phrase in svg
+    for forbidden in ["trusted by", "real client results", "guaranteed", "saved ", "increased sales"]:
+        assert forbidden not in svg.lower()

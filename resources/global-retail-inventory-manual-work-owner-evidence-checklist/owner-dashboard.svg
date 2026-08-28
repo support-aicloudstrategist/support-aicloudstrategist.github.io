@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Retail Inventory Manual Work Owner Dashboard Demo</title>
+  <desc id="desc">Demo-only owner dashboard for retail inventory manual work. It shows synthetic stock-count, reorder, supplier follow-up, purchase-order and dead-stock owner queues with no real store data, supplier data, sales data, savings, ROI or stock accuracy claim.</desc>
+  <rect width="1200" height="760" fill="#07111f"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="56" y="62" fill="#f8fafc" font-size="34" font-weight="800">Retail Inventory Manual Work Owner Dashboard</text>
+    <text x="56" y="96" fill="#86efac" font-size="16" font-weight="700">DEMO / SYNTHETIC ONLY — no real store, supplier, POS, ERP, customer, sales, savings, ROI or stock-accuracy claim</text>
+
+    <rect x="56" y="130" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.55"/>
+    <text x="78" y="166" fill="#93c5fd" font-size="14" font-weight="800">Synthetic rows</text>
+    <text x="78" y="210" fill="#ffffff" font-size="40" font-weight="900">8</text>
+    <text x="78" y="238" fill="#cbd5e1" font-size="14">stock, reorder, PO and supplier queues</text>
+
+    <rect x="336" y="130" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.55"/>
+    <text x="358" y="166" fill="#93c5fd" font-size="14" font-weight="800">Owner handoffs</text>
+    <text x="358" y="210" fill="#ffffff" font-size="40" font-weight="900">Ops</text>
+    <text x="358" y="238" fill="#cbd5e1" font-size="14">store, buyer, finance, warehouse</text>
+
+    <rect x="616" y="130" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.55"/>
+    <text x="638" y="166" fill="#93c5fd" font-size="14" font-weight="800">Human review</text>
+    <text x="638" y="210" fill="#ffffff" font-size="40" font-weight="900">Required</text>
+    <text x="638" y="238" fill="#cbd5e1" font-size="14">pricing, expiry, supplier and cash flow</text>
+
+    <rect x="896" y="130" width="250" height="126" rx="18" fill="#0f2137" stroke="#38bdf8" stroke-opacity="0.55"/>
+    <text x="918" y="166" fill="#93c5fd" font-size="14" font-weight="800">Unsupported claims</text>
+    <text x="918" y="210" fill="#ffffff" font-size="40" font-weight="900">0</text>
+    <text x="918" y="238" fill="#cbd5e1" font-size="14">no savings or stockout results asserted</text>
+
+    <rect x="56" y="300" width="1090" height="356" rx="24" fill="#0b1828" stroke="#334155"/>
+    <text x="88" y="344" fill="#e2e8f0" font-size="23" font-weight="800">Proof-before-platform retail queue</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="90" y="392">1. Stock-count ageing: category, shelf, branch or warehouse count is stale; owner must approve recount evidence.</text>
+      <text x="90" y="436">2. Reorder triggers: separate true low-stock signals from gut-feel buying, seasonality and cash-flow approvals.</text>
+      <text x="90" y="480">3. Supplier follow-up: track delayed dispatch, substitutions, invoice questions and credit notes without raw contracts.</text>
+      <text x="90" y="524">4. Purchase-order handoff: buyer, finance, store and warehouse each have a named next action and due date.</text>
+      <text x="90" y="568">5. Dead-stock decisions: markdown, transfer, return-to-vendor or hold rows stay human-owned before automation.</text>
+      <text x="90" y="612">6. Claim gate: block stock accuracy, stockout reduction, margin, sales, savings and ROI wording until measured proof exists.</text>
+    </g>
+  </g>
+  <text x="56" y="710" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="13">AICloudStrategist demo artifact generated 2026-08-28 for global retail workflow buyer visibility.</text>
+</svg>
