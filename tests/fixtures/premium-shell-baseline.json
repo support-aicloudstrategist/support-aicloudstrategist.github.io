@@ -1579,7 +1579,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "d4ac67c88f2a4bb5a1cc09d3d65942024b916e12d2d9c9d80631c8839b9c0c3c",
+      "main_sha256": "d1bfaad02b23269f6e95261f5172ea8ce38a8ac78b6ade56aa0c3e4515b94725",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -1875,6 +1875,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "7632d5f287c13af675e1cd80d2fe6869be674ea903ab24e00f1b34a3e2fbbd00",
       "title": "UAE Clinic WhatsApp Appointment Automation | AICS"
+    },
+    "resources/uae-healthtech-cloud-trust-patient-data-evidence-source-map/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uae-healthtech-cloud-trust-patient-data-evidence-source-map/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "fd63fca37a0a57768504d344e0ee7359a357b94c901d6747d02cc8392d1d318a",
+      "title": "UAE Healthtech Cloud Trust + Patient Data Evidence Source Map | AICS"
     },
     "resources/uae-saas-cloud-ai-spend-evidence-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uae-saas-cloud-ai-spend-evidence-template/",
