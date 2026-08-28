@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-enterprise-ai-agent-access-review-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
+CSV = ROOT / "resources" / SLUG / "ai-agent-access-review-evidence-template.csv"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -60,3 +61,24 @@ def test_asset_is_linked_for_discovery():
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+
+
+def test_downloadable_access_review_csv_template_is_available_and_buyer_safe():
+    html = PAGE.read_text(encoding="utf-8")
+    csv_link = f"/resources/{SLUG}/ai-agent-access-review-evidence-template.csv"
+    assert csv_link in html
+    assert CSV.is_file()
+    csv = CSV.read_text(encoding="utf-8")
+    for header in [
+        "agent_or_workflow_name",
+        "agent_identity_or_service_account",
+        "permission_type",
+        "data_or_retrieval_source",
+        "human_review_route",
+        "revocation_trigger",
+        "claim_boundary",
+    ]:
+        assert header in csv.splitlines()[0]
+    assert "Synthetic row only" in csv
+    for forbidden in ["real client", "customer proof", "guaranteed", "certified", "increased revenue"]:
+        assert forbidden not in csv.lower()
