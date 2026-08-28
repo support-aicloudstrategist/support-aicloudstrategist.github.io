@@ -1,0 +1,1 @@
+Create a clean corporate Memphis bento-grid infographic titled 'The AI Escalation Receipt' using the five fields and five prompts from structured-content.md. Aspect 16:9-ish wide educational worksheet. Keep all claims educational and avoid client/result/legal/compliance claims.
