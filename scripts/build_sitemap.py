@@ -94,6 +94,7 @@ CURATED_PATHS = [
     "/resources/north-america-healthtech-ai-human-review-escalation-policy-template/",
     "/resources/north-america-healthtech-ai-trust-first-review-executive-summary/",
     "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
+    "/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
     "/resources/global-ai-pilot-board-review-faq/",
     "/resources/global-ai-pilot-data-residency-subprocessor-faq/",
     "/resources/global-ai-pilot-human-override-escalation-matrix/",

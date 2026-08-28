@@ -1481,15 +1481,15 @@
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-customer-onboarding-implementation-delay-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "933e7fe038daddf9fd7cf3200a2660cc5193403f4fe698712907281cf36d7056",
+      "main_sha256": "4b2b950d3250a343a2ff616fef3f9d735ed47fd04455c79ed07436607aae23d3",
       "title": "B2B SaaS Customer Onboarding Implementation Delay Checklist | AICS"
     },
     "resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5e52bbe87346c51ac7ddf48420b474634090320c8c3278de99daf9a3cb400b28",
-      "title": "B2B SaaS Demo-to-Security-Questionnaire Follow-Up Evidence Checklist | AICS"
+      "main_sha256": "41b56e5e4e957b470ac56e7c4ba0f577bed681d566290ff89ca27be66e478f95",
+      "title": "B2B SaaS Demo Security Questionnaire Follow-Up Evidence Checklist | AICS"
     },
     "resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/",
@@ -1586,7 +1586,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2633c629152b502507aee9158c72578ee82c253720b1c43bc7bb1769a7b40a5a",
+      "main_sha256": "06eb2b686348ef90a25981edd230e485196e010a10e6b778e50e9fa0a224921f",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
@@ -2118,8 +2118,8 @@
       "canonical": "https://aicloudstrategist.com/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "76f6ab1149866b4fcabd09dd80f16f80def9747c4353533b7244bbe3746bce19",
-      "title": "US Medical Group Healthcare GrowthOS Vendor Shortlist Checklist | AICloudStrategist"
+      "main_sha256": "c180b590b8e6bff391d852d55cc762ed5f6aa5be10e03a5df2babe6c8e4bec4f",
+      "title": "US Medical Group Healthcare GrowthOS Vendor Shortlist Checklist | AICS"
     },
     "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
