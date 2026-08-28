@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-28 Europe healthtech cloud trust review vs FinOps/GRC tools comparison
+
+- Decision: improve European healthtech top-3/top-5 consideration by publishing a competitor-shortlist comparison that explains where FinOps, GRC/trust-centre, patient engagement, cloud/provider and adviser routes fit — and where AICS must prove value as a no-credentials evidence/owner-handoff review.
+- Created: `/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/` with Article/FAQ structured data and downloadable comparison CSV.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, and regenerated `sitemap.xml`.
+- Added: `tests/test_europe_healthtech_cloud_trust_review_vs_finops_grc_tools_comparison.py`.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 383 indexable sitemap URLs`; focused pytest returned `5 passed in 0.05s`; `git diff --check` passed; local HTTP checks returned 200 for page, CSV, resources hub, `llms.txt` and sitemap markers.
+- Proof boundary: buyer-education/proof-of-method comparison only; no real client, testimonial, certification, compliance proof, legal/privacy/security/clinical/audit/procurement advice, vendor ranking, platform partnership, savings, revenue, ROI, demand, lead, customer or ranking claim was made.
+
 ## 2026-08-28 Europe healthtech board decision memo template
 
 - Decision: improve credibility, top-3/top-5 consideration and revenue readiness by adding a board-ready decision artifact to the European healthtech Cloud Trust + FinOps cluster, turning evidence-room and diagnostic outputs into stop/continue/investigate decisions.

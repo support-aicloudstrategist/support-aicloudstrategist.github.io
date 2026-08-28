@@ -117,6 +117,7 @@ CURATED_PATHS = [
     "/resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/",
     "/resources/europe-healthtech-ai-trust-questionnaire-answer-bank-template/",
     "/resources/europe-healthtech-procurement-response-readiness-checklist/",
+    "/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/",
     "/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",

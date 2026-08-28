@@ -127,6 +127,12 @@ Completed milestones:
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
 
+## 2026-08-28 update — Europe healthtech shortlist comparison
+- Created `/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/` to target European healthtech buyers comparing FinOps platforms, GRC/trust-centre tools, patient engagement/practice platforms, cloud providers, MSPs and adviser routes before board/procurement approval.
+- Added downloadable comparison CSV plus Article/FAQ schema; linked the page from `/resources/`, `llms.txt` and the curated sitemap builder; regenerated `sitemap.xml`.
+- Verification: sitemap build wrote 383 indexable URLs; focused regression returned 5 passed; local HTTP checks returned 200 for page, CSV, resources hub, `llms.txt` and sitemap markers.
+- Proof boundary: no vendor ranking, real client, testimonial, certification, compliance proof, platform partnership, legal/privacy/security/clinical/audit/procurement advice, savings, revenue, ROI, demand, lead or ranking claim.
+
 ## 2026-08-28 update — Europe healthtech board decision memo template
 - Created `/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/` with a downloadable board decision memo CSV for European healthtech cloud trust, AI FinOps, GDPR/DPIA adviser-question, vendor-risk, security-questionnaire, human-review and stop/continue/investigate decision searches.
 - Linked the asset from `/resources/`, `llms.txt`, the curated sitemap builder and the existing Europe healthtech diagnostic/evidence-room cluster; regenerated `sitemap.xml`.

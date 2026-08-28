@@ -1099,6 +1099,13 @@
       "main_sha256": "1545ab9fc431a1ba4a7b44cdc4dc328d3b6a85f6c9c3c467810e1733d4808472",
       "title": "Europe Healthtech Cloud Trust + FinOps No-Credentials Intake Policy | AICS"
     },
+    "resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "7ee86bc5d8a06a3df3ce27fd0aac95eee785706d49eda34eddf0bbb279576d66",
+      "title": "Europe Healthtech Cloud Trust Review vs FinOps, GRC and Patient Platforms | AICS"
+    },
     "resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/",
       "forms": 0,
@@ -1565,7 +1572,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "967755a9a48b2952666dd157094cfd26af1ca62f7a82ccb70976feeb76983689",
+      "main_sha256": "c52d6a596ce4a63067926fe1f77930a7c6432023958e4db2b82366644e755949",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
