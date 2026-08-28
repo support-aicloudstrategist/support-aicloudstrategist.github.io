@@ -1491,6 +1491,13 @@
       "main_sha256": "5e52bbe87346c51ac7ddf48420b474634090320c8c3278de99daf9a3cb400b28",
       "title": "B2B SaaS Demo-to-Security-Questionnaire Follow-Up Evidence Checklist | AICS"
     },
+    "resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "85b1668c3ea553e98bb871c0b41efafe232e8287bc2ad3d286432eb9fc341b61",
+      "title": "B2B SaaS Renewal Risk Owner Evidence Checklist | AICS"
+    },
     "resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
       "forms": 0,
@@ -1579,7 +1586,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "efae58eae5e293b44432ac8c7c9532beeb5f25b3e1abb9bc48c5d370db40c67c",
+      "main_sha256": "2633c629152b502507aee9158c72578ee82c253720b1c43bc7bb1769a7b40a5a",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {

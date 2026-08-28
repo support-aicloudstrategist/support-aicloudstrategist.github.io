@@ -30,6 +30,7 @@ CURATED_PATHS = [
     "/trust-compliance/",
     "/healthcare-growthos/",
     "/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
+    "/resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/",
     "/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
     "/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
     "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
