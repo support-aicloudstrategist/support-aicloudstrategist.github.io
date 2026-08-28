@@ -1068,7 +1068,7 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "84c508d282b3279df837f06b223db41116ea8bf9697223c7280519949bc92f0c",
+      "main_sha256": "7c4f156bf5a3f3feb6305adb1046a951272fe7ec6c51ba63cc7f61dc3e1be3da",
       "title": "Europe Healthtech Cloud Trust + FinOps Board Decision Memo Template | AICS"
     },
     "resources/europe-healthtech-cloud-trust-finops-diagnostic-package/index.html": {
@@ -1103,7 +1103,7 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "7ee86bc5d8a06a3df3ce27fd0aac95eee785706d49eda34eddf0bbb279576d66",
+      "main_sha256": "3427120c23c54ee21b97fd692d6af6c1a1f8e5898d71eec1116400bc15217aba",
       "title": "Europe Healthtech Cloud Trust Review vs FinOps, GRC and Patient Platforms | AICS"
     },
     "resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/index.html": {
@@ -1491,6 +1491,13 @@
       "main_sha256": "5e52bbe87346c51ac7ddf48420b474634090320c8c3278de99daf9a3cb400b28",
       "title": "B2B SaaS Demo-to-Security-Questionnaire Follow-Up Evidence Checklist | AICS"
     },
+    "resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "a4007508178c146dc84b91f22cee566e0665cd9f44838047fdbbeaad9030d198",
+      "title": "B2B SaaS Trial-to-Paid Follow-Up Evidence Checklist | AICS"
+    },
     "resources/global-clinic-after-hours-missed-call-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
       "forms": 0,
@@ -1572,7 +1579,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "3059f7d1dfcd7a5b9a3e9e29c5f746a040892ee51b4371d1a7df0b34a04eecab",
+      "main_sha256": "d4ac67c88f2a4bb5a1cc09d3d65942024b916e12d2d9c9d80631c8839b9c0c3c",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
