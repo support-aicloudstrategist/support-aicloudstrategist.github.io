@@ -1519,6 +1519,13 @@
       "main_sha256": "145f91051ee355d7d289ccff1b40e39e554e834b78a7e936cc6cd1242c727467",
       "title": "Ecommerce Abandoned Cart + WhatsApp Follow-Up Evidence Checklist | AICloudStrategist"
     },
+    "resources/global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "822b31d321db76fc52237fe2ebb3b13441656e8f7fdbc7b4dd9bfdf451c3ab54",
+      "title": "AI Agent Vendor Exit and Portability Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-enterprise-ai-cost-anomaly-approval-runbook/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",
       "forms": 0,
@@ -1607,7 +1614,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "efe250c0dd8de3ad558f7e4ca6c22e96d4b9ad1ef99e2d548af106623dee2182",
+      "main_sha256": "4a351b465f607f9ef91d213e283634d8b7dbe07b891b8cbd1caa71f9e74e04ac",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
