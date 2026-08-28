@@ -53,3 +53,12 @@ def test_india_dental_asset_is_linked_from_discovery_surfaces():
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert REL in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
+
+
+def test_india_dental_asset_uses_global_conversion_shell():
+    source = html()
+    assert source.count('data-aics-navigation-mount') == 1
+    assert source.count('data-aics-global-footer') == 1
+    assert '/css/site-navigation.css?v=premium-shell-20260727' in source
+    assert '/js/site-navigation.js?v=premium-shell-20260727' in source
+    assert 'id="navbar"' not in source
