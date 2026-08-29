@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-outpatient-imaging-referral-prior-auth-leakage-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
+SVG = ROOT / "resources" / SLUG / "outpatient-imaging-owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -30,6 +31,7 @@ class UsOutpatientImagingReferralPriorAuthLeakageChecklistTests(unittest.TestCas
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.svg = SVG.read_text(encoding="utf-8")
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -51,6 +53,9 @@ class UsOutpatientImagingReferralPriorAuthLeakageChecklistTests(unittest.TestCas
             "imaging center no-show recovery",
             "HIPAA-aware AI scheduling boundary",
             "modality capacity owner handoff",
+            "Demo owner dashboard visual",
+            "referral-to-authorized-to-scheduled-study",
+            "outpatient-imaging-owner-dashboard.svg",
             "RIS/PACS",
             "patient engagement",
             "AI receptionist",
@@ -131,7 +136,7 @@ class UsOutpatientImagingReferralPriorAuthLeakageChecklistTests(unittest.TestCas
         self.assertIn("FAQPage", doc_types)
         article = next(node for node in nodes if isinstance(node, dict) and node.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-08-29")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
@@ -139,6 +144,24 @@ class UsOutpatientImagingReferralPriorAuthLeakageChecklistTests(unittest.TestCas
         self.assertIn(URL, self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+
+    def test_demo_owner_dashboard_svg_is_buyer_safe(self):
+        self.assertTrue(SVG.is_file())
+        self.assertIn("Demo outpatient imaging referral and prior authorization owner dashboard", self.svg)
+        for phrase in [
+            "Synthetic no-PHI visual",
+            "Referral intake ageing",
+            "Prior-auth blockers",
+            "Abandoned callbacks",
+            "Capacity handoffs",
+            "Human review lanes",
+            "No-credentials first review",
+            "Unsupported claim stops",
+            "No outreach was sent",
+            "not HIPAA proof",
+            "not authorization-speed or volume evidence",
+        ]:
+            self.assertIn(phrase, self.svg)
 
 
 if __name__ == "__main__":

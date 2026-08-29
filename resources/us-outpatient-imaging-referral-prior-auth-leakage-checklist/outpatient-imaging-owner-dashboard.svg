@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Demo outpatient imaging referral and prior authorization owner dashboard</title>
+  <desc id="desc">Synthetic no-PHI owner dashboard for outpatient imaging referral leakage, prior authorization ageing, eligibility blockers, abandoned scheduling callbacks, modality capacity handoffs and unsafe AI boundary stops.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#164e63"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.25"/>
+    </filter>
+    <style>
+      .label{font-family:Inter,Arial,sans-serif;fill:#e0f2fe;font-size:20px;font-weight:700}.small{font-family:Inter,Arial,sans-serif;fill:#bfdbfe;font-size:16px}.metric{font-family:Inter,Arial,sans-serif;fill:#fff;font-size:38px;font-weight:800}.card{fill:#f8fafc;stroke:#bae6fd;stroke-width:2;rx:22;filter:url(#shadow)}.cardTitle{font-family:Inter,Arial,sans-serif;fill:#075985;font-size:18px;font-weight:800}.cardText{font-family:Inter,Arial,sans-serif;fill:#334155;font-size:14px}.badge{fill:#dbeafe;stroke:#93c5fd;stroke-width:1;rx:14}.badgeText{font-family:Inter,Arial,sans-serif;fill:#1e3a8a;font-size:13px;font-weight:700}.warn{fill:#fff7ed;stroke:#fed7aa;stroke-width:2;rx:16}.warnText{font-family:Inter,Arial,sans-serif;fill:#9a3412;font-size:14px;font-weight:700}.line{stroke:#38bdf8;stroke-width:4;stroke-linecap:round}.dot{fill:#38bdf8}.stop{fill:#fee2e2;stroke:#fecaca;stroke-width:2;rx:14}.stopText{font-family:Inter,Arial,sans-serif;fill:#991b1b;font-size:13px;font-weight:800}
+    </style>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="64" y="70" class="label" font-size="30">Demo-labelled owner dashboard: referral → authorized → scheduled study</text>
+  <text x="64" y="102" class="small">Synthetic no-PHI visual for outpatient imaging leaders. Not patient data, not HIPAA proof, not authorization-speed or volume evidence.</text>
+
+  <g transform="translate(64 140)">
+    <rect width="250" height="122" class="card"/>
+    <text x="24" y="35" class="cardTitle">Referral intake ageing</text>
+    <text x="24" y="82" class="metric" fill="#0f172a">38</text>
+    <text x="96" y="80" class="cardText">open redacted rows</text>
+    <text x="24" y="105" class="cardText">source + modality owner missing</text>
+  </g>
+  <g transform="translate(344 140)">
+    <rect width="250" height="122" class="card"/>
+    <text x="24" y="35" class="cardTitle">Prior-auth blockers</text>
+    <text x="24" y="82" class="metric" fill="#0f172a">17</text>
+    <text x="96" y="80" class="cardText">payer status rows</text>
+    <text x="24" y="105" class="cardText">evidence / peer-to-peer / owner queue</text>
+  </g>
+  <g transform="translate(624 140)">
+    <rect width="250" height="122" class="card"/>
+    <text x="24" y="35" class="cardTitle">Abandoned callbacks</text>
+    <text x="24" y="82" class="metric" fill="#0f172a">24</text>
+    <text x="96" y="80" class="cardText">safe follow-up candidates</text>
+    <text x="24" y="105" class="cardText">no clinical/report interpretation</text>
+  </g>
+  <g transform="translate(904 140)">
+    <rect width="232" height="122" class="card"/>
+    <text x="24" y="35" class="cardTitle">Capacity handoffs</text>
+    <text x="24" y="82" class="metric" fill="#0f172a">11</text>
+    <text x="94" y="80" class="cardText">modality slots</text>
+    <text x="24" y="105" class="cardText">MRI / CT / US owner routing</text>
+  </g>
+
+  <g transform="translate(90 320)">
+    <circle cx="0" cy="0" r="11" class="dot"/><line x1="15" y1="0" x2="205" y2="0" class="line"/><circle cx="220" cy="0" r="11" class="dot"/><line x1="235" y1="0" x2="425" y2="0" class="line"/><circle cx="440" cy="0" r="11" class="dot"/><line x1="455" y1="0" x2="645" y2="0" class="line"/><circle cx="660" cy="0" r="11" class="dot"/><line x1="675" y1="0" x2="865" y2="0" class="line"/><circle cx="880" cy="0" r="11" class="dot"/>
+    <text x="-35" y="38" class="label">Referral</text><text x="175" y="38" class="label">Auth</text><text x="380" y="38" class="label">Eligibility</text><text x="618" y="38" class="label">Schedule</text><text x="820" y="38" class="label">Study</text>
+  </g>
+
+  <g transform="translate(64 410)">
+    <rect width="340" height="145" class="warn"/>
+    <text x="22" y="34" class="warnText">Human review lanes</text>
+    <text x="22" y="64" class="cardText">• report/results question</text>
+    <text x="22" y="88" class="cardText">• clinical urgency / symptoms</text>
+    <text x="22" y="112" class="cardText">• payer-specific denial or peer-to-peer</text>
+  </g>
+  <g transform="translate(430 410)">
+    <rect width="340" height="145" class="card"/>
+    <text x="22" y="34" class="cardTitle">No-credentials first review</text>
+    <text x="22" y="64" class="cardText">Collect only redacted queue counts, modality labels,</text>
+    <text x="22" y="88" class="cardText">owner interviews and screenshots with identifiers removed.</text>
+    <rect x="22" y="108" width="178" height="26" class="badge"/><text x="36" y="126" class="badgeText">proof-before-platform</text>
+  </g>
+  <g transform="translate(796 410)">
+    <rect width="340" height="145" class="stop"/>
+    <text x="22" y="34" class="stopText">Unsupported claim stops</text>
+    <text x="22" y="64" class="cardText">Do not claim HIPAA compliance, faster authorizations,</text>
+    <text x="22" y="88" class="cardText">denial reduction, booked-study growth, savings or ROI.</text>
+    <text x="22" y="116" class="stopText">No outreach was sent.</text>
+  </g>
+
+  <text x="64" y="620" class="small">AICloudStrategist · outpatient imaging referral leakage · prior authorization delays · radiology scheduling abandoned calls · modality capacity owner handoff</text>
+</svg>
