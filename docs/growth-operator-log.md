@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-29 AI agent human override pricing entry
+
+- Decision: reduce enterprise AI revenue friction by converting the existing human-override/failure-escalation checklist into a visible fixed-scope diagnostic on the pricing page.
+- Updated: `/pricing` fixed-scope diagnostics from 19 to 20 offers with an "AI agent human override and failure escalation review" card linked to `/resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/`.
+- Updated: pricing ItemList structured data so the offer is machine-readable as a scoped Service with no-credentials/no-production-access first-review language.
+- Verification performed: focused pricing/resource pytest returned `18 passed`; `git diff --check` passed; local HTTP checks returned 200 for `/pricing.html` and the human-override resource with expected markers.
+- Proof boundary: no safety, accuracy, uptime, legal, security, compliance, savings, ranking, revenue or ROI claims were made.
+
 ## 2026-08-29 India nephrology / dialysis follow-up DPDP proof asset
 
 - Decision: improve healthcare GrowthOS credibility for high-risk clinic operations by converting the internal simulated nephrology/dialysis diagnostic into a public, noindex proof-of-method page with strict claim boundaries.

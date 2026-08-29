@@ -20,7 +20,7 @@ def test_pricing_surfaces_retail_inventory_as_sellable_diagnostic():
     html = _pricing_html()
     section = html.split('id="fixed-scope-diagnostics"', 1)[1].split('</section>', 1)[0]
 
-    assert "Eighteen concrete first offers buyers can understand before a custom build." in section
+    assert "Twenty concrete first offers buyers can understand before a custom build." in section
     assert "Retail inventory manual-work owner evidence diagnostic" in section
     assert ROUTE in section
     assert "stock-count delays, reorder triggers, supplier WhatsApp chasing" in section
@@ -33,9 +33,9 @@ def test_pricing_itemlist_structured_data_includes_retail_inventory_offer():
     docs = _ld_json_docs(_pricing_html())
     itemlist = next(doc for doc in docs if doc.get("@type") == "ItemList")
 
-    assert itemlist["numberOfItems"] == 18
+    assert itemlist["numberOfItems"] == 20
     item = itemlist["itemListElement"][-1]
-    assert item["position"] == 18
+    assert item["position"] == 20
     assert item["url"] == URL
     assert item["item"]["name"] == "Retail inventory manual-work owner evidence diagnostic"
     assert item["item"]["areaServed"] == ["Global"]
