@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-29 Law firm industry resource link repair
+
+- Decision: remove trust and conversion friction on the law-firm industry page by replacing three stale resource links with existing, publicly verified proof-safe assets.
+- Updated: `/industries/law-firms/` useful resources now points to the missed-call/client-intake checklist, US AI-intake FAQ and sellable diagnostic page.
+- Updated: `tests/test_law_firm_industry_page.py` to assert the live resource cluster that actually exists.
+- Verification performed: page-level internal link check returned `missing []`; focused law-firm pytest returned `2 passed`; `tools/brand_trust_monitor.py` returned `fail_count: 0`; public HTTP checks returned 200 for the industry page plus the three target resources after deployment.
+- Proof boundary: no legal, ethics, confidentiality, compliance, client, signed-client, revenue, ranking, AI-accuracy, testimonial, certification or platform-partnership claim was made.
+
 ## 2026-08-29 US law firm AI intake service proof links
 
 - Decision: reduce buyer trust friction on the US law-firm AI intake diagnostic by connecting the sellable service page directly to its confidentiality checklist, answering-service FAQ and simulated method proof.
