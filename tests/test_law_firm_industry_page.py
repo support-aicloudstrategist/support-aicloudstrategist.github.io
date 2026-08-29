@@ -13,7 +13,8 @@ def test_law_firm_industry_page_is_indexable_and_safety_bounded():
     assert "No attorney-client relationship by bot" in html
     assert "This page does not claim legal outcomes, clients or attorney approval" in html
     assert "/services/us-law-firm-ai-intake-answering-service/" in html
-    assert "/resources/us-law-firm-ai-intake-confidentiality-checklist/" in html
+    assert "/resources/global-law-firm-missed-call-client-intake-follow-up-checklist/" in html
+    assert "/resources/us-law-firm-ai-intake-answering-service-faq/" in html
 
     for payload in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
         json.loads(payload)
