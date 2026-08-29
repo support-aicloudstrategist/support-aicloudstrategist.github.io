@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-29 US law firm AI intake service proof links
+
+- Decision: reduce buyer trust friction on the US law-firm AI intake diagnostic by connecting the sellable service page directly to its confidentiality checklist, answering-service FAQ and simulated method proof.
+- Updated: `/services/us-law-firm-ai-intake-answering-service/` with a "Buyer proof assets for this service" section and checklist CTA.
+- Added: `tests/test_law_firm_service_proof_asset_links.py`.
+- Verification performed: focused law-firm pytest returned `6 passed`; `python3 scripts/build_sitemap.py` returned `wrote 398 indexable sitemap URLs`; public HTTP checks returned 200 for service, checklist and sitemap markers after deployment.
+- Proof boundary: no legal, ethics, confidentiality, compliance, client, signed-client, revenue, ranking, AI-accuracy, testimonial, certification or platform-partnership claim was made.
+
 ## 2026-08-29 AI agent human override pricing entry
 
 - Decision: reduce enterprise AI revenue friction by converting the existing human-override/failure-escalation checklist into a visible fixed-scope diagnostic on the pricing page.
