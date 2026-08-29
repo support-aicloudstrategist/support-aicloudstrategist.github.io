@@ -1,0 +1,79 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='960' viewBox='0 0 1200 960'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#1d4ed8'/><stop offset='1' stop-color='#0f766e'/></linearGradient>
+    <filter id='soft' x='-10%' y='-30%' width='120%' height='160%'><feDropShadow dx='0' dy='10' stdDeviation='9' flood-color='#0f172a' flood-opacity='.10'/></filter>
+  </defs>
+  <rect width='1200' height='960' fill='#f0fdfa'/>
+  <rect x='40' y='38' width='1120' height='884' rx='44' fill='white' stroke='#bae6fd' stroke-width='3'/>
+  <rect x='74' y='72' width='1052' height='164' rx='36' fill='url(#hero)'/>
+  <text x='108' y='118' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='900' fill='#bfdbfe' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING OPERATIONS GUIDE</text>
+  <text x='108' y='174' font-family='Inter,Arial,sans-serif' font-size='52' font-weight='950' fill='white'>The AI Workflow Evidence Receipt</text>
+  <text x='108' y='212' font-family='Inter,Arial,sans-serif' font-size='20' fill='#dcfce7'>A simple educational checklist for recording what an AI-assisted workflow used, who reviewed it, what changed, and how a human can reverse it.</text>
+  <text x='112' y='270' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Six fields that make AI assistance reviewable</text>
+  
+    <g filter='url(#soft)'>
+      <rect x='112' y='288' width='976' height='62' rx='20' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='132' y='301' width='176' height='36' rx='18' fill='#e0f2fe'/>
+      <text x='220' y='325' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#075985'>Input</text>
+      <text x='356' y='315' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='356' dy='0'>Record the source fields used and exclude anything</tspan><tspan x='356' dy='20'>unnecessary for the task.</tspan></text>
+      <circle cx='1044' cy='319' r='13' fill='#22c55e'/>
+      <path d='M1037 319 l5 5 l10 -12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+    </g>
+    <g filter='url(#soft)'>
+      <rect x='112' y='370' width='976' height='62' rx='20' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='132' y='383' width='176' height='36' rx='18' fill='#e0f2fe'/>
+      <text x='220' y='407' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#075985'>Intent</text>
+      <text x='356' y='397' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='356' dy='0'>Write the allowed purpose in plain language before the</tspan><tspan x='356' dy='20'>workflow runs.</tspan></text>
+      <circle cx='1044' cy='401' r='13' fill='#22c55e'/>
+      <path d='M1037 401 l5 5 l10 -12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+    </g>
+    <g filter='url(#soft)'>
+      <rect x='112' y='452' width='976' height='62' rx='20' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='132' y='465' width='176' height='36' rx='18' fill='#e0f2fe'/>
+      <text x='220' y='489' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#075985'>Reviewer</text>
+      <text x='356' y='479' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='356' dy='0'>Name the person or role that checks uncertain or</tspan><tspan x='356' dy='20'>external-impact outputs.</tspan></text>
+      <circle cx='1044' cy='483' r='13' fill='#22c55e'/>
+      <path d='M1037 483 l5 5 l10 -12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+    </g>
+    <g filter='url(#soft)'>
+      <rect x='112' y='534' width='976' height='62' rx='20' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='132' y='547' width='176' height='36' rx='18' fill='#e0f2fe'/>
+      <text x='220' y='571' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#075985'>Change log</text>
+      <text x='356' y='561' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='356' dy='0'>Capture the draft, human edits, approval note, and final</tspan><tspan x='356' dy='20'>version.</tspan></text>
+      <circle cx='1044' cy='565' r='13' fill='#22c55e'/>
+      <path d='M1037 565 l5 5 l10 -12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+    </g>
+    <g filter='url(#soft)'>
+      <rect x='112' y='616' width='976' height='62' rx='20' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='132' y='629' width='176' height='36' rx='18' fill='#e0f2fe'/>
+      <text x='220' y='653' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#075985'>Exception</text>
+      <text x='356' y='643' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='356' dy='0'>Show where the workflow pauses when facts are missing or</tspan><tspan x='356' dy='20'>sensitive.</tspan></text>
+      <circle cx='1044' cy='647' r='13' fill='#22c55e'/>
+      <path d='M1037 647 l5 5 l10 -12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+    </g>
+    <g filter='url(#soft)'>
+      <rect x='112' y='698' width='976' height='62' rx='20' fill='#ffffff' stroke='#dbeafe'/>
+      <rect x='132' y='711' width='176' height='36' rx='18' fill='#e0f2fe'/>
+      <text x='220' y='735' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#075985'>Rollback</text>
+      <text x='356' y='725' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='356' dy='0'>Keep the step that lets a human undo, correct, or stop</tspan><tspan x='356' dy='20'>the workflow.</tspan></text>
+      <circle cx='1044' cy='729' r='13' fill='#22c55e'/>
+      <path d='M1037 729 l5 5 l10 -12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+    </g>
+  <text x='112' y='770' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>How to use the receipt</text>
+  
+    <g>
+      <rect x='130' y='805' width='260' height='96' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <circle cx='162' cy='836' r='18' fill='#2563eb'/><text x='162' y='843' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='white'>1</text>
+      <text x='158' y='870' font-family='Inter,Arial,sans-serif' font-size='14' fill='#475569'><tspan x='158' dy='0'>Attach one receipt to each</tspan><tspan x='158' dy='20'>AI-assisted workflow, not to</tspan><tspan x='158' dy='20'>every tool experiment.</tspan></text>
+    </g>
+    <g>
+      <rect x='445' y='805' width='260' height='96' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <circle cx='477' cy='836' r='18' fill='#2563eb'/><text x='477' y='843' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='white'>2</text>
+      <text x='473' y='870' font-family='Inter,Arial,sans-serif' font-size='14' fill='#475569'><tspan x='473' dy='0'>Review the receipt during weekly</tspan><tspan x='473' dy='20'>operations meetings before</tspan><tspan x='473' dy='20'>adding more automation.</tspan></text>
+    </g>
+    <g>
+      <rect x='760' y='805' width='260' height='96' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <circle cx='792' cy='836' r='18' fill='#2563eb'/><text x='792' y='843' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='white'>3</text>
+      <text x='788' y='870' font-family='Inter,Arial,sans-serif' font-size='14' fill='#475569'><tspan x='788' dy='0'>Use missing receipt fields as a</tspan><tspan x='788' dy='20'>signal to keep the task manual</tspan><tspan x='788' dy='20'>or human-reviewed.</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,1 @@
+Create a clean corporate Memphis bento/receipt infographic titled 'The AI Workflow Evidence Receipt' using the six receipt fields and three usage steps from structured-content.md. Use blue/teal trust colors, white card rows, clear checkmarks, and business-safe educational language. Aspect 16:9-ish wide worksheet.
