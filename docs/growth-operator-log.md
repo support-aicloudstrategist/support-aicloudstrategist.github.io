@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-29 India nephrology / dialysis follow-up DPDP proof asset
+
+- Decision: improve healthcare GrowthOS credibility for high-risk clinic operations by converting the internal simulated nephrology/dialysis diagnostic into a public, noindex proof-of-method page with strict claim boundaries.
+- Created: `/case-studies/simulated-india-nephrology-dialysis-followup-dpdp-diagnostic/` with Article/FAQ/Breadcrumb structured data and reproducibility hashes.
+- Updated: `/case-studies/` proof hub from 49 to 50 child routes and operational ownership methods from 24 to 25; updated `llms.txt` and regenerated `sitemap.xml` while keeping the page out of the indexable sitemap via `noindex`.
+- Added: `tests/test_nephrology_dialysis_followup_case_study.py`.
+- Verification performed: source diagnostic returned `rows=12`, `synthetic_monthly_items=1558`, `callback_coverage_pct=25.6`, `dialysis_session_confirmation_pct=36.6`, `lab_report_followup_logging_pct=0.0`, `admin_safe_rows=1`; `python3 scripts/build_sitemap.py` returned `wrote 398 indexable sitemap URLs`; targeted pytest returned `10 passed in 0.14s`.
+- Proof boundary: simulated/synthetic only; no real clinic, dialysis unit, doctor, nurse, patient, caregiver, PHI, customer data, production export, DPDP compliance proof, medical/legal/privacy/security advice, patient outcome, dialysis adherence improvement, appointment growth, no-show reduction, payment approval improvement, revenue, ROI, ranking, testimonial, logo, certification, platform partnership, demand, lead, customer or AI-accuracy claim was made.
+
 ## 2026-08-28 Europe healthtech cloud trust review vs FinOps/GRC tools comparison
 
 - Decision: improve European healthtech top-3/top-5 consideration by publishing a competitor-shortlist comparison that explains where FinOps, GRC/trust-centre, patient engagement, cloud/provider and adviser routes fit — and where AICS must prove value as a no-credentials evidence/owner-handoff review.
