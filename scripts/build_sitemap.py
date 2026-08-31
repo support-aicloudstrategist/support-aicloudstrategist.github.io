@@ -106,6 +106,7 @@ CURATED_PATHS = [
     "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
     "/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
     "/resources/us-medical-group-no-show-recovery-owner-dashboard-checklist/",
+    "/resources/us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison/",
     "/resources/global-ai-pilot-board-review-faq/",
     "/resources/global-ai-pilot-data-residency-subprocessor-faq/",
     "/resources/global-ai-pilot-human-override-escalation-matrix/",

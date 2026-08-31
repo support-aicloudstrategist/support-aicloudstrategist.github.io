@@ -130,7 +130,7 @@ class UsSpecialtyClinicReferralPriorAuthDecisionMemoTests(unittest.TestCase):
         self.assertIn("FAQPage", doc_types)
         article = next(node for node in nodes if isinstance(node, dict) and node.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-08-31")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)

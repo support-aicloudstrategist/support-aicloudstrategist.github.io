@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2ff9f6c17af4e65a9930509a3d05c8ee5cbce7ddb2bb9c1726dca371698661ea",
+      "main_sha256": "a707669af3bbf811def03b457607e1328c36ce30b0a74066a21a3f9adee8a541",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "937971ba87cd537dfd2aca1ccbbfc363e5a6e61e0a2cd54067bb2b2407f1ce79",
+      "main_sha256": "3019b4cf1ff3d752c57bc9b607771a84b78295a601e27d3e1f3b514e7d4b8e19",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1467,7 +1467,7 @@
       "canonical": "https://aicloudstrategist.com/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "0e27873a31e7fd63cafae21046496ca992b404625577355f176cdf65c9e5e971",
+      "main_sha256": "3904a11148c897d8663a07bdcc408f844e808e71c00052f162d4d5803cd774ca",
       "title": "AI Vendor Security Questionnaire Answer Source Map | AICloudStrategist"
     },
     "resources/global-auto-dealer-internet-lead-follow-up-checklist/index.html": {
@@ -1502,8 +1502,15 @@
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-diagnostic-package/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "79007d5f32e7bd7a0d1a193aff194243cb6a5a06abf839e169c40bea24926a9f",
+      "main_sha256": "2bbee8bfee7855ad1939a42df9185b73ebd419661f5a362dac92e64ff5c0abfb",
       "title": "B2B SaaS Security Questionnaire Diagnostic Package | AICS"
+    },
+    "resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "e648bb18db13d89dacc7f59bf7797988e2d7aa855b1206c969ea8416a902c68d",
+      "title": "SaaS Security Questionnaire vs GRC, Trust Center and AICS Owner Review"
     },
     "resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
@@ -1628,7 +1635,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a9d6da4b4a2a4d93c62e81e94de6d91cec172d3484d4c17209108a8eea93a105",
+      "main_sha256": "ff1e3a3014a877cc0150c5a6df67aee54e2e72e17e38400a47c532624c11678d",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
@@ -1700,6 +1707,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "c8bcd5d18a88da281dec0437be3e879ae97342ca38a5e2134195d08be2ca204f",
       "title": "India Ophthalmology Patient GrowthOS vs Clinic Software, WhatsApp CRM and AI Receptionists | AICS"
+    },
+    "resources/india-radiology-mri-ct-referral-followup-dpdp-finops-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-radiology-mri-ct-referral-followup-dpdp-finops-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "10c60d5b128254ca8f9b50bacd10de48c43f32af2dfc880be72b24996b5a17ce",
+      "title": "India Radiology MRI/CT Referral Follow-up DPDP + FinOps Checklist | AICS"
     },
     "resources/indian-clinics-lose-patient-enquiries-after-6pm/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/indian-clinics-lose-patient-enquiries-after-6pm/",
@@ -2191,6 +2205,13 @@
       "main_sha256": "87a74ab2a44b0095de7e2f5c6dce1fd338b137526704f2a29e0541a8be97937d",
       "title": "US Medical Group No-Show Recovery Owner Dashboard Checklist | AICS"
     },
+    "resources/us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "12235bc6db1d3f63b5ebd3e8ed6463e7494896979932fe8a07ade0d6f748036a",
+      "title": "US No-show Recovery: GrowthOS vs Patient Engagement and AI Receptionist | AICS"
+    },
     "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
       "forms": 0,
@@ -2216,7 +2237,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-specialty-clinic-referral-prior-auth-decision-memo/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "041ab953a42e9082da9fea9a9b4850f3401da7ab3cbcf0c1e57cc2018516d903",
+      "main_sha256": "55d9df7f5598992d00ada358a76dd0c04780314d46c44821cbf30e2cc4dba911",
       "title": "US Specialty Clinic Referral + Prior Auth Decision Memo | AICS"
     },
     "resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/index.html": {
