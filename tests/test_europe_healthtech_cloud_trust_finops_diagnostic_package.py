@@ -18,6 +18,11 @@ def test_europe_healthtech_cloud_trust_finops_diagnostic_is_indexable_and_buyer_
     assert "cloud/AI spend owners" in PAGE
     assert "vendor-risk blockers" in PAGE
     assert "human-review boundaries" in PAGE
+    assert "Top-3 consideration gap against common alternatives" in PAGE
+    assert "OneTrust positioning around third-party risk management" in PAGE
+    assert "CloudZero/Finout around AI/cloud spend" in PAGE
+    assert "redacted answer-bank, source map and owner queue" in PAGE
+    assert "not an AICS compliance opinion" in PAGE
     assert "no patient data" in PAGE.lower()
     assert "No outreach was sent" in PAGE
     for forbidden in ("testimonial", "guarantee", "savings claim", "ROI claim", "compliance opinion"):
