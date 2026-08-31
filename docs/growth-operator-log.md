@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-31 Homepage no-show recovery comparison discovery link
+
+- Decision: reduce discovery friction for the latest high-intent US medical-group no-show recovery comparison by moving it from resource-hub-only visibility onto the homepage evidence rail.
+- Updated: `/` homepage evidence grid and evidence CTA row now link to `/resources/us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison/`.
+- Added: `tests/test_homepage_no_show_recovery_comparison_link.py`.
+- Verification performed: targeted pytest returned `7 passed`; `git diff --check` passed; local HTTP checks returned 200 for homepage and resource markers; public checks returned 200 for homepage marker on deployment attempt 2 and 200 for the resource marker; commit pushed to `main`.
+- Proof boundary: no customer, revenue, no-show reduction, ROI, ranking, lead, demand, HIPAA/SOC 2/HITRUST proof or testimonial claim was made.
+
 ## 2026-08-31 India cardiology Patient GrowthOS comparison
 
 - Decision: improve India healthcare GrowthOS top-3/top-5 credibility by closing the previously identified cardiology comparison gap: AICS Patient GrowthOS vs clinic software, diagnostic LIS, WhatsApp CRM, AI receptionist/call-answering and digital agency routes.
