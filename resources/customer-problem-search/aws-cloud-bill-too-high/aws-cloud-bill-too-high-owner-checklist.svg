@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AWS bill too high owner evidence checklist demo</title>
+  <desc id="desc">Demo infographic showing synthetic cloud bill review lanes for AWS, Azure, Google Cloud, Kubernetes, storage, backups, logs, alerts and claim boundaries.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#07152f"/><stop offset="0.55" stop-color="#164e63"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#03111f" flood-opacity="0.22"/></filter>
+  </defs>
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <text x="58" y="80" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="3">DEMO · SYNTHETIC · NO CREDENTIALS</text>
+  <text x="58" y="135" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="900">AWS/cloud bill too high?</text>
+  <text x="58" y="180" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="25">Owner evidence checklist before buying another FinOps tool or optimization sprint</text>
+  <g filter="url(#shadow)">
+    <rect x="58" y="230" width="320" height="180" rx="24" fill="#ffffff"/>
+    <text x="88" y="280" fill="#0f375f" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">1 · Explain the spike</text>
+    <text x="88" y="322" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Services/accounts included</text>
+    <text x="88" y="354" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Month-over-month drivers</text>
+    <text x="88" y="386" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Product + owner mapped</text>
+    <rect x="440" y="230" width="320" height="180" rx="24" fill="#ffffff"/>
+    <text x="470" y="280" fill="#0f375f" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">2 · Find safe waste</text>
+    <text x="470" y="322" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Idle compute / test envs</text>
+    <text x="470" y="354" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Old backups, logs, disks</text>
+    <text x="470" y="386" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Alerts and tag gaps</text>
+    <rect x="822" y="230" width="320" height="180" rx="24" fill="#ffffff"/>
+    <text x="852" y="280" fill="#0f375f" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="900">3 · Decide safely</text>
+    <text x="852" y="322" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Stop / resize / defer</text>
+    <text x="852" y="354" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• Reserve only with approval</text>
+    <text x="852" y="386" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">• No savings claim yet</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="58" y="470" width="1084" height="190" rx="26" fill="#f8fafc"/>
+    <text x="92" y="520" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900">Redacted first-pass evidence AICS can review</text>
+    <text x="92" y="565" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="21">✓ Billing exports/screenshots without keys, tokens, customer records or secrets</text>
+    <text x="92" y="602" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="21">✓ Account, service, region, environment, owner, monthly trend and business purpose fields</text>
+    <text x="92" y="639" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="21">✓ Approval lanes for production changes, commitments, architecture, security, tax/accounting and claims</text>
+  </g>
+  <text x="58" y="715" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="19">Boundary: buyer education/demo only — no real client data, no guaranteed savings, no ranking/demand claim, no outreach.</text>
+</svg>
