@@ -139,6 +139,7 @@ CURATED_PATHS = [
     "/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
     "/resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
+    "/resources/india-radiology-mri-ct-referral-followup-dpdp-finops-checklist/",
     "/lead-leakage-calculator",
     "/case-studies/",
     "/case-studies/aicloudstrategist-geo-turnaround/",

@@ -1,0 +1,25 @@
+workflow_id,source,modality,request_type,age_hours,status,owner,next_action_logged,consent_notice_evidence,referral_attachment_present,authorization_or_payment_status,report_delivery_channel,patient_query_contains_sensitive_detail,image_storage_gb,duplicate_image_study,cloud_access_control_evidence,followup_risk
+RAD-001,WhatsApp,MRI Brain,New booking,62,Unresolved,Front desk,No,No,Yes,Payment pending,WhatsApp,Yes,4.8,No,Partial,High
+RAD-002,Doctor referral,CT Abdomen,Referral scheduling,18,In progress,Coordinator,Yes,Yes,Yes,Authorization pending,Portal,No,7.4,No,Yes,Medium
+RAD-003,Phone,CT Chest,Missed callback,31,Unresolved,Unassigned,No,No,No,Unknown,Phone,No,6.1,No,No,High
+RAD-004,Website form,MRI Spine,Price query,44,Unresolved,Sales desk,No,Partial,No,Payment pending,Email,No,5.6,No,Partial,High
+RAD-005,WhatsApp,Ultrasound,Report access,9,Resolved,Reports desk,Yes,Yes,Yes,Cleared,WhatsApp,Yes,0.8,No,Partial,Medium
+RAD-006,Walk-in,MRI Knee,Repeat scan,73,Unresolved,Technician,No,Yes,Yes,Cleared,USB,No,4.2,Yes,No,High
+RAD-007,Doctor referral,CT Angio,Referral scheduling,26,In progress,Coordinator,Yes,No,Yes,Authorization pending,Portal,No,8.2,No,Partial,High
+RAD-008,Phone,MRI Shoulder,Missed callback,51,Unresolved,Unassigned,No,No,No,Unknown,Phone,No,4.9,No,No,High
+RAD-009,Aggregator,MRI Brain,New booking,13,In progress,Front desk,Yes,Partial,Yes,Payment pending,Portal,No,4.7,No,Partial,Medium
+RAD-010,WhatsApp,CT KUB,Report access,39,Unresolved,Reports desk,No,No,Yes,Cleared,WhatsApp,Yes,3.9,No,Partial,High
+RAD-011,Website form,MRI Contrast,Contraindication clarification,22,In progress,Radiologist review,Yes,Yes,Yes,Authorization pending,Email,Yes,5.9,No,Yes,Medium
+RAD-012,Doctor referral,CT Brain,Emergency slot request,7,Resolved,Coordinator,Yes,Yes,Yes,Cleared,Phone,No,5.1,No,Yes,Low
+RAD-013,WhatsApp,MRI Pelvis,New booking,57,Unresolved,Front desk,No,No,No,Payment pending,WhatsApp,Yes,5.4,No,No,High
+RAD-014,Phone,CT Chest,Repeat scan,69,Unresolved,Technician,No,Partial,Yes,Cleared,USB,No,6.0,Yes,No,High
+RAD-015,Website form,DEXA,Price query,16,In progress,Sales desk,Yes,No,No,Payment pending,Email,No,0.5,No,Partial,Medium
+RAD-016,Doctor referral,MRI Brain,Referral scheduling,34,Unresolved,Coordinator,No,No,Yes,Authorization pending,Portal,No,4.8,No,Partial,High
+RAD-017,WhatsApp,CT Abdomen,Report correction query,28,In progress,Reports desk,Yes,Yes,Yes,Cleared,WhatsApp,Yes,7.2,No,Partial,Medium
+RAD-018,Phone,MRI Spine,Missed callback,47,Unresolved,Unassigned,No,No,No,Unknown,Phone,No,5.7,No,No,High
+RAD-019,Aggregator,CT Chest,New booking,12,Resolved,Front desk,Yes,Yes,Yes,Cleared,Portal,No,6.1,No,Yes,Low
+RAD-020,Doctor referral,MRI Knee,Referral scheduling,41,Unresolved,Coordinator,No,Partial,Yes,Authorization pending,Portal,No,4.3,No,Partial,High
+RAD-021,WhatsApp,Ultrasound,Follow-up report access,24,In progress,Reports desk,Yes,No,Yes,Cleared,WhatsApp,Yes,0.7,No,Partial,Medium
+RAD-022,Website form,CT Angio,Price query,53,Unresolved,Sales desk,No,No,No,Payment pending,Email,No,8.0,No,No,High
+RAD-023,Phone,MRI Shoulder,Missed callback,11,In progress,Front desk,Yes,No,No,Unknown,Phone,No,4.9,No,Partial,Medium
+RAD-024,Doctor referral,MRI Contrast,Contraindication clarification,65,Unresolved,Radiologist review,No,Yes,Yes,Authorization pending,Email,Yes,5.8,No,Partial,High
