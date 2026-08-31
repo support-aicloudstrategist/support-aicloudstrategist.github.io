@@ -13,6 +13,7 @@ def test_law_firm_service_links_buyer_proof_assets_and_keeps_claim_boundaries():
     assert "Buyer proof assets for this service" in html
     assert "/resources/us-law-firm-ai-intake-confidentiality-checklist/" in html
     assert "/resources/us-law-firm-ai-intake-answering-service-faq/" in html
+    assert "/resources/us-law-firm-ai-intake-vs-legal-crm-answering-services-comparison/" in html
     assert "/case-studies/simulated-us-law-firm-ai-intake-confidentiality-diagnostic/" in html
     assert "/free-business-review/?package=us-law-firm-intake-evidence" in html
 
