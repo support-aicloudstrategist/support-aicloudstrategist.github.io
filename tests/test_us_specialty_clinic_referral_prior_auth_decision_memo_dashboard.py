@@ -20,6 +20,12 @@ def test_us_specialty_decision_memo_has_north_america_research_refresh():
     assert "AI receptionist for medical practice HIPAA patient engagement competitors" in html
     assert "healthcare growth OS patient access leakage prior auth referral leakage" in html
     assert "Top alternatives buyers compare include patient-engagement and access platforms" in html
+    assert "Direct public-source checks this run" in html
+    assert "Waystar healthcare revenue-cycle management platform page" in html
+    assert "prior authorization, eligibility, denial, workflow, automation, payer status and revenue cycle" in html
+    assert "Phreesia referrals resolved to an image asset" in html
+    assert "Experian Health prior-authorization returned HTTP 403" in html
+    assert "AKASA authorization URL returned HTTP 404" in html
     assert "RCM/prior-authorization services" in html
     assert "top-3/top-5 shortlist" in html
     assert "ranking, AI-answer inclusion, impressions, demand, leads, customers and revenue remain unverified" in html
