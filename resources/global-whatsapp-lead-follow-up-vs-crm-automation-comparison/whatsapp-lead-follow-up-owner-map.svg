@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Demo synthetic WhatsApp lead follow-up owner map</title>
+<desc id="desc">Synthetic evidence map showing source, ageing, owner and human review boundaries before CRM or chatbot automation.</desc>
+<rect width="1200" height="720" fill="#061323"/>
+<rect x="42" y="40" width="1116" height="640" rx="28" fill="#0b172a" stroke="#38bdf8" stroke-width="2" opacity=".96"/>
+<text x="80" y="105" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">WhatsApp lead follow-up owner map</text>
+<text x="80" y="142" fill="#bae6fd" font-family="Inter,Arial,sans-serif" font-size="18">DEMO / SYNTHETIC ONLY · no real leads, chats, calls, CRM export, revenue or ROI proof</text>
+<g font-family="Inter,Arial,sans-serif">
+<rect x="80" y="190" width="210" height="110" rx="18" fill="#0f766e"/><text x="108" y="232" fill="#ffffff" font-size="20" font-weight="700">Lead sources</text><text x="108" y="263" fill="#ccfbf1" font-size="15">WhatsApp · calls · forms</text><text x="108" y="287" fill="#ccfbf1" font-size="15">Instagram · Google profile</text>
+<rect x="360" y="190" width="210" height="110" rx="18" fill="#1d4ed8"/><text x="388" y="232" fill="#ffffff" font-size="20" font-weight="700">Owner queue</text><text x="388" y="263" fill="#dbeafe" font-size="15">assigned · ageing · status</text><text x="388" y="287" fill="#dbeafe" font-size="15">next action visible</text>
+<rect x="640" y="190" width="210" height="110" rx="18" fill="#7c3aed"/><text x="668" y="232" fill="#ffffff" font-size="20" font-weight="700">Safe automation</text><text x="668" y="263" fill="#ede9fe" font-size="15">approved templates</text><text x="668" y="287" fill="#ede9fe" font-size="15">human review gates</text>
+<rect x="920" y="190" width="190" height="110" rx="18" fill="#be123c"/><text x="948" y="232" fill="#ffffff" font-size="20" font-weight="700">Stop rows</text><text x="948" y="263" fill="#ffe4e6" font-size="15">price/legal/refund</text><text x="948" y="287" fill="#ffe4e6" font-size="15">sensitive data</text>
+<path d="M302 245 H348" stroke="#93c5fd" stroke-width="5"/><path d="M582 245 H628" stroke="#93c5fd" stroke-width="5"/><path d="M862 245 H908" stroke="#93c5fd" stroke-width="5"/>
+<rect x="80" y="355" width="1030" height="230" rx="20" fill="#111827" stroke="#334155"/>
+<text x="110" y="400" fill="#f8fafc" font-size="22" font-weight="700">Synthetic owner dashboard rows</text>
+<text x="110" y="442" fill="#cbd5e1" font-size="17">1. Missed callback over 24h → owner assigned → no automated claim</text>
+<text x="110" y="480" fill="#cbd5e1" font-size="17">2. Quote sent, payment pending → finance review → approved reminder only</text>
+<text x="110" y="518" fill="#cbd5e1" font-size="17">3. No consent / opt-out uncertain → suppress campaign → human verification</text>
+<text x="110" y="556" fill="#cbd5e1" font-size="17">4. Complaint, refund, regulated or sensitive issue → stop automation → specialist review</text>
+<text x="80" y="640" fill="#bae6fd" font-size="16">No customer case study · no platform partnership · no conversion-rate, sales or revenue claim</text>
+</g>
+</svg>

@@ -44,6 +44,7 @@ CURATED_PATHS = [
     "/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
     "/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
     "/resources/lead-follow-up-automation-guide/",
+    "/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/",
     "/resources/crm-automation-examples-guide/",
     "/resources/custom-ai-solutions-vs-off-the-shelf-ai-tools-guide/",
     "/resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/",
