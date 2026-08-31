@@ -127,6 +127,12 @@ Completed milestones:
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
 
+## 2026-08-31 update — India cardiology Patient GrowthOS comparison
+- Created `/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/` to target cardiology clinic software, diagnostic LIS, WhatsApp CRM, AI receptionist and Patient GrowthOS comparison searches.
+- Added downloadable comparison CSV, resources-hub card, `llms.txt` discovery route, curated sitemap entry and regression coverage.
+- Verification: sitemap build wrote 401 indexable URLs; focused cardiology pytest returned 9 passed; local HTTP checks returned 200 for page, CSV, resources hub, `llms.txt` and sitemap markers; public checks returned 200 for page, CSV and sitemap markers on deployment attempt 2; commit pushed to `main`.
+- Proof boundary: no real cardiology clinic, patient data, DPDP compliance proof, medical/privacy/security/legal advice, appointment uplift, no-show reduction, revenue, ROI, ranking, testimonial, certification or partnership claim.
+
 ## 2026-08-28 update — Europe healthtech shortlist comparison
 - Created `/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/` to target European healthtech buyers comparing FinOps platforms, GRC/trust-centre tools, patient engagement/practice platforms, cloud providers, MSPs and adviser routes before board/procurement approval.
 - Added downloadable comparison CSV plus Article/FAQ schema; linked the page from `/resources/`, `llms.txt` and the curated sitemap builder; regenerated `sitemap.xml`.

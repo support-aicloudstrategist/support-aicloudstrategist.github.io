@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-08-31 India cardiology Patient GrowthOS comparison
+
+- Decision: improve India healthcare GrowthOS top-3/top-5 credibility by closing the previously identified cardiology comparison gap: AICS Patient GrowthOS vs clinic software, diagnostic LIS, WhatsApp CRM, AI receptionist/call-answering and digital agency routes.
+- Created: `/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/` with Article/FAQ structured data and a redaction-first downloadable comparison CSV.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, and regenerated `sitemap.xml`.
+- Added: `tests/test_india_cardiology_patient_growthos_comparison.py`.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 401 indexable sitemap URLs`; targeted cardiology pytest returned `9 passed`; `git diff --check` passed; local HTTP checks returned 200 with expected markers for page, CSV, resources hub, `llms.txt` and `sitemap.xml`; public GitHub Pages checks returned 200 for page, CSV and sitemap markers on deployment attempt 2; commit pushed to `main`.
+- Proof boundary: buyer-education/proof-of-method only; no real cardiology clinic, cardiologist, hospital, diagnostic centre, patient, PHI, report, WhatsApp export, appointment system, payer/TPA data, testimonial, logo, certification, DPDP compliance proof, medical/legal/privacy/security/insurance advice, appointment uplift, no-show reduction, revenue, ROI, ranking, demand, lead, customer or platform-partnership claim was made. No outreach.
+
 ## 2026-08-29 Law firm industry resource link repair
 
 - Decision: remove trust and conversion friction on the law-firm industry page by replacing three stale resource links with existing, publicly verified proof-safe assets.

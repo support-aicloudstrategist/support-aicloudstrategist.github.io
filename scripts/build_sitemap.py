@@ -133,6 +133,7 @@ CURATED_PATHS = [
     "/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/",
     "/resources/india-clinic-lab-dpdp-whatsapp-followup-evidence-checklist/",
     "/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
+    "/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/lead-leakage-calculator",
     "/case-studies/",
