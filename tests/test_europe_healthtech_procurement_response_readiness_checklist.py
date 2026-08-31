@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "europe-healthtech-procurement-response-readiness-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "europe-healthtech-procurement-response-readiness-checklist.csv"
+SVG = ROOT / "resources" / SLUG / "europe-healthtech-procurement-response-owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -20,6 +21,7 @@ class EuropeHealthtechProcurementResponseReadinessChecklistTests(unittest.TestCa
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.svg = SVG.read_text(encoding="utf-8")
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -44,8 +46,25 @@ class EuropeHealthtechProcurementResponseReadinessChecklistTests(unittest.TestCa
             "/resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/",
             "/resources/europe-healthtech-cloud-trust-finops-diagnostic-package/",
             "Why this improves top-3/top-5 consideration",
+            "Demo owner dashboard visual",
+            "europe-healthtech-procurement-response-owner-dashboard.svg",
+            "six submission gates",
+            "unsupported-claim stops",
         ]:
             self.assertIn(phrase, self.html)
+
+    def test_demo_owner_dashboard_svg_is_synthetic_and_linked(self):
+        self.assertTrue(SVG.is_file())
+        for phrase in [
+            "DEMO / SYNTHETIC",
+            "Europe healthtech procurement response gate",
+            "No patient data",
+            "no credentials",
+            "not a client result",
+            "not compliance proof",
+        ]:
+            self.assertIn(phrase, self.svg)
+        self.assertIn('src="/resources/europe-healthtech-procurement-response-readiness-checklist/europe-healthtech-procurement-response-owner-dashboard.svg"', self.html)
 
     def test_csv_has_submission_gate_fields_and_boundaries(self):
         self.assertEqual(len(self.rows), 6)
@@ -109,7 +128,7 @@ class EuropeHealthtechProcurementResponseReadinessChecklistTests(unittest.TestCa
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-08-31")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)

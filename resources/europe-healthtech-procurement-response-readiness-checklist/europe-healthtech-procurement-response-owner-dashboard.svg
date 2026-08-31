@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo Europe healthtech procurement response owner dashboard</title>
+  <desc id="desc">Synthetic dashboard showing procurement response gates, owners, evidence packets and unsafe-claim stops for European healthtech AI trust review.</desc>
+  <rect width="1200" height="760" rx="34" fill="#07172d"/>
+  <text x="54" y="76" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">DEMO / SYNTHETIC — Europe healthtech procurement response gate</text>
+  <text x="54" y="122" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Owner-ready evidence before the buyer response is sent</text>
+  <text x="54" y="160" fill="#bae6fd" font-family="Inter, Arial, sans-serif" font-size="20">No patient data, no credentials, no compliance/savings claims; route GDPR, DPIA, EU AI Act, security and FinOps questions to accountable owners.</text>
+
+  <g transform="translate(54 210)">
+    <rect width="250" height="120" rx="22" fill="#0e7490"/>
+    <text x="24" y="44" fill="#ecfeff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">6</text>
+    <text x="58" y="44" fill="#ecfeff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">submission gates</text>
+    <text x="24" y="78" fill="#cffafe" font-family="Inter, Arial, sans-serif" font-size="16">AI use, GDPR/DPIA, EU AI Act, security, subprocessors, LLM spend</text>
+  </g>
+  <g transform="translate(330 210)">
+    <rect width="250" height="120" rx="22" fill="#1d4ed8"/>
+    <text x="24" y="44" fill="#eff6ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">5</text>
+    <text x="58" y="44" fill="#eff6ff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">owner signoffs</text>
+    <text x="24" y="78" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="16">DPO/privacy, security, clinical/product, finance, procurement</text>
+  </g>
+  <g transform="translate(606 210)">
+    <rect width="250" height="120" rx="22" fill="#7c3aed"/>
+    <text x="24" y="44" fill="#f5f3ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">4</text>
+    <text x="58" y="44" fill="#f5f3ff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">adviser-needed rows</text>
+    <text x="24" y="78" fill="#ede9fe" font-family="Inter, Arial, sans-serif" font-size="16">Legal, DPO, security/audit or clinical safety review before answers</text>
+  </g>
+  <g transform="translate(882 210)">
+    <rect width="250" height="120" rx="22" fill="#b45309"/>
+    <text x="24" y="44" fill="#fffbeb" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">0</text>
+    <text x="58" y="44" fill="#fffbeb" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">unsupported claims</text>
+    <text x="24" y="78" fill="#fef3c7" font-family="Inter, Arial, sans-serif" font-size="16">Block certification, savings, safety and ranking claims without proof</text>
+  </g>
+
+  <g transform="translate(54 380)">
+    <rect width="1092" height="292" rx="26" fill="#f8fafc"/>
+    <text x="28" y="46" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800">Synthetic procurement response board</text>
+    <line x1="28" y1="70" x2="1064" y2="70" stroke="#cbd5e1"/>
+    <text x="34" y="104" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Question lane</text>
+    <text x="306" y="104" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Evidence packet</text>
+    <text x="626" y="104" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Owner</text>
+    <text x="820" y="104" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Decision</text>
+    <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#0f172a">
+      <text x="34" y="142">AI intended use / human review</text><text x="306" y="142">Answer bank + decision log</text><text x="626" y="142">Product + clinical owner</text><text x="820" y="142">Submit only with owner-approved boundary</text>
+      <text x="34" y="184">GDPR/DPIA/data residency</text><text x="306" y="184">Source map + intake policy</text><text x="626" y="184">DPO/privacy adviser</text><text x="820" y="184">Escalate if health-data answer is unclear</text>
+      <text x="34" y="226">Security questionnaire</text><text x="306" y="226">Evidence room + trust-centre sources</text><text x="626" y="226">Security owner</text><text x="820" y="226">Do not imply ISO/SOC 2 certification</text>
+      <text x="34" y="268">Cloud/LLM spend claim</text><text x="306" y="268">FinOps summary + budget owner</text><text x="626" y="268">CFO/CTO</text><text x="820" y="268">Block unsupported savings or ROI claims</text>
+    </g>
+  </g>
+
+  <text x="54" y="720" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="16">AICS proof boundary: illustrative dashboard only — not a client result, not compliance proof, not legal/privacy/security/clinical/procurement advice.</text>
+</svg>
