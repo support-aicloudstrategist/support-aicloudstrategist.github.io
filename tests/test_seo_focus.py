@@ -46,6 +46,7 @@ class SeoFocusTests(unittest.TestCase):
             "/simulated-",
             "/resources/verified-public-presence-authority-tracker/",
             "/resources/search-console-indexing-readiness/",
+            "/google6a1149ba27204462.html",
         )
         for path in self.paths:
             with self.subTest(path=path):
