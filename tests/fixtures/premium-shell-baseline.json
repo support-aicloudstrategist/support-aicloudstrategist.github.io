@@ -221,7 +221,7 @@
       "canonical": "https://aicloudstrategist.com/case-studies/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c14d9f72a5f0bc88cf1f298ffb30b348ea84202627a0d682b1b7c6b05e35f72f",
+      "main_sha256": "9747cd4f427e376834318176f5e7523fed72b50dc9049ada1e03e632e474e0f0",
       "title": "Enterprise AI Evidence &amp; Decision Dossiers | AICloudStrategist"
     },
     "case-studies/sample-cloud-finops-cost-optimization/index.html": {
@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "10ef061aeefda00581bc95ccf67ec454453ed0b11c7e76113d38a85a12868018",
+      "main_sha256": "2ff9f6c17af4e65a9930509a3d05c8ee5cbce7ddb2bb9c1726dca371698661ea",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -487,7 +487,7 @@
       "canonical": "https://aicloudstrategist.com/industries/law-firms/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "69695a38dfb96815313bbf5787200b87df3c1e8c7368073ec4827adfc489ab03",
+      "main_sha256": "a11a7f0a369dbc6ce43e64b7345b0fc0d858d2f06b8c1f350b81ce9f83bbce8a",
       "title": "AI Automation for Law Firms | AICloudStrategist"
     },
     "industries/local-services/index.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "631a5fc2b4a25ac6ec79bac2369cca80b5b334aea7c95978f65a0181054196ed",
+      "main_sha256": "12f902b1c33af34be108a6b4c6efdd782554b3810ca5689918c6b222f40a331a",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1519,6 +1519,13 @@
       "main_sha256": "145f91051ee355d7d289ccff1b40e39e554e834b78a7e936cc6cd1242c727467",
       "title": "Ecommerce Abandoned Cart + WhatsApp Follow-Up Evidence Checklist | AICloudStrategist"
     },
+    "resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "ede2fb1aa2afcd0d9eb7c8aa1289734f7bab4c5ad61555e82bbe0823e3f58243",
+      "title": "AI Agent Human Override Failure Escalation Checklist | AICloudStrategist"
+    },
     "resources/global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist/",
       "forms": 0,
@@ -1614,8 +1621,15 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "91ee3b88db6edb73b08ad0593b7bace0ac8d95c38a260b65c1010af2e0d4ffaf",
+      "main_sha256": "ab1d79c6c68e0712c87974a0ab8d28fdf1b19cb2690745496e69aa9d30a3a562",
       "title": "Resources | AICloudStrategist"
+    },
+    "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "0b4839d1ab07fb7ddb55ce502ff67499c2d00d339469e6118844eb5ea9e1dbb7",
+      "title": "India Cardiology Patient GrowthOS vs Clinic Software, LIS, WhatsApp CRM and AI Receptionists | AICS"
     },
     "resources/india-cardiology-tmt-echo-followup-dpdp-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
@@ -2160,7 +2174,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "09ca14f6fa5e020effcc05619b993789818e80f2b18bfe5e59aba46ecfaa9f4d",
+      "main_sha256": "72bce56d0939f00b453322533714354979cc61d856f485bd70022b5594314bfa",
       "title": "US Outpatient Imaging Referral + Prior Auth Leakage Checklist | AICS"
     },
     "resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/index.html": {
@@ -2328,7 +2342,7 @@
       "canonical": "https://aicloudstrategist.com/services/us-law-firm-ai-intake-answering-service/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "34d5cf160bbfa427107e69ab011eb66e291e609b094e4197eb19ee34437e26f7",
+      "main_sha256": "0caa990912422c9cab27f0db64a83ac902b6cad7e14f00a514af3ebcdbcafd56",
       "title": "US Law Firm AI Intake & Answering Service Diagnostic | AICloudStrategist"
     },
     "services/voice-ai-agents/index.html": {
