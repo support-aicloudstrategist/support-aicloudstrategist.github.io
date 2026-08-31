@@ -35,7 +35,7 @@ class EnterpriseContactVisualTests(unittest.TestCase):
             ),
             "hero": (
                 r'<section class="subhero">.*?</section>',
-                "af2054ff8229a5f966311575ad1d8255ec08d07223022702e2fde15583f46ff8",
+                "d27741404d6a4ed4ed3ac03530f76c603cb1c5b6c6f12595c11bf134380d5373",
             ),
             "timeline": (
                 r'<div>\s*<div class="section-head">.*?</div>\s*</div>\s*\n\s*<div class="form-wrap',

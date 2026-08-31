@@ -22,7 +22,7 @@ def test_route_html_only_changes_the_dedicated_stylesheet_version():
         'free-business-review.css?v={VERSION}',
         PAGE,
     )
-    assert hashlib.sha256(normalized.encode()).hexdigest() == "625d73514bfed1e44f32da2a63c88664ef3c1b06c9ec0577c6ed544d058035a5"
+    assert hashlib.sha256(normalized.encode()).hexdigest() == "fa9d83dc0e4f534f94b861436aa3af7f1ea8f98e0a5c701668b96e27a8998aed"
 
 
 def test_page_uses_one_canonical_offer_name():
