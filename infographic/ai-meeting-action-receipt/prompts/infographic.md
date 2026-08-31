@@ -1,0 +1,1 @@
+Create a clean corporate Memphis bento-grid infographic titled 'The AI Meeting Action Receipt' using the six receipt fields and three usage steps from structured-content.md. Use blue/teal trust colors, white cards, numbered badges, clear hierarchy, and safe educational language. Aspect 16:9-ish wide worksheet.
