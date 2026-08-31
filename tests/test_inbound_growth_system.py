@@ -34,6 +34,19 @@ def test_free_review_uses_durable_lead_endpoint_with_verified_success():
     assert "window.location.href=aicsLeadMailto(payload)" not in FREE_REVIEW
 
 
+def test_free_review_and_contact_route_buyers_to_fixed_scope_diagnostics():
+    for html in (FREE_REVIEW, FREE_REVIEW_FILE):
+        assert "Revenue-ready next step" in html
+        assert "Patient enquiry leakage diagnostic" in html
+        assert "/resources/india-clinic-ad-to-appointment-diagnostic-package/" in html
+        assert "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/" in html
+        assert "/pricing#fixed-scope-diagnostics" in html
+    for html in (CONTACT, CONTACT_INDEX):
+        assert "Start free business review" in html
+        assert "/free-business-review/?source=contact-hero" in html
+        assert "/pricing#fixed-scope-diagnostics" in html
+
+
 def test_free_review_uses_a_browser_valid_phone_pattern():
     assert r'pattern="^\+?[0-9][0-9\s\-]{8,18}$"' in FREE_REVIEW
     assert r'pattern="^\+?[0-9][0-9\s-]{8,18}$"' not in FREE_REVIEW
