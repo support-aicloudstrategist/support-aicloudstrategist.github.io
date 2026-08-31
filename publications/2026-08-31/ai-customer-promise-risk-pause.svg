@@ -1,0 +1,73 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='960' viewBox='0 0 1200 960'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#111827'/><stop offset='.48' stop-color='#7f1d1d'/><stop offset='1' stop-color='#1e3a8a'/></linearGradient>
+    <filter id='shadow' x='-12%' y='-20%' width='124%' height='150%'><feDropShadow dx='0' dy='14' stdDeviation='11' flood-color='#0f172a' flood-opacity='.13'/></filter>
+  </defs>
+  <rect width='1200' height='960' fill='#fff7f7'/>
+  <rect x='42' y='38' width='1116' height='884' rx='44' fill='white' stroke='#fecaca' stroke-width='3'/>
+  <rect x='74' y='72' width='1052' height='174' rx='36' fill='url(#hero)'/>
+  <text x='108' y='120' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='900' fill='#fecaca' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC GUIDE</text>
+  <text x='108' y='178' font-family='Inter,Arial,sans-serif' font-size='49' font-weight='950' fill='white'>The AI Customer Promise Risk Pause</text>
+  <text x='108' y='218' font-family='Inter,Arial,sans-serif' font-size='20' fill='#e0f2fe'>A safe educational checklist for reviewing AI-assisted customer replies before they create promises, expose private details, or hide uncertainty.</text>
+  <text x='72' y='274' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Six checks before AI-assisted text reaches a customer</text>
+  
+    <g filter='url(#shadow)'>
+      <rect x='72' y='294' width='320' height='188' rx='30' fill='white' stroke='#d9e2ef'/>
+      <rect x='96' y='318' width='54' height='54' rx='18' fill='#fee2e2'/>
+      <path d='M114 345 l9 9 l19 -24' fill='none' stroke='#0f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/>
+      <text x='164' y='351' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Promise check</text>
+      <text x='100' y='410' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#475569'><tspan x='100' dy='0'>Does the reply commit to a price,</tspan><tspan x='100' dy='20'>deadline, outcome, scope, refund,</tspan><tspan x='100' dy='20'>saving, ranking, or guarantee?</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='432' y='294' width='320' height='188' rx='30' fill='white' stroke='#d9e2ef'/>
+      <rect x='456' y='318' width='54' height='54' rx='18' fill='#dbeafe'/>
+      <path d='M474 345 l9 9 l19 -24' fill='none' stroke='#0f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/>
+      <text x='524' y='351' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Evidence check</text>
+      <text x='460' y='410' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#475569'><tspan x='460' dy='0'>Can the team point to the source</tspan><tspan x='460' dy='20'>document, policy, ticket, or owner</tspan><tspan x='460' dy='20'>that supports the answer?</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='792' y='294' width='320' height='188' rx='30' fill='white' stroke='#d9e2ef'/>
+      <rect x='816' y='318' width='54' height='54' rx='18' fill='#ede9fe'/>
+      <path d='M834 345 l9 9 l19 -24' fill='none' stroke='#0f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/>
+      <text x='884' y='351' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Private-data check</text>
+      <text x='820' y='410' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#475569'><tspan x='820' dy='0'>Does the message reveal customer</tspan><tspan x='820' dy='20'>data, credentials, internal notes,</tspan><tspan x='820' dy='20'>health details, or commercial</tspan><tspan x='820' dy='20'>terms?</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='72' y='536' width='320' height='188' rx='30' fill='white' stroke='#d9e2ef'/>
+      <rect x='96' y='560' width='54' height='54' rx='18' fill='#fef3c7'/>
+      <path d='M114 587 l9 9 l19 -24' fill='none' stroke='#0f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/>
+      <text x='164' y='593' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Uncertainty check</text>
+      <text x='100' y='652' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#475569'><tspan x='100' dy='0'>Is the reply clear about what is</tspan><tspan x='100' dy='20'>known, unknown, assumed, or still</tspan><tspan x='100' dy='20'>awaiting human review?</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='432' y='536' width='320' height='188' rx='30' fill='white' stroke='#d9e2ef'/>
+      <rect x='456' y='560' width='54' height='54' rx='18' fill='#ccfbf1'/>
+      <path d='M474 587 l9 9 l19 -24' fill='none' stroke='#0f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/>
+      <text x='524' y='593' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Owner check</text>
+      <text x='460' y='652' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#475569'><tspan x='460' dy='0'>Is one person accountable for</tspan><tspan x='460' dy='20'>approving the customer-facing</tspan><tspan x='460' dy='20'>version before it is sent?</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='792' y='536' width='320' height='188' rx='30' fill='white' stroke='#d9e2ef'/>
+      <rect x='816' y='560' width='54' height='54' rx='18' fill='#dcfce7'/>
+      <path d='M834 587 l9 9 l19 -24' fill='none' stroke='#0f172a' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/>
+      <text x='884' y='593' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Escalation check</text>
+      <text x='820' y='652' font-family='Inter,Arial,sans-serif' font-size='16.5' fill='#475569'><tspan x='820' dy='0'>Does the item need founder, legal,</tspan><tspan x='820' dy='20'>security, finance, or</tspan><tspan x='820' dy='20'>customer-success review before</tspan><tspan x='820' dy='20'>sending?</tspan></text>
+    </g>
+  <text x='108' y='760' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Where to use the pause</text>
+  
+    <g>
+      <rect x='108' y='790' width='296' height='96' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <text x='130' y='822' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='950' fill='#b91c1c'>WHEN 1</text>
+      <text x='130' y='851' font-family='Inter,Arial,sans-serif' font-size='14' fill='#475569'><tspan x='130' dy='0'>Use the pause for customer-facing</tspan><tspan x='130' dy='18'>messages, proposals, support</tspan><tspan x='130' dy='18'>replies, public posts, and sales</tspan></text>
+    </g>
+    <g>
+      <rect x='438' y='790' width='296' height='96' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <text x='460' y='822' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='950' fill='#b91c1c'>WHEN 2</text>
+      <text x='460' y='851' font-family='Inter,Arial,sans-serif' font-size='14' fill='#475569'><tspan x='460' dy='0'>Do not use AI text as the final</tspan><tspan x='460' dy='18'>authority when money, legal</tspan><tspan x='460' dy='18'>terms, private data, or customer</tspan></text>
+    </g>
+    <g>
+      <rect x='768' y='790' width='296' height='96' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <text x='790' y='822' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='950' fill='#b91c1c'>WHEN 3</text>
+      <text x='790' y='851' font-family='Inter,Arial,sans-serif' font-size='14' fill='#475569'><tspan x='790' dy='0'>Save the approved version and the</tspan><tspan x='790' dy='18'>evidence source so future</tspan><tspan x='790' dy='18'>automation learns from reviewed</tspan></text>
+    </g>
+</svg>

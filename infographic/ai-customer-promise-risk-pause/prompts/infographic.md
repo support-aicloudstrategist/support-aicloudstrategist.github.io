@@ -1,0 +1,1 @@
+Create a clean corporate Memphis bento-grid infographic titled 'The AI Customer Promise Risk Pause' using the six risk-pause checks and three usage steps from structured-content.md. Use red/blue trust colors, white cards, checkmark icons, clear hierarchy, and safe educational language. Aspect 16:9-ish wide worksheet.
