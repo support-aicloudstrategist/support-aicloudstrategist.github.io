@@ -107,6 +107,7 @@ CURATED_PATHS = [
     "/resources/north-america-healthtech-ai-trust-first-review-executive-summary/",
     "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
     "/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
+    "/resources/us-medical-group-referral-prior-auth-owner-handoff-faq/",
     "/resources/us-medical-group-no-show-recovery-owner-dashboard-checklist/",
     "/resources/us-medical-group-no-credentials-patient-access-intake-policy/",
     "/resources/us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison/",
