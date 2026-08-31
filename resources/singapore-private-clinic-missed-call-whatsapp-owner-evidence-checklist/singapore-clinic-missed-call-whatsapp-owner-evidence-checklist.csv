@@ -1,0 +1,9 @@
+queue_id,source,patient_intent,queue_age_hours,owner_role,next_safe_action,human_review_required,pdpa_adviser_question,unsupported_claim_stop
+SG-DEMO-001,Missed phone call,New patient appointment request,5,Front desk lead,Return call and record service-line request,No,Was purpose/notice captured before follow-up?,Do not claim appointment increase without measured evidence
+SG-DEMO-002,WhatsApp message,Reschedule appointment,18,Clinic coordinator,Confirm requested time options without clinical advice,No,Is WhatsApp follow-up covered by clinic policy/adviser review?,Do not claim PDPA compliance
+SG-DEMO-003,After-hours voicemail,Medication question before visit,11,Nurse/doctor review owner,Route to clinical human review before any reply,Yes,What patient-data fields should not enter automation?,Do not provide medical advice
+SG-DEMO-004,Online booking form,Deposit/payment question,7,Admin manager,Clarify admin/payment process using approved script,Maybe,What retention/access controls apply to form data?,Do not claim billing/legal advice
+SG-DEMO-005,No-show queue,Missed follow-up consultation,30,Practice manager,Send admin-safe recall prompt after owner approval,No,Was consent/purpose for reminders documented?,Do not claim no-show reduction without proof
+SG-DEMO-006,Recall list,Annual review reminder,72,Service-line owner,Check recall eligibility and approved wording,Maybe,Who approves recall purpose and withdrawal handling?,Do not claim patient-outcome improvement
+SG-DEMO-007,Referral email,Specialist referral status,24,Referral coordinator,Confirm receipt/status and owner handoff,No,How are third-party referral details minimized?,Do not claim faster-response evidence without measurement
+SG-DEMO-008,Complaint thread,Delayed callback complaint,16,Clinic owner,Escalate to owner and pause automation,Yes,How are access/correction/complaint requests handled?,Do not use AI-only replies for complaints
