@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo AI vendor security questionnaire answer source map</title>
+  <desc id="desc">Synthetic infographic showing how buyer AI-use and security questionnaire answers map to evidence owners, approved sources, review status and unsafe claim stop signs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="0.52" stop-color="#ecfeff"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.14"/></filter>
+    <style>
+      .label{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:800;fill:#102033}.small{font-family:Inter,Arial,sans-serif;font-size:16px;fill:#475569}.tiny{font-family:Inter,Arial,sans-serif;font-size:13px;fill:#64748b}.white{fill:#fff}.pill{fill:#eef2ff;stroke:#c7d2fe;stroke-width:1}.card{fill:#fff;stroke:#dce8f4;stroke-width:1.5}.warn{fill:#fff7ed;stroke:#fed7aa}.ok{fill:#ecfdf5;stroke:#bbf7d0}.stop{fill:#fef2f2;stroke:#fecaca}.line{stroke:#94a3b8;stroke-width:3;stroke-linecap:round}.arrow{marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1280" height="760" fill="url(#bg)"/>
+  <rect x="54" y="42" width="1172" height="676" rx="34" class="card" filter="url(#shadow)"/>
+  <text x="92" y="96" class="tiny" style="font-weight:900;letter-spacing:.16em;fill:#1d4ed8">DEMO / SYNTHETIC · NO CUSTOMER, CRM, SECURITY REPORT, CONTRACT OR REVENUE DATA</text>
+  <text x="92" y="140" class="label" style="font-size:36px;letter-spacing:-.04em">AI vendor security questionnaire answer source map</text>
+  <text x="92" y="172" class="small">Turn each buyer question into an approved evidence lane before a sales, trust-center or AI-use answer is sent.</text>
+
+  <rect x="92" y="220" width="250" height="100" rx="22" class="pill"/>
+  <text x="118" y="254" class="label">Buyer question</text>
+  <text x="118" y="282" class="small">AI use, data sharing,</text>
+  <text x="118" y="306" class="small">security or compliance</text>
+
+  <rect x="404" y="220" width="250" height="100" rx="22" class="card"/>
+  <text x="430" y="254" class="label">Evidence source</text>
+  <text x="430" y="282" class="small">Policy, diagram, vendor</text>
+  <text x="430" y="306" class="small">artifact, log or register</text>
+
+  <rect x="716" y="220" width="250" height="100" rx="22" class="ok"/>
+  <text x="742" y="254" class="label">Owner review</text>
+  <text x="742" y="282" class="small">Product, security, legal,</text>
+  <text x="742" y="306" class="small">privacy, finance, RevOps</text>
+
+  <rect x="1028" y="220" width="150" height="100" rx="22" fill="url(#blue)"/>
+  <text x="1054" y="254" class="label white">Safe reply</text>
+  <text x="1054" y="282" class="small white">Approved</text>
+  <text x="1054" y="306" class="small white">with limits</text>
+  <line x1="342" y1="270" x2="394" y2="270" class="line arrow"/>
+  <line x1="654" y1="270" x2="706" y2="270" class="line arrow"/>
+  <line x1="966" y1="270" x2="1018" y2="270" class="line arrow"/>
+
+  <rect x="92" y="378" width="338" height="194" rx="24" class="card"/>
+  <text x="120" y="414" class="label">Source rows to capture</text>
+  <text x="120" y="450" class="small">• AI use-case and customer impact</text>
+  <text x="120" y="480" class="small">• Model/API vendor and data boundary</text>
+  <text x="120" y="510" class="small">• Retention, logging and deletion note</text>
+  <text x="120" y="540" class="small">• Human review and escalation route</text>
+
+  <rect x="472" y="378" width="338" height="194" rx="24" class="warn"/>
+  <text x="500" y="414" class="label">Status labels</text>
+  <text x="500" y="450" class="small">Approved · answer can be reused</text>
+  <text x="500" y="480" class="small">Draft · owner must review first</text>
+  <text x="500" y="510" class="small">Blocked · adviser or exec decision</text>
+  <text x="500" y="540" class="small">Expired · source needs refresh date</text>
+
+  <rect x="852" y="378" width="326" height="194" rx="24" class="stop"/>
+  <text x="880" y="414" class="label">Unsafe claim stops</text>
+  <text x="880" y="450" class="small">No invented compliance status</text>
+  <text x="880" y="480" class="small">No security approval claim</text>
+  <text x="880" y="510" class="small">No AI accuracy guarantee</text>
+  <text x="880" y="540" class="small">No revenue, ROI or win-rate proof</text>
+
+  <rect x="92" y="622" width="1086" height="54" rx="18" fill="#0f172a"/>
+  <text x="120" y="656" class="small white" style="font-weight:800">AICS role: organize source-to-owner evidence and claim boundaries; qualified owners still approve legal, privacy, security, compliance and procurement answers.</text>
+</svg>

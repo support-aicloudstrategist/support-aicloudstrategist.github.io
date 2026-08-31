@@ -7,6 +7,7 @@ REL = "/resources/global-ai-vendor-security-questionnaire-answer-source-map/"
 URL = f"https://aicloudstrategist.com{REL}"
 PAGE = ROOT / "resources" / "global-ai-vendor-security-questionnaire-answer-source-map" / "index.html"
 CSV = ROOT / "resources" / "global-ai-vendor-security-questionnaire-answer-source-map" / "ai-vendor-security-questionnaire-answer-source-map.csv"
+SVG = ROOT / "resources" / "global-ai-vendor-security-questionnaire-answer-source-map" / "ai-vendor-security-questionnaire-answer-source-map.svg"
 
 
 def test_ai_vendor_security_questionnaire_source_map_is_buyer_safe():
@@ -19,7 +20,27 @@ def test_ai_vendor_security_questionnaire_source_map_is_buyer_safe():
     assert "Request source-map fit check" in html
     assert "No outreach was sent" in html
     assert "ai-vendor-security-questionnaire-answer-source-map.csv" in html
+    assert "ai-vendor-security-questionnaire-answer-source-map.svg" in html
+    assert "Downloadable source-map visual" in html
+    assert "no real customer, prospect, CRM, contract, security report, compliance evidence, revenue data, testimonial or ranking proof" in html
 
+
+def test_source_map_svg_is_downloadable_synthetic_and_owner_safe():
+    svg = SVG.read_text(encoding="utf-8")
+    for marker in [
+        "Demo AI vendor security questionnaire answer source map",
+        "Buyer question",
+        "Evidence source",
+        "Owner review",
+        "Safe reply",
+        "Unsafe claim stops",
+        "No invented compliance status",
+        "No security approval claim",
+        "No AI accuracy guarantee",
+        "No revenue, ROI or win-rate proof",
+        "NO CUSTOMER, CRM, SECURITY REPORT, CONTRACT OR REVENUE DATA",
+    ]:
+        assert marker in svg
 
 def test_source_map_csv_is_downloadable_and_buyer_safe():
     csv = CSV.read_text(encoding="utf-8")
