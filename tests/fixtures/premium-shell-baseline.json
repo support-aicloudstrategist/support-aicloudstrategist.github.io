@@ -1075,7 +1075,7 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-diagnostic-package/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "1bc41599c9182d2f5fb7dd16beb70eaa9a87946acb96d712e5dfc3b5607b2e35",
+      "main_sha256": "ad7f1a756bd8e7276290ac701ee174e448042aec0135018aebb6916ae039f5a3",
       "title": "Europe Healthtech Cloud Trust + FinOps Diagnostic Package | AICS"
     },
     "resources/europe-healthtech-cloud-trust-finops-evidence-room/index.html": {
@@ -1124,7 +1124,7 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-procurement-response-readiness-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "00d08fa4a5eef4739b5c857f6c293f1125af0f5dbdeca5fddfef8c29ed5ad4d2",
+      "main_sha256": "70698a04d2fbff1095efca8a8a2ad1ae94f2c39fa4592264a86165f6b611be83",
       "title": "Europe Healthtech Procurement Response Readiness Checklist | AICS"
     },
     "resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/index.html": {
@@ -1498,6 +1498,13 @@
       "main_sha256": "85b1668c3ea553e98bb871c0b41efafe232e8287bc2ad3d286432eb9fc341b61",
       "title": "B2B SaaS Renewal Risk Owner Evidence Checklist | AICS"
     },
+    "resources/global-b2b-saas-security-questionnaire-diagnostic-package/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-diagnostic-package/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "79007d5f32e7bd7a0d1a193aff194243cb6a5a06abf839e169c40bea24926a9f",
+      "title": "B2B SaaS Security Questionnaire Diagnostic Package | AICS"
+    },
     "resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
       "forms": 0,
@@ -1621,7 +1628,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "6cb9ad29926174fafc74f9c4f85535209124f30cdc426f83cc55af227ddef332",
+      "main_sha256": "a9d6da4b4a2a4d93c62e81e94de6d91cec172d3484d4c17209108a8eea93a105",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
