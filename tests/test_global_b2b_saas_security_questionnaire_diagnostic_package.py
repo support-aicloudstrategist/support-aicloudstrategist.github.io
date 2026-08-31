@@ -40,6 +40,9 @@ def test_b2b_saas_security_questionnaire_diagnostic_structured_data_and_discover
     assert any(doc.get("@type") == "Dataset" and doc.get("url", "").endswith("b2b-saas-security-questionnaire-diagnostic-intake.csv") for doc in docs)
     assert any(doc.get("@type") == "FAQPage" for doc in docs)
     assert any(doc.get("@type") == "Service" and doc.get("name") == "B2B SaaS security questionnaire diagnostic package" for doc in docs)
+    assert "b2b-saas-security-questionnaire-owner-dashboard.svg" in html
+    assert "security questionnaire takes too long" in html
+    assert (ROOT / "resources" / SLUG / "b2b-saas-security-questionnaire-owner-dashboard.svg").is_file()
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")

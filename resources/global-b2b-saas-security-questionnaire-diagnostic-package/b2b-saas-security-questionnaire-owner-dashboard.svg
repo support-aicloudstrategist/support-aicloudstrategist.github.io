@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo B2B SaaS security questionnaire owner dashboard</title>
+  <desc id="desc">Synthetic AICloudStrategist visual showing a no-credentials owner queue for stalled SaaS security questionnaires, vendor-risk review, DPA MSA blockers and AI-use evidence questions.</desc>
+  <rect width="1200" height="720" fill="#06111f"/>
+  <rect x="40" y="40" width="1120" height="640" rx="28" fill="#0b1728" stroke="#2bd4bd" stroke-width="3"/>
+  <text x="80" y="105" fill="#eafff9" font-family="Arial, sans-serif" font-size="36" font-weight="700">Security questionnaire owner dashboard</text>
+  <text x="80" y="145" fill="#a7f3e8" font-family="Arial, sans-serif" font-size="18">Demo / synthetic: no customer, CRM, security, contract, revenue or prospect data</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="190" width="240" height="130" rx="18" fill="#11243a" stroke="#3b82f6"/>
+    <text x="105" y="232" fill="#dbeafe" font-size="18" font-weight="700">Open blocker rows</text>
+    <text x="105" y="278" fill="#ffffff" font-size="48" font-weight="700">14</text>
+    <text x="105" y="304" fill="#bfdbfe" font-size="16">questionnaire / vendor-risk</text>
+    <rect x="350" y="190" width="240" height="130" rx="18" fill="#11243a" stroke="#f59e0b"/>
+    <text x="375" y="232" fill="#fef3c7" font-size="18" font-weight="700">Needs owner answer</text>
+    <text x="375" y="278" fill="#ffffff" font-size="48" font-weight="700">9</text>
+    <text x="375" y="304" fill="#fde68a" font-size="16">legal / security / product</text>
+    <rect x="620" y="190" width="240" height="130" rx="18" fill="#11243a" stroke="#ef4444"/>
+    <text x="645" y="232" fill="#fee2e2" font-size="18" font-weight="700">Unsafe to claim</text>
+    <text x="645" y="278" fill="#ffffff" font-size="48" font-weight="700">5</text>
+    <text x="645" y="304" fill="#fecaca" font-size="16">compliance / AI / ROI claims</text>
+    <rect x="890" y="190" width="210" height="130" rx="18" fill="#11243a" stroke="#22c55e"/>
+    <text x="915" y="232" fill="#dcfce7" font-size="18" font-weight="700">Safe next replies</text>
+    <text x="915" y="278" fill="#ffffff" font-size="48" font-weight="700">6</text>
+    <text x="915" y="304" fill="#bbf7d0" font-size="16">redacted evidence only</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="16">
+    <rect x="80" y="365" width="1020" height="235" rx="18" fill="#0f2034" stroke="#26435f"/>
+    <text x="110" y="407" fill="#f8fafc" font-size="22" font-weight="700">Priority owner queue</text>
+    <text x="110" y="452" fill="#e0f2fe">1. AI-use question asks for training, retention, human review and model-provider proof → Product + Security owner review.</text>
+    <text x="110" y="495" fill="#e0f2fe">2. DPA / MSA clause asks for data residency and subprocessor evidence → Legal/privacy owner source map.</text>
+    <text x="110" y="538" fill="#e0f2fe">3. SOC 2 / ISO / pen-test claims requested → stop unsupported claims until approved evidence exists.</text>
+    <text x="110" y="581" fill="#e0f2fe">4. Buyer wants turnaround date → account owner can send safe status once evidence owner confirms.</text>
+  </g>
+  <text x="80" y="650" fill="#94a3b8" font-family="Arial, sans-serif" font-size="15">AICloudStrategist readiness visual — not legal, privacy, security, compliance, procurement, revenue or customer-result proof.</text>
+</svg>
