@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "us-medical-group-no-show-recovery-comparison.csv"
+SVG = ROOT / "resources" / SLUG / "demo-no-show-recovery-owner-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -46,6 +47,25 @@ def test_csv_is_synthetic_and_has_expected_rows():
     assert text.count("Synthetic row only") >= 5
     assert "not HIPAA proof" in text
     assert "not payer, claims or denial evidence" in text
+
+
+def test_demo_dashboard_svg_is_linked_and_truth_bounded():
+    html = PAGE.read_text(encoding="utf-8")
+    svg = SVG.read_text(encoding="utf-8")
+    assert "demo-no-show-recovery-owner-dashboard.svg" in html
+    for phrase in [
+        "Demo owner dashboard SVG",
+        "demo/synthetic",
+        "without touching patient data or production credentials",
+    ]:
+        assert phrase in html
+    for phrase in [
+        "DEMO / SYNTHETIC ONLY",
+        "no PHI, ePHI, patient file, payer file, EHR export, call recording, client data or compliance proof",
+        "No no-show, ROI or compliance claim",
+        "not a customer case study",
+    ]:
+        assert phrase in svg
 
 
 def test_schema_and_discovery_files_include_resource():

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo US medical group no-show recovery owner dashboard</title>
+  <desc id="desc">Synthetic dashboard showing no-show, cancellation, waitlist, referral, prior authorization and AI review queues with owner and safe evidence boundaries. No real patient, clinic, PHI or production data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06111f"/><stop offset="0.55" stop-color="#0b2a4a"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.28"/></filter>
+    <style>
+      .sans{font-family:Inter,Arial,Helvetica,sans-serif}.small{font-size:17px}.xs{font-size:14px}.label{fill:#cbd5e1}.white{fill:#fff}.muted{fill:#dbeafe}.ink{fill:#0f172a}.card{fill:#ffffff;stroke:#dbe7f3;stroke-width:1.5;filter:url(#shadow)}.soft{fill:#f8fafc;stroke:#dbe7f3}.green{fill:#0f766e}.amber{fill:#f59e0b}.red{fill:#dc2626}.blue{fill:#2563eb}.pill{fill:#e0f2fe}.boundary{fill:#fff7ed;stroke:#fed7aa}.danger{fill:#fee2e2}.ok{fill:#ccfbf1}.warn{fill:#fef3c7}.barbg{fill:#e2e8f0}.bar{fill:url(#teal)}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="190" fill="#38bdf8" opacity="0.13"/><circle cx="120" cy="620" r="220" fill="#2dd4bf" opacity="0.12"/>
+  <text x="52" y="70" class="sans white" font-size="34" font-weight="800">US Medical Group No-show Recovery Owner Dashboard</text>
+  <text x="52" y="104" class="sans muted small">DEMO / SYNTHETIC ONLY · no PHI, ePHI, patient file, payer file, EHR export, call recording, client data or compliance proof</text>
+  <rect x="52" y="132" width="1096" height="94" rx="22" class="boundary"/>
+  <text x="78" y="166" class="sans ink" font-size="22" font-weight="800">Safe shortlist question</text>
+  <text x="78" y="199" class="sans ink small">Before buying reminders, AI reception, RCM help or a call center: which stale queue has an owner, evidence and human-review stop condition?</text>
+
+  <g transform="translate(52 254)">
+    <rect width="242" height="128" rx="22" class="card"/><text x="22" y="36" class="sans ink small" font-weight="800">No-show / late cancel</text><text x="22" y="78" class="sans red" font-size="42" font-weight="900">37</text><text x="86" y="77" class="sans label xs">synthetic rows</text><rect x="22" y="96" width="198" height="12" rx="6" class="barbg"/><rect x="22" y="96" width="151" height="12" rx="6" class="bar"/>
+  </g>
+  <g transform="translate(326 254)">
+    <rect width="242" height="128" rx="22" class="card"/><text x="22" y="36" class="sans ink small" font-weight="800">Waitlist fill queue</text><text x="22" y="78" class="sans green" font-size="42" font-weight="900">24</text><text x="86" y="77" class="sans label xs">owner mapped</text><rect x="22" y="96" width="198" height="12" rx="6" class="barbg"/><rect x="22" y="96" width="119" height="12" rx="6" class="bar"/>
+  </g>
+  <g transform="translate(600 254)">
+    <rect width="242" height="128" rx="22" class="card"/><text x="22" y="36" class="sans ink small" font-weight="800">Referral / auth blockers</text><text x="22" y="78" class="sans amber" font-size="42" font-weight="900">18</text><text x="86" y="77" class="sans label xs">needs adviser</text><rect x="22" y="96" width="198" height="12" rx="6" class="barbg"/><rect x="22" y="96" width="92" height="12" rx="6" class="bar"/>
+  </g>
+  <g transform="translate(874 254)">
+    <rect width="274" height="128" rx="22" class="card"/><text x="22" y="36" class="sans ink small" font-weight="800">AI / script review flags</text><text x="22" y="78" class="sans blue" font-size="42" font-weight="900">11</text><text x="86" y="77" class="sans label xs">human stop</text><rect x="22" y="96" width="226" height="12" rx="6" class="barbg"/><rect x="22" y="96" width="76" height="12" rx="6" class="bar"/>
+  </g>
+
+  <rect x="52" y="414" width="676" height="228" rx="24" class="card"/>
+  <text x="80" y="452" class="sans ink" font-size="22" font-weight="800">Synthetic source-to-owner ageing</text>
+  <g class="sans xs ink" font-weight="700"><text x="82" y="492">Queue</text><text x="323" y="492">Owner</text><text x="480" y="492">Age</text><text x="584" y="492">Decision</text></g>
+  <line x1="80" y1="508" x2="700" y2="508" stroke="#dbe7f3"/>
+  <g class="sans xs ink"><text x="82" y="538">Missed callback after reminder opt-out</text><text x="323" y="538">Front desk lead</text><text x="480" y="538">3 days</text><rect x="584" y="520" width="92" height="26" rx="13" class="warn"/><text x="602" y="538">Review</text><text x="82" y="576">Waitlist candidate for cancelled slot</text><text x="323" y="576">Access coordinator</text><text x="480" y="576">8 hours</text><rect x="584" y="558" width="70" height="26" rx="13" class="ok"/><text x="603" y="576">Call</text><text x="82" y="614">Prior-auth status blocks scheduling</text><text x="323" y="614">RCM liaison</text><text x="480" y="614">5 days</text><rect x="584" y="596" width="104" height="26" rx="13" class="danger"/><text x="601" y="614">Escalate</text></g>
+
+  <rect x="760" y="414" width="388" height="228" rx="24" class="card"/>
+  <text x="788" y="452" class="sans ink" font-size="22" font-weight="800">Proof boundary controls</text>
+  <g class="sans small ink">
+    <rect x="788" y="478" width="332" height="34" rx="17" class="ok"/><text x="808" y="501">No credentials or production systems</text>
+    <rect x="788" y="524" width="332" height="34" rx="17" class="ok"/><text x="808" y="547">PHI/ePHI excluded from diagnostic</text>
+    <rect x="788" y="570" width="332" height="34" rx="17" class="warn"/><text x="808" y="593">BAA / counsel questions separated</text>
+    <rect x="788" y="616" width="332" height="34" rx="17" class="danger"/><text x="808" y="639">No no-show, ROI or compliance claim</text>
+  </g>
+  <text x="52" y="686" class="sans muted xs">AICloudStrategist demo artifact · created for buyer education and trust-readiness only · not a customer case study</text>
+</svg>
