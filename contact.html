@@ -368,15 +368,29 @@
   const contactForm = document.getElementById('contactForm');
   const params = new URLSearchParams(window.location.search);
   const requestedService = params.get("service");
+  const requestedStage = params.get("stage");
   const requestedEngagement = params.get("engagement");
   const serviceSelect = contactForm.querySelector('[name="service"]');
+  const stageSelect = contactForm.querySelector('[name="stage"]');
   const engagementInput = contactForm.querySelector('[name="engagement"]');
-  const supportedEngagements = new Set(['ai-service-reliability-baseline']);
+  const supportedEngagements = new Set(['ai-service-reliability-baseline', 'diagnostic', 'proof-sprint', 'managed-operation']);
+  const stageAliasToFormValue = {
+    diagnostic: 'exploring',
+    'proof-sprint': 'pilot',
+    'managed-operation': 'production'
+  };
   if (requestedService && serviceSelect && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
     serviceSelect.value = requestedService;
   }
-  if (requestedEngagement && engagementInput && supportedEngagements.has(requestedEngagement)) {
-    engagementInput.value = requestedEngagement;
+  if (requestedStage && stageSelect) {
+    const stageValue = stageAliasToFormValue[requestedStage] || requestedStage;
+    if (Array.from(stageSelect.options).some(option => option.value === stageValue)) {
+      stageSelect.value = stageValue;
+    }
+  }
+  const engagementFromQuery = requestedEngagement || (requestedStage && supportedEngagements.has(requestedStage) ? requestedStage : '');
+  if (engagementFromQuery && engagementInput && supportedEngagements.has(engagementFromQuery)) {
+    engagementInput.value = engagementFromQuery;
   }
   const finopsQualification = document.getElementById('finopsQualification');
   function syncFinOpsQualification() {
@@ -468,8 +482,14 @@
       if (requestedService && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
         serviceSelect.value = requestedService;
       }
-      if (requestedEngagement && engagementInput && supportedEngagements.has(requestedEngagement)) {
-        engagementInput.value = requestedEngagement;
+      if (requestedStage && stageSelect) {
+        const stageValue = stageAliasToFormValue[requestedStage] || requestedStage;
+        if (Array.from(stageSelect.options).some(option => option.value === stageValue)) {
+          stageSelect.value = stageValue;
+        }
+      }
+      if (engagementFromQuery && engagementInput && supportedEngagements.has(engagementFromQuery)) {
+        engagementInput.value = engagementFromQuery;
       }
       syncFinOpsQualification();
       if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Success', { props: { page: location.pathname, service: payload.service || '' } });

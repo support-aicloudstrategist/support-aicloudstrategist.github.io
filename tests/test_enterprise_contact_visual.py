@@ -31,7 +31,7 @@ class EnterpriseContactVisualTests(unittest.TestCase):
             ),
             "submit_script": (
                 r"const contactForm = document.getElementById\('contactForm'\);.*?// reveal \+ timeline draw",
-                "2f33f97539908d42524e541534ebf243fbc16b9cbd1b3a4dcfbd7122df2756e9",
+                "7645f53d1cf129cdfb7a2530b27ce37ad1dbae7c0bfd99102eab51fe1d8cbe34",
             ),
             "hero": (
                 r'<section class="subhero">.*?</section>',

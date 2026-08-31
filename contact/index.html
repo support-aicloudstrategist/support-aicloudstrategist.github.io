@@ -272,6 +272,7 @@
             <input name="utm_source" type="hidden" />
             <input name="utm_medium" type="hidden" />
             <input name="utm_campaign" type="hidden" />
+            <input name="engagement" type="hidden" />
             <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label for="company_website">Leave this field empty</label><input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off" /></div>
             <label for="contact_name">Name</label>
             <input id="contact_name" name="name" autocomplete="name" required />
@@ -367,9 +368,29 @@
   const contactForm = document.getElementById('contactForm');
   const params = new URLSearchParams(window.location.search);
   const requestedService = params.get("service");
+  const requestedStage = params.get("stage");
+  const requestedEngagement = params.get("engagement");
   const serviceSelect = contactForm.querySelector('[name="service"]');
+  const stageSelect = contactForm.querySelector('[name="stage"]');
+  const engagementInput = contactForm.querySelector('[name="engagement"]');
+  const supportedEngagements = new Set(['diagnostic', 'proof-sprint', 'managed-operation']);
+  const stageAliasToFormValue = {
+    diagnostic: 'exploring',
+    'proof-sprint': 'pilot',
+    'managed-operation': 'production'
+  };
   if (requestedService && serviceSelect && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
     serviceSelect.value = requestedService;
+  }
+  if (requestedStage && stageSelect) {
+    const stageValue = stageAliasToFormValue[requestedStage] || requestedStage;
+    if (Array.from(stageSelect.options).some(option => option.value === stageValue)) {
+      stageSelect.value = stageValue;
+    }
+  }
+  const engagementFromQuery = requestedEngagement || (requestedStage && supportedEngagements.has(requestedStage) ? requestedStage : '');
+  if (engagementFromQuery && engagementInput && supportedEngagements.has(engagementFromQuery)) {
+    engagementInput.value = engagementFromQuery;
   }
   const attribution = window.aicsAttribution || {
     landing_page: location.origin + location.pathname,
@@ -402,6 +423,7 @@
 
     const need = [
       `Service: ${payload.service || 'not specified'}`,
+      payload.engagement ? `Engagement: ${payload.engagement}` : '',
       `Company: ${payload.company || 'not provided'}`,
       payload.role ? `Role: ${payload.role}` : '',
       `Stage: ${payload.stage || 'not specified'}`
@@ -412,6 +434,7 @@
       company: payload.company,
       role: payload.role,
       service: payload.service,
+      engagement: payload.engagement,
       stage: payload.stage,
       need,
       message: payload.message || '',
@@ -439,6 +462,15 @@
       contactForm.reset();
       if (requestedService && Array.from(serviceSelect.options).some(option => option.value === requestedService)) {
         serviceSelect.value = requestedService;
+      }
+      if (requestedStage && stageSelect) {
+        const stageValue = stageAliasToFormValue[requestedStage] || requestedStage;
+        if (Array.from(stageSelect.options).some(option => option.value === stageValue)) {
+          stageSelect.value = stageValue;
+        }
+      }
+      if (engagementFromQuery && engagementInput && supportedEngagements.has(engagementFromQuery)) {
+        engagementInput.value = engagementFromQuery;
       }
       if (window.aicsAnalytics && window.aicsAnalytics.track) window.aicsAnalytics.track('Contact Form Submit Success', { props: { page: location.pathname, service: payload.service || '' } });
     } catch (error) {

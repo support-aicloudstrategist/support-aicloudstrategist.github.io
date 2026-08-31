@@ -80,6 +80,13 @@ class ContactReliabilityTests(unittest.TestCase):
         self.assertNotIn(masked_schema, self.source)
         self.assertEqual(self.source.count(canonical_tel), 2)
         self.assertEqual(self.source.count(canonical_schema), 2)
+    def test_pricing_cta_query_prefills_stage_and_engagement_context(self):
+        self.assertIn('const requestedStage = params.get("stage");', self.source)
+        self.assertIn("diagnostic: 'exploring'", self.source)
+        self.assertIn("'proof-sprint': 'pilot'", self.source)
+        self.assertIn("'managed-operation': 'production'", self.source)
+        self.assertIn("const engagementFromQuery = requestedEngagement || (requestedStage && supportedEngagements.has(requestedStage) ? requestedStage : '');", self.source)
+        self.assertIn("payload.engagement ? `Engagement: ${payload.engagement}` : ''", self.source)
 
 
 if __name__ == "__main__":
