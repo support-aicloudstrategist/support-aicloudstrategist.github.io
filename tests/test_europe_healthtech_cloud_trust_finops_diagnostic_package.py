@@ -23,6 +23,10 @@ def test_europe_healthtech_cloud_trust_finops_diagnostic_is_indexable_and_buyer_
     assert "CloudZero/Finout around AI/cloud spend" in PAGE
     assert "redacted answer-bank, source map and owner queue" in PAGE
     assert "not an AICS compliance opinion" in PAGE
+    assert "Procurement-response readiness bridge" in PAGE
+    assert "/resources/europe-healthtech-procurement-response-readiness-checklist/" in PAGE
+    assert "submission deadline, approved answer owner, evidence source" in PAGE
+    assert "/free-business-review/?package=europe-healthtech-procurement-response-readiness" in PAGE
     assert "no patient data" in PAGE.lower()
     assert "No outreach was sent" in PAGE
     for forbidden in ("testimonial", "guarantee", "savings claim", "ROI claim", "compliance opinion"):
