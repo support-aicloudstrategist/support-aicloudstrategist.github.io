@@ -424,7 +424,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a707669af3bbf811def03b457607e1328c36ce30b0a74066a21a3f9adee8a541",
+      "main_sha256": "486d5dc28ee81cbaf5538f9182172c6eb9a59f45868e4f45da9ddb01c4c0d22e",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -599,7 +599,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "3019b4cf1ff3d752c57bc9b607771a84b78295a601e27d3e1f3b514e7d4b8e19",
+      "main_sha256": "b0e042724b586b9c2ca966ce2a98292563aba89e8dc0812b92c8c7f2e0cea56f",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1635,7 +1635,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ff1e3a3014a877cc0150c5a6df67aee54e2e72e17e38400a47c532624c11678d",
+      "main_sha256": "98b5c560ae1337f3d73df5fee1b5da6a306af2cc3297ac89daac213674dc111d",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
@@ -2198,6 +2198,13 @@
       "main_sha256": "90268cc11303a7cc716279d4412ab6417925e64bd624dc9602adc94e87319733",
       "title": "US Medical Group Healthcare GrowthOS Vendor Shortlist Checklist | AICS"
     },
+    "resources/us-medical-group-no-credentials-patient-access-intake-policy/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-group-no-credentials-patient-access-intake-policy/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "07abc7005a0e7e7dc856a7401231ecea771c7b01316893d55ec985edcac7d591",
+      "title": "US Medical Group No-Credentials Patient Access Intake Policy | AICS"
+    },
     "resources/us-medical-group-no-show-recovery-owner-dashboard-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-medical-group-no-show-recovery-owner-dashboard-checklist/",
       "forms": 0,
@@ -2209,7 +2216,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-medical-group-no-show-recovery-vs-patient-engagement-ai-receptionist-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "12235bc6db1d3f63b5ebd3e8ed6463e7494896979932fe8a07ade0d6f748036a",
+      "main_sha256": "05375bfd2d7a4e6352adb72edd692c8cd800e506c6b35669bdc719d546989acf",
       "title": "US No-show Recovery: GrowthOS vs Patient Engagement and AI Receptionist | AICS"
     },
     "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
