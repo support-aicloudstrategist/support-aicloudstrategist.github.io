@@ -127,6 +127,12 @@ Completed milestones:
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
 
+## 2026-08-31 update — India ophthalmology Patient GrowthOS comparison
+- Created `/resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/` to target ophthalmology clinic software, eye-clinic EMR, optical POS/workflow, WhatsApp CRM, AI receptionist and Patient GrowthOS comparison searches.
+- Added downloadable comparison CSV, resources-hub card, `llms.txt` discovery route, curated sitemap entry and regression coverage.
+- Verification: sitemap build wrote 402 indexable URLs; focused ophthalmology + inbound pytest returned 23 passed; local HTTP checks returned 200 for page, CSV, resources hub, `llms.txt` and sitemap markers.
+- Proof boundary: no real ophthalmology clinic, patient data, DPDP compliance proof, medical/privacy/security/legal advice, appointment uplift, surgery conversion, optical sales, revenue, ROI, ranking, testimonial, certification or partnership claim.
+
 ## 2026-08-31 update — India cardiology Patient GrowthOS comparison
 - Created `/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/` to target cardiology clinic software, diagnostic LIS, WhatsApp CRM, AI receptionist and Patient GrowthOS comparison searches.
 - Added downloadable comparison CSV, resources-hub card, `llms.txt` discovery route, curated sitemap entry and regression coverage.
