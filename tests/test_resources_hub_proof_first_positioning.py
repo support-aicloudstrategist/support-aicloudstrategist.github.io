@@ -18,7 +18,15 @@ def test_resources_hub_positions_proof_first_ai_trust_entry_point():
     assert f'<meta property="og:description" content="{social_description}">' in source
     assert f'<meta name="twitter:description" content="{social_description}">' in source
     assert f'<p>{description}</p>' in source
+    assert source.find("/resources/customer-problem-search/") < source.find("/resources/singapore-private-clinic-missed-call-whatsapp-owner-evidence-checklist/")
     assert source.find("/resources/north-america-healthtech-ai-trust-first-review/") < source.find("/resources/north-america-healthtech-ai-human-review-escalation-policy-template/")
+
+
+def test_resources_hub_surfaces_owner_problem_language_before_deep_assets():
+    source = PAGE.read_text(encoding="utf-8")
+    assert "Customer Problem Search Map" in source
+    assert "high cloud bills, manual work, missed clinic patients" in source
+    assert "property maintenance leakage and vendor selection" in source
 
 
 def test_resources_hub_schema_uses_current_resource_language_without_overclaiming():
