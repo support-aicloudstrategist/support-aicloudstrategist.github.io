@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Demo SaaS security questionnaire comparison map</title>
+  <desc id="desc">Synthetic comparison map showing routes for GRC tools, trust centers, questionnaire automation, deal desk and AICS owner-evidence review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#031225"/><stop offset="0.58" stop-color="#09294a"/><stop offset="1" stop-color="#114e6b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#001024" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="34" fill="url(#bg)"/>
+  <text x="62" y="78" fill="#d8fbff" font-size="24" font-family="Inter,Arial,sans-serif" font-weight="700">AICloudStrategist · demo / synthetic artifact</text>
+  <text x="62" y="128" fill="#ffffff" font-size="42" font-family="Inter,Arial,sans-serif" font-weight="800">Security questionnaire stuck?</text>
+  <text x="62" y="168" fill="#aee7f4" font-size="24" font-family="Inter,Arial,sans-serif">Compare the route before buying another platform.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="62" y="218" width="240" height="230" rx="24" fill="#ffffff" opacity="0.96"/>
+    <text x="88" y="263" fill="#082034" font-size="24" font-weight="800" font-family="Inter,Arial,sans-serif">GRC platform</text>
+    <text x="88" y="304" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Control libraries</text>
+    <text x="88" y="334" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Risk workflows</text>
+    <text x="88" y="364" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Audit evidence ops</text>
+    <text x="88" y="414" fill="#0f766e" font-size="17" font-weight="700" font-family="Inter,Arial,sans-serif">Best after owners and</text>
+    <text x="88" y="438" fill="#0f766e" font-size="17" font-weight="700" font-family="Inter,Arial,sans-serif">sources are known</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="336" y="218" width="240" height="230" rx="24" fill="#ffffff" opacity="0.96"/>
+    <text x="362" y="263" fill="#082034" font-size="24" font-weight="800" font-family="Inter,Arial,sans-serif">Trust center</text>
+    <text x="362" y="304" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Approved docs</text>
+    <text x="362" y="334" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Controlled sharing</text>
+    <text x="362" y="364" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Repeat buyer access</text>
+    <text x="362" y="414" fill="#0f766e" font-size="17" font-weight="700" font-family="Inter,Arial,sans-serif">Best when content is</text>
+    <text x="362" y="438" fill="#0f766e" font-size="17" font-weight="700" font-family="Inter,Arial,sans-serif">current and safe</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="610" y="218" width="240" height="230" rx="24" fill="#ffffff" opacity="0.96"/>
+    <text x="636" y="263" fill="#082034" font-size="24" font-weight="800" font-family="Inter,Arial,sans-serif">Automation</text>
+    <text x="636" y="304" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Answer bank reuse</text>
+    <text x="636" y="334" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Draft speed</text>
+    <text x="636" y="364" fill="#334155" font-size="18" font-family="Inter,Arial,sans-serif">Repetitive sections</text>
+    <text x="636" y="414" fill="#b45309" font-size="17" font-weight="700" font-family="Inter,Arial,sans-serif">Risky if stale answers</text>
+    <text x="636" y="438" fill="#b45309" font-size="17" font-weight="700" font-family="Inter,Arial,sans-serif">are amplified</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="884" y="198" width="254" height="270" rx="28" fill="#d8fbff"/>
+    <text x="912" y="246" fill="#082034" font-size="26" font-weight="900" font-family="Inter,Arial,sans-serif">AICS owner</text>
+    <text x="912" y="276" fill="#082034" font-size="26" font-weight="900" font-family="Inter,Arial,sans-serif">evidence review</text>
+    <text x="912" y="318" fill="#164e63" font-size="18" font-family="Inter,Arial,sans-serif">Redacted blocker rows</text>
+    <text x="912" y="348" fill="#164e63" font-size="18" font-family="Inter,Arial,sans-serif">Named answer owners</text>
+    <text x="912" y="378" fill="#164e63" font-size="18" font-family="Inter,Arial,sans-serif">Unsafe claim stop-list</text>
+    <text x="912" y="408" fill="#164e63" font-size="18" font-family="Inter,Arial,sans-serif">No credentials first</text>
+    <text x="912" y="448" fill="#0f766e" font-size="18" font-weight="800" font-family="Inter,Arial,sans-serif">Best when ownership</text>
+    <text x="912" y="474" fill="#0f766e" font-size="18" font-weight="800" font-family="Inter,Arial,sans-serif">is unclear</text>
+  </g>
+
+  <path d="M302 333H336" stroke="#93e4f4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M576 333H610" stroke="#93e4f4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M850 333H884" stroke="#93e4f4" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="62" y="520" width="1076" height="54" rx="18" fill="#001826" opacity="0.72"/>
+  <text x="88" y="555" fill="#e2f9ff" font-size="19" font-family="Inter,Arial,sans-serif">Boundary: no real customer, security, CRM, contract, revenue, compliance or ranking proof. Buyer education only; no outreach sent.</text>
+</svg>
