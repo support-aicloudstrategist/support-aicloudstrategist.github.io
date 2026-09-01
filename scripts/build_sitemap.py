@@ -129,6 +129,7 @@ CURATED_PATHS = [
     "/resources/global-ai-pilot-rollback-readiness-checklist/",
     "/resources/global-ai-pilot-remediation-decision-log-template/",
     "/resources/global-dental-implant-treatment-plan-follow-up-evidence-checklist/",
+    "/resources/global-dental-implant-follow-up-vs-crm-ai-receptionist-comparison/",
     "/resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/",
     "/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
     "/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
