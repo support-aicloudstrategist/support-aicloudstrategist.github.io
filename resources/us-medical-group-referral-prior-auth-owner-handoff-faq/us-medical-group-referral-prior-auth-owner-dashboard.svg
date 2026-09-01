@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo US medical group referral and prior authorization owner dashboard</title>
+  <desc id="desc">Synthetic no-PHI dashboard showing referral leakage, prior authorization status, patient-access callback promises, AI receptionist stop rules and owner handoffs before any credentials, payer files or patient data are shared.</desc>
+  <rect width="1200" height="760" fill="#f8fafc"/>
+  <rect x="40" y="34" width="1120" height="116" rx="24" fill="#082f49"/>
+  <text x="74" y="82" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="700" fill="#ffffff">US Medical Group Owner Handoff Dashboard</text>
+  <text x="74" y="121" font-family="Inter, Arial, sans-serif" font-size="18" fill="#bae6fd">Demo/synthetic — referral status, prior-auth blockers, callbacks and safe AI handoff boundaries</text>
+  <rect x="846" y="58" width="286" height="62" rx="16" fill="#0f766e"/>
+  <text x="882" y="94" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">No PHI · no payer files</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="58" y="188" width="245" height="120" rx="20" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="82" y="224" font-size="16" fill="#475569">Referral status map</text>
+    <text x="82" y="270" font-size="31" font-weight="800" fill="#0f172a">source → owner</text>
+    <text x="82" y="292" font-size="14" fill="#64748b">age bands, no patient identifiers</text>
+
+    <rect x="335" y="188" width="245" height="120" rx="20" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="359" y="224" font-size="16" fill="#475569">Prior-auth queue</text>
+    <text x="359" y="270" font-size="31" font-weight="800" fill="#0f172a">blocker → role</text>
+    <text x="359" y="292" font-size="14" fill="#64748b">payer status stays redacted</text>
+
+    <rect x="612" y="188" width="245" height="120" rx="20" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="636" y="224" font-size="16" fill="#475569">Patient-access promise</text>
+    <text x="636" y="270" font-size="31" font-weight="800" fill="#0f172a">callback → proof</text>
+    <text x="636" y="292" font-size="14" fill="#64748b">script evidence before automation</text>
+
+    <rect x="889" y="188" width="245" height="120" rx="20" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="913" y="224" font-size="16" fill="#475569">Unsafe answer stops</text>
+    <text x="913" y="270" font-size="31" font-weight="800" fill="#dc2626">stop → adviser</text>
+    <text x="913" y="292" font-size="14" fill="#64748b">clinical, payer, legal, HIPAA risk</text>
+  </g>
+
+  <rect x="58" y="348" width="520" height="324" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="86" y="390" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">30-day owner handoff packet</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="16">
+    <rect x="86" y="416" width="456" height="38" rx="10" fill="#eff6ff"/><text x="104" y="441" fill="#1e3a8a">1. Redacted referral source and queue-age inventory</text>
+    <rect x="86" y="468" width="456" height="38" rx="10" fill="#ecfdf5"/><text x="104" y="493" fill="#065f46">2. Prior-auth blocker categories by accountable role</text>
+    <rect x="86" y="520" width="456" height="38" rx="10" fill="#fff7ed"/><text x="104" y="545" fill="#9a3412">3. Callback promises and owner-approved scripts</text>
+    <rect x="86" y="572" width="456" height="38" rx="10" fill="#fef2f2"/><text x="104" y="597" fill="#991b1b">4. AI receptionist / automation stop-rule register</text>
+    <rect x="86" y="624" width="456" height="38" rx="10" fill="#f8fafc"/><text x="104" y="649" fill="#334155">5. Decision memo: clean up, configure, buy, defer or stop</text>
+  </g>
+
+  <rect x="622" y="348" width="512" height="324" rx="24" fill="#07111f"/>
+  <text x="654" y="390" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Why this helps vendor selection</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#dbeafe">
+    <text x="654" y="432">Before patient engagement, RCM, EHR/PMS, AI receptionist,</text>
+    <text x="654" y="458">call-center, GRC or FinOps spend, AICS clarifies:</text>
+    <circle cx="666" cy="498" r="6" fill="#38bdf8"/><text x="684" y="504">what evidence can be reviewed without PHI/ePHI</text>
+    <circle cx="666" cy="538" r="6" fill="#38bdf8"/><text x="684" y="544">which rows require billing, coding, payer or clinical owners</text>
+    <circle cx="666" cy="578" r="6" fill="#38bdf8"/><text x="684" y="584">where automation should stop until approved by qualified advisers</text>
+    <circle cx="666" cy="618" r="6" fill="#38bdf8"/><text x="684" y="624">which platform/vendor decision is evidence-ready, not guessed</text>
+  </g>
+  <text x="654" y="653" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94a3b8">Synthetic demonstration only; not customer data, compliance proof, outcome evidence or revenue proof.</text>
+</svg>

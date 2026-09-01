@@ -139,7 +139,11 @@ class UsMedicalGroupReferralPriorAuthOwnerHandoffFaqTests(unittest.TestCase):
         self.assertIn("FAQPage", doc_types)
         article = next(node for node in nodes if isinstance(node, dict) and node.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-31")
+        self.assertEqual(article["dateModified"], "2026-09-01")
+        self.assertIn("owner dashboard", article["about"])
+        self.assertIn("us-medical-group-referral-prior-auth-owner-dashboard.svg", self.html)
+        self.assertIn("Demo owner-dashboard", self.html)
+        self.assertIn("synthetic no-PHI view", self.html)
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
