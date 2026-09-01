@@ -47,6 +47,8 @@ def test_page_contains_buyer_intent_and_safe_ai_boundaries():
         "claim-boundary gates",
         "AI output is draft support, not an official representation",
         "Request RFP evidence review",
+        "Download CSV evidence register",
+        "enterprise-ai-rfp-response-evidence-register.csv",
     ]:
         assert phrase in html
     for boundary in [
@@ -69,6 +71,7 @@ def test_page_contains_buyer_intent_and_safe_ai_boundaries():
 def test_asset_is_linked_for_discovery():
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "enterprise-ai-rfp-response-evidence-register.csv" in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 
 
@@ -86,3 +89,18 @@ def test_demo_svg_risk_map_is_forwardable_and_truth_bounded():
         "no fake client proof",
     ]:
         assert marker in svg
+
+
+def test_csv_evidence_register_is_downloadable_and_safe():
+    csv_path = PAGE.parent / "enterprise-ai-rfp-response-evidence-register.csv"
+    csv = csv_path.read_text(encoding="utf-8")
+    assert csv.startswith("Lane,Question or claim,Evidence source,Approved answer owner")
+    for phrase in [
+        "Answer source control",
+        "Data and privacy boundary",
+        "Security and access",
+        "AI behaviour and oversight",
+        "No revenue, ROI or cost-saving result claim without verified evidence",
+        "Operational evidence only; final legal/compliance wording requires accountable approval",
+    ]:
+        assert phrase in csv
