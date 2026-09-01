@@ -1,0 +1,1 @@
+Create a clean corporate Memphis bento-grid infographic titled 'The AI Workflow Boundary Card' using the three risk-zone cards and four review checks from structured-content.md. Use blue/teal trust colors with green/amber/red cards, numbered review markers, clear hierarchy, and safe educational language. Aspect 16:9-ish wide worksheet.
