@@ -1,0 +1,1 @@
+Create a clean corporate Memphis linear-progression ladder infographic titled 'The Missed Lead Follow-Up Ladder' using five rungs and three owner checks from structured-content.md. Use blue, teal, green, amber, and violet modular cards, numbered circles, clear owner-queue visual hierarchy, and safe educational language. Aspect landscape.

@@ -1,0 +1,67 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='960' viewBox='0 0 1200 960'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#111827'/><stop offset='.52' stop-color='#0f766e'/><stop offset='1' stop-color='#2563eb'/></linearGradient>
+    <filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='10' flood-color='#0f172a' flood-opacity='.12'/></filter>
+  </defs>
+  <rect width='1200' height='960' fill='#f8fbff'/>
+  <rect x='42' y='36' width='1116' height='890' rx='44' fill='white' stroke='#bae6fd' stroke-width='3'/>
+  <rect x='76' y='70' width='1048' height='166' rx='36' fill='url(#hero)'/>
+  <text x='108' y='116' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='900' fill='#ccfbf1' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC GUIDE</text>
+  <text x='108' y='171' font-family='Inter,Arial,sans-serif' font-size='50' font-weight='950' fill='white'>The Missed Lead Follow-Up Ladder</text>
+  <text x='108' y='212' font-family='Inter,Arial,sans-serif' font-size='20' fill='#dbeafe'>A safe educational infographic for turning unanswered calls, forms, and WhatsApp enquiries into an owner-visible follow-up rhythm without over-automating customer promises.</text>
+  <text x='100' y='258' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Five rungs from missed enquiry to owner-visible action</text>
+  <line x1='244' y1='260' x2='244' y2='790' stroke='#93c5fd' stroke-width='9' stroke-linecap='round'/>
+  
+    <g filter='url(#shadow)'>
+      <rect x='196' y='276' width='812' height='82' rx='25' fill='white' stroke='#1d4ed8' stroke-opacity='.28' stroke-width='2'/>
+      <circle cx='244' cy='317' r='30' fill='#dbeafe' stroke='#1d4ed8' stroke-width='3'/>
+      <text x='244' y='327' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='950' fill='#1d4ed8'>1</text>
+      <text x='292' y='306' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#0f172a'>Capture the source</text>
+      <text x='292' y='334' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='292' dy='0'>Record where the enquiry came from: phone, website form,</tspan><tspan x='292' dy='21'>WhatsApp, referral, marketplace, or ad click.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='196' y='380' width='812' height='82' rx='25' fill='white' stroke='#0f766e' stroke-opacity='.28' stroke-width='2'/>
+      <circle cx='244' cy='421' r='30' fill='#ccfbf1' stroke='#0f766e' stroke-width='3'/>
+      <text x='244' y='431' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='950' fill='#0f766e'>2</text>
+      <text x='292' y='410' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#0f172a'>Send a safe acknowledgement</text>
+      <text x='292' y='438' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='292' dy='0'>Confirm the message was received and set a realistic response</tspan><tspan x='292' dy='21'>expectation without promising outcomes or prices.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='196' y='484' width='812' height='82' rx='25' fill='white' stroke='#166534' stroke-opacity='.28' stroke-width='2'/>
+      <circle cx='244' cy='525' r='30' fill='#dcfce7' stroke='#166534' stroke-width='3'/>
+      <text x='244' y='535' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='950' fill='#166534'>3</text>
+      <text x='292' y='514' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#0f172a'>Route by urgency</text>
+      <text x='292' y='542' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='292' dy='0'>Separate routine questions, owner review, sensitive topics,</tspan><tspan x='292' dy='21'>payment requests, and complaint or risk items.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='196' y='588' width='812' height='82' rx='25' fill='white' stroke='#92400e' stroke-opacity='.28' stroke-width='2'/>
+      <circle cx='244' cy='629' r='30' fill='#fef3c7' stroke='#92400e' stroke-width='3'/>
+      <text x='244' y='639' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='950' fill='#92400e'>4</text>
+      <text x='292' y='618' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#0f172a'>Show the owner queue</text>
+      <text x='292' y='646' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='292' dy='0'>Give the business owner one daily view of open leads, stuck</tspan><tspan x='292' dy='21'>leads, unanswered replies, and ageing items.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='196' y='692' width='812' height='82' rx='25' fill='white' stroke='#6d28d9' stroke-opacity='.28' stroke-width='2'/>
+      <circle cx='244' cy='733' r='30' fill='#ede9fe' stroke='#6d28d9' stroke-width='3'/>
+      <text x='244' y='743' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='950' fill='#6d28d9'>5</text>
+      <text x='292' y='722' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#0f172a'>Close the loop</text>
+      <text x='292' y='750' font-family='Inter,Arial,sans-serif' font-size='17' fill='#334155'><tspan x='292' dy='0'>Mark each item as answered, waiting, booked, not relevant,</tspan><tspan x='292' dy='21'>duplicate, or needs human follow-up.</tspan></text>
+    </g>
+  
+    <g>
+      <rect x='102' y='812' width='302' height='106' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <text x='126' y='844' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='950' fill='#2563eb' letter-spacing='1.4'>OWNER CHECK 1</text>
+      <text x='126' y='874' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='126' dy='0'>Do not let AI invent price,</tspan><tspan x='126' dy='19'>availability, guarantees,</tspan><tspan x='126' dy='19'>discounts, legal terms, or</tspan><tspan x='126' dy='19'>professional advice.</tspan></text>
+    </g>
+    <g>
+      <rect x='438' y='812' width='302' height='106' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <text x='462' y='844' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='950' fill='#2563eb' letter-spacing='1.4'>OWNER CHECK 2</text>
+      <text x='462' y='874' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='462' dy='0'>Escalate sensitive messages</tspan><tspan x='462' dy='19'>before replying: payment,</tspan><tspan x='462' dy='19'>credentials, medical, legal,</tspan><tspan x='462' dy='19'>compliance, identity,</tspan></text>
+    </g>
+    <g>
+      <rect x='774' y='812' width='302' height='106' rx='24' fill='#f8fafc' stroke='#cbd5e1'/>
+      <text x='798' y='844' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='950' fill='#2563eb' letter-spacing='1.4'>OWNER CHECK 3</text>
+      <text x='798' y='874' font-family='Inter,Arial,sans-serif' font-size='16' fill='#334155'><tspan x='798' dy='0'>Keep a visible correction log</tspan><tspan x='798' dy='19'>when a template or AI draft is</tspan><tspan x='798' dy='19'>edited by a human.</tspan></text>
+    </g>
+  <text x='92' y='944' font-family='Inter,Arial,sans-serif' font-size='13' fill='#64748b'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice.</text>
+</svg>
