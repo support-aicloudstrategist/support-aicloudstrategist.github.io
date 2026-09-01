@@ -49,6 +49,13 @@
       "main_sha256": "7db254fdf6b05e18cfa1410f91d284529cdf3092b5af9b364a828720761c51ef",
       "title": "AI Automation Agency Brazil | AICloudStrategist"
     },
+    "ai-automation-agency-canada/index.html": {
+      "canonical": "https://aicloudstrategist.com/ai-automation-agency-canada/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "648a1021b822d79e027963bf861b99ab79dbed74fb6eb76333891538e60e173c",
+      "title": "AI Automation Agency Canada | AICloudStrategist"
+    },
     "ai-automation-agency-colombia/index.html": {
       "canonical": "https://aicloudstrategist.com/ai-automation-agency-colombia/",
       "forms": 0,
@@ -130,7 +137,7 @@
       "canonical": "https://aicloudstrategist.com/ai-automation-agency/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b4429b9cf0e7aca6ba69960f7d7116f0d3649208548daa9b70d5389ed72d670a",
+      "main_sha256": "f65b77823b3b4340a31a578d166b586a2d677ec1a887af37e4bccecaad1adf6a",
       "title": "AI Automation Agency for Small Business Growth | AICloudStrategist"
     },
     "ai-chatbot-development-services/index.html": {
@@ -375,14 +382,14 @@
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
-      "main_sha256": "58995514603c2056a955bbd271e79725246126bf23588414d1051d216c038b11",
+      "main_sha256": "79c4d646c1123c1434d5b7794f760dff92aa2efb277fd631bad5117943c4cbdc",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
     "free-business-review/index.html": {
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
-      "main_sha256": "58995514603c2056a955bbd271e79725246126bf23588414d1051d216c038b11",
+      "main_sha256": "79c4d646c1123c1434d5b7794f760dff92aa2efb277fd631bad5117943c4cbdc",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
     "growth-control-os/index.html": {
@@ -424,7 +431,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "486d5dc28ee81cbaf5538f9182172c6eb9a59f45868e4f45da9ddb01c4c0d22e",
+      "main_sha256": "2fe709df6c651a67eb949e21b4b13935e8e6c122ebc5a57329c1b72dfd231da9",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -599,7 +606,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "b0e042724b586b9c2ca966ce2a98292563aba89e8dc0812b92c8c7f2e0cea56f",
+      "main_sha256": "ead5c8ac5733c4de339f2fed400e3f756fa576185b4d6e94b3a559ebf46a3cd5",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1120,6 +1127,13 @@
       "main_sha256": "ff7320649a2bce73a881b535d6c55b43311e40df4f043c4f30d1bfe637e4a3ee",
       "title": "Europe Healthtech GDPR DPIA Security Questionnaire Source Map | AICS"
     },
+    "resources/europe-healthtech-iso27001-gdpr-ai-act-procurement-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-iso27001-gdpr-ai-act-procurement-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "815e7301ad61009c2658af015b4d7b29f08c2f702582a75175a9fafa17b6fa67",
+      "title": "Europe Healthtech ISO 27001, GDPR + AI Act Procurement Evidence Checklist | AICS"
+    },
     "resources/europe-healthtech-procurement-response-readiness-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-procurement-response-readiness-checklist/",
       "forms": 0,
@@ -1280,6 +1294,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "1d5506fd7c8bbefacda46ba89e0376985e291c9c07bf14d09b9cf9645b2caa03",
       "title": "GCC Clinic WhatsApp + AI Receptionist Diagnostic Package | AICS"
+    },
+    "resources/gcc-clinic-whatsapp-ai-receptionist-vs-booking-crm-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/gcc-clinic-whatsapp-ai-receptionist-vs-booking-crm-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "b268c46448f0f01e42e8f9476dcf4dca18a1a3e6f28279a4047d9582670eb460",
+      "title": "GCC Clinic WhatsApp + AI Receptionist vs Booking, CRM and Patient Engagement Tools | AICS"
     },
     "resources/germany-crm-ai-automation-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/germany-crm-ai-automation-diagnostic-package/",
@@ -1526,6 +1547,20 @@
       "main_sha256": "63725931b08c23829df9dc586d3c22aaa5b124d3d1828f4dc5b880944fda30a8",
       "title": "Global Clinic After-Hours Missed-Call Follow-Up Checklist | AICloudStrategist"
     },
+    "resources/global-dental-implant-follow-up-vs-crm-ai-receptionist-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-dental-implant-follow-up-vs-crm-ai-receptionist-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "c446f4cecb9d86da0d533eeb6b7f9c704ec308451dc51f08942b61da865766a7",
+      "title": "Dental Implant Follow-up vs CRM and AI Receptionist Comparison | AICS"
+    },
+    "resources/global-dental-implant-treatment-plan-follow-up-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-dental-implant-treatment-plan-follow-up-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "1e6f10a04a035188ecc79ee768716fb533de75f5bc6d9ceb6e9f771e5b18087d",
+      "title": "Dental Implant Treatment Plan Follow-up Evidence Checklist | AICS"
+    },
     "resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/",
       "forms": 0,
@@ -1568,6 +1603,13 @@
       "main_sha256": "0925d8508134572b117e1c93c368ea063a7902c35bc9e2c7a012c6c04aeb7e36",
       "title": "Enterprise AI Model Evaluation Regression Evidence Checklist | AICloudStrategist"
     },
+    "resources/global-enterprise-ai-rfp-response-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-enterprise-ai-rfp-response-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "162bb14524d3740de52ac2b0e22a763d2b9f3d13da3532fb2057d06b3653ffc1",
+      "title": "Enterprise AI RFP Response Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-financial-services-ai-intake-approval-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-financial-services-ai-intake-approval-evidence-checklist/",
       "forms": 0,
@@ -1589,6 +1631,20 @@
       "main_sha256": "51fd4c5af6b5145836435faf0c9ae8d5131873258dc723b45ca178ea08ce0665",
       "title": "Law Firm Missed-Call + Client Intake Follow-Up Checklist | AICloudStrategist"
     },
+    "resources/global-local-services-missed-lead-follow-up-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-local-services-missed-lead-follow-up-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "c143649c3ba6d1147be250cfa0fbc6584c8a523a83f09ac27e84b1702ba81b42",
+      "title": "Local Services Missed Lead Follow-Up FAQ | AICloudStrategist"
+    },
+    "resources/global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "235072dc8e87d7e85047065a5928a68eb587eee90cb407976637482755baf407",
+      "title": "Restaurant Food Cost Too High? POS + Inventory Owner Evidence Checklist | AICS"
+    },
     "resources/global-retail-inventory-manual-work-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-retail-inventory-manual-work-diagnostic-package/",
       "forms": 0,
@@ -1609,6 +1665,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "c9fb292d068d39de5db28c93b83be42cbd2f3c152a9ac8ba73c880f7329f8129",
       "title": "Retail Inventory POS vs ERP vs Inventory App Comparison Checklist | AICS"
+    },
+    "resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "137ea7046ecbc2ebdd050bb6863f3326d96c8364919d4c75d6c32bcd5f419589",
+      "title": "WhatsApp Lead Follow-Up vs CRM and Automation Tools | AICloudStrategist"
     },
     "resources/healthcare-ai-patient-growth-platform/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/healthcare-ai-patient-growth-platform/",
@@ -1635,7 +1698,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "0a747999a1075412b2b44712ed0edb0542777c6e62cdae3c858609dd156b49fd",
+      "main_sha256": "7a1e3a90ef7db90ff834cc88d36b2d2b95acb161167a807008b7a21f0dc16123",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
@@ -1677,8 +1740,15 @@
       "canonical": "https://aicloudstrategist.com/resources/india-coaching-centre-admission-follow-up-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ebe0bdf67148c610ea2386182e85ea6f3c32245c7e7c638bdb37e360a1409aa9",
+      "main_sha256": "25139c3b2d596d3a7eef9af529b0225fbdba515e22887ab0d2cd9bd85843d17d",
       "title": "India Coaching Centre Admission Follow-Up Checklist | AICloudStrategist"
+    },
+    "resources/india-coaching-centre-admission-follow-up-vs-crm-whatsapp-ai-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-coaching-centre-admission-follow-up-vs-crm-whatsapp-ai-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "dca9e2d14a8bc984d3298734d4e47a713e633c6edfc0989fb0fab79571977a29",
+      "title": "India Coaching Centre Admission Follow-Up vs CRM, WhatsApp and AI | AICS"
     },
     "resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
@@ -1700,6 +1770,20 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "c5229d0b632e553c712c4703c2e97a42ea6ae0a99754d4303ac0fcbf8c1e8b31",
       "title": "India Healthcare DPDP Consent vs GRC and DPO Advisers | AICS"
+    },
+    "resources/india-ivf-fertility-missed-patient-calls-vs-crm-ai-receptionist-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-ivf-fertility-missed-patient-calls-vs-crm-ai-receptionist-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "015d30c12aa4c50852d6de6846d37b3e9bb4f8629e782c3ca3298ec0363ed8d5",
+      "title": "India IVF Missed Patient Calls vs CRM, WhatsApp and AI Receptionist Comparison | AICS"
+    },
+    "resources/india-ophthalmology-cataract-retina-followup-dpdp-finops-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-ophthalmology-cataract-retina-followup-dpdp-finops-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "9ad01f586ae0876b3636c221de359e2c24420915babcdb0e88a786007a5301a8",
+      "title": "India Ophthalmology Cataract / Retina Follow-up DPDP + Cloud-Link Checklist | AICS"
     },
     "resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
@@ -1733,7 +1817,7 @@
       "canonical": "https://aicloudstrategist.com/resources/ivf-clinic-lead-leakage-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "48ba3747a98cb34a6ce3b7df2305d84542d41b0ea54c65cba95047283a088411",
+      "main_sha256": "439c85e227b5c7d0e0c1b11d95bee6ed3ce225780da45389ccddb9c7b379ea36",
       "title": "IVF Clinic Lead Leakage Checklist | AICS"
     },
     "resources/kubernetes-cost-out-of-control-finops-evidence-checklist/index.html": {
@@ -2016,6 +2100,13 @@
       "main_sha256": "b2e6be893f6a5df077da77d77832bee2bbcf13d6bd627985698f9e05d3a14688",
       "title": "UK Care Home Family Enquiry Follow-Up Evidence Checklist | AICloudStrategist"
     },
+    "resources/uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "cf7b25cff1471722674b47dca5b2572263b5535396f15fd44dd3a6b59c05cd28",
+      "title": "UK Private Clinic AI Receptionist vs Practice Management and Patient GrowthOS | AICS"
+    },
     "resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/",
       "forms": 0,
@@ -2153,7 +2244,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-healthtech-growthos-vs-patient-engagement-grc-finops-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "5987b7295cf9dfb4aeec1e4c9c1cad37c6bce7fc60e3da2bc546fa573db78fdb",
+      "main_sha256": "22c7175ead3ebbfc025166d70b186a6344689ed655b2d86a1146a83ca3e39eac",
       "title": "US Healthtech GrowthOS vs Patient Engagement, GRC and FinOps Tools | AICS"
     },
     "resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/index.html": {
@@ -2219,12 +2310,33 @@
       "main_sha256": "05375bfd2d7a4e6352adb72edd692c8cd800e506c6b35669bdc719d546989acf",
       "title": "US No-show Recovery: GrowthOS vs Patient Engagement and AI Receptionist | AICS"
     },
+    "resources/us-medical-group-referral-prior-auth-owner-handoff-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-group-referral-prior-auth-owner-handoff-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "6b5ed3fa7d21bf8242fe39c37b16563cfe00e387096d41d5a387691ee46ad429",
+      "title": "US Medical Group Referral + Prior Auth Owner Handoff FAQ | AICS"
+    },
+    "resources/us-medical-group-referral-prior-auth-vs-patient-engagement-rcm-ai-receptionist-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-group-referral-prior-auth-vs-patient-engagement-rcm-ai-receptionist-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "3b46237dc125bf9c5e740d59bc15e22169966f0099389a5aa16568c9e08a4a8c",
+      "title": "US Medical Group Referral + Prior Auth vs Patient Engagement, RCM and AI Receptionist Tools"
+    },
     "resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "72bce56d0939f00b453322533714354979cc61d856f485bd70022b5594314bfa",
       "title": "US Outpatient Imaging Referral + Prior Auth Leakage Checklist | AICS"
+    },
+    "resources/us-outpatient-specialty-referral-prior-auth-growthos-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-outpatient-specialty-referral-prior-auth-growthos-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "e5e369fe5c50e1f914183306ee6d04adb993bf9e819c4a185573d153ecfbf0e4",
+      "title": "US Outpatient Specialty Referral + Prior Auth GrowthOS Evidence Checklist | AICS"
     },
     "resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/",
@@ -2244,7 +2356,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-specialty-clinic-referral-prior-auth-decision-memo/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "55d9df7f5598992d00ada358a76dd0c04780314d46c44821cbf30e2cc4dba911",
+      "main_sha256": "2eed9e00e744ecc322ccaacf154b66620e57f39ab60847629e551aa01fcd0443",
       "title": "US Specialty Clinic Referral + Prior Auth Decision Memo | AICS"
     },
     "resources/us-specialty-clinic-referral-prior-auth-leakage-checklist/index.html": {
