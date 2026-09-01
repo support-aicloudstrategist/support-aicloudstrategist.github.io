@@ -1,0 +1,15 @@
+workflow_id,workflow_area,source_channel,monthly_items,after_hours_or_missed,callback_logged,care_stage_visible,appointment_due_visible,consent_visible,whatsapp_optin_visible,dpdp_notice_prompt_visible,ai_admin_boundary_disclosed,owner_assigned,hours_since_last_touch,ophthalmologist_review_needed,red_flag_or_emergency_language,surgery_or_injection_context,insurance_or_package_blocker,report_or_image_needed,cloud_storage_or_link_gap,closure_reason_visible,language_support_needed,unsupported_claim_risk
+OPH-001,Cataract surgery enquiry follow-up,WhatsApp enquiry,96,yes,yes,yes,yes,yes,yes,yes,yes,yes,6,no,no,yes,no,no,no,no,yes,no
+OPH-002,Premium IOL package comparison,Google Business Profile chat,54,yes,no,yes,no,no,yes,no,yes,no,38,no,no,yes,yes,no,no,no,yes,yes
+OPH-003,Post-cataract redness and pain callback,Missed call register,42,yes,no,yes,yes,yes,no,yes,no,yes,18,yes,yes,yes,no,no,no,no,yes,no
+OPH-004,Retina injection reminder,Clinic software export,68,no,yes,yes,yes,yes,yes,yes,yes,yes,10,yes,no,yes,no,no,no,yes,yes,no
+OPH-005,OCT report access request,WhatsApp enquiry,73,yes,no,no,no,yes,yes,yes,yes,no,44,yes,no,no,no,yes,yes,no,yes,no
+OPH-006,Glaucoma field-test follow-up,Phone desk note,47,yes,yes,yes,yes,yes,yes,yes,yes,yes,14,no,no,no,no,no,no,yes,yes,no
+OPH-007,Pediatric squint second-opinion request,Website form,31,no,no,no,no,no,no,no,no,no,72,yes,no,no,no,yes,no,no,yes,no
+OPH-008,Optical prescription remake complaint,WhatsApp support,83,yes,yes,yes,yes,yes,yes,yes,yes,yes,5,no,no,no,no,no,no,yes,yes,no
+OPH-009,Diabetic retina review overdue,Clinic software export,59,no,yes,yes,yes,yes,yes,yes,yes,no,28,yes,no,no,no,yes,yes,no,yes,no
+OPH-010,Lasik eligibility claim follow-up,Instagram DM,64,yes,no,no,no,no,yes,no,no,no,50,yes,no,no,no,no,no,no,yes,yes
+OPH-011,Cataract insurance pre-auth document chase,Reception register,77,yes,yes,yes,yes,yes,yes,yes,yes,yes,9,no,no,yes,yes,no,no,no,yes,no
+OPH-012,Post-op blurred vision message,WhatsApp enquiry,39,yes,no,yes,yes,yes,yes,yes,no,yes,16,yes,yes,yes,no,no,no,no,yes,no
+OPH-013,Camp-screening callback list,Health camp sheet,118,yes,no,no,yes,no,no,no,no,no,96,no,no,no,no,no,no,no,yes,no
+OPH-014,Cloud report-link expiry complaints,WhatsApp support,52,yes,yes,yes,no,yes,yes,yes,yes,yes,12,no,no,no,no,yes,yes,no,yes,no

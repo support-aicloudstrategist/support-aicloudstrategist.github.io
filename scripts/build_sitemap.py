@@ -146,6 +146,7 @@ CURATED_PATHS = [
     "/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
     "/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
     "/resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
+    "/resources/india-ophthalmology-cataract-retina-followup-dpdp-finops-checklist/",
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/resources/india-radiology-mri-ct-referral-followup-dpdp-finops-checklist/",
     "/resources/india-ivf-fertility-missed-patient-calls-vs-crm-ai-receptionist-comparison/",
