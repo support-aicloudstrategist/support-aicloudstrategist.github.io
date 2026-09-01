@@ -58,6 +58,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/clinic-not-getting-patients/",
     "/resources/clinic-website-not-converting-patients-checklist/",
     "/resources/saudi-private-clinic-whatsapp-appointment-follow-up-checklist/",
+    "/resources/gcc-clinic-whatsapp-ai-receptionist-vs-booking-crm-comparison/",
     "/resources/singapore-private-clinic-pdpa-patient-follow-up-evidence-checklist/",
     "/resources/singapore-private-clinic-missed-call-whatsapp-owner-evidence-checklist/",
     "/resources/singapore-private-clinic-patient-growthos-vs-clinic-software-ai-receptionist-comparison/",
