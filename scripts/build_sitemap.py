@@ -138,6 +138,7 @@ CURATED_PATHS = [
     "/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
     "/resources/europe-healthtech-cloud-trust-finops-evidence-room/",
     "/resources/europe-healthtech-cloud-trust-finops-executive-summary/",
+    "/resources/europe-healthtech-iso27001-gdpr-ai-act-procurement-evidence-checklist/",
     "/resources/europe-healthtech-gdpr-dpia-security-questionnaire-source-map/",
     "/resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/",
     "/resources/europe-healthtech-ai-trust-questionnaire-answer-bank-template/",
