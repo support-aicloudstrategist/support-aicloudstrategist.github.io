@@ -5,8 +5,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-enterprise-ai-rfp-response-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
+SVG = ROOT / "resources" / SLUG / "enterprise-ai-rfp-answer-risk-map.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
+SVG_PATH = f"{PATH}enterprise-ai-rfp-answer-risk-map.svg"
 
 
 def json_ld_documents(html):
@@ -40,6 +42,9 @@ def test_page_contains_buyer_intent_and_safe_ai_boundaries():
         "AI security questionnaire RFP",
         "AI vendor due diligence response",
         "AI human oversight RFP",
+        "Demo visual: answer risk map before submission",
+        "enterprise-ai-rfp-answer-risk-map.svg",
+        "claim-boundary gates",
         "AI output is draft support, not an official representation",
         "Request RFP evidence review",
     ]:
@@ -65,3 +70,19 @@ def test_asset_is_linked_for_discovery():
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+
+
+def test_demo_svg_risk_map_is_forwardable_and_truth_bounded():
+    svg = SVG.read_text(encoding="utf-8")
+    page = PAGE.read_text(encoding="utf-8")
+    assert SVG_PATH in page
+    for marker in [
+        "Enterprise AI RFP answer risk map",
+        "enterprise-ai-rfp-answer-risk-map-demo-2026-09-01",
+        "Evidence source",
+        "Owner approval",
+        "Claim boundary",
+        "not a customer result",
+        "no fake client proof",
+    ]:
+        assert marker in svg
