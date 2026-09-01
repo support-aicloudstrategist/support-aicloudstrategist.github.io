@@ -1,0 +1,15 @@
+row_id,area,buyer_pain_phrase,synthetic_monthly_value,primary_evidence_needed,owner_lane,automation_status,truth_boundary
+1,recipe_costing,food cost too high,2400,menu item recipe unit mismatch,recipe_pos_mapping,hold_for_owner_review,synthetic_not_real_loss
+2,prep_waste,vegetable wastage too high,1350,waste reason code and prep sheet,wastage_spoilage,hold_for_manager_review,synthetic_not_real_loss
+3,supplier_invoice,restaurant purchase price variance,2100,invoice unit price vs agreed price,supplier_purchase_variance,hold_for_owner_review,synthetic_not_real_loss
+4,pos_voids,too many voids in restaurant POS,980,void reason and manager approval,policy_exception,hold_for_owner_review,synthetic_not_real_loss
+5,buffet_waste,buffet food wastage,1750,end-of-service waste log,wastage_spoilage,manual_review,synthetic_not_real_loss
+6,stock_count,inventory not matching POS,3200,stock count timestamp and item unit,stock_count_variance,hold_for_owner_review,synthetic_not_real_loss
+7,combo_meals,combo meal margin unclear,890,modifier and combo recipe mapping,recipe_pos_mapping,needs_mapping_cleanup,synthetic_not_real_loss
+8,complimentary_items,free items reducing margin,760,complimentary item approval trail,policy_exception,hold_for_owner_review,synthetic_not_real_loss
+9,expiry,ingredients expiring before use,1120,expiry log and purchase batch,wastage_spoilage,manual_review,synthetic_not_real_loss
+10,portion_control,portion size inconsistent,1450,recipe card and kitchen variance note,recipe_pos_mapping,hold_for_manager_review,synthetic_not_real_loss
+11,supplier_quantity,received quantity mismatch,1680,GRN/photo/weight evidence,supplier_purchase_variance,hold_for_owner_review,synthetic_not_real_loss
+12,returns,customer returns causing waste,620,return reason linked to POS bill,wastage_spoilage,manual_review,synthetic_not_real_loss
+13,tax_accounting,category margin report unreliable,1500,category mapping and tax/accounting review,recipe_pos_mapping,blocked_for_adviser_review,synthetic_not_real_loss
+14,credit_note,supplier credit notes missing,950,credit note and invoice reconciliation,supplier_purchase_variance,hold_for_owner_review,synthetic_not_real_loss
