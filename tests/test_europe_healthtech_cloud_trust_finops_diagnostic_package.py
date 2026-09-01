@@ -43,3 +43,6 @@ def test_europe_healthtech_cloud_trust_finops_diagnostic_is_discoverable_and_sel
     assert 'numberOfItems":20' in PRICING
     assert "Scope before quote" in PRICING
     assert "europe-healthtech-cloud-trust-finops-diagnostic" in PRICING
+    assert "/resources/europe-healthtech-iso27001-gdpr-ai-act-procurement-evidence-checklist/" in PRICING
+    assert "Related: ISO 27001 / GDPR / EU AI Act procurement evidence checklist" in PRICING
+    assert "without sharing patient data, credentials, audit reports or confidential procurement files" in PRICING

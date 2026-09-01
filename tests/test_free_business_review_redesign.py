@@ -22,7 +22,7 @@ def test_route_html_only_changes_the_dedicated_stylesheet_version():
         'free-business-review.css?v={VERSION}',
         PAGE,
     )
-    assert hashlib.sha256(normalized.encode()).hexdigest() == "fa9d83dc0e4f534f94b861436aa3af7f1ea8f98e0a5c701668b96e27a8998aed"
+    assert hashlib.sha256(normalized.encode()).hexdigest() == "e469b4c2b985d6424a9d1323463982edc7f17de13d7c9c80ce68a2882205d35b"
 
 
 def test_page_uses_one_canonical_offer_name():
@@ -203,6 +203,15 @@ def test_compact_workflow_combines_scope_output_and_process():
         assert phrase in source
     assert PAGE.count("What the audit checks") == 0
     assert PAGE.count("What happens after you submit") == 0
+
+
+def test_healthtech_review_route_surfaces_europe_procurement_evidence_checklist():
+    diagnostic_bridge = re.search(r'<section[^>]+aria-labelledby="diagnostic-bridge-title".*?</section>', PAGE, re.S)
+    assert diagnostic_bridge
+    source = diagnostic_bridge.group(0)
+    assert "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/" in source
+    assert "/resources/europe-healthtech-iso27001-gdpr-ai-act-procurement-evidence-checklist/" in source
+    assert "See the Europe procurement evidence checklist" in source
 
 
 def test_tablet_workflow_is_a_compact_stepped_list():
