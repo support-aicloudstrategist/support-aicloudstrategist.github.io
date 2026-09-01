@@ -39,6 +39,7 @@ CURATED_PATHS = [
     "/resources/global-retail-inventory-manual-work-diagnostic-package/",
     "/resources/global-retail-inventory-pos-erp-inventory-app-comparison-checklist/",
     "/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
+    "/resources/global-enterprise-ai-rfp-response-evidence-checklist/",
     "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
     "/resources/global-hotel-direct-booking-enquiry-follow-up-checklist/",
     "/resources/global-auto-dealer-internet-lead-follow-up-checklist/",
