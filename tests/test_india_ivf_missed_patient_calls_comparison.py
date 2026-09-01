@@ -45,6 +45,20 @@ def test_csv_is_synthetic_and_linked():
     assert all("Synthetic" in row["claim_boundary"] or "Readiness" in row["claim_boundary"] for row in rows)
 
 
+def test_synthetic_owner_dashboard_is_linked_and_bounded():
+    html = PAGE.read_text(encoding="utf-8")
+    svg_name = "india-ivf-counsellor-leakage-owner-dashboard.svg"
+    assert svg_name in html
+    svg = (PAGE.parent / svg_name).read_text(encoding="utf-8")
+    for phrase in [
+        "Synthetic India IVF counsellor leakage owner dashboard",
+        "no patient, clinic, PHI, appointment, revenue or DPDP compliance claim",
+        "Human-review stops",
+        "Owner handoff proof",
+    ]:
+        assert phrase in svg
+
+
 def test_schema_and_discovery_files_include_ivf_resource():
     html = PAGE.read_text(encoding="utf-8")
     docs = json_ld_documents(html)

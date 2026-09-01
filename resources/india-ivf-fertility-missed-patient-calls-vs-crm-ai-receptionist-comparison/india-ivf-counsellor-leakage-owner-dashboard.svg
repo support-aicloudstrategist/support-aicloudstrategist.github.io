@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic India IVF counsellor leakage owner dashboard</title>
+  <desc id="desc">Synthetic, non-patient dashboard showing missed calls, WhatsApp enquiries, owner handoffs, human review boundaries and unresolved ageing for IVF clinic owner review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#07111f"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <style>
+      .bg{fill:url(#bg)}.panel{fill:#ffffff;stroke:#cbd5e1;stroke-width:2}.soft{fill:#f8fafc}.ink{fill:#0f172a;font-family:Inter,Arial,sans-serif}.muted{fill:#475569;font-family:Inter,Arial,sans-serif}.white{fill:#fff;font-family:Inter,Arial,sans-serif}.small{font-size:22px}.med{font-size:28px;font-weight:700}.big{font-size:40px;font-weight:800}.pill{fill:#e0f2fe}.safe{fill:#dcfce7}.warn{fill:#fef3c7}.risk{fill:#fee2e2}.line{stroke:#94a3b8;stroke-width:3;stroke-linecap:round}.dot{fill:#14b8a6}.no{fill:#ef4444}.yes{fill:#22c55e}.review{fill:#f59e0b}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="34"/>
+  <text x="60" y="72" class="white big">IVF missed-enquiry owner view</text>
+  <text x="60" y="112" class="white small">Synthetic demo only · no patient, clinic, PHI, appointment, revenue or DPDP compliance claim</text>
+
+  <rect x="60" y="150" width="1080" height="154" rx="24" class="panel"/>
+  <text x="92" y="196" class="ink med">Owner evidence queue</text>
+  <g transform="translate(92 226)">
+    <rect width="165" height="46" rx="23" class="pill"/><text x="22" y="31" class="ink small">Missed calls</text>
+    <rect x="190" width="190" height="46" rx="23" class="pill"/><text x="213" y="31" class="ink small">WhatsApp leads</text>
+    <rect x="405" width="190" height="46" rx="23" class="pill"/><text x="430" y="31" class="ink small">Website forms</text>
+    <rect x="620" width="170" height="46" rx="23" class="pill"/><text x="645" y="31" class="ink small">Ad sources</text>
+    <rect x="815" width="160" height="46" rx="23" class="pill"/><text x="846" y="31" class="ink small">Referrals</text>
+  </g>
+
+  <rect x="60" y="340" width="330" height="300" rx="24" class="panel"/>
+  <text x="92" y="386" class="ink med">Ageing buckets</text>
+  <line x1="100" y1="445" x2="350" y2="445" class="line"/><circle cx="140" cy="445" r="16" class="yes"/><text x="100" y="490" class="muted small">same day</text>
+  <line x1="100" y1="530" x2="350" y2="530" class="line"/><circle cx="235" cy="530" r="16" class="review"/><text x="100" y="575" class="muted small">1-2 days</text>
+  <line x1="100" y1="610" x2="350" y2="610" class="line"/><circle cx="318" cy="610" r="16" class="no"/><text x="100" y="655" class="muted small">3+ days</text>
+
+  <rect x="435" y="340" width="330" height="300" rx="24" class="panel"/>
+  <text x="467" y="386" class="ink med">Human-review stops</text>
+  <rect x="467" y="420" width="250" height="44" rx="14" class="safe"/><text x="488" y="450" class="ink small">Admin callback</text>
+  <rect x="467" y="486" width="250" height="44" rx="14" class="warn"/><text x="488" y="516" class="ink small">Finance question</text>
+  <rect x="467" y="552" width="250" height="44" rx="14" class="risk"/><text x="488" y="582" class="ink small">Treatment/medical</text>
+  <text x="467" y="632" class="muted small">Qualified staff/adviser route noted before automation.</text>
+
+  <rect x="810" y="340" width="330" height="300" rx="24" class="panel"/>
+  <text x="842" y="386" class="ink med">Owner handoff proof</text>
+  <circle cx="866" cy="442" r="12" class="dot"/><text x="895" y="450" class="muted small">Source captured</text>
+  <circle cx="866" cy="496" r="12" class="dot"/><text x="895" y="504" class="muted small">Counsellor owner</text>
+  <circle cx="866" cy="550" r="12" class="dot"/><text x="895" y="558" class="muted small">Next action + SLA</text>
+  <circle cx="866" cy="604" r="12" class="dot"/><text x="895" y="612" class="muted small">Closure reason</text>
+
+  <text x="60" y="710" class="white small">AICS fit: proof-before-platform review before CRM migration, WhatsApp automation, AI receptionist or agency spend.</text>
+</svg>
