@@ -1,0 +1,15 @@
+row_id,buyer_pain_phrase,lead_or_followup_stage,owner_evidence_needed,next_safe_owner_action,synthetic_not_real_patient_data,unsafe_claim_boundary
+1,implant price enquiry after website form,new implant consult,source and callback timestamp,assign treatment coordinator callback today,yes,No conversion revenue or treatment acceptance claim
+2,missed phone call asking all-on-X availability,missed call,call-back owner and deadline,return call and log outcome,yes,No clinical suitability claim
+3,treatment plan estimate sent no reply,estimate follow-up,date sent question pending next step,send clinic-approved human follow-up,yes,No patient acceptance or revenue claim
+4,finance question after implant consultation,finance handoff,approved finance information boundary,route to qualified staff or finance vendor,yes,No credit approval or affordability advice claim
+5,insurance coverage question before consult,insurance handoff,approved insurance workflow owner,route to insurance-trained staff,yes,No coverage guarantee claim
+6,second opinion enquiry from WhatsApp,consult triage,consent and human review marker,book human consult triage,yes,No diagnosis or treatment recommendation claim
+7,high-intent implant consult no-show,no-show recovery,appointment status and callback owner,offer clinic-approved rebooking path,yes,No no-show reduction claim
+8,hygiene recall mixed with implant list,recall segmentation,service category separation,move to recall queue not implant queue,yes,No revenue prioritization claim
+9,emergency pain message in marketing inbox,urgent human handoff,red flag route and timestamp,escalate to clinic urgent protocol,yes,No medical triage safety claim
+10,post-consult cost objection,treatment-plan question,owner-approved answer boundary,prepare coordinator callback notes,yes,No financial advice or discount promise claim
+11,ad campaign lead missing phone number,incomplete lead,missing field and source evidence,request missing contact via approved template,yes,No ad ROI claim
+12,old implant enquiry reactivated,stale lead follow-up,last consent and prior status,confirm opt-in before follow-up,yes,No patient outcome claim
+13,front-desk note says call later,no owner dashboard,callback deadline and accountable owner,add to visible owner review queue,yes,No operational improvement claim
+14,CRM duplicate for same enquiry,data hygiene,duplicate source and merge rule,review before automation trigger,yes,No automation accuracy claim
