@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic US outpatient referral and prior authorization owner map</title>
+  <desc id="desc">Demo-labelled evidence map showing referral intake, prior authorization status, abandoned calls and owner handoff gates before platform or automation claims.</desc>
+  <rect width="1200" height="675" fill="#f7fbff"/>
+  <rect x="48" y="42" width="1104" height="591" rx="28" fill="#ffffff" stroke="#c9d8ea" stroke-width="2"/>
+  <text x="80" y="95" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#0f2742">US outpatient referral + prior-auth owner map</text>
+  <text x="80" y="130" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4b6178">Synthetic / no PHI · proof-before-platform evidence for specialty groups</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="80" y="178" width="220" height="120" rx="18" fill="#e8f2ff" stroke="#7da9db"/>
+    <text x="105" y="218" font-size="20" font-weight="700" fill="#11395f">1. Referral intake</text>
+    <text x="105" y="249" font-size="16" fill="#244b6c">Fax · portal · phone</text>
+    <text x="105" y="274" font-size="16" fill="#244b6c">Missing order / source</text>
+    <rect x="340" y="178" width="230" height="120" rx="18" fill="#fff7e6" stroke="#e5b14f"/>
+    <text x="365" y="218" font-size="20" font-weight="700" fill="#654000">2. Auth blocker</text>
+    <text x="365" y="249" font-size="16" fill="#654000">Eligibility · payer task</text>
+    <text x="365" y="274" font-size="16" fill="#654000">Doc request / stale proof</text>
+    <rect x="610" y="178" width="230" height="120" rx="18" fill="#eafaf0" stroke="#6abf85"/>
+    <text x="635" y="218" font-size="20" font-weight="700" fill="#1d5b34">3. Owner queue</text>
+    <text x="635" y="249" font-size="16" fill="#1d5b34">Scheduler · prior-auth</text>
+    <text x="635" y="274" font-size="16" fill="#1d5b34">Billing · clinical review</text>
+    <rect x="880" y="178" width="220" height="120" rx="18" fill="#f4ecff" stroke="#a481d9"/>
+    <text x="905" y="218" font-size="20" font-weight="700" fill="#44246c">4. Safe action</text>
+    <text x="905" y="249" font-size="16" fill="#44246c">Human review threshold</text>
+    <text x="905" y="274" font-size="16" fill="#44246c">Adviser-approved claims</text>
+    <path d="M300 238 H340" stroke="#527799" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M570 238 H610" stroke="#527799" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M840 238 H880" stroke="#527799" stroke-width="4" marker-end="url(#arrow)"/>
+    <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#527799"/></marker></defs>
+    <rect x="80" y="350" width="1020" height="170" rx="20" fill="#0f2742"/>
+    <text x="112" y="392" font-size="23" font-weight="700" fill="#ffffff">Claim-boundary gates before any software, AI receptionist or RCM automation promise</text>
+    <text x="112" y="432" font-size="18" fill="#d8e8f7">✓ no PHI in public examples  ✓ no HIPAA/SOC 2/HITRUST certification claim  ✓ no authorization-speed or denial-reduction result claim</text>
+    <text x="112" y="468" font-size="18" fill="#d8e8f7">✓ route clinical, billing, coding, privacy, security and payer-rule questions to accountable advisers/client owners</text>
+    <text x="112" y="504" font-size="18" fill="#d8e8f7">✓ use AICS to build the owner evidence register before selecting or configuring patient-access, RCM, EHR/PMS or call-center tools</text>
+    <text x="80" y="585" font-size="16" fill="#62748a">AICloudStrategist readiness artifact — synthetic illustration only, not customer proof or compliance advice.</text>
+  </g>
+</svg>

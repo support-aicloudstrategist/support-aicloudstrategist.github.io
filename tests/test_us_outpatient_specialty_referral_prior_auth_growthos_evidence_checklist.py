@@ -6,9 +6,11 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-outpatient-specialty-referral-prior-auth-growthos-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "us-outpatient-referral-prior-auth-growthos-evidence-register.csv"
+SVG = ROOT / "resources" / SLUG / "us-outpatient-referral-prior-auth-owner-map.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 CSV_URL = URL + "us-outpatient-referral-prior-auth-growthos-evidence-register.csv"
+SVG_URL = URL + "us-outpatient-referral-prior-auth-owner-map.svg"
 
 
 def json_ld_documents(html):
@@ -77,4 +79,19 @@ def test_csv_and_discovery_links_exist():
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert CSV_URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert SVG_URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+
+
+def test_owner_map_svg_is_forwardable_and_claim_safe():
+    html = PAGE.read_text(encoding="utf-8")
+    svg = SVG.read_text(encoding="utf-8")
+    assert "us-outpatient-referral-prior-auth-owner-map.svg" in html
+    for phrase in [
+        "Synthetic US outpatient referral and prior authorization owner map",
+        "no patient data, no PHI",
+        "no authorization outcome claim",
+        "no compliance attestation",
+        "AICloudStrategist readiness artifact",
+    ]:
+        assert phrase in html or phrase in svg
