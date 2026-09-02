@@ -382,14 +382,14 @@
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
-      "main_sha256": "79c4d646c1123c1434d5b7794f760dff92aa2efb277fd631bad5117943c4cbdc",
+      "main_sha256": "66ec8f6b6449f57335722260a0ad704af30ba6437469afea3c43c7a13fba86ff",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
     "free-business-review/index.html": {
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
-      "main_sha256": "79c4d646c1123c1434d5b7794f760dff92aa2efb277fd631bad5117943c4cbdc",
+      "main_sha256": "66ec8f6b6449f57335722260a0ad704af30ba6437469afea3c43c7a13fba86ff",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
     "growth-control-os/index.html": {
@@ -431,7 +431,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "2fe709df6c651a67eb949e21b4b13935e8e6c122ebc5a57329c1b72dfd231da9",
+      "main_sha256": "3d5f73db4de2d295b9178cf17854e9bc983986a5e6cff212f9dc348ebfe36aae",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -606,7 +606,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ead5c8ac5733c4de339f2fed400e3f756fa576185b4d6e94b3a559ebf46a3cd5",
+      "main_sha256": "773193579e87605b41d44c96a4f20935efc410c8a6b0bb90a709be506e5bf2a5",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -1075,8 +1075,8 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "7c4f156bf5a3f3feb6305adb1046a951272fe7ec6c51ba63cc7f61dc3e1be3da",
-      "title": "Europe Healthtech Cloud Trust + FinOps Board Decision Memo Template | AICS"
+      "main_sha256": "46e5821504f67c9e98e9bb2d4a3e39d218ab4a191688252954e5954ccaf21f40",
+      "title": "Europe Healthtech Cloud Trust FinOps Board Decision Memo Template | AICS"
     },
     "resources/europe-healthtech-cloud-trust-finops-diagnostic-package/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-finops-diagnostic-package/",
@@ -1110,7 +1110,7 @@
       "canonical": "https://aicloudstrategist.com/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "3427120c23c54ee21b97fd692d6af6c1a1f8e5898d71eec1116400bc15217aba",
+      "main_sha256": "34889822f8bc9dfb9aaff5e0d7a2489d3c249e7813c1d87d2e9150af3b1be062",
       "title": "Europe Healthtech Cloud Trust Review vs FinOps, GRC and Patient Platforms | AICS"
     },
     "resources/europe-healthtech-eu-ai-act-high-risk-decision-log-template/index.html": {
@@ -1386,6 +1386,13 @@
       "main_sha256": "68ac4ab0e413759903f8ae09626e399d418ff2cb92f627ee5c7729894dace2ca",
       "title": "AI Pilot Governance Checklist vs MLOps and GRC Tools | AICloudStrategist"
     },
+    "resources/global-ai-pilot-governance-hub/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-governance-hub/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "13a8a90c955a98f15215df5b43941d1af149cae9b00c412ea4c3cba25c58fe45",
+      "title": "AI Pilot Governance Resource Hub | AICloudStrategist"
+    },
     "resources/global-ai-pilot-human-override-escalation-matrix/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-ai-pilot-human-override-escalation-matrix/",
       "forms": 0,
@@ -1533,6 +1540,13 @@
       "main_sha256": "e648bb18db13d89dacc7f59bf7797988e2d7aa855b1206c969ea8416a902c68d",
       "title": "SaaS Security Questionnaire vs GRC, Trust Center and AICS Owner Review"
     },
+    "resources/global-b2b-saas-soc2-ai-control-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-soc2-ai-control-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "f92e138f3c76cc85c284379381540d01b4b69acd50dee21de4a452d04cf2548e",
+      "title": "B2B SaaS SOC 2 AI Control Evidence Checklist | AICS"
+    },
     "resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
       "forms": 0,
@@ -1540,12 +1554,33 @@
       "main_sha256": "a4007508178c146dc84b91f22cee566e0665cd9f44838047fdbbeaad9030d198",
       "title": "B2B SaaS Trial-to-Paid Follow-Up Evidence Checklist | AICS"
     },
+    "resources/global-b2b-sales-proposal-follow-up-owner-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-b2b-sales-proposal-follow-up-owner-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "ce54b933b26b7f8f4acdb84594fa1752a3d0fccfd6810972541a701f6f1c6126",
+      "title": "Sales Proposal Follow-Up Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-clinic-after-hours-missed-call-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "63725931b08c23829df9dc586d3c22aaa5b124d3d1828f4dc5b880944fda30a8",
       "title": "Global Clinic After-Hours Missed-Call Follow-Up Checklist | AICloudStrategist"
+    },
+    "resources/global-construction-project-delay-daily-progress-owner-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-construction-project-delay-daily-progress-owner-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "2c6f1a5f42baf9b0ea008752744451babf8ae44dc0d4c89958d515e616b5c7cd",
+      "title": "Construction Project Delay Daily Progress Evidence Checklist | AICloudStrategist"
+    },
+    "resources/global-customer-support-ticket-backlog-vs-helpdesk-ai-chatbot-comparison/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-customer-support-ticket-backlog-vs-helpdesk-ai-chatbot-comparison/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "d8a9cea80a854dbaba8dea11dbb55b61b73c0c181fb3a2c57e674183b0e78d48",
+      "title": "Support Ticket Backlog vs Helpdesk AI Chatbot Comparison | AICloudStrategist"
     },
     "resources/global-dental-implant-follow-up-vs-crm-ai-receptionist-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-dental-implant-follow-up-vs-crm-ai-receptionist-comparison/",
@@ -1617,6 +1652,13 @@
       "main_sha256": "4e1c3e01dbfdd1528caf83d800bcb17d536ff8d0761c45874ed8420168067c82",
       "title": "Financial Services AI Intake + Approval Evidence Checklist | AICloudStrategist"
     },
+    "resources/global-hr-employee-onboarding-paperwork-owner-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-hr-employee-onboarding-paperwork-owner-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "9feb56a8826225e3b36b6a751b992559495c959e42491ebc8a0c0bca784f0c7b",
+      "title": "Employee Onboarding Paperwork Evidence Checklist | AICloudStrategist"
+    },
     "resources/global-insurance-agency-quote-claims-follow-up-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-insurance-agency-quote-claims-follow-up-checklist/",
       "forms": 0,
@@ -1637,6 +1679,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "c143649c3ba6d1147be250cfa0fbc6584c8a523a83f09ac27e84b1702ba81b42",
       "title": "Local Services Missed Lead Follow-Up FAQ | AICloudStrategist"
+    },
+    "resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "738bf53c1883abf525e341568070ca2345c23101bb25b40db0c65c44a01350b7",
+      "title": "Owner-Led SMB Cloud Bill Leakage Evidence Checklist | AICS"
     },
     "resources/global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist/",
@@ -1698,7 +1747,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "7a1e3a90ef7db90ff834cc88d36b2d2b95acb161167a807008b7a21f0dc16123",
+      "main_sha256": "21170bbe98a8e6c838850622e3ef32ccfad56bd5845c4711acb1a919459a77bb",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
@@ -1726,7 +1775,7 @@
       "canonical": "https://aicloudstrategist.com/resources/india-clinic-lab-dpdp-whatsapp-followup-evidence-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "0efd1b01cddd91f3a39b8a2afb908fc7fe4a2434b6ea005933df123579f34cc2",
+      "main_sha256": "5d5bfa4a00b13fc849eb80c464662e6e777ace508c3be253e7471f902366ba58",
       "title": "India Clinic + Lab DPDP WhatsApp Follow-Up Evidence Checklist | AICS"
     },
     "resources/india-clinic-whatsapp-crm-patient-leakage-checklist/index.html": {
@@ -1763,6 +1812,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "efdb579921edde9b4d5ca8f5b548b01a75dd3e766e0a642b28638904f9c06ec6",
       "title": "India DPDP Consent & Healthcare Data Diagnostic Package | AICloudStrategist"
+    },
+    "resources/india-ent-audiology-hearing-aid-trial-followup-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/india-ent-audiology-hearing-aid-trial-followup-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "6f41090856c69d7af6b1897854e9fd6f2abb711291d649cd4be52c0f7e9e95c2",
+      "title": "ENT / Audiology Missed Calls + Hearing Aid Trial Follow-up Checklist | AICS"
     },
     "resources/india-healthcare-dpdp-consent-vs-grc-dpo-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/india-healthcare-dpdp-consent-vs-grc-dpo-comparison/",
@@ -2233,6 +2289,13 @@
       "main_sha256": "2a9a78ab40c25ccad06662c10f753f4e2854bec932502a2662976fe1ba67a32b",
       "title": "US Healthcare GrowthOS vs Patient Engagement Platforms | AICloudStrategist"
     },
+    "resources/us-healthtech-ai-patient-access-procurement-answer-bank/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-healthtech-ai-patient-access-procurement-answer-bank/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "78185e894daa02b5482fb9928a838ef2f2f70cd611b66ea07700839a6b496930",
+      "title": "US Healthtech AI + Patient Access Procurement Answer Bank | AICS"
+    },
     "resources/us-healthtech-ai-vendor-risk-cloud-cost-evidence-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-healthtech-ai-vendor-risk-cloud-cost-evidence-checklist/",
       "forms": 0,
@@ -2244,7 +2307,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-healthtech-growthos-vs-patient-engagement-grc-finops-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "22c7175ead3ebbfc025166d70b186a6344689ed655b2d86a1146a83ca3e39eac",
+      "main_sha256": "8debf4d0de2f54a76c86213e8556ee8d7c450bfc4933bb889d5d8c9ab0a40cbc",
       "title": "US Healthtech GrowthOS vs Patient Engagement, GRC and FinOps Tools | AICS"
     },
     "resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/index.html": {
@@ -2253,6 +2316,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "8d5d444535830c574ea50b86e46f14ebad267783e300b2931115c9d303c3cefe",
       "title": "US Healthtech HIPAA AI Procurement Evidence Source Map | AICloudStrategist"
+    },
+    "resources/us-healthtech-patient-access-procurement-diagnostic-scope-memo/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-healthtech-patient-access-procurement-diagnostic-scope-memo/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "7b75accb0b0bff321021fce68b08668777c0c48c70e2196ad7fda42dc887f474",
+      "title": "US Healthtech Patient Access Procurement Diagnostic Scope Memo | AICS"
     },
     "resources/us-law-firm-ai-intake-answering-service-faq/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-law-firm-ai-intake-answering-service-faq/",
@@ -2281,6 +2351,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "0954b91218cf50896497aed42a73bdf16840bf0531592d1ed3685dcdec9c7723",
       "title": "US Law Firm AI Intake vs Legal CRM vs Answering Services"
+    },
+    "resources/us-medical-billing-denial-follow-up-owner-evidence-checklist/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-medical-billing-denial-follow-up-owner-evidence-checklist/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "e59c64c1778b1f806ad15b8df58968cb6a6dccd39b28eef3fbd900ad844da104",
+      "title": "US Medical Billing Denial Follow-Up Owner Evidence Checklist | AICS"
     },
     "resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
@@ -2335,7 +2412,7 @@
       "canonical": "https://aicloudstrategist.com/resources/us-outpatient-specialty-referral-prior-auth-growthos-evidence-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "e5e369fe5c50e1f914183306ee6d04adb993bf9e819c4a185573d153ecfbf0e4",
+      "main_sha256": "619e6cf02a8ac4e401b19c28c5b489ea171ffe9995b7557d551932691877924c",
       "title": "US Outpatient Specialty Referral + Prior Auth GrowthOS Evidence Checklist | AICS"
     },
     "resources/us-saas-ai-vendor-risk-soc2-readiness-checklist/index.html": {
@@ -2573,7 +2650,7 @@
       "canonical": "https://aicloudstrategist.com/tools/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "6d42b41c8f45587952f7a7bce201352ca5f38c6a7d2122117e659bfd6c15266e",
+      "main_sha256": "1621d284613a36ccb4965cbb4de8eea77266e54a9b3e1d0e821f1f959d0c08b9",
       "title": "Tools and Calculators | AICloudStrategist"
     },
     "trust-assets/index.html": {
