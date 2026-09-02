@@ -1,0 +1,9 @@
+work_package,owner_evidence_needed,common_blocker,review_gate,next_owner,unsafe_claim_to_avoid
+Foundation pour,"dated photo, pour checklist, weather note, inspection status","inspection time not confirmed","engineer or qualified site lead review","site supervisor","schedule recovery guaranteed"
+Electrical rough-in,"area completed, photo link, drawing reference, blocker note","design clarification pending","licensed trade or qualified reviewer","electrical subcontractor","quality compliance proven"
+Material delivery,"purchase order reference, delivery date, shortage note","supplier delivery partial","procurement owner check","project coordinator","cost savings achieved"
+Change order,"scope change, cost impact estimate, approval due date","client approval missing","contract/commercial owner review","project manager","variation approved or legally valid"
+Safety observation,"hazard note, corrective action owner, closeout evidence","photo only with no responsible owner","qualified safety review","safety officer","safe site certified"
+Client progress update,"redacted photo pack, completed items, blocked items, decisions needed","WhatsApp updates conflict with tracker","project owner approval","account manager","delay reduced by automation"
+Subcontractor handoff,"trade name, task dependency, start date, blocker, due owner","previous trade not cleared","site coordination review","general contractor","productivity improvement proven"
+Payment milestone,"milestone evidence, inspection status, invoice dependency","progress proof incomplete","commercial/finance review","billing owner","payment collection guaranteed"
