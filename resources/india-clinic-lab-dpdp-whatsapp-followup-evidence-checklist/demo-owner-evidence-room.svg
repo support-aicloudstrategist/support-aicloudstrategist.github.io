@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo India clinic and lab DPDP WhatsApp follow-up owner evidence room</title>
+  <desc id="desc">Synthetic owner evidence room for Indian clinic and diagnostic lab missed-call ageing, report pickup, WhatsApp consent-source, ABDM or EMR handoff questions and adviser-review queues. No real patient, clinic, lab, phone, WhatsApp, report or production data is used.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06111f"/><stop offset="0.52" stop-color="#0b3146"/><stop offset="1" stop-color="#075e62"/></linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#25e6c8"/><stop offset="1" stop-color="#a7f3d0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/></filter>
+    <style>
+      .label{font:800 15px Inter,Arial,sans-serif;fill:#9ff8ea;letter-spacing:.08em;text-transform:uppercase}.h1{font:900 40px Inter,Arial,sans-serif;fill:#fff}.copy{font:650 19px Inter,Arial,sans-serif;fill:#d4e7f0}.card{fill:rgba(255,255,255,.09);stroke:rgba(255,255,255,.18);stroke-width:1.2}.panel{fill:#fff;stroke:#dce7f0;stroke-width:1}.text{fill:#0f172a;font:850 18px Inter,Arial,sans-serif}.muted{fill:#64748b;font:650 14px Inter,Arial,sans-serif}.small{fill:#334155;font:750 14px Inter,Arial,sans-serif}.num{font:950 36px Inter,Arial,sans-serif;fill:#06111f}.white{fill:#fff}.line{stroke:#d7e3ee;stroke-width:1}.green{fill:#0f766e;font:900 14px Inter,Arial,sans-serif}.amber{fill:#986604;font:900 14px Inter,Arial,sans-serif}.red{fill:#b82242;font:900 14px Inter,Arial,sans-serif}.blue{fill:#1d4ed8;font:900 14px Inter,Arial,sans-serif}
+    </style>
+  </defs>
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <circle cx="1030" cy="95" r="160" fill="#8d6cff" opacity=".15"/>
+  <circle cx="130" cy="655" r="195" fill="#25e6c8" opacity=".13"/>
+
+  <text x="64" y="70" class="label">Demo/internal synthetic artifact · India clinic/lab GrowthOS</text>
+  <text x="64" y="122" class="h1">DPDP-aware follow-up owner evidence room</text>
+  <text x="64" y="158" class="copy">Missed calls, report pickup, WhatsApp consent-source and ABDM/EMR handoff questions visible before CRM, ads or AI reception.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="200" width="250" height="120" rx="24" fill="url(#mint)"/>
+    <text x="92" y="245" class="num">6</text><text x="92" y="278" class="text">demo evidence lanes</text><text x="92" y="302" class="small">source, owner, consent, stage</text>
+    <rect x="340" y="200" width="250" height="120" rx="24" class="card"/>
+    <text x="368" y="245" font-family="Inter,Arial" font-size="36" font-weight="950" fill="#fff">3</text><text x="368" y="278" font-family="Inter,Arial" font-size="18" font-weight="850" fill="#fff">ageing queues</text><text x="368" y="302" font-family="Inter,Arial" font-size="14" font-weight="700" fill="#cfe2ef">missed-call, WhatsApp, pickup</text>
+    <rect x="616" y="200" width="250" height="120" rx="24" class="card"/>
+    <text x="644" y="245" font-family="Inter,Arial" font-size="36" font-weight="950" fill="#fff">2</text><text x="644" y="278" font-family="Inter,Arial" font-size="18" font-weight="850" fill="#fff">adviser questions</text><text x="644" y="302" font-family="Inter,Arial" font-size="14" font-weight="700" fill="#cfe2ef">DPDP / ABDM owner handoff</text>
+    <rect x="892" y="200" width="244" height="120" rx="24" class="card"/>
+    <text x="920" y="245" font-family="Inter,Arial" font-size="36" font-weight="950" fill="#fff">0</text><text x="920" y="278" font-family="Inter,Arial" font-size="18" font-weight="850" fill="#fff">patient identifiers</text><text x="920" y="302" font-family="Inter,Arial" font-size="14" font-weight="700" fill="#cfe2ef">no names, phones, chats or reports</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="360" width="1072" height="314" rx="28" class="panel"/>
+    <text x="92" y="402" class="text">Owner evidence snapshot</text>
+    <text x="92" y="433" class="muted">Synthetic rows only — shows review structure, not clinic performance, compliance or outcome proof.</text>
+    <line x1="92" y1="463" x2="1108" y2="463" class="line"/>
+    <text x="92" y="490" class="muted">Source</text><text x="258" y="490" class="muted">Queue</text><text x="438" y="490" class="muted">Evidence needed</text><text x="685" y="490" class="muted">Age / state</text><text x="845" y="490" class="muted">Owner</text><text x="1005" y="490" class="muted">Boundary</text>
+
+    <g transform="translate(92 510)"><rect width="1016" height="42" rx="13" fill="#f8fafc"/><text x="0" y="27" class="small">Google listing</text><text x="166" y="27" class="small">missed call</text><text x="346" y="27" class="small">callback attempt + source tag</text><text x="593" y="27" class="green">0-4h / on track</text><text x="753" y="27" class="small">front desk</text><text x="913" y="27" class="green">admin-safe</text></g>
+    <g transform="translate(92 560)"><rect width="1016" height="42" rx="13" fill="#fff6df"/><text x="0" y="27" class="small">WhatsApp</text><text x="166" y="27" class="small">follow-up</text><text x="346" y="27" class="small">template + consent source</text><text x="593" y="27" class="amber">24h / check</text><text x="753" y="27" class="small">clinic admin</text><text x="913" y="27" class="blue">DPDP question</text></g>
+    <g transform="translate(92 610)"><rect width="1016" height="42" rx="13" fill="#fff0f3"/><text x="0" y="27" class="small">Lab counter</text><text x="166" y="27" class="small">report pickup</text><text x="346" y="27" class="small">ready/informed/handoff status</text><text x="593" y="27" class="red">48h+ / stale</text><text x="753" y="27" class="small">lab coordinator</text><text x="913" y="27" class="red">no diagnosis</text></g>
+  </g>
+
+  <text x="64" y="720" font-family="Inter,Arial" font-size="14" font-weight="700" fill="#d3e7ef">Boundary: no real clinic, lab, patient, personal data, health data, WhatsApp export, report, DPDP compliance proof, appointment lift, lead, revenue, ROI, testimonial, ranking or AI-accuracy claim.</text>
+</svg>

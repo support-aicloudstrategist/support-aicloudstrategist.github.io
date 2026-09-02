@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "india-clinic-lab-dpdp-whatsapp-followup-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "india-clinic-lab-dpdp-whatsapp-followup-evidence-checklist.csv"
+DEMO_SVG = ROOT / "resources" / SLUG / "demo-owner-evidence-room.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -52,8 +53,27 @@ class IndiaClinicLabDpdpWhatsappFollowupEvidenceChecklistTests(unittest.TestCase
             "MeitY data-protection-framework page returned 403",
             "Where AICS fits against common shortlist options",
             "ABDM/EMR handoff questions",
+            "/resources/india-clinic-lab-dpdp-whatsapp-followup-evidence-checklist/demo-owner-evidence-room.svg",
+            "Open demo owner evidence room SVG",
         ]:
             self.assertIn(phrase, self.html)
+
+    def test_demo_owner_evidence_room_svg_is_synthetic_and_buyer_specific(self):
+        svg = DEMO_SVG.read_text(encoding="utf-8")
+        for phrase in [
+            "Demo India clinic and lab DPDP WhatsApp follow-up owner evidence room",
+            "Missed calls, report pickup, WhatsApp consent-source and ABDM/EMR handoff questions",
+            "Google listing",
+            "Lab counter",
+            "template + consent source",
+            "no names, phones, chats or reports",
+            "no real clinic, lab, patient, personal data, health data",
+            "DPDP compliance proof",
+            "appointment lift, lead, revenue, ROI, testimonial, ranking",
+        ]:
+            self.assertIn(phrase, svg)
+        for forbidden in ["trusted by", "guaranteed compliance", "real client", "saved "]:
+            self.assertNotIn(forbidden, svg.lower())
 
     def test_csv_has_redaction_and_claim_boundary_fields(self):
         self.assertEqual(len(self.rows), 6)
