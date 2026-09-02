@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-owner-led-smb-cloud-bill-leakage-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "owner-led-smb-cloud-bill-leakage-evidence.csv"
+SVG = ROOT / "resources" / SLUG / "demo-owner-cloud-spend-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -53,6 +54,9 @@ class OwnerLedSmbCloudBillLeakageEvidenceChecklistTests(unittest.TestCase):
             "/resources/cloud-cost-optimization-finops-control/",
             "/resources/ai-cost-savings-claim-boundary-worksheet/",
             "/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/owner-led-smb-cloud-bill-leakage-evidence.csv",
+            "/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/demo-owner-cloud-spend-dashboard.svg",
+            "Demo owner cloud spend dashboard",
+            "unowned spend, AI/API spikes, SaaS renewals, rollback gates and savings-claim stops",
         ]:
             self.assertIn(phrase, self.html)
 
@@ -119,16 +123,37 @@ class OwnerLedSmbCloudBillLeakageEvidenceChecklistTests(unittest.TestCase):
         self.assertIn("Article", types)
         self.assertIn("Dataset", types)
         self.assertIn("FAQPage", types)
+        self.assertIn("ImageObject", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
         self.assertEqual(article["dateModified"], "2026-09-02")
+        image = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "ImageObject")
+        self.assertEqual(image["contentUrl"], f"{URL}demo-owner-cloud-spend-dashboard.svg")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn(f"Owner-led SMB cloud bill leakage evidence checklist: {URL}", self.llms)
+        self.assertIn(f"{URL}demo-owner-cloud-spend-dashboard.svg", self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+
+    def test_demo_svg_is_forwardable_and_boundary_safe(self):
+        svg = SVG.read_text(encoding="utf-8")
+        for phrase in [
+            "Demo owner cloud spend dashboard",
+            "DEMO / SYNTHETIC / NO CLOUD CREDENTIALS",
+            "Owner action board",
+            "AI/API spikes",
+            "Claim gate",
+            "Do not claim",
+            "not a real customer dashboard",
+            "not cloud account data",
+            "not savings evidence",
+            "not security/privacy/compliance proof",
+            "not legal/tax/accounting advice",
+        ]:
+            self.assertIn(phrase, svg)
 
     def test_pricing_bridge_makes_cloud_leakage_review_sellable(self):
         for phrase in [
