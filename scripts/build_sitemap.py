@@ -33,6 +33,7 @@ CURATED_PATHS = [
     "/resources/global-b2b-saas-customer-onboarding-implementation-delay-checklist/",
     "/resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/",
     "/resources/global-b2b-sales-proposal-follow-up-owner-evidence-checklist/",
+    "/resources/global-customer-support-ticket-backlog-vs-helpdesk-ai-chatbot-comparison/",
     "/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
     "/resources/global-b2b-saas-security-questionnaire-diagnostic-package/",
     "/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/",
