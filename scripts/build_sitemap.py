@@ -37,6 +37,7 @@ CURATED_PATHS = [
     "/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
     "/resources/global-b2b-saas-security-questionnaire-diagnostic-package/",
     "/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/",
+    "/resources/global-b2b-saas-soc2-ai-control-evidence-checklist/",
     "/resources/global-retail-inventory-manual-work-owner-evidence-checklist/",
     "/resources/global-retail-inventory-manual-work-diagnostic-package/",
     "/resources/global-retail-inventory-pos-erp-inventory-app-comparison-checklist/",
