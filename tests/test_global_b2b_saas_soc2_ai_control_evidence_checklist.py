@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-b2b-saas-soc2-ai-control-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "b2b-saas-soc2-ai-control-evidence.csv"
+SVG = ROOT / "resources" / SLUG / "b2b-saas-ai-control-evidence-risk-map.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -42,6 +43,9 @@ class B2BSaaSSoc2AiControlEvidenceChecklistTests(unittest.TestCase):
             "Why this improves revenue readiness",
             "/free-business-review/?package=b2b-saas-soc2-ai-control-evidence",
             "/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
+            "/resources/global-b2b-saas-soc2-ai-control-evidence-checklist/b2b-saas-ai-control-evidence-risk-map.svg",
+            "Demo visual for internal forwarding",
+            "unsupported SOC 2 / security / compliance / procurement claims blocked",
             "/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/",
             "/services/cloud-security/",
             f"/resources/{SLUG}/b2b-saas-soc2-ai-control-evidence.csv",
@@ -103,13 +107,30 @@ class B2BSaaSSoc2AiControlEvidenceChecklistTests(unittest.TestCase):
         self.assertIn("Article", types)
         self.assertIn("Dataset", types)
         self.assertIn("FAQPage", types)
+        self.assertIn("ImageObject", types)
         dataset = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Dataset")
         self.assertEqual(dataset["url"], f"{URL}b2b-saas-soc2-ai-control-evidence.csv")
+        image = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "ImageObject")
+        self.assertEqual(image["contentUrl"], f"{URL}b2b-saas-ai-control-evidence-risk-map.svg")
         self.assertIn(f"/resources/{SLUG}/", self.resources)
         self.assertIn("B2B SaaS SOC 2 AI Control Evidence Checklist", self.resources)
         self.assertIn(URL, self.llms)
         self.assertIn("B2B SaaS SOC 2 AI control evidence", self.llms)
         self.assertIn(URL, self.sitemap)
+
+    def test_demo_svg_is_forwardable_and_boundary_safe(self):
+        svg = SVG.read_text(encoding="utf-8")
+        for phrase in [
+            "Demo B2B SaaS AI Control Evidence Risk Map",
+            "Buyer asks",
+            "Evidence map",
+            "Approved answer",
+            "Do not claim",
+            "not SOC 2 evidence",
+            "not procurement approval",
+            "Owner-evidence layer",
+        ]:
+            self.assertIn(phrase, svg)
 
 
 if __name__ == "__main__":
