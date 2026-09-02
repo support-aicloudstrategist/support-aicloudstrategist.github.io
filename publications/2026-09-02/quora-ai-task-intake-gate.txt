@@ -1,0 +1,27 @@
+A useful starting point is not “which tool can automate this?” but “which task is safe enough to hand to AI?”
+
+I would run a simple AI task intake gate first:
+
+1. What is the exact repeatable task?
+Name the work item clearly before choosing any tool.
+
+2. Who owns the output?
+A named human should be able to approve, correct, or stop the workflow.
+
+3. What source is allowed?
+Use approved documents, examples, or records instead of unsupported guessing.
+
+4. What can go wrong?
+Mark privacy, promise, payment, legal, medical, compliance, or brand risks before automation.
+
+5. Where does the workflow pause?
+Define the handoff point for uncertain, sensitive, or destructive actions.
+
+6. What evidence is kept?
+Log the source, draft, reviewer, decision, correction, and timestamp.
+
+Good early candidates are internal summaries, checklist preparation, categorisation, meeting-note cleanup, and first-pass research outlines. Customer-facing replies, pricing commitments, contract language, payments, credentials, legal/compliance/medical interpretation, and destructive system changes should require human review or stay outside automation.
+
+I published the visual checklist here: https://aicloudstrategist.com/publications/2026-09-02/ai-task-intake-gate.html
+
+Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice.
