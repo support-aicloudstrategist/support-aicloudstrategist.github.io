@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Small business AI automation owner dashboard demo</title>
+  <desc id="desc">Demo synthetic dashboard showing missed leads, manual work, CRM cleanup, human review and AI pilot stop rules without real customer data.</desc>
+  <rect width="1200" height="720" fill="#06111f"/>
+  <text x="60" y="72" fill="#eaf6fb" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">Small Business AI Automation Readiness Board</text>
+  <text x="60" y="112" fill="#93c5fd" font-family="Inter,Arial,sans-serif" font-size="20">DEMO / SYNTHETIC ONLY · no real leads, chats, calls, CRM export, revenue, savings or ROI proof</text>
+  <g transform="translate(60 155)">
+    <rect width="250" height="155" rx="22" fill="#10233b" stroke="#38bdf8"/>
+    <text x="24" y="44" fill="#bfdbfe" font-family="Inter,Arial" font-size="18" font-weight="700">Missed lead queue</text>
+    <text x="24" y="88" fill="#fff" font-family="Inter,Arial" font-size="42" font-weight="800">Source + owner</text>
+    <text x="24" y="124" fill="#dbeafe" font-family="Inter,Arial" font-size="16">Calls · WhatsApp · forms · ads</text>
+  </g>
+  <g transform="translate(335 155)">
+    <rect width="250" height="155" rx="22" fill="#10233b" stroke="#a78bfa"/>
+    <text x="24" y="44" fill="#ddd6fe" font-family="Inter,Arial" font-size="18" font-weight="700">Manual work inventory</text>
+    <text x="24" y="88" fill="#fff" font-family="Inter,Arial" font-size="42" font-weight="800">Repeatable?</text>
+    <text x="24" y="124" fill="#ede9fe" font-family="Inter,Arial" font-size="16">Copy-paste · chasing · reports</text>
+  </g>
+  <g transform="translate(610 155)">
+    <rect width="250" height="155" rx="22" fill="#10233b" stroke="#34d399"/>
+    <text x="24" y="44" fill="#bbf7d0" font-family="Inter,Arial" font-size="18" font-weight="700">CRM cleanup</text>
+    <text x="24" y="88" fill="#fff" font-family="Inter,Arial" font-size="42" font-weight="800">Fields first</text>
+    <text x="24" y="124" fill="#dcfce7" font-family="Inter,Arial" font-size="16">Source · status · consent · due date</text>
+  </g>
+  <g transform="translate(885 155)">
+    <rect width="250" height="155" rx="22" fill="#10233b" stroke="#f97316"/>
+    <text x="24" y="44" fill="#fed7aa" font-family="Inter,Arial" font-size="18" font-weight="700">Human review</text>
+    <text x="24" y="88" fill="#fff" font-family="Inter,Arial" font-size="42" font-weight="800">Stop rules</text>
+    <text x="24" y="124" fill="#ffedd5" font-family="Inter,Arial" font-size="16">Pricing · legal · medical · complaints</text>
+  </g>
+  <g transform="translate(60 350)">
+    <rect width="1075" height="230" rx="28" fill="#0b1b30" stroke="#243b58"/>
+    <text x="32" y="48" fill="#eaf6fb" font-family="Inter,Arial" font-size="24" font-weight="800">Owner decision lane before buying tools</text>
+    <path d="M50 120 H1020" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+    <g fill="#fff" font-family="Inter,Arial" font-size="17" font-weight="700">
+      <text x="45" y="96">1. Capture</text><text x="245" y="96">2. Assign</text><text x="430" y="96">3. Clean</text><text x="610" y="96">4. Escalate</text><text x="805" y="96">5. Pilot</text><text x="960" y="96">6. Verify</text>
+    </g>
+    <g fill="#cbd5e1" font-family="Inter,Arial" font-size="15">
+      <text x="45" y="155">Lead/task source</text><text x="245" y="155">Named owner</text><text x="430" y="155">Data fields</text><text x="610" y="155">Human risks</text><text x="805" y="155">Narrow workflow</text><text x="960" y="155">No fake claims</text>
+    </g>
+    <text x="32" y="204" fill="#fef3c7" font-family="Inter,Arial" font-size="17">Boundary: readiness visual only; No customer case study, ranking, compliance status, savings, revenue, headcount reduction or AI accuracy claim.</text>
+  </g>
+  <text x="60" y="660" fill="#94a3b8" font-family="Inter,Arial" font-size="16">AICloudStrategist · proof-before-platform artifact for owners comparing CRM, chatbot, VA, Zapier/Make, agencies and AI automation consultants.</text>
+</svg>

@@ -56,6 +56,7 @@ CURATED_PATHS = [
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/",
     "/resources/global-hr-employee-onboarding-paperwork-owner-evidence-checklist/",
+    "/resources/small-business-owner-ai-automation-readiness-checklist/",
     "/resources/cloud-ai-economics-decision-pack/",
     "/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",
     "/resources/kubernetes-namespace-cost-owner-dashboard-demo/",
