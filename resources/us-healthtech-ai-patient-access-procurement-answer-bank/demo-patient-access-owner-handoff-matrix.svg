@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo US healthtech patient access owner handoff matrix</title>
+  <desc id="desc">Synthetic no-PHI matrix showing eligibility, referral, prior authorization, abandoned callback and procurement answer ownership for demonstration only.</desc>
+  <rect width="1180" height="760" fill="#f8fbff"/>
+  <rect x="28" y="28" width="1124" height="704" rx="28" fill="#ffffff" stroke="#c7d8ea" stroke-width="2"/>
+  <text x="64" y="78" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#071226">Demo US healthtech patient access owner handoff matrix</text>
+  <text x="64" y="110" font-family="Inter, Arial, sans-serif" font-size="15" fill="#485a6f">Synthetic dashboard · No PHI/ePHI · no credentials · no payer files · not a customer result · not compliance proof</text>
+
+  <g transform="translate(64,150)" font-family="Inter, Arial, sans-serif">
+    <rect width="1052" height="54" rx="14" fill="#0b1b33"/>
+    <text x="20" y="34" font-size="15" font-weight="700" fill="#ffffff">Queue / buyer question</text>
+    <text x="272" y="34" font-size="15" font-weight="700" fill="#ffffff">Evidence source allowed in first review</text>
+    <text x="565" y="34" font-size="15" font-weight="700" fill="#ffffff">Answer owner</text>
+    <text x="735" y="34" font-size="15" font-weight="700" fill="#ffffff">Freshness / adviser route</text>
+    <text x="925" y="34" font-size="15" font-weight="700" fill="#ffffff">Blocked claim</text>
+
+    <g transform="translate(0,72)">
+      <rect width="1052" height="82" rx="16" fill="#ecf7ff" stroke="#cfe7fb"/>
+      <text x="20" y="30" font-size="17" font-weight="800" fill="#0b3a62">Eligibility status</text>
+      <text x="20" y="55" font-size="13" fill="#344760">Who owns payer eligibility answer?</text>
+      <text x="272" y="30" font-size="13" fill="#12233a">Redacted task export, synthetic owner register</text>
+      <text x="272" y="55" font-size="13" fill="#12233a">No patient identifiers, no payer portal screenshots</text>
+      <text x="565" y="43" font-size="14" font-weight="700" fill="#0f5132">Patient-access ops</text>
+      <text x="735" y="30" font-size="13" fill="#12233a">Refresh weekly</text>
+      <text x="735" y="55" font-size="13" fill="#12233a">HIPAA/privacy adviser if PHI appears</text>
+      <text x="925" y="30" font-size="13" fill="#7a2730">No eligibility accuracy</text>
+      <text x="925" y="55" font-size="13" fill="#7a2730">or payer acceptance claim</text>
+    </g>
+
+    <g transform="translate(0,170)">
+      <rect width="1052" height="82" rx="16" fill="#f4f0ff" stroke="#ded4ff"/>
+      <text x="20" y="30" font-size="17" font-weight="800" fill="#3d2771">Referral leakage</text>
+      <text x="20" y="55" font-size="13" fill="#344760">Which referrals have no next owner?</text>
+      <text x="272" y="30" font-size="13" fill="#12233a">Synthetic source-to-owner ageing CSV</text>
+      <text x="272" y="55" font-size="13" fill="#12233a">Redacted referral stage counts only</text>
+      <text x="565" y="43" font-size="14" font-weight="700" fill="#4c1d95">Referral coordinator</text>
+      <text x="735" y="30" font-size="13" fill="#12233a">Refresh weekly</text>
+      <text x="735" y="55" font-size="13" fill="#12233a">Clinical adviser for care-routing rules</text>
+      <text x="925" y="30" font-size="13" fill="#7a2730">No booked-visit lift</text>
+      <text x="925" y="55" font-size="13" fill="#7a2730">or patient outcome claim</text>
+    </g>
+
+    <g transform="translate(0,268)">
+      <rect width="1052" height="82" rx="16" fill="#fff7e6" stroke="#ffdf9f"/>
+      <text x="20" y="30" font-size="17" font-weight="800" fill="#734300">Prior-auth blockers</text>
+      <text x="20" y="55" font-size="13" fill="#344760">What evidence supports auth workflow answers?</text>
+      <text x="272" y="30" font-size="13" fill="#12233a">No-PHI blocker categories and owner notes</text>
+      <text x="272" y="55" font-size="13" fill="#12233a">No claims, CPT, ICD or payer files</text>
+      <text x="565" y="43" font-size="14" font-weight="700" fill="#92400e">RCM / auth lead</text>
+      <text x="735" y="30" font-size="13" fill="#12233a">Refresh before buyer response</text>
+      <text x="735" y="55" font-size="13" fill="#12233a">Billing/coding adviser required</text>
+      <text x="925" y="30" font-size="13" fill="#7a2730">No authorization speed</text>
+      <text x="925" y="55" font-size="13" fill="#7a2730">or denial reduction claim</text>
+    </g>
+
+    <g transform="translate(0,366)">
+      <rect width="1052" height="82" rx="16" fill="#edfdf5" stroke="#bcebd1"/>
+      <text x="20" y="30" font-size="17" font-weight="800" fill="#14532d">Abandoned callbacks</text>
+      <text x="20" y="55" font-size="13" fill="#344760">What happens when AI or phone flow fails?</text>
+      <text x="272" y="30" font-size="13" fill="#12233a">Synthetic callback SLA and escalation log</text>
+      <text x="272" y="55" font-size="13" fill="#12233a">No recordings, transcripts or patient messages</text>
+      <text x="565" y="43" font-size="14" font-weight="700" fill="#166534">Front-desk lead</text>
+      <text x="735" y="30" font-size="13" fill="#12233a">Daily queue check</text>
+      <text x="735" y="55" font-size="13" fill="#12233a">Clinical stop for urgent symptoms</text>
+      <text x="925" y="30" font-size="13" fill="#7a2730">No AI accuracy</text>
+      <text x="925" y="55" font-size="13" fill="#7a2730">or safety guarantee</text>
+    </g>
+
+    <g transform="translate(0,464)">
+      <rect width="1052" height="82" rx="16" fill="#fff1f2" stroke="#fecdd3"/>
+      <text x="20" y="30" font-size="17" font-weight="800" fill="#881337">Procurement answer</text>
+      <text x="20" y="55" font-size="13" fill="#344760">Can this answer leave the company?</text>
+      <text x="272" y="30" font-size="13" fill="#12233a">Approved answer bank row and expiry date</text>
+      <text x="272" y="55" font-size="13" fill="#12233a">Attach source, owner and blocked claims</text>
+      <text x="565" y="43" font-size="14" font-weight="700" fill="#9f1239">Security / legal owner</text>
+      <text x="735" y="30" font-size="13" fill="#12233a">Expire after policy change</text>
+      <text x="735" y="55" font-size="13" fill="#12233a">Legal/privacy/security adviser route</text>
+      <text x="925" y="30" font-size="13" fill="#7a2730">No HIPAA/SOC 2/HITRUST</text>
+      <text x="925" y="55" font-size="13" fill="#7a2730">attestation or ranking claim</text>
+    </g>
+  </g>
+
+  <g transform="translate(64,706)" font-family="Inter, Arial, sans-serif">
+    <text x="0" y="0" font-size="13" fill="#52657a">Top-3 consideration wedge: AICS makes owner handoffs, expiry, adviser routes and unsupported-claim stops visible before patient-engagement, RCM, AI receptionist, GRC or FinOps platform spend.</text>
+  </g>
+</svg>

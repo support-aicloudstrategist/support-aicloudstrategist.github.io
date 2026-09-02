@@ -7,9 +7,11 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-healthtech-ai-patient-access-procurement-answer-bank"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = PAGE.parent / "us-healthtech-ai-patient-access-procurement-answer-bank.csv"
+SVG = PAGE.parent / "demo-patient-access-owner-handoff-matrix.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 CSV_URL = f"{URL}us-healthtech-ai-patient-access-procurement-answer-bank.csv"
+SVG_URL = f"{URL}demo-patient-access-owner-handoff-matrix.svg"
 
 
 def json_ld_documents(html):
@@ -58,6 +60,12 @@ def test_page_contains_buyer_language_competitors_and_truth_boundaries():
         "CloudZero",
         "Download CSV answer bank",
         "us-healthtech-ai-patient-access-procurement-answer-bank.csv",
+        "Demo owner-handoff matrix for patient-access procurement",
+        "demo-patient-access-owner-handoff-matrix.svg",
+        "eligibility, referral, prior-auth, abandoned-callback and procurement-answer queues",
+        "not a customer result",
+        "not a HIPAA/SOC 2/HITRUST proof",
+        "not evidence of authorization speed, denial reduction, appointment growth, savings, ranking, revenue or ROI",
         "No outreach was sent",
     ]:
         assert phrase in html
@@ -109,6 +117,37 @@ def test_csv_answer_bank_is_synthetic_and_operational():
         "Do not claim vendor superiority market ranking customer preference or replacement of RCM patient engagement or EHR platforms",
     ]:
         assert phrase in combined
+
+
+def test_demo_owner_handoff_matrix_is_synthetic_and_discoverable():
+    html = PAGE.read_text(encoding="utf-8")
+    svg = SVG.read_text(encoding="utf-8")
+    assert "demo-patient-access-owner-handoff-matrix.svg" in html
+    assert SVG_URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "/resources/us-healthtech-ai-patient-access-procurement-answer-bank/demo-patient-access-owner-handoff-matrix.svg" in (ROOT / "pricing.html").read_text(encoding="utf-8")
+    for phrase in [
+        "Demo US healthtech patient access owner handoff matrix",
+        "Synthetic dashboard",
+        "No PHI/ePHI",
+        "no credentials",
+        "Prior-auth blockers",
+        "Eligibility status",
+        "Referral leakage",
+        "Abandoned callbacks",
+        "Blocked claim",
+        "Top-3 consideration wedge",
+        "Synthetic dashboard · No PHI/ePHI · no credentials · no payer files · not a customer result · not compliance proof",
+    ]:
+        assert phrase in svg
+    forbidden = [
+        "real patient",
+        "real customer",
+        "guaranteed",
+        "HIPAA compliant",
+        "SOC 2 certified",
+        "HITRUST certified",
+    ]
+    assert all(term not in svg for term in forbidden)
 
 
 def test_answer_bank_is_linked_for_discovery():
