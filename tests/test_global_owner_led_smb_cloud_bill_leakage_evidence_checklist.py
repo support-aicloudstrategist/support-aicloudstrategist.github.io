@@ -22,6 +22,7 @@ class OwnerLedSmbCloudBillLeakageEvidenceChecklistTests(unittest.TestCase):
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+        cls.pricing = (ROOT / "pricing.html").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         cls.builder = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
 
@@ -128,6 +129,18 @@ class OwnerLedSmbCloudBillLeakageEvidenceChecklistTests(unittest.TestCase):
         self.assertIn(f"Owner-led SMB cloud bill leakage evidence checklist: {URL}", self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+
+    def test_pricing_bridge_makes_cloud_leakage_review_sellable(self):
+        for phrase in [
+            'data-revenue-bridge="owner-led-smb-cloud-bill-leakage"',
+            "Owner-led SMB cloud bill leakage diagnostic bridge",
+            "Scope before FinOps software or consultant spend",
+            "/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/",
+            "/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/owner-led-smb-cloud-bill-leakage-evidence.csv",
+            "/free-business-review/?package=owner-led-smb-cloud-bill-leakage&amp;source=pricing-fixed-scope",
+            "no savings, ROI, runway, accounting, tax, security, privacy, compliance, ranking, lead, customer or revenue claim",
+        ]:
+            self.assertIn(phrase, self.pricing)
 
 
 if __name__ == "__main__":
