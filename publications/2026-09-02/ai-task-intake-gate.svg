@@ -1,0 +1,58 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#0f172a'/><stop offset='.55' stop-color='#1d4ed8'/><stop offset='1' stop-color='#0f766e'/></linearGradient>
+    <filter id='shadow' x='-15%' y='-20%' width='130%' height='150%'><feDropShadow dx='0' dy='16' stdDeviation='11' flood-color='#0f172a' flood-opacity='.12'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='#f7fbff'/>
+  <rect x='36' y='34' width='1128' height='832' rx='44' fill='white' stroke='#cfe0f7' stroke-width='3'/>
+  <rect x='70' y='68' width='1060' height='168' rx='36' fill='url(#hero)'/>
+  <text x='106' y='116' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#bfdbfe' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING INFOGRAPHIC</text>
+  <text x='106' y='174' font-family='Inter,Arial,sans-serif' font-size='52' font-weight='950' fill='white'>The AI Task Intake Gate</text>
+  <text x='106' y='214' font-family='Inter,Arial,sans-serif' font-size='20' fill='#dcfce7'>A safe educational checklist for deciding whether a business task is ready for AI assistance before anyone automates the wrong step.</text>
+  <text x='80' y='270' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Six intake questions before AI becomes an operating workflow</text>
+  
+    <g filter='url(#shadow)'>
+      <rect x='78' y='292' width='316' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <circle cx='130' cy='346' r='28' fill='#dbeafe' stroke='#60a5fa'/>
+      <text x='130' y='356' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#1d4ed8'>1</text>
+      <text x='172' y='340' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>What is the task?</text>
+      <text x='110' y='404' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='110' dy='0'>Name the exact repeatable work item</tspan><tspan x='110' dy='22'>before choosing any tool.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='292' width='316' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <circle cx='490' cy='346' r='28' fill='#dbeafe' stroke='#60a5fa'/>
+      <text x='490' y='356' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#1d4ed8'>2</text>
+      <text x='532' y='340' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Who owns the output?</text>
+      <text x='470' y='404' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='470' dy='0'>Assign a human owner who can approve,</tspan><tspan x='470' dy='22'>correct, or stop the workflow.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='798' y='292' width='316' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <circle cx='850' cy='346' r='28' fill='#dbeafe' stroke='#60a5fa'/>
+      <text x='850' y='356' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#1d4ed8'>3</text>
+      <text x='892' y='340' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>What source is allowed?</text>
+      <text x='830' y='404' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='830' dy='0'>Attach approved documents, examples,</tspan><tspan x='830' dy='22'>or records; avoid unsupported</tspan><tspan x='830' dy='22'>guessing.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='78' y='542' width='316' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <circle cx='130' cy='596' r='28' fill='#dbeafe' stroke='#60a5fa'/>
+      <text x='130' y='606' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#1d4ed8'>4</text>
+      <text x='172' y='590' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>What can go wrong?</text>
+      <text x='110' y='654' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='110' dy='0'>Mark privacy, promise, payment, legal,</tspan><tspan x='110' dy='22'>medical, compliance, or brand risks.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='542' width='316' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <circle cx='490' cy='596' r='28' fill='#dbeafe' stroke='#60a5fa'/>
+      <text x='490' y='606' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#1d4ed8'>5</text>
+      <text x='532' y='590' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Where does it pause?</text>
+      <text x='470' y='654' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='470' dy='0'>Define the handoff point for</tspan><tspan x='470' dy='22'>uncertain, sensitive, or destructive</tspan><tspan x='470' dy='22'>actions.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='798' y='542' width='316' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <circle cx='850' cy='596' r='28' fill='#dbeafe' stroke='#60a5fa'/>
+      <text x='850' y='606' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='25' font-weight='950' fill='#1d4ed8'>6</text>
+      <text x='892' y='590' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>What evidence is kept?</text>
+      <text x='830' y='654' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='830' dy='0'>Log source, draft, reviewer, decision,</tspan><tspan x='830' dy='22'>correction, and timestamp.</tspan></text>
+    </g>
+  <rect x='78' y='812' width='1044' height='36' rx='18' fill='#f8fafc' stroke='#cbd5e1'/>
+  <text x='600' y='836' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='14' fill='#64748b'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice.</text>
+</svg>
