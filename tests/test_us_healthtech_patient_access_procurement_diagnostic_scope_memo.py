@@ -7,6 +7,8 @@ SLUG = "us-healthtech-patient-access-procurement-diagnostic-scope-memo"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
+CSV = ROOT / "resources" / SLUG / "no-phi-patient-access-procurement-scope-matrix.csv"
+CSV_PATH = f"/resources/{SLUG}/no-phi-patient-access-procurement-scope-matrix.csv"
 
 
 def json_ld_documents(html):
@@ -32,6 +34,7 @@ def test_scope_memo_is_buyer_sendable_and_revenue_ready_without_payment_claim():
         "No PHI/ePHI",
         "No payment before proposal",
         "Request proposal-ready scope",
+        "Download no-PHI scope matrix",
         "Patient-access operating evidence",
         "Referral leakage and owner handoff points",
         "Eligibility status ownership",
@@ -76,6 +79,26 @@ def test_scope_memo_truth_boundaries_block_fake_healthtech_proof():
         assert boundary in html
     forbidden = ["HIPAA compliant", "SOC 2 certified", "HITRUST certified", "guaranteed savings", "guaranteed revenue"]
     assert all(term not in html for term in forbidden)
+
+
+def test_scope_memo_has_downloadable_no_phi_procurement_matrix():
+    html = PAGE.read_text(encoding="utf-8")
+    csv = CSV.read_text(encoding="utf-8")
+    assert CSV_PATH in html
+    for phrase in [
+        "Area,Buyer question,Allowed first-scope evidence",
+        "Referral intake",
+        "Eligibility",
+        "Prior authorization",
+        "AI receptionist",
+        "Security questionnaire",
+        "Cloud LLM FinOps",
+        "No savings ROI or spend-reduction guarantee",
+        "No procurement legal financial or platform endorsement claim",
+    ]:
+        assert phrase in csv
+    forbidden = ["real patient row", "sample patient", "SSN", "guaranteed savings", "guaranteed revenue"]
+    assert all(term.lower() not in csv.lower() for term in forbidden)
 
 
 def test_scope_memo_is_linked_from_discovery_and_revenue_surfaces():
