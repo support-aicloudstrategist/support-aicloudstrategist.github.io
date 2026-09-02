@@ -1,0 +1,8 @@
+row_type,field,example_value,owner_question,safety_boundary
+Lead source,origin,Referral intro / website form / event / partner,Which channel produced the proposal request and who owns source quality?,No personal data or confidential prospect details required
+Proposal status,stage,Sent / viewed / question open / procurement / stalled / closed,Can the owner see the next real blocker instead of only “proposal sent”?,No revenue forecast or win-probability claim
+Next action,owner,Founder / sales lead / delivery lead / finance / legal adviser,Who must act next and by when?,Escalate price/legal/payment commitments to Raj or qualified advisers
+Decision blocker,blocker,Budget / timing / technical fit / contract / stakeholder / unanswered question,What is the buyer waiting for before a decision?,No legal financial procurement or sales-performance advice
+Ageing band,age,0-24h / 2-3d / 4-7d / 8-14d / 15d+,Which proposals are stale enough for owner review?,No spammy automated outreach recommendation
+Evidence link,proof,Proposal URL / email thread note / meeting action / CRM task,What evidence proves the status without scraping private content?,Redact confidential proposal and customer identity before sharing
+Truth boundary,claim,Readiness example only,Which claims are blocked until independently evidenced?,No customer result testimonial ranking demand lead revenue savings or ROI claim
