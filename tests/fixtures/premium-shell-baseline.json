@@ -1747,7 +1747,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "21170bbe98a8e6c838850622e3ef32ccfad56bd5845c4711acb1a919459a77bb",
+      "main_sha256": "e77d477ecc7142ac931831207b855aaf21c6fdf03ab83a4dace113563606945e",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
@@ -2160,7 +2160,7 @@
       "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "ddcc6dbb876daddf5995032f9cc32c814145d8a94478d86d9e7e15909631fa20",
+      "main_sha256": "a0031d5ee933dd6c00b33a641eb2f9ae2832294dfb9aca9d6dcf11d1e7f5fd85",
       "title": "UK Private Clinic AI Receptionist vs Practice Management and Patient GrowthOS | AICS"
     },
     "resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/index.html": {
@@ -2442,6 +2442,13 @@
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "main_sha256": "4459f9291b1f83f1d5a1e5b1bdab96e6aab4d0fc377079203ecb80130b14e909",
       "title": "US Specialty Clinic Referral + Prior Auth Leakage Checklist | AICloudStrategist"
+    },
+    "resources/us-specialty-clinic-security-questionnaire-answer-source-map/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/us-specialty-clinic-security-questionnaire-answer-source-map/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "5ace71c65709d54e28184db5f7d716cf4a69b83c725e5124cfb40583ca05fae6",
+      "title": "US Specialty Clinic Security Questionnaire Answer-Source Map | AICS"
     },
     "resources/whatsapp-business-api-vs-direct-whatsapp-india/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/whatsapp-business-api-vs-direct-whatsapp-india/",
