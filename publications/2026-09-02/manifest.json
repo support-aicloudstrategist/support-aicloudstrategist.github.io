@@ -7,5 +7,14 @@
     "png": "https://aicloudstrategist.com/publications/2026-09-02/ai-task-intake-gate.png",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-02",
     "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice."
+  },
+  {
+    "slot": "evening",
+    "slug": "ai-reply-triage-board",
+    "title": "The AI Reply Triage Board",
+    "url": "https://aicloudstrategist.com/publications/2026-09-02/ai-reply-triage-board.html",
+    "png": "https://aicloudstrategist.com/publications/2026-09-02/ai-reply-triage-board.png",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-02",
+    "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice."
   }
 ]

@@ -1,0 +1,59 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#111827'/><stop offset='.52' stop-color='#7c3aed'/><stop offset='1' stop-color='#0891b2'/></linearGradient>
+    <filter id='shadow' x='-15%' y='-20%' width='130%' height='150%'><feDropShadow dx='0' dy='14' stdDeviation='10' flood-color='#0f172a' flood-opacity='.12'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='#f8fbff'/>
+  <rect x='38' y='34' width='1124' height='832' rx='44' fill='white' stroke='#dbeafe' stroke-width='3'/>
+  <rect x='72' y='68' width='1056' height='156' rx='36' fill='url(#hero)'/>
+  <text x='108' y='116' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#ddd6fe' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='108' y='171' font-family='Inter,Arial,sans-serif' font-size='52' font-weight='950' fill='white'>The AI Reply Triage Board</text>
+  <text x='108' y='211' font-family='Inter,Arial,sans-serif' font-size='20' fill='#cffafe'>A safe educational board for sorting business messages before an AI assistant drafts, routes, or pauses a reply.</text>
+  <text x='95' y='248' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Six lanes for safe message handling before AI touches a reply</text>
+  
+    <g filter='url(#shadow)'>
+      <rect x='95' y='260' width='470' height='142' rx='28' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='117' y='282' width='116' height='36' rx='18' fill='#dcfce7' stroke='#16a34a'/>
+      <text x='175' y='307' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#16a34a'>Green</text>
+      <text x='253' y='309' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f172a'>Routine</text>
+      <text x='129' y='354' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='129' dy='0'>Known answer, approved source, no promise,</tspan><tspan x='129' dy='22'>and low business risk.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='615' y='260' width='470' height='142' rx='28' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='637' y='282' width='116' height='36' rx='18' fill='#dbeafe' stroke='#2563eb'/>
+      <text x='695' y='307' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#2563eb'>Blue</text>
+      <text x='773' y='309' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f172a'>Needs context</text>
+      <text x='649' y='354' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='649' dy='0'>Missing order, account, project, or source</tspan><tspan x='649' dy='22'>detail before a useful draft.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='95' y='440' width='470' height='142' rx='28' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='117' y='462' width='116' height='36' rx='18' fill='#fef3c7' stroke='#d97706'/>
+      <text x='175' y='487' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#d97706'>Amber</text>
+      <text x='253' y='489' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f172a'>Human review</text>
+      <text x='129' y='534' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='129' dy='0'>Price, timeline, result expectation,</tspan><tspan x='129' dy='22'>sensitive data, or brand tone risk.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='615' y='440' width='470' height='142' rx='28' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='637' y='462' width='116' height='36' rx='18' fill='#fee2e2' stroke='#dc2626'/>
+      <text x='695' y='487' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#dc2626'>Red</text>
+      <text x='773' y='489' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f172a'>Do not automate</text>
+      <text x='649' y='534' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='649' dy='0'>Legal, medical, compliance, security,</tspan><tspan x='649' dy='22'>payment, credentials, or identity risk.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='95' y='620' width='470' height='142' rx='28' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='117' y='642' width='116' height='36' rx='18' fill='#f3e8ff' stroke='#9333ea'/>
+      <text x='175' y='667' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#9333ea'>Purple</text>
+      <text x='253' y='669' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f172a'>Escalate owner</text>
+      <text x='129' y='714' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='129' dy='0'>Potential complaint, partner issue, public</tspan><tspan x='129' dy='22'>reputation, or decision-maker request.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='615' y='620' width='470' height='142' rx='28' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='637' y='642' width='116' height='36' rx='18' fill='#f1f5f9' stroke='#475569'/>
+      <text x='695' y='667' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#475569'>Gray</text>
+      <text x='773' y='669' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f172a'>Log evidence</text>
+      <text x='649' y='714' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='649' dy='0'>Keep source, draft, reviewer, final reply,</tspan><tspan x='649' dy='22'>decision, and timestamp.</tspan></text>
+    </g>
+  <path d='M600 246 L600 790' stroke='#e2e8f0' stroke-width='4' stroke-dasharray='10 12'/>
+  <rect x='82' y='812' width='1036' height='36' rx='18' fill='#f8fafc' stroke='#cbd5e1'/>
+  <text x='600' y='836' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='14' fill='#64748b'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice.</text>
+</svg>

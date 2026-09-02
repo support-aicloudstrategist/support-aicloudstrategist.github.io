@@ -1,0 +1,1 @@
+Create a clean corporate Memphis bento-grid infographic titled 'The AI Reply Triage Board' using six color-coded triage lanes, purple/teal trust colors, rounded modular cards, clear hierarchy, and safe educational language. Aspect 4:3 worksheet.
