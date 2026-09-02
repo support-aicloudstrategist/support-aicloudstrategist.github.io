@@ -44,9 +44,12 @@ def test_page_contains_buyer_language_competitors_and_truth_boundaries():
         "AI human review",
         "security questionnaire",
         "cloud/LLM FinOps",
+        "prior authorization workflow automation medical group eligibility referral status owner",
+        "Prior-auth and eligibility owner handoff rows",
         "Luma Health",
         "Notable",
         "Phreesia",
+        "Waystar",
         "NexHealth",
         "Artera",
         "Vanta",
@@ -102,6 +105,8 @@ def test_csv_answer_bank_is_synthetic_and_operational():
         "Do not claim SOC 2 HITRUST ISO HIPAA or audit compliance",
         "Do not claim savings ROI runway impact or cost reduction without verified baseline",
         "Do not request sensitive access before scope and approvals",
+        "Do not claim eligibility accuracy authorization approval speed denial reduction or payer acceptance",
+        "Do not claim vendor superiority market ranking customer preference or replacement of RCM patient engagement or EHR platforms",
     ]:
         assert phrase in combined
 
