@@ -8,7 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "europe-healthtech-cloud-trust-finops-board-decision-memo-template"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
+SVG = ROOT / "resources" / SLUG / "europe-healthtech-board-evidence-pack.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
+SVG_URL = f"{URL}europe-healthtech-board-evidence-pack.svg"
 
 
 def json_ld_documents(html):
@@ -97,16 +99,36 @@ class EuropeHealthtechCloudTrustFinopsBoardMemoTests(unittest.TestCase):
         self.assertIn("Article", types)
         self.assertIn("Dataset", types)
         self.assertIn("FAQPage", types)
+        self.assertIn("ImageObject", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
+        image = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "ImageObject")
         self.assertEqual(article["mainEntityOfPage"], URL)
+        self.assertEqual(image["contentUrl"], SVG_URL)
         self.assertEqual(article["dateModified"], "2026-09-02")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn("Europe healthtech cloud trust FinOps board decision memo template", self.llms)
+        self.assertIn(SVG_URL, self.llms)
+        self.assertIn("View board evidence pack SVG", self.html)
+        self.assertIn("One-screen demo board evidence pack", self.html)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+    def test_demo_board_evidence_pack_svg_is_forwardable_and_truth_bounded(self):
+        svg = SVG.read_text(encoding="utf-8")
+        for phrase in [
+            "DEMO: board evidence pack before platform spend",
+            "Europe healthtech cloud trust + AI FinOps",
+            "no credentials",
+            "no patient data",
+            "No GDPR/EU AI Act/NHS DSPT compliance claim",
+            "No savings, ROI, ranking or customer result claim",
+            "rankings, demand, leads and revenue remain unverified",
+        ]:
+            self.assertIn(phrase, svg)
+        self.assertNotIn("trusted by", svg.lower())
+        self.assertNotIn("guaranteed", svg.lower())
 
 
 if __name__ == "__main__":

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Europe healthtech cloud trust and AI FinOps board evidence pack demo</title>
+  <desc id="desc">Demo-labelled board pack showing owner questions, evidence attachments, human review gates and prohibited claims for European healthtech cloud trust and AI FinOps decisions.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef7ff"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <style>
+      .title{font:700 38px Inter,Arial,sans-serif;fill:#12314f}.subtitle{font:500 20px Inter,Arial,sans-serif;fill:#48657d}.label{font:700 16px Inter,Arial,sans-serif;fill:#12314f}.copy{font:500 14px Inter,Arial,sans-serif;fill:#48657d}.small{font:600 12px Inter,Arial,sans-serif;fill:#63758a}.box{fill:#fff;stroke:#cfe1ef;stroke-width:2;rx:22}.gate{fill:#fff7ed;stroke:#fdba74;stroke-width:2;rx:18}.stop{fill:#fff1f2;stroke:#fda4af;stroke-width:2;rx:18}.ok{fill:#ecfdf5;stroke:#86efac;stroke-width:2;rx:18}.arrow{stroke:#6b8aa6;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b8aa6"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="60" y="70" class="title">DEMO: board evidence pack before platform spend</text>
+  <text x="60" y="106" class="subtitle">Europe healthtech cloud trust + AI FinOps · no credentials · no patient data · no compliance/savings claim</text>
+
+  <rect x="60" y="150" width="300" height="170" class="box"/>
+  <text x="88" y="190" class="label">1. Board question</text>
+  <text x="88" y="224" class="copy">Approve discovery, platform spend,</text>
+  <text x="88" y="248" class="copy">remediation, adviser review or</text>
+  <text x="88" y="272" class="copy">no-action with named owners?</text>
+  <text x="88" y="304" class="small">Owners: CFO · CTO · DPO · CISO · clinical</text>
+
+  <rect x="450" y="150" width="300" height="170" class="ok"/>
+  <text x="478" y="190" class="label">2. Evidence attachments</text>
+  <text x="478" y="224" class="copy">Redacted spend rows, AI-use map,</text>
+  <text x="478" y="248" class="copy">questionnaire source links, DPIA</text>
+  <text x="478" y="272" class="copy">questions and unresolved gaps.</text>
+  <text x="478" y="304" class="small">Allowed: synthetic/redacted only</text>
+
+  <rect x="840" y="150" width="300" height="170" class="gate"/>
+  <text x="868" y="190" class="label">3. Human-review gates</text>
+  <text x="868" y="224" class="copy">Legal/privacy, security/audit,</text>
+  <text x="868" y="248" class="copy">clinical safety, procurement and</text>
+  <text x="868" y="272" class="copy">finance decisions stay buyer-owned.</text>
+  <text x="868" y="304" class="small">AICS prepares evidence, not approvals</text>
+
+  <line x1="370" y1="235" x2="430" y2="235" class="arrow"/>
+  <line x1="760" y1="235" x2="820" y2="235" class="arrow"/>
+
+  <rect x="140" y="390" width="420" height="190" class="box"/>
+  <text x="172" y="430" class="label">Board-ready memo output</text>
+  <text x="172" y="466" class="copy">• Decision requested and expiry</text>
+  <text x="172" y="492" class="copy">• Spend/workload facts and owner gaps</text>
+  <text x="172" y="518" class="copy">• Trust questionnaire blockers</text>
+  <text x="172" y="544" class="copy">• Platform/adviser route comparison</text>
+
+  <rect x="640" y="390" width="420" height="190" class="stop"/>
+  <text x="672" y="430" class="label">Blocked claims until independently evidenced</text>
+  <text x="672" y="466" class="copy">No GDPR/EU AI Act/NHS DSPT compliance claim</text>
+  <text x="672" y="492" class="copy">No savings, ROI, ranking or customer result claim</text>
+  <text x="672" y="518" class="copy">No medical/security/legal/procurement advice</text>
+  <text x="672" y="544" class="copy">No production-data or platform partnership claim</text>
+
+  <line x1="600" y1="320" x2="350" y2="380" class="arrow"/>
+  <line x1="600" y1="320" x2="850" y2="380" class="arrow"/>
+  <text x="60" y="660" class="small">AICloudStrategist readiness artifact: useful for buyer education and internal shortlisting only; rankings, demand, leads and revenue remain unverified.</text>
+</svg>
