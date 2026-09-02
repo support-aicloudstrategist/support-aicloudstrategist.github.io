@@ -42,6 +42,16 @@ class IndiaClinicLabDpdpWhatsappFollowupEvidenceChecklistTests(unittest.TestCase
             "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
             "/resources/customer-problem-search/clinic-not-getting-patients/",
             "Why this improves top-3/top-5 consideration",
+            "2026-09-02 India business-hours source check",
+            "Practo Ray",
+            "CrelioHealth",
+            "MocDoc",
+            "Eka Care",
+            "LeadSquared healthcare CRM",
+            "Digio DPDP",
+            "MeitY data-protection-framework page returned 403",
+            "Where AICS fits against common shortlist options",
+            "ABDM/EMR handoff questions",
         ]:
             self.assertIn(phrase, self.html)
 
@@ -99,7 +109,7 @@ class IndiaClinicLabDpdpWhatsappFollowupEvidenceChecklistTests(unittest.TestCase
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-09-02")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
