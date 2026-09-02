@@ -54,6 +54,7 @@ CURATED_PATHS = [
     "/resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/",
     "/resources/cloud-cost-optimization-finops-control/",
     "/resources/global-owner-led-smb-cloud-bill-leakage-evidence-checklist/",
+    "/resources/global-hr-employee-onboarding-paperwork-owner-evidence-checklist/",
     "/resources/cloud-ai-economics-decision-pack/",
     "/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",
     "/resources/kubernetes-namespace-cost-owner-dashboard-demo/",
