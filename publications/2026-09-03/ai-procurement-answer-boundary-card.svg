@@ -1,0 +1,58 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#111827'/><stop offset='.52' stop-color='#0e7490'/><stop offset='1' stop-color='#2563eb'/></linearGradient>
+    <filter id='shadow' x='-15%' y='-20%' width='130%' height='150%'><feDropShadow dx='0' dy='16' stdDeviation='11' flood-color='#0f172a' flood-opacity='.12'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='#f8fbff'/>
+  <rect x='36' y='34' width='1128' height='832' rx='44' fill='white' stroke='#cfe0f7' stroke-width='3'/>
+  <rect x='70' y='68' width='1060' height='168' rx='36' fill='url(#hero)'/>
+  <text x='106' y='116' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#bfdbfe' letter-spacing='3'>AICLOUDSTRATEGIST · AFTERNOON TRUST ASSET</text>
+  <text x='106' y='174' font-family='Inter,Arial,sans-serif' font-size='48' font-weight='950' fill='white'>The AI Procurement Answer Boundary Card</text>
+  <text x='106' y='214' font-family='Inter,Arial,sans-serif' font-size='19' fill='#ecfeff'>A safe educational checklist for separating answerable procurement questions from proof-needed, owner-needed, and adviser-needed items before an AI-assisted response is sent.</text>
+  <text x='80' y='270' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Six checks before an AI-assisted procurement answer is sent</text>
+  
+    <g filter='url(#shadow)'>
+      <rect x='74' y='294' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='102' y='322' width='62' height='54' rx='18' fill='#ecfeff' stroke='#06b6d4'/>
+      <text x='133' y='357' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#155e75'>Type</text>
+      <text x='178' y='354' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Question type</text>
+      <text x='106' y='412' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='106' dy='0'>Label each buyer question as</tspan><tspan x='106' dy='22'>factual, policy, security, legal,</tspan><tspan x='106' dy='22'>commercial, roadmap, or</tspan><tspan x='106' dy='22'>customer-specific before drafting.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='294' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='466' y='322' width='62' height='54' rx='18' fill='#ecfeff' stroke='#06b6d4'/>
+      <text x='497' y='357' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#155e75'>Src</text>
+      <text x='542' y='354' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Approved source</text>
+      <text x='470' y='412' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='470' dy='0'>Attach the exact page, policy,</tspan><tspan x='470' dy='22'>control record, owner note, or</tspan><tspan x='470' dy='22'>signed document the answer may rely</tspan><tspan x='470' dy='22'>on.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='802' y='294' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='830' y='322' width='62' height='54' rx='18' fill='#ecfeff' stroke='#06b6d4'/>
+      <text x='861' y='357' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#155e75'>May</text>
+      <text x='906' y='354' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Allowed answer</text>
+      <text x='834' y='412' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='834' dy='0'>Write what can be answered directly,</tspan><tspan x='834' dy='22'>what must be caveated, and what must</tspan><tspan x='834' dy='22'>stay blank until evidence exists.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='74' y='544' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='102' y='572' width='62' height='54' rx='18' fill='#ecfeff' stroke='#06b6d4'/>
+      <text x='133' y='607' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#155e75'>Own</text>
+      <text x='178' y='604' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Owner review</text>
+      <text x='106' y='662' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='106' dy='0'>Route security, legal, privacy,</tspan><tspan x='106' dy='22'>finance, pricing, and roadmap items</tspan><tspan x='106' dy='22'>to the accountable human owner.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='544' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='466' y='572' width='62' height='54' rx='18' fill='#ecfeff' stroke='#06b6d4'/>
+      <text x='497' y='607' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#155e75'>Stop</text>
+      <text x='542' y='604' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Pause trigger</text>
+      <text x='470' y='662' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='470' dy='0'>Pause if the draft would imply</tspan><tspan x='470' dy='22'>certifications, signed agreements,</tspan><tspan x='470' dy='22'>customer results, production</tspan><tspan x='470' dy='22'>readiness, or guarantees not proven.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='802' y='544' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='830' y='572' width='62' height='54' rx='18' fill='#ecfeff' stroke='#06b6d4'/>
+      <text x='861' y='607' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#155e75'>Log</text>
+      <text x='906' y='604' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Evidence trail</text>
+      <text x='834' y='662' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='834' dy='0'>Save the source, draft, reviewer,</tspan><tspan x='834' dy='22'>final answer, date, and correction</tspan><tspan x='834' dy='22'>note for future questionnaire reuse.</tspan></text>
+    </g>
+  <rect x='78' y='812' width='1044' height='36' rx='18' fill='#f8fafc' stroke='#cbd5e1'/>
+  <text x='600' y='836' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' fill='#64748b'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, procurement-approval, or guaranteed-performance advice.</text>
+</svg>

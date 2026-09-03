@@ -7,5 +7,15 @@
     "png": "https://aicloudstrategist.com/publications/2026-09-03/ai-source-evidence-card.png",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-03",
     "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, or guaranteed-performance advice."
+  },
+  {
+    "slot": "afternoon",
+    "slug": "ai-procurement-answer-boundary-card",
+    "title": "The AI Procurement Answer Boundary Card",
+    "url": "https://aicloudstrategist.com/publications/2026-09-03/ai-procurement-answer-boundary-card.html",
+    "png": "https://aicloudstrategist.com/publications/2026-09-03/ai-procurement-answer-boundary-card.png",
+    "csv": "https://aicloudstrategist.com/publications/2026-09-03/ai-procurement-answer-boundary-card.csv",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-03",
+    "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, procurement-approval, or guaranteed-performance advice."
   }
 ]
