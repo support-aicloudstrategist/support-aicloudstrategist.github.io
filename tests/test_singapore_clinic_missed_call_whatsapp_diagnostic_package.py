@@ -26,6 +26,8 @@ class SingaporeClinicMissedCallWhatsappDiagnosticPackageTests(unittest.TestCase)
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         cls.builder = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
         cls.pricing = (ROOT / "pricing.html").read_text(encoding="utf-8")
+        cls.free_review = (ROOT / "free-business-review" / "index.html").read_text(encoding="utf-8")
+        cls.free_review_flat = (ROOT / "free-business-review.html").read_text(encoding="utf-8")
 
     def test_page_is_indexable_canonical_and_structured(self):
         self.assertIn('<meta name="robots" content="index, follow"/>', self.html)
@@ -76,6 +78,21 @@ class SingaporeClinicMissedCallWhatsappDiagnosticPackageTests(unittest.TestCase)
         self.assertIn(URL, self.sitemap)
         self.assertIn("Singapore clinic missed-call and WhatsApp diagnostic package", self.llms)
         self.assertIn("data-revenue-bridge=\"singapore-clinic-missed-call-whatsapp-diagnostic-package\"", self.pricing)
+
+    def test_free_review_routes_singapore_clinics_to_diagnostic_package(self):
+        self.assertEqual(self.free_review, self.free_review_flat)
+        workflow = self.free_review.split('id="diagnostic-bridge-title"', 1)[1].split('id="request-title"', 1)[0]
+        for phrase in [
+            'data-review-route="singapore-clinic-missed-call-whatsapp-diagnostic-package"',
+            "Singapore private clinics",
+            "Missed-call + WhatsApp patient follow-up diagnostic",
+            "PDPA adviser questions",
+            "no-patient-data boundaries",
+            f"/resources/{SLUG}/",
+            f"/resources/{SLUG}/singapore-clinic-diagnostic-scope-matrix.csv",
+            "/resources/singapore-private-clinic-missed-call-whatsapp-owner-evidence-checklist/",
+        ]:
+            self.assertIn(phrase, workflow)
 
     def test_truth_boundaries_prevent_fake_proof(self):
         for phrase in [
