@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">UK private clinic owner evidence map demo</title>
+  <desc id="desc">Synthetic no-patient-data visual showing how private clinic missed calls, appointment reminders, GDPR questions and AI handover rules move through owner evidence before buying AI receptionist or practice-management tooling.</desc>
+  <rect width="1200" height="720" fill="#f5fbff"/>
+  <rect x="44" y="42" width="1112" height="636" rx="32" fill="#ffffff" stroke="#c9dff0" stroke-width="3"/>
+  <text x="80" y="96" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#102a43">UK private clinic owner evidence map</text>
+  <text x="80" y="134" font-family="Inter, Arial, sans-serif" font-size="18" fill="#486581">Demo / synthetic / no patient data · built for AI receptionist, PMS, patient engagement and AICS diagnostic decisions</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="78" y="178" width="210" height="126" rx="22" fill="#e8f4ff" stroke="#8fc4ec"/>
+    <text x="104" y="216" font-size="20" font-weight="700" fill="#0b4f71">1. Intake signals</text>
+    <text x="104" y="248" font-size="16" fill="#24455f">Missed calls · web forms</text>
+    <text x="104" y="272" font-size="16" fill="#24455f">WhatsApp · reminders</text>
+
+    <rect x="356" y="178" width="210" height="126" rx="22" fill="#ecfdf3" stroke="#7ecf9a"/>
+    <text x="382" y="216" font-size="20" font-weight="700" fill="#17643a">2. Owner facts</text>
+    <text x="382" y="248" font-size="16" fill="#24455f">Source · age · service</text>
+    <text x="382" y="272" font-size="16" fill="#24455f">Owner · safe next action</text>
+
+    <rect x="634" y="178" width="210" height="126" rx="22" fill="#fff7e8" stroke="#f2c46f"/>
+    <text x="660" y="216" font-size="20" font-weight="700" fill="#8a5700">3. Stop rules</text>
+    <text x="660" y="248" font-size="16" fill="#24455f">Clinical questions</text>
+    <text x="660" y="272" font-size="16" fill="#24455f">Finance/GDPR adviser gates</text>
+
+    <rect x="912" y="178" width="210" height="126" rx="22" fill="#f3edff" stroke="#b59bed"/>
+    <text x="938" y="216" font-size="20" font-weight="700" fill="#553c9a">4. Decision route</text>
+    <text x="938" y="248" font-size="16" fill="#24455f">AI receptionist?</text>
+    <text x="938" y="272" font-size="16" fill="#24455f">PMS, call centre or AICS?</text>
+
+    <path d="M294 241 H348" stroke="#617d98" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M572 241 H626" stroke="#617d98" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M850 241 H904" stroke="#617d98" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="82" y="368" width="318" height="176" rx="24" fill="#ffffff" stroke="#d8e2eb"/>
+    <text x="112" y="408" font-size="22" font-weight="800" fill="#102a43">Evidence to attach</text>
+    <text x="112" y="444" font-size="17" fill="#334e68">• Redacted ageing table</text>
+    <text x="112" y="474" font-size="17" fill="#334e68">• Source-to-owner handoff map</text>
+    <text x="112" y="504" font-size="17" fill="#334e68">• Stop-rule register</text>
+
+    <rect x="442" y="368" width="318" height="176" rx="24" fill="#ffffff" stroke="#d8e2eb"/>
+    <text x="472" y="408" font-size="22" font-weight="800" fill="#102a43">Claims blocked</text>
+    <text x="472" y="444" font-size="17" fill="#334e68">• No GDPR compliance proof</text>
+    <text x="472" y="474" font-size="17" fill="#334e68">• No clinical-safety claim</text>
+    <text x="472" y="504" font-size="17" fill="#334e68">• No bookings, savings or ROI claim</text>
+
+    <rect x="802" y="368" width="318" height="176" rx="24" fill="#ffffff" stroke="#d8e2eb"/>
+    <text x="832" y="408" font-size="22" font-weight="800" fill="#102a43">No-credentials review</text>
+    <text x="832" y="444" font-size="17" fill="#334e68">• Synthetic or redacted rows only</text>
+    <text x="832" y="474" font-size="17" fill="#334e68">• Owner interview + public policies</text>
+    <text x="832" y="504" font-size="17" fill="#334e68">• Adviser-needed questions separated</text>
+  </g>
+  <text x="80" y="620" font-family="Inter, Arial, sans-serif" font-size="18" fill="#627d98">Purpose: make AICS easier to shortlist as the evidence-owner layer before clinic teams buy automation or share sensitive data.</text>
+  <text x="80" y="650" font-family="Inter, Arial, sans-serif" font-size="15" fill="#829ab1">Boundary: synthetic readiness visual only — no real clinic, patient data, testimonial, ranking, compliance, savings, bookings, lead, customer or revenue claim.</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#617d98"/></marker></defs>
+</svg>
