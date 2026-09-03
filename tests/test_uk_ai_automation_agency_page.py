@@ -13,6 +13,10 @@ def test_uk_ai_automation_agency_page_is_buyer_safe_and_indexable():
     assert html.count("<h1") == 1
     assert "AI automation agency UK" in html
     assert "/free-business-review/?market=uk-ai-automation" in html
+    assert "/resources/uk-private-clinic-owner-evidence-decision-memo/" in html
+    assert "UK clinic buyer proof path" in html
+    assert "forwardable owner memo" in html
+    assert "before sharing patient data or committing to platform spend" in html
     assert "UK GDPR-aware operational prompts" in html
     assert "not legal advice" in html.lower()
     assert "does not guarantee" in html.lower()

@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-03 UK AI automation page clinic memo bridge
+
+- Decision: reduce UK-market conversion friction by connecting the commercial `/ai-automation-agency-uk/` page directly to the newest private-clinic owner decision memo, not only the comparison asset.
+- Updated: added a "UK clinic buyer proof path" section linking UK automation buyers to `/resources/uk-private-clinic-owner-evidence-decision-memo/` before patient data sharing or platform spend.
+- Updated: `tests/test_uk_ai_automation_agency_page.py` now asserts the memo bridge and buyer-safe wording.
+- Verification performed: targeted pytest returned `4 passed`; `git diff --check` passed; local HTTP checks returned 200 for the UK automation page and memo route with expected markers; public checks returned 200 for both pages after deployment.
+- Proof boundary: no UK client, clinic, patient, appointment-growth, no-show reduction, revenue, ROI, ranking, compliance, legal/privacy/security/medical advice, testimonial or platform-partnership claim was made.
+
 ## 2026-09-03 UK private clinic comparison-to-memo conversion link
 
 - Decision: reduce conversion and trust friction in the UK private-clinic cluster by connecting the AI receptionist/practice-management comparison directly to the new owner evidence decision memo.
