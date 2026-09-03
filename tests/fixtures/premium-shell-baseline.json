@@ -130,7 +130,7 @@
       "canonical": "https://aicloudstrategist.com/ai-automation-agency-uk/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "cbed1a8fa1e92b9565c6aa8fc51596d5c18dc5e8b6a61fc569380507455f4bfb",
+      "main_sha256": "e868a5a44b20cdff66b799892536416ea8f0b875e099967e01cc1849d3c85132",
       "title": "AI Automation Agency UK | AICloudStrategist"
     },
     "ai-automation-agency/index.html": {
@@ -382,14 +382,14 @@
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
-      "main_sha256": "13c3a69829cfa4591989f42874c67972fd8c4117df4cb0c77b2a2cc7805f8555",
+      "main_sha256": "f16d7c408e862b9d222737447a2272a9591e56ceb15288a4748c498260611fd5",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
     "free-business-review/index.html": {
       "canonical": "https://aicloudstrategist.com/free-business-review/",
       "forms": 1,
       "forms_sha256": "0057c764fb78a7f89fd184610c83752b099068272625c88209c8d393fb929f39",
-      "main_sha256": "13c3a69829cfa4591989f42874c67972fd8c4117df4cb0c77b2a2cc7805f8555",
+      "main_sha256": "f16d7c408e862b9d222737447a2272a9591e56ceb15288a4748c498260611fd5",
       "title": "Free Business Growth Review | AICloudStrategist"
     },
     "growth-control-os/index.html": {
@@ -431,7 +431,7 @@
       "canonical": "https://aicloudstrategist.com/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "3d5f73db4de2d295b9178cf17854e9bc983986a5e6cff212f9dc348ebfe36aae",
+      "main_sha256": "e9a9358251b7fb3f720d6fb2c832abf60c9d09da900e4343d78b4b2c7b19cbf3",
       "title": "Enterprise AI Services &amp; Managed AI | AICloudStrategist"
     },
     "industries.html": {
@@ -606,7 +606,7 @@
       "canonical": "https://aicloudstrategist.com/pricing",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "773193579e87605b41d44c96a4f20935efc410c8a6b0bb90a709be506e5bf2a5",
+      "main_sha256": "3badadc667b96e2d362fc270a1ab86b634964812fca4500c585930f70b74665a",
       "title": "Pricing | AICloudStrategist"
     },
     "privacy.html": {
@@ -802,8 +802,8 @@
       "canonical": "https://aicloudstrategist.com/resources/aws-cost-optimization-checklist/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "4a91f3c6545fc420d4e334bdefe9f7330a144b20be33c940b01eda3026e11a9e",
-      "title": "AWS Cost Optimization Checklist | AICloudStrategist"
+      "main_sha256": "a1810ea4155a22b2e4fc1df4e5276ccaea8b6dacbfae61b3b1b485cb446dbb17",
+      "title": "AWS Cost Optimization Checklist | Owner Evidence Before Cutting Spend"
     },
     "resources/brand-trust-monitoring/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/brand-trust-monitoring/",
@@ -1047,7 +1047,7 @@
       "canonical": "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "c3c583435dd05297da84be5630751358151d66be385d48401a41dbbc0c351ff7",
+      "main_sha256": "daadeadb3b1795a699c1610aec22c4e109c8cdd24c5ed5260ebcf1b85c55fbb3",
       "title": "DPDP Compliance Checklist for Small Businesses in India | AICloudStrategist"
     },
     "resources/dpdp-consent-automation-india/index.html": {
@@ -1747,7 +1747,7 @@
       "canonical": "https://aicloudstrategist.com/resources/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "e77d477ecc7142ac931831207b855aaf21c6fdf03ab83a4dace113563606945e",
+      "main_sha256": "57afe5d371c359e4520481610640a1a87159c3bfac480c31bb6efcc51ddb1433",
       "title": "Resources | AICloudStrategist"
     },
     "resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/index.html": {
@@ -2104,7 +2104,7 @@
       "canonical": "https://aicloudstrategist.com/resources/uae-healthtech-cloud-trust-patient-data-evidence-source-map/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "fd63fca37a0a57768504d344e0ee7359a357b94c901d6747d02cc8392d1d318a",
+      "main_sha256": "e0c4db87d207cb90aa63b9660a299e59b17f3d4eb4416281301d5dc13b9b18ce",
       "title": "UAE Healthtech Cloud Trust + Patient Data Evidence Source Map | AICS"
     },
     "resources/uae-healthtech-no-credentials-patient-data-intake-policy/index.html": {
@@ -2156,12 +2156,26 @@
       "main_sha256": "b2e6be893f6a5df077da77d77832bee2bbcf13d6bd627985698f9e05d3a14688",
       "title": "UK Care Home Family Enquiry Follow-Up Evidence Checklist | AICloudStrategist"
     },
+    "resources/uk-private-clinic-ai-receptionist-owner-faq/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-ai-receptionist-owner-faq/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "f92401cc406b101fe37602d92a3671fc9162339a3e52b2a32945bdbfbf05d661",
+      "title": "UK Private Clinic AI Receptionist Owner FAQ | AICS"
+    },
     "resources/uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison/",
       "forms": 0,
       "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "main_sha256": "a0031d5ee933dd6c00b33a641eb2f9ae2832294dfb9aca9d6dcf11d1e7f5fd85",
+      "main_sha256": "18f3735bd205d062cb7586b525b875f8313d45bc0d97cb51ac5249c3ad589d57",
       "title": "UK Private Clinic AI Receptionist vs Practice Management and Patient GrowthOS | AICS"
+    },
+    "resources/uk-private-clinic-owner-evidence-decision-memo/index.html": {
+      "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-owner-evidence-decision-memo/",
+      "forms": 0,
+      "forms_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "main_sha256": "f863b080efaeffd80c0168a53df75d34958887703b4d29a9add953af50ebf6e0",
+      "title": "UK Private Clinic Owner Evidence Decision Memo | AICS"
     },
     "resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/index.html": {
       "canonical": "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-vs-practice-management-comparison/",
