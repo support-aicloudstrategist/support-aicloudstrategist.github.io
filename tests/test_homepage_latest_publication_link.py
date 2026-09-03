@@ -18,6 +18,7 @@ def test_homepage_surfaces_latest_ai_source_evidence_card_publication():
 
     href = f"/publications/{DATE}/{SLUG}.html"
     assert href in home
+    assert f'<h3><a href="{href}">{TITLE}</a></h3>' in home
     assert TITLE in home
     assert f"<link rel='canonical' href='https://aicloudstrategist.com/publications/{DATE}/{SLUG}.html'>" in publication
     assert "ai source evidence card" in publication.lower()
