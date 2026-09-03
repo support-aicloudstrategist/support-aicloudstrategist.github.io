@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo Azure owner action board</title>
+  <desc id="desc">Synthetic Azure bill owner action board showing no-credentials evidence, owner routing, safe action gates, rollback checks and claim-boundary stops.</desc>
+  <rect width="1200" height="720" fill="#06111f"/>
+  <text x="64" y="78" fill="#eaf6fb" font-family="Arial, sans-serif" font-size="38" font-weight="700">Azure bill too high: owner action board</text>
+  <text x="64" y="118" fill="#93c5fd" font-family="Arial, sans-serif" font-size="19">Synthetic demo · no tenant IDs · no credentials · no invoice rows · no production exports</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="64" y="170" width="250" height="390" rx="22" fill="#0f2745" stroke="#38bdf8"/>
+    <text x="92" y="218" fill="#f8fafc" font-size="26" font-weight="700">1. Cost signal</text>
+    <text x="92" y="265" fill="#dbeafe" font-size="18">• Unexpected bill rise</text>
+    <text x="92" y="303" fill="#dbeafe" font-size="18">• Azure OpenAI/API spike</text>
+    <text x="92" y="341" fill="#dbeafe" font-size="18">• Storage/backup growth</text>
+    <text x="92" y="379" fill="#dbeafe" font-size="18">• Data transfer drift</text>
+    <text x="92" y="417" fill="#dbeafe" font-size="18">• Renewal/commitment risk</text>
+    <rect x="92" y="462" width="194" height="54" rx="12" fill="#172554"/>
+    <text x="112" y="497" fill="#bfdbfe" font-size="16">Redacted summaries only</text>
+
+    <rect x="347" y="170" width="250" height="390" rx="22" fill="#102a2a" stroke="#22c55e"/>
+    <text x="375" y="218" fill="#f8fafc" font-size="26" font-weight="700">2. Owner route</text>
+    <text x="375" y="265" fill="#dcfce7" font-size="18">Finance owner</text>
+    <text x="375" y="303" fill="#dcfce7" font-size="18">Cloud engineer</text>
+    <text x="375" y="341" fill="#dcfce7" font-size="18">Product owner</text>
+    <text x="375" y="379" fill="#dcfce7" font-size="18">Security/privacy adviser</text>
+    <text x="375" y="417" fill="#dcfce7" font-size="18">Procurement owner</text>
+    <rect x="375" y="462" width="194" height="54" rx="12" fill="#064e3b"/>
+    <text x="392" y="497" fill="#bbf7d0" font-size="16">No blind shutdowns</text>
+
+    <rect x="630" y="170" width="250" height="390" rx="22" fill="#312010" stroke="#f59e0b"/>
+    <text x="658" y="218" fill="#f8fafc" font-size="26" font-weight="700">3. Safe action</text>
+    <text x="658" y="265" fill="#ffedd5" font-size="18">Keep / cap / rightsize</text>
+    <text x="658" y="303" fill="#ffedd5" font-size="18">Schedule maintenance</text>
+    <text x="658" y="341" fill="#ffedd5" font-size="18">Negotiate renewal</text>
+    <text x="658" y="379" fill="#ffedd5" font-size="18">Adviser review</text>
+    <text x="658" y="417" fill="#ffedd5" font-size="18">Blocked until proof</text>
+    <rect x="658" y="462" width="194" height="54" rx="12" fill="#78350f"/>
+    <text x="680" y="497" fill="#fed7aa" font-size="16">Rollback owner named</text>
+
+    <rect x="913" y="170" width="223" height="390" rx="22" fill="#32151d" stroke="#fb7185"/>
+    <text x="941" y="218" fill="#f8fafc" font-size="26" font-weight="700">4. Claim stop</text>
+    <text x="941" y="265" fill="#ffe4e6" font-size="18">No savings claim</text>
+    <text x="941" y="303" fill="#ffe4e6" font-size="18">No ROI claim</text>
+    <text x="941" y="341" fill="#ffe4e6" font-size="18">No compliance claim</text>
+    <text x="941" y="379" fill="#ffe4e6" font-size="18">No partner claim</text>
+    <text x="941" y="417" fill="#ffe4e6" font-size="18">No customer claim</text>
+    <rect x="941" y="462" width="166" height="54" rx="12" fill="#881337"/>
+    <text x="956" y="497" fill="#fecdd3" font-size="16">Measure after action</text>
+  </g>
+  <path d="M314 365 H347" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M597 365 H630" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M880 365 H913" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker></defs>
+  <text x="64" y="640" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">AICloudStrategist readiness artifact — use before Azure credentials, production changes, or public savings claims.</text>
+</svg>
