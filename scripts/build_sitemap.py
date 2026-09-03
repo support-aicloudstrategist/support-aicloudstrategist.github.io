@@ -25,6 +25,7 @@ CURATED_PATHS = [
     "/services/website-digital-presence/",
     "/services/lead-generation-seo/website-lead-capture/",
     "/services/workflow-automation/",
+    "/ai-automation-agency-uk/",
     "/ai-creative-studio/",
     "/growth-control-os/",
     "/trust-compliance/",
