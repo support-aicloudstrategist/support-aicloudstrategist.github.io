@@ -108,6 +108,7 @@ CURATED_PATHS = [
     "/resources/us-specialty-clinic-prior-auth-evidence-pack/",
     "/resources/us-specialty-clinic-referral-prior-auth-decision-memo/",
     "/resources/us-specialty-clinic-security-questionnaire-answer-source-map/",
+    "/resources/us-specialty-clinic-patient-access-cloud-trust-diagnostic-package/",
     "/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
     "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
     "/resources/north-america-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
