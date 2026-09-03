@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-03 UK private clinic comparison-to-memo conversion link
+
+- Decision: reduce conversion and trust friction in the UK private-clinic cluster by connecting the AI receptionist/practice-management comparison directly to the new owner evidence decision memo.
+- Updated: `/resources/uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison/` hero CTA and evidence-download section now link to `/resources/uk-private-clinic-owner-evidence-decision-memo/`.
+- Updated: `tests/test_uk_private_clinic_owner_evidence_decision_memo.py` to assert the cross-link and buyer-safe memo markers.
+- Verification performed: targeted pytest returned `2 passed`; public HTTP checks returned 200 for the comparison and memo pages with the memo link present after deployment.
+- Proof boundary: no clinic, patient, compliance, appointment-growth, no-show reduction, revenue, ROI, ranking, demand, lead, customer, testimonial or platform-partnership claim was made.
+
 ## 2026-08-31 Homepage no-show recovery comparison discovery link
 
 - Decision: reduce discovery friction for the latest high-intent US medical-group no-show recovery comparison by moving it from resource-hub-only visibility onto the homepage evidence rail.
