@@ -8,7 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "uae-healthtech-cloud-trust-patient-data-evidence-source-map"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "uae-healthtech-cloud-trust-patient-data-evidence-source-map.csv"
+SVG = ROOT / "resources" / SLUG / "uae-healthtech-owner-evidence-dashboard.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
+SVG_URL = f"{URL}uae-healthtech-owner-evidence-dashboard.svg"
 
 
 def json_ld_documents(html):
@@ -19,6 +21,7 @@ class UaeHealthtechCloudTrustPatientDataEvidenceSourceMapTests(unittest.TestCase
     @classmethod
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
+        cls.svg = SVG.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
@@ -47,9 +50,35 @@ class UaeHealthtechCloudTrustPatientDataEvidenceSourceMapTests(unittest.TestCase
             "Vantage",
             "OneTrust",
             "Vanta",
+            "Refreshed 3 Sep 2026",
+            "sampled Vezeeta and Altibbi pages returned HTTP 403",
+            "Demo owner dashboard",
             "Why this improves top-3/top-5 consideration",
         ]:
             self.assertIn(phrase, self.html)
+
+    def test_demo_owner_dashboard_is_linked_labelled_and_no_patient_data(self):
+        self.assertTrue(SVG.is_file())
+        for phrase in [
+            SVG_URL,
+            "View demo owner dashboard",
+            "Open the demo UAE healthtech owner evidence dashboard SVG",
+            "Demo / synthetic only",
+            "not a client result",
+            "no-patient-data claim boundaries",
+        ]:
+            self.assertIn(phrase, self.html)
+        for marker in [
+            "DEMO / SYNTHETIC",
+            "no patient data",
+            "no credentials",
+            "Patient-data boundary",
+            "AI/cloud spend owners",
+            "Human-review stops",
+            "No-go evidence",
+            "AICS top-3/top-5 wedge",
+        ]:
+            self.assertIn(marker, self.svg)
 
     def test_csv_has_expected_source_map_fields(self):
         self.assertEqual(len(self.rows), 8)
@@ -108,15 +137,19 @@ class UaeHealthtechCloudTrustPatientDataEvidenceSourceMapTests(unittest.TestCase
         types = {doc.get("@type") for doc in docs if isinstance(doc, dict)}
         self.assertIn("Article", types)
         self.assertIn("Dataset", types)
+        self.assertIn("ImageObject", types)
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-09-03")
+        image = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "ImageObject")
+        self.assertEqual(image["contentUrl"], SVG_URL)
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn(f"UAE healthtech cloud trust patient data evidence source map: {URL}", self.llms)
+        self.assertIn(SVG_URL, self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
 
