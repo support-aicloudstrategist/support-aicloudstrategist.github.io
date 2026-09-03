@@ -1,0 +1,58 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#1e1b4b'/><stop offset='.52' stop-color='#7c2d12'/><stop offset='1' stop-color='#0f766e'/></linearGradient>
+    <filter id='shadow' x='-15%' y='-20%' width='130%' height='150%'><feDropShadow dx='0' dy='16' stdDeviation='11' flood-color='#0f172a' flood-opacity='.12'/></filter>
+  </defs>
+  <rect width='1200' height='900' fill='#fffbeb'/>
+  <rect x='36' y='34' width='1128' height='832' rx='44' fill='white' stroke='#fde68a' stroke-width='3'/>
+  <rect x='70' y='68' width='1060' height='168' rx='36' fill='url(#hero)'/>
+  <text x='106' y='116' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#fde68a' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='106' y='174' font-family='Inter,Arial,sans-serif' font-size='52' font-weight='950' fill='white'>The AI Decision Trace Card</text>
+  <text x='106' y='214' font-family='Inter,Arial,sans-serif' font-size='19' fill='#ccfbf1'>A safe educational worksheet for recording why an AI-assisted business decision was made, which source supported it, and when a human owner must review it.</text>
+  <text x='80' y='270' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#0f172a'>Six trace checks before AI-assisted decisions become business actions</text>
+  
+    <g filter='url(#shadow)'>
+      <rect x='74' y='294' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='102' y='322' width='62' height='54' rx='18' fill='#fef3c7' stroke='#f59e0b'/>
+      <text x='133' y='357' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='950' fill='#92400e'>Name</text>
+      <text x='178' y='354' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Decision named</text>
+      <text x='106' y='412' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='106' dy='0'>Write the exact decision, draft,</tspan><tspan x='106' dy='22'>recommendation, or workflow change</tspan><tspan x='106' dy='22'>being considered.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='294' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='466' y='322' width='62' height='54' rx='18' fill='#fef3c7' stroke='#f59e0b'/>
+      <text x='497' y='357' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='950' fill='#92400e'>Src</text>
+      <text x='542' y='354' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Source evidence</text>
+      <text x='470' y='412' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='470' dy='0'>Attach the approved page, record,</tspan><tspan x='470' dy='22'>policy, data extract, or owner note</tspan><tspan x='470' dy='22'>the AI response relied on.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='802' y='294' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='830' y='322' width='62' height='54' rx='18' fill='#fef3c7' stroke='#f59e0b'/>
+      <text x='861' y='357' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='950' fill='#92400e'>Why</text>
+      <text x='906' y='354' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Reason captured</text>
+      <text x='834' y='412' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='834' dy='0'>Record the short reason the option</tspan><tspan x='834' dy='22'>was chosen, rejected, or sent back</tspan><tspan x='834' dy='22'>for more evidence.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='74' y='544' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='102' y='572' width='62' height='54' rx='18' fill='#fef3c7' stroke='#f59e0b'/>
+      <text x='133' y='607' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='950' fill='#92400e'>Risk</text>
+      <text x='178' y='604' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Risk label</text>
+      <text x='106' y='662' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='106' dy='0'>Mark brand, legal, privacy,</tspan><tspan x='106' dy='22'>security, pricing,</tspan><tspan x='106' dy='22'>customer-specific, payment, or</tspan><tspan x='106' dy='22'>operational risk before action.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='438' y='544' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='466' y='572' width='62' height='54' rx='18' fill='#fef3c7' stroke='#f59e0b'/>
+      <text x='497' y='607' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='950' fill='#92400e'>Own</text>
+      <text x='542' y='604' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Owner checkpoint</text>
+      <text x='470' y='662' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='470' dy='0'>Route sensitive, uncertain,</tspan><tspan x='470' dy='22'>external-facing, or</tspan><tspan x='470' dy='22'>commitment-making decisions to the</tspan><tspan x='470' dy='22'>accountable human owner.</tspan></text>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='802' y='544' width='320' height='206' rx='30' fill='white' stroke='#d7e3f4' stroke-width='2'/>
+      <rect x='830' y='572' width='62' height='54' rx='18' fill='#fef3c7' stroke='#f59e0b'/>
+      <text x='861' y='607' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='950' fill='#92400e'>Log</text>
+      <text x='906' y='604' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f172a'>Trace saved</text>
+      <text x='834' y='662' font-family='Inter,Arial,sans-serif' font-size='18' fill='#334155'><tspan x='834' dy='0'>Save prompt, source, AI draft,</tspan><tspan x='834' dy='22'>reviewer note, final decision, date,</tspan><tspan x='834' dy='22'>and correction trail together.</tspan></text>
+    </g>
+  <rect x='78' y='812' width='1044' height='36' rx='18' fill='#f8fafc' stroke='#cbd5e1'/>
+  <text x='600' y='836' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' fill='#64748b'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, decision-approval, or guaranteed-performance advice.</text>
+</svg>

@@ -17,5 +17,15 @@
     "csv": "https://aicloudstrategist.com/publications/2026-09-03/ai-procurement-answer-boundary-card.csv",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-03",
     "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, procurement-approval, or guaranteed-performance advice."
+  },
+  {
+    "slot": "evening",
+    "slug": "ai-decision-trace-card",
+    "title": "The AI Decision Trace Card",
+    "url": "https://aicloudstrategist.com/publications/2026-09-03/ai-decision-trace-card.html",
+    "png": "https://aicloudstrategist.com/publications/2026-09-03/ai-decision-trace-card.png",
+    "csv": "https://aicloudstrategist.com/publications/2026-09-03/ai-decision-trace-card.csv",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-03",
+    "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, decision-approval, or guaranteed-performance advice."
   }
 ]

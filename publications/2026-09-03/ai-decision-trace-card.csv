@@ -1,0 +1,4 @@
+decision_area,decision_example,evidence_required,risk_label,owner_checkpoint,safe_note
+External customer answer,"Send, edit, pause, or route a drafted answer",Approved source page or owner note,Brand / customer-specific / commercial,Account owner before commitments,"Do not invent claims, prices, results, or approvals"
+Operational automation,"Automate, partially automate, or keep manual review",Process owner note and sample edge cases,Operational / privacy / security,Process and data owner,Keep a human review path for uncertain cases
+Policy-sensitive draft,"Answer privacy, security, legal, or compliance-like questions",Current approved policy or adviser-reviewed text,Legal / privacy / security,Appropriate adviser or accountable owner,Educational workflow only; not adviser replacement

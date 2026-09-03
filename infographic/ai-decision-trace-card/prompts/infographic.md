@@ -1,0 +1,1 @@
+Create a clean warm corporate Memphis bento-grid infographic titled 'The AI Decision Trace Card' using six numbered decision-trace cards, amber/indigo/teal trust colors, rounded modular cards, clear hierarchy, and safe educational language. Aspect 4:3 worksheet.
