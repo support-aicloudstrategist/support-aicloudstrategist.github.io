@@ -1,30 +1,34 @@
 from pathlib import Path
+import json
 
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = ROOT / "index.html"
-PUBLICATION = ROOT / "publications" / "2026-09-02" / "ai-reply-triage-board.html"
-MANIFEST = ROOT / "publications" / "2026-09-02" / "manifest.json"
-PNG = ROOT / "publications" / "2026-09-02" / "ai-reply-triage-board.png"
+DATE = "2026-09-03"
+SLUG = "ai-source-evidence-card"
+TITLE = "The AI Source Evidence Card"
+PUBLICATION = ROOT / "publications" / DATE / f"{SLUG}.html"
+MANIFEST = ROOT / "publications" / DATE / "manifest.json"
+PNG = ROOT / "publications" / DATE / f"{SLUG}.png"
 
 
-def test_homepage_surfaces_latest_ai_reply_triage_board_publication():
+def test_homepage_surfaces_latest_ai_source_evidence_card_publication():
     home = HOME.read_text(encoding="utf-8")
     publication = PUBLICATION.read_text(encoding="utf-8")
 
-    href = "/publications/2026-09-02/ai-reply-triage-board.html"
+    href = f"/publications/{DATE}/{SLUG}.html"
     assert href in home
-    assert "The AI Reply Triage Board" in home
-    assert "<link rel='canonical' href='https://aicloudstrategist.com/publications/2026-09-02/ai-reply-triage-board.html'>" in publication
-    assert "ai reply triage board" in publication.lower()
+    assert TITLE in home
+    assert f"<link rel='canonical' href='https://aicloudstrategist.com/publications/{DATE}/{SLUG}.html'>" in publication
+    assert "ai source evidence card" in publication.lower()
     assert "not legal, compliance, medical, financial" in publication
 
 
-def test_evening_publication_has_infographic_and_two_daily_manifest_slots():
-    manifest = MANIFEST.read_text(encoding="utf-8")
-    assert '"slot": "morning"' in manifest
-    assert '"slot": "evening"' in manifest
-    assert "ai-task-intake-gate" in manifest
-    assert "ai-reply-triage-board" in manifest
+def test_morning_publication_has_infographic_and_manifest_evidence():
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    latest = [entry for entry in manifest if entry["slot"] == "morning" and entry["slug"] == SLUG]
+    assert latest
+    assert latest[0]["title"] == TITLE
+    assert latest[0]["url"] == f"https://aicloudstrategist.com/publications/{DATE}/{SLUG}.html"
     assert PNG.exists()
     assert PNG.stat().st_size > 1000
