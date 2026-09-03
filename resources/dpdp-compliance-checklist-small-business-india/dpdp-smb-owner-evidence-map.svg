@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic DPDP small business owner evidence map</title>
+  <desc id="desc">A demo-labelled map showing no-credentials evidence steps for Indian small businesses reviewing website forms, WhatsApp enquiries, CRM access, vendors, request handling and claim boundaries.</desc>
+  <rect width="1200" height="720" fill="#06131b"/>
+  <circle cx="1020" cy="90" r="180" fill="#58c8ff" opacity="0.13"/>
+  <circle cx="100" cy="660" r="220" fill="#25e6c8" opacity="0.10"/>
+  <text x="64" y="72" fill="#25e6c8" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">DEMO / SYNTHETIC OWNER MAP</text>
+  <text x="64" y="122" fill="#edf8ff" font-family="Arial, sans-serif" font-size="42" font-weight="800">DPDP readiness before WhatsApp, CRM or lead automation</text>
+  <text x="64" y="164" fill="#a8bdc9" font-family="Arial, sans-serif" font-size="22">No passwords, production exports, sensitive records or legal guarantees required for first review.</text>
+  <g font-family="Arial, sans-serif" font-size="18">
+    <rect x="64" y="220" width="320" height="130" rx="22" fill="#0b202b" stroke="#58c8ff" stroke-width="2"/>
+    <text x="92" y="262" fill="#edf8ff" font-size="24" font-weight="700">1. Data entry points</text>
+    <text x="92" y="298" fill="#a8bdc9">Website form fields · WhatsApp</text>
+    <text x="92" y="326" fill="#a8bdc9">calls · booking forms · campaigns</text>
+    <rect x="440" y="220" width="320" height="130" rx="22" fill="#0b202b" stroke="#ffd166" stroke-width="2"/>
+    <text x="468" y="262" fill="#edf8ff" font-size="24" font-weight="700">2. Purpose + consent</text>
+    <text x="468" y="298" fill="#a8bdc9">Why collected · message type</text>
+    <text x="468" y="326" fill="#a8bdc9">opt-out route · retention owner</text>
+    <rect x="816" y="220" width="320" height="130" rx="22" fill="#0b202b" stroke="#25e6c8" stroke-width="2"/>
+    <text x="844" y="262" fill="#edf8ff" font-size="24" font-weight="700">3. Access + vendors</text>
+    <text x="844" y="298" fill="#a8bdc9">CRM users · chatbot tools</text>
+    <text x="844" y="326" fill="#a8bdc9">agency accounts · analytics</text>
+    <rect x="64" y="420" width="320" height="130" rx="22" fill="#0b202b" stroke="#25e6c8" stroke-width="2"/>
+    <text x="92" y="462" fill="#edf8ff" font-size="24" font-weight="700">4. Request handling</text>
+    <text x="92" y="498" fill="#a8bdc9">Correction · deletion · complaint</text>
+    <text x="92" y="526" fill="#a8bdc9">support inbox and owner route</text>
+    <rect x="440" y="420" width="320" height="130" rx="22" fill="#0b202b" stroke="#58c8ff" stroke-width="2"/>
+    <text x="468" y="462" fill="#edf8ff" font-size="24" font-weight="700">5. Redacted evidence</text>
+    <text x="468" y="498" fill="#a8bdc9">Screenshots · field lists · policies</text>
+    <text x="468" y="526" fill="#a8bdc9">No secrets or sensitive exports</text>
+    <rect x="816" y="420" width="320" height="130" rx="22" fill="#0b202b" stroke="#ffd166" stroke-width="2"/>
+    <text x="844" y="462" fill="#edf8ff" font-size="24" font-weight="700">6. Claim boundary</text>
+    <text x="844" y="498" fill="#a8bdc9">Readiness evidence only</text>
+    <text x="844" y="526" fill="#a8bdc9">Not legal or compliance proof</text>
+  </g>
+  <path d="M384 285H440M760 285H816M224 350V420M600 350V420M976 350V420" stroke="#edf8ff" stroke-width="4" opacity="0.45" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#edf8ff" opacity="0.55"/></marker></defs>
+  <text x="64" y="640" fill="#ffd166" font-family="Arial, sans-serif" font-size="20" font-weight="700">Use this as a buyer-safe readiness worksheet before CRM, WhatsApp automation, chatbot, privacy consultant or agency spend.</text>
+  <text x="64" y="674" fill="#a8bdc9" font-family="Arial, sans-serif" font-size="16">No real client, customer data, certification, legal advice, ranking, demand, lead, revenue, savings or compliance-status claim.</text>
+</svg>
