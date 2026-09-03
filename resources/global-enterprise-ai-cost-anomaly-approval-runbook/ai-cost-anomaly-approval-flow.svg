@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI cost anomaly approval flow demo</title>
+  <desc id="desc">Synthetic AICloudStrategist visual showing how AI, LLM, GPU and cloud cost alerts move through evidence capture, owner mapping, production-risk review, CFO CTO approval and claim boundaries.</desc>
+  <rect width="1200" height="675" fill="#f8fbff"/>
+  <rect x="40" y="38" width="1120" height="599" rx="34" fill="#ffffff" stroke="#cfe0f2"/>
+  <text x="80" y="96" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#0f172a">AI cost anomaly approval flow</text>
+  <text x="80" y="129" font-family="Arial, sans-serif" font-size="16" fill="#475569">DEMO / SYNTHETIC · no customer bill · no production export · no savings, ROI, ranking or guarantee claim</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="185" width="190" height="126" rx="20" fill="#e0f2fe" stroke="#7dd3fc"/>
+    <text x="105" y="225" font-size="19" font-weight="800" fill="#075985">1. Alert</text>
+    <text x="105" y="257" font-size="15" fill="#334155">LLM spend spike</text>
+    <text x="105" y="281" font-size="15" fill="#334155">GPU waste</text>
+    <path d="M280 248 H342" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="352" y="185" width="190" height="126" rx="20" fill="#ecfdf5" stroke="#86efac"/>
+    <text x="377" y="225" font-size="19" font-weight="800" fill="#166534">2. Evidence</text>
+    <text x="377" y="257" font-size="15" fill="#334155">baseline + owner</text>
+    <text x="377" y="281" font-size="15" fill="#334155">redacted exports</text>
+    <path d="M552 248 H614" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="624" y="185" width="190" height="126" rx="20" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="649" y="225" font-size="19" font-weight="800" fill="#9a3412">3. Risk gate</text>
+    <text x="649" y="257" font-size="15" fill="#334155">quality / SLA</text>
+    <text x="649" y="281" font-size="15" fill="#334155">rollback / security</text>
+    <path d="M824 248 H886" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="896" y="185" width="190" height="126" rx="20" fill="#eef2ff" stroke="#c4b5fd"/>
+    <text x="921" y="225" font-size="19" font-weight="800" fill="#4338ca">4. Approval</text>
+    <text x="921" y="257" font-size="15" fill="#334155">CFO / CTO</text>
+    <text x="921" y="281" font-size="15" fill="#334155">decision record</text>
+    <rect x="116" y="386" width="968" height="128" rx="24" fill="#0f172a"/>
+    <text x="152" y="431" font-size="24" font-weight="800" fill="#ffffff">Public claim boundary</text>
+    <text x="152" y="467" font-size="17" fill="#dbeafe">Internal action may be approved after evidence; public savings, ROI, customer-result or ranking claims stay paused until verified and owner-approved.</text>
+    <text x="152" y="501" font-size="17" fill="#dbeafe">AICS uses this as a readiness/proof-of-method template — not customer proof.</text>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+</svg>
