@@ -1,0 +1,7 @@
+question_id,buyer_question,route,approved_source_type,owner_role,do_not_claim,example_safe_next_step
+Q1,Do you use AI in customer-facing workflows?,owner-needed,approved product/security statement,Product + Security,Do not claim no AI use if any AI-assisted workflow exists,Route to product owner and attach approved AI-use boundary
+Q2,Can customer data be used for model training?,adviser-needed,DPA/subprocessor/privacy policy,Privacy adviser + Security,Do not invent training-use or retention terms,Use approved privacy language only after adviser review
+Q3,Do you have SOC 2 or ISO 27001?,proof-needed,current audit/certificate or trust-centre link,Security owner,Do not imply certification without current evidence,Attach current public proof or mark not certified
+Q4,Can you sign our DPA/MSA security addendum?,adviser-needed,legal template or counsel-approved clause,Legal/privacy adviser,Do not accept legal terms inside an AI answer,Escalate for legal review
+Q5,What happens after an AI incident or unsafe answer?,proof-needed,incident-response runbook and human-review policy,Security + Operations,Do not guarantee no incidents or perfect AI accuracy,Provide runbook summary and owner escalation path
+Q6,Who approves stale questionnaire answers?,owner-needed,answer bank change log and review date,Revenue operations + Security,Do not reuse stale answers blindly,Update answer register and require owner approval
