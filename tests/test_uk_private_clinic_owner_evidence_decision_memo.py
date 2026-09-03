@@ -7,6 +7,7 @@ CSV = (ROOT / "resources" / SLUG / "uk-private-clinic-owner-evidence-decision-me
 RESOURCES = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
 LLMS = (ROOT / "llms.txt").read_text(encoding="utf-8")
 SITEMAP = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+COMPARISON = (ROOT / "resources" / "uk-private-clinic-ai-receptionist-vs-practice-management-patient-growthos-comparison" / "index.html").read_text(encoding="utf-8")
 
 
 def test_uk_private_clinic_owner_memo_is_indexable_and_buyer_safe():
@@ -30,6 +31,9 @@ def test_uk_private_clinic_owner_memo_csv_and_discovery_links_exist():
     href = f"/resources/{SLUG}/"
     csv_href = f"/resources/{SLUG}/uk-private-clinic-owner-evidence-decision-memo.csv"
     assert href in RESOURCES
+    assert href in COMPARISON
+    assert "Use the owner decision memo" in COMPARISON
+    assert "forwardable owner evidence decision memo" in COMPARISON
     assert "UK Private Clinic Owner Evidence Decision Memo" in RESOURCES
     assert f"https://aicloudstrategist.com{href}" in LLMS
     assert f"https://aicloudstrategist.com{csv_href}" in LLMS
