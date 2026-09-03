@@ -38,6 +38,14 @@ def test_ai_source_evidence_register_has_safe_operating_columns() -> None:
     assert any("Pause" in row["answer_boundary"] for row in rows)
 
 
+def test_ai_source_evidence_daily_index_links_card_and_register() -> None:
+    index = (ROOT / "publications" / "2026-09-03" / "index.html").read_text(encoding="utf-8")
+    assert "ai-source-evidence-card.html" in index
+    assert "ai-source-evidence-register-template.csv" in index
+    assert "downloadable owner-evidence templates" in index
+    assert "not legal, compliance, medical, financial, security" in index
+
+
 def test_ai_source_evidence_asset_is_discoverable_without_overclaiming() -> None:
     llms = LLMS.read_text(encoding="utf-8")
     sitemap = SITEMAP.read_text(encoding="utf-8")
