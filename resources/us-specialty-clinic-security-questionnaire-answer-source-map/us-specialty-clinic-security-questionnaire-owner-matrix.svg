@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo US specialty clinic security-questionnaire owner matrix</title>
+  <desc id="desc">Synthetic no-PHI visual showing how US specialty clinic questions move from buyer pain to allowed evidence, accountable owner, adviser gate, and blocked external claims.</desc>
+  <rect width="1180" height="760" fill="#f8fafc"/>
+  <rect x="36" y="34" width="1108" height="692" rx="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="70" y="84" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="800" fill="#0f172a">US specialty clinic answer-source owner matrix</text>
+  <text x="70" y="118" font-family="Inter,Arial,sans-serif" font-size="17" fill="#475569">Demo/synthetic · no PHI/ePHI · no HIPAA/SOC 2/HITRUST proof · no outcome or ranking claim</text>
+
+  <g font-family="Inter,Arial,sans-serif" font-size="15">
+    <rect x="70" y="155" width="180" height="54" rx="14" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="92" y="188" font-weight="700" fill="#0f172a">Buyer pain phrase</text>
+    <rect x="270" y="155" width="205" height="54" rx="14" fill="#e0f2fe" stroke="#7dd3fc"/>
+    <text x="292" y="188" font-weight="700" fill="#0f172a">Allowed evidence</text>
+    <rect x="495" y="155" width="175" height="54" rx="14" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="518" y="188" font-weight="700" fill="#0f172a">Owner approval</text>
+    <rect x="690" y="155" width="175" height="54" rx="14" fill="#fef9c3" stroke="#fde047"/>
+    <text x="717" y="188" font-weight="700" fill="#0f172a">Adviser gate</text>
+    <rect x="885" y="155" width="205" height="54" rx="14" fill="#fee2e2" stroke="#fca5a5"/>
+    <text x="914" y="188" font-weight="700" fill="#0f172a">Blocked claims</text>
+  </g>
+
+  <g stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M250 182h20"/><path d="M475 182h20"/><path d="M670 182h20"/><path d="M865 182h20"/>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+
+  <g font-family="Inter,Arial,sans-serif" font-size="14" fill="#0f172a">
+    <g transform="translate(70 242)">
+      <rect width="1020" height="82" rx="18" fill="#f8fafc" stroke="#dbe7f3"/>
+      <text x="20" y="29" font-weight="800">HIPAA AI receptionist vendor risk</text><text x="20" y="55" fill="#475569">PHI/ePHI intake boundary</text>
+      <text x="220" y="34">Policy titles, owner roles, redacted queue counts</text>
+      <text x="460" y="34">Privacy / security owner</text>
+      <text x="650" y="34">Privacy/legal adviser</text>
+      <text x="835" y="28" fill="#991b1b">No HIPAA proof</text><text x="835" y="53" fill="#991b1b">No BAA or advice claim</text>
+    </g>
+    <g transform="translate(70 344)">
+      <rect width="1020" height="82" rx="18" fill="#f8fafc" stroke="#dbe7f3"/>
+      <text x="20" y="29" font-weight="800">Prior authorization workflow automation</text><text x="20" y="55" fill="#475569">Blocker owner and aging bucket</text>
+      <text x="220" y="34">Synthetic blocker label, payer category, owner role</text>
+      <text x="460" y="34">Billing / payer ops</text>
+      <text x="650" y="34">Billing/payer adviser</text>
+      <text x="835" y="28" fill="#991b1b">No speed/revenue proof</text><text x="835" y="53" fill="#991b1b">No payer approval claim</text>
+    </g>
+    <g transform="translate(70 446)">
+      <rect width="1020" height="82" rx="18" fill="#f8fafc" stroke="#dbe7f3"/>
+      <text x="20" y="29" font-weight="800">Security questionnaire answer source</text><text x="20" y="55" fill="#475569">Trust / GRC / deal-desk answers</text>
+      <text x="220" y="34">Question, allowed source, expiry date, stale flag</text>
+      <text x="460" y="34">Security / compliance owner</text>
+      <text x="650" y="34">Security adviser</text>
+      <text x="835" y="28" fill="#991b1b">No SOC 2/HITRUST</text><text x="835" y="53" fill="#991b1b">No certification claim</text>
+    </g>
+    <g transform="translate(70 548)">
+      <rect width="1020" height="82" rx="18" fill="#f8fafc" stroke="#dbe7f3"/>
+      <text x="20" y="29" font-weight="800">Cloud LLM FinOps healthcare SaaS</text><text x="20" y="55" fill="#475569">Model/vendor dependency and review cadence</text>
+      <text x="220" y="34">Synthetic workflow cost category and finance owner</text>
+      <text x="460" y="34">Finance / cloud owner</text>
+      <text x="650" y="34">FinOps adviser optional</text>
+      <text x="835" y="28" fill="#991b1b">No savings or ROI</text><text x="835" y="53" fill="#991b1b">No cloud-bill proof</text>
+    </g>
+  </g>
+
+  <rect x="70" y="660" width="1020" height="38" rx="14" fill="#0f172a"/>
+  <text x="95" y="685" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff">AICS credibility gap: publish owner-evidence rooms buyers can inspect before credentials, PHI/ePHI, platform spend, or external claims.</text>
+</svg>

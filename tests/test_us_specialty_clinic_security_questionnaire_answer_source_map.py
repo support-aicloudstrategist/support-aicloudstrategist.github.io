@@ -9,7 +9,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-specialty-clinic-security-questionnaire-answer-source-map"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV_PATH = ROOT / "resources" / SLUG / "us-specialty-clinic-security-questionnaire-answer-source-map.csv"
+SVG_PATH = ROOT / "resources" / SLUG / "us-specialty-clinic-security-questionnaire-owner-matrix.svg"
 CSV_URL = f"https://aicloudstrategist.com/resources/{SLUG}/us-specialty-clinic-security-questionnaire-answer-source-map.csv"
+SVG_URL = f"https://aicloudstrategist.com/resources/{SLUG}/us-specialty-clinic-security-questionnaire-owner-matrix.svg"
 PAGE_URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -25,7 +27,7 @@ def json_ld_blocks() -> list[dict]:
 def test_page_has_buyer_language_competitors_and_boundaries() -> None:
     html = source()
     assert "US specialty clinic security-questionnaire answer-source map" in html
-    assert "North America / US Pacific entering business hours" in html
+    assert "North America / US Eastern entering business hours" in html
     assert "HIPAA AI receptionist vendor risk" in html
     assert "prior authorization workflow automation" in html
     assert "referral leakage owner queue" in html
@@ -77,11 +79,32 @@ def test_csv_is_synthetic_no_phi_owner_map() -> None:
     assert "private soc 2 reports" in blocked
 
 
+def test_svg_demo_owner_matrix_is_public_and_boundary_safe() -> None:
+    html = source()
+    svg = SVG_PATH.read_text(encoding="utf-8")
+    assert SVG_URL in json.dumps(json_ld_blocks())
+    assert "us-specialty-clinic-security-questionnaire-owner-matrix.svg" in html
+    assert "Demo/synthetic owner matrix" in html
+    for marker in [
+        "Demo US specialty clinic security-questionnaire owner matrix",
+        "HIPAA AI receptionist vendor risk",
+        "Prior authorization workflow automation",
+        "Security questionnaire answer source",
+        "Cloud LLM FinOps healthcare SaaS",
+        "No HIPAA proof",
+        "No SOC 2/HITRUST",
+        "No savings or ROI",
+    ]:
+        assert marker in svg
+    assert "no PHI/ePHI" in svg
+
+
 def test_llms_resources_and_sitemap_discoverability() -> None:
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     sitemap_script = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert PAGE_URL in llms
     assert CSV_URL in llms
+    assert SVG_URL in llms
     assert "/resources/us-specialty-clinic-security-questionnaire-answer-source-map/" in resources
     assert "/resources/us-specialty-clinic-security-questionnaire-answer-source-map/" in sitemap_script
