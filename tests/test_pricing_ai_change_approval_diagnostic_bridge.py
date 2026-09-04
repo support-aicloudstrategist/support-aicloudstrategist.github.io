@@ -17,7 +17,7 @@ def test_pricing_surfaces_ai_change_approval_as_sellable_diagnostic_bridge():
     html = PRICING.read_text(encoding="utf-8")
     section = html.split('id="fixed-scope-diagnostics"', 1)[1].split('class="section pricing-showcase"', 1)[0]
 
-    assert "Twenty-three concrete first offers" in section
+    assert "Twenty-four concrete first offers" in section
     assert 'data-revenue-bridge="ai-change-approval-readiness-diagnostic"' in section
     assert "AI change approval readiness diagnostic" in section
     assert PUBLICATION_PATH in section
@@ -28,10 +28,13 @@ def test_pricing_surfaces_ai_change_approval_as_sellable_diagnostic_bridge():
 def test_pricing_json_ld_lists_ai_change_approval_offer_with_boundaries():
     html = PRICING.read_text(encoding="utf-8")
     item_list = next(block for block in _json_ld_blocks(html) if block.get("@id") == "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics")
-    ai_change_offer = item_list["itemListElement"][-1]
+    ai_change_offer = next(
+        entry for entry in item_list["itemListElement"]
+        if entry["item"]["name"] == "AI change approval readiness diagnostic"
+    )
     description = ai_change_offer["item"]["offers"]["priceSpecification"]["description"]
 
-    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 23
+    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 24
     assert ai_change_offer["position"] == 23
     assert ai_change_offer["url"] == PUBLICATION_URL
     assert ai_change_offer["item"]["name"] == "AI change approval readiness diagnostic"
