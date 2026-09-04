@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo cloud cost tool shortlist owner board</title>
+  <desc id="desc">Synthetic decision board showing how North America cloud cost buyers can separate native tools, FinOps platforms, consultants and AICS owner-evidence diagnostics before sharing credentials.</desc>
+  <rect width="1200" height="720" fill="#061223"/>
+  <text x="60" y="72" fill="#f8fbff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Cloud cost optimization tool shortlist — owner evidence board</text>
+  <text x="60" y="108" fill="#9fd7ff" font-family="Inter, Arial, sans-serif" font-size="18">Demo / synthetic artifact · no real cloud account, bill, client, ranking, savings or ROI claim</text>
+  <g transform="translate(60 155)">
+    <rect width="250" height="410" rx="22" fill="#0d2742" stroke="#52c3ff"/>
+    <text x="24" y="48" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">1. Source truth</text>
+    <text x="24" y="92" fill="#d7ecff" font-family="Inter, Arial, sans-serif" font-size="17">AWS / Azure / GCP</text>
+    <text x="24" y="124" fill="#d7ecff" font-family="Inter, Arial, sans-serif" font-size="17">Kubernetes</text>
+    <text x="24" y="156" fill="#d7ecff" font-family="Inter, Arial, sans-serif" font-size="17">LLM + GPU vendors</text>
+    <text x="24" y="220" fill="#8fb5ca" font-family="Inter, Arial, sans-serif" font-size="15">Evidence needed:</text>
+    <text x="24" y="250" fill="#cfeeff" font-family="Inter, Arial, sans-serif" font-size="15">redacted exports, screenshots,</text>
+    <text x="24" y="274" fill="#cfeeff" font-family="Inter, Arial, sans-serif" font-size="15">tag samples, invoice categories</text>
+  </g>
+  <g transform="translate(345 155)">
+    <rect width="250" height="410" rx="22" fill="#10233c" stroke="#7ee787"/>
+    <text x="24" y="48" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">2. Tool fit</text>
+    <text x="24" y="92" fill="#dfffe7" font-family="Inter, Arial, sans-serif" font-size="17">Native dashboards</text>
+    <text x="24" y="124" fill="#dfffe7" font-family="Inter, Arial, sans-serif" font-size="17">FinOps platforms</text>
+    <text x="24" y="156" fill="#dfffe7" font-family="Inter, Arial, sans-serif" font-size="17">Consultant review</text>
+    <text x="24" y="220" fill="#a9d9b4" font-family="Inter, Arial, sans-serif" font-size="15">Decision needed:</text>
+    <text x="24" y="250" fill="#dfffe7" font-family="Inter, Arial, sans-serif" font-size="15">single-cloud vs multi-cloud,</text>
+    <text x="24" y="274" fill="#dfffe7" font-family="Inter, Arial, sans-serif" font-size="15">workflow, forecast, unit metrics</text>
+  </g>
+  <g transform="translate(630 155)">
+    <rect width="250" height="410" rx="22" fill="#201b34" stroke="#ffce6a"/>
+    <text x="24" y="48" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">3. Owner gate</text>
+    <text x="24" y="92" fill="#fff0c2" font-family="Inter, Arial, sans-serif" font-size="17">Finance owner</text>
+    <text x="24" y="124" fill="#fff0c2" font-family="Inter, Arial, sans-serif" font-size="17">Engineering owner</text>
+    <text x="24" y="156" fill="#fff0c2" font-family="Inter, Arial, sans-serif" font-size="17">Product / workload owner</text>
+    <text x="24" y="220" fill="#d7bd70" font-family="Inter, Arial, sans-serif" font-size="15">Stop if missing:</text>
+    <text x="24" y="250" fill="#fff0c2" font-family="Inter, Arial, sans-serif" font-size="15">rollback, reliability note,</text>
+    <text x="24" y="274" fill="#fff0c2" font-family="Inter, Arial, sans-serif" font-size="15">approval or measurement plan</text>
+  </g>
+  <g transform="translate(915 155)">
+    <rect width="225" height="410" rx="22" fill="#2b1630" stroke="#ff8bd1"/>
+    <text x="24" y="48" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">4. AICS role</text>
+    <text x="24" y="92" fill="#ffe0f4" font-family="Inter, Arial, sans-serif" font-size="17">No-credentials</text>
+    <text x="24" y="124" fill="#ffe0f4" font-family="Inter, Arial, sans-serif" font-size="17">evidence map</text>
+    <text x="24" y="156" fill="#ffe0f4" font-family="Inter, Arial, sans-serif" font-size="17">shortlist memo</text>
+    <text x="24" y="220" fill="#d7a4ca" font-family="Inter, Arial, sans-serif" font-size="15">Boundary:</text>
+    <text x="24" y="250" fill="#ffe0f4" font-family="Inter, Arial, sans-serif" font-size="15">not a platform, auditor,</text>
+    <text x="24" y="274" fill="#ffe0f4" font-family="Inter, Arial, sans-serif" font-size="15">law firm or savings guarantee</text>
+  </g>
+  <text x="60" y="640" fill="#b7cce1" font-family="Inter, Arial, sans-serif" font-size="18">Use before sharing credentials, buying another FinOps tool, changing commitments, or claiming savings.</text>
+</svg>
