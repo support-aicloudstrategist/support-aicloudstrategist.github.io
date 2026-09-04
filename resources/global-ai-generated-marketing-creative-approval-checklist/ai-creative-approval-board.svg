@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Demo AI creative approval board</title>
+<desc id="desc">Demo-labelled no customer data board for approving AI-generated marketing creative before publication.</desc>
+<rect width="1200" height="675" fill="#08111f"/>
+<rect x="42" y="42" width="1116" height="591" rx="32" fill="#0f1f36" stroke="#77d7ff" stroke-width="3"/>
+<text x="84" y="106" fill="#ffffff" font-family="Arial, sans-serif" font-size="38" font-weight="700">Demo AI creative approval board</text>
+<text x="84" y="146" fill="#b9d7e8" font-family="Arial, sans-serif" font-size="20">No customer data · no ad-account data · no performance claim · human approval before publish</text>
+<g font-family="Arial, sans-serif" font-size="20">
+  <rect x="84" y="200" width="168" height="110" rx="18" fill="#12395c" stroke="#77d7ff"/>
+  <text x="112" y="242" fill="#ffffff" font-weight="700">1 Brand</text><text x="112" y="274" fill="#b9d7e8">Tone + offer fit</text>
+  <rect x="276" y="200" width="168" height="110" rx="18" fill="#12395c" stroke="#77d7ff"/>
+  <text x="304" y="242" fill="#ffffff" font-weight="700">2 Claims</text><text x="304" y="274" fill="#b9d7e8">Evidence or remove</text>
+  <rect x="468" y="200" width="168" height="110" rx="18" fill="#12395c" stroke="#77d7ff"/>
+  <text x="496" y="242" fill="#ffffff" font-weight="700">3 Data</text><text x="496" y="274" fill="#b9d7e8">No sensitive inputs</text>
+  <rect x="660" y="200" width="168" height="110" rx="18" fill="#12395c" stroke="#77d7ff"/>
+  <text x="688" y="242" fill="#ffffff" font-weight="700">4 Rights</text><text x="688" y="274" fill="#b9d7e8">Sources recorded</text>
+  <rect x="852" y="200" width="168" height="110" rx="18" fill="#12395c" stroke="#77d7ff"/>
+  <text x="880" y="242" fill="#ffffff" font-weight="700">5 Channel</text><text x="880" y="274" fill="#b9d7e8">Policy + format</text>
+</g>
+<path d="M252 255h24M444 255h24M636 255h24M828 255h24" stroke="#77d7ff" stroke-width="5" stroke-linecap="round"/>
+<rect x="170" y="382" width="860" height="138" rx="24" fill="#102943" stroke="#c4ff77" stroke-width="3"/>
+<text x="220" y="435" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">Human approval gate</text>
+<text x="220" y="476" fill="#cfe8f3" font-family="Arial, sans-serif" font-size="22">Owner · reviewer · final file/URL · approval date · rollback note</text>
+<text x="220" y="512" fill="#c4ff77" font-family="Arial, sans-serif" font-size="20">Safe only after claim, brand, data, rights and channel checks are recorded.</text>
+<text x="84" y="594" fill="#b9d7e8" font-family="Arial, sans-serif" font-size="18">AICloudStrategist synthetic buyer-education visual — not a real campaign result, legal clearance, platform approval or ROI claim.</text>
+</svg>
