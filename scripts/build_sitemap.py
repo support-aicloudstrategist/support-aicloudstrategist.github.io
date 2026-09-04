@@ -121,6 +121,7 @@ CURATED_PATHS = [
     "/resources/north-america-healthtech-ai-human-review-escalation-policy-template/",
     "/resources/north-america-healthtech-ai-trust-first-review-executive-summary/",
     "/resources/us-healthtech-hipaa-ai-procurement-evidence-source-map/",
+    "/resources/us-healthtech-prior-auth-denial-ai-human-review-checklist/",
     "/resources/us-medical-billing-denial-follow-up-owner-evidence-checklist/",
     "/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/",
     "/resources/us-medical-group-referral-prior-auth-owner-handoff-faq/",

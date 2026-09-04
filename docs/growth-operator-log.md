@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 US healthtech prior-auth + denial AI human-review checklist
+
+- Decision: improve North America / US Healthcare GrowthOS top-3/top-5 consideration during US business-morning entry by filling a high-intent buyer-language gap around prior authorization delay, denial follow-up, AI appeal drafting, HIPAA-style vendor-risk evidence, patient-access owner queues and cloud/LLM cost ownership.
+- Created: `/resources/us-healthtech-prior-auth-denial-ai-human-review-checklist/` with Article/Dataset/FAQ/Breadcrumb structured data and a downloadable synthetic no-PHI CSV checklist.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, and regenerated `sitemap.xml`.
+- Research performed: selected North America / US because the run landed at 10:37 UTC / 06:37 US Eastern; automated source checks returned HTTP 200 for ONC health IT privacy/security resources, Phreesia, Luma Health, Vanta healthcare and CloudZero FinOps pages; HHS HIPAA Security Rule and Artera pages returned HTTP 403, while two sampled CMS prior-authorization/appeals URL guesses returned HTTP 404 and were disclosed as such.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 461 indexable sitemap URLs`; focused pytest returned `5 passed in 0.07s`; `git diff --check` passed; marker checks confirmed page, CSV, resources hub, `llms.txt` and sitemap references.
+- Proof boundary: synthetic buyer-education checklist only; no real US healthtech, medical group, clinic, hospital, RCM, payer, patient-engagement, EHR, GRC, FinOps or AI vendor client; no PHI/ePHI, claims data, payer data, patient data, customer data, production data, testimonial, certification, HIPAA/SOC 2/HITRUST proof, legal/privacy/security/medical/billing/coding/payer advice, denial-reduction, recovered revenue, savings, ROI, ranking, demand, lead, customer or revenue claim was made. No outreach.
+
 ## 2026-09-04 AI agent access review pricing bridge
 
 - Decision: reduce enterprise AI revenue friction by converting the existing AI agent access review evidence checklist into a visible fixed-scope diagnostic path on `/pricing`.
