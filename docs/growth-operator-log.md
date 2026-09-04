@@ -7,7 +7,7 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
 - Decision: reduce European healthtech trust-to-revenue friction by turning the NIS2 cloud incident/supplier evidence checklist into a visible fixed-scope diagnostic path on `/pricing`.
 - Updated: `/pricing.html` fixed-scope diagnostics now lists 27 concrete first offers and adds a Europe healthtech NIS2 incident supplier evidence bridge linked to the public checklist, CSV template and fit-check route.
 - Added: `tests/test_pricing_europe_healthtech_nis2_revenue_bridge.py`; refreshed recent pricing-count regressions for the verified 27-offer menu.
-- Verification performed: focused pytest returned `13 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, the NIS2 checklist and CSV markers.
+- Verification performed: focused pytest returned `13 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, the NIS2 checklist and CSV markers; public HTTP checks returned 200 for pricing, checklist and CSV markers on deployment attempt 2.
 - Proof boundary: no credentials, patient data, personal data, health data, production logs, supplier portal access, legal/privacy/security/audit/clinical advice, compliance proof, savings, revenue, ROI, ranking, demand, lead, customer or outcome claim was made.
 
 ## 2026-09-04 US healthtech prior-auth + denial AI human-review checklist
