@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 India clinic ad-conversion revenue bridge
+
+- Decision: reduce India clinic patient-growth conversion friction by turning the newest Google Ads not converting appointment evidence checklist into a visible fixed-scope diagnostic path on `/pricing` and `/free-business-review/`.
+- Updated: `/pricing.html` fixed-scope diagnostics now lists 28 concrete first offers and adds an India clinic ad-to-appointment conversion bridge linked to the public checklist, synthetic CSV and fit-check route.
+- Updated: `/free-business-review/` and `/free-business-review.html` now route India clinic ad buyers to the ad-to-appointment checklist and diagnostic bridge.
+- Added: `tests/test_india_clinic_google_ads_revenue_bridge.py`; refreshed recent pricing-count regressions for the verified 28-offer menu.
+- Verification performed: focused pytest returned `20 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, both free-review paths, checklist and CSV markers; public HTTP checks returned 200 for pricing, both free-review paths, checklist and CSV markers on deployment attempt 3.
+- Proof boundary: no clinic client, patient data, health data, ad-account access, marketplace export, credentials, production access, DPDP compliance proof, legal/privacy/medical/advertising advice, ranking, demand, lead, appointment, revenue, savings, ROI or ad-performance claim was made.
+
 ## 2026-09-04 Europe healthtech NIS2 revenue bridge
 
 - Decision: reduce European healthtech trust-to-revenue friction by turning the NIS2 cloud incident/supplier evidence checklist into a visible fixed-scope diagnostic path on `/pricing`.
