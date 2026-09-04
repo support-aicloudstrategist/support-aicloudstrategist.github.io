@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 AI change approval pricing diagnostic bridge
+
+- Decision: reduce enterprise AI trust-to-revenue friction by turning the public AI Change Approval Card from a discovery asset into a visible fixed-scope diagnostic entry path on `/pricing`.
+- Updated: `/pricing` fixed-scope diagnostics now lists 23 concrete first offers and adds an AI change approval readiness diagnostic with links to the approval card, owner-action CSV and fit-check route.
+- Added: `tests/test_pricing_ai_change_approval_diagnostic_bridge.py` to assert the pricing bridge, structured-data offer and claim boundaries.
+- Verification performed: focused pytest returned `6 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, approval-card HTML and CSV markers.
+- Proof boundary: no credentials, production access, customer data, policy changes, legal/compliance/security advice, approval guarantee, revenue, savings, ROI, ranking, customer result, testimonial or platform-partnership claim was made.
+
 ## 2026-09-04 Cloud FinOps service revenue bridge
 
 - Decision: reduce Cloud & AI FinOps conversion friction by connecting the commercial `/services/cloud-finops/` page directly to two public, no-credentials diagnostic entry paths for Azure bill surprises and enterprise AI cost anomalies.

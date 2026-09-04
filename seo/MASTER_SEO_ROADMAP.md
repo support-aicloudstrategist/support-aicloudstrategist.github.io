@@ -141,6 +141,13 @@ Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit
 - Verification: focused pytest for publication discovery/homepage/resources passed; local HTTP checks returned 200 for homepage, resources, publication and CSV markers; `git diff --check` passed.
 - Proof boundary: educational/internal worksheet only; no customer result, legal/compliance/security/medical/financial advice, approval guarantee, revenue, savings, ranking, testimonial, certification or platform partnership.
 
+## 2026-09-04 update — AI change approval pricing diagnostic bridge
+- Converted the AI Change Approval Card into a visible `/pricing` fixed-scope diagnostic entry, increasing the structured-data diagnostic list from 22 to 23 offers.
+- Added direct pricing links to the approval-card page, owner-action CSV and `/free-business-review/` fit-check route with source attribution.
+- Added regression coverage for the pricing bridge, JSON-LD offer count and claim-safe scope boundaries.
+- Verification: focused pytest returned `6 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, approval-card HTML and CSV markers.
+- Proof boundary: no credentials, production access, customer data, policy changes, legal/compliance/security advice, approval guarantee, revenue, savings, ROI, ranking, customer result, testimonial or platform partnership.
+
 ## 2026-08-31 update — India ophthalmology Patient GrowthOS comparison
 - Created `/resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/` to target ophthalmology clinic software, eye-clinic EMR, optical POS/workflow, WhatsApp CRM, AI receptionist and Patient GrowthOS comparison searches.
 - Added downloadable comparison CSV, resources-hub card, `llms.txt` discovery route, curated sitemap entry and regression coverage.
