@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 B2B SaaS onboarding-delay homepage proof bridge
+
+- Decision: reduce signed-customer onboarding-delay discovery friction by moving the B2B SaaS owner-dashboard checklist from pricing/resource-only visibility onto the homepage evidence rail.
+- Updated: `/` homepage evidence grid now links to `/resources/global-b2b-saas-customer-onboarding-implementation-delay-checklist/` with buyer-safe wording for sales-to-CS handoff, kickoff, data migration, integration, security-review and customer-action blockers before more CS platform or AI follow-up spend.
+- Added: `tests/test_homepage_b2b_saas_onboarding_delay_link.py` to assert homepage visibility and proof/claim boundaries on the linked asset.
+- Verification performed: focused pytest returned `4 passed`; `git diff --check` passed; local HTTP checks returned 200 for homepage, resource and dashboard SVG markers.
+- Proof boundary: no SaaS client, customer data, CRM/customer-success export, credential, production access, onboarding-speed, retention, churn, revenue, ROI, customer-satisfaction, ranking, testimonial or platform-partnership claim was made.
+
 ## 2026-09-04 AI change approval pricing diagnostic bridge
 
 - Decision: reduce enterprise AI trust-to-revenue friction by turning the public AI Change Approval Card from a discovery asset into a visible fixed-scope diagnostic entry path on `/pricing`.
