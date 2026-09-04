@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 Europe healthtech NIS2 incident/supplier evidence checklist
+
+- Decision: improve European healthtech Cloud Trust top-3/top-5 consideration by filling a NIS2-era buyer-language gap around cloud incident evidence, supplier-risk questionnaires, GDPR/DPIA source maps and AI/cloud FinOps incident ownership.
+- Created: `/resources/europe-healthtech-nis2-cloud-incident-supplier-evidence-checklist/` with Article/Dataset/FAQ/Breadcrumb structured data and a downloadable synthetic CSV checklist.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, and regenerated `sitemap.xml`.
+- Research performed: selected Europe / UK-EU because it was entering business hours; automated source checks returned HTTP 200 for the European Commission NIS2 Directive page, ICO AI guidance, FinOps Foundation Framework and OneTrust third-party-risk-management page; a sampled ENISA NIS Directive URL returned HTTP 404 and was disclosed as such.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 459 indexable sitemap URLs`; focused pytest returned `5 passed in 0.07s`.
+- Proof boundary: synthetic buyer-education checklist only; no real European healthtech client, patient, personal data, health data, production data, customer data, NIS2/GDPR/ISO/SOC2/NHS DSPT/DTAC compliance proof, legal/privacy/security/audit/procurement/clinical/medical advice, incident-reporting advice, root-cause analysis, savings, ROI, revenue, ranking, demand, lead, customer, testimonial, certification or platform-partnership claim was made. No outreach.
+
 ## 2026-09-04 AI change approval free-review route
 
 - Decision: close the revenue-path gap where the AI Change Approval Card had a pricing fit-check CTA but no matching route in the Free Business Growth Review menu.

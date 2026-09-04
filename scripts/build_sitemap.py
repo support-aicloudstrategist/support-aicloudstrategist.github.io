@@ -159,6 +159,7 @@ CURATED_PATHS = [
     "/resources/europe-healthtech-ai-trust-questionnaire-answer-bank-template/",
     "/resources/europe-healthtech-procurement-response-readiness-checklist/",
     "/resources/europe-healthtech-cloud-trust-review-vs-finops-grc-tools-comparison/",
+    "/resources/europe-healthtech-nis2-cloud-incident-supplier-evidence-checklist/",
     "/resources/india-clinic-lab-dpdp-whatsapp-followup-evidence-checklist/",
     "/resources/india-cardiology-tmt-echo-followup-dpdp-checklist/",
     "/resources/india-cardiology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/",
