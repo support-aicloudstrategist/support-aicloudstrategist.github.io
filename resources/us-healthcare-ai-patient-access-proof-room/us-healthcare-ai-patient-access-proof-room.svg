@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Demo US healthcare AI patient access proof room owner board</title>
+<desc id="desc">Synthetic owner board for patient access leakage, prior authorization, AI receptionist boundaries, HIPAA evidence, Cloud Trust and FinOps. No PHI, no credentials, no customer result.</desc>
+<rect width="1200" height="760" fill="#06111f"/>
+<text x="56" y="70" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">US Healthcare AI Patient Access Proof Room</text>
+<text x="56" y="105" fill="#9fd8e6" font-family="Arial, sans-serif" font-size="18">Demo/synthetic owner board · No PHI/ePHI · no credentials · not compliance proof · not a customer result</text>
+<g font-family="Arial, sans-serif">
+<rect x="56" y="145" width="330" height="170" rx="22" fill="#0d2036" stroke="#55d6be" stroke-opacity=".55"/>
+<text x="82" y="185" fill="#ffffff" font-size="23" font-weight="700">Patient access leakage</text>
+<text x="82" y="222" fill="#c8e8ef" font-size="17">Synthetic queue rows</text>
+<text x="82" y="252" fill="#c8e8ef" font-size="17">Missed calls · forms · chats</text>
+<text x="82" y="282" fill="#ffcf73" font-size="17">Owner: operations</text>
+<rect x="435" y="145" width="330" height="170" rx="22" fill="#0d2036" stroke="#55d6be" stroke-opacity=".55"/>
+<text x="461" y="185" fill="#ffffff" font-size="23" font-weight="700">Referral + prior auth</text>
+<text x="461" y="222" fill="#c8e8ef" font-size="17">Status visibility only</text>
+<text x="461" y="252" fill="#c8e8ef" font-size="17">Human payer judgement lane</text>
+<text x="461" y="282" fill="#ffcf73" font-size="17">Owner: billing / RCM</text>
+<rect x="814" y="145" width="330" height="170" rx="22" fill="#0d2036" stroke="#55d6be" stroke-opacity=".55"/>
+<text x="840" y="185" fill="#ffffff" font-size="23" font-weight="700">AI receptionist boundary</text>
+<text x="840" y="222" fill="#c8e8ef" font-size="17">Admin-safe capture</text>
+<text x="840" y="252" fill="#c8e8ef" font-size="17">Clinical/urgent escalation</text>
+<text x="840" y="282" fill="#ffcf73" font-size="17">Owner: practice manager</text>
+<rect x="56" y="355" width="330" height="170" rx="22" fill="#0d2036" stroke="#55d6be" stroke-opacity=".55"/>
+<text x="82" y="395" fill="#ffffff" font-size="23" font-weight="700">HIPAA evidence boundary</text>
+<text x="82" y="432" fill="#c8e8ef" font-size="17">BAA · subprocessors · logs</text>
+<text x="82" y="462" fill="#c8e8ef" font-size="17">Qualified adviser needed</text>
+<text x="82" y="492" fill="#ffcf73" font-size="17">Owner: privacy/security</text>
+<rect x="435" y="355" width="330" height="170" rx="22" fill="#0d2036" stroke="#55d6be" stroke-opacity=".55"/>
+<text x="461" y="395" fill="#ffffff" font-size="23" font-weight="700">Cloud + AI spend</text>
+<text x="461" y="432" fill="#c8e8ef" font-size="17">SMS · voice · hosting · LLM</text>
+<text x="461" y="462" fill="#c8e8ef" font-size="17">Owner allocation before claims</text>
+<text x="461" y="492" fill="#ffcf73" font-size="17">Owner: CFO / CTO</text>
+<rect x="814" y="355" width="330" height="170" rx="22" fill="#0d2036" stroke="#55d6be" stroke-opacity=".55"/>
+<text x="840" y="395" fill="#ffffff" font-size="23" font-weight="700">Top-3 consideration wedge</text>
+<text x="840" y="432" fill="#c8e8ef" font-size="17">Proof room beside vendors</text>
+<text x="840" y="462" fill="#c8e8ef" font-size="17">Fix · buy · automate · escalate</text>
+<text x="840" y="492" fill="#ffcf73" font-size="17">Owner: executive sponsor</text>
+<rect x="56" y="575" width="1088" height="92" rx="22" fill="#102a45" stroke="#ffcf73" stroke-opacity=".55"/>
+<text x="82" y="614" fill="#ffffff" font-size="22" font-weight="700">Blocked unsafe claims</text>
+<text x="82" y="648" fill="#eaf6fb" font-size="17">No HIPAA/SOC 2/HITRUST proof · no patient data · no appointment growth · no denial reduction · no savings · no ROI · no ranking or customer evidence</text>
+<text x="56" y="720" fill="#7fb9c9" font-size="15">Synthetic values for demonstration only; not a real medical group, patient, payer, cloud, certification, testimonial, revenue, ranking or compliance artifact.</text>
+</g></svg>
