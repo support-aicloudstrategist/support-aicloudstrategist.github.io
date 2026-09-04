@@ -127,6 +127,13 @@ Completed milestones:
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
 
+## 2026-09-04 update — AI change approval publication discovery bridge
+- Promoted `/publications/2026-09-04/ai-change-approval-card.html` from publication-only visibility into the homepage evidence grid, `/resources/` featured card and `llms.txt` answer-engine routes.
+- Improved the downloadable AI change approval CSV into a richer owner-action worksheet covering approval-required triggers, human owner, evidence-needed, rollback-note and safe-to-proceed boundaries.
+- Added regression coverage for homepage visibility, resources-hub feature status, `llms.txt`, sitemap inclusion, CSV evidence and claim-safe boundaries.
+- Verification: focused pytest for publication discovery/homepage/resources passed; local HTTP checks returned 200 for homepage, resources, publication and CSV markers; `git diff --check` passed.
+- Proof boundary: educational/internal worksheet only; no customer result, legal/compliance/security/medical/financial advice, approval guarantee, revenue, savings, ranking, testimonial, certification or platform partnership.
+
 ## 2026-08-31 update — India ophthalmology Patient GrowthOS comparison
 - Created `/resources/india-ophthalmology-patient-growthos-vs-clinic-software-whatsapp-crm-ai-receptionist-comparison/` to target ophthalmology clinic software, eye-clinic EMR, optical POS/workflow, WhatsApp CRM, AI receptionist and Patient GrowthOS comparison searches.
 - Added downloadable comparison CSV, resources-hub card, `llms.txt` discovery route, curated sitemap entry and regression coverage.

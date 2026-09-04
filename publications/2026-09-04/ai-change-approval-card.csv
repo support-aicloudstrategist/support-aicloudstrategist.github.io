@@ -1,7 +1,8 @@
-Check,Question,Safe owner action
-Customer impact?,Does it change what a buyer patient lead user or partner sees?,Pause for named-owner review before execution
-Money impact?,Does it affect pricing refunds spend billing budgets or commitments?,Pause for named-owner review before execution
-Access impact?,Does it touch credentials permissions integrations exports or private data?,Pause for named-owner review before execution
-Policy impact?,Does it interpret compliance security medical legal or HR rules?,Pause for named-owner review before execution
-Live-system impact?,Does it modify production workflows automations routing or dashboards?,Pause for named-owner review before execution
-Evidence saved?,Are source prompt draft reviewer approval note final action and rollback recorded?,Save evidence before execution
+check,question,approval_required,human_owner,evidence_needed,rollback_note,safe_to_proceed_without_approval
+customer_impact,Does it change what a buyer patient lead user or partner sees?,yes,Named business owner,"Before/after copy or workflow screenshot; source instruction; reviewer approval note",Record how to reverse or correct the visible change,no
+money_impact,Does it affect pricing refunds spend billing budgets or commitments?,yes,Commercial or finance owner,"Proposed amount; approval note; budget or quote reference; final action log",Record refund reversal spend cap or quote correction path,no
+access_impact,Does it touch credentials permissions integrations exports or private data?,yes,System or data owner,"Access scope; data category; approver; expiration or revocation date",Record permission rollback and export deletion path,no
+policy_impact,Does it interpret compliance security medical legal HR or procurement rules?,yes,Policy owner or qualified adviser route,"Source policy; AI draft; human/adviser review note; approved wording",Record who can withdraw or correct the policy interpretation,no
+live_system_impact,Does it modify production workflows automations routing or dashboards?,yes,Operations owner,"Change description; test evidence; rollout window; monitoring owner",Record stop switch previous version and alert owner,no
+evidence_saved,Are source prompt draft reviewer approval note final action and rollback recorded?,required,Change owner,"Source prompt draft review approval final action timestamp",Do not execute until evidence packet is saved,no
+low_risk_draft_only,Is it a private draft that does not touch customers money access policy data or live systems?,no,Draft requester,"Draft purpose and confirmation that it remains internal",Discard draft if scope changes,yes

@@ -2,6 +2,16 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 AI change approval discoverability bridge
+
+- Decision: improve credibility and answer-engine discoverability for the new AI Change Approval Card by moving it from publication-only visibility into homepage evidence, the resources hub and `llms.txt`.
+- Updated: homepage evidence grid now surfaces `/publications/2026-09-04/ai-change-approval-card.html` as the latest public educational asset.
+- Updated: `/resources/` featured-publication card now points to the AI Change Approval Card, its CSV and infographic.
+- Improved: `publications/2026-09-04/ai-change-approval-card.csv` from a simple three-column checklist into a richer owner-action worksheet with approval-required triggers, human owner, evidence-needed, rollback-note and safe-to-proceed boundaries.
+- Added: `tests/test_ai_change_approval_publication_discovery.py` and refreshed `tests/test_homepage_latest_publication_link.py` for the 2026-09-04 asset.
+- Verification performed: focused pytest and local HTTP checks passed after the update; `git diff --check` passed.
+- Proof boundary: educational/internal worksheet only; no client, customer result, compliance/legal/security/medical/financial advice, approval guarantee, revenue, savings, ROI, ranking, testimonial, certification or platform-partnership claim was made.
+
 ## 2026-09-03 UK AI automation page clinic memo bridge
 
 - Decision: reduce UK-market conversion friction by connecting the commercial `/ai-automation-agency-uk/` page directly to the newest private-clinic owner decision memo, not only the comparison asset.
