@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 AI change approval free-review route
+
+- Decision: close the revenue-path gap where the AI Change Approval Card had a pricing fit-check CTA but no matching route in the Free Business Growth Review menu.
+- Updated: `/free-business-review/` and `/free-business-review.html` now surface `ai-change-approval-readiness-diagnostic` with approval-card, owner-action CSV and pricing bridge links.
+- Added: `tests/test_free_review_ai_change_approval_route.py` and repaired the pricing bridge regression to match the verified 24-offer menu.
+- Verification performed: focused pytest returned `8 passed`; `git diff --check` passed; local HTTP checks returned 200 for both free-review paths and pricing markers; public checks returned 200 for both free-review paths and pricing markers after deployment.
+- Proof boundary: no credentials, production access, customer data, policy-change execution, legal/compliance/security advice, approval guarantee, revenue, savings, ROI, ranking, customer-result, testimonial or platform-partnership claim was made.
+
 ## 2026-09-04 B2B SaaS onboarding-delay homepage proof bridge
 
 - Decision: reduce signed-customer onboarding-delay discovery friction by moving the B2B SaaS owner-dashboard checklist from pricing/resource-only visibility onto the homepage evidence rail.
