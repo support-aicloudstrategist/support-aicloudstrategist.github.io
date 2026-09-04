@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Demo Google Cloud Owner Action Board</title>
+  <desc id="desc">Synthetic no-credentials board for Google Cloud high bill owner review, rollback gates and savings claim boundaries.</desc>
+  <rect width="1200" height="760" fill="#06111f"/>
+  <text x="60" y="70" fill="#ffffff" font-family="Arial, sans-serif" font-size="38" font-weight="700">Google Cloud bill too high: owner action board</text>
+  <text x="60" y="112" fill="#93c5fd" font-family="Arial, sans-serif" font-size="22">Demo-labelled · no credentials · synthetic rows only</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="160" width="245" height="140" rx="18" fill="#0f766e"/>
+    <text x="88" y="205" fill="#fff" font-size="24" font-weight="700">Owner gap</text>
+    <text x="88" y="242" fill="#d1fae5" font-size="18">Billing account, folder,</text>
+    <text x="88" y="270" fill="#d1fae5" font-size="18">project and label owner</text>
+    <rect x="335" y="160" width="245" height="140" rx="18" fill="#1d4ed8"/>
+    <text x="363" y="205" fill="#fff" font-size="24" font-weight="700">Likely source</text>
+    <text x="363" y="242" fill="#dbeafe" font-size="18">BigQuery, GKE, Cloud Run,</text>
+    <text x="363" y="270" fill="#dbeafe" font-size="18">logging, Vertex AI/API</text>
+    <rect x="610" y="160" width="245" height="140" rx="18" fill="#a16207"/>
+    <text x="638" y="205" fill="#fff" font-size="24" font-weight="700">Safe action</text>
+    <text x="638" y="242" fill="#fef3c7" font-size="18">Review redacted evidence</text>
+    <text x="638" y="270" fill="#fef3c7" font-size="18">before production change</text>
+    <rect x="885" y="160" width="245" height="140" rx="18" fill="#be123c"/>
+    <text x="913" y="205" fill="#fff" font-size="24" font-weight="700">Claim stop</text>
+    <text x="913" y="242" fill="#ffe4e6" font-size="18">No savings, ROI, ranking</text>
+    <text x="913" y="270" fill="#ffe4e6" font-size="18">or demand claim</text>
+    <rect x="60" y="350" width="1070" height="260" rx="24" fill="#0b1730" stroke="#334155"/>
+    <text x="95" y="405" fill="#ffffff" font-size="27" font-weight="700">No-credentials first review lanes</text>
+    <text x="95" y="455" fill="#bfdbfe" font-size="21">1. Masked Cloud Billing screenshots and service-family totals</text>
+    <text x="95" y="495" fill="#bfdbfe" font-size="21">2. Project / label coverage, budget alerts and owner notes</text>
+    <text x="95" y="535" fill="#bfdbfe" font-size="21">3. Hold queue for backups, security logs, retention and customer-facing workloads</text>
+    <text x="95" y="575" fill="#bfdbfe" font-size="21">4. Post-action billing windows before any savings or runway statement</text>
+    <text x="60" y="685" fill="#e5e7eb" font-size="20">Boundary: synthetic visual only — not a real Google Cloud account, invoice, export, customer case study, certification, Google partnership, savings or ROI proof.</text>
+  </g>
+</svg>
