@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo SaaS onboarding delay owner dashboard</title>
+  <desc id="desc">Synthetic, no-customer-data dashboard showing SaaS onboarding blocker ownership, customer action required, human-review route and claim boundaries.</desc>
+  <rect width="1200" height="720" fill="#06111f"/>
+  <rect x="48" y="44" width="1104" height="632" rx="32" fill="#f8fbff"/>
+  <text x="88" y="102" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#102033">Demo SaaS onboarding delay owner dashboard</text>
+  <text x="88" y="139" font-family="Inter, Arial, sans-serif" font-size="18" fill="#526477">Synthetic · no customer data · no implementation-speed or revenue claim</text>
+  <g transform="translate(88 178)">
+    <rect width="244" height="128" rx="20" fill="#e8f2ff" stroke="#8dbdf4"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102033">1. Handoff</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">Sales promise mapped</text>
+    <text x="24" y="101" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">to CS + implementation owner</text>
+  </g>
+  <g transform="translate(362 178)">
+    <rect width="244" height="128" rx="20" fill="#fff4db" stroke="#f0bd46"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102033">2. Blocker</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">Access, data, integration,</text>
+    <text x="24" y="101" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">security or customer action</text>
+  </g>
+  <g transform="translate(636 178)">
+    <rect width="244" height="128" rx="20" fill="#e9fbef" stroke="#7cd99c"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102033">3. Review gate</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">Human review before scope,</text>
+    <text x="24" y="101" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">privacy or go-live claims</text>
+  </g>
+  <g transform="translate(910 178)">
+    <rect width="194" height="128" rx="20" fill="#f1eaff" stroke="#b49af5"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102033">4. Owner board</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">Aging, next date,</text>
+    <text x="24" y="101" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">exec visibility</text>
+  </g>
+  <g stroke="#8aa1b6" stroke-width="5" stroke-linecap="round"><path d="M333 242h26"/><path d="M607 242h26"/><path d="M881 242h26"/></g>
+  <g transform="translate(88 360)">
+    <rect width="1016" height="220" rx="22" fill="#ffffff" stroke="#d7e1ea"/>
+    <text x="28" y="44" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#102033">Example board rows to build before automation</text>
+    <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">
+      <text x="28" y="88">• ACCT-001: delayed kickoff — owner missing — next action: assign CS owner — review: low risk</text>
+      <text x="28" y="123">• ACCT-002: data migration export blocked — customer admin action — review: privacy/security owner</text>
+      <text x="28" y="158">• ACCT-003: integration scope unclear — sales promise source needed — review: commercial owner</text>
+      <text x="28" y="193">• ACCT-004: go-live date requested — no unchecked automation — review: implementation lead</text>
+    </g>
+  </g>
+  <rect x="88" y="610" width="1016" height="36" rx="18" fill="#102033"/>
+  <text x="112" y="634" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">AICS readiness artifact: not a real customer dashboard, not a testimonial, not retention/revenue/onboarding-speed proof.</text>
+</svg>
