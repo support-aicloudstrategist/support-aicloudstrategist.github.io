@@ -17,7 +17,7 @@ def test_pricing_surfaces_ai_change_approval_as_sellable_diagnostic_bridge():
     html = PRICING.read_text(encoding="utf-8")
     section = html.split('id="fixed-scope-diagnostics"', 1)[1].split('class="section pricing-showcase"', 1)[0]
 
-    assert "Twenty-six concrete first offers" in section
+    assert "Twenty-seven concrete first offers" in section
     assert 'data-revenue-bridge="ai-change-approval-readiness-diagnostic"' in section
     assert "AI change approval readiness diagnostic" in section
     assert PUBLICATION_PATH in section
@@ -34,7 +34,7 @@ def test_pricing_json_ld_lists_ai_change_approval_offer_with_boundaries():
     )
     description = ai_change_offer["item"]["offers"]["priceSpecification"]["description"]
 
-    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 26
+    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 27
     assert ai_change_offer["url"] == PUBLICATION_URL
     assert ai_change_offer["item"]["name"] == "AI change approval readiness diagnostic"
     for boundary in [
