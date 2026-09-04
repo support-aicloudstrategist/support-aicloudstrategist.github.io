@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Canada clinic missed-call owner evidence board demo</title>
+  <desc id="desc">Synthetic dashboard showing no-patient-data queues for missed calls, appointment follow-up, consent questions and human escalation.</desc>
+  <rect width="1200" height="760" rx="34" fill="#06111f"/>
+  <rect x="44" y="42" width="1112" height="676" rx="28" fill="#f8fbff"/>
+  <text x="86" y="104" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800" fill="#0b1b32">Canada clinic missed-call owner evidence board</text>
+  <text x="86" y="138" font-family="Inter,Arial,sans-serif" font-size="17" fill="#496178">Demo / synthetic only · no patient names · no phone numbers · no PHI · not PHIPA/PIPEDA advice</text>
+  <g transform="translate(86 178)">
+    <rect width="310" height="132" rx="20" fill="#e9f7ff" stroke="#b9e5ff"/>
+    <text x="24" y="38" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#073b5b">Missed-call capture</text>
+    <text x="24" y="72" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="800" fill="#0b6b9c">12</text>
+    <text x="82" y="72" font-family="Inter,Arial,sans-serif" font-size="15" fill="#496178">unresolved count bands</text>
+    <text x="24" y="104" font-family="Inter,Arial,sans-serif" font-size="14" fill="#496178">Source, location, age band, owner</text>
+  </g>
+  <g transform="translate(445 178)">
+    <rect width="310" height="132" rx="20" fill="#fff3e4" stroke="#ffd59a"/>
+    <text x="24" y="38" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#5d3600">Callback SLA ageing</text>
+    <text x="24" y="72" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="800" fill="#b56600">4</text>
+    <text x="80" y="72" font-family="Inter,Arial,sans-serif" font-size="15" fill="#72573a">same-day owner reviews</text>
+    <text x="24" y="104" font-family="Inter,Arial,sans-serif" font-size="14" fill="#72573a">No names, recordings or clinical notes</text>
+  </g>
+  <g transform="translate(804 178)">
+    <rect width="310" height="132" rx="20" fill="#eefbea" stroke="#c7efbf"/>
+    <text x="24" y="38" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#235423">Booked / confirmed gate</text>
+    <text x="24" y="72" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="800" fill="#27823a">7</text>
+    <text x="80" y="72" font-family="Inter,Arial,sans-serif" font-size="15" fill="#496178">needs safe handoff</text>
+    <text x="24" y="104" font-family="Inter,Arial,sans-serif" font-size="14" fill="#496178">Requested → booked → confirmed</text>
+  </g>
+  <g transform="translate(86 356)">
+    <rect width="1028" height="270" rx="24" fill="#ffffff" stroke="#d8e5ef"/>
+    <text x="28" y="46" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="800" fill="#0b1b32">Owner queue map before AI receptionist, answering service, CRM or more ads</text>
+    <line x1="28" y1="78" x2="1000" y2="78" stroke="#d8e5ef"/>
+    <text x="34" y="116" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#0b1b32">Evidence lane</text>
+    <text x="314" y="116" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#0b1b32">Safe owner fields</text>
+    <text x="690" y="116" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#0b1b32">Human / adviser gate</text>
+    <g font-family="Inter,Arial,sans-serif" font-size="15" fill="#2d4057">
+      <text x="34" y="158">Missed call + voicemail</text><text x="314" y="158">source, age band, owner, status</text><text x="690" y="158">urgent / complaint / clinical issue → staff</text>
+      <text x="34" y="200">Form + WhatsApp handoff</text><text x="314" y="200">channel, service line, callback due band</text><text x="690" y="200">consent or PHIPA/PIPEDA question → adviser</text>
+      <text x="34" y="242">No-show + reminder</text><text x="314" y="242">reminder status, wait-list action, unresolved reason</text><text x="690" y="242">no outcome or patient-growth claim</text>
+    </g>
+  </g>
+  <text x="86" y="680" font-family="Inter,Arial,sans-serif" font-size="17" fill="#496178">AICS role: evidence-first leakage map and owner dashboard around existing clinic systems; not a replacement claim.</text>
+</svg>
