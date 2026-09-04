@@ -1,0 +1,6 @@
+row_type,request_source,dispatch_owner,technician_status,parts_or_access_blocker,customer_update_status,quote_follow_up_status,next_owner_action,stop_before_automation_gate,proof_boundary
+synthetic_example,missed_phone_call,service_coordinator,unassigned,unknown,last_update_missing,not_quoted,call back and classify request,safety-critical job details need human review,no real customer or phone data
+synthetic_example,website_form,dispatcher,assigned_for_tomorrow,part_availability_pending,confirmation_sent,quote_not_needed,confirm part ETA before visit,warranty/payment decision needs manager approval,no real address or appointment data
+synthetic_example,whatsapp_message,operations_owner,blocked_customer_unavailable,site_access_missing,reschedule_needed,estimate_pending,offer two callback slots,complaint or cancellation needs human owner,no real WhatsApp export
+synthetic_example,marketplace_lead,sales_owner,inspection_completed,no_blocker,job_done_quote_pending,quote_overdue,send approved estimate or close reason,pricing promise must be approved before send,no real marketplace lead data
+synthetic_example,contract_maintenance_queue,account_owner,en_route,access_window_at_risk,customer_updated,follow_up_after_service,escalate if arrival misses SLA,contract/SLA claim requires source document,no real contract or SLA data

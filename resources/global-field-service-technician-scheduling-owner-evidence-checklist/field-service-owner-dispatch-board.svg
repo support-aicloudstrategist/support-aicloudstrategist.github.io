@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Synthetic field service owner dispatch board</title>
+<desc id="desc">Demo board for field service request source, dispatch owner, technician status, blocker, customer update, quote follow-up and escalation gates.</desc>
+<rect width="1200" height="760" fill="#06111f"/>
+<text x="60" y="78" fill="#ffffff" font-family="Arial, sans-serif" font-size="38" font-weight="700">Field service owner dispatch board</text>
+<text x="60" y="118" fill="#a9c6df" font-family="Arial, sans-serif" font-size="20">Synthetic readiness view — no customer names, phone numbers, GPS records, addresses, invoices or CRM/FSM exports.</text>
+<g font-family="Arial, sans-serif">
+<rect x="60" y="160" width="220" height="120" rx="18" fill="#0f2742" stroke="#2f82ff"/>
+<text x="82" y="198" fill="#ffffff" font-size="22" font-weight="700">1. Request source</text>
+<text x="82" y="232" fill="#cfe7ff" font-size="17">Call / WhatsApp / form</text>
+<text x="82" y="258" fill="#cfe7ff" font-size="17">Marketplace / contract desk</text>
+<rect x="330" y="160" width="220" height="120" rx="18" fill="#102d24" stroke="#31c48d"/>
+<text x="352" y="198" fill="#ffffff" font-size="22" font-weight="700">2. Dispatch owner</text>
+<text x="352" y="232" fill="#d8fff0" font-size="17">Named human owner</text>
+<text x="352" y="258" fill="#d8fff0" font-size="17">Not a group-chat row</text>
+<rect x="600" y="160" width="220" height="120" rx="18" fill="#33214b" stroke="#a78bfa"/>
+<text x="622" y="198" fill="#ffffff" font-size="22" font-weight="700">3. Technician</text>
+<text x="622" y="232" fill="#eadcff" font-size="17">Assigned / en route</text>
+<text x="622" y="258" fill="#eadcff" font-size="17">Blocked / completed</text>
+<rect x="870" y="160" width="270" height="120" rx="18" fill="#3b2410" stroke="#f59e0b"/>
+<text x="892" y="198" fill="#ffffff" font-size="22" font-weight="700">4. Parts/access blocker</text>
+<text x="892" y="232" fill="#ffe6bd" font-size="17">Part, warranty, access</text>
+<text x="892" y="258" fill="#ffe6bd" font-size="17">payment or safety gate</text>
+<path d="M280 220H330" stroke="#88bff8" stroke-width="5" marker-end="url(#arrow)"/><path d="M550 220H600" stroke="#88bff8" stroke-width="5" marker-end="url(#arrow)"/><path d="M820 220H870" stroke="#88bff8" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="130" y="360" width="270" height="130" rx="18" fill="#10263b" stroke="#38bdf8"/>
+<text x="154" y="400" fill="#ffffff" font-size="22" font-weight="700">5. Customer update</text>
+<text x="154" y="436" fill="#d8f3ff" font-size="17">Last update sent?</text>
+<text x="154" y="462" fill="#d8f3ff" font-size="17">Next callback owner?</text>
+<rect x="465" y="360" width="270" height="130" rx="18" fill="#3b1025" stroke="#fb7185"/>
+<text x="489" y="400" fill="#ffffff" font-size="22" font-weight="700">6. Quote follow-up</text>
+<text x="489" y="436" fill="#ffe0e8" font-size="17">Estimate pending</text>
+<text x="489" y="462" fill="#ffe0e8" font-size="17">Approved / abandoned</text>
+<rect x="800" y="360" width="270" height="130" rx="18" fill="#172033" stroke="#fde047"/>
+<text x="824" y="400" fill="#ffffff" font-size="22" font-weight="700">7. Stop gate</text>
+<text x="824" y="436" fill="#fff6bf" font-size="17">Safety, payment, complaint,</text>
+<text x="824" y="462" fill="#fff6bf" font-size="17">contract or risky claim</text>
+<path d="M400 425H465" stroke="#88bff8" stroke-width="5" marker-end="url(#arrow)"/><path d="M735 425H800" stroke="#88bff8" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="60" y="590" width="1080" height="90" rx="18" fill="#091a2e" stroke="#24415f"/>
+<text x="90" y="630" fill="#ffffff" font-size="24" font-weight="700">AICS evidence-first route</text>
+<text x="90" y="662" fill="#bdd7ee" font-size="18">Build owner visibility before CRM/FSM replacement, call-centre expansion, WhatsApp automation or AI scheduling. Readiness only — no utilisation, revenue, savings or SLA claim.</text>
+</g>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#88bff8"/></marker></defs>
+</svg>
