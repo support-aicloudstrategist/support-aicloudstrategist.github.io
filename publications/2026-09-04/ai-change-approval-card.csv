@@ -1,0 +1,7 @@
+Check,Question,Safe owner action
+Customer impact?,Does it change what a buyer patient lead user or partner sees?,Pause for named-owner review before execution
+Money impact?,Does it affect pricing refunds spend billing budgets or commitments?,Pause for named-owner review before execution
+Access impact?,Does it touch credentials permissions integrations exports or private data?,Pause for named-owner review before execution
+Policy impact?,Does it interpret compliance security medical legal or HR rules?,Pause for named-owner review before execution
+Live-system impact?,Does it modify production workflows automations routing or dashboards?,Pause for named-owner review before execution
+Evidence saved?,Are source prompt draft reviewer approval note final action and rollback recorded?,Save evidence before execution

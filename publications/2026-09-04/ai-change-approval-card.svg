@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">The AI Change Approval Card</title>
+  <desc id="desc">Infographic-style checklist for deciding when an AI-suggested change needs human approval before it affects customers, money, credentials, policy, or live systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ecfeff"/><stop offset="0.55" stop-color="#eff6ff"/><stop offset="1" stop-color="#fefce8"/></linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#075985"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="42" y="38" width="1116" height="599" rx="34" fill="#ffffff" stroke="#bae6fd" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="74" y="70" width="1052" height="146" rx="28" fill="url(#hero)"/>
+  <text x="106" y="112" font-family="Inter, Segoe UI, Arial" font-size="18" font-weight="800" fill="#a7f3d0" letter-spacing="3">AI OPERATIONS · HUMAN APPROVAL</text>
+  <text x="106" y="162" font-family="Inter, Segoe UI, Arial" font-size="45" font-weight="900" fill="#ffffff">The AI Change Approval Card</text>
+  <text x="106" y="195" font-family="Inter, Segoe UI, Arial" font-size="22" fill="#dff7ff">Before an AI-suggested change goes live, check the boundary it touches.</text>
+
+  <g font-family="Inter, Segoe UI, Arial">
+    <rect x="82" y="252" width="320" height="116" rx="22" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+    <circle cx="122" cy="292" r="22" fill="#16a34a"/><text x="113" y="300" font-size="24" font-weight="900" fill="#fff">1</text>
+    <text x="158" y="286" font-size="24" font-weight="900" fill="#14532d">Customer impact?</text>
+    <text x="158" y="318" font-size="18" fill="#166534">Does it change what a buyer, patient,</text>
+    <text x="158" y="343" font-size="18" fill="#166534">lead, user, or partner sees?</text>
+
+    <rect x="440" y="252" width="320" height="116" rx="22" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="480" cy="292" r="22" fill="#2563eb"/><text x="470" y="300" font-size="24" font-weight="900" fill="#fff">2</text>
+    <text x="516" y="286" font-size="24" font-weight="900" fill="#1e3a8a">Money impact?</text>
+    <text x="516" y="318" font-size="18" fill="#1d4ed8">Does it affect pricing, refunds, spend,</text>
+    <text x="516" y="343" font-size="18" fill="#1d4ed8">billing, budgets, or commitments?</text>
+
+    <rect x="798" y="252" width="320" height="116" rx="22" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <circle cx="838" cy="292" r="22" fill="#ea580c"/><text x="828" y="300" font-size="24" font-weight="900" fill="#fff">3</text>
+    <text x="874" y="286" font-size="24" font-weight="900" fill="#7c2d12">Access impact?</text>
+    <text x="874" y="318" font-size="18" fill="#9a3412">Does it touch credentials, permissions,</text>
+    <text x="874" y="343" font-size="18" fill="#9a3412">integrations, exports, or private data?</text>
+
+    <rect x="82" y="404" width="320" height="116" rx="22" fill="#fdf2f8" stroke="#f9a8d4" stroke-width="2"/>
+    <circle cx="122" cy="444" r="22" fill="#db2777"/><text x="112" y="452" font-size="24" font-weight="900" fill="#fff">4</text>
+    <text x="158" y="438" font-size="24" font-weight="900" fill="#831843">Policy impact?</text>
+    <text x="158" y="470" font-size="18" fill="#9d174d">Does it interpret compliance, security,</text>
+    <text x="158" y="495" font-size="18" fill="#9d174d">medical, legal, or HR rules?</text>
+
+    <rect x="440" y="404" width="320" height="116" rx="22" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+    <circle cx="480" cy="444" r="22" fill="#7c3aed"/><text x="470" y="452" font-size="24" font-weight="900" fill="#fff">5</text>
+    <text x="516" y="438" font-size="24" font-weight="900" fill="#4c1d95">Live-system impact?</text>
+    <text x="516" y="470" font-size="18" fill="#5b21b6">Does it modify production workflows,</text>
+    <text x="516" y="495" font-size="18" fill="#5b21b6">automations, routing, or dashboards?</text>
+
+    <rect x="798" y="404" width="320" height="116" rx="22" fill="#fefce8" stroke="#fde047" stroke-width="2"/>
+    <circle cx="838" cy="444" r="22" fill="#ca8a04"/><text x="828" y="452" font-size="24" font-weight="900" fill="#fff">6</text>
+    <text x="874" y="438" font-size="24" font-weight="900" fill="#713f12">Evidence saved?</text>
+    <text x="874" y="470" font-size="18" fill="#854d0e">Keep source, prompt, draft, reviewer,</text>
+    <text x="874" y="495" font-size="18" fill="#854d0e">approval note, final action, and rollback.</text>
+  </g>
+
+  <rect x="96" y="558" width="1008" height="46" rx="23" fill="#0f172a"/>
+  <text x="122" y="588" font-family="Inter, Segoe UI, Arial" font-size="20" font-weight="800" fill="#e0f2fe">Rule of thumb:</text>
+  <text x="270" y="588" font-family="Inter, Segoe UI, Arial" font-size="20" fill="#ffffff">If any box is YES or UNCLEAR, pause for named-owner review before execution.</text>
+  <text x="96" y="626" font-family="Inter, Segoe UI, Arial" font-size="15" fill="#475569">Educational operations guide only — not legal, compliance, medical, financial, security, or guaranteed-performance advice.</text>
+</svg>
