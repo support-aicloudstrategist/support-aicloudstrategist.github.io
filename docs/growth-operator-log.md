@@ -7,7 +7,7 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
 - Decision: reduce enterprise AI revenue friction by converting the existing AI agent access review evidence checklist into a visible fixed-scope diagnostic path on `/pricing`.
 - Updated: `/pricing.html` fixed-scope diagnostics now lists 26 concrete first offers and adds an AI agent access review evidence diagnostic bridge linked to the public checklist, CSV template and fit-check route.
 - Added: `tests/test_pricing_ai_agent_access_review_bridge.py`; refreshed recent pricing-count regressions for the verified 26-offer menu.
-- Verification performed: focused pytest returned `11 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, the access-review checklist and CSV markers.
+- Verification performed: focused pytest returned `11 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, the access-review checklist and CSV markers; public HTTP checks returned 200 for all three markers on deployment attempt 2.
 - Proof boundary: no credentials, secrets, customer data, regulated data, production access, production logs, permission changes, security/legal/privacy/compliance advice, risk-reduction guarantee, revenue, savings, ROI, ranking or customer-result claim was made.
 
 ## 2026-09-04 UK care-home family-enquiry revenue bridge
