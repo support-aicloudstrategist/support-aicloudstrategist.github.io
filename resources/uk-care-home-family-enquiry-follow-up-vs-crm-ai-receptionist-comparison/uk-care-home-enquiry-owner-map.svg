@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Demo UK care home family enquiry owner map</title>
+<desc id="desc">Demo-labelled no-resident-data owner map for missed care-home family enquiries before CRM, answering-service or AI receptionist spend.</desc>
+<rect width="1200" height="675" fill="#08111f"/>
+<rect x="40" y="38" width="1120" height="599" rx="28" fill="#f8fafc"/>
+<text x="80" y="92" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800" fill="#0f172a">UK Care Home Family Enquiry Owner Map</text>
+<text x="80" y="125" font-family="Inter,Arial,sans-serif" font-size="16" fill="#475569">Demo-labelled · no resident/family data · No resident data · readiness before CRM, answering-service, ads or AI receptionist spend</text>
+<g font-family="Inter,Arial,sans-serif">
+  <rect x="80" y="170" width="220" height="105" rx="18" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="105" y="205" font-size="18" font-weight="700" fill="#1e3a8a">1. Source</text>
+  <text x="105" y="233" font-size="14" fill="#1e40af">GBP call · website form</text>
+  <text x="105" y="255" font-size="14" fill="#1e40af">referral · family email</text>
+  <path d="M300 222 H370" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="370" y="170" width="220" height="105" rx="18" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="395" y="205" font-size="18" font-weight="700" fill="#14532d">2. Context</text>
+  <text x="395" y="233" font-size="14" fill="#166534">care type · funding</text>
+  <text x="395" y="255" font-size="14" fill="#166534">tour stage · urgency</text>
+  <path d="M590 222 H660" stroke="#16a34a" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="660" y="170" width="220" height="105" rx="18" fill="#fef3c7" stroke="#d97706"/>
+  <text x="685" y="205" font-size="18" font-weight="700" fill="#78350f">3. Owner</text>
+  <text x="685" y="233" font-size="14" fill="#92400e">reception · manager</text>
+  <text x="685" y="255" font-size="14" fill="#92400e">finance · clinical lead</text>
+  <path d="M880 222 H950" stroke="#d97706" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="950" y="170" width="170" height="105" rx="18" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="975" y="205" font-size="18" font-weight="700" fill="#7f1d1d">4. Stop rules</text>
+  <text x="975" y="233" font-size="14" fill="#991b1b">safeguarding · care</text>
+  <text x="975" y="255" font-size="14" fill="#991b1b">capacity · legal</text>
+
+  <rect x="80" y="340" width="1040" height="190" rx="24" fill="#0f172a"/>
+  <text x="115" y="385" font-size="22" font-weight="800" fill="#f8fafc">Weekly owner dashboard rows</text>
+  <text x="115" y="430" font-size="17" fill="#dbeafe">• Missed calls and voicemails by source and age</text>
+  <text x="115" y="462" font-size="17" fill="#dbeafe">• Family enquiries with no same-day response evidence</text>
+  <text x="115" y="494" font-size="17" fill="#dbeafe">• Tours offered but not booked / not attended</text>
+  <text x="620" y="430" font-size="17" fill="#dbeafe">• Hospital or social-care referrals awaiting review</text>
+  <text x="620" y="462" font-size="17" fill="#dbeafe">• Funding / capacity / complaint questions needing humans</text>
+  <text x="620" y="494" font-size="17" fill="#dbeafe">• Closure reason before claims or automation</text>
+  <rect x="80" y="560" width="1040" height="44" rx="14" fill="#e0f2fe"/>
+  <text x="110" y="588" font-size="16" font-weight="700" fill="#075985">Boundary: no occupancy, admissions, response-time, CQC, revenue, ROI, No savings or AI-accuracy claims until real scoped evidence exists.</text>
+</g>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker></defs>
+</svg>

@@ -95,6 +95,7 @@ CURATED_PATHS = [
     "/resources/global-construction-contractor-quote-change-order-follow-up-checklist/",
     "/resources/global-manufacturing-production-follow-up-excel-evidence-checklist/",
     "/resources/global-home-care-referral-intake-caregiver-scheduling-evidence-checklist/",
+    "/resources/uk-care-home-family-enquiry-follow-up-vs-crm-ai-receptionist-comparison/",
     "/resources/uk-care-home-family-enquiry-follow-up-evidence-checklist/",
     "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
     "/resources/uae-healthtech-cloud-trust-patient-data-evidence-source-map/",
