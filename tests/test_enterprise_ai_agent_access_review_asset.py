@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-enterprise-ai-agent-access-review-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "ai-agent-access-review-evidence-template.csv"
+SVG = ROOT / "resources" / SLUG / "ai-agent-access-review-owner-board.svg"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -82,3 +83,23 @@ def test_downloadable_access_review_csv_template_is_available_and_buyer_safe():
     assert "Synthetic row only" in csv
     for forbidden in ["real client", "customer proof", "guaranteed", "certified", "increased revenue"]:
         assert forbidden not in csv.lower()
+
+
+def test_access_review_owner_board_svg_is_linked_and_claim_safe():
+    html = PAGE.read_text(encoding="utf-8")
+    svg_link = f"/resources/{SLUG}/ai-agent-access-review-owner-board.svg"
+    assert svg_link in html
+    assert f"https://aicloudstrategist.com{svg_link}" in html
+    assert SVG.is_file()
+    svg = SVG.read_text(encoding="utf-8")
+    for phrase in [
+        "AI agent access review owner board",
+        "Business owner",
+        "Tool permission",
+        "Retrieval boundary",
+        "Human review",
+        "Monitoring evidence needed",
+        "Revocation triggers",
+        "No claim of risk reduction, compliance, savings, revenue, ranking or customer outcome",
+    ]:
+        assert phrase in svg
