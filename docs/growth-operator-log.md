@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 UK care-home family-enquiry revenue bridge
+
+- Decision: reduce care-sector conversion friction by turning the existing UK care-home family-enquiry evidence checklist into a visible fixed-scope diagnostic path on `/pricing` and `/free-business-review/`.
+- Updated: `/pricing.html` fixed-scope diagnostics now lists 25 concrete first offers and adds a UK care-home family enquiry follow-up bridge with buyer-safe no-resident-data scope wording.
+- Updated: `/free-business-review/` and `/free-business-review.html` now route UK care-home and care-group buyers to the checklist and fixed-scope diagnostic bridge.
+- Added: `tests/test_uk_care_home_revenue_bridge.py`; refreshed the B2B SaaS revenue-bridge count regression for the 25-offer menu.
+- Verification performed: focused pytest returned `9 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, both free-review paths and the care-home checklist markers; commit pushed to `main`; public checks returned 200 for pricing, both free-review paths and the care-home checklist markers on deployment attempt 2.
+- Proof boundary: no care-home client, resident/family/staff/referral data, call recording, care-plan data, credential, production access, legal/privacy/safeguarding/medical/care-quality advice, ranking, demand, lead, customer, occupancy, admissions, revenue, ROI or AI-accuracy claim was made.
+
 ## 2026-09-04 Europe healthtech NIS2 incident/supplier evidence checklist
 
 - Decision: improve European healthtech Cloud Trust top-3/top-5 consideration by filling a NIS2-era buyer-language gap around cloud incident evidence, supplier-risk questionnaires, GDPR/DPIA source maps and AI/cloud FinOps incident ownership.
