@@ -23,7 +23,7 @@ def test_pricing_exposes_b2b_saas_onboarding_delay_diagnostic_bridge():
         '<section class="section pricing-showcase">', 1
     )[0]
 
-    assert "Twenty-seven concrete first offers" in section
+    assert "Twenty-eight concrete first offers" in section
     assert 'data-revenue-bridge="global-b2b-saas-customer-onboarding-delay"' in section
     assert "B2B SaaS onboarding-delay owner dashboard diagnostic bridge" in section
     assert "customer-success platform, onboarding automation, project board, CRM workflow or AI follow-up spend" in section
