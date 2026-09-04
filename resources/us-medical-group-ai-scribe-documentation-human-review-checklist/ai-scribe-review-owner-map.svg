@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Demo AI scribe human-review owner map</title>
+<desc id="desc">Synthetic no-PHI dashboard showing owner gates for AI scribe documentation review.</desc>
+<rect width="1200" height="720" fill="#f8fafc"/>
+<rect x="60" y="50" width="1080" height="110" rx="24" fill="#0f172a"/>
+<text x="95" y="105" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff">Demo: AI Scribe Documentation Human-Review Owner Map</text>
+<text x="95" y="138" font-family="Arial, sans-serif" font-size="18" fill="#bae6fd">Synthetic/no-PHI illustration. Not a customer dashboard, clinical advice, HIPAA proof, accuracy claim or ROI evidence.</text>
+<g font-family="Arial, sans-serif">
+<rect x="75" y="210" width="200" height="140" rx="18" fill="#dbeafe" stroke="#2563eb"/>
+<text x="105" y="250" font-size="22" font-weight="700" fill="#1e3a8a">1. Queue</text>
+<text x="105" y="285" font-size="16" fill="#1e40af">Backlog bucket</text>
+<text x="105" y="310" font-size="16" fill="#1e40af">Specialty/category</text>
+<text x="105" y="335" font-size="16" fill="#1e40af">No PHI fields</text>
+<rect x="310" y="210" width="200" height="140" rx="18" fill="#ecfeff" stroke="#0891b2"/>
+<text x="340" y="250" font-size="22" font-weight="700" fill="#155e75">2. Draft</text>
+<text x="340" y="285" font-size="16" fill="#155e75">AI note source</text>
+<text x="340" y="310" font-size="16" fill="#155e75">Unsupported claims</text>
+<text x="340" y="335" font-size="16" fill="#155e75">Rollback note</text>
+<rect x="545" y="210" width="200" height="140" rx="18" fill="#fef3c7" stroke="#d97706"/>
+<text x="575" y="250" font-size="22" font-weight="700" fill="#92400e">3. Review</text>
+<text x="575" y="285" font-size="16" fill="#92400e">Clinician approval</text>
+<text x="575" y="310" font-size="16" fill="#92400e">Coding/billing gate</text>
+<text x="575" y="335" font-size="16" fill="#92400e">Patient impact</text>
+<rect x="780" y="210" width="200" height="140" rx="18" fill="#dcfce7" stroke="#16a34a"/>
+<text x="810" y="250" font-size="22" font-weight="700" fill="#166534">4. Trust</text>
+<text x="810" y="285" font-size="16" fill="#166534">BAA/source owner</text>
+<text x="810" y="310" font-size="16" fill="#166534">Retention/training</text>
+<text x="810" y="335" font-size="16" fill="#166534">Security handoff</text>
+<rect x="410" y="430" width="380" height="150" rx="22" fill="#fee2e2" stroke="#dc2626"/>
+<text x="445" y="475" font-size="24" font-weight="700" fill="#991b1b">Stop before publication</text>
+<text x="445" y="510" font-size="17" fill="#991b1b">No claims for faster charting, burnout reduction,</text>
+<text x="445" y="536" font-size="17" fill="#991b1b">coding accuracy, compliance, savings, ROI, rankings,</text>
+<text x="445" y="562" font-size="17" fill="#991b1b">demand, leads or revenue without real evidence.</text>
+<path d="M275 280 H310" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M510 280 H545" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M745 280 H780" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+<path d="M645 350 V430" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L7,3 z" fill="#334155"/></marker></defs>
+</g>
+</svg>

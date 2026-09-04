@@ -19,6 +19,15 @@ Purpose: track autonomous work that improves AICloudStrategist credibility, top-
 - Verification performed: focused pytest returned `13 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, the NIS2 checklist and CSV markers; public HTTP checks returned 200 for pricing, checklist and CSV markers on deployment attempt 2.
 - Proof boundary: no credentials, patient data, personal data, health data, production logs, supplier portal access, legal/privacy/security/audit/clinical advice, compliance proof, savings, revenue, ROI, ranking, demand, lead, customer or outcome claim was made.
 
+## 2026-09-04 US medical group AI scribe documentation human-review checklist
+
+- Decision: improve North America / US Healthcare GrowthOS and Cloud Trust top-3/top-5 consideration during US business-morning entry by filling a high-intent buyer-language gap around ambient clinical documentation, AI medical scribes, clinical note quality review, HIPAA-style vendor risk, patient consent questions and AI scribe cost ownership.
+- Created: `/resources/us-medical-group-ai-scribe-documentation-human-review-checklist/` with Article/Dataset/ImageObject/FAQ/Breadcrumb structured data, a downloadable synthetic no-PHI CSV checklist and a demo no-PHI owner-map SVG.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, and regenerated `sitemap.xml`.
+- Research performed: selected North America / US because the run landed at 12:44 UTC / 08:44 US Eastern; automated source checks returned HTTP 200 for AMA augmented-intelligence in medicine, Abridge, Nabla, Suki, DeepScribe, Freed and Epic public pages; HHS HIPAA Security guidance returned HTTP 403, while sampled AMA burnout and Microsoft/Nuance clinical-documentation URL guesses returned HTTP 404 and were disclosed as such. Bing checks returned HTTP 200 but noisy results and no sampled AICS marker.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 462 indexable sitemap URLs`; focused pytest returned `9 passed in 0.12s`; `git diff --check` passed; local HTTP checks returned 200 for the page, CSV, SVG, resources hub, `llms.txt` and sitemap markers.
+- Proof boundary: synthetic buyer-education checklist and demo owner map only; no real medical group, clinic, physician, patient/PHI/ePHI, encounter, chart, dictation/transcript, billing/coding, production/customer data, AI scribe vendor result, EHR/GRC/FinOps result, testimonial, certification, HIPAA/SOC2/HITRUST proof, legal/privacy/security/medical/clinical/billing/coding advice, charting-time reduction, burnout reduction, note-accuracy, savings, ROI, ranking, demand, lead, customer or revenue claim was made. No outreach.
+
 ## 2026-09-04 US healthtech prior-auth + denial AI human-review checklist
 
 - Decision: improve North America / US Healthcare GrowthOS top-3/top-5 consideration during US business-morning entry by filling a high-intent buyer-language gap around prior authorization delay, denial follow-up, AI appeal drafting, HIPAA-style vendor-risk evidence, patient-access owner queues and cloud/LLM cost ownership.
