@@ -122,3 +122,5 @@ AICloudStrategist does not guarantee search rankings, chatbot recommendations, r
 - [AI decision trace CSV](https://aicloudstrategist.com/publications/2026-09-03/ai-decision-trace-card.csv) — reusable worksheet for evidence, risk labels, owner checkpoints, and correction trails.
 - [The AI Change Approval Card](https://aicloudstrategist.com/publications/2026-09-04/ai-change-approval-card.html) — safe educational AI change-approval checklist for human review before AI-suggested changes touch customers, money, credentials, policy, data handling or live systems.
 - [AI change approval CSV](https://aicloudstrategist.com/publications/2026-09-04/ai-change-approval-card.csv) — reusable worksheet for approval-required triggers, human owners, evidence needed, rollback notes and safe-to-proceed boundaries.
+- [The AI Output Risk Ladder](https://aicloudstrategist.com/publications/2026-09-04/ai-output-risk-ladder.html) — safe educational AI output risk ladder with infographic.
+- [AI output risk ladder CSV](https://aicloudstrategist.com/publications/2026-09-04/ai-output-risk-ladder.csv) — reusable worksheet for use, review, and stop rules.

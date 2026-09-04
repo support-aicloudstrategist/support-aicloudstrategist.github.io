@@ -1,0 +1,1 @@
+Create a clean corporate Memphis hierarchical-layers infographic titled 'The AI Output Risk Ladder' as a five-step risk ladder. Use navy, blue, amber, orange, and red progression colors, rounded cards, large level numbers, concise labels, and safe educational wording. Aspect 4:3 worksheet.

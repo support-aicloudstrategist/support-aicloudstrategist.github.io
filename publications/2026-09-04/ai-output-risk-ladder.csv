@@ -1,0 +1,6 @@
+level,name,use,review,stop
+1,Safe note,"Internal reminder, summary, or personal checklist",Self-check sources and wording before saving,No stop if it stays internal and non-sensitive
+2,Team draft,"Draft for a colleague, task, or operating note",Named owner checks facts and missing context,Stop if the draft assigns blame or changes process without owner consent
+3,Customer-facing draft,"Website copy, support reply, proposal note, or FAQ","Accountable owner checks claims, prices, scope, exclusions, and proof boundary","Stop if it mentions results, clients, savings, rankings, or approvals without evidence"
+4,Sensitive-domain answer,"Privacy, security, health, finance, legal, compliance, or HR-like topics",Route to the right accountable owner or qualified adviser before use,Stop if it could be interpreted as professional advice or a formal compliance/security decision
+5,External commitment,"Contract-like promise, spend decision, guarantee, customer send, or production change","Formal approval path before action; keep source, reviewer, date, and final text","Stop unless the owner, authority, payment, risk, and audit trail are explicit"
