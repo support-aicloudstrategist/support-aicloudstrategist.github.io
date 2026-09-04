@@ -127,6 +127,13 @@ Completed milestones:
 Next single highest-value task:
 Deploy accelerated SEO expansion, verify live crawl/index readiness, then submit/prepare sitemap indexing and continue strengthening content depth on the highest-impression service clusters.
 
+## 2026-09-04 update — Cloud FinOps service revenue bridge
+- Connected `/services/cloud-finops/` to two no-credentials fixed-scope entry paths: `/resources/azure-bill-too-high-owner-action-checklist/` and `/resources/global-enterprise-ai-cost-anomaly-approval-runbook/`.
+- Added scoped-review CTAs from the Cloud FinOps service page into `/free-business-review/` with source attribution for both packages.
+- Added regression coverage for the service-page bridge and boundary language.
+- Verification: focused pytest returned `8 passed`; `git diff --check` passed; local HTTP checks returned 200 for the service page and both linked resources with expected markers.
+- Proof boundary: no Azure tenant, cloud credentials, invoices, production logs, customer data, savings, ROI, ranking, Microsoft/vendor partnership, demand, lead, revenue, customer or cost-reduction claim.
+
 ## 2026-09-04 update — AI change approval publication discovery bridge
 - Promoted `/publications/2026-09-04/ai-change-approval-card.html` from publication-only visibility into the homepage evidence grid, `/resources/` featured card and `llms.txt` answer-engine routes.
 - Improved the downloadable AI change approval CSV into a richer owner-action worksheet covering approval-required triggers, human owner, evidence-needed, rollback-note and safe-to-proceed boundaries.

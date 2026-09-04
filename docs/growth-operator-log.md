@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-04 Cloud FinOps service revenue bridge
+
+- Decision: reduce Cloud & AI FinOps conversion friction by connecting the commercial `/services/cloud-finops/` page directly to two public, no-credentials diagnostic entry paths for Azure bill surprises and enterprise AI cost anomalies.
+- Updated: added a `cloud-finops-public-entry-paths` bridge with resource links and scoped-review CTAs for `/resources/azure-bill-too-high-owner-action-checklist/` and `/resources/global-enterprise-ai-cost-anomaly-approval-runbook/`.
+- Added: `tests/test_cloud_finops_public_entry_paths.py` to assert the service-page revenue bridge and claim boundaries.
+- Verification performed: focused pytest returned `8 passed`; `git diff --check` passed; local HTTP checks returned 200 for the Cloud FinOps page and both linked resources with expected markers.
+- Proof boundary: no Azure tenant, cloud credentials, invoices, production logs, customer data, savings, ROI, ranking, Microsoft/vendor partnership, demand, lead, revenue, customer or cost-reduction claim was made.
+
 ## 2026-09-04 AI change approval discoverability bridge
 
 - Decision: improve credibility and answer-engine discoverability for the new AI Change Approval Card by moving it from publication-only visibility into homepage evidence, the resources hub and `llms.txt`.
