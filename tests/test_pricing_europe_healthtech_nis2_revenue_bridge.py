@@ -20,7 +20,7 @@ def test_pricing_exposes_europe_healthtech_nis2_incident_supplier_bridge():
         '<section class="section pricing-showcase">', 1
     )[0]
 
-    assert "Twenty-eight concrete first offers" in section
+    assert "Thirty concrete first offers" in section
     assert 'data-revenue-bridge="europe-healthtech-nis2-incident-supplier-evidence"' in section
     assert "Europe healthtech NIS2 incident supplier evidence diagnostic bridge" in section
     assert "cloud incident evidence-room, supplier-risk questionnaire, NIS2-readiness, GDPR/DPIA, security-questionnaire, cloud trust or FinOps spend" in section
@@ -48,7 +48,7 @@ def test_pricing_itemlist_schema_includes_europe_healthtech_nis2_service():
         if doc.get("@id") == "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics"
     )
 
-    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 28
+    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 30
     item = next(entry for entry in item_list["itemListElement"] if entry.get("url") == RESOURCE_URL)
     assert item["position"] == 6
     assert item["item"]["name"] == "Europe healthtech NIS2 incident supplier evidence diagnostic"

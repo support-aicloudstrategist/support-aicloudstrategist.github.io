@@ -22,7 +22,7 @@ def test_pricing_exposes_uk_care_home_family_enquiry_diagnostic_bridge():
         '<section class="section pricing-showcase">', 1
     )[0]
 
-    assert "Twenty-eight concrete first offers" in section
+    assert "Thirty concrete first offers" in section
     assert 'data-revenue-bridge="uk-care-home-family-enquiry-follow-up"' in section
     assert "UK care-home family enquiry follow-up diagnostic bridge" in section
     assert "care-home CRM, care planning system, call answering service, local SEO agency or AI receptionist spend" in section

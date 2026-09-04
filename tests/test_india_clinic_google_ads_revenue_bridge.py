@@ -23,7 +23,7 @@ def test_pricing_exposes_india_clinic_ad_conversion_diagnostic_bridge():
         '<section class="section pricing-showcase">', 1
     )[0]
 
-    assert "Twenty-eight concrete first offers" in section
+    assert "Thirty concrete first offers" in section
     assert f'data-revenue-bridge="{SLUG}"' in section
     assert "India clinic ad-to-appointment conversion diagnostic bridge" in section
     assert "Google/Meta ad spend, Practo upgrades, WhatsApp bots, CRM changes or AI receptionist spend" in section
