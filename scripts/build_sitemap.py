@@ -99,6 +99,7 @@ CURATED_PATHS = [
     "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
     "/resources/uae-healthtech-cloud-trust-patient-data-evidence-source-map/",
     "/resources/uae-healthtech-cloud-trust-patient-growthos-diagnostic-package/",
+    "/resources/uae-healthtech-cloud-trust-review-vs-patient-platforms-finops-grc-comparison/",
     "/resources/uae-healthtech-no-credentials-patient-data-intake-policy/",
     "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/",
     "/resources/us-clinic-source-to-owner-leak-map-template/",
