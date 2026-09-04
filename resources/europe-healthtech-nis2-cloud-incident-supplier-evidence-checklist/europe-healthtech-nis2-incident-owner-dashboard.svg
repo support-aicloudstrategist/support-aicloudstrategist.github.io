@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic Europe healthtech NIS2 incident owner dashboard</title>
+  <desc id="desc">Demo dashboard showing no-patient-data owner evidence columns for incident, supplier, privacy, security, FinOps and adviser review handoffs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#07111f" offset="0"/>
+      <stop stop-color="#10233d" offset="0.58"/>
+      <stop stop-color="#0b5f78" offset="1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#00111f" flood-opacity="0.28"/>
+    </filter>
+    <style>
+      .small{font:500 18px Inter,Arial,sans-serif;fill:#d8e8f4}.tiny{font:500 15px Inter,Arial,sans-serif;fill:#6a7f92}.label{font:700 15px Inter,Arial,sans-serif;fill:#244158}.value{font:700 20px Inter,Arial,sans-serif;fill:#07111f}.head{font:800 18px Inter,Arial,sans-serif;fill:#07111f}.pill{font:700 14px Inter,Arial,sans-serif;fill:#0a5a7b}.warn{fill:#a86505}.ok{fill:#05774f}.stop{fill:#a22828}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="1040" cy="80" r="190" fill="#15c8e8" opacity="0.12"/>
+  <circle cx="130" cy="650" r="230" fill="#8be9ff" opacity="0.10"/>
+  <text x="70" y="78" style="font:800 34px Inter,Arial,sans-serif;fill:#ffffff">Europe healthtech incident owner dashboard</text>
+  <text x="70" y="115" class="small">Synthetic no-patient-data evidence view for NIS2/GDPR/supplier-risk scoping before platform access or external claims.</text>
+  <g transform="translate(70 150)" filter="url(#shadow)">
+    <rect width="1060" height="500" rx="28" fill="#ffffff"/>
+    <g transform="translate(34 30)">
+      <rect width="230" height="92" rx="18" fill="#eef8ff"/>
+      <text x="22" y="34" class="label">Incident question</text>
+      <text x="22" y="66" class="value">Supplier outage row</text>
+      <rect x="260" width="230" height="92" rx="18" fill="#f4fbf7"/>
+      <text x="282" y="34" class="label">Data boundary</text>
+      <text x="282" y="66" class="value">No PHI / PII import</text>
+      <rect x="520" width="230" height="92" rx="18" fill="#fff8e8"/>
+      <text x="542" y="34" class="label">Adviser flag</text>
+      <text x="542" y="66" class="value">DPO + counsel</text>
+      <rect x="780" width="230" height="92" rx="18" fill="#fff0f0"/>
+      <text x="802" y="34" class="label">Blocked claim</text>
+      <text x="802" y="66" class="value">No compliance proof</text>
+    </g>
+    <g transform="translate(34 158)">
+      <rect width="992" height="52" rx="12" fill="#eaf1f7"/>
+      <text x="18" y="33" class="head">Evidence source</text>
+      <text x="250" y="33" class="head">Human owner</text>
+      <text x="450" y="33" class="head">Decision needed</text>
+      <text x="700" y="33" class="head">External-send status</text>
+      <g transform="translate(0 68)">
+        <rect width="992" height="58" rx="12" fill="#ffffff" stroke="#d9e7f2"/>
+        <text x="18" y="36" class="value">Incident ticket summary</text>
+        <text x="250" y="36" class="tiny">Platform / incident owner</text>
+        <text x="450" y="36" class="tiny">Confirm affected service + timeline</text>
+        <text x="700" y="36" class="ok">Internal evidence only</text>
+      </g>
+      <g transform="translate(0 138)">
+        <rect width="992" height="58" rx="12" fill="#ffffff" stroke="#d9e7f2"/>
+        <text x="18" y="36" class="value">Supplier questionnaire row</text>
+        <text x="250" y="36" class="tiny">Procurement / CISO</text>
+        <text x="450" y="36" class="tiny">Map source + evidence owner</text>
+        <text x="700" y="36" class="warn">Needs approval</text>
+      </g>
+      <g transform="translate(0 208)">
+        <rect width="992" height="58" rx="12" fill="#ffffff" stroke="#d9e7f2"/>
+        <text x="18" y="36" class="value">DPIA / subprocessor note</text>
+        <text x="250" y="36" class="tiny">DPO / privacy owner</text>
+        <text x="450" y="36" class="tiny">Adviser determines send language</text>
+        <text x="700" y="36" class="stop">Do not send yet</text>
+      </g>
+      <g transform="translate(0 278)">
+        <rect width="992" height="58" rx="12" fill="#ffffff" stroke="#d9e7f2"/>
+        <text x="18" y="36" class="value">Cloud/AI cost anomaly</text>
+        <text x="250" y="36" class="tiny">Finance / FinOps</text>
+        <text x="450" y="36" class="tiny">Separate cost impact from root cause</text>
+        <text x="700" y="36" class="warn">Board memo draft</text>
+      </g>
+    </g>
+  </g>
+  <text x="70" y="690" style="font:600 16px Inter,Arial,sans-serif;fill:#cce7f5">AICloudStrategist · synthetic demo asset · not legal, compliance, security, clinical, incident-reporting, ROI, savings or customer evidence</text>
+</svg>
