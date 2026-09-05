@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-05 AI reply readiness resources-hub bridge
+
+- Decision: reduce trust/discovery friction for the newest AI reply-readiness educational asset by moving it from publication/homepage visibility into the Resources hub.
+- Updated: `/resources/` now features `/publications/2026-09-05/ai-reply-readiness-checkpoints.html` with direct CSV and infographic links.
+- Added: `tests/test_resources_hub_ai_reply_readiness_bridge.py` to assert resources-hub visibility, `llms.txt`, sitemap, asset and proof-boundary markers.
+- Verification performed: focused pytest returned `10 passed`; `git diff --check` passed; local HTTP checks returned 200 for resources hub, publication, CSV and sitemap markers.
+- Proof boundary: educational owner checklist only; no customer result, revenue, savings, ranking, guarantee, compliance/legal/security/medical/financial advice, testimonial, demand, lead or customer claim was made.
+
 ## 2026-09-04 India clinic ad-conversion revenue bridge
 
 - Decision: reduce India clinic patient-growth conversion friction by turning the newest Google Ads not converting appointment evidence checklist into a visible fixed-scope diagnostic path on `/pricing` and `/free-business-review/`.
