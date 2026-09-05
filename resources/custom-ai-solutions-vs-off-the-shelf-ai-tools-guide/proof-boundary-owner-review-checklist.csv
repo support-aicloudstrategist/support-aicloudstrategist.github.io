@@ -1,0 +1,7 @@
+gate,owner_question,safe_evidence,stop_rule
+"scope","Which workflow, audience and owner decision is this page supporting?","A named use case, owner and next review step.","Do not imply a full implementation or production result."
+"data","Can this be reviewed without customer, patient, personal, production, credential or billing data?","Use synthetic, sample or redacted planning notes only.","Stop before uploading sensitive or live data."
+"claims","Are rankings, leads, revenue, savings, ROI, appointment growth and AI accuracy still unverified?","Keep claims as hypotheses or review criteria until independently measured.","Do not publish outcome numbers without source evidence."
+"advice","Does a qualified human need to review legal, privacy, security, medical, financial or procurement implications?","Route specialist decisions to qualified review before action.","Do not treat this guide as professional advice."
+"commercial","Is there a no-credentials diagnostic path if the owner wants help?","Use the linked AICS free review or fixed-scope diagnostic path.","Do not request production access before scope and evidence boundaries are agreed."
+"proof_boundary","This checklist is a template for custom AI solutions versus off-the-shelf AI tools; it is not client proof.","Synthetic/sample planning evidence only.","No real client, customer, patient, personal, production, credential, cloud bill, revenue, savings, ROI, ranking, demand, lead, customer, appointment-growth, outcome or AI-accuracy claim."
