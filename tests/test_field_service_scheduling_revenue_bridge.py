@@ -23,7 +23,7 @@ def test_pricing_exposes_field_service_scheduling_diagnostic_bridge():
         '<section class="section pricing-showcase">', 1
     )[0]
 
-    assert "Thirty-one concrete first offers" in section
+    assert "Thirty-two concrete first offers" in section
     assert 'data-revenue-bridge="field-service-technician-scheduling-owner-evidence"' in section
     assert "Field service technician scheduling evidence diagnostic bridge" in section
     assert "field-service management software, CRM cleanup, call answering, WhatsApp automation or AI scheduling spend" in section

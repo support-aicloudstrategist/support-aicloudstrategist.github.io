@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-05 AI reply readiness revenue bridge
+
+- Decision: reduce conversion friction for teams evaluating customer-facing AI replies by turning the AI Reply Readiness publication into a visible fixed-scope diagnostic path on `/pricing` and `/free-business-review/`.
+- Updated: `/pricing.html` fixed-scope diagnostics now lists 32 concrete first offers and adds an AI reply readiness diagnostic bridge linked to the public checkpoint card, owner-action CSV and fit-check route.
+- Updated: `/free-business-review/` and `/free-business-review.html` now route customer-facing automation buyers to the reply-readiness checklist and diagnostic bridge.
+- Added: `tests/test_ai_reply_readiness_revenue_bridge.py`; refreshed current pricing-count regressions for the verified 32-offer menu.
+- Verification performed: focused pytest returned `16 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, both free-review paths, publication and CSV markers.
+- Proof boundary: no customer data, credentials, production access, legal/compliance/security advice, approval guarantee, performance guarantee, revenue, savings, ROI, ranking or customer-result claim was made.
+
 ## 2026-09-05 AI reply readiness resources-hub bridge
 
 - Decision: reduce trust/discovery friction for the newest AI reply-readiness educational asset by moving it from publication/homepage visibility into the Resources hub.
