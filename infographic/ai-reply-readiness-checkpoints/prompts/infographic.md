@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate Memphis infographic titled 'AI Reply Readiness: 7 Checkpoints Before a Bot Answers'. Seven rounded cards, numbered 1 to 7, each with checkpoint, owner question, safe output. Use navy, teal, sky blue, green, amber, red, and violet accents. Aspect 4:3. Educational-only boundary in footer.

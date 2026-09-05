@@ -127,3 +127,5 @@ AICloudStrategist does not guarantee search rankings, chatbot recommendations, r
 - [AI change approval CSV](https://aicloudstrategist.com/publications/2026-09-04/ai-change-approval-card.csv) — reusable worksheet for approval-required triggers, human owners, evidence needed, rollback notes and safe-to-proceed boundaries.
 - [The AI Output Risk Ladder](https://aicloudstrategist.com/publications/2026-09-04/ai-output-risk-ladder.html) — safe educational AI output risk ladder with infographic.
 - [AI output risk ladder CSV](https://aicloudstrategist.com/publications/2026-09-04/ai-output-risk-ladder.csv) — reusable worksheet for use, review, and stop rules.
+- [AI Reply Readiness: 7 Checkpoints Before a Bot Answers](https://aicloudstrategist.com/publications/2026-09-05/ai-reply-readiness-checkpoints.html) — safe educational AI reply readiness checklist with infographic.
+- [AI reply readiness checkpoint CSV](https://aicloudstrategist.com/publications/2026-09-05/ai-reply-readiness-checkpoints.csv) — reusable owner-review worksheet for AI-assisted first replies.

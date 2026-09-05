@@ -1,0 +1,71 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='920' viewBox='0 0 1200 920'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#0f172a'/><stop offset='.55' stop-color='#0369a1'/><stop offset='1' stop-color='#0f766e'/></linearGradient>
+    <filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='8' flood-color='#0f172a' flood-opacity='.14'/></filter>
+  </defs>
+  <rect width='1200' height='920' fill='#f8fafc'/>
+  <rect x='36' y='34' width='1128' height='852' rx='44' fill='white' stroke='#bae6fd' stroke-width='3'/>
+  <rect x='70' y='68' width='1060' height='140' rx='34' fill='url(#hero)'/>
+  <text x='106' y='112' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#bae6fd' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING INFOGRAPHIC</text>
+  <text x='106' y='163' font-family='Inter,Arial,sans-serif' font-size='49' font-weight='950' fill='white'>AI Reply Readiness: 7 Checkpoints Before a Bot Answers</text>
+  <text x='106' y='197' font-family='Inter,Arial,sans-serif' font-size='18' fill='#ecfeff'>A safe educational checklist for business owners deciding whether an AI-assisted first reply is ready for a customer, patient, tenant, student, or lead.</text>
+  
+  <g filter='url(#shadow)'>
+    <rect x='74' y='238' width='304' height='178' rx='28' fill='#e0f2fe' stroke='#0284c7' stroke-width='3'/>
+    <circle cx='116' cy='280' r='25' fill='white' stroke='#0284c7' stroke-width='3'/>
+    <text x='116' y='289' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#0284c7'>1</text>
+    <text x='152' y='274' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='152' dy='0'>Purpose is narrow</tspan></text>
+    <text x='100' y='330' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='100' dy='0'>What exact question can the reply</tspan><tspan x='100' dy='18'>answer without guessing?</tspan></text>
+    <text x='100' y='388' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='100' dy='0'>A short acknowledgement, routing</tspan><tspan x='100' dy='17'>note, or next-step instruction.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='412' y='238' width='304' height='178' rx='28' fill='#dcfce7' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='454' cy='280' r='25' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='454' y='289' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#16a34a'>2</text>
+    <text x='490' y='274' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='490' dy='0'>Source is visible</tspan></text>
+    <text x='438' y='330' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='438' dy='0'>Which page, policy, FAQ, calendar</tspan><tspan x='438' dy='18'>rule, or owner note supports the</tspan><tspan x='438' dy='18'>answer?</tspan></text>
+    <text x='438' y='388' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='438' dy='0'>A reply that cites the known</tspan><tspan x='438' dy='17'>source internally before sending.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='750' y='238' width='304' height='178' rx='28' fill='#fef3c7' stroke='#d97706' stroke-width='3'/>
+    <circle cx='792' cy='280' r='25' fill='white' stroke='#d97706' stroke-width='3'/>
+    <text x='792' y='289' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#d97706'>3</text>
+    <text x='828' y='274' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='828' dy='0'>Claim type is</tspan><tspan x='828' dy='24'>labelled</tspan></text>
+    <text x='776' y='330' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='776' dy='0'>Is this education, scheduling</tspan><tspan x='776' dy='18'>help, opinion, pricing,</tspan><tspan x='776' dy='18'>professional advice, or a promise?</tspan></text>
+    <text x='776' y='388' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='776' dy='0'>Education and routing only unless</tspan><tspan x='776' dy='17'>an owner approved the stronger</tspan><tspan x='776' dy='17'>claim.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='74' y='460' width='304' height='178' rx='28' fill='#fae8ff' stroke='#c026d3' stroke-width='3'/>
+    <circle cx='116' cy='502' r='25' fill='white' stroke='#c026d3' stroke-width='3'/>
+    <text x='116' y='511' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#c026d3'>4</text>
+    <text x='152' y='496' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='152' dy='0'>Sensitive topic is</tspan><tspan x='152' dy='24'>routed</tspan></text>
+    <text x='100' y='552' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='100' dy='0'>Could this touch health, money,</tspan><tspan x='100' dy='18'>legal, privacy, security, HR,</tspan><tspan x='100' dy='18'>eligibility, or safety?</tspan></text>
+    <text x='100' y='610' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='100' dy='0'>Pause automation and route to the</tspan><tspan x='100' dy='17'>accountable human owner.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='412' y='460' width='304' height='178' rx='28' fill='#fee2e2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='454' cy='502' r='25' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='454' y='511' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#dc2626'>5</text>
+    <text x='490' y='496' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='490' dy='0'>Identity is</tspan><tspan x='490' dy='24'>protected</tspan></text>
+    <text x='438' y='552' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='438' dy='0'>Does the reply reveal private</tspan><tspan x='438' dy='18'>details, internal notes,</tspan><tspan x='438' dy='18'>credentials, or another person’s</tspan><tspan x='438' dy='18'>data?</tspan></text>
+    <text x='438' y='610' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='438' dy='0'>Only minimum necessary</tspan><tspan x='438' dy='17'>information; no secrets or private</tspan><tspan x='438' dy='17'>records.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='750' y='460' width='304' height='178' rx='28' fill='#ede9fe' stroke='#7c3aed' stroke-width='3'/>
+    <circle cx='792' cy='502' r='25' fill='white' stroke='#7c3aed' stroke-width='3'/>
+    <text x='792' y='511' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#7c3aed'>6</text>
+    <text x='828' y='496' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='828' dy='0'>Next action is</tspan><tspan x='828' dy='24'>reversible</tspan></text>
+    <text x='776' y='552' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='776' dy='0'>Can the business undo the action</tspan><tspan x='776' dy='18'>if the reply is wrong or</tspan><tspan x='776' dy='18'>incomplete?</tspan></text>
+    <text x='776' y='610' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='776' dy='0'>Draft, tag, route, or ask a</tspan><tspan x='776' dy='17'>clarifying question before</tspan><tspan x='776' dy='17'>committing.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='412' y='682' width='304' height='178' rx='28' fill='#ccfbf1' stroke='#0f766e' stroke-width='3'/>
+    <circle cx='454' cy='724' r='25' fill='white' stroke='#0f766e' stroke-width='3'/>
+    <text x='454' y='733' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='#0f766e'>7</text>
+    <text x='490' y='718' font-family='Inter,Arial,sans-serif' font-size='21' font-weight='950' fill='#0f172a'><tspan x='490' dy='0'>Human escalation is</tspan><tspan x='490' dy='24'>clear</tspan></text>
+    <text x='438' y='774' font-family='Inter,Arial,sans-serif' font-size='14' font-weight='800' fill='#334155'><tspan x='438' dy='0'>Who reviews exceptions,</tspan><tspan x='438' dy='18'>complaints, unusual requests, and</tspan><tspan x='438' dy='18'>high-risk messages?</tspan></text>
+    <text x='438' y='832' font-family='Inter,Arial,sans-serif' font-size='13' fill='#0f172a'><tspan x='438' dy='0'>Named inbox or owner path with a</tspan><tspan x='438' dy='17'>stop rule.</tspan></text>
+  </g>
+  <rect x='78' y='832' width='1044' height='38' rx='19' fill='#0f172a'/>
+  <text x='600' y='856' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='12' fill='#e5f6ff'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, approval, or guaranteed-performance advice.</text>
+</svg>
