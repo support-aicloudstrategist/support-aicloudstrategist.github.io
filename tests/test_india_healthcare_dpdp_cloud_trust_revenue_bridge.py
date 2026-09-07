@@ -9,7 +9,7 @@ RESOURCE_SLUG = "india-healthcare-dpdp-cloud-trust-evidence-source-map"
 
 def test_pricing_has_india_healthcare_dpdp_cloud_trust_diagnostic_bridge():
     html = PRICING.read_text(encoding="utf-8")
-    assert "Thirty-three concrete first offers" in html
+    assert "Thirty-four concrete first offers" in html
     assert 'data-revenue-bridge="india-healthcare-dpdp-cloud-trust-evidence-source-map"' in html
     assert "India healthcare DPDP + cloud trust source-map diagnostic bridge" in html
     assert "Scope before DPDP software, EMR/EHR changes, WhatsApp patient workflows, AI reception, cloud migration, GRC tool or MSP spend" in html

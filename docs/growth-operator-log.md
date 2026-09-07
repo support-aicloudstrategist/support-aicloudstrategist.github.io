@@ -2,6 +2,15 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-07 Healthcare AI Patient GrowthOS revenue bridge
+
+- Decision: reduce conversion friction for clinics and healthtech teams evaluating AI receptionist, patient-access automation, CRM/PMS/EHR workflow, WhatsApp follow-up, chatbot or clinic growth platform spend by connecting the verified Patient GrowthOS proof asset to pricing and free-review routes.
+- Updated: `/pricing.html` now surfaces a Healthcare AI Patient GrowthOS diagnostic bridge and the fixed-scope diagnostics ItemList now carries 34 verified first-offer entries.
+- Updated: `/free-business-review.html`, `/free-business-review/`, the Patient GrowthOS page and its synthetic CSV now route clinic / healthtech patient-growth buyers to the checklist, owner-evidence CSV, demo owner map and pricing bridge with explicit stop-rule boundaries.
+- Added: `tests/test_healthcare_patient_growth_revenue_bridge.py` and `scripts/add_healthcare_patient_growth_pricing_bridge_2026_09_07.py`.
+- Verification performed: focused pytest returned `13 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, free-review, Patient GrowthOS page and CSV markers.
+- Proof boundary: synthetic no-patient-data buyer-education review only; no real healthcare client, clinic, patient, PHI/ePHI, health record, personal data, vendor export, credential, production access, GDPR/UK GDPR/DPIA/NIS2/ISO/SOC2/HIPAA compliance proof, legal/privacy/security/medical advice, ranking, demand, lead, booked appointment, patient, revenue, savings, ROI or automation-performance claim was made.
+
 ## 2026-09-07 Healthcare AI trust-controls pricing bridge
 
 - Decision: reduce conversion friction for clinics and healthtech teams evaluating AI receptionist, patient engagement, chatbot, CRM/PMS/EHR workflow or cloud automation spend by connecting the verified trust-controls proof asset to a pricing-page fit-check route.

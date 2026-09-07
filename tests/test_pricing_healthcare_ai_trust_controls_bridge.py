@@ -43,4 +43,4 @@ def test_pricing_itemlist_count_contract_is_not_changed_by_visual_bridge():
     assert match, "pricing ItemList JSON-LD missing"
     itemlist = json.loads(match.group(1))
     assert itemlist["numberOfItems"] == len(itemlist["itemListElement"])
-    assert itemlist["numberOfItems"] == 33
+    assert itemlist["numberOfItems"] == 34
