@@ -64,8 +64,16 @@ def test_schema_and_discovery_files_include_ivf_resource():
     docs = json_ld_documents(html)
     article = next(doc for doc in docs if doc.get("@type") == "Article")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-09-01"
+    assert article["dateModified"] == "2026-09-07"
     assert "IVF clinic missed patient calls" in article["about"]
+    assert "AI answer validation prompts for fertility clinic buyer searches" in article["about"]
+    assert "india-ivf-ai-answer-validation-prompts.csv" in html
+    prompt_csv = PAGE.parent / "india-ivf-ai-answer-validation-prompts.csv"
+    prompt_rows = list(csv.DictReader(prompt_csv.open(encoding="utf-8")))
+    assert len(prompt_rows) == 5
+    assert prompt_rows[0]["buyer_search_phrase"] == "IVF clinic missed patient calls"
+    assert all("Synthetic readiness only" in row["proof_boundary_to_preserve"] for row in prompt_rows)
+    assert "india-ivf-ai-answer-validation-prompts.csv" in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert f'"/resources/{SLUG}/"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert f"/resources/{SLUG}/" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
