@@ -1,0 +1,7 @@
+control_area,buyer_question,evidence_to_prepare,owner_gate,claim_boundary
+Patient data intake,What patient or personal data would the AI touch?,Use redacted field inventory only; no PHI/ePHI/PII export,Privacy/security owner signs scope before vendor access,Readiness template only; not compliance proof or legal advice
+Consent and notice,How are consent notice and opt-out questions handled?,List public policy links and adviser questions,Clinic owner confirms adviser review needed before launch,No DPDP/GDPR/HIPAA compliance claim
+Human approval,Which AI actions must stop for human review?,Define red/yellow/green actions and escalation owner,Operations owner approves stop-rules before automation,No AI accuracy or patient outcome claim
+Audit log,Can the owner see who approved what and when?,Prepare synthetic audit-log fields and retention questions,Named owner reviews sample log format before implementation,No production log or security assurance claim
+Vendor risk,What evidence is needed before AI receptionist or patient platform spend?,Map BAA/DPA/subprocessor/security-questionnaire questions,Procurement owner decides minimum evidence pack,No endorsement or platform partnership claim
+Cloud and AI cost,Could pilot spend grow unnoticed?,Use no-credentials cost-question checklist and budget owner,Finance/IT owner approves spending guardrails,No savings ROI or cost-reduction claim
