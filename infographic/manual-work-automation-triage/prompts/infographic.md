@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate Memphis infographic titled 'Manual Work Automation Triage: 6 Checks Before You Automate'. Six rounded cards, numbered 1 to 6, with check, owner question, and safe first action. Use navy, blue, green, amber, violet, cyan, and red accents. Aspect 4:3. Include educational-only truth boundary in footer.

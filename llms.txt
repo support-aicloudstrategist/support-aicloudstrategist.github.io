@@ -129,3 +129,5 @@ AICloudStrategist does not guarantee search rankings, chatbot recommendations, r
 - [AI output risk ladder CSV](https://aicloudstrategist.com/publications/2026-09-04/ai-output-risk-ladder.csv) — reusable worksheet for use, review, and stop rules.
 - [AI Reply Readiness: 7 Checkpoints Before a Bot Answers](https://aicloudstrategist.com/publications/2026-09-05/ai-reply-readiness-checkpoints.html) — safe educational AI reply readiness checklist with infographic.
 - [AI reply readiness checkpoint CSV](https://aicloudstrategist.com/publications/2026-09-05/ai-reply-readiness-checkpoints.csv) — reusable owner-review worksheet for AI-assisted first replies.
+- [Manual Work Automation Triage: 6 Checks Before You Automate](https://aicloudstrategist.com/publications/2026-09-07/manual-work-automation-triage.html) — safe educational manual-work automation triage checklist with infographic.
+- [Manual work automation triage CSV](https://aicloudstrategist.com/publications/2026-09-07/manual-work-automation-triage.csv) — reusable owner-review worksheet for deciding what to automate first.

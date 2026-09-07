@@ -1,0 +1,7 @@
+step,check,owner_question,safe_action
+1,Frequency is visible,Does this task happen often enough to justify a workflow?,Count occurrences for one week before building automation.
+2,Input is predictable,"Do requests arrive in a consistent format, channel, or form field?",Standardise intake before asking software to decide.
+3,Decision rule is simple,"Can a non-expert explain the route, approval, or next step in one sentence?",Automate routing and reminders before automating judgement.
+4,Exception path exists,"Where should unclear, emotional, high-value, or sensitive cases go?",Send exceptions to a named human owner with context.
+5,Evidence is retained,"Will the business keep the source message, timestamp, owner, and final action?","Log the before/after decision trail, not just the task status."
+6,Customer impact is reversible,Can the action be corrected quickly if automation is wrong?,"Start with drafts, reminders, tags, and queues before external commitments."
