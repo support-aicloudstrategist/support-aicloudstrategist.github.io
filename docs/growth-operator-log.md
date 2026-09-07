@@ -1,5 +1,12 @@
 # AICS growth value operator log
 
+## 2026-09-07 Education admissions discovery route repair
+
+- Decision: fix the lowest layman-search discovery bottleneck by making the school/coaching admissions page match all tracked owner search phrases and adding a direct WhatsApp conversion route.
+- Updated: `/resources/customer-problem-search/coaching-school-admission-increase/` now covers all 12 tracked school/coaching/admission search phrases, carries Article `dateModified=2026-09-07`, and includes a WhatsApp CTA plus free review, CRM automation and WhatsApp automation paths.
+- Verification performed: `python3 tools/layman_problem_search_score.py` shows School / coaching / education score `100` and overall layman score `93.3`; `git diff --check` passed; local HTTP returned 200 with expected markers; commit pushed; public `aicloudstrategist.com` and support mirror returned 200 with expected markers on deployment attempt 5.
+- Proof boundary: buyer-education/discovery route repair only; no coaching institute, school, student, parent, customer data, child data, testimonial, certification, platform partnership, legal/privacy/advertising/regulatory advice, ranking, demand, lead, admission increase, student result, placement result, revenue, ROI or ad-performance claim was made. No outreach.
+
 ## 2026-09-07 Factory manual-work reduction pricing bridge
 
 - Decision: reduce conversion friction for small manufacturers who already find the factory manual-work problem page but need a clear first paid diagnostic path before ERP/MRP, workflow automation, custom software or WhatsApp automation spend.
