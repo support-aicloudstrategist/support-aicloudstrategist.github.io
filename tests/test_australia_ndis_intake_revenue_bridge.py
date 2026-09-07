@@ -10,6 +10,10 @@ RESOURCE_SLUG = "australia-ndis-intake-vs-answering-service-crm-comparison"
 def test_pricing_has_australia_ndis_intake_diagnostic_bridge():
     html = PRICING.read_text(encoding="utf-8")
     assert "Thirty-six concrete first offers" in html
+    assert "Thirty-six fixed-scope AICS diagnostic offers" in html
+    assert '"numberOfItems":36' in html
+    assert "https://aicloudstrategist.com/resources/australia-ndis-intake-vs-answering-service-crm-comparison/" in html
+    assert "Australia NDIS intake owner-evidence diagnostic" in html
     assert 'data-revenue-bridge="australia-ndis-intake-comparison"' in html
     assert "Australia NDIS intake owner-evidence diagnostic bridge" in html
     assert "Scope before NDIS answering service, CRM, rostering software, referral marketing, AI receptionist or workflow automation spend" in html
