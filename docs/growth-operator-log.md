@@ -1,5 +1,13 @@
 # AICS growth value operator log
 
+## 2026-09-07 small-factory manual-work discovery route repair
+
+- Decision: improve a lowest-scoring revenue-discovery bottleneck for small manufacturing owners searching in layman terms before ERP, workflow automation or custom software spend.
+- Updated: `/resources/customer-problem-search/factory-manual-work-reduce/` now covers all 12 tracked small-factory search phrases, adds a direct WhatsApp contact route, and is discoverable from `llms.txt` for AI-search routing.
+- Added: `tests/test_factory_manual_work_layman_discovery.py`.
+- Verification performed: focused pytest returned `2 passed`; `python3 tools/layman_problem_search_score.py` shows Small factory / manufacturing score `100`; local HTTP returned 200 for page and `llms.txt`; public `aicloudstrategist.com` and `support-aicloudstrategist.github.io` returned 200 with expected markers.
+- Proof boundary: buyer-education and discovery-route repair only; no factory client, customer data, production export, credential, job-cut, savings, productivity, delivery, revenue, ranking, demand, lead, customer, testimonial, certification, software-partnership or outcome claim was made.
+
 ## 2026-09-07 sitemap final-route indexing cleanup
 
 - Decision: fix the highest-current SEO trust bottleneck from the Search Console sitemap warning by keeping sitemap URLs on final public 200 routes only.
