@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Demo Australia NDIS intake comparison owner map</title>
+  <desc id="desc">Synthetic no-participant-data map comparing answering service, CRM, rostering, marketing and AICS owner evidence for NDIS intake.</desc>
+  <rect width="1200" height="675" fill="#07111f"/>
+  <text x="60" y="78" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Australia NDIS intake: choose the evidence layer before the tool</text>
+  <text x="60" y="116" fill="#9fd7ef" font-family="Arial, sans-serif" font-size="18">Demo-labelled readiness map · no participant data · no provider result claim</text>
+  <g font-family="Arial, sans-serif" font-size="19">
+    <rect x="60" y="165" width="210" height="120" rx="18" fill="#13324a" stroke="#2dd4bf"/>
+    <text x="84" y="208" fill="#fff" font-weight="700">Answering service</text><text x="84" y="240" fill="#d9f7ff">Calls answered</text><text x="84" y="270" fill="#d9f7ff">but owner task?</text>
+    <rect x="310" y="165" width="210" height="120" rx="18" fill="#13324a" stroke="#60a5fa"/>
+    <text x="342" y="208" fill="#fff" font-weight="700">NDIS CRM</text><text x="342" y="240" fill="#d9f7ff">Records structured</text><text x="342" y="270" fill="#d9f7ff">but stale referrals?</text>
+    <rect x="560" y="165" width="210" height="120" rx="18" fill="#13324a" stroke="#a78bfa"/>
+    <text x="594" y="208" fill="#fff" font-weight="700">Rostering</text><text x="594" y="240" fill="#d9f7ff">Capacity visible</text><text x="594" y="270" fill="#d9f7ff">before promises?</text>
+    <rect x="810" y="165" width="260" height="120" rx="18" fill="#13324a" stroke="#f59e0b"/>
+    <text x="842" y="208" fill="#fff" font-weight="700">Marketing / directories</text><text x="842" y="240" fill="#d9f7ff">More enquiries</text><text x="842" y="270" fill="#d9f7ff">but follow-up ready?</text>
+  </g>
+  <path d="M165 300 L165 360 L600 360" stroke="#2dd4bf" stroke-width="4" fill="none"/>
+  <path d="M415 300 L415 360 L600 360" stroke="#60a5fa" stroke-width="4" fill="none"/>
+  <path d="M665 300 L665 360 L600 360" stroke="#a78bfa" stroke-width="4" fill="none"/>
+  <path d="M940 300 L940 360 L600 360" stroke="#f59e0b" stroke-width="4" fill="none"/>
+  <rect x="325" y="380" width="550" height="165" rx="24" fill="#eaf6fb"/>
+  <text x="370" y="430" fill="#07111f" font-family="Arial, sans-serif" font-size="28" font-weight="700">AICS owner-evidence review</text>
+  <text x="370" y="472" fill="#14324a" font-family="Arial, sans-serif" font-size="20">source → owner → due date → consent prompt</text>
+  <text x="370" y="506" fill="#14324a" font-family="Arial, sans-serif" font-size="20">capacity handoff → risk stop-rule → closure reason</text>
+  <text x="370" y="540" fill="#14324a" font-family="Arial, sans-serif" font-size="20">tool-neutral first step before spend</text>
+  <text x="60" y="620" fill="#b8d8e6" font-family="Arial, sans-serif" font-size="17">Boundary: synthetic readiness visual only; no real NDIS provider, participant, compliance, ranking, revenue or ROI claim.</text>
+</svg>
