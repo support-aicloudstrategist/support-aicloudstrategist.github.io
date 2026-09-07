@@ -10,6 +10,7 @@ URL = "https://aicloudstrategist.com" + REL
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
 SOURCE_MAP = ROOT / "resources" / SLUG / "us-prior-auth-automation-source-map.csv"
+ANSWER_BANK = ROOT / "resources" / SLUG / "prior-auth-trust-answer-bank.csv"
 
 
 def html() -> str:
@@ -179,6 +180,35 @@ def test_source_map_csv_is_public_and_claim_safe():
     assert "source-map CSV" in source
 
 
+def test_prior_auth_trust_answer_bank_is_public_and_claim_safe():
+    source = html()
+    rows = list(csv.DictReader(ANSWER_BANK.open(newline="", encoding="utf-8")))
+    assert len(rows) == 7
+    assert set(rows[0]) == {
+        "buyer_search_phrase",
+        "safe_aics_answer",
+        "proof_asset_to_publish_or_link",
+        "human_review_gate",
+        "unsafe_claim_blocked",
+        "boundary_label",
+    }
+    text = ANSWER_BANK.read_text(encoding="utf-8")
+    for marker in [
+        "prior authorization delay",
+        "AI appeal drafting healthcare",
+        "HIPAA AI vendor risk",
+        "cloud cost owner dashboard healthcare",
+        "No authorization-speed approval-rate patient-outcome or revenue claim",
+        "No AI accuracy legal compliance denial reduction recovered revenue or automated-submission claim",
+        "No top-3 ranking lead patient appointment revenue ROI or growth claim",
+    ]:
+        assert marker in text
+    assert "prior-auth-trust-answer-bank.csv" in source
+    docs = json_ld_documents(source)
+    datasets = [doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Dataset"]
+    assert any(doc.get("url", "").endswith("prior-auth-trust-answer-bank.csv") for doc in datasets)
+
+
 def test_discovery_surfaces_are_wired():
     resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
@@ -186,5 +216,6 @@ def test_discovery_surfaces_are_wired():
     assert URL in llms
     assert "us-prior-auth-automation-source-map.csv" in resources
     assert "us-prior-auth-automation-source-map.csv" in llms
+    assert "prior-auth-trust-answer-bank.csv" in llms
     assert REL in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
