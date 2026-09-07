@@ -1,0 +1,7 @@
+check_area,owner_question,evidence_to_collect,boundary
+crawl_access,Are important pages blocked by robots.txt or noindex?,Public URL status plus robots and meta robots review,Readiness only; does not prove Google indexed the page
+canonical_sitemap,Do canonicals and sitemap point to the buyer-facing URL?,Canonical URL and sitemap inclusion screenshot or HTTP check,Readiness only; no ranking or click claim
+internal_links,Can crawlers and buyers reach the page from public navigation?,Home/resources/service link path and anchor text,Readiness only; no traffic claim
+buyer_language,Does the page match pain phrases buyers search?,Title/H1/meta/body language review against customer problem terms,Messaging evidence only; no demand proof
+trust_evidence,Can a buyer see proof boundaries and next step?,Proof policy contact pricing free-review and claim-boundary checks,Trust readiness only; no endorsement claim
+search_console_measurement,Is actual indexing and query data available?,Search Console page indexing/impressions/clicks export from owner,Unavailable unless owner grants telemetry; never infer from readiness

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo website indexing owner evidence map</title>
+  <desc id="desc">Synthetic map showing crawl gate, buyer language gate, trust evidence gate and measurement boundary for websites not showing in Google.</desc>
+  <rect width="1200" height="720" fill="#f6f8fc"/>
+  <rect x="48" y="48" width="1104" height="624" rx="28" fill="#ffffff" stroke="#d8e0ee" stroke-width="2"/>
+  <text x="82" y="112" font-family="Inter,Arial,sans-serif" font-size="36" font-weight="800" fill="#101828">Website not showing in Google — owner evidence map</text>
+  <text x="82" y="152" font-family="Inter,Arial,sans-serif" font-size="18" fill="#475467">Demo / synthetic / no customer analytics / no Search Console login used</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="82" y="210" width="240" height="180" rx="20" fill="#eef4ff" stroke="#84adff"/>
+    <text x="110" y="252" font-size="24" font-weight="700" fill="#1849a9">1. Crawl gate</text>
+    <text x="110" y="292" font-size="18" fill="#344054">Robots, noindex,</text>
+    <text x="110" y="320" font-size="18" fill="#344054">canonical, sitemap,</text>
+    <text x="110" y="348" font-size="18" fill="#344054">redirect and HTTP 200</text>
+
+    <rect x="360" y="210" width="240" height="180" rx="20" fill="#ecfdf3" stroke="#75e0a7"/>
+    <text x="388" y="252" font-size="24" font-weight="700" fill="#067647">2. Buyer gate</text>
+    <text x="388" y="292" font-size="18" fill="#344054">Pain phrase in title,</text>
+    <text x="388" y="320" font-size="18" fill="#344054">H1, FAQ, body,</text>
+    <text x="388" y="348" font-size="18" fill="#344054">and internal anchors</text>
+
+    <rect x="638" y="210" width="240" height="180" rx="20" fill="#fff6ed" stroke="#ffb877"/>
+    <text x="666" y="252" font-size="24" font-weight="700" fill="#b54708">3. Trust gate</text>
+    <text x="666" y="292" font-size="18" fill="#344054">Proof policy, contact,</text>
+    <text x="666" y="320" font-size="18" fill="#344054">pricing path, boundaries,</text>
+    <text x="666" y="348" font-size="18" fill="#344054">owner next action</text>
+
+    <rect x="916" y="210" width="184" height="180" rx="20" fill="#fdf2fa" stroke="#f7a8d8"/>
+    <text x="944" y="252" font-size="24" font-weight="700" fill="#c11574">4. Measure</text>
+    <text x="944" y="292" font-size="18" fill="#344054">Search Console</text>
+    <text x="944" y="320" font-size="18" fill="#344054">required for real</text>
+    <text x="944" y="348" font-size="18" fill="#344054">index/click data</text>
+
+    <path d="M323 300h36" stroke="#667085" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M601 300h36" stroke="#667085" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M879 300h36" stroke="#667085" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="82" y="456" width="1018" height="132" rx="20" fill="#101828"/>
+    <text x="118" y="502" font-size="24" font-weight="800" fill="#ffffff">Boundary: readiness is not ranking proof</text>
+    <text x="118" y="540" font-size="19" fill="#d0d5dd">This artifact does not claim indexing, impressions, clicks, leads, revenue, ROI, compliance, certification, endorsement or SEO performance.</text>
+    <text x="118" y="574" font-size="19" fill="#d0d5dd">Actual demand and ranking require Google Search Console, analytics or equivalent owner telemetry.</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#667085"/></marker></defs>
+</svg>
