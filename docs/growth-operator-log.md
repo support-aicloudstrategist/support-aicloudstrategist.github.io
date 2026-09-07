@@ -9,6 +9,13 @@
 - Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 476 indexable sitemap URLs`; focused pytest returned `2 passed in 0.07s`; `git diff --check` passed; local HTTP checks returned 200 for page, CSV, SVG, resources hub, `llms.txt` and sitemap markers.
 - Proof boundary: synthetic/readiness asset only; no real healthcare client, hospital, clinic, patient, PHI/ePHI, personal data, health data, production export, cloud bill, credential, testimonial, certification, platform partnership, EHDS/GDPR/UK GDPR/EU AI Act/NIS2/ISO/SOC2/NHS DSPT/DTAC/HIPAA compliance proof, legal/privacy/security/medical/clinical/procurement/architecture/FinOps advice, ranking, demand, lead, patient, appointment, revenue, savings, ROI, patient outcome or AI-accuracy claim was made. No outreach.
 
+## 2026-09-07 llms.txt AI discoverability curation
+
+- Decision: reduce AI-search / LLM-ingestion noise by keeping the public `llms.txt` within the repo's curated-size contract while preserving core positioning, buyer routes and proof-boundary instructions.
+- Updated: `llms.txt` compressed duplicated tools, proof-of-method and safe-AI publication entries from 136 local lines to 118 local lines.
+- Verification performed: focused inbound-growth pytest returned `1 passed`; `git diff --check` passed; public `https://aicloudstrategist.com/llms.txt` returned HTTP 200 with 119 lines and required markers for Enterprise AI, Business Growth Systems, AI Creative Studio, "Do not infer" and the support mirror citation.
+- Proof boundary: curation only; no new customers, rankings, analytics, revenue, savings, testimonials, certifications or outcome claims were added.
+
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
 ## 2026-09-07 Healthcare AI Patient GrowthOS revenue bridge
