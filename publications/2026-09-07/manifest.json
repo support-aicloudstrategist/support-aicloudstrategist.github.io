@@ -9,5 +9,16 @@
     "csv": "https://aicloudstrategist.com/publications/2026-09-07/manual-work-automation-triage.csv",
     "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-07",
     "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, revenue, savings, ranking, customer-result, approval, or guaranteed-performance advice."
+  },
+  {
+    "slot": "evening",
+    "slug": "cloud-bill-owner-triage",
+    "title": "Cloud Bill Owner Triage: 6 Checks Before You Cut Costs",
+    "url": "https://aicloudstrategist.com/publications/2026-09-07/cloud-bill-owner-triage.html",
+    "png": "https://aicloudstrategist.com/publications/2026-09-07/cloud-bill-owner-triage.png",
+    "svg": "https://aicloudstrategist.com/publications/2026-09-07/cloud-bill-owner-triage.svg",
+    "csv": "https://aicloudstrategist.com/publications/2026-09-07/cloud-bill-owner-triage.csv",
+    "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-07",
+    "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice."
   }
 ]

@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate Memphis infographic titled 'Cloud Bill Owner Triage: 6 Checks Before You Cut Costs'. Six rounded cards, numbered 1 to 6, with check, owner question, and safe first action. Use navy, sky blue, lime, amber, violet, orange, and red accents. Aspect 4:3. Include educational-only truth boundary in footer.
