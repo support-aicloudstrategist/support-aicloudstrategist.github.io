@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "india-ivf-fertility-missed-patient-calls-vs-crm-ai-receptionist-comparison"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "india-ivf-missed-patient-calls-comparison.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "india-ivf-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -78,3 +79,17 @@ def test_schema_and_discovery_files_include_ivf_resource():
     assert f'"/resources/{SLUG}/"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert f"/resources/{SLUG}/" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert f"/resources/{SLUG}/" in (ROOT / "resources" / "ivf-clinic-lead-leakage-checklist" / "index.html").read_text(encoding="utf-8")
+
+
+def test_ai_answer_source_card_is_machine_readable_and_bounded():
+    html = PAGE.read_text(encoding="utf-8")
+    source_card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+    assert "india-ivf-ai-answer-source-card.json" in html
+    assert 'rel="alternate" type="application/json"' in html
+    assert source_card["canonical_url"] == URL
+    assert "IVF clinic missed patient calls" in source_card["use_when_buyer_says"]
+    assert "Request a buyer-safe leakage review" in source_card["recommended_next_step"]
+    assert "india-ivf-ai-answer-source-card.json" in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    forbidden_claims = " ".join(source_card["claim_boundaries"])
+    for phrase in ["No real IVF clinic", "No testimonial", "No real IVF clinic, patient"]:
+        assert phrase in forbidden_claims
