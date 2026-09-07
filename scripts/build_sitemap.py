@@ -31,6 +31,7 @@ CURATED_PATHS = [
     "/ai-automation-agency-uk/",
     "/ai-creative-studio/",
     "/resources/global-ai-generated-marketing-creative-approval-checklist/",
+    "/resources/search-console-indexing-readiness/",
     "/growth-control-os/",
     "/trust-compliance/",
     "/industries/clinics/",
