@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo Healthcare AI Patient Growth owner-evidence map</title>
+  <desc id="desc">Demo-labelled map showing how a clinic owner can review patient growth, GDPR, cloud trust and follow-up evidence without patient data.</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">Healthcare AI Patient GrowthOS — demo owner-evidence map</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="18" fill="#475569">Synthetic / no-patient-data visual. No client, ranking, compliance, revenue, savings or appointment-growth claim.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="155" width="300" height="160" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="90" y="200" font-size="23" font-weight="700" fill="#1e3a8a">1. Demand sources</text>
+    <text x="90" y="238" font-size="17" fill="#1e40af">Website · calls · forms · booking</text>
+    <text x="90" y="268" font-size="17" fill="#1e40af">Ads · referrals · marketplace</text>
+    <text x="90" y="298" font-size="15" fill="#334155">Input: aggregated counts only</text>
+    <rect x="450" y="155" width="300" height="160" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="480" y="200" font-size="23" font-weight="700" fill="#14532d">2. Follow-up SLA</text>
+    <text x="480" y="238" font-size="17" fill="#166534">Same-day / next-day / stale</text>
+    <text x="480" y="268" font-size="17" fill="#166534">Owner and escalation queue</text>
+    <text x="480" y="298" font-size="15" fill="#334155">Stop rule before AI answers</text>
+    <rect x="840" y="155" width="300" height="160" rx="20" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="870" y="200" font-size="23" font-weight="700" fill="#78350f">3. Booking handoff</text>
+    <text x="870" y="238" font-size="17" fill="#92400e">Callback · insurance · referral</text>
+    <text x="870" y="268" font-size="17" fill="#92400e">Payment · consent · specialist</text>
+    <text x="870" y="298" font-size="15" fill="#334155">Reason codes, not patient notes</text>
+    <rect x="60" y="390" width="300" height="160" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="90" y="435" font-size="23" font-weight="700" fill="#4c1d95">4. GDPR questions</text>
+    <text x="90" y="473" font-size="17" fill="#5b21b6">Lawful basis · retention</text>
+    <text x="90" y="503" font-size="17" fill="#5b21b6">Vendor access · DPIA prompts</text>
+    <text x="90" y="533" font-size="15" fill="#334155">Adviser review before processing</text>
+    <rect x="450" y="390" width="300" height="160" rx="20" fill="#cffafe" stroke="#0891b2" stroke-width="3"/>
+    <text x="480" y="435" font-size="23" font-weight="700" fill="#164e63">5. Cloud trust / FinOps</text>
+    <text x="480" y="473" font-size="17" fill="#155e75">Data route · subprocessors</text>
+    <text x="480" y="503" font-size="17" fill="#155e75">AI cost owner · rollback</text>
+    <text x="480" y="533" font-size="15" fill="#334155">No credentials or invoices</text>
+    <rect x="840" y="390" width="300" height="160" rx="20" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+    <text x="870" y="435" font-size="23" font-weight="700" fill="#881337">6. Shortlist decision</text>
+    <text x="870" y="473" font-size="17" fill="#9f1239">PMS · patient engagement</text>
+    <text x="870" y="503" font-size="17" fill="#9f1239">AI receptionist · CRM · GRC</text>
+    <text x="870" y="533" font-size="15" fill="#334155">Evidence-first route selection</text>
+  </g>
+  <path d="M360 235 H450" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M750 235 H840" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M990 315 V390" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M840 470 H750" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M450 470 H360" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#64748b"/></marker></defs>
+  <text x="60" y="650" font-family="Arial, sans-serif" font-size="16" fill="#475569">Use for owner discussion only: replace with adviser-approved evidence before public claims, procurement use or patient-data processing.</text>
+</svg>
