@@ -1,5 +1,12 @@
 # AICS growth value operator log
 
+## 2026-09-07 Factory manual-work reduction pricing bridge
+
+- Decision: reduce conversion friction for small manufacturers who already find the factory manual-work problem page but need a clear first paid diagnostic path before ERP/MRP, workflow automation, custom software or WhatsApp automation spend.
+- Updated: `/pricing.html#fixed-scope-diagnostics` now surfaces a Factory manual-work reduction diagnostic bridge, linked to the existing problem page, synthetic owner-evidence CSV, free fit-check route and workflow automation service path; fixed-scope diagnostics ItemList now carries 35 verified first-offer entries.
+- Verification performed: focused pytest returned `6 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, factory problem page and CSV with expected bridge/count markers.
+- Proof boundary: synthetic buyer-education and diagnostic bridge only; no real factory client, customer data, employee record, ERP export, vendor contract, invoice, credential, production access, job-cut, savings, productivity, delivery, revenue, ranking, demand, lead, customer, testimonial, certification, software-partnership or outcome claim was made. No outreach.
+
 ## 2026-09-07 North America US healthcare AI patient-access proof-room source refresh
 
 - Decision: improve North America top-3/top-5 consideration for Healthcare GrowthOS / Patient GrowthOS / Cloud Trust / FinOps buyers by grounding the existing US healthcare patient-access proof room in current authority/category signals instead of chasing buyers with insufficient proof.
