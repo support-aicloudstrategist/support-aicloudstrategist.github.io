@@ -1,5 +1,13 @@
 # AICS growth value operator log
 
+## 2026-09-07 North America US healthcare AI patient-access proof-room source refresh
+
+- Decision: improve North America top-3/top-5 consideration for Healthcare GrowthOS / Patient GrowthOS / Cloud Trust / FinOps buyers by grounding the existing US healthcare patient-access proof room in current authority/category signals instead of chasing buyers with insufficient proof.
+- Updated: `/resources/us-healthcare-ai-patient-access-proof-room/` with a 7 Sep 2026 buyer-search refresh, source-backed evidence anchors for CMS prior authorization, ONC HTI-1, FinOps Framework and cloud healthcare category expectations, plus Article `dateModified=2026-09-07`.
+- Research performed: selected North America at 11:27 UTC as the US Eastern business day opened. Direct public-source checks returned HTTP 200 for CMS Interoperability and Prior Authorization, ONC HTI-1, FinOps Foundation Framework, Phreesia, Luma Health, Waystar, Availity, Notable, Vanta, AWS healthcare and Google Cloud healthcare. HHS HIPAA pages, Drata healthcare and Azure healthcare returned HTTP 403, and one CloudZero healthcare URL returned 404; treated as access limitations, not product or authority claims.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 466 indexable sitemap URLs`; focused pytest returned `9 passed` across US healthcare proof room and factory discovery guard; `git diff --check` passed; local HTTP checks returned 200 for page, CSV, SVG, sitemap and `llms.txt`; commit `ec4b4bd` pushed; public deployment attempt 2 returned 200 with expected page/CSV/SVG/llms/sitemap markers.
+- Proof boundary: page-copy improvement and synthetic proof-room route only; no real medical group, healthtech customer, patient, PHI/ePHI, payer record, claim, cloud account, production export, credential, testimonial, logo, certification, platform partnership, HIPAA/SOC2/HITRUST/BAA compliance proof, legal/privacy/security/clinical/medical/billing/coding/payer/procurement/audit/FinOps advice, ranking, demand, lead, appointment, denial-reduction, revenue, savings, ROI, AI-accuracy or top-3 result claim was made. No outreach.
+
 ## 2026-09-07 small-factory owner-evidence CSV pack
 
 - Decision: remove a trust/revenue bottleneck on the small-factory manual-work route by giving owners a no-credentials worksheet before ERP, workflow automation or custom software discussions.
