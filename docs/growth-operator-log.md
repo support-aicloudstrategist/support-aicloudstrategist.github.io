@@ -1,5 +1,12 @@
 # AICS growth value operator log
 
+## 2026-09-07 sitemap final-route indexing cleanup
+
+- Decision: fix the highest-current SEO trust bottleneck from the Search Console sitemap warning by keeping sitemap URLs on final public 200 routes only.
+- Updated: `scripts/build_sitemap.py` now excludes exact `_redirects` sources and middleware-denied routes, normalizes `.html` canonicals to final extensionless routes, and promotes `/industries/clinics/` instead of redirected `/healthcare-growthos/`.
+- Verification performed: `python3 scripts/build_sitemap.py` wrote 466 indexable sitemap URLs; focused local checks found 0 redirect/blocked entries and 0 `.html` entries; public `https://aicloudstrategist.com/sitemap.xml` returned HTTP 200 with 466 URLs and live checks found 0 redirects/errors across all sitemap URLs.
+- Proof boundary: technical SEO cleanup only; no ranking, traffic, lead, revenue, customer, testimonial, savings or indexing-result claim was made.
+
 ## 2026-09-07 Europe healthcare EHDS + EU AI Act cloud trust source map
 
 - Decision: improve European healthcare top-3/top-5 consideration by filling a source-map gap that connects EHDS, EU AI Act, GDPR/DPIA, NIS2 supplier evidence and cloud/AI FinOps ownership before patient engagement, AI receptionist, trust-centre, GRC or platform spend.
