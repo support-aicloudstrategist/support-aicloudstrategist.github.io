@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-07 Manual-work automation triage revenue bridge
+
+- Decision: reduce conversion friction for owners considering workflow automation, RPA, AI agents or CRM cleanup by connecting the new manual-work triage publication to buyer entry points.
+- Updated: `/pricing.html` now surfaces a manual-work automation triage diagnostic bridge with checklist, CSV and fit-check links; `/resources/` now links the publication, CSV, infographic and diagnostic bridge near the featured publication area.
+- Added: `tests/test_manual_work_automation_triage_revenue_bridge.py`.
+- Verification performed: `python3 scripts/build_sitemap.py` wrote 473 indexable sitemap URLs; focused pytest returned `10 passed`; `git diff --check` passed; local HTTP checks returned 200 for pricing, resources, publication, CSV and sitemap markers; public HTTP checks returned 200 for pricing, resources, publication and CSV markers on deployment attempt 2.
+- Proof boundary: educational checklist and diagnostic bridge only; no customer data, employee records, credentials, production access, legal/privacy advice, savings, revenue, ROI, automation-performance, ranking, demand, lead, customer or outcome claim was made.
+
 ## 2026-09-07 Cloud-cost checklist proof-boundary and owner-board pack
 
 - Decision: improve credibility and revenue readiness for a high-intent Cloud FinOps discovery route by repairing `47-cloud-cost-checks-before-finops-consultant` before further commercial reuse.
