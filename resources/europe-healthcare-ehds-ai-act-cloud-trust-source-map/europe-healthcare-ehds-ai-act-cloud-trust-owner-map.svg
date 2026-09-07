@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo Europe healthcare EHDS EU AI Act cloud trust owner map</title>
+  <desc id="desc">Synthetic no-patient-data owner map showing EHDS, EU AI Act, GDPR DPIA, supplier, NIS2 cloud and FinOps evidence lanes.</desc>
+  <rect width="1200" height="720" fill="#07111f"/>
+  <text x="60" y="70" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Demo owner map: EHDS + EU AI Act + Cloud Trust</text>
+  <text x="60" y="110" fill="#a7b3c8" font-family="Inter, Arial, sans-serif" font-size="18">Synthetic/readiness asset only · no patient data · no credentials · no compliance or outcome claim</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="17">
+    <rect x="60" y="155" width="320" height="105" rx="18" fill="#12233a" stroke="#38bdf8"/>
+    <text x="85" y="195" fill="#ffffff" font-weight="700">1. EHDS/GDPR sources</text>
+    <text x="85" y="225" fill="#cbd5e1">Owner: Ops + DPO/adviser</text>
+    <text x="85" y="248" fill="#cbd5e1">Boundary: redacted categories only</text>
+    <rect x="440" y="155" width="320" height="105" rx="18" fill="#12233a" stroke="#a78bfa"/>
+    <text x="465" y="195" fill="#ffffff" font-weight="700">2. EU AI Act trace</text>
+    <text x="465" y="225" fill="#cbd5e1">Owner: AI/product + clinical gov</text>
+    <text x="465" y="248" fill="#cbd5e1">Boundary: adviser classification</text>
+    <rect x="820" y="155" width="320" height="105" rx="18" fill="#12233a" stroke="#fbbf24"/>
+    <text x="845" y="195" fill="#ffffff" font-weight="700">3. DPIA answer source</text>
+    <text x="845" y="225" fill="#cbd5e1">Owner: privacy + security</text>
+    <text x="845" y="248" fill="#cbd5e1">Boundary: no compliance claim</text>
+    <rect x="60" y="315" width="320" height="105" rx="18" fill="#12233a" stroke="#34d399"/>
+    <text x="85" y="355" fill="#ffffff" font-weight="700">4. Supplier evidence</text>
+    <text x="85" y="385" fill="#cbd5e1">Owner: procurement + vendor risk</text>
+    <text x="85" y="408" fill="#cbd5e1">Boundary: no portal credentials</text>
+    <rect x="440" y="315" width="320" height="105" rx="18" fill="#12233a" stroke="#fb7185"/>
+    <text x="465" y="355" fill="#ffffff" font-weight="700">5. NIS2 cloud dependency</text>
+    <text x="465" y="385" fill="#cbd5e1">Owner: cloud/platform</text>
+    <text x="465" y="408" fill="#cbd5e1">Boundary: no logs/secrets</text>
+    <rect x="820" y="315" width="320" height="105" rx="18" fill="#12233a" stroke="#22c55e"/>
+    <text x="845" y="355" fill="#ffffff" font-weight="700">6. Cloud/AI FinOps</text>
+    <text x="845" y="385" fill="#cbd5e1">Owner: finance + platform</text>
+    <text x="845" y="408" fill="#cbd5e1">Boundary: no ROI/savings claim</text>
+  </g>
+  <rect x="60" y="500" width="1080" height="120" rx="22" fill="#0f1b2d" stroke="#64748b"/>
+  <text x="90" y="545" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">AICS role in top-3/top-5 consideration</text>
+  <text x="90" y="585" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Make the evidence room buyer-forwardable before platform demos, GRC questionnaires, AI pilots or cloud commitments.</text>
+  <text x="90" y="612" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18">Pause any client, certification, ranking, compliance, patient-outcome, revenue, ROI or cost-saving claim until written evidence exists.</text>
+</svg>

@@ -1,5 +1,14 @@
 # AICS growth value operator log
 
+## 2026-09-07 Europe healthcare EHDS + EU AI Act cloud trust source map
+
+- Decision: improve European healthcare top-3/top-5 consideration by filling a source-map gap that connects EHDS, EU AI Act, GDPR/DPIA, NIS2 supplier evidence and cloud/AI FinOps ownership before patient engagement, AI receptionist, trust-centre, GRC or platform spend.
+- Created: `/resources/europe-healthcare-ehds-ai-act-cloud-trust-source-map/` with synthetic no-patient-data CSV, demo owner-map SVG and Article/Dataset/FAQ/Breadcrumb structured data.
+- Updated: `/resources/`, `llms.txt`, `scripts/build_sitemap.py`, and regenerated `sitemap.xml`.
+- Research performed: selected Europe / UK-EU because the run landed at 09:17 UTC during European business hours; direct public source checks returned HTTP 200 for European Commission EHDS, European Commission AI Act, European Commission NIS2, ICO AI guidance, FinOps Foundation Framework, Accurx, DrDoctor, Birdie and Vanta healthcare pages. Google was blocked, DuckDuckGo challenged, Doctolib returned 403 and a sampled Drata healthcare URL returned 404; rankings and demand remain unverified.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 476 indexable sitemap URLs`; focused pytest returned `2 passed in 0.07s`; `git diff --check` passed; local HTTP checks returned 200 for page, CSV, SVG, resources hub, `llms.txt` and sitemap markers.
+- Proof boundary: synthetic/readiness asset only; no real healthcare client, hospital, clinic, patient, PHI/ePHI, personal data, health data, production export, cloud bill, credential, testimonial, certification, platform partnership, EHDS/GDPR/UK GDPR/EU AI Act/NIS2/ISO/SOC2/NHS DSPT/DTAC/HIPAA compliance proof, legal/privacy/security/medical/clinical/procurement/architecture/FinOps advice, ranking, demand, lead, patient, appointment, revenue, savings, ROI, patient outcome or AI-accuracy claim was made. No outreach.
+
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
 ## 2026-09-07 Healthcare AI Patient GrowthOS revenue bridge

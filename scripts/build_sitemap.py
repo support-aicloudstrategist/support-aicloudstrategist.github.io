@@ -150,6 +150,7 @@ CURATED_PATHS = [
     "/resources/global-dental-implant-follow-up-vs-crm-ai-receptionist-comparison/",
     "/resources/us-dental-practice-missed-call-treatment-plan-follow-up-checklist/",
     "/resources/europe-private-clinic-gdpr-patient-growthos-evidence-checklist/",
+    "/resources/europe-healthcare-ehds-ai-act-cloud-trust-source-map/",
     "/resources/europe-private-clinic-patient-growthos-dashboard-demo/",
     "/resources/europe-private-clinic-patient-growthos-vs-practice-management-platforms-comparison/",
     "/resources/europe-private-clinic-no-credentials-intake-policy/",
