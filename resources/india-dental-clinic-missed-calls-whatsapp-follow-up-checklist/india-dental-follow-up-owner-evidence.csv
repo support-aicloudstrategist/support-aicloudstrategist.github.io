@@ -1,0 +1,6 @@
+field,synthetic_example,owner_question,human_review_gate,unsafe_claim_to_block
+missed_call_queue,"After-hours implant consult call, no patient identifiers","Who owns callback and by when?","Escalate pain/urgent symptom/clinical question to dentist or qualified staff","Do not claim more booked implants or patient growth"
+whatsapp_source,"Google Business Profile WhatsApp enquiry tagged as implant consult","Was source captured without storing sensitive health details?","Escalate consent/notice wording to qualified privacy/legal adviser","Do not claim DPDP compliance"
+treatment_plan_followup,"Estimate shared; finance question pending; next action owner assigned","Is the follow-up status visible to owner weekly?","Escalate treatment suitability, discounts and guarantees to clinic leadership","Do not promise treatment acceptance or revenue"
+no_show_recovery,"Reminder sent; patient did not confirm; callback owner set","Is no-show recovery separated from new leads?","Escalate clinical risk or complaint to qualified staff","Do not claim no-show reduction"
+front_desk_capacity,"Lunch-hour calls missed; WhatsApp replies delayed beyond same day","Can routing/template/dashboard changes fix leakage before software spend?","Escalate staffing and clinical decisions to clinic owner","Do not claim AI can replace staff safely"

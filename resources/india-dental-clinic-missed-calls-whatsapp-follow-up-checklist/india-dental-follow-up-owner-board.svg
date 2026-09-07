@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic India dental missed-call and WhatsApp owner board</title>
+  <desc id="desc">No-patient-data demo board showing enquiry source, queue age, owner, safety gate and next action for dental clinic follow-up.</desc>
+  <rect width="1200" height="720" fill="#f6fbff"/>
+  <rect x="60" y="50" width="1080" height="620" rx="30" fill="#ffffff" stroke="#cfe0ee" stroke-width="3"/>
+  <text x="95" y="105" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" fill="#071827">India Dental Clinic Follow-Up Owner Board</text>
+  <text x="95" y="142" font-family="Inter,Arial,sans-serif" font-size="18" fill="#496174">Synthetic demo · no patient names · no phone numbers · no clinical records</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="95" y="190" width="1010" height="70" rx="16" fill="#061826"/>
+    <text x="125" y="233" font-size="20" font-weight="700" fill="#ffffff">Source</text><text x="315" y="233" font-size="20" font-weight="700" fill="#ffffff">Queue age</text><text x="485" y="233" font-size="20" font-weight="700" fill="#ffffff">Owner</text><text x="655" y="233" font-size="20" font-weight="700" fill="#ffffff">Safety gate</text><text x="875" y="233" font-size="20" font-weight="700" fill="#ffffff">Next action</text>
+    <g font-size="18" fill="#102133">
+      <rect x="95" y="280" width="1010" height="76" rx="14" fill="#eaf7ff"/><text x="125" y="326">Missed call</text><text x="315" y="326">2h</text><text x="485" y="326">Front desk</text><text x="655" y="326">Urgent symptom?</text><text x="875" y="326">Call back</text>
+      <rect x="95" y="374" width="1010" height="76" rx="14" fill="#f1fff4"/><text x="125" y="420">WhatsApp</text><text x="315" y="420">Same day</text><text x="485" y="420">Treatment coordinator</text><text x="655" y="420">Consent/notice</text><text x="875" y="420">Approved template</text>
+      <rect x="95" y="468" width="1010" height="76" rx="14" fill="#fff7e6"/><text x="125" y="514">No-show</text><text x="315" y="514">Next day</text><text x="485" y="514">Reception lead</text><text x="655" y="514">Clinical concern?</text><text x="875" y="514">Reschedule queue</text>
+      <rect x="95" y="562" width="1010" height="76" rx="14" fill="#fff0f0"/><text x="125" y="608">Plan pending</text><text x="315" y="608">3d</text><text x="485" y="608">Clinic owner</text><text x="655" y="608">No guarantee claims</text><text x="875" y="608">Finance handoff</text>
+    </g>
+  </g>
+</svg>
