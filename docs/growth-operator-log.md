@@ -1,5 +1,12 @@
 # AICS growth value operator log
 
+## 2026-09-07 small-factory owner-evidence CSV pack
+
+- Decision: remove a trust/revenue bottleneck on the small-factory manual-work route by giving owners a no-credentials worksheet before ERP, workflow automation or custom software discussions.
+- Added: `/resources/customer-problem-search/factory-manual-work-reduce/factory-manual-work-owner-evidence.csv` and linked it from the factory route plus `llms.txt`.
+- Verification performed: `python3 scripts/build_sitemap.py` returned `wrote 466 indexable sitemap URLs`; focused pytest returned `3 passed`; local HTTP returned 200 for page, CSV and `llms.txt`; public `aicloudstrategist.com` and support mirror returned 200 for page and CSV with expected markers.
+- Proof boundary: synthetic worksheet only; no factory client, customer data, employee record, ERP export, vendor contract, invoice, credential, production access, job-cut, savings, productivity, delivery, revenue, ranking, demand, lead, customer, testimonial, certification, software-partnership or outcome claim was made.
+
 ## 2026-09-07 small-factory manual-work discovery route repair
 
 - Decision: improve a lowest-scoring revenue-discovery bottleneck for small manufacturing owners searching in layman terms before ERP, workflow automation or custom software spend.
