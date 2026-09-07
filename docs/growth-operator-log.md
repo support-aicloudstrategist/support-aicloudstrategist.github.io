@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-07 India diagnostic lab report-delay revenue bridge
+
+- Decision: reduce conversion friction for Indian diagnostic labs considering LIS add-ons, CRM cleanup, WhatsApp automation, call-centre support or AI receptionist spend by connecting the buyer-safe report-delay checklist to a sellable diagnostic path.
+- Updated: `/pricing.html` now surfaces an India diagnostic lab report-delay follow-up diagnostic bridge with checklist, synthetic CSV and fit-check links.
+- Added: `tests/test_pricing_india_diagnostic_lab_report_followup_bridge.py`.
+- Verification performed: focused pytest returned `7 passed`; `git diff --check` passed; local HTTP check confirmed pricing bridge markers; public HTTP checks returned 200 for `/pricing`, the lab resource page and CSV after deployment.
+- Proof boundary: synthetic buyer-education checklist and diagnostic bridge only; no patient data, health records, lab reports, phone numbers, LIS/CRM export, credentials, production access, DPDP compliance proof, legal/privacy/medical advice, ranking, demand, lead, appointment, report-turnaround, revenue, savings, ROI or automation-performance claim was made.
+
 ## 2026-09-07 Support-ticket backlog revenue bridge
 
 - Decision: reduce conversion friction for global support/CX teams comparing helpdesk AI chatbots, BPO support, ticket-deflection tooling or workflow automation by connecting the existing buyer-safe backlog comparison to a sellable diagnostic path.
