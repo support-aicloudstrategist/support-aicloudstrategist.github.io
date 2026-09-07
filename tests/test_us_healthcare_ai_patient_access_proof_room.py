@@ -17,28 +17,44 @@ def json_ld_documents(html):
 
 def test_us_healthcare_ai_patient_access_proof_room_targets_north_america_buyer_language():
     html = PAGE.read_text(encoding="utf-8")
-    assert "4 Sep 2026 North America buyer-search refresh" in html
+    assert "7 Sep 2026 North America buyer-search refresh" in html
     assert "patient access leakage" in html
     assert "AI receptionist for medical practices" in html
     assert "prior authorization status" in html
     assert "HIPAA AI vendor risk" in html
     assert "cloud cost allocation" in html
     assert "LLM/API spend" in html
-    assert "US East and Central business day was active" in html
+    assert "North America was entering the US Eastern business day" in html
 
 
 def test_us_healthcare_ai_patient_access_proof_room_records_competitor_categories_and_source_limits():
     html = PAGE.read_text(encoding="utf-8")
     for phrase in [
-        "Phreesia positions patient intake around revenue growth, no-show reduction and front-desk chaos",
-        "Luma Health frames the market as operational AI",
-        "Waystar emphasizes cloud-based revenue cycle management",
-        "Availity emphasizes secure exchange between payers, providers and health IT vendors",
-        "Notable positions as an AI platform purpose-built for healthcare",
-        "Artera and Experian prior-authorization pages returned HTTP 403",
-        "not as a negative product claim",
+        "Direct public-source checks returned HTTP 200 for CMS Interoperability and Prior Authorization",
+        "ONC HTI-1",
+        "FinOps Foundation Framework",
+        "Phreesia, Luma Health, Waystar, Availity, Notable, Vanta",
+        "HHS HIPAA pages, Drata healthcare and Azure healthcare returned HTTP 403",
+        "one CloudZero healthcare URL returned 404",
+        "not negative product or authority claims",
+        "CMS interoperability and prior authorization",
+        "algorithm transparency language",
+        "cloud/LLM/API spend owners before discussing savings",
+        "AWS and Google Cloud healthcare pages",
+        "AICS should remain the redacted evidence and owner-handoff layer",
         "AICS should not claim to replace these systems",
         "no-credentials evidence room",
+    ]:
+        assert phrase in html
+
+
+def test_us_healthcare_ai_patient_access_proof_room_preserves_legacy_vendor_context():
+    html = PAGE.read_text(encoding="utf-8")
+    for phrase in [
+        "Patient engagement and patient access:",
+        "RCM/prior authorization/eligibility:",
+        "Healthcare AI automation:",
+        "Trust and spend evidence:",
     ]:
         assert phrase in html
 
@@ -85,7 +101,7 @@ def test_us_healthcare_ai_patient_access_proof_room_metadata_and_discovery_files
     article = next(node for node in graph_docs if node.get("@type") == "Article")
     dataset = next(node for node in graph_docs if node.get("@type") == "Dataset")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-09-04"
+    assert article["dateModified"] == "2026-09-07"
     assert "US healthcare AI patient access" in article["about"]
     assert dataset["url"].endswith("/us-healthcare-ai-patient-access-proof-room.csv")
     assert "/resources/us-healthcare-ai-patient-access-proof-room/" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
