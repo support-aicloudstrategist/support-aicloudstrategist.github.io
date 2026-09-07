@@ -300,7 +300,7 @@ def canonical_path_for(page: Path) -> str | None:
     if parsed.scheme != "https" or parsed.netloc != "aicloudstrategist.com":
         return None
     path = parsed.path
-    if path.startswith("/publications/") and path.endswith(".html"):
+    if path.endswith(".html"):
         path = path.removesuffix(".html")
     return path or "/"
 
