@@ -230,12 +230,20 @@ def redirect_sources() -> set[str]:
 
 
 def middleware_blocked_routes() -> set[str]:
-    """Return exact routes denied by Cloudflare Pages middleware."""
+    """Return exact routes denied by Cloudflare Pages middleware.
+
+    Only parse the literal blockedExact array. A broader regex over the code
+    body can accidentally capture normal string literals from helper functions
+    and remove legitimate public pages from the sitemap.
+    """
     middleware = ROOT / "functions" / "_middleware.ts"
     if not middleware.is_file():
         return set()
     source = middleware.read_text(encoding="utf-8", errors="ignore")
-    blocked_section = source.split("const blockedPrefixes", 1)[0]
+    match = re.search(r"const\s+blockedExact\s*=\s*new\s+Set\s*\(\s*\[(.*?)\]\s*\)", source, re.S)
+    if not match:
+        return set()
+    blocked_section = match.group(1)
     return {clean_route(match.group(1)) for match in MIDDLEWARE_BLOCK_RE.finditer(blocked_section)}
 
 
@@ -300,8 +308,6 @@ def canonical_path_for(page: Path) -> str | None:
     if parsed.scheme != "https" or parsed.netloc != "aicloudstrategist.com":
         return None
     path = parsed.path
-    if path.endswith(".html"):
-        path = path.removesuffix(".html")
     return path or "/"
 
 

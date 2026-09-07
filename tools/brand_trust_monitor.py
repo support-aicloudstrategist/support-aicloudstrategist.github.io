@@ -20,6 +20,8 @@ from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
+REDIRECT_RE = re.compile(r"^(?P<source>/\S+)\s+(?P<target>\S+)\s+(?P<status>30[18])(?:\s|$)")
+MIDDLEWARE_BLOCK_RE = re.compile(r'"(/[^"\\]*(?:\\.[^"\\]*)?)"')
 PUBLIC_SKIP_PARTS = {
     ".git",
     ".workspace-snapshots",
@@ -106,6 +108,51 @@ def normalize_url(url: str) -> str:
     return url.rstrip("/")
 
 
+def clean_route(path: str) -> str:
+    return path if path == "/" else path.rstrip("/")
+
+
+def route_key_from_url(url: str) -> str:
+    if not url.startswith(BASE_URL):
+        return ""
+    path = url.removeprefix(BASE_URL) or "/"
+    return clean_route(path)
+
+
+def redirect_sources() -> set[str]:
+    redirects = ROOT / "_redirects"
+    sources: set[str] = set()
+    if not redirects.is_file():
+        return sources
+    for raw_line in redirects.read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        match = REDIRECT_RE.match(line)
+        if not match:
+            continue
+        source = match.group("source")
+        if "*" in source or ":" in source:
+            continue
+        sources.add(clean_route(source))
+    return sources
+
+
+def middleware_blocked_routes() -> set[str]:
+    middleware = ROOT / "functions" / "_middleware.ts"
+    if not middleware.is_file():
+        return set()
+    source = middleware.read_text(encoding="utf-8", errors="ignore")
+    match = re.search(r"const\s+blockedExact\s*=\s*new\s+Set\s*\(\s*\[(.*?)\]\s*\)", source, re.S)
+    if not match:
+        return set()
+    return {clean_route(item.group(1)) for item in MIDDLEWARE_BLOCK_RE.finditer(match.group(1))}
+
+
+def blocked_public_routes() -> set[str]:
+    return redirect_sources() | middleware_blocked_routes()
+
+
 def parse_jsonld(text: str, rel: str, findings: list[Finding]) -> int:
     count = 0
     for match in re.finditer(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', text, re.S | re.I):
@@ -123,6 +170,7 @@ def check_repo() -> dict:
     html_files = list(public_html_files())
     jsonld_blocks = 0
     urls_from_pages: set[str] = set()
+    blocked_routes = blocked_public_routes()
 
     sitemap_path = ROOT / "sitemap.xml"
     sitemap_urls: set[str] = set()
@@ -135,6 +183,9 @@ def check_repo() -> dict:
 
     for path in html_files:
         rel = path.relative_to(ROOT).as_posix()
+        route_key = route_key_from_url(page_url(path))
+        if route_key in blocked_routes:
+            continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         lower = text.lower()
         parser = LinkParser()
@@ -147,7 +198,9 @@ def check_repo() -> dict:
             findings.append(Finding("warn", "canonical", rel, "Missing canonical link"))
             urls_from_pages.add(normalize_url(page_url(path)))
         elif parser.canonicals and not noindex:
-            urls_from_pages.add(normalize_url(parser.canonicals[0]))
+            canonical = normalize_url(parser.canonicals[0])
+            if route_key_from_url(canonical) not in blocked_routes:
+                urls_from_pages.add(canonical)
         if not redirect_shim:
             if rel != "404.html" and parser.descriptions == 0:
                 findings.append(Finding("warn", "metadata", rel, "Missing meta description"))
