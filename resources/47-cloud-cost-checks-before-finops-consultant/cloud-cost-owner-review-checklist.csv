@@ -1,0 +1,9 @@
+gate,owner_question,evidence_to_collect,stop_rule
+scope,Which account/project/subscription and month range is in scope?,Redacted account/project names and 3-month billing period only,"Stop if the scope requires production credentials, secrets or unrestricted console access."
+data,Can the review start from exports rather than logins?,CSV/PDF billing export with IDs and customer details removed,"No cloud bill, invoice, customer data, personal data, production data, credentials, secrets or API keys should be shared without owner approval."
+visibility,Who owns each top service or workload?,Top-service list mapped to finance and technical owner,"Stop if an unowned production system may be changed; assign owner review first."
+waste,Which candidates are safe to inspect before change?,Idle/oversized/storage/network/AI usage candidates marked read-only,"Do not shut down, resize, delete, change retention or alter commitments without approval gate."
+claims,What can be claimed externally?,Only state that a readiness review/template exists,"Do not claim rankings, demand, leads, customers, revenue, savings, ROI, cost-reduction, outcome or performance results without real evidence."
+advice,What specialist advice is still needed?,Questions for cloud architect/security/finance/legal/procurement reviewers,"This template is not legal, privacy, security, procurement, tax, financial, architecture or FinOps advice."
+commercial,What is the safe next step before tool/consultant spend?,Fixed-scope no-credentials diagnostic fit check with redacted inputs,"Stop if the proposed review asks for production changes before evidence and owner approval."
+proof_boundary,Is this client proof?,Synthetic/readiness template only,"No real client, customer, cloud account, cloud bill, invoice, production export, testimonial, certification, savings, ROI or cost-reduction proof is included."

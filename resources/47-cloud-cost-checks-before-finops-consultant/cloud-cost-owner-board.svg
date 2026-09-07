@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo cloud cost owner board</title>
+  <desc id="desc">Synthetic owner board for cloud cost visibility, waste triage, safety gates and owner approval before FinOps consultant or platform spend.</desc>
+  <rect width="1200" height="720" fill="#07111f"/>
+  <text x="60" y="74" fill="#e5f2ff" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">Cloud cost owner board</text>
+  <text x="60" y="110" fill="#9fb3c8" font-family="Inter,Arial,sans-serif" font-size="18">Demo/synthetic — no real client, bill, credential, production log, savings or ROI proof</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="60" y="150" width="250" height="430" rx="22" fill="#10243b" stroke="#3b82f6"/>
+    <text x="85" y="190" fill="#bfdbfe" font-size="18" font-weight="700">1 · Visibility</text>
+    <text x="85" y="230" fill="#e5f2ff" font-size="16">• 3-month billing export</text>
+    <text x="85" y="260" fill="#e5f2ff" font-size="16">• Top 10 services</text>
+    <text x="85" y="290" fill="#e5f2ff" font-size="16">• AI/GPU/LLM split</text>
+    <text x="85" y="320" fill="#e5f2ff" font-size="16">• Support/marketplace split</text>
+    <rect x="85" y="380" width="190" height="56" rx="12" fill="#0b1627"/>
+    <text x="104" y="414" fill="#93c5fd" font-size="15">Read-only first</text>
+
+    <rect x="335" y="150" width="250" height="430" rx="22" fill="#122a26" stroke="#10b981"/>
+    <text x="360" y="190" fill="#a7f3d0" font-size="18" font-weight="700">2 · Waste triage</text>
+    <text x="360" y="230" fill="#e5f2ff" font-size="16">• Idle compute</text>
+    <text x="360" y="260" fill="#e5f2ff" font-size="16">• Oversized databases</text>
+    <text x="360" y="290" fill="#e5f2ff" font-size="16">• Old snapshots/logs</text>
+    <text x="360" y="320" fill="#e5f2ff" font-size="16">• Cross-region transfer</text>
+    <rect x="360" y="380" width="190" height="56" rx="12" fill="#0b1627"/>
+    <text x="383" y="414" fill="#6ee7b7" font-size="15">Evidence queue</text>
+
+    <rect x="610" y="150" width="250" height="430" rx="22" fill="#33220b" stroke="#f59e0b"/>
+    <text x="635" y="190" fill="#fde68a" font-size="18" font-weight="700">3 · Safety gates</text>
+    <text x="635" y="230" fill="#e5f2ff" font-size="16">• Do-not-touch systems</text>
+    <text x="635" y="260" fill="#e5f2ff" font-size="16">• Backup/retention risk</text>
+    <text x="635" y="290" fill="#e5f2ff" font-size="16">• Security/access risk</text>
+    <text x="635" y="320" fill="#e5f2ff" font-size="16">• Commitment lock-in</text>
+    <rect x="635" y="380" width="190" height="56" rx="12" fill="#0b1627"/>
+    <text x="658" y="414" fill="#fbbf24" font-size="15">Owner approval</text>
+
+    <rect x="885" y="150" width="250" height="430" rx="22" fill="#2a1638" stroke="#a855f7"/>
+    <text x="910" y="190" fill="#e9d5ff" font-size="18" font-weight="700">4 · 30-day plan</text>
+    <text x="910" y="230" fill="#e5f2ff" font-size="16">• Safe fixes</text>
+    <text x="910" y="260" fill="#e5f2ff" font-size="16">• Engineering review</text>
+    <text x="910" y="290" fill="#e5f2ff" font-size="16">• Finance questions</text>
+    <text x="910" y="320" fill="#e5f2ff" font-size="16">• Tool/consultant decision</text>
+    <rect x="910" y="380" width="190" height="56" rx="12" fill="#0b1627"/>
+    <text x="933" y="414" fill="#d8b4fe" font-size="15">Next-step memo</text>
+  </g>
+  <text x="60" y="640" fill="#b6c8dc" font-family="Inter,Arial,sans-serif" font-size="17">Boundary: template only — not legal, privacy, security, procurement, tax, financial, architecture or FinOps advice.</text>
+  <text x="60" y="670" fill="#b6c8dc" font-family="Inter,Arial,sans-serif" font-size="17">No rankings, demand, leads, customers, revenue, savings, ROI, cost-reduction, outcome or automation-performance claim.</text>
+</svg>

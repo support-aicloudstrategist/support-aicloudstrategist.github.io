@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-07 Cloud-cost checklist proof-boundary and owner-board pack
+
+- Decision: improve credibility and revenue readiness for a high-intent Cloud FinOps discovery route by repairing `47-cloud-cost-checks-before-finops-consultant` before further commercial reuse.
+- Updated: `/resources/47-cloud-cost-checks-before-finops-consultant/` now includes a quick visual map, explicit evidence status, proof-boundary / owner-approval gate, and links to downloadable owner artifacts.
+- Added: `cloud-cost-owner-review-checklist.csv`, demo-labelled `cloud-cost-owner-board.svg`, and `tests/test_cloud_cost_checks_owner_boundary_pack.py`.
+- Verification performed: `python3 scripts/build_sitemap.py` wrote 473 indexable sitemap URLs; focused pytest returned `3 passed`; local HTTP checks returned 200 for page, CSV, SVG and sitemap markers; `git diff --check` passed; risk-boundary benchmark moved buyer-forwardable pages from 15 to 16 and repair-first pages from 274 to 273.
+- Proof boundary: synthetic/readiness templates and demo visual only; no client/customer/cloud account/bill/invoice/production export/credential/secret/API key/log/testimonial/certification/ranking/demand/lead/customer/revenue/savings/ROI/cost-reduction/outcome/performance claim was made; no legal/privacy/security/procurement/tax/financial/architecture/FinOps advice; no outreach.
+
 ## 2026-09-05 AI reply readiness revenue bridge
 
 - Decision: reduce conversion friction for teams evaluating customer-facing AI replies by turning the AI Reply Readiness publication into a visible fixed-scope diagnostic path on `/pricing` and `/free-business-review/`.
