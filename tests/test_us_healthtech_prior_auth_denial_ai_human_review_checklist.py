@@ -9,6 +9,7 @@ REL = f"/resources/{SLUG}/"
 URL = "https://aicloudstrategist.com" + REL
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
+SOURCE_MAP = ROOT / "resources" / SLUG / "us-prior-auth-automation-source-map.csv"
 
 
 def html() -> str:
@@ -31,7 +32,7 @@ def test_page_indexable_canonical_schema_and_boundaries():
     assert {"Article", "Dataset", "FAQPage", "BreadcrumbList"}.issubset(types)
     article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-09-04"
+    assert article["dateModified"] == "2026-09-07"
     for marker in [
         "US healthtech prior authorization AI human review checklist",
         "prior authorization denial follow up evidence",
@@ -52,7 +53,7 @@ def test_research_snapshot_competitors_and_wedge():
     for marker in [
         "Region selected:",
         "North America / United States",
-        "06:37 US Eastern",
+        "09:46 US Eastern",
         "prior authorization delay",
         "denial follow-up",
         "AI appeal drafting healthcare",
@@ -61,6 +62,10 @@ def test_research_snapshot_competitors_and_wedge():
         "patient engagement platform comparison",
         "cloud cost owner dashboard",
         "LLM cost allocation",
+        "Waystar",
+        "Availity",
+        "Rhyme",
+        "Notable",
         "Phreesia",
         "Luma Health",
         "Artera",
@@ -74,10 +79,12 @@ def test_research_snapshot_competitors_and_wedge():
         "Harness",
         "AICS top-3/top-5 consideration wedge",
         "no-credentials, no-PHI evidence packet",
-        "ONC health IT privacy/security resources",
+        "CMS Interoperability and Prior Authorization final-rule fact sheet",
+        "AMA prior-authorization practice resources",
+        "AMA prior-authorization reform PDF",
         "returned HTTP 200",
-        "returned HTTP 403",
         "returned HTTP 404",
+        "not ranking, demand, lead, compliance or official-advice proof",
     ]:
         assert marker in source
 
@@ -143,8 +150,41 @@ def test_csv_is_synthetic_no_phi_and_owner_usable():
         assert marker in csv_text
 
 
+def test_source_map_csv_is_public_and_claim_safe():
+    source = html()
+    rows = list(csv.DictReader(SOURCE_MAP.open(newline="", encoding="utf-8")))
+    assert len(rows) == 10
+    assert set(rows[0]) == {
+        "source_type",
+        "source_or_alternative",
+        "public_url",
+        "reachability_2026_09_07",
+        "buyer_language_supported",
+        "aics_use",
+        "claim_boundary",
+    }
+    text = SOURCE_MAP.read_text(encoding="utf-8")
+    for marker in [
+        "CMS Interoperability and Prior Authorization final rule fact sheet",
+        "AMA prior authorization practice resources",
+        "Waystar prior authorization",
+        "Availity prior authorizations",
+        "Notable healthcare AI platform",
+        "Rhyme",
+        "No partnership endorsement ranking replacement or performance claim",
+        "Not used as evidence",
+    ]:
+        assert marker in text
+    assert "us-prior-auth-automation-source-map.csv" in source
+    assert "source-map CSV" in source
+
+
 def test_discovery_surfaces_are_wired():
-    assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
-    assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert REL in resources
+    assert URL in llms
+    assert "us-prior-auth-automation-source-map.csv" in resources
+    assert "us-prior-auth-automation-source-map.csv" in llms
     assert REL in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
