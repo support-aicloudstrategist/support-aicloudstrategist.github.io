@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-07 Healthcare AI trust-controls pricing bridge
+
+- Decision: reduce conversion friction for clinics and healthtech teams evaluating AI receptionist, patient engagement, chatbot, CRM/PMS/EHR workflow or cloud automation spend by connecting the verified trust-controls proof asset to a pricing-page fit-check route.
+- Updated: `/pricing.html` now surfaces a healthcare AI trust controls first-review diagnostic bridge with resource, synthetic CSV and fit-check links.
+- Added: `tests/test_pricing_healthcare_ai_trust_controls_bridge.py`.
+- Verification performed: focused pytest returned `10 passed`; public HTTP check returned 200 for `/pricing.html` with the bridge and fixed-scope count markers after deployment.
+- Proof boundary: synthetic no-patient-data owner evidence only; no real clinic, patient, PHI/ePHI, health record, personal data, vendor export, credential, production access, compliance proof, legal/privacy/security/medical advice, ranking, demand, lead, appointment, patient, revenue, savings, ROI or automation-performance claim was made.
+
 ## 2026-09-07 India diagnostic lab report-delay revenue bridge
 
 - Decision: reduce conversion friction for Indian diagnostic labs considering LIS add-ons, CRM cleanup, WhatsApp automation, call-centre support or AI receptionist spend by connecting the buyer-safe report-delay checklist to a sellable diagnostic path.
