@@ -6,6 +6,7 @@ import datetime as dt
 import html
 import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
@@ -13,6 +14,8 @@ TODAY = dt.date.today().isoformat()
 MAX_SITEMAP_URLS = 1000
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
+REDIRECT_RE = re.compile(r"^(?P<source>/\S+)\s+(?P<target>\S+)\s+(?P<status>30[18])(?:\s|$)")
+MIDDLEWARE_BLOCK_RE = re.compile(r'"(/[^"\\]*(?:\\.[^"\\]*)?)"')
 
 CURATED_PATHS = [
     "/",
@@ -30,7 +33,7 @@ CURATED_PATHS = [
     "/resources/global-ai-generated-marketing-creative-approval-checklist/",
     "/growth-control-os/",
     "/trust-compliance/",
-    "/healthcare-growthos/",
+    "/industries/clinics/",
     "/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/",
     "/resources/global-b2b-saas-customer-onboarding-implementation-delay-checklist/",
     "/resources/global-b2b-saas-renewal-risk-owner-evidence-checklist/",
@@ -202,6 +205,44 @@ def local_page(path: str) -> Path:
     return ROOT / f"{path.lstrip('/')}.html"
 
 
+def clean_route(path: str) -> str:
+    return path if path == "/" else path.rstrip("/")
+
+
+def redirect_sources() -> set[str]:
+    """Return exact public routes configured as redirects, so sitemap stays 200-only."""
+    redirects = ROOT / "_redirects"
+    sources: set[str] = set()
+    if not redirects.is_file():
+        return sources
+    for raw_line in redirects.read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        match = REDIRECT_RE.match(line)
+        if not match:
+            continue
+        source = match.group("source")
+        if "*" in source or ":" in source:
+            continue
+        sources.add(clean_route(source))
+    return sources
+
+
+def middleware_blocked_routes() -> set[str]:
+    """Return exact routes denied by Cloudflare Pages middleware."""
+    middleware = ROOT / "functions" / "_middleware.ts"
+    if not middleware.is_file():
+        return set()
+    source = middleware.read_text(encoding="utf-8", errors="ignore")
+    blocked_section = source.split("const blockedPrefixes", 1)[0]
+    return {clean_route(match.group(1)) for match in MIDDLEWARE_BLOCK_RE.finditer(blocked_section)}
+
+
+def blocked_sitemap_routes() -> set[str]:
+    return redirect_sources() | middleware_blocked_routes()
+
+
 def validate_path(path: str) -> None:
     page = local_page(path)
     if not page.is_file():
@@ -255,9 +296,10 @@ def canonical_path_for(page: Path) -> str | None:
     if not canonical:
         return None
     url = canonical.group(1)
-    if not url.startswith(BASE_URL):
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or parsed.netloc != "aicloudstrategist.com":
         return None
-    path = url.removeprefix(BASE_URL)
+    path = parsed.path
     return path or "/"
 
 
@@ -271,9 +313,12 @@ def discover_paths() -> list[str]:
     """
     paths = []
     seen: set[str] = set()
+    blocked = blocked_sitemap_routes()
 
     def add(path: str) -> None:
         key = path.rstrip("/") or "/"
+        if key in blocked:
+            return
         if key not in seen:
             paths.append(path)
             seen.add(key)
