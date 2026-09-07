@@ -2,6 +2,14 @@
 
 Purpose: track autonomous work that improves AICloudStrategist credibility, top-3/top-5 discoverability, package readiness and revenue readiness without fabricating clients or proof.
 
+## 2026-09-07 Support-ticket backlog revenue bridge
+
+- Decision: reduce conversion friction for global support/CX teams comparing helpdesk AI chatbots, BPO support, ticket-deflection tooling or workflow automation by connecting the existing buyer-safe backlog comparison to a sellable diagnostic path.
+- Updated: `/pricing.html` now surfaces a support ticket backlog diagnostic bridge with comparison page, synthetic CSV and fit-check links before the SMB pricing grid.
+- Added: `tests/test_support_ticket_backlog_revenue_bridge.py`.
+- Verification performed: focused pytest returned `7 passed`; full pytest has unrelated pre-existing pricing-count/premium-shell/resource failures; `python3 scripts/build_sitemap.py` wrote 473 indexable sitemap URLs; `git diff --check` passed; local HTTP checks returned 200 for pricing, resource page, CSV and sitemap markers; public HTTP checks returned 200 for pricing, resource page and CSV markers on deployment attempt 2.
+- Proof boundary: synthetic buyer-education comparison and diagnostic bridge only; no customer data, support ticket data, helpdesk export, chat transcript, refund record, credential, production access, legal/privacy/security/customer-success advice, ticket-deflection, SLA, CSAT, retention, revenue, savings, ROI or AI-accuracy claim was made.
+
 ## 2026-09-07 Manual-work automation triage revenue bridge
 
 - Decision: reduce conversion friction for owners considering workflow automation, RPA, AI agents or CRM cleanup by connecting the new manual-work triage publication to buyer entry points.
