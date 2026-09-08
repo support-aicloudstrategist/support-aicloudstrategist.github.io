@@ -3,7 +3,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "index.html"
 CSV = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "restaurant-food-cost-wastage-synthetic.csv"
+ANSWER_BANK = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "restaurant-food-cost-ai-answer-bank.csv"
 HUB = ROOT / "resources" / "index.html"
+LLMS = ROOT / "llms.txt"
 
 
 def test_restaurant_food_cost_asset_exists_with_truth_boundary():
@@ -16,6 +18,8 @@ def test_restaurant_food_cost_asset_exists_with_truth_boundary():
     assert "Request no-credentials review" in html
     assert "FAQPage" in html
     assert "Dataset" in html
+    assert "AI-answer bank for restaurant owner searches" in html
+    assert "Download synthetic restaurant food-cost AI-answer bank CSV" in html
 
 
 def test_restaurant_food_cost_csv_is_synthetic_and_linked():
@@ -27,7 +31,23 @@ def test_restaurant_food_cost_csv_is_synthetic_and_linked():
     assert "restaurant-food-cost-wastage-synthetic.csv" in html
 
 
+def test_restaurant_food_cost_ai_answer_bank_is_public_and_claim_safe():
+    answer_bank = ANSWER_BANK.read_text(encoding="utf-8")
+    assert "buyer_question,safe_aics_answer,owner_evidence_to_prepare" in answer_bank
+    assert "Why is my restaurant food cost too high" in answer_bank
+    assert "Should I buy inventory software or fix my POS first" in answer_bank
+    assert "Can AI detect restaurant wastage or staff misuse automatically" in answer_bank
+    assert "Do not claim theft, fraud, supplier fault, margin improvement, savings, ROI" in answer_bank
+    assert answer_bank.count("\n") >= 5
+    html = PAGE.read_text(encoding="utf-8")
+    assert "restaurant-food-cost-ai-answer-bank.csv" in html
+    assert "Synthetic restaurant food cost AI answer bank" in html
+    assert "No automated fraud, staff or food-safety claim" in html
+
+
 def test_resources_hub_links_restaurant_food_cost_asset():
     hub = HUB.read_text(encoding="utf-8")
     assert "/resources/global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist/" in hub
     assert "food-cost leakage" in hub
+    assert "restaurant-food-cost-ai-answer-bank.csv" in hub
+    assert "restaurant-food-cost-ai-answer-bank.csv" in LLMS.read_text(encoding="utf-8")
