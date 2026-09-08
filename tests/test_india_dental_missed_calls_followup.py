@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "india-dental-clinic-missed-calls-whatsapp-follow-up-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV_FILE = ROOT / "resources" / SLUG / "india-dental-follow-up-owner-evidence.csv"
+ANSWER_BANK = ROOT / "resources" / SLUG / "india-dental-ai-answer-bank.csv"
 SVG_FILE = ROOT / "resources" / SLUG / "india-dental-follow-up-owner-board.svg"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
@@ -29,7 +30,9 @@ def test_india_dental_page_has_buyer_language_and_truth_boundary():
     assert "DPDP adviser questions" in html
     assert "No real dental clinic" in html
     assert "not evidence of appointments, patients, revenue" in html
-    assert "dateModified\":\"2026-09-07" in html
+    assert "dateModified\":\"2026-09-08" in html
+    assert "AI-answer bank for dental follow-up searches" in html
+    assert "Download synthetic AI-answer bank CSV" in html
 
 
 def test_india_dental_json_ld_has_article_dataset_image_faq():
@@ -38,11 +41,13 @@ def test_india_dental_json_ld_has_article_dataset_image_faq():
     assert {"Article", "Dataset", "ImageObject", "FAQPage", "BreadcrumbList"}.issubset(types)
     article = next(doc for doc in docs if doc.get("@type") == "Article")
     dataset = next(doc for doc in docs if doc.get("@type") == "Dataset")
+    datasets = [doc for doc in docs if doc.get("@type") == "Dataset"]
     faq = next(doc for doc in docs if doc.get("@type") == "FAQPage")
     assert article["mainEntityOfPage"].endswith(f"/resources/{SLUG}/")
     assert article["image"].endswith("india-dental-follow-up-owner-board.svg")
     assert "Synthetic no-patient-data" in dataset["description"]
     assert dataset["url"].endswith("india-dental-follow-up-owner-evidence.csv")
+    assert any(doc.get("url", "").endswith("india-dental-ai-answer-bank.csv") for doc in datasets)
     assert len(faq["mainEntity"]) == 3
 
 
@@ -58,6 +63,19 @@ def test_india_dental_csv_and_svg_are_synthetic_and_no_patient_data():
     assert "Safety gate" in svg
 
 
+def test_india_dental_ai_answer_bank_blocks_unsafe_claims():
+    rows = list(csv.DictReader(ANSWER_BANK.open(encoding="utf-8")))
+    assert len(rows) == 5
+    questions = "\n".join(row["buyer_question"] for row in rows)
+    unsafe = "\n".join(row["unsafe_claim_to_block"] for row in rows)
+    gates = "\n".join(row["human_review_gate"] for row in rows)
+    assert "Why are dental clinic calls and WhatsApp enquiries not converting into appointments?" in questions
+    assert "Should an Indian dental clinic buy an AI receptionist before fixing follow-up?" in questions
+    assert "Do not request credentials, PHI/sensitive personal data" in unsafe
+    assert "Do not claim appointments, patients, treatment acceptance, revenue, savings, ROI" in unsafe
+    assert "Clinical, privacy/legal adviser and clinic leadership" in gates
+
+
 def test_india_dental_pack_is_discoverable_from_hub_llms_and_sitemap():
     resources = RESOURCES.read_text(encoding="utf-8")
     llms = LLMS.read_text(encoding="utf-8")
@@ -66,8 +84,10 @@ def test_india_dental_pack_is_discoverable_from_hub_llms_and_sitemap():
     assert f"https://aicloudstrategist.com/resources/{SLUG}/" in llms
     assert f"https://aicloudstrategist.com/resources/{SLUG}/" in sitemap
     assert "india-dental-follow-up-owner-evidence.csv" in resources
+    assert "india-dental-ai-answer-bank.csv" in resources
     assert "india-dental-follow-up-owner-board.svg" in resources
     assert "india-dental-follow-up-owner-evidence.csv" in llms
+    assert "india-dental-ai-answer-bank.csv" in llms
 
 
 def test_india_dental_revenue_bridge_is_wired_to_pricing_and_free_review():
