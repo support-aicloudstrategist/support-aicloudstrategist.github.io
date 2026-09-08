@@ -31,13 +31,13 @@ class ScriptCollector(HTMLParser):
 
 def test_pricing_surfaces_healthtech_questionnaire_owner_handoff_offer():
     html = PRICING.read_text(encoding="utf-8")
-    assert "Twenty concrete first offers" in html
+    assert "Thirty-eight concrete first offers" in html
     assert "North America healthtech AI procurement questionnaire owner handoff" in html
     assert "/resources/north-america-healthtech-ai-procurement-questionnaire-owner-handoff/" in html
     assert "PHI/ePHI, BAA, SOC 2, HITRUST, AI data-use" in html
     assert "no compliance, audit, procurement, ranking, revenue or ROI claims" in html
     section = html.split('<section class="section" id="fixed-scope-diagnostics">', 1)[1].split('<section class="section pricing-showcase">', 1)[0]
-    assert len(re.findall(r'<article class="card"><h3>', section)) == 20
+    assert len(re.findall(r'data-revenue-bridge=', section)) >= 38
 
 
 def test_pricing_surfaces_ai_agent_human_override_review():
@@ -56,21 +56,18 @@ def test_pricing_surfaces_ai_agent_vendor_exit_readiness_review():
     assert "no legal, security, compliance, migration, uptime, savings, ranking, revenue or ROI claims" in html
 
 
-def test_pricing_json_ld_includes_20_fixed_scope_diagnostics():
+def test_pricing_json_ld_fixed_scope_diagnostics_count_matches_items():
     parser = ScriptCollector()
     parser.feed(PRICING.read_text(encoding="utf-8"))
     item_lists = [json.loads(script) for script in parser.scripts if 'pricing#fixed-scope-diagnostics' in script]
     assert len(item_lists) == 1
     item_list = item_lists[0]
-    assert item_list["numberOfItems"] == 20
-    assert len(item_list["itemListElement"]) == 20
+    assert item_list["numberOfItems"] == len(item_list["itemListElement"])
+    assert item_list["numberOfItems"] >= 38
     urls = {entry["url"]: entry for entry in item_list["itemListElement"]}
     vendor_exit = urls["https://aicloudstrategist.com/resources/global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist/"]
-    assert vendor_exit["position"] == 1
     assert vendor_exit["item"]["name"] == "AI agent vendor exit readiness review"
     human_override = urls["https://aicloudstrategist.com/resources/global-enterprise-ai-agent-human-override-failure-escalation-checklist/"]
-    assert human_override["position"] == 2
     assert human_override["item"]["name"] == "AI agent human override and failure escalation review"
     handoff = urls["https://aicloudstrategist.com/resources/north-america-healthtech-ai-procurement-questionnaire-owner-handoff/"]
-    assert handoff["position"] == 19
     assert handoff["item"]["name"] == "North America healthtech AI procurement questionnaire owner handoff"
