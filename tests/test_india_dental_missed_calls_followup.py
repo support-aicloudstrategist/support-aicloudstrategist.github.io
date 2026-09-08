@@ -11,6 +11,9 @@ SVG_FILE = ROOT / "resources" / SLUG / "india-dental-follow-up-owner-board.svg"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
 SITEMAP = ROOT / "sitemap.xml"
+PRICING = ROOT / "pricing.html"
+FREE_REVIEW = ROOT / "free-business-review" / "index.html"
+FREE_REVIEW_LEGACY = ROOT / "free-business-review.html"
 
 
 def _json_ld_documents(html: str):
@@ -65,3 +68,22 @@ def test_india_dental_pack_is_discoverable_from_hub_llms_and_sitemap():
     assert "india-dental-follow-up-owner-evidence.csv" in resources
     assert "india-dental-follow-up-owner-board.svg" in resources
     assert "india-dental-follow-up-owner-evidence.csv" in llms
+
+
+def test_india_dental_revenue_bridge_is_wired_to_pricing_and_free_review():
+    pricing = PRICING.read_text(encoding="utf-8")
+    assert "Thirty-seven concrete first offers" in pricing
+    assert '"numberOfItems":37' in pricing
+    assert 'data-revenue-bridge="india-dental-missed-calls-whatsapp-follow-up"' in pricing
+    assert "Scope before dental CRM, call-centre, ad-agency, WhatsApp automation or AI receptionist spend" in pricing
+    assert "/free-business-review/?package=india-dental-missed-calls-whatsapp-follow-up&amp;source=pricing-fixed-scope" in pricing
+    assert "no real dental clinic" in pricing
+    assert "booked appointment, patient growth, revenue, savings, ROI" in pricing
+
+    for path in (FREE_REVIEW, FREE_REVIEW_LEGACY):
+        html = path.read_text(encoding="utf-8")
+        assert 'data-review-route="india-dental-missed-calls-whatsapp-follow-up"' in html
+        assert "Dental missed-call + WhatsApp follow-up fit check" in html
+        assert f"/resources/{SLUG}/" in html
+        assert "india-dental-follow-up-owner-evidence.csv" in html
+        assert "india-dental-follow-up-owner-board.svg" in html
