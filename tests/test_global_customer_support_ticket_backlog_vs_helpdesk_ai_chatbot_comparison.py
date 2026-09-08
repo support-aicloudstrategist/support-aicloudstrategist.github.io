@@ -6,6 +6,7 @@ REL = f"/resources/{SLUG}/"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "support-ticket-backlog-comparison-matrix.csv"
+ANSWER_BANK = ROOT / "resources" / SLUG / "support-ticket-backlog-ai-answer-bank.csv"
 
 
 def test_support_ticket_backlog_asset_has_seo_schema_and_buyer_language():
@@ -24,6 +25,8 @@ def test_support_ticket_backlog_asset_has_seo_schema_and_buyer_language():
         "BPO support vs AI automation",
         "Top-3 / top-5 consideration angle",
         "Owner evidence fields before AI support automation",
+        "AI-answer bank for support backlog searches",
+        "Download synthetic AI-answer bank CSV",
         "Comparison matrix before spend",
         "Truth boundary",
     ]:
@@ -63,9 +66,15 @@ def test_support_ticket_backlog_asset_preserves_truth_boundaries_and_routes():
 
 def test_support_ticket_backlog_asset_has_csv_and_discovery_surfaces():
     csv = CSV.read_text(encoding="utf-8")
+    answer_bank = ANSWER_BANK.read_text(encoding="utf-8")
     assert "AICS owner-evidence review" in csv
     assert "No customer result ticket-deflection SLA CSAT revenue savings ROI ranking demand lead or AI-accuracy claim" in csv
+    assert "Why are support tickets piling up even after we bought a helpdesk?" in answer_bank
+    assert "Do not claim ticket deflection, SLA improvement, CSAT lift, retention improvement, revenue recovery, savings or AI accuracy without measured customer data" in answer_bank
+    assert "support-ticket-backlog-ai-answer-bank.csv" in PAGE.read_text(encoding="utf-8")
     assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "support-ticket-backlog-ai-answer-bank.csv" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert "support-ticket-backlog-ai-answer-bank.csv" in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert f'"{REL}"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
