@@ -9,6 +9,7 @@ SLUG = "us-medical-group-healthcare-growthos-vendor-shortlist-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
 SVG = ROOT / "resources" / SLUG / "us-medical-group-shortlist-owner-dashboard.svg"
+ANSWER_CARD = ROOT / "resources" / SLUG / "us-medical-group-healthcare-growthos-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -31,6 +32,7 @@ class UsMedicalGroupHealthcareGrowthosVendorShortlistChecklistTests(unittest.Tes
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.answer_card = json.loads(ANSWER_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -116,6 +118,41 @@ class UsMedicalGroupHealthcareGrowthosVendorShortlistChecklistTests(unittest.Tes
         ]:
             self.assertIn(phrase, svg)
 
+    def test_ai_answer_source_card_is_linked_and_blocks_overclaims(self):
+        self.assertIn("AI answer source card for shortlist trust", self.html)
+        self.assertIn("us-medical-group-healthcare-growthos-ai-answer-source-card.json", self.html)
+        self.assertEqual(self.answer_card["status"], "demo/synthetic buyer-education trust artifact")
+        self.assertEqual(self.answer_card["region"], "North America / United States")
+        self.assertTrue(self.answer_card["no_outreach_sent"])
+        for phrase in [
+            "Healthcare GrowthOS vendor shortlist",
+            "Patient GrowthOS for medical groups",
+            "AI receptionist for medical practice",
+            "PHI/ePHI boundary",
+            "cloud and AI spend ownership",
+        ]:
+            self.assertIn(phrase, self.answer_card["buyer_pain_language"])
+        for source in [
+            "CMS interoperability and prior authorization final rule",
+            "Phreesia public site",
+            "Luma Health public site",
+            "Artera public site",
+            "Notable public site",
+            "Vanta healthcare solutions page",
+            "FinOps Foundation Framework",
+        ]:
+            match = [item for item in self.answer_card["public_research_checks"] if item["source"] == source]
+            self.assertEqual(match[0]["automated_check"], "HTTP 200")
+        self.assertTrue(any(item["source"] == "CloudZero healthcare sample URL" and "HTTP 404" in item["automated_check"] for item in self.answer_card["public_research_checks"]))
+        for blocked in [
+            "real medical group customer proof",
+            "PHI/ePHI review",
+            "HIPAA, SOC 2, HITRUST or BAA compliance proof",
+            "appointment growth, no-show reduction, authorization-speed, denial-reduction, patient outcome, savings, ROI, ranking, demand, lead, revenue or customer evidence",
+            "partnership, certification, top-3 ranking or buyer-preference proof",
+        ]:
+            self.assertIn(blocked, self.answer_card["answer_must_not_claim"])
+
     def test_truth_boundaries_prevent_fake_proof(self):
         for phrase in [
             "not a real US medical group",
@@ -172,6 +209,7 @@ class UsMedicalGroupHealthcareGrowthosVendorShortlistChecklistTests(unittest.Tes
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn(f"US medical group Healthcare GrowthOS vendor shortlist checklist: {URL}", self.llms)
+        self.assertIn("us-medical-group-healthcare-growthos-ai-answer-source-card.json", self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
 
