@@ -1,0 +1,20 @@
+{
+  "name": "AI agent cost overrun answer card",
+  "url": "https://aicloudstrategist.com/resources/global-ai-agent-cost-overrun-owner-evidence-checklist/ai-agent-cost-overrun-answer-card.json",
+  "primary_buyer_question": "What should we check before increasing AI agent, chatbot, workflow, token or tool budgets?",
+  "safe_answer": "Start with a no-credentials owner evidence review: identify the workflow trigger, split fixed vs variable costs, sample retry loops, define human pause gates, preserve quality evidence, compare tool-neutral options and set a weekly owner decision loop before scaling or switching vendors.",
+  "route_to": "https://aicloudstrategist.com/free-business-review/?package=ai-agent-cost-overrun-owner-evidence-checklist&source=answer-card",
+  "pricing_context": "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics",
+  "source_pages": [
+    "https://aicloudstrategist.com/resources/global-ai-agent-cost-overrun-owner-evidence-checklist/",
+    "https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-triage.html",
+    "https://aicloudstrategist.com/services/cloud-finops/"
+  ],
+  "claim_boundaries": [
+    "No customer data or credentials required for first review",
+    "No savings, ROI, ranking, uptime, vendor approval or AI accuracy guarantee",
+    "No legal, compliance, procurement, security certification, financial or tax advice",
+    "Synthetic buyer-education asset; not a client case study or production log"
+  ],
+  "last_verified": "2026-09-08"
+}
