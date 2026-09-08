@@ -1,9 +1,11 @@
 from pathlib import Path
+import csv
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "europe-healthcare-ehds-ai-act-cloud-trust-source-map"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "europe-healthcare-ehds-ai-act-cloud-trust-source-map.csv"
+ANSWER_BANK = ROOT / "resources" / SLUG / "europe-healthcare-ehds-ai-act-answer-bank.csv"
 SVG = ROOT / "resources" / SLUG / "europe-healthcare-ehds-ai-act-cloud-trust-owner-map.svg"
 
 
@@ -26,11 +28,37 @@ def test_europe_healthcare_ehds_ai_act_cloud_trust_asset_exists_and_is_safe():
     assert "not legal, privacy, security, medical" in html
     assert "europe-healthcare-ehds-ai-act-cloud-trust-source-map.csv" in html
     assert "europe-healthcare-ehds-ai-act-cloud-trust-owner-map.svg" in html
+    assert "europe-healthcare-ehds-ai-act-answer-bank.csv" in html
+    assert "Safe answer bank for AI search and procurement reuse" in html
+    assert "Accurx, DrDoctor, Doctolib, Birdie, Vanta, Drata, FinOps tools or advisers" in html
     assert "EHDS source inventory" in csv
     assert "EU AI Act use-case classification" in csv
     assert "Do not claim GDPR or UK GDPR compliance" in csv
     assert "Do not claim savings ROI cost reduction or payback" in csv
     assert "Synthetic/readiness asset only" in svg
+
+
+def test_europe_healthcare_answer_bank_is_machine_readable_and_claim_safe():
+    rows = list(csv.DictReader(ANSWER_BANK.open(newline="", encoding="utf-8")))
+    assert len(rows) == 6
+    assert set(rows[0]) == {
+        "buyer_question",
+        "plain_language_search",
+        "competitor_or_alternative_seen",
+        "safe_aics_answer",
+        "proof_asset_to_show",
+        "human_or_adviser_gate",
+        "unsafe_claim_to_block",
+    }
+    text = ANSWER_BANK.read_text(encoding="utf-8")
+    for marker in [
+        "European Health Data Space readiness healthcare platform",
+        "EU AI Act healthcare AI high-risk questions patient engagement",
+        "NIS2 supplier evidence healthcare cloud trust",
+        "healthcare cloud AI FinOps ownership before platform spend",
+        "Do not imply real customers, endorsements, rankings, demand, leads, revenue, compliance or results.",
+    ]:
+        assert marker in text
 
 
 def test_discovery_surfaces_europe_healthcare_ehds_source_map():
@@ -41,4 +69,5 @@ def test_discovery_surfaces_europe_healthcare_ehds_source_map():
     assert f'data-resource-card="{SLUG}"' in resources
     assert f"/resources/{SLUG}/" in resources
     assert "EHDS, EU AI Act, GDPR/DPIA, NIS2 supplier evidence" in llms
+    assert "europe-healthcare-ehds-ai-act-answer-bank.csv" in llms
     assert f'"/resources/{SLUG}/"' in sitemap_script
