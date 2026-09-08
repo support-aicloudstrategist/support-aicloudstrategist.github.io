@@ -1,0 +1,13 @@
+workflow_id,lead_source,package_type,last_visit_days_ago,package_expiry_days,consent_status,preferred_channel,language,open_clinical_question,payment_status,notes_quality,monthly_messages,est_message_cost_inr,human_owner
+AYUSH-001,Google Ads,Panchakarma follow-up,18,12,explicit_whatsapp,whatsapp,Hindi,no,paid,complete,38,57,reception_lead
+AYUSH-002,Doctor referral,Chronic pain therapy,41,-5,missing,phone,English,yes,part_paid,partial,23,34,doctor
+AYUSH-003,Walk-in,Wellness renewal,64,-18,expired,whatsapp,Marathi,no,paid,partial,51,77,front_desk
+AYUSH-004,Instagram,Yoga therapy package,7,30,explicit_whatsapp,whatsapp,English,no,unpaid,complete,29,44,wellness_counsellor
+AYUSH-005,Camp lead,Diabetes lifestyle program,33,4,explicit_whatsapp,whatsapp,Hindi,yes,paid,partial,46,69,doctor
+AYUSH-006,Google Business Profile,Panchakarma follow-up,90,-45,missing,sms,Marathi,no,unpaid,poor,18,27,front_desk
+AYUSH-007,Existing patient,Stress management renewal,22,8,explicit_whatsapp,whatsapp,English,no,paid,complete,34,51,wellness_counsellor
+AYUSH-008,Practo,Physiotherapy add-on,12,25,explicit_whatsapp,whatsapp,Hindi,no,part_paid,complete,42,63,reception_lead
+AYUSH-009,Camp lead,Weight management renewal,55,-12,expired,phone,Hindi,no,unpaid,partial,27,41,front_desk
+AYUSH-010,Doctor referral,Post-therapy review,4,40,explicit_whatsapp,whatsapp,English,yes,paid,complete,19,29,doctor
+AYUSH-011,Website,Corporate wellness renewal,76,-20,missing,email,English,no,paid,poor,14,21,clinic_owner
+AYUSH-012,Instagram,Skin wellness package,28,3,explicit_whatsapp,whatsapp,Marathi,no,paid,partial,49,74,wellness_counsellor

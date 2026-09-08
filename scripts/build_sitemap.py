@@ -178,6 +178,7 @@ CURATED_PATHS = [
     "/resources/india-dental-clinic-missed-calls-whatsapp-follow-up-checklist/",
     "/resources/india-radiology-mri-ct-referral-followup-dpdp-finops-checklist/",
     "/resources/india-ent-audiology-hearing-aid-trial-followup-checklist/",
+    "/resources/india-ayush-wellness-package-renewal-dpdp-finops-checklist/",
     "/resources/india-ivf-fertility-missed-patient-calls-vs-crm-ai-receptionist-comparison/",
     "/lead-leakage-calculator",
     "/case-studies/",
