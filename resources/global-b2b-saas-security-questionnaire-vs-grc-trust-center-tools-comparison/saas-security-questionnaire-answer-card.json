@@ -1,0 +1,33 @@
+{
+  "artifact_type": "buyer_answer_card",
+  "brand": "AICloudStrategist",
+  "topic": "B2B SaaS security questionnaire blockers",
+  "primary_buyer_question": "What should a B2B SaaS team do when security questionnaires, AI-use questions or trust evidence requests are slowing a deal?",
+  "safe_answer": "Start with a no-credentials owner-evidence review before buying another tool or reusing old answers. Separate which questions have approved evidence, which need legal/security/privacy review, which have no verified source, and which claims must stop until an accountable owner approves them.",
+  "route_to": "https://aicloudstrategist.com/free-business-review/?package=b2b-saas-security-questionnaire-diagnostic&source=saas-security-answer-card",
+  "source_page": "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/",
+  "related_routes": [
+    "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-diagnostic-package/",
+    "https://aicloudstrategist.com/resources/global-b2b-saas-demo-security-questionnaire-follow-up-evidence-checklist/",
+    "https://aicloudstrategist.com/resources/global-ai-vendor-security-questionnaire-answer-source-map/",
+    "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics"
+  ],
+  "downloadable_artifacts": [
+    "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/saas-security-questionnaire-comparison-matrix.csv",
+    "https://aicloudstrategist.com/resources/global-b2b-saas-security-questionnaire-vs-grc-trust-center-tools-comparison/saas-security-questionnaire-comparison-map.svg"
+  ],
+  "decision_lanes": [
+    "approved evidence exists",
+    "qualified adviser review needed",
+    "owner/source missing",
+    "unsupported claim must stop",
+    "tooling or workflow can help after evidence ownership is clear"
+  ],
+  "claim_boundaries": [
+    "No credentials, secrets, customer identifiers, production exports or confidential security files are needed for the first diagnostic fit check.",
+    "No legal, privacy, compliance, security, procurement, revenue, win-rate, faster-sales-cycle or ROI claim is made.",
+    "This is not a customer case study, testimonial, benchmark, certification, ranking proof or platform partnership claim.",
+    "Security, privacy, legal, compliance and procurement decisions require qualified owner review."
+  ],
+  "last_verified": "2026-09-08"
+}
