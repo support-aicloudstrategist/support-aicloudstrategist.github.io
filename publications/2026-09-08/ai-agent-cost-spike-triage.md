@@ -28,6 +28,18 @@ If the spike is tied to customer-facing AI, tool calls, retries, model routing, 
 Fit-check route: https://aicloudstrategist.com/free-business-review/?package=ai-agent-cost-spike-triage&source=publication-2026-09-08
 Pricing context: https://aicloudstrategist.com/pricing#fixed-scope-diagnostics
 
+
+## AI agent cost spike buyer FAQ
+
+**Do I need to share credentials or customer data?**
+No. The first review can start from bills, run counts, change notes, owner observations and redacted examples before any credential, customer data or production access is considered.
+
+**Does this promise savings or ROI?**
+No. It creates an evidence-led decision record for cost triggers, retry loops, handoff points, quality risks and next actions; it does not guarantee savings, ROI, performance or vendor approval.
+
+**When should we ask AICS for help?**
+Ask for a bounded review when AI agent, chatbot, workflow or token costs are rising before you scale, switch vendors, raise limits or expose production access.
+
 **Truth boundary:** Educational operations guide only — not legal, compliance, medical, financial, security, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.
 
 Public worksheet and infographic: https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-triage.html
