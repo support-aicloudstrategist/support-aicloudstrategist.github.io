@@ -5,6 +5,7 @@
 A safe educational checklist for founders and operators when AI agent, chatbot, workflow, or token usage costs start rising faster than expected.
 
 Download the CSV: https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-triage.csv
+LLM-readable answer card: https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-answer-card.json
 
 ## Seven checks before scaling or switching tools
 
@@ -43,3 +44,4 @@ Ask for a bounded review when AI agent, chatbot, workflow or token costs are ris
 **Truth boundary:** Educational operations guide only — not legal, compliance, medical, financial, security, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.
 
 Public worksheet and infographic: https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-triage.html
+Answer card JSON: https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-answer-card.json
