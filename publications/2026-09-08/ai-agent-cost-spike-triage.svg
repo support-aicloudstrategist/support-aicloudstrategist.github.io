@@ -1,0 +1,87 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1360' height='900' viewBox='0 0 1360 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#0f172a'/><stop offset='.48' stop-color='#4338ca'/><stop offset='1' stop-color='#0891b2'/></linearGradient>
+    <filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#0f172a' flood-opacity='.14'/></filter>
+  </defs>
+  <rect width='1360' height='900' fill='#f8fafc'/>
+  <rect x='38' y='34' width='1284' height='832' rx='46' fill='white' stroke='#c7d2fe' stroke-width='3'/>
+  <rect x='72' y='66' width='1216' height='158' rx='34' fill='url(#hero)'/>
+  <text x='108' y='112' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#bae6fd' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='108' y='161' font-family='Inter,Arial,sans-serif' font-size='40' font-weight='950' fill='white'>AI Agent Cost Spike Triage: 7 Checks Before You Scale or Switch Tools</text>
+  <text x='108' y='197' font-family='Inter,Arial,sans-serif' font-size='18' fill='#eef2ff'>A safe educational checklist for founders and operators when AI agent, chatbot, workflow, or token usage costs start rising faster than expected.</text>
+  <g transform='translate(1120 100)'><rect width='118' height='86' rx='22' fill='rgba(255,255,255,.15)' stroke='#a5f3fc'/><text x='59' y='35' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='white'>Cost</text><text x='59' y='61' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='800' fill='#cffafe'>Evidence first</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='70' y='260' width='260' height='222' rx='28' fill='#dbeafe' stroke='#2563eb' stroke-width='3'/>
+    <circle cx='104' cy='295' r='22' fill='white' stroke='#2563eb' stroke-width='3'/>
+    <text x='104' y='303' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#2563eb'>1</text>
+    <text x='132' y='292' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='132' dy='0'>Find the trigger</tspan></text>
+    <text x='92' y='352' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='92' y='376' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='92' dy='0'>Which release, prompt,</tspan><tspan x='92' dy='16'>integration, traffic source, or</tspan><tspan x='92' dy='16'>schedule changed before the spike?</tspan></text>
+    <text x='92' y='438' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='92' y='459' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='92' dy='0'>Mark the first abnormal day or</tspan><tspan x='92' dy='16'>hour and link it to a visible</tspan><tspan x='92' dy='16'>change record.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='380' y='260' width='260' height='222' rx='28' fill='#ede9fe' stroke='#7c3aed' stroke-width='3'/>
+    <circle cx='414' cy='295' r='22' fill='white' stroke='#7c3aed' stroke-width='3'/>
+    <text x='414' y='303' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#7c3aed'>2</text>
+    <text x='442' y='292' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='442' dy='0'>Split fixed vs</tspan><tspan x='442' dy='22'>variable cost</tspan></text>
+    <text x='402' y='352' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='402' y='376' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='402' dy='0'>Is spend rising from seats, base</tspan><tspan x='402' dy='16'>platform fees, runs, tokens,</tspan><tspan x='402' dy='16'>storage, tools, or retries?</tspan></text>
+    <text x='402' y='438' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='402' y='459' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='402' dy='0'>Separate subscription cost from</tspan><tspan x='402' dy='16'>usage cost before judging the</tspan><tspan x='402' dy='16'>tool.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='690' y='260' width='260' height='222' rx='28' fill='#ccfbf1' stroke='#0f766e' stroke-width='3'/>
+    <circle cx='724' cy='295' r='22' fill='white' stroke='#0f766e' stroke-width='3'/>
+    <text x='724' y='303' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0f766e'>3</text>
+    <text x='752' y='292' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='752' dy='0'>Measure retry</tspan><tspan x='752' dy='22'>loops</tspan></text>
+    <text x='712' y='352' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='712' y='376' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='712' dy='0'>Are agents repeating failed steps,</tspan><tspan x='712' dy='16'>calling tools too often, or</tspan><tspan x='712' dy='16'>reprocessing the same items?</tspan></text>
+    <text x='712' y='438' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='712' y='459' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='712' dy='0'>Sample failed runs and count</tspan><tspan x='712' dy='16'>retries before increasing limits.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1000' y='260' width='260' height='222' rx='28' fill='#fef3c7' stroke='#d97706' stroke-width='3'/>
+    <circle cx='1034' cy='295' r='22' fill='white' stroke='#d97706' stroke-width='3'/>
+    <text x='1034' y='303' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#d97706'>4</text>
+    <text x='1062' y='292' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='1062' dy='0'>Check human</tspan><tspan x='1062' dy='22'>handoff points</tspan></text>
+    <text x='1022' y='352' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='1022' y='376' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='1022' dy='0'>Where should a person approve,</tspan><tspan x='1022' dy='16'>stop, or redirect work before</tspan><tspan x='1022' dy='16'>costs continue?</tspan></text>
+    <text x='1022' y='438' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='1022' y='459' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='1022' dy='0'>Add review gates for ambiguous,</tspan><tspan x='1022' dy='16'>high-volume, risky, or</tspan><tspan x='1022' dy='16'>customer-facing paths.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='225' y='535' width='260' height='222' rx='28' fill='#fce7f3' stroke='#db2777' stroke-width='3'/>
+    <circle cx='259' cy='570' r='22' fill='white' stroke='#db2777' stroke-width='3'/>
+    <text x='259' y='578' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#db2777'>5</text>
+    <text x='287' y='567' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='287' dy='0'>Protect quality</tspan><tspan x='287' dy='22'>evidence</tspan></text>
+    <text x='247' y='627' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='247' y='651' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='247' dy='0'>Are cheaper changes likely to</tspan><tspan x='247' dy='16'>reduce answer quality,</tspan><tspan x='247' dy='16'>traceability, or customer</tspan><tspan x='247' dy='16'>experience?</tspan></text>
+    <text x='247' y='713' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='247' y='734' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='247' dy='0'>Keep before-and-after examples,</tspan><tspan x='247' dy='16'>run logs, and owner notes for any</tspan><tspan x='247' dy='16'>change.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='535' y='535' width='260' height='222' rx='28' fill='#dcfce7' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='569' cy='570' r='22' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='569' y='578' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#16a34a'>6</text>
+    <text x='597' y='567' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='597' dy='0'>Compare</tspan><tspan x='597' dy='22'>tool-neutral</tspan></text>
+    <text x='557' y='627' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='557' y='651' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='557' dy='0'>Can scope, routing, caching,</tspan><tspan x='557' dy='16'>batching, model choice, or</tspan><tspan x='557' dy='16'>workflow design reduce waste</tspan><tspan x='557' dy='16'>safely?</tspan></text>
+    <text x='557' y='713' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='557' y='734' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='557' dy='0'>List design alternatives before</tspan><tspan x='557' dy='16'>switching vendors or cancelling</tspan><tspan x='557' dy='16'>automation.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='845' y='535' width='260' height='222' rx='28' fill='#fee2e2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='879' cy='570' r='22' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='879' y='578' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#dc2626'>7</text>
+    <text x='907' y='567' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='907' dy='0'>Create an owner</tspan><tspan x='907' dy='22'>review loop</tspan></text>
+    <text x='867' y='627' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='867' y='651' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='867' dy='0'>Who reviews cost, value, failures,</tspan><tspan x='867' dy='16'>and risk each week until the</tspan><tspan x='867' dy='16'>pattern stabilizes?</tspan></text>
+    <text x='867' y='713' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='867' y='734' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='867' dy='0'>Assign an owner, threshold, review</tspan><tspan x='867' dy='16'>cadence, and next decision date.</tspan></text>
+  </g>
+  <rect x='86' y='812' width='1188' height='50' rx='21' fill='#111827'/>
+  <text x='680' y='833' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='850' fill='#c7d2fe'>When AI costs jump, inspect trigger, cost type, retries, handoffs, quality evidence, alternatives, and owner cadence.</text>
+  <text x='680' y='853' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#e5e7eb'>Educational operations guide only — not legal, compliance, medical, financial, security, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.</text>
+</svg>

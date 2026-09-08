@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate Memphis infographic titled 'AI Agent Cost Spike Triage: 7 Checks Before You Scale or Switch Tools'. Seven rounded cards, numbered 1 to 7, with check, owner question, and safe first action. Use navy, indigo, teal, amber, pink, green, and red accents. Aspect 3:2. Include educational-only truth boundary in footer.
