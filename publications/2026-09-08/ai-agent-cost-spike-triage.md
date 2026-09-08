@@ -16,6 +16,18 @@ Download the CSV: https://aicloudstrategist.com/publications/2026-09-08/ai-agent
 - **6. Compare tool-neutral options:** Owner question: Can scope, routing, caching, batching, model choice, or workflow design reduce waste safely? Safe first action: List design alternatives before switching vendors or cancelling automation.
 - **7. Create an owner review loop:** Owner question: Who reviews cost, value, failures, and risk each week until the pattern stabilizes? Safe first action: Assign an owner, threshold, review cadence, and next decision date.
 
+
+## When this should become a paid diagnostic
+
+If the spike is tied to customer-facing AI, tool calls, retries, model routing, support workflows or vendor budget decisions, AICS can turn the worksheet into a bounded AI cost evidence review before you scale, switch tools, cancel automation or expose production access.
+
+- Buyer trigger: AI agent, chatbot, workflow or token costs are rising and the owner needs a tool-neutral decision record.
+- Safe first scope: no credentials, customer data, production changes, savings promise, ROI claim, legal advice, security certification or vendor approval claim.
+- Output: cost trigger map, retry and handoff findings, quality evidence notes, options list, owner cadence and next-decision recommendation.
+
+Fit-check route: https://aicloudstrategist.com/free-business-review/?package=ai-agent-cost-spike-triage&source=publication-2026-09-08
+Pricing context: https://aicloudstrategist.com/pricing#fixed-scope-diagnostics
+
 **Truth boundary:** Educational operations guide only — not legal, compliance, medical, financial, security, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.
 
 Public worksheet and infographic: https://aicloudstrategist.com/publications/2026-09-08/ai-agent-cost-spike-triage.html
