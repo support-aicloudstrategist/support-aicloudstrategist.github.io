@@ -11,7 +11,7 @@ CSV = ROOT / "resources" / "customer-problem-search" / "factory-manual-work-redu
 def test_pricing_surfaces_factory_manual_work_revenue_bridge():
     html = PRICING.read_text(encoding="utf-8")
     section = html.split('<section class="section" id="fixed-scope-diagnostics">', 1)[1].split('<section class="section pricing-showcase">', 1)[0]
-    assert "Thirty-five concrete first offers" in section
+    assert "Thirty-eight concrete first offers" in section
     assert 'data-revenue-bridge="factory-manual-work-reduction"' in section
     assert "Factory manual-work reduction diagnostic bridge" in section
     assert "/resources/customer-problem-search/factory-manual-work-reduce/" in section
@@ -29,7 +29,7 @@ def test_factory_manual_work_offer_is_in_fixed_scope_json_ld():
     item_lists = [json.loads(script) for script in scripts if 'pricing#fixed-scope-diagnostics' in script]
     assert len(item_lists) == 1
     item_list = item_lists[0]
-    assert item_list["numberOfItems"] == 35
+    assert item_list["numberOfItems"] == 38
     item = next(entry for entry in item_list["itemListElement"] if entry["url"].endswith("/resources/customer-problem-search/factory-manual-work-reduce/"))
     assert item["position"] == 35
     assert item["item"]["name"] == "Factory manual-work reduction evidence review"
