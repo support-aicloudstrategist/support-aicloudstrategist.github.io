@@ -32,8 +32,12 @@ def test_evening_publication_manifest_index_sitemap_and_llms():
     llms = (ROOT / 'llms.txt').read_text(encoding='utf-8')
     url = f'https://aicloudstrategist.com/publications/{DATE}/{SLUG}.html'
     assert url in index or f'{SLUG}.html' in index
+    answer_card_path = f'{SLUG}-answer-card.json'
+    answer_card_url = f'https://aicloudstrategist.com/publications/{DATE}/{answer_card_path}'
     assert url in sitemap
     assert url in llms
+    assert answer_card_path in index
+    assert answer_card_url in llms
 
 
 def test_evening_answer_card_has_seven_checks_and_boundary():
