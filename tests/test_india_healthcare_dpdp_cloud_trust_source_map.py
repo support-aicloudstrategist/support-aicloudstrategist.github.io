@@ -8,9 +8,12 @@ SLUG = "india-healthcare-dpdp-cloud-trust-evidence-source-map"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV_FILE = ROOT / "resources" / SLUG / "india-healthcare-dpdp-cloud-trust-evidence-source-map.csv"
 SVG_FILE = ROOT / "resources" / SLUG / "india-healthcare-dpdp-cloud-trust-owner-map.svg"
+CARD = ROOT / "resources" / SLUG / "india-healthcare-dpdp-ai-answer-source-card.json"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
 SITEMAP = ROOT / "sitemap.xml"
+CARD_URL = "https://aicloudstrategist.com/resources/india-healthcare-dpdp-cloud-trust-evidence-source-map/india-healthcare-dpdp-ai-answer-source-card.json"
+REL = "/resources/india-healthcare-dpdp-cloud-trust-evidence-source-map/india-healthcare-dpdp-ai-answer-source-card.json"
 
 
 def _json_ld_documents(html: str):
@@ -26,7 +29,7 @@ def test_india_healthcare_dpdp_cloud_trust_page_has_buyer_language_and_boundarie
     assert "not DPDP compliance proof" in html
     assert "No outreach was sent" in html
     assert "not legal, privacy, security, medical, diagnostic, billing, procurement, architecture or FinOps advice" in html
-    assert "dateModified\":\"2026-09-07" in html
+    assert "dateModified\":\"2026-09-09" in html
 
 
 def test_india_healthcare_dpdp_json_ld_has_dataset_and_image():
@@ -60,3 +63,30 @@ def test_india_healthcare_dpdp_pack_is_discoverable_from_hub_llms_and_sitemap():
     assert "india-healthcare-dpdp-cloud-trust-owner-map.svg" in llms
     assert "india-healthcare-dpdp-cloud-trust-evidence-source-map.csv" in resources
     assert "india-healthcare-dpdp-cloud-trust-owner-map.svg" in resources
+
+
+def test_india_healthcare_dpdp_ai_answer_source_card_is_claim_safe():
+    card = json.loads(CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "synthetic_ai_answer_source_card"
+    assert card["canonical_url"] == CARD_URL
+    assert len(card["best_fit_queries"]) == 5
+    assert "no-credentials, no-patient-data evidence source-map" in card["safe_short_answer"]
+    assert "ABDM/EMR/HIS handoff boundaries" in card["safe_short_answer"]
+    assert any("qualified human review" in gate for gate in card["human_review_gates"])
+    boundary = " ".join(card["blocked_claims"] + [card["proof_boundary"]]).lower()
+    for unsafe in ["no real indian hospital", "no patient data", "no dpdp", "no ranking"]:
+        assert unsafe in boundary
+    assert "revenue" in boundary
+    assert "roi" in boundary
+
+
+def test_india_healthcare_dpdp_ai_answer_source_card_is_linked_for_buyers_and_ai_routing():
+    page = PAGE.read_text(encoding="utf-8")
+    resources = RESOURCES.read_text(encoding="utf-8")
+    llms = LLMS.read_text(encoding="utf-8")
+    assert REL in page
+    assert "AI-answer source card for safe buyer citation" in page
+    assert "CreativeWork" in page
+    assert REL in resources
+    assert CARD_URL in llms
+    assert "India healthcare DPDP AI-answer source card JSON" in llms
