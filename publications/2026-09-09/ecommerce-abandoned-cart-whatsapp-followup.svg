@@ -1,0 +1,87 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1360' height='900' viewBox='0 0 1360 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#111827'/><stop offset='.52' stop-color='#0f766e'/><stop offset='1' stop-color='#f97316'/></linearGradient>
+    <filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#0f172a' flood-opacity='.14'/></filter>
+  </defs>
+  <rect width='1360' height='900' fill='#fff7ed'/>
+  <rect x='38' y='34' width='1284' height='832' rx='46' fill='white' stroke='#fed7aa' stroke-width='3'/>
+  <rect x='72' y='66' width='1216' height='168' rx='34' fill='url(#hero)'/>
+  <text x='108' y='112' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#ccfbf1' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='108' y='160' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='950' fill='white'>E-commerce Abandoned Cart WhatsApp Follow-up: 7 Checks Before You Automate</text>
+  <text x='108' y='199' font-family='Inter,Arial,sans-serif' font-size='18' fill='#fff7ed'>A safe educational checklist for store owners before using WhatsApp, SMS, email, or AI workflows to follow up on abandoned carts.</text>
+  <g transform='translate(1120 103)'><rect width='118' height='86' rx='22' fill='rgba(255,255,255,.16)' stroke='#fed7aa'/><text x='59' y='35' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='white'>Cart</text><text x='59' y='61' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='800' fill='#ffedd5'>Trust first</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='70' y='270' width='260' height='222' rx='28' fill='#ecfeff' stroke='#0891b2' stroke-width='3'/>
+    <circle cx='104' cy='305' r='22' fill='white' stroke='#0891b2' stroke-width='3'/>
+    <text x='104' y='313' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0891b2'>1</text>
+    <text x='132' y='302' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='132' dy='0'>Confirm consent</tspan><tspan x='132' dy='22'>source</tspan></text>
+    <text x='92' y='362' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='92' y='386' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='92' dy='0'>Where did the shopper agree to</tspan><tspan x='92' dy='16'>receive WhatsApp, SMS, email, or</tspan><tspan x='92' dy='16'>cart follow-up messages?</tspan></text>
+    <text x='92' y='448' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='92' y='469' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='92' dy='0'>Keep a visible consent/source note</tspan><tspan x='92' dy='16'>before adding any automated</tspan><tspan x='92' dy='16'>reminder.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='380' y='270' width='260' height='222' rx='28' fill='#eef2ff' stroke='#4f46e5' stroke-width='3'/>
+    <circle cx='414' cy='305' r='22' fill='white' stroke='#4f46e5' stroke-width='3'/>
+    <text x='414' y='313' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#4f46e5'>2</text>
+    <text x='442' y='302' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='442' dy='0'>Separate help from</tspan><tspan x='442' dy='22'>pressure</tspan></text>
+    <text x='402' y='362' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='402' y='386' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='402' dy='0'>Is the message useful, or does it</tspan><tspan x='402' dy='16'>feel like a pushy sales chase?</tspan></text>
+    <text x='402' y='448' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='402' y='469' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='402' dy='0'>Start with one helpful reminder,</tspan><tspan x='402' dy='16'>clear context, and an easy way to</tspan><tspan x='402' dy='16'>stop.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='690' y='270' width='260' height='222' rx='28' fill='#f0fdf4' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='724' cy='305' r='22' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='724' y='313' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#16a34a'>3</text>
+    <text x='752' y='302' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='752' dy='0'>Check timing</tspan><tspan x='752' dy='22'>windows</tspan></text>
+    <text x='712' y='362' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='712' y='386' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='712' dy='0'>When is the cart still relevant</tspan><tspan x='712' dy='16'>without disturbing the buyer?</tspan></text>
+    <text x='712' y='448' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='712' y='469' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='712' dy='0'>Test a small manual timing window</tspan><tspan x='712' dy='16'>before adding repeated</tspan><tspan x='712' dy='16'>automations.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1000' y='270' width='260' height='222' rx='28' fill='#fff7ed' stroke='#ea580c' stroke-width='3'/>
+    <circle cx='1034' cy='305' r='22' fill='white' stroke='#ea580c' stroke-width='3'/>
+    <text x='1034' y='313' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#ea580c'>4</text>
+    <text x='1062' y='302' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='1062' dy='0'>Match product</tspan><tspan x='1062' dy='22'>context</tspan></text>
+    <text x='1022' y='362' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='1022' y='386' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='1022' dy='0'>Does the follow-up reference the</tspan><tspan x='1022' dy='16'>right item, stock status, delivery</tspan><tspan x='1022' dy='16'>concern, or checkout issue?</tspan></text>
+    <text x='1022' y='448' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='1022' y='469' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='1022' dy='0'>Use product-safe placeholders and</tspan><tspan x='1022' dy='16'>avoid guessing reasons the buyer</tspan><tspan x='1022' dy='16'>left.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='225' y='545' width='260' height='222' rx='28' fill='#fdf2f8' stroke='#db2777' stroke-width='3'/>
+    <circle cx='259' cy='580' r='22' fill='white' stroke='#db2777' stroke-width='3'/>
+    <text x='259' y='588' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#db2777'>5</text>
+    <text x='287' y='577' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='287' dy='0'>Protect support</tspan><tspan x='287' dy='22'>capacity</tspan></text>
+    <text x='247' y='637' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='247' y='661' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='247' dy='0'>Who answers if the buyer replies</tspan><tspan x='247' dy='16'>with a question, complaint,</tspan><tspan x='247' dy='16'>cancellation, or delivery issue?</tspan></text>
+    <text x='247' y='723' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='247' y='744' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='247' dy='0'>Route replies to an owner before</tspan><tspan x='247' dy='16'>increasing message volume.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='535' y='545' width='260' height='222' rx='28' fill='#fefce8' stroke='#ca8a04' stroke-width='3'/>
+    <circle cx='569' cy='580' r='22' fill='white' stroke='#ca8a04' stroke-width='3'/>
+    <text x='569' y='588' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#ca8a04'>6</text>
+    <text x='597' y='577' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='597' dy='0'>Limit discount</tspan><tspan x='597' dy='22'>leakage</tspan></text>
+    <text x='557' y='637' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='557' y='661' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='557' dy='0'>Will automatic discounts train</tspan><tspan x='557' dy='16'>buyers to abandon carts to get</tspan><tspan x='557' dy='16'>offers?</tspan></text>
+    <text x='557' y='723' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='557' y='744' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='557' dy='0'>Separate service reminders from</tspan><tspan x='557' dy='16'>discount rules and review margin</tspan><tspan x='557' dy='16'>impact manually.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='845' y='545' width='260' height='222' rx='28' fill='#fef2f2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='879' cy='580' r='22' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='879' y='588' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#dc2626'>7</text>
+    <text x='907' y='577' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='907' dy='0'>Review evidence</tspan><tspan x='907' dy='22'>weekly</tspan></text>
+    <text x='867' y='637' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='867' y='661' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='750' fill='#1e293b'><tspan x='867' dy='0'>Which messages helped, which</tspan><tspan x='867' dy='16'>annoyed buyers, and which created</tspan><tspan x='867' dy='16'>support work?</tspan></text>
+    <text x='867' y='723' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='867' y='744' font-family='Inter,Arial,sans-serif' font-size='12' fill='#0f172a'><tspan x='867' dy='0'>Track sent count, reply themes,</tspan><tspan x='867' dy='16'>stops/opt-outs, and owner notes</tspan><tspan x='867' dy='16'>before scaling.</tspan></text>
+  </g>
+  <rect x='86' y='812' width='1188' height='50' rx='21' fill='#111827'/>
+  <text x='680' y='833' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='850' fill='#fed7aa'>Before automating abandoned-cart follow-up, check consent, tone, timing, context, support, discounts, and review evidence.</text>
+  <text x='680' y='853' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#e5e7eb'>Educational operations guide only — not legal, privacy, marketing, financial, compliance, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.</text>
+</svg>

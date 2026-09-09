@@ -9,6 +9,18 @@
       "png": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.png",
       "csv": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.csv",
       "answer_card": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-answer-card.json"
+    },
+    {
+      "slot": "evening",
+      "slug": "ecommerce-abandoned-cart-whatsapp-followup",
+      "title": "E-commerce Abandoned Cart WhatsApp Follow-up: 7 Checks Before You Automate",
+      "url": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.html",
+      "png": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-09",
+      "boundary": "Educational operations guide only \u2014 not legal, privacy, marketing, financial, compliance, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice."
     }
   ]
 }

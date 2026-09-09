@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate Memphis infographic titled 'E-commerce Abandoned Cart WhatsApp Follow-up: 7 Checks Before You Automate'. Seven rounded cards, numbered 1 to 7, with check, owner question, and safe first action. Use warm commerce colors: navy, teal, orange, mint, indigo, rose, and amber accents. Aspect 3:2. Include educational-only truth boundary in footer.

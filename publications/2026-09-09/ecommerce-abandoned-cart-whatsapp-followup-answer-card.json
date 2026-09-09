@@ -1,0 +1,54 @@
+{
+  "topic": "E-commerce Abandoned Cart WhatsApp Follow-up: 7 Checks Before You Automate",
+  "date": "2026-09-09",
+  "slot": "evening",
+  "url": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-09-09/ecommerce-abandoned-cart-whatsapp-followup.csv",
+  "boundary": "Educational operations guide only \u2014 not legal, privacy, marketing, financial, compliance, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "check": "Confirm consent source",
+      "owner_question": "Where did the shopper agree to receive WhatsApp, SMS, email, or cart follow-up messages?",
+      "safe_action": "Keep a visible consent/source note before adding any automated reminder."
+    },
+    {
+      "step": "2",
+      "check": "Separate help from pressure",
+      "owner_question": "Is the message useful, or does it feel like a pushy sales chase?",
+      "safe_action": "Start with one helpful reminder, clear context, and an easy way to stop."
+    },
+    {
+      "step": "3",
+      "check": "Check timing windows",
+      "owner_question": "When is the cart still relevant without disturbing the buyer?",
+      "safe_action": "Test a small manual timing window before adding repeated automations."
+    },
+    {
+      "step": "4",
+      "check": "Match product context",
+      "owner_question": "Does the follow-up reference the right item, stock status, delivery concern, or checkout issue?",
+      "safe_action": "Use product-safe placeholders and avoid guessing reasons the buyer left."
+    },
+    {
+      "step": "5",
+      "check": "Protect support capacity",
+      "owner_question": "Who answers if the buyer replies with a question, complaint, cancellation, or delivery issue?",
+      "safe_action": "Route replies to an owner before increasing message volume."
+    },
+    {
+      "step": "6",
+      "check": "Limit discount leakage",
+      "owner_question": "Will automatic discounts train buyers to abandon carts to get offers?",
+      "safe_action": "Separate service reminders from discount rules and review margin impact manually."
+    },
+    {
+      "step": "7",
+      "check": "Review evidence weekly",
+      "owner_question": "Which messages helped, which annoyed buyers, and which created support work?",
+      "safe_action": "Track sent count, reply themes, stops/opt-outs, and owner notes before scaling."
+    }
+  ],
+  "safe_scope": "Uses consent/source notes, tone review, timing windows, product context, support routing, discount review, and weekly owner evidence review; no customer data, credentials, legal advice, privacy advice, guaranteed revenue, or result claims."
+}
