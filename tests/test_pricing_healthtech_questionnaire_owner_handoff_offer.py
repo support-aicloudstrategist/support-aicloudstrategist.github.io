@@ -31,7 +31,7 @@ class ScriptCollector(HTMLParser):
 
 def test_pricing_surfaces_healthtech_questionnaire_owner_handoff_offer():
     html = PRICING.read_text(encoding="utf-8")
-    assert "Thirty-eight concrete first offers" in html
+    assert "Forty structured fixed-scope diagnostic offers buyers can understand before a custom build" in html
     assert "North America healthtech AI procurement questionnaire owner handoff" in html
     assert "/resources/north-america-healthtech-ai-procurement-questionnaire-owner-handoff/" in html
     assert "PHI/ePHI, BAA, SOC 2, HITRUST, AI data-use" in html
