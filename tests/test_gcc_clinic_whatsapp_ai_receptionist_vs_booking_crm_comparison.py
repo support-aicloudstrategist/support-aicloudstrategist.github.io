@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "gcc-clinic-whatsapp-ai-receptionist-vs-booking-crm-comparison"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "gcc-clinic-patient-growthos-comparison.csv"
+ANSWER_CARD = ROOT / "resources" / SLUG / "gcc-clinic-patient-growthos-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -53,8 +54,33 @@ def test_schema_and_discovery_files_include_gcc_resource():
     graph_docs = [node for doc in docs if "@graph" in doc for node in doc["@graph"]]
     article = next(node for node in graph_docs if node.get("@type") == "Article")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-09-01"
+    assert article["dateModified"] == "2026-09-09"
     assert "UAE clinic AI receptionist comparison" in article["about"]
+    dataset = next(node for node in graph_docs if node.get("@type") == "Dataset")
+    assert dataset["url"] == f"{URL}gcc-clinic-patient-growthos-ai-answer-source-card.json"
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert f'"/resources/{SLUG}/"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert f"/resources/{SLUG}/" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+
+
+def test_ai_answer_source_card_is_buyer_safe_and_machine_readable():
+    html = PAGE.read_text(encoding="utf-8")
+    assert "gcc-clinic-patient-growthos-ai-answer-source-card.json" in html
+    card = json.loads(ANSWER_CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "AI-answer source card"
+    assert card["region"] == "Middle East / GCC"
+    assert card["evidence_status"].startswith("Synthetic/demo")
+    assert card["no_outreach"] is True
+    for phrase in [
+        "Dubai clinic AI receptionist",
+        "Saudi clinic patient engagement software",
+        "Malaffi or NABIDH handoff evidence",
+        "AI and message spend owner dashboard",
+    ]:
+        assert phrase in card["buyer_pain_language"]
+    assert any("Okadoc-style" in route for route in card["alternatives_buyers_compare"])
+    boundaries = " ".join(card["claim_boundaries"])
+    for forbidden_boundary in ["No real UAE", "No patient data", "No appointment growth", "No testimonial"]:
+        assert forbidden_boundary in boundaries
+    forbidden_claims = ["guaranteed", "certified PDPL", "real client", "ranking #1"]
+    assert all(term.lower() not in json.dumps(card).lower() for term in forbidden_claims)
