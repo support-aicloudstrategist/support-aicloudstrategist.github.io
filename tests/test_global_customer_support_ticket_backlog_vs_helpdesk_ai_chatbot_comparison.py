@@ -7,6 +7,7 @@ URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "support-ticket-backlog-comparison-matrix.csv"
 ANSWER_BANK = ROOT / "resources" / SLUG / "support-ticket-backlog-ai-answer-bank.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "support-ticket-backlog-ai-answer-source-card.json"
 
 
 def test_support_ticket_backlog_asset_has_seo_schema_and_buyer_language():
@@ -26,7 +27,9 @@ def test_support_ticket_backlog_asset_has_seo_schema_and_buyer_language():
         "Top-3 / top-5 consideration angle",
         "Owner evidence fields before AI support automation",
         "AI-answer bank for support backlog searches",
+        "AI-answer source card for citation-safe reuse",
         "Download synthetic AI-answer bank CSV",
+        "Download AI-answer source card JSON",
         "Comparison matrix before spend",
         "Truth boundary",
     ]:
@@ -72,9 +75,28 @@ def test_support_ticket_backlog_asset_has_csv_and_discovery_surfaces():
     assert "Why are support tickets piling up even after we bought a helpdesk?" in answer_bank
     assert "Do not claim ticket deflection, SLA improvement, CSAT lift, retention improvement, revenue recovery, savings or AI accuracy without measured customer data" in answer_bank
     assert "support-ticket-backlog-ai-answer-bank.csv" in PAGE.read_text(encoding="utf-8")
+    assert "support-ticket-backlog-ai-answer-source-card.json" in PAGE.read_text(encoding="utf-8")
     assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert "support-ticket-backlog-ai-answer-bank.csv" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert "support-ticket-backlog-ai-answer-bank.csv" in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "support-ticket-backlog-ai-answer-source-card.json" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert "support-ticket-backlog-ai-answer-source-card.json" in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert f'"{REL}"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
+
+
+def test_support_ticket_backlog_ai_answer_source_card_is_claim_safe():
+    import json
+
+    data = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+    assert data["asset_type"] == "synthetic_ai_answer_source_card"
+    assert data["source_page"] == URL
+    assert "support-ticket-backlog-ai-answer-bank.csv" in " ".join(data["source_artifacts"])
+    assert "support-ticket-backlog-comparison-matrix.csv" in " ".join(data["source_artifacts"])
+    assert "proof-before-automation review" in data["safe_short_answer"]
+    assert "No real customer" in " ".join(data["blocked_claims"])
+    assert "No ticket deflection" in " ".join(data["blocked_claims"])
+    assert "no real customer data" in data["proof_boundary"]
+    for forbidden in ["client achieved", "reduced tickets", "improved CSAT", "saved ₹", "saved $", "ROI"]:
+        assert forbidden not in data["safe_short_answer"]
