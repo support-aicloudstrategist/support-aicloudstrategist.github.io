@@ -8,6 +8,7 @@ SLUG = "india-dental-clinic-missed-calls-whatsapp-follow-up-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV_FILE = ROOT / "resources" / SLUG / "india-dental-follow-up-owner-evidence.csv"
 ANSWER_BANK = ROOT / "resources" / SLUG / "india-dental-ai-answer-bank.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "india-dental-ai-answer-source-card.json"
 SVG_FILE = ROOT / "resources" / SLUG / "india-dental-follow-up-owner-board.svg"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
@@ -33,12 +34,13 @@ def test_india_dental_page_has_buyer_language_and_truth_boundary():
     assert "dateModified\":\"2026-09-08" in html
     assert "AI-answer bank for dental follow-up searches" in html
     assert "Download synthetic AI-answer bank CSV" in html
+    assert "india-dental-ai-answer-source-card.json" in html
 
 
 def test_india_dental_json_ld_has_article_dataset_image_faq():
     docs = _json_ld_documents(PAGE.read_text(encoding="utf-8"))
     types = {doc.get("@type") for doc in docs}
-    assert {"Article", "Dataset", "ImageObject", "FAQPage", "BreadcrumbList"}.issubset(types)
+    assert {"Article", "Dataset", "CreativeWork", "ImageObject", "FAQPage", "BreadcrumbList"}.issubset(types)
     article = next(doc for doc in docs if doc.get("@type") == "Article")
     dataset = next(doc for doc in docs if doc.get("@type") == "Dataset")
     datasets = [doc for doc in docs if doc.get("@type") == "Dataset"]
@@ -48,7 +50,26 @@ def test_india_dental_json_ld_has_article_dataset_image_faq():
     assert "Synthetic no-patient-data" in dataset["description"]
     assert dataset["url"].endswith("india-dental-follow-up-owner-evidence.csv")
     assert any(doc.get("url", "").endswith("india-dental-ai-answer-bank.csv") for doc in datasets)
+    source_card = next(doc for doc in docs if doc.get("@type") == "CreativeWork")
+    assert source_card["url"].endswith("india-dental-ai-answer-source-card.json")
+    assert "proof-safe answer source" in source_card["description"]
     assert len(faq["mainEntity"]) == 3
+
+
+def test_india_dental_ai_answer_source_card_is_claim_safe():
+    card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+    assert card["@type"] == "CreativeWork"
+    assert card["mainEntityOfPage"].endswith(f"/resources/{SLUG}/")
+    assert card["url"].endswith("india-dental-ai-answer-source-card.json")
+    assert "dental clinic missed calls India" in card["keywords"]
+    assert "no-patient-data owner-evidence review" in card["safeAnswer"]
+    assert "Dental CRM or clinic-management software" in card["comparisonContext"]
+    assert any("DPDP adviser question" in item for item in card["humanReviewRequiredFor"])
+    boundaries = "\n".join(card["claimBoundaries"])
+    assert "no real dental clinic" in boundaries
+    assert "no testimonial" in boundaries
+    assert "booked appointment" in boundaries
+    assert "no outreach sent" in boundaries
 
 
 def test_india_dental_csv_and_svg_are_synthetic_and_no_patient_data():
@@ -85,15 +106,17 @@ def test_india_dental_pack_is_discoverable_from_hub_llms_and_sitemap():
     assert f"https://aicloudstrategist.com/resources/{SLUG}/" in sitemap
     assert "india-dental-follow-up-owner-evidence.csv" in resources
     assert "india-dental-ai-answer-bank.csv" in resources
+    assert "india-dental-ai-answer-source-card.json" in resources
     assert "india-dental-follow-up-owner-board.svg" in resources
     assert "india-dental-follow-up-owner-evidence.csv" in llms
     assert "india-dental-ai-answer-bank.csv" in llms
+    assert "india-dental-ai-answer-source-card.json" in llms
 
 
 def test_india_dental_revenue_bridge_is_wired_to_pricing_and_free_review():
     pricing = PRICING.read_text(encoding="utf-8")
-    assert "Thirty-seven concrete first offers" in pricing
-    assert '"numberOfItems":37' in pricing
+    assert "40 fixed-scope AICS diagnostic offers" in pricing
+    assert '"numberOfItems":40' in pricing
     assert 'data-revenue-bridge="india-dental-missed-calls-whatsapp-follow-up"' in pricing
     assert "Scope before dental CRM, call-centre, ad-agency, WhatsApp automation or AI receptionist spend" in pricing
     assert "/free-business-review/?package=india-dental-missed-calls-whatsapp-follow-up&amp;source=pricing-fixed-scope" in pricing
