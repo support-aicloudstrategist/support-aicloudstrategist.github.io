@@ -1,0 +1,57 @@
+{
+  "topic": "SaaS Security Questionnaire Evidence Pack: 7 Red Flags Before AI Answers",
+  "slot": "morning",
+  "date": "2026-09-09",
+  "url": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.png",
+  "boundary": "Educational operations guide only \u2014 not legal, compliance, medical, financial, security certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.",
+  "red_flags": [
+    {
+      "number": 1,
+      "name": "Unclear source owner",
+      "signal": "No one can point to who approved the policy, control answer, or exception note.",
+      "safe_first_action": "Assign an internal owner before drafting AI text."
+    },
+    {
+      "number": 2,
+      "name": "Copied vendor language",
+      "signal": "The answer sounds polished but does not match your actual systems, process, or evidence.",
+      "safe_first_action": "Replace generic wording with evidence-backed, company-specific facts."
+    },
+    {
+      "number": 3,
+      "name": "Missing proof link",
+      "signal": "The answer says a process exists but no policy, ticket, screenshot, log, or owner note is attached.",
+      "safe_first_action": "Keep a proof reference next to each important answer."
+    },
+    {
+      "number": 4,
+      "name": "Overstated coverage",
+      "signal": "Words like all, always, certified, guaranteed, or compliant appear without formal evidence.",
+      "safe_first_action": "Downgrade to bounded, factual language unless formally verified."
+    },
+    {
+      "number": 5,
+      "name": "Old control status",
+      "signal": "The answer was true last quarter but no one checked whether tools, vendors, or owners changed.",
+      "safe_first_action": "Add review date, current owner, and last verified evidence."
+    },
+    {
+      "number": 6,
+      "name": "No exception route",
+      "signal": "The team has no safe way to answer partially met, not applicable, or planned controls.",
+      "safe_first_action": "Use honest status labels instead of forcing a yes."
+    },
+    {
+      "number": 7,
+      "name": "Customer-risk blind spot",
+      "signal": "Sales speed is prioritized over accuracy, audit trail, or buyer trust.",
+      "safe_first_action": "Route high-risk answers for human approval before sending."
+    }
+  ],
+  "diagnostic_scope": {
+    "buyer_trigger": "vendor/security questionnaires take too long or answers vary by salesperson, tool, or customer",
+    "safe_first_scope": "no credentials, production access, customer data, certification claim, compliance guarantee, legal advice, or buyer approval promise",
+    "output": "answer inventory, evidence map, red-flag list, owner review queue, reusable safe-language rules, and next-decision recommendation"
+  }
+}

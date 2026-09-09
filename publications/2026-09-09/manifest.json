@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-09",
+  "posts": [
+    {
+      "slot": "morning",
+      "slug": "saas-security-questionnaire-evidence-pack",
+      "title": "SaaS Security Questionnaire Evidence Pack: 7 Red Flags Before AI Answers",
+      "url": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.html",
+      "png": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.png",
+      "csv": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-evidence-pack.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-09-09/saas-security-questionnaire-answer-card.json"
+    }
+  ]
+}

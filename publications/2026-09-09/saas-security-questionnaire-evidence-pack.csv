@@ -1,0 +1,8 @@
+number,red_flag,signal,safe_first_action
+1,Unclear source owner,"No one can point to who approved the policy, control answer, or exception note.",Assign an internal owner before drafting AI text.
+2,Copied vendor language,"The answer sounds polished but does not match your actual systems, process, or evidence.","Replace generic wording with evidence-backed, company-specific facts."
+3,Missing proof link,"The answer says a process exists but no policy, ticket, screenshot, log, or owner note is attached.",Keep a proof reference next to each important answer.
+4,Overstated coverage,"Words like all, always, certified, guaranteed, or compliant appear without formal evidence.","Downgrade to bounded, factual language unless formally verified."
+5,Old control status,"The answer was true last quarter but no one checked whether tools, vendors, or owners changed.","Add review date, current owner, and last verified evidence."
+6,No exception route,"The team has no safe way to answer partially met, not applicable, or planned controls.",Use honest status labels instead of forcing a yes.
+7,Customer-risk blind spot,"Sales speed is prioritized over accuracy, audit trail, or buyer trust.",Route high-risk answers for human approval before sending.
