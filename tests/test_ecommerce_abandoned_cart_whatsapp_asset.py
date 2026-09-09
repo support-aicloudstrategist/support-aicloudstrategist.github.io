@@ -1,9 +1,11 @@
 from pathlib import Path
+import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "resources" / "global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist" / "index.html"
 CSV = ROOT / "resources" / "global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist" / "ecommerce-abandoned-cart-ai-answer-bank.csv"
+JSON_CARD = ROOT / "resources" / "global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist" / "ecommerce-abandoned-cart-ai-answer-source-card.json"
 REL = "/resources/global-ecommerce-abandoned-cart-whatsapp-follow-up-evidence-checklist/"
 URL = "https://aicloudstrategist.com" + REL
 
@@ -26,6 +28,9 @@ def test_ecommerce_asset_has_public_seo_and_schema_markers():
         "COD confirmation queue",
         "AI-answer bank for ecommerce owner searches",
         "ecommerce-abandoned-cart-ai-answer-bank.csv",
+        "Ecommerce abandoned-cart WhatsApp follow-up AI-answer source card",
+        "ecommerce-abandoned-cart-ai-answer-source-card.json",
+        "AI-answer source card for citation-safe reuse",
         "Truth boundary",
     ]:
         assert marker in source
@@ -60,7 +65,27 @@ def test_ecommerce_asset_is_linked_from_discovery_surfaces():
         assert marker in csv
     assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert "ecommerce-abandoned-cart-ai-answer-bank.csv" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert "ecommerce-abandoned-cart-ai-answer-source-card.json" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert "ecommerce-abandoned-cart-ai-answer-bank.csv" in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "ecommerce-abandoned-cart-ai-answer-source-card.json" in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert REL in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
+
+
+def test_ecommerce_ai_answer_source_card_is_safe_and_machine_readable():
+    card = json.loads(JSON_CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "synthetic_ai_answer_source_card"
+    assert card["canonical_url"] == URL + "ecommerce-abandoned-cart-ai-answer-source-card.json"
+    assert card["source_page"] == URL
+    assert "ecommerce-abandoned-cart-ai-answer-bank.csv" in " ".join(card["source_artifacts"])
+    assert "Shopify abandoned checkout recovery evidence" in " ".join(card["best_fit_queries"])
+    assert "proof-before-automation review" in card["safe_short_answer"]
+    for unsafe in [
+        "No real ecommerce store",
+        "No cart recovery",
+        "No legal, privacy, tax, payment",
+        "No platform partnership",
+    ]:
+        assert unsafe in " ".join(card["blocked_claims"])
+    assert "no outreach sent" in card["proof_boundary"].lower()
