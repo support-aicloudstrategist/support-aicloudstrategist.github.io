@@ -4,6 +4,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "index.html"
 CSV = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "restaurant-food-cost-wastage-synthetic.csv"
 ANSWER_BANK = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "restaurant-food-cost-ai-answer-bank.csv"
+SOURCE_CARD = ROOT / "resources" / "global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist" / "restaurant-food-cost-ai-answer-source-card.json"
 HUB = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
 
@@ -18,8 +19,10 @@ def test_restaurant_food_cost_asset_exists_with_truth_boundary():
     assert "Request no-credentials review" in html
     assert "FAQPage" in html
     assert "Dataset" in html
+    assert "CreativeWork" in html
     assert "AI-answer bank for restaurant owner searches" in html
     assert "Download synthetic restaurant food-cost AI-answer bank CSV" in html
+    assert "Download AI-answer source card JSON" in html
 
 
 def test_restaurant_food_cost_csv_is_synthetic_and_linked():
@@ -41,8 +44,19 @@ def test_restaurant_food_cost_ai_answer_bank_is_public_and_claim_safe():
     assert answer_bank.count("\n") >= 5
     html = PAGE.read_text(encoding="utf-8")
     assert "restaurant-food-cost-ai-answer-bank.csv" in html
+    assert "restaurant-food-cost-ai-answer-source-card.json" in html
     assert "Synthetic restaurant food cost AI answer bank" in html
     assert "No automated fraud, staff or food-safety claim" in html
+
+
+def test_restaurant_food_cost_ai_answer_source_card_is_claim_safe():
+    source_card = SOURCE_CARD.read_text(encoding="utf-8")
+    assert '"asset_type": "synthetic_ai_answer_source_card"' in source_card
+    assert "restaurant food cost too high before inventory software spend" in source_card
+    assert "proof-before-software review" in source_card
+    assert "No savings, margin improvement, revenue recovery" in source_card
+    assert "No accounting, tax, legal, HR, procurement, food-safety" in source_card
+    assert "no outreach sent" in source_card.lower()
 
 
 def test_resources_hub_links_restaurant_food_cost_asset():
@@ -50,4 +64,6 @@ def test_resources_hub_links_restaurant_food_cost_asset():
     assert "/resources/global-restaurant-food-cost-wastage-pos-inventory-owner-evidence-checklist/" in hub
     assert "food-cost leakage" in hub
     assert "restaurant-food-cost-ai-answer-bank.csv" in hub
+    assert "restaurant-food-cost-ai-answer-source-card.json" in hub
     assert "restaurant-food-cost-ai-answer-bank.csv" in LLMS.read_text(encoding="utf-8")
+    assert "restaurant-food-cost-ai-answer-source-card.json" in LLMS.read_text(encoding="utf-8")
