@@ -8,8 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "uae-healthtech-cloud-trust-review-vs-patient-platforms-finops-grc-comparison"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "uae-healthtech-comparison-matrix.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "uae-healthtech-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 CSV_URL = f"{URL}uae-healthtech-comparison-matrix.csv"
+SOURCE_CARD_URL = f"{URL}uae-healthtech-ai-answer-source-card.json"
 
 def json_ld_documents(html):
     return [json.loads(raw) for raw in re.findall(r'<script\s+type="application/ld\+json">(.*?)</script>', html, re.I | re.S)]
@@ -19,6 +21,7 @@ class UaeHealthtechCloudTrustComparisonTests(unittest.TestCase):
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.source_card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -48,12 +51,29 @@ class UaeHealthtechCloudTrustComparisonTests(unittest.TestCase):
         self.assertIn("FAQPage", types)
         dataset = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Dataset")
         self.assertEqual(dataset["url"], CSV_URL)
+        dataset_urls = {doc.get("url") for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Dataset"}
+        self.assertIn(SOURCE_CARD_URL, dataset_urls)
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
+        self.assertIn(f"/resources/{SLUG}/uae-healthtech-ai-answer-source-card.json", self.resources)
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.llms)
         self.assertIn(CSV_URL, self.llms)
+        self.assertIn(SOURCE_CARD_URL, self.llms)
         self.assertIn(URL, self.sitemap)
+
+    def test_ai_answer_source_card_is_buyer_safe(self):
+        self.assertEqual(self.source_card["@type"], "Dataset")
+        self.assertEqual(self.source_card["url"], SOURCE_CARD_URL)
+        self.assertIn("UAE healthtech cloud trust review patient data hosting", self.source_card["buyerPainPhrases"])
+        self.assertIn("Dubai clinic AI receptionist WhatsApp patient data privacy", self.source_card["buyerPainPhrases"])
+        self.assertIn("no-credentials, proof-before-platform evidence-review layer", self.source_card["safeAicsAnswer"])
+        self.assertIn("Okadoc or other patient access and booking platforms", self.source_card["notReplacementFor"])
+        self.assertTrue(any("PHI" in stop and "credential" in stop for stop in self.source_card["humanReviewStops"]))
+        blocked = " ".join(self.source_card["blockedClaims"]).lower()
+        for phrase in ["real uae hospital", "patient data", "pdpl", "ranking", "revenue", "roi", "appointment growth"]:
+            self.assertIn(phrase, blocked)
+        self.assertIn("Synthetic/readiness buyer-education source card only", self.source_card["claimBoundary"])
 
     def test_claim_boundaries_block_fake_proof(self):
         for phrase in ["synthetic comparison asset", "not a vendor ranking", "not a real UAE hospital", "not patient data", "not health data", "not personal data", "not production cloud data", "not a testimonial", "not a certification", "not PDPL compliance proof", "not DHA, DoH, MOHAP, Malaffi, NABIDH", "not legal/privacy/security/clinical/medical/diagnostic/billing/procurement/audit advice", "not ranking evidence", "not customer evidence", "not revenue evidence", "not savings evidence", "not ROI evidence", "No outreach was sent"]:
