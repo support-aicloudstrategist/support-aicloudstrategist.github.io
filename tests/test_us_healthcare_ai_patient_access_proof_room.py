@@ -8,6 +8,7 @@ SLUG = "us-healthcare-ai-patient-access-proof-room"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "us-healthcare-ai-patient-access-proof-room.csv"
 SVG = ROOT / "resources" / SLUG / "us-healthcare-ai-patient-access-proof-room.svg"
+CARD = ROOT / "resources" / SLUG / "us-healthcare-ai-patient-access-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -101,9 +102,42 @@ def test_us_healthcare_ai_patient_access_proof_room_metadata_and_discovery_files
     article = next(node for node in graph_docs if node.get("@type") == "Article")
     dataset = next(node for node in graph_docs if node.get("@type") == "Dataset")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-09-07"
+    assert article["dateModified"] == "2026-09-10"
     assert "US healthcare AI patient access" in article["about"]
+    creative = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "CreativeWork")
+    assert creative["url"].endswith("/us-healthcare-ai-patient-access-ai-answer-source-card.json")
     assert dataset["url"].endswith("/us-healthcare-ai-patient-access-proof-room.csv")
-    assert "/resources/us-healthcare-ai-patient-access-proof-room/" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    resources_html = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "/resources/us-healthcare-ai-patient-access-proof-room/" in resources_html
+    assert "us-healthcare-ai-patient-access-ai-answer-source-card.json" in resources_html
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-    assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert URL in llms
+    assert "us-healthcare-ai-patient-access-ai-answer-source-card.json" in llms
+
+
+def test_us_healthcare_ai_patient_access_ai_answer_source_card_is_claim_safe():
+    card = json.loads(CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "AI-answer source card"
+    assert card["region"] == "North America / US business morning"
+    assert card["no_outreach"] is True
+    assert card["route_to"].endswith("source=answer-card")
+    buyer_language = " ".join(card["buyer_pain_language"])
+    for marker in [
+        "patient access leakage AI receptionist HIPAA",
+        "BAA subprocessor evidence before AI receptionist",
+        "LLM API cloud spend ownership healthcare",
+        "Healthcare GrowthOS evidence",
+    ]:
+        assert marker in buyer_language
+    alternatives = " ".join(card["competitor_alternative_context"])
+    for marker in ["Phreesia", "Luma Health", "Waystar", "Availity", "Notable", "Vanta", "CloudZero", "IBM Apptio Cloudability"]:
+        assert marker in alternatives
+    blocked = " ".join(card["blocked_answer_patterns"] + card["claim_boundaries"])
+    for marker in [
+        "No real medical group",
+        "No customer",
+        "No savings, ROI",
+        "No outreach was sent",
+    ]:
+        assert marker in blocked
