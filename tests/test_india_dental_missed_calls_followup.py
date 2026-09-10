@@ -115,8 +115,8 @@ def test_india_dental_pack_is_discoverable_from_hub_llms_and_sitemap():
 
 def test_india_dental_revenue_bridge_is_wired_to_pricing_and_free_review():
     pricing = PRICING.read_text(encoding="utf-8")
-    assert "40 fixed-scope AICS diagnostic offers" in pricing
-    assert '"numberOfItems":40' in pricing
+    assert "42 fixed-scope AICS diagnostic offers" in pricing
+    assert '"numberOfItems":42' in pricing
     assert 'data-revenue-bridge="india-dental-missed-calls-whatsapp-follow-up"' in pricing
     assert "Scope before dental CRM, call-centre, ad-agency, WhatsApp automation or AI receptionist spend" in pricing
     assert "/free-business-review/?package=india-dental-missed-calls-whatsapp-follow-up&amp;source=pricing-fixed-scope" in pricing
