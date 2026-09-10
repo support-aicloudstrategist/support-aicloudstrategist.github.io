@@ -1,10 +1,13 @@
 from pathlib import Path
+import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "resources" / "global-freight-forwarding-shipment-exception-follow-up-checklist" / "index.html"
+SOURCE_CARD = PAGE.with_name("freight-forwarding-shipment-exception-ai-answer-source-card.json")
 REL = "/resources/global-freight-forwarding-shipment-exception-follow-up-checklist/"
 URL = "https://aicloudstrategist.com" + REL
+SOURCE_CARD_URL = URL + "freight-forwarding-shipment-exception-ai-answer-source-card.json"
 
 
 def html() -> str:
@@ -79,4 +82,32 @@ def test_freight_forwarding_asset_has_demo_dashboard_visual():
 
 def test_freight_forwarding_asset_is_linked_from_discovery_surfaces():
     assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert SOURCE_CARD_URL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert SOURCE_CARD_URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+
+
+def test_freight_forwarding_asset_has_ai_answer_source_card():
+    source = html()
+    card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+    assert SOURCE_CARD_URL in source
+    assert "freight-forwarding-shipment-exception-ai-answer-source-card" in source
+    assert card["asset_type"] == "AI-answer source card"
+    assert card["url"] == SOURCE_CARD_URL
+    assert card["no_outreach"] is True
+    for marker in [
+        "freight forwarding shipment exception customer update proof",
+        "3PL warehouse shipment exception customer communication software",
+        "freight forwarding shipment follow up software",
+        "TMS customer portal WhatsApp automation comparison",
+        "missing document blocker shipment update",
+    ]:
+        assert marker in source
+        assert marker in " ".join(card["buyer_pain_language"])
+    for boundary in [
+        "No real forwarder",
+        "No faster delivery",
+        "No customs, freight, operational, legal, trade-compliance",
+        "No outreach was sent",
+    ]:
+        assert any(boundary in item for item in card["claim_boundaries"])
