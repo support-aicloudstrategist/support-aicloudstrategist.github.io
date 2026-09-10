@@ -1,5 +1,15 @@
 # AICS growth value operator log
 
+## 2026-09-10 Clinic intake publication homepage evidence-placement repair
+
+- Decision: improve credibility and AI-search discoverability before chasing customers by fixing the newest public clinic-intake asset's placement and answer-card route. The publication itself existed, but the homepage link had been inserted into the hero layout instead of the evidence grid, reducing proof clarity and risking visual/layout confusion.
+- Updated: `/index.html` now shows the Clinic Intake AI Safety Card once, inside the `#evidence` grid after the UAE healthtech executive summary card; removed the stray hero-section article.
+- Updated: `llms.txt` now includes the clinic-intake AI safety answer-card JSON route so AI-answer systems can find the safe-route and claim-boundary source card.
+- Added: `tests/test_homepage_publication_evidence_placement_2026_09_10.py` to prevent duplicate homepage links, misplaced hero links, and missing `llms.txt` answer-card coverage.
+- Verification performed: focused pytest returned `5 passed in 0.13s`; `git diff --check` passed; stdlib HTML parser check reported `parser_errors: 0`, `open_stack_tail: []`, homepage `url_count: 1`, and `answer_card_in_llms: True`.
+- Proof boundary: site repair and AI-discovery curation only. No real clinic, doctor, patient, PHI/ePHI, personal data, production data, client, customer, testimonial, logo, certification, medical/legal/privacy/security/compliance advice, appointment growth, ranking, demand, lead, customer, revenue, savings, ROI or outcome claim was made. No outreach.
+- Next gap: add a Resources-hub feature card for the Clinic Intake AI Safety Card, then consider a fixed-scope bridge only after discoverability/proof surfaces are complete.
+
 ## 2026-09-07 Education admissions discovery route repair
 
 - Decision: fix the lowest layman-search discovery bottleneck by making the school/coaching admissions page match all tracked owner search phrases and adding a direct WhatsApp conversion route.
