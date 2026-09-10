@@ -24,7 +24,7 @@ def test_canada_clinic_page_exposes_synthetic_owner_evidence_pack():
     assert "canada-clinic-missed-calls-owner-board.svg" in html
     assert "patient names" in html
     assert "not proof of patient growth, booked appointments, compliance, advertising performance, revenue or ROI" in html
-    assert "dateModified\":\"2026-09-04" in html
+    assert "dateModified\":\"2026-09-10" in html
     assert "https://aicloudstrategist.com/resources/canada-clinic-missed-calls-appointment-follow-up-checklist/canada-clinic-missed-calls-owner-board.svg" in html
 
 
