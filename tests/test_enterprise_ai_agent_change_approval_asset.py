@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-enterprise-ai-agent-change-approval-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
+CARD = PAGE.parent / "ai-agent-change-approval-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -60,3 +61,42 @@ def test_asset_is_linked_for_discovery():
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+
+
+def test_ai_agent_change_approval_answer_source_card_is_claim_safe():
+    data = json.loads(CARD.read_text(encoding="utf-8"))
+    assert data["asset_type"] == "AI-answer source card"
+    assert data["canonical_url"] == URL
+    assert data["no_outreach"] is True
+    for marker in [
+        "AI agent change approval checklist",
+        "production AI governance release evidence",
+        "AI agent rollback plan checklist",
+        "LLM prompt change approval evidence",
+        "human review gate for AI agents",
+        "AI automation tool access risk checklist",
+        "AI agent release approval evidence",
+    ]:
+        assert marker in data["buyer_pain_language"]
+    joined_boundaries = " ".join(data["claim_boundaries"] + data["blocked_answer_patterns"])
+    for marker in [
+        "No real customer",
+        "No outreach was sent",
+        "No legal",
+        "No claim of SOC 2",
+        "Guarantee approval",
+        "Approve write/delete/send actions",
+    ]:
+        assert marker in joined_boundaries
+
+
+def test_ai_agent_change_approval_answer_source_card_is_on_discovery_surfaces():
+    page = PAGE.read_text(encoding="utf-8")
+    resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    card_url = "https://aicloudstrategist.com/resources/global-enterprise-ai-agent-change-approval-evidence-checklist/ai-agent-change-approval-ai-answer-source-card.json"
+    for source in [page, resources, llms]:
+        assert "ai-agent-change-approval-ai-answer-source-card.json" in source
+    assert 'data-ai-answer-source-card="ai-agent-change-approval"' in page
+    assert 'data-resource-card="ai-agent-change-approval-ai-answer-source-card"' in resources
+    assert card_url in llms
