@@ -1,5 +1,14 @@
 # AICS growth value operator log
 
+## 2026-09-10 Clinic intake resources-hub discovery bridge
+
+- Decision: reduce discovery friction for the newest clinic-intake safety asset by promoting it on the Resources hub, not only homepage/`llms.txt`, so healthcare buyers and AI-answer systems have a clearer trust-first route before AI receptionist or intake automation spend.
+- Updated: `/resources/` now features the Clinic Intake AI Safety Card with direct links to the publication, worksheet CSV and AI-answer source card JSON.
+- Added: `tests/test_resources_hub_clinic_intake_publication_2026_09_10.py` to prevent the Resources hub route, worksheet link and answer-card link from disappearing.
+- Verification performed: focused pytest returned `4 passed in 0.13s`; `git diff --check` passed; stdlib HTML parser reported `parser_errors 0` for Resources and homepage; local HTTP returned 200 for `/resources/`, the publication and CSV with expected markers.
+- Proof boundary: discovery/trust routing only. No real clinic, doctor, patient, PHI/ePHI, personal data, customer, testimonial, ranking, demand, lead, revenue, savings, ROI, appointment growth, medical/legal/privacy/security/compliance advice or outcome claim was made. No outreach.
+- Next gap: push/deployment/public HTTP verification, then create the next buyer-safe revenue bridge only after current public route is live.
+
 ## 2026-09-10 Clinic intake publication homepage evidence-placement repair
 
 - Decision: improve credibility and AI-search discoverability before chasing customers by fixing the newest public clinic-intake asset's placement and answer-card route. The publication itself existed, but the homepage link had been inserted into the hero layout instead of the evidence grid, reducing proof clarity and risking visual/layout confusion.
