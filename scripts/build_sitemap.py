@@ -316,13 +316,22 @@ def canonical_path_for(page: Path) -> str | None:
     return path or "/"
 
 
+def downloadable_publication_assets() -> list[str]:
+    """Return machine-readable publication worksheets/source cards worth indexing."""
+    assets: list[str] = []
+    for asset in sorted((ROOT / "publications").glob("20*/**/*")):
+        if asset.suffix == ".csv" or asset.name.endswith("-answer-card.json"):
+            assets.append("/" + asset.relative_to(ROOT).as_posix())
+    return assets
+
+
 def discover_paths() -> list[str]:
-    """Return all indexable public pages, with commercial routes first.
+    """Return all indexable public pages and high-value machine-readable assets.
 
     The monitor treats sitemap coverage as a technical-health gate. Keep the
     manually curated high-intent URLs at the top, then append every remaining
-    canonical, indexable HTML page so the live sitemap does not hide legitimate
-    public pages from crawlers or AI answer engines.
+    canonical, indexable HTML page plus publication worksheets/source cards so
+    crawlers and AI answer engines can discover the evidence assets directly.
     """
     paths = []
     seen: set[str] = set()
@@ -344,6 +353,9 @@ def discover_paths() -> list[str]:
         path = canonical_path_for(page)
         if path and path.startswith("/"):
             add(path)
+
+    for path in downloadable_publication_assets():
+        add(path)
 
     if len(paths) > MAX_SITEMAP_URLS:
         paths = paths[:MAX_SITEMAP_URLS]
