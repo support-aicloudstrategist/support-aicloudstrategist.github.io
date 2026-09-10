@@ -9,6 +9,9 @@ REL = f"/resources/{SLUG}/"
 URL = "https://aicloudstrategist.com" + REL
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / f"{SLUG}.csv"
+CARD_REL = f"/resources/{SLUG}/europe-healthtech-nis2-ai-answer-source-card.json"
+CARD_URL = "https://aicloudstrategist.com" + CARD_REL
+CARD = ROOT / "resources" / SLUG / "europe-healthtech-nis2-ai-answer-source-card.json"
 
 
 def html() -> str:
@@ -28,10 +31,10 @@ def test_page_is_indexable_canonical_schema_and_single_h1():
     assert source.count('data-aics-global-footer') == 1
     docs = json_ld_documents(source)
     types = {doc.get("@type") for doc in docs if isinstance(doc, dict)}
-    assert {"Article", "Dataset", "FAQPage", "BreadcrumbList"}.issubset(types)
+    assert {"Article", "Dataset", "CreativeWork", "FAQPage", "BreadcrumbList"}.issubset(types)
     article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-09-04"
+    assert article["dateModified"] == "2026-09-10"
     for marker in [
         "Europe healthtech NIS2 evidence checklist",
         "NIS2 cloud incident owner evidence",
@@ -130,6 +133,25 @@ def test_claim_boundaries_block_fake_proof():
         assert forbidden not in source.lower()
 
 
+def test_ai_answer_source_card_is_claim_safe_and_query_aligned():
+    card = json.loads(CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "synthetic_ai_answer_source_card"
+    assert card["region"] == "Europe / UK-EU"
+    assert card["canonical_url"] == CARD_URL
+    assert len(card["best_fit_queries"]) == 5
+    assert "no-credentials, no-patient-data owner-evidence review" in card["safe_short_answer"]
+    assert "NIS2 cloud incident" in card["safe_short_answer"]
+    assert any("ICT supplier risk" in pain for pain in card["buyer_pain_language"])
+    assert any("OneTrust" in route for route in card["alternatives_buyers_compare"])
+    assert any("Datadog" in route for route in card["alternatives_buyers_compare"])
+    assert any("Qualified human review" in gate for gate in card["human_review_gates"])
+    boundary = " ".join(card["blocked_claims"] + [card["proof_boundary"]]).lower()
+    for unsafe in ["no real european healthtech customer", "no patient data", "no nis2", "no testimonial", "no ranking"]:
+        assert unsafe in boundary
+    assert "roi" in boundary
+    assert card["no_outreach"] is True
+
+
 def test_csv_is_synthetic_and_usable():
     rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
     assert len(rows) == 6
@@ -155,7 +177,14 @@ def test_csv_is_synthetic_and_usable():
 
 
 def test_discovery_surfaces_are_wired():
-    assert REL in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
-    assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    page = html()
+    resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert REL in resources
+    assert CARD_REL in page
+    assert "AI-answer source card for safe buyer citation" in page
+    assert CARD_REL in resources
+    assert URL in llms
+    assert CARD_URL in llms
     assert REL in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
