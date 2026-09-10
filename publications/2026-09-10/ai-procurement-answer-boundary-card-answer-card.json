@@ -1,0 +1,54 @@
+{
+  "topic": "AI Procurement Answer Boundary Card: 7 Checks Before Reusing Vendor Answers",
+  "date": "2026-09-10",
+  "slot": "evening",
+  "url": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.csv",
+  "boundary": "Educational operations guide only \u2014 not legal, compliance, security certification, audit, procurement, ranking, customer-result, revenue, savings, approval, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "check": "Confirm current source",
+      "owner_question": "Which policy, control record, architecture note or owner-approved answer is the source?",
+      "safe_action": "Do not reuse old text unless the source and owner are still current."
+    },
+    {
+      "step": "2",
+      "check": "Match the buyer question",
+      "owner_question": "Is the buyer asking about security, privacy, AI use, data location, subprocessors, uptime, support or commercial terms?",
+      "safe_action": "Route mixed questions to the right owner instead of pasting one generic answer."
+    },
+    {
+      "step": "3",
+      "check": "Separate fact from intent",
+      "owner_question": "Which statements are already true today, and which are planned, roadmap or conditional?",
+      "safe_action": "Label planned work clearly and avoid present-tense claims until evidence exists."
+    },
+    {
+      "step": "4",
+      "check": "Check regulated wording",
+      "owner_question": "Could the answer imply legal compliance, audit approval, certification, customer outcome, medical, financial or security guarantee?",
+      "safe_action": "Use bounded operational language and ask counsel/compliance for risky wording."
+    },
+    {
+      "step": "5",
+      "check": "Name the answer owner",
+      "owner_question": "Who is accountable for approving this answer before it leaves the company?",
+      "safe_action": "Capture owner, date, source link and approval status in a simple register."
+    },
+    {
+      "step": "6",
+      "check": "Preserve evidence links",
+      "owner_question": "What proof can be shared now: public page, redacted screenshot, policy excerpt, SOC report process, or owner note?",
+      "safe_action": "Attach only shareable, non-secret evidence; never send credentials, keys, logs or customer data."
+    },
+    {
+      "step": "7",
+      "check": "Review after send",
+      "owner_question": "Which answers created follow-up questions, blocker themes or commitments that need internal cleanup?",
+      "safe_action": "Update the answer bank and next-action owner before the next questionnaire arrives."
+    }
+  ],
+  "safe_scope": "Uses source verification, question-fit routing, present-tense evidence control, regulated wording checks, owner approval, shareable evidence links and post-send answer-bank updates; no legal, compliance, audit, certification, ranking, revenue, savings, customer-result, approval or performance guarantees."
+}

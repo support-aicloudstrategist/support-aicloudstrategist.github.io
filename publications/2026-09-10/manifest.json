@@ -12,6 +12,18 @@
       "answer_card": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card-answer-card.json",
       "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-10",
       "boundary": "Educational operations guide only \u2014 not medical, legal, privacy, compliance, diagnosis, treatment, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice."
+    },
+    {
+      "slot": "evening",
+      "slug": "ai-procurement-answer-boundary-card",
+      "title": "AI Procurement Answer Boundary Card: 7 Checks Before Reusing Vendor Answers",
+      "url": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.html",
+      "png": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-10",
+      "boundary": "Educational operations guide only \u2014 not legal, compliance, security certification, audit, procurement, ranking, customer-result, revenue, savings, approval, or guaranteed-performance advice."
     }
   ]
 }
