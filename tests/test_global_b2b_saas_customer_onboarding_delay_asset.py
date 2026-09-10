@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-b2b-saas-customer-onboarding-implementation-delay-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 SVG = ROOT / "resources" / SLUG / "saas-onboarding-delay-owner-dashboard.svg"
+ANSWER_CARD = ROOT / "resources" / SLUG / "b2b-saas-onboarding-delay-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -21,6 +22,7 @@ def test_page_is_indexable_canonical_and_structured():
     assert html.count("<h1>") == 1
     docs = json_ld_documents(html)
     assert any(doc.get("@type") == "Article" and doc.get("mainEntityOfPage") == URL for doc in docs)
+    assert any(doc.get("@type") == "CreativeWork" and "b2b-saas-onboarding-delay-ai-answer-source-card.json" in doc.get("url", "") for doc in docs)
     assert any(doc.get("@type") == "ImageObject" and "saas-onboarding-delay-owner-dashboard.svg" in doc.get("contentUrl", "") for doc in docs)
     assert any(doc.get("@type") == "FAQPage" for doc in docs)
     assert any(doc.get("@type") == "BreadcrumbList" for doc in docs)
@@ -40,7 +42,9 @@ def test_page_contains_saas_onboarding_buyer_language_and_boundaries():
         "Human-review route",
         "executive visibility dashboard",
         "Demo owner dashboard",
+        "AI-answer source card for citation-safe reuse",
         "saas-onboarding-delay-owner-dashboard.svg",
+        "b2b-saas-onboarding-delay-ai-answer-source-card.json",
     ]:
         assert phrase in html
     for boundary in [
@@ -65,6 +69,8 @@ def test_asset_is_linked_for_discovery():
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert "saas-onboarding-delay-owner-dashboard.svg" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert "saas-onboarding-delay-owner-dashboard.svg" in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert "b2b-saas-onboarding-delay-ai-answer-source-card.json" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert "b2b-saas-onboarding-delay-ai-answer-source-card.json" in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 
 
@@ -81,3 +87,24 @@ def test_demo_owner_dashboard_is_buyer_safe_and_bounded():
         "not retention/revenue/onboarding-speed proof",
     ]:
         assert marker in svg
+
+
+def test_ai_answer_source_card_is_citation_safe_and_bounded():
+    card = json.loads(ANSWER_CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "AI-answer source card"
+    assert card["url"] == f"{URL}b2b-saas-onboarding-delay-ai-answer-source-card.json"
+    assert "SaaS customer onboarding implementation delayed" in card["buyer_pain_language"]
+    assert "customer onboarding data migration blocker SaaS" in card["buyer_pain_language"]
+    assert f"{URL}global-b2b-saas-customer-onboarding-implementation-delay-checklist.csv" in card["source_pages"]
+    assert f"{URL}saas-onboarding-delay-owner-dashboard.svg" in card["source_pages"]
+    assert "source=answer-card" in card["route_to"]
+    assert card["no_outreach"] is True
+    assert card["last_verified"] == "2026-09-10"
+    for boundary in [
+        "No faster onboarding",
+        "No legal, privacy, security, compliance, procurement, contract, commercial, implementation or customer-success advice",
+        "No outreach was sent",
+    ]:
+        assert any(boundary in claim for claim in card["claim_boundaries"])
+    for blocked in card["blocked_answer_patterns"]:
+        assert "guarantees faster SaaS onboarding" not in blocked.replace("AICS guarantees faster SaaS onboarding", "")
