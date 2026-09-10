@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-10",
+  "posts": [
+    {
+      "slot": "morning",
+      "slug": "clinic-intake-ai-safety-card",
+      "title": "Clinic Intake AI Safety Card: 7 Checks Before Automating Patient Questions",
+      "url": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.html",
+      "png": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-10",
+      "boundary": "Educational operations guide only \u2014 not medical, legal, privacy, compliance, diagnosis, treatment, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice."
+    }
+  ]
+}

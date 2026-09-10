@@ -1,0 +1,87 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1360' height='900' viewBox='0 0 1360 900'>
+  <defs>
+    <linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#0f172a'/><stop offset='.52' stop-color='#0369a1'/><stop offset='1' stop-color='#16a34a'/></linearGradient>
+    <filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#0f172a' flood-opacity='.14'/></filter>
+  </defs>
+  <rect width='1360' height='900' fill='#f0f9ff'/>
+  <rect x='38' y='34' width='1284' height='832' rx='46' fill='white' stroke='#bae6fd' stroke-width='3'/>
+  <rect x='72' y='66' width='1216' height='168' rx='34' fill='url(#hero)'/>
+  <text x='108' y='112' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#bbf7d0' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING INFOGRAPHIC</text>
+  <text x='108' y='160' font-family='Inter,Arial,sans-serif' font-size='37' font-weight='950' fill='white'>Clinic Intake AI Safety Card: 7 Checks Before Automating Patient Questions</text>
+  <text x='108' y='199' font-family='Inter,Arial,sans-serif' font-size='18' fill='#e0f2fe'>A safe educational checklist for clinic owners before using AI chat, forms, WhatsApp, or email to handle patient intake questions.</text>
+  <g transform='translate(1128 98)'><rect width='118' height='94' rx='24' fill='rgba(255,255,255,.16)' stroke='#bbf7d0'/><text x='59' y='37' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='white'>Clinic</text><text x='59' y='64' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='850' fill='#dcfce7'>Safe intake</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='72' y='276' width='260' height='222' rx='28' fill='#ecfeff' stroke='#0891b2' stroke-width='3'/>
+    <circle cx='106' cy='311' r='22' fill='white' stroke='#0891b2' stroke-width='3'/>
+    <text x='106' y='319' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0891b2'>1</text>
+    <text x='134' y='308' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='134' dy='0'>Define allowed</tspan><tspan x='134' dy='22'>questions</tspan></text>
+    <text x='94' y='368' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='94' y='392' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='94' dy='0'>Which intake questions are</tspan><tspan x='94' dy='16'>administrative only, such as</tspan><tspan x='94' dy='16'>location, hours, appointment type,</tspan><tspan x='94' dy='16'>documents, or callback preference?</tspan></text>
+    <text x='94' y='454' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='94' y='475' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='94' dy='0'>Keep medical symptoms, diagnosis,</tspan><tspan x='94' dy='16'>treatment, urgency, and medication</tspan><tspan x='94' dy='16'>questions routed to humans.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='384' y='276' width='260' height='222' rx='28' fill='#f0fdf4' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='418' cy='311' r='22' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='418' y='319' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#16a34a'>2</text>
+    <text x='446' y='308' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='446' dy='0'>Show the handoff</tspan><tspan x='446' dy='22'>rule</tspan></text>
+    <text x='406' y='368' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='406' y='392' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='406' dy='0'>When must the AI stop and send the</tspan><tspan x='406' dy='16'>person to staff or emergency</tspan><tspan x='406' dy='16'>guidance already approved by the</tspan><tspan x='406' dy='16'>clinic?</tspan></text>
+    <text x='406' y='454' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='406' y='475' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='406' dy='0'>Write a visible handoff rule before</tspan><tspan x='406' dy='16'>connecting the intake tool to</tspan><tspan x='406' dy='16'>patients.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='696' y='276' width='260' height='222' rx='28' fill='#eef2ff' stroke='#4f46e5' stroke-width='3'/>
+    <circle cx='730' cy='311' r='22' fill='white' stroke='#4f46e5' stroke-width='3'/>
+    <text x='730' y='319' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#4f46e5'>3</text>
+    <text x='758' y='308' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='758' dy='0'>Protect sensitive</tspan><tspan x='758' dy='22'>details</tspan></text>
+    <text x='718' y='368' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='718' y='392' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='718' dy='0'>What personal or health details</tspan><tspan x='718' dy='16'>should not be typed into a public</tspan><tspan x='718' dy='16'>chat or unmanaged form?</tspan></text>
+    <text x='718' y='454' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='718' y='475' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='718' dy='0'>Collect the minimum needed and</tspan><tspan x='718' dy='16'>avoid free-text medical history in</tspan><tspan x='718' dy='16'>low-control channels.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1008' y='276' width='260' height='222' rx='28' fill='#fdf2f8' stroke='#db2777' stroke-width='3'/>
+    <circle cx='1042' cy='311' r='22' fill='white' stroke='#db2777' stroke-width='3'/>
+    <text x='1042' y='319' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#db2777'>4</text>
+    <text x='1070' y='308' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='1070' dy='0'>Use approved</tspan><tspan x='1070' dy='22'>wording</tspan></text>
+    <text x='1030' y='368' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='1030' y='392' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='1030' dy='0'>Has the clinic owner reviewed the</tspan><tspan x='1030' dy='16'>exact phrases patients will see?</tspan></text>
+    <text x='1030' y='454' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='1030' y='475' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='1030' dy='0'>Use simple scripted wording and</tspan><tspan x='1030' dy='16'>avoid advice, reassurance,</tspan><tspan x='1030' dy='16'>diagnosis, or promise language.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='228' y='552' width='260' height='222' rx='28' fill='#fff7ed' stroke='#ea580c' stroke-width='3'/>
+    <circle cx='262' cy='587' r='22' fill='white' stroke='#ea580c' stroke-width='3'/>
+    <text x='262' y='595' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#ea580c'>5</text>
+    <text x='290' y='584' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='290' dy='0'>Assign a response</tspan><tspan x='290' dy='22'>owner</tspan></text>
+    <text x='250' y='644' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='250' y='668' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='250' dy='0'>Who reads escalated messages,</tspan><tspan x='250' dy='16'>missed calls, incomplete forms, and</tspan><tspan x='250' dy='16'>confused replies each business day?</tspan></text>
+    <text x='250' y='730' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='250' y='751' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='250' dy='0'>Name a staff owner before</tspan><tspan x='250' dy='16'>increasing intake automation</tspan><tspan x='250' dy='16'>volume.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='540' y='552' width='260' height='222' rx='28' fill='#fefce8' stroke='#ca8a04' stroke-width='3'/>
+    <circle cx='574' cy='587' r='22' fill='white' stroke='#ca8a04' stroke-width='3'/>
+    <text x='574' y='595' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#ca8a04'>6</text>
+    <text x='602' y='584' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='602' dy='0'>Test edge cases</tspan><tspan x='602' dy='22'>manually</tspan></text>
+    <text x='562' y='644' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='562' y='668' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='562' dy='0'>What happens for urgent symptoms,</tspan><tspan x='562' dy='16'>angry patients, minors, billing</tspan><tspan x='562' dy='16'>concerns, language gaps, or</tspan><tspan x='562' dy='16'>repeated messages?</tspan></text>
+    <text x='562' y='730' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='562' y='751' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='562' dy='0'>Run a small internal test log and</tspan><tspan x='562' dy='16'>fix unsafe flows before public use.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='852' y='552' width='260' height='222' rx='28' fill='#f0f9ff' stroke='#0284c7' stroke-width='3'/>
+    <circle cx='886' cy='587' r='22' fill='white' stroke='#0284c7' stroke-width='3'/>
+    <text x='886' y='595' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0284c7'>7</text>
+    <text x='914' y='584' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='914' dy='0'>Review weekly</tspan><tspan x='914' dy='22'>evidence</tspan></text>
+    <text x='874' y='644' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='874' y='668' font-family='Inter,Arial,sans-serif' font-size='12.3' font-weight='750' fill='#1e293b'><tspan x='874' dy='0'>Which questions repeated, which</tspan><tspan x='874' dy='16'>handoffs worked, and where did</tspan><tspan x='874' dy='16'>patients still need help?</tspan></text>
+    <text x='874' y='730' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='874' y='751' font-family='Inter,Arial,sans-serif' font-size='11.8' fill='#0f172a'><tspan x='874' dy='0'>Track themes, handoffs, unanswered</tspan><tspan x='874' dy='16'>items, and owner notes before</tspan><tspan x='874' dy='16'>expanding automation.</tspan></text>
+  </g>
+  <rect x='86' y='812' width='1188' height='50' rx='21' fill='#0f172a'/>
+  <text x='680' y='833' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='850' fill='#bbf7d0'>Before clinic intake automation, check scope, handoff, sensitivity, wording, owner, edge cases, and evidence.</text>
+  <text x='680' y='853' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#e5e7eb'>Educational operations guide only — not medical, legal, privacy, compliance, diagnosis, treatment, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.</text>
+</svg>

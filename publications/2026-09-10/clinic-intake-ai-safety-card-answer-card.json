@@ -1,0 +1,54 @@
+{
+  "topic": "Clinic Intake AI Safety Card: 7 Checks Before Automating Patient Questions",
+  "date": "2026-09-10",
+  "slot": "morning",
+  "url": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-09-10/clinic-intake-ai-safety-card.csv",
+  "boundary": "Educational operations guide only \u2014 not medical, legal, privacy, compliance, diagnosis, treatment, certification, savings, ranking, customer-result, approval, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "check": "Define allowed questions",
+      "owner_question": "Which intake questions are administrative only, such as location, hours, appointment type, documents, or callback preference?",
+      "safe_action": "Keep medical symptoms, diagnosis, treatment, urgency, and medication questions routed to humans."
+    },
+    {
+      "step": "2",
+      "check": "Show the handoff rule",
+      "owner_question": "When must the AI stop and send the person to staff or emergency guidance already approved by the clinic?",
+      "safe_action": "Write a visible handoff rule before connecting the intake tool to patients."
+    },
+    {
+      "step": "3",
+      "check": "Protect sensitive details",
+      "owner_question": "What personal or health details should not be typed into a public chat or unmanaged form?",
+      "safe_action": "Collect the minimum needed and avoid free-text medical history in low-control channels."
+    },
+    {
+      "step": "4",
+      "check": "Use approved wording",
+      "owner_question": "Has the clinic owner reviewed the exact phrases patients will see?",
+      "safe_action": "Use simple scripted wording and avoid advice, reassurance, diagnosis, or promise language."
+    },
+    {
+      "step": "5",
+      "check": "Assign a response owner",
+      "owner_question": "Who reads escalated messages, missed calls, incomplete forms, and confused replies each business day?",
+      "safe_action": "Name a staff owner before increasing intake automation volume."
+    },
+    {
+      "step": "6",
+      "check": "Test edge cases manually",
+      "owner_question": "What happens for urgent symptoms, angry patients, minors, billing concerns, language gaps, or repeated messages?",
+      "safe_action": "Run a small internal test log and fix unsafe flows before public use."
+    },
+    {
+      "step": "7",
+      "check": "Review weekly evidence",
+      "owner_question": "Which questions repeated, which handoffs worked, and where did patients still need help?",
+      "safe_action": "Track themes, handoffs, unanswered items, and owner notes before expanding automation."
+    }
+  ],
+  "safe_scope": "Uses administrative-scope boundaries, handoff rules, minimal collection, approved wording, response ownership, edge-case testing, and weekly owner evidence review; no patient data, credentials, medical advice, legal advice, privacy advice, compliance approval, guaranteed growth, or result claims."
+}

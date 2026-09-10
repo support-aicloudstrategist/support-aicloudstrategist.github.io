@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate Memphis infographic titled 'Clinic Intake AI Safety Card: 7 Checks Before Automating Patient Questions'. Seven rounded cards, numbered 1 to 7, with check, owner question, and safe first action. Use clinical-safe colors: navy, sky blue, teal, green, indigo, rose, and amber accents. Aspect 3:2. Include educational-only truth boundary in footer.
