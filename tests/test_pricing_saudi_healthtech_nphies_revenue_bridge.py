@@ -47,7 +47,7 @@ def test_pricing_structured_data_includes_saudi_healthtech_nphies_offer():
     assert itemlist["numberOfItems"] == len(itemlist["itemListElement"]) == 42
     assert itemlist["name"] == "42 fixed-scope AICS diagnostic offers"
     offer = next(item for item in itemlist["itemListElement"] if item["url"] == URL)
-    assert offer["position"] == 42
+    assert offer["position"] == 41
     assert offer["item"]["name"] == "Saudi healthtech Cloud Trust + NPHIES evidence diagnostic"
     assert offer["item"]["areaServed"] == ["SA", "GCC", "Global"]
     description = offer["item"]["offers"]["priceSpecification"]["description"]
