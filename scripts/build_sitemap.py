@@ -81,6 +81,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/find-right-consultant-vendor/",
     "/industries/law-firms/",
     "/resources/global-law-firm-missed-call-client-intake-follow-up-checklist/",
+    "/resources/global-law-firm-client-intake-conflict-check-owner-evidence-checklist/",
     "/industries/manufacturing-exporters/",
     "/industries/financial-services/",
     "/resources/global-financial-services-ai-intake-approval-evidence-checklist/",
