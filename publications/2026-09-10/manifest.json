@@ -24,6 +24,18 @@
       "answer_card": "https://aicloudstrategist.com/publications/2026-09-10/ai-procurement-answer-boundary-card-answer-card.json",
       "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-10",
       "boundary": "Educational operations guide only \u2014 not legal, compliance, security certification, audit, procurement, ranking, customer-result, revenue, savings, approval, or guaranteed-performance advice."
+    },
+    {
+      "slot": "night",
+      "slug": "support-ticket-ai-reply-boundary-card",
+      "title": "Support Ticket AI Reply Boundary Card: 7 Checks Before Automating Helpdesk Responses",
+      "url": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.html",
+      "png": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-10",
+      "boundary": "Educational operations guide only \u2014 not legal, compliance, security, support-SLA, customer-result, revenue, savings, refund, incident-resolution, ranking, certification, or guaranteed-performance advice."
     }
   ]
 }

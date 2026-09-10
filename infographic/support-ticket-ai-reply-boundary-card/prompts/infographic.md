@@ -1,0 +1,1 @@
+Create a clean bento-grid corporate infographic titled 'Support Ticket AI Reply Boundary Card: 7 Checks Before Automating Helpdesk Responses'. Seven rounded cards, numbered 1 to 7, with check, owner question, and safe first action. Use navy, blue, teal, green, indigo and amber accents. Aspect 3:2. Include educational-only truth boundary in footer.

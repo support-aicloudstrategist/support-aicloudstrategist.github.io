@@ -1,0 +1,54 @@
+{
+  "topic": "Support Ticket AI Reply Boundary Card: 7 Checks Before Automating Helpdesk Responses",
+  "date": "2026-09-10",
+  "slot": "night",
+  "url": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-09-10/support-ticket-ai-reply-boundary-card.csv",
+  "boundary": "Educational operations guide only \u2014 not legal, compliance, security, support-SLA, customer-result, revenue, savings, refund, incident-resolution, ranking, certification, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "check": "Classify the ticket risk",
+      "owner_question": "Is this a routine question, refund dispute, outage, access problem, data request, bug, complaint or legal/compliance issue?",
+      "safe_action": "Let AI draft only low-risk replies; route risky tickets to the named human owner."
+    },
+    {
+      "step": "2",
+      "check": "Verify the source of truth",
+      "owner_question": "Which help article, policy, order record, incident note or product owner update supports the reply?",
+      "safe_action": "Do not answer from memory or model confidence when the current source is missing."
+    },
+    {
+      "step": "3",
+      "check": "Protect sensitive data",
+      "owner_question": "Could the reply expose credentials, payment data, health/legal details, customer records, logs or another customer\u2019s information?",
+      "safe_action": "Mask sensitive details and ask for secure-channel handling before sharing records."
+    },
+    {
+      "step": "4",
+      "check": "Separate apology from promise",
+      "owner_question": "Does the wording promise a refund, fix date, SLA credit, legal position, security outcome or future feature?",
+      "safe_action": "Use bounded status language and require owner approval for commitments."
+    },
+    {
+      "step": "5",
+      "check": "Add escalation stop rules",
+      "owner_question": "What words or conditions force handoff: angry customer, chargeback, outage, repeated failure, data deletion, account lockout or regulated request?",
+      "safe_action": "Make stop rules visible inside the helpdesk workflow before automation is enabled."
+    },
+    {
+      "step": "6",
+      "check": "Record human approval",
+      "owner_question": "Who reviewed the reply pattern, when, and what evidence link shows approval?",
+      "safe_action": "Keep an approval register for templates, macros, AI prompts and high-risk examples."
+    },
+    {
+      "step": "7",
+      "check": "Review failed replies weekly",
+      "owner_question": "Which AI drafts were edited, rejected, escalated or caused follow-up confusion?",
+      "safe_action": "Feed review findings into updated templates, source articles and routing rules."
+    }
+  ],
+  "safe_scope": "Uses ticket-risk classification, source-of-truth verification, sensitive-data masking, commitment boundaries, escalation stop rules, human approval records and weekly failure review; no legal, compliance, security, support-SLA, customer-result, revenue, savings, refund, incident-resolution, ranking, certification or performance guarantees."
+}

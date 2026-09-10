@@ -1,0 +1,8 @@
+step,check,owner_question,safe_action
+1,Classify the ticket risk,"Is this a routine question, refund dispute, outage, access problem, data request, bug, complaint or legal/compliance issue?",Let AI draft only low-risk replies; route risky tickets to the named human owner.
+2,Verify the source of truth,"Which help article, policy, order record, incident note or product owner update supports the reply?",Do not answer from memory or model confidence when the current source is missing.
+3,Protect sensitive data,"Could the reply expose credentials, payment data, health/legal details, customer records, logs or another customer’s information?",Mask sensitive details and ask for secure-channel handling before sharing records.
+4,Separate apology from promise,"Does the wording promise a refund, fix date, SLA credit, legal position, security outcome or future feature?",Use bounded status language and require owner approval for commitments.
+5,Add escalation stop rules,"What words or conditions force handoff: angry customer, chargeback, outage, repeated failure, data deletion, account lockout or regulated request?",Make stop rules visible inside the helpdesk workflow before automation is enabled.
+6,Record human approval,"Who reviewed the reply pattern, when, and what evidence link shows approval?","Keep an approval register for templates, macros, AI prompts and high-risk examples."
+7,Review failed replies weekly,"Which AI drafts were edited, rejected, escalated or caused follow-up confusion?","Feed review findings into updated templates, source articles and routing rules."

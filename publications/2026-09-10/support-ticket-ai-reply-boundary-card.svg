@@ -1,0 +1,81 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1360' height='900' viewBox='0 0 1360 900'>
+  <defs><linearGradient id='hero' x1='0' x2='1' y1='0' y2='1'><stop stop-color='#111827'/><stop offset='.5' stop-color='#1d4ed8'/><stop offset='1' stop-color='#0d9488'/></linearGradient><filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#0f172a' flood-opacity='.14'/></filter></defs>
+  <rect width='1360' height='900' fill='#eef6ff'/><rect x='38' y='34' width='1284' height='832' rx='46' fill='white' stroke='#bfdbfe' stroke-width='3'/>
+  <rect x='72' y='66' width='1216' height='170' rx='34' fill='url(#hero)'/>
+  <text x='108' y='112' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#a7f3d0' letter-spacing='3'>AICLOUDSTRATEGIST · NIGHT INFOGRAPHIC</text>
+  <text x='108' y='160' font-family='Inter,Arial,sans-serif' font-size='34' font-weight='950' fill='white'>Support Ticket AI Reply Boundary Card: 7 Checks Before Automating Helpdesk Responses</text>
+  <text x='108' y='200' font-family='Inter,Arial,sans-serif' font-size='18' fill='#dbeafe'>A safe educational checklist for support, SaaS and ecommerce teams before letting AI draft or send replies on refunds, outages, access, bugs or customer escalations.</text>
+  <g transform='translate(1128 98)'><rect width='118' height='94' rx='24' fill='rgba(255,255,255,.16)' stroke='#a7f3d0'/><text x='59' y='37' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='white'>AI</text><text x='59' y='64' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='850' fill='#dbeafe'>Reply Gate</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='72' y='278' width='260' height='226' rx='28' fill='#eff6ff' stroke='#2563eb' stroke-width='3'/>
+    <circle cx='106' cy='313' r='22' fill='white' stroke='#2563eb' stroke-width='3'/>
+    <text x='106' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#2563eb'>1</text>
+    <text x='134' y='310' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='134' dy='0'>Classify the</tspan><tspan x='134' dy='22'>ticket risk</tspan></text>
+    <text x='94' y='372' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='94' y='396' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='94' dy='0'>Is this a routine question, refund</tspan><tspan x='94' dy='16'>dispute, outage, access problem,</tspan><tspan x='94' dy='16'>data request, bug, complaint or</tspan><tspan x='94' dy='16'>legal/compliance issue?</tspan></text>
+    <text x='94' y='460' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='94' y='481' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='94' dy='0'>Let AI draft only low-risk replies;</tspan><tspan x='94' dy='16'>route risky tickets to the named</tspan><tspan x='94' dy='16'>human owner.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='384' y='278' width='260' height='226' rx='28' fill='#f0fdf4' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='418' cy='313' r='22' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='418' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#16a34a'>2</text>
+    <text x='446' y='310' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='446' dy='0'>Verify the source</tspan><tspan x='446' dy='22'>of truth</tspan></text>
+    <text x='406' y='372' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='406' y='396' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='406' dy='0'>Which help article, policy, order</tspan><tspan x='406' dy='16'>record, incident note or product</tspan><tspan x='406' dy='16'>owner update supports the reply?</tspan></text>
+    <text x='406' y='460' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='406' y='481' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='406' dy='0'>Do not answer from memory or model</tspan><tspan x='406' dy='16'>confidence when the current source</tspan><tspan x='406' dy='16'>is missing.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='696' y='278' width='260' height='226' rx='28' fill='#f5f3ff' stroke='#7c3aed' stroke-width='3'/>
+    <circle cx='730' cy='313' r='22' fill='white' stroke='#7c3aed' stroke-width='3'/>
+    <text x='730' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#7c3aed'>3</text>
+    <text x='758' y='310' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='758' dy='0'>Protect sensitive</tspan><tspan x='758' dy='22'>data</tspan></text>
+    <text x='718' y='372' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='718' y='396' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='718' dy='0'>Could the reply expose credentials,</tspan><tspan x='718' dy='16'>payment data, health/legal details,</tspan><tspan x='718' dy='16'>customer records, logs or another</tspan><tspan x='718' dy='16'>customer’s information?</tspan></text>
+    <text x='718' y='460' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='718' y='481' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='718' dy='0'>Mask sensitive details and ask for</tspan><tspan x='718' dy='16'>secure-channel handling before</tspan><tspan x='718' dy='16'>sharing records.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1008' y='278' width='260' height='226' rx='28' fill='#fff7ed' stroke='#ea580c' stroke-width='3'/>
+    <circle cx='1042' cy='313' r='22' fill='white' stroke='#ea580c' stroke-width='3'/>
+    <text x='1042' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#ea580c'>4</text>
+    <text x='1070' y='310' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='1070' dy='0'>Separate apology</tspan><tspan x='1070' dy='22'>from promise</tspan></text>
+    <text x='1030' y='372' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='1030' y='396' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='1030' dy='0'>Does the wording promise a refund,</tspan><tspan x='1030' dy='16'>fix date, SLA credit, legal</tspan><tspan x='1030' dy='16'>position, security outcome or future</tspan><tspan x='1030' dy='16'>feature?</tspan></text>
+    <text x='1030' y='460' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='1030' y='481' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='1030' dy='0'>Use bounded status language and</tspan><tspan x='1030' dy='16'>require owner approval for</tspan><tspan x='1030' dy='16'>commitments.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='228' y='558' width='260' height='226' rx='28' fill='#fef2f2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='262' cy='593' r='22' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='262' y='601' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#dc2626'>5</text>
+    <text x='290' y='590' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='290' dy='0'>Add escalation</tspan><tspan x='290' dy='22'>stop rules</tspan></text>
+    <text x='250' y='652' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='250' y='676' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='250' dy='0'>What words or conditions force</tspan><tspan x='250' dy='16'>handoff: angry customer, chargeback,</tspan><tspan x='250' dy='16'>outage, repeated failure, data</tspan><tspan x='250' dy='16'>deletion, account lockout or</tspan></text>
+    <text x='250' y='740' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='250' y='761' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='250' dy='0'>Make stop rules visible inside the</tspan><tspan x='250' dy='16'>helpdesk workflow before automation</tspan><tspan x='250' dy='16'>is enabled.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='540' y='558' width='260' height='226' rx='28' fill='#ecfeff' stroke='#0891b2' stroke-width='3'/>
+    <circle cx='574' cy='593' r='22' fill='white' stroke='#0891b2' stroke-width='3'/>
+    <text x='574' y='601' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0891b2'>6</text>
+    <text x='602' y='590' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='602' dy='0'>Record human</tspan><tspan x='602' dy='22'>approval</tspan></text>
+    <text x='562' y='652' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='562' y='676' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='562' dy='0'>Who reviewed the reply pattern,</tspan><tspan x='562' dy='16'>when, and what evidence link shows</tspan><tspan x='562' dy='16'>approval?</tspan></text>
+    <text x='562' y='740' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='562' y='761' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='562' dy='0'>Keep an approval register for</tspan><tspan x='562' dy='16'>templates, macros, AI prompts and</tspan><tspan x='562' dy='16'>high-risk examples.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='852' y='558' width='260' height='226' rx='28' fill='#f8fafc' stroke='#475569' stroke-width='3'/>
+    <circle cx='886' cy='593' r='22' fill='white' stroke='#475569' stroke-width='3'/>
+    <text x='886' y='601' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#475569'>7</text>
+    <text x='914' y='590' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='914' dy='0'>Review failed</tspan><tspan x='914' dy='22'>replies weekly</tspan></text>
+    <text x='874' y='652' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='874' y='676' font-family='Inter,Arial,sans-serif' font-size='12.1' font-weight='750' fill='#1e293b'><tspan x='874' dy='0'>Which AI drafts were edited,</tspan><tspan x='874' dy='16'>rejected, escalated or caused</tspan><tspan x='874' dy='16'>follow-up confusion?</tspan></text>
+    <text x='874' y='740' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='874' y='761' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#0f172a'><tspan x='874' dy='0'>Feed review findings into updated</tspan><tspan x='874' dy='16'>templates, source articles and</tspan><tspan x='874' dy='16'>routing rules.</tspan></text>
+  </g>
+  <rect x='86' y='818' width='1188' height='44' rx='21' fill='#0f172a'/><text x='680' y='837' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='850' fill='#a7f3d0'>Before automating helpdesk replies, verify risk, source, sensitive data, commitments, stop rules, human approval and weekly failures.</text><text x='680' y='856' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.5' fill='#e5e7eb'>Educational operations guide only — not legal, compliance, security, support-SLA, customer-result, revenue, savings, refund, incident-resolution, ranking, certification, or guaranteed-performance advice.</text>
+</svg>
