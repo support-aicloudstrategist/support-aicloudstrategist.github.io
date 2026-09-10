@@ -12,7 +12,7 @@ def _pricing_html() -> str:
 
 def test_pricing_surfaces_ai_procurement_evidence_review_as_sellable_first_step():
     html = _pricing_html()
-    assert "Thirty-eight concrete first offers buyers can understand before a custom build." in html
+    assert "Forty-one structured fixed-scope diagnostic offers buyers can understand before a custom build." in html
     assert "AI procurement risk evidence review" in html
     assert "/resources/global-ai-procurement-risk-evidence-checklist/" in html
     assert "vendor evidence, data boundaries, cost exposure" in html
