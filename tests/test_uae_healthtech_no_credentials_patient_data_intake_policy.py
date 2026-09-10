@@ -87,12 +87,17 @@ class UaeHealthtechNoCredentialsPatientDataIntakePolicyTests(unittest.TestCase):
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-09-10")
+        dataset = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Dataset")
+        self.assertEqual(dataset["name"], "UAE healthtech first-review intake checklist")
+        self.assertEqual(dataset["encodingFormat"], "text/csv")
+        self.assertIn("uae-healthtech-first-review-intake-checklist.csv", dataset["url"])
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn(f"UAE healthtech no-credentials patient data intake policy: {URL}", self.llms)
+        self.assertIn("uae-healthtech-first-review-intake-checklist.csv", self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
 
