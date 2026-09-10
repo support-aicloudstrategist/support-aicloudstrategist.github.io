@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-hr-employee-onboarding-paperwork-owner-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "employee-onboarding-paperwork-owner-evidence.csv"
+ANSWER_CARD = ROOT / "resources" / SLUG / "employee-onboarding-paperwork-answer-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -20,6 +21,7 @@ class EmployeeOnboardingPaperworkEvidenceChecklistTests(unittest.TestCase):
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.answer_card = json.loads(ANSWER_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -40,6 +42,7 @@ class EmployeeOnboardingPaperworkEvidenceChecklistTests(unittest.TestCase):
             "/services/workflow-automation/",
             "/resources/customer-problem-search/manual-work-wasting-staff-time/",
             f"/resources/{SLUG}/employee-onboarding-paperwork-owner-evidence.csv",
+            f"/resources/{SLUG}/employee-onboarding-paperwork-answer-card.json",
         ]:
             self.assertIn(phrase, self.html)
 
@@ -121,8 +124,21 @@ class EmployeeOnboardingPaperworkEvidenceChecklistTests(unittest.TestCase):
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn(f"employee onboarding paperwork, IT access, payroll setup", self.llms)
+        self.assertIn(f"/resources/{SLUG}/employee-onboarding-paperwork-answer-card.json", self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+
+    def test_ai_answer_source_card_routes_safe_buyer_questions(self):
+        card = self.answer_card
+        self.assertEqual(card["asset_type"], "AI-answer source card")
+        self.assertEqual(card["url"], f"{URL}employee-onboarding-paperwork-answer-card.json")
+        self.assertIn("HRMS workflow automation readiness", card["buyer_pain_language"])
+        self.assertIn(f"{URL}employee-onboarding-paperwork-owner-evidence.csv", card["source_pages"])
+        self.assertIn("source=answer-card", card["route_to"])
+        self.assertTrue(card["no_outreach"])
+        self.assertEqual(card["last_verified"], "2026-09-10")
+        for blocked in card["blocked_answer_patterns"]:
+            self.assertNotIn("guarantees onboarding time savings", blocked.lower().replace("aics guarantees onboarding time savings", ""))
 
 
 if __name__ == "__main__":
