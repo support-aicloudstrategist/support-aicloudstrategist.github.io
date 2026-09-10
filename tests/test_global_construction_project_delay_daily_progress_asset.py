@@ -92,3 +92,14 @@ def test_construction_progress_page_has_creativework_schema_for_source_card():
     assert card_schema["url"].endswith("construction-daily-progress-ai-answer-source-card.json")
     assert "Claim-safe AI-answer source card" in card_schema["description"]
     assert card_schema["mainEntityOfPage"].endswith(f"/resources/{SLUG}/")
+
+
+def test_construction_progress_related_internal_links_resolve_locally():
+    html = PAGE.read_text(encoding="utf-8")
+    hrefs = re.findall(r'href="(/(?:resources|services|publications|llms\.txt)[^"]*)"', html)
+    assert hrefs
+    for href in hrefs:
+        local = ROOT / href.lstrip("/")
+        if href.endswith("/"):
+            local = local / "index.html"
+        assert local.exists(), href
