@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,6 +61,18 @@ def test_ai_procurement_risk_asset_is_discoverable_from_public_indexes():
     assert "ai-procurement-risk-answer-source-card.json" in page_html
     assert "data-ai-answer-source-card=\"ai-procurement-risk\"" in page_html
     assert "https://aicloudstrategist.com/resources/global-ai-procurement-risk-evidence-checklist/" in SITEMAP.read_text(encoding="utf-8")
+
+
+def test_ai_procurement_risk_page_internal_resource_links_exist():
+    html = PAGE.read_text(encoding="utf-8")
+    hrefs = re.findall(r'href="(/resources/[^"]+/)"', html)
+    assert hrefs, "expected resource links on AI procurement risk page"
+    missing = []
+    for href in hrefs:
+        target = ROOT / href.lstrip("/") / "index.html"
+        if not target.exists():
+            missing.append(href)
+    assert missing == []
 
 
 def test_ai_procurement_answer_source_card_is_machine_readable_and_claim_safe():
