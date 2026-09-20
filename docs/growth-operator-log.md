@@ -1,5 +1,12 @@
 # AICS growth value operator log
 
+## 2026-09-20 simulated healthcare proof-method llms discovery bridge
+
+- Decision: reduce proof/trust discovery friction by making existing simulated healthcare proof-method assets machine-discoverable from `llms.txt`, while preserving explicit synthetic/no-outcome boundaries.
+- Updated: `llms.txt` now lists 10 simulated healthcare proof-method diagnostics covering ENT, dental, home-health, mental-health, multispecialty referral/TPA, optical, pharmacy, radiology, small-hospital cloud backup and veterinary follow-up.
+- Verification performed: focused proof-asset pytest returned `24 passed`; commit pushed to `main`; public `https://aicloudstrategist.com/llms.txt` and support mirror returned HTTP 200 with the new radiology proof route marker.
+- Proof boundary: discovery/trust routing only; no customer, patient, PHI, compliance, ranking, demand, lead, revenue, savings, ROI, medical/legal/privacy/security advice or client outcome claim was made. No outreach.
+
 ## 2026-09-20 US digital health HIPAA checklist revenue bridge
 
 - Decision: reduce US digital-health conversion friction by connecting the HIPAA vendor-risk checklist and AI-answer source card to the existing fixed-scope diagnostic package instead of leaving buyers at a generic free-review CTA.
