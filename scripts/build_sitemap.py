@@ -71,6 +71,7 @@ CURATED_PATHS = [
     "/resources/customer-problem-search/aws-cloud-bill-too-high/",
     "/resources/customer-problem-search/manual-work-wasting-staff-time/",
     "/resources/customer-problem-search/clinic-not-getting-patients/",
+    "/resources/india-clinic-google-ads-not-converting-appointment-evidence-checklist/",
     "/resources/clinic-website-not-converting-patients-checklist/",
     "/resources/saudi-private-clinic-whatsapp-appointment-follow-up-checklist/",
     "/resources/gcc-clinic-whatsapp-ai-receptionist-vs-booking-crm-comparison/",
