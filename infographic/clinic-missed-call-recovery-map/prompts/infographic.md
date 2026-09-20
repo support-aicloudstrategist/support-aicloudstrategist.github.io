@@ -1,0 +1,1 @@
+Create a bento-grid infographic titled 'Clinic Missed-Call Recovery Map: 7 Safe Checks Before Automating Follow-Up'. Seven numbered rounded cards with check, owner question and safe first action. Use clean corporate memphis style, teal/blue/green accents, white background, clear labels, and footer truth boundary.

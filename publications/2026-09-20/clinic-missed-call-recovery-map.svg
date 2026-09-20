@@ -1,0 +1,81 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='930' viewBox='0 0 1400 930'>
+  <defs><linearGradient id='hero' x1='0' x2='1'><stop stop-color='#082f49'/><stop offset='.55' stop-color='#0369a1'/><stop offset='1' stop-color='#14b8a6'/></linearGradient><filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#0f172a' flood-opacity='.16'/></filter></defs>
+  <rect width='1400' height='930' fill='#f0f9ff'/><rect x='38' y='34' width='1324' height='862' rx='48' fill='white' stroke='#bae6fd' stroke-width='3'/>
+  <rect x='76' y='70' width='1248' height='174' rx='36' fill='url(#hero)'/>
+  <text x='112' y='118' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#a7f3d0' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='112' y='166' font-family='Inter,Arial,sans-serif' font-size='37' font-weight='950' fill='white'>Clinic Missed-Call Recovery Map: 7 Safe Checks Before Automating Follow-Up</text>
+  <text x='112' y='207' font-family='Inter,Arial,sans-serif' font-size='18' fill='#e0f2fe'>A safe educational checklist for clinics and service businesses to tighten missed-call handling before adding bots, auto-replies or dashboards.</text>
+  <g transform='translate(1162 98)'><rect width='126' height='98' rx='24' fill='rgba(255,255,255,.18)' stroke='#a7f3d0'/><text x='63' y='38' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='white'>7</text><text x='63' y='66' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='850' fill='#dff7ff'>Safe checks</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='76' y='288' width='266' height='232' rx='26' fill='#dbeafe' stroke='#2563eb' stroke-width='3'/>
+    <circle cx='110' cy='324' r='22' fill='white' stroke='#2563eb' stroke-width='3'/>
+    <text x='110' y='332' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#2563eb'>1</text>
+    <text x='138' y='320' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='138' dy='0'>Capture every call</tspan><tspan x='138' dy='22'>route</tspan></text>
+    <text x='98' y='384' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='98' y='408' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='98' dy='0'>Which numbers, WhatsApp links, ads,</tspan><tspan x='98' dy='16'>reception lines and website buttons</tspan><tspan x='98' dy='16'>can create missed calls?</tspan></text>
+    <text x='98' y='474' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='98' y='495' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='98' dy='0'>List each route before changing</tspan><tspan x='98' dy='16'>automation or scripts.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='390' y='288' width='266' height='232' rx='26' fill='#dcfce7' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='424' cy='324' r='22' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='424' y='332' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#16a34a'>2</text>
+    <text x='452' y='320' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='452' dy='0'>Separate urgent</tspan><tspan x='452' dy='22'>from routine</tspan></text>
+    <text x='412' y='384' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='412' y='408' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='412' dy='0'>Which missed calls may need human</tspan><tspan x='412' dy='16'>judgment because they mention care,</tspan><tspan x='412' dy='16'>symptoms, complaints or sensitive</tspan><tspan x='412' dy='16'>data?</tspan></text>
+    <text x='412' y='474' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='412' y='495' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='412' dy='0'>Use human review for sensitive or</tspan><tspan x='412' dy='16'>unclear items; do not let bots assess</tspan><tspan x='412' dy='16'>care needs.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='704' y='288' width='266' height='232' rx='26' fill='#fef3c7' stroke='#d97706' stroke-width='3'/>
+    <circle cx='738' cy='324' r='22' fill='white' stroke='#d97706' stroke-width='3'/>
+    <text x='738' y='332' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#d97706'>3</text>
+    <text x='766' y='320' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='766' dy='0'>Confirm</tspan><tspan x='766' dy='22'>consent-safe</tspan></text>
+    <text x='726' y='384' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='726' y='408' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='726' dy='0'>What follow-up channel is</tspan><tspan x='726' dy='16'>appropriate: callback, WhatsApp, SMS,</tspan><tspan x='726' dy='16'>email or no message?</tspan></text>
+    <text x='726' y='474' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='726' y='495' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='726' dy='0'>Use clear, minimal, non-diagnostic</tspan><tspan x='726' dy='16'>wording and respect opt-outs.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1018' y='288' width='266' height='232' rx='26' fill='#fce7f3' stroke='#db2777' stroke-width='3'/>
+    <circle cx='1052' cy='324' r='22' fill='white' stroke='#db2777' stroke-width='3'/>
+    <text x='1052' y='332' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#db2777'>4</text>
+    <text x='1080' y='320' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='1080' dy='0'>Time-box the first</tspan><tspan x='1080' dy='22'>response</tspan></text>
+    <text x='1040' y='384' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='1040' y='408' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='1040' dy='0'>Who owns the first callback window,</tspan><tspan x='1040' dy='16'>backup owner and escalation if</tspan><tspan x='1040' dy='16'>reception is busy?</tspan></text>
+    <text x='1040' y='474' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='1040' y='495' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='1040' dy='0'>Create a visible owner rota before</tspan><tspan x='1040' dy='16'>buying another tool.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='236' y='578' width='266' height='232' rx='26' fill='#ede9fe' stroke='#7c3aed' stroke-width='3'/>
+    <circle cx='270' cy='614' r='22' fill='white' stroke='#7c3aed' stroke-width='3'/>
+    <text x='270' y='622' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#7c3aed'>5</text>
+    <text x='298' y='610' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='298' dy='0'>Track reason codes</tspan></text>
+    <text x='258' y='674' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='258' y='698' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='258' dy='0'>Was the missed call caused by</tspan><tspan x='258' dy='16'>after-hours timing, busy staff, wrong</tspan><tspan x='258' dy='16'>number, ad mismatch, pricing query or</tspan><tspan x='258' dy='16'>appointment question?</tspan></text>
+    <text x='258' y='764' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='258' y='785' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='258' dy='0'>Record a simple reason code so fixes</tspan><tspan x='258' dy='16'>target the real leak.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='550' y='578' width='266' height='232' rx='26' fill='#cffafe' stroke='#0891b2' stroke-width='3'/>
+    <circle cx='584' cy='614' r='22' fill='white' stroke='#0891b2' stroke-width='3'/>
+    <text x='584' y='622' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#0891b2'>6</text>
+    <text x='612' y='610' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='612' dy='0'>Protect private</tspan><tspan x='612' dy='22'>data</tspan></text>
+    <text x='572' y='674' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='572' y='698' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='572' dy='0'>Could the note, recording, screenshot</tspan><tspan x='572' dy='16'>or bot transcript expose patient,</tspan><tspan x='572' dy='16'>customer or staff information?</tspan></text>
+    <text x='572' y='764' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='572' y='785' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='572' dy='0'>Keep logs minimal, role-limited and</tspan><tspan x='572' dy='16'>free of unnecessary sensitive</tspan><tspan x='572' dy='16'>details.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='864' y='578' width='266' height='232' rx='26' fill='#fee2e2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='898' cy='614' r='22' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='898' y='622' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='22' font-weight='950' fill='#dc2626'>7</text>
+    <text x='926' y='610' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#0f172a'><tspan x='926' dy='0'>Review weekly</tspan><tspan x='926' dy='22'>patterns</tspan></text>
+    <text x='886' y='674' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>OWNER QUESTION</text>
+    <text x='886' y='698' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1e293b'><tspan x='886' dy='0'>Which repeat pattern should be fixed</tspan><tspan x='886' dy='16'>this week: staffing window, website</tspan><tspan x='886' dy='16'>CTA, ad promise, call routing or</tspan><tspan x='886' dy='16'>follow-up wording?</tspan></text>
+    <text x='886' y='764' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='900' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='886' y='785' font-family='Inter,Arial,sans-serif' font-size='11.6' fill='#0f172a'><tspan x='886' dy='0'>Improve one bottleneck at a time and</tspan><tspan x='886' dy='16'>label results as internal</tspan><tspan x='886' dy='16'>observations only.</tspan></text>
+  </g>
+  <rect x='92' y='848' width='1216' height='48' rx='22' fill='#0f172a'/><text x='700' y='868' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='850' fill='#a7f3d0'>Start with call routes, sensitivity, consent-safe channel, owner rota, reason codes, privacy and weekly pattern review.</text><text x='700' y='888' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#e5e7eb'>Educational operations guide only — not medical, legal, compliance, financial, marketing, revenue, savings, patient-growth, clinical, approval, or guaranteed-performance advice.</text>
+</svg>

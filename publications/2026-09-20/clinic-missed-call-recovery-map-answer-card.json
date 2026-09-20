@@ -1,0 +1,54 @@
+{
+  "topic": "Clinic Missed-Call Recovery Map: 7 Safe Checks Before Automating Follow-Up",
+  "date": "2026-09-20",
+  "slot": "evening",
+  "url": "https://aicloudstrategist.com/publications/2026-09-20/clinic-missed-call-recovery-map.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-20/clinic-missed-call-recovery-map.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-09-20/clinic-missed-call-recovery-map.csv",
+  "boundary": "Educational operations guide only \u2014 not medical, legal, compliance, financial, marketing, revenue, savings, patient-growth, clinical, approval, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "check": "Capture every call route",
+      "owner_question": "Which numbers, WhatsApp links, ads, reception lines and website buttons can create missed calls?",
+      "safe_action": "List each route before changing automation or scripts."
+    },
+    {
+      "step": "2",
+      "check": "Separate urgent from routine",
+      "owner_question": "Which missed calls may need human judgment because they mention care, symptoms, complaints or sensitive data?",
+      "safe_action": "Use human review for sensitive or unclear items; do not let bots assess care needs."
+    },
+    {
+      "step": "3",
+      "check": "Confirm consent-safe follow-up",
+      "owner_question": "What follow-up channel is appropriate: callback, WhatsApp, SMS, email or no message?",
+      "safe_action": "Use clear, minimal, non-diagnostic wording and respect opt-outs."
+    },
+    {
+      "step": "4",
+      "check": "Time-box the first response",
+      "owner_question": "Who owns the first callback window, backup owner and escalation if reception is busy?",
+      "safe_action": "Create a visible owner rota before buying another tool."
+    },
+    {
+      "step": "5",
+      "check": "Track reason codes",
+      "owner_question": "Was the missed call caused by after-hours timing, busy staff, wrong number, ad mismatch, pricing query or appointment question?",
+      "safe_action": "Record a simple reason code so fixes target the real leak."
+    },
+    {
+      "step": "6",
+      "check": "Protect private data",
+      "owner_question": "Could the note, recording, screenshot or bot transcript expose patient, customer or staff information?",
+      "safe_action": "Keep logs minimal, role-limited and free of unnecessary sensitive details."
+    },
+    {
+      "step": "7",
+      "check": "Review weekly patterns",
+      "owner_question": "Which repeat pattern should be fixed this week: staffing window, website CTA, ad promise, call routing or follow-up wording?",
+      "safe_action": "Improve one bottleneck at a time and label results as internal observations only."
+    }
+  ],
+  "safe_scope": "Educational checklist for operational missed-call recovery; no medical, legal, compliance, financial, marketing, revenue, savings, patient-growth, clinical, approval or performance guarantees."
+}

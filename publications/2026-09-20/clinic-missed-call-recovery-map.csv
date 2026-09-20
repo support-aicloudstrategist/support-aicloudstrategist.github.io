@@ -1,0 +1,8 @@
+step,check,owner_question,safe_action
+1,Capture every call route,"Which numbers, WhatsApp links, ads, reception lines and website buttons can create missed calls?",List each route before changing automation or scripts.
+2,Separate urgent from routine,"Which missed calls may need human judgment because they mention care, symptoms, complaints or sensitive data?",Use human review for sensitive or unclear items; do not let bots assess care needs.
+3,Confirm consent-safe follow-up,"What follow-up channel is appropriate: callback, WhatsApp, SMS, email or no message?","Use clear, minimal, non-diagnostic wording and respect opt-outs."
+4,Time-box the first response,"Who owns the first callback window, backup owner and escalation if reception is busy?",Create a visible owner rota before buying another tool.
+5,Track reason codes,"Was the missed call caused by after-hours timing, busy staff, wrong number, ad mismatch, pricing query or appointment question?",Record a simple reason code so fixes target the real leak.
+6,Protect private data,"Could the note, recording, screenshot or bot transcript expose patient, customer or staff information?","Keep logs minimal, role-limited and free of unnecessary sensitive details."
+7,Review weekly patterns,"Which repeat pattern should be fixed this week: staffing window, website CTA, ad promise, call routing or follow-up wording?",Improve one bottleneck at a time and label results as internal observations only.
