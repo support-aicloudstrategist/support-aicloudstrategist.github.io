@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic home-care referral intake owner dashboard demo</title>
+  <desc id="desc">Demo-only owner queue for home-care referral intake, family enquiry callbacks, start-of-care blockers and caregiver scheduling exceptions. No patient, resident, family or caregiver data is shown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#061527"/>
+      <stop offset="1" stop-color="#0f3154"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#020812" flood-opacity="0.25"/>
+    </filter>
+    <style>
+      .label{font:600 22px Inter,Arial,sans-serif;fill:#eaf6fb}.small{font:500 16px Inter,Arial,sans-serif;fill:#b9d7e9}.tiny{font:600 13px Inter,Arial,sans-serif;fill:#426076}.num{font:800 36px Inter,Arial,sans-serif;fill:#061527}.card{fill:#ffffff;filter:url(#shadow)}.pill{font:700 14px Inter,Arial,sans-serif}.green{fill:#0d9f6e}.amber{fill:#d97706}.red{fill:#dc2626}.blue{fill:#2563eb}.line{stroke:#d8e7f1;stroke-width:2}.header{font:800 28px Inter,Arial,sans-serif;fill:#061527}.body{font:500 18px Inter,Arial,sans-serif;fill:#26445a}
+    </style>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <text x="54" y="70" class="label">Home-Care Referral Intake Owner Dashboard</text>
+  <text x="54" y="104" class="small">Synthetic demo for no-sensitive-data diagnostic scoping — not a real agency, patient, resident, family or caregiver record.</text>
+  <g transform="translate(54 144)">
+    <rect class="card" width="250" height="126" rx="20"/>
+    <text x="26" y="42" class="tiny">OPEN REFERRALS</text><text x="26" y="86" class="num">18</text><text x="102" y="86" class="body">needs owner</text>
+  </g>
+  <g transform="translate(326 144)">
+    <rect class="card" width="250" height="126" rx="20"/>
+    <text x="26" y="42" class="tiny">CALLBACKS AGED 24H+</text><text x="26" y="86" class="num">7</text><text x="82" y="86" class="body">family enquiries</text>
+  </g>
+  <g transform="translate(598 144)">
+    <rect class="card" width="250" height="126" rx="20"/>
+    <text x="26" y="42" class="tiny">START-OF-CARE BLOCKERS</text><text x="26" y="86" class="num">5</text><text x="82" y="86" class="body">human review</text>
+  </g>
+  <g transform="translate(870 144)">
+    <rect class="card" width="250" height="126" rx="20"/>
+    <text x="26" y="42" class="tiny">SCHEDULING EXCEPTIONS</text><text x="26" y="86" class="num">9</text><text x="82" y="86" class="body">caregiver queue</text>
+  </g>
+  <g transform="translate(54 306)">
+    <rect class="card" width="1090" height="330" rx="24"/>
+    <text x="30" y="48" class="header">Owner queue view</text>
+    <line x1="30" y1="76" x2="1060" y2="76" class="line"/>
+    <text x="30" y="108" class="tiny">CHANNEL</text><text x="210" y="108" class="tiny">NON-SENSITIVE STATUS</text><text x="510" y="108" class="tiny">OWNER</text><text x="700" y="108" class="tiny">AGE</text><text x="830" y="108" class="tiny">SAFE NEXT ACTION</text>
+    <line x1="30" y1="126" x2="1060" y2="126" class="line"/>
+    <text x="30" y="164" class="body">Referral partner</text><text x="210" y="164" class="body">missing callback owner</text><text x="510" y="164" class="body">Ops lead</text><text x="700" y="164" class="body">30h</text><text x="830" y="164" class="body">confirm owner, no clinical reply</text><circle cx="1038" cy="156" r="10" class="amber"/>
+    <text x="30" y="216" class="body">Website form</text><text x="210" y="216" class="body">family enquiry unanswered</text><text x="510" y="216" class="body">Intake lead</text><text x="700" y="216" class="body">18h</text><text x="830" y="216" class="body">send human callback task</text><circle cx="1038" cy="208" r="10" class="blue"/>
+    <text x="30" y="268" class="body">Scheduling board</text><text x="210" y="268" class="body">caregiver exception open</text><text x="510" y="268" class="body">Scheduler</text><text x="700" y="268" class="body">42h</text><text x="830" y="268" class="body">escalate to staffing owner</text><circle cx="1038" cy="260" r="10" class="red"/>
+  </g>
+  <g transform="translate(54 668)">
+    <rect width="1090" height="50" rx="16" fill="#eaf6fb" opacity="0.96"/>
+    <text x="24" y="32" class="body">Boundary: demo dashboard only; excludes PHI/ePHI, patient or resident records, caregiver files, clinical decisions, staffing decisions, billing and compliance attestations.</text>
+  </g>
+</svg>

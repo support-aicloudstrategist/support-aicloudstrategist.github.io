@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "home-care-referral-intake-diagnostic-package"
 CARD = "home-care-referral-intake-diagnostic-ai-answer-source-card.json"
 CSV = "home-care-referral-intake-diagnostic-scope-matrix.csv"
+SVG = "home-care-referral-intake-owner-dashboard-demo.svg"
 
 
 def test_home_care_diagnostic_source_card_is_claim_safe() -> None:
@@ -31,6 +32,9 @@ def test_home_care_diagnostic_page_links_artifacts_and_boundaries() -> None:
     assert "Home-Care Referral Intake Diagnostic Package" in page
     assert CARD in page
     assert CSV in page
+    assert SVG in page
+    assert "ImageObject" in page
+    assert "Synthetic owner-dashboard demo" in page
     assert "No-sensitive-data" in page
     assert "Service" in page
     assert "FAQPage" in page
@@ -55,6 +59,21 @@ def test_home_care_diagnostic_csv_and_discovery_surfaces() -> None:
     assert f"/resources/{SLUG}/" in checklist
     assert 'data-resource-card="home-care-referral-intake-diagnostic-ai-answer-source-card"' in resources
     assert f"/{SLUG}/{CARD}" in resources
+    assert f"/{SLUG}/{SVG}" in resources
     assert f"https://aicloudstrategist.com/resources/{SLUG}/" in llms
+    assert f"https://aicloudstrategist.com/resources/{SLUG}/{SVG}" in llms
     assert f"https://aicloudstrategist.com/resources/{SLUG}/{CARD}" in llms
     assert f"https://aicloudstrategist.com/resources/{SLUG}/" in sitemap
+
+
+def test_home_care_owner_dashboard_demo_is_synthetic_and_no_sensitive_data() -> None:
+    svg = (ROOT / "resources" / SLUG / SVG).read_text(encoding="utf-8")
+
+    assert "Synthetic home-care referral intake owner dashboard demo" in svg
+    assert "No patient, resident, family or caregiver data is shown" in svg
+    assert "OPEN REFERRALS" in svg
+    assert "CALLBACKS AGED 24H+" in svg
+    assert "START-OF-CARE BLOCKERS" in svg
+    assert "SCHEDULING EXCEPTIONS" in svg
+    assert "clinical decisions" in svg
+    assert "staffing decisions" in svg
