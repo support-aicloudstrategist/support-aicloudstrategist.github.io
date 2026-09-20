@@ -1,5 +1,12 @@
 # AICS growth value operator log
 
+## 2026-09-20 ROI calculator answer-engine discovery repair
+
+- Decision: reduce revenue-readiness friction for buyers evaluating payback/recovered-revenue estimates by making the ROI calculator route explicit in `llms.txt` with the exact buyer-language descriptor already guarded by tests.
+- Updated: `llms.txt` now labels the ROI calculator as the Business ROI calculator for proposal payback, recovered revenue, savings and shared-savings pricing estimates.
+- Verification performed: focused ROI calculator pytest returned `3 passed`; local `llms.txt` marker check passed; commit pushed to `main`; public `https://aicloudstrategist.com/llms.txt?verify=roi-discovery` returned HTTP 200 with the new ROI phrase.
+- Proof boundary: answer-engine discovery wording only; no customer, analytics, ranking, traffic, lead, revenue, savings, ROI result, testimonial, certification or outcome claim was made.
+
 ## 2026-09-10 Clinic intake resources-hub discovery bridge
 
 - Decision: reduce discovery friction for the newest clinic-intake safety asset by promoting it on the Resources hub, not only homepage/`llms.txt`, so healthcare buyers and AI-answer systems have a clearer trust-first route before AI receptionist or intake automation spend.
