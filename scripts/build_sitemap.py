@@ -31,7 +31,7 @@ CURATED_PATHS = [
     "/ai-automation-agency-uk/",
     "/ai-creative-studio/",
     "/resources/global-ai-generated-marketing-creative-approval-checklist/",
-    "/resources/search-console-indexing-readiness/",
+
     "/growth-control-os/",
     "/trust-compliance/",
     "/industries/clinics/",
@@ -79,6 +79,7 @@ CURATED_PATHS = [
     "/resources/singapore-private-clinic-patient-growthos-vs-clinic-software-ai-receptionist-comparison/",
     "/resources/customer-problem-search/business-compliance-privacy-confusion/",
     "/resources/customer-problem-search/find-right-consultant-vendor/",
+    "/healthcare-growthos/",
     "/industries/law-firms/",
     "/resources/global-law-firm-missed-call-client-intake-follow-up-checklist/",
     "/resources/global-law-firm-client-intake-conflict-check-owner-evidence-checklist/",
@@ -231,7 +232,7 @@ def redirect_sources() -> set[str]:
         source = match.group("source")
         if "*" in source or ":" in source:
             continue
-        sources.add(clean_route(source))
+        sources.add(source)
     return sources
 
 
@@ -317,22 +318,14 @@ def canonical_path_for(page: Path) -> str | None:
     return path or "/"
 
 
-def downloadable_publication_assets() -> list[str]:
-    """Return machine-readable publication worksheets/source cards worth indexing."""
-    assets: list[str] = []
-    for asset in sorted((ROOT / "publications").glob("20*/**/*")):
-        if asset.suffix == ".csv" or asset.name.endswith("-answer-card.json"):
-            assets.append("/" + asset.relative_to(ROOT).as_posix())
-    return assets
-
-
 def discover_paths() -> list[str]:
-    """Return all indexable public pages and high-value machine-readable assets.
+    """Return all indexable public HTML pages.
 
     The monitor treats sitemap coverage as a technical-health gate. Keep the
     manually curated high-intent URLs at the top, then append every remaining
-    canonical, indexable HTML page plus publication worksheets/source cards so
-    crawlers and AI answer engines can discover the evidence assets directly.
+    canonical, indexable HTML page so crawlers see only routes with an HTML
+    canonical contract. Machine-readable CSV/JSON assets stay discoverable from
+    llms.txt and page links, but are not listed as sitemap URLs.
     """
     paths = []
     seen: set[str] = set()
@@ -340,7 +333,7 @@ def discover_paths() -> list[str]:
 
     def add(path: str) -> None:
         key = path.rstrip("/") or "/"
-        if key in blocked:
+        if path in blocked:
             return
         if key not in seen:
             paths.append(path)
@@ -354,9 +347,6 @@ def discover_paths() -> list[str]:
         path = canonical_path_for(page)
         if path and path.startswith("/"):
             add(path)
-
-    for path in downloadable_publication_assets():
-        add(path)
 
     if len(paths) > MAX_SITEMAP_URLS:
         paths = paths[:MAX_SITEMAP_URLS]
