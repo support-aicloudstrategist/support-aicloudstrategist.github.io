@@ -1,5 +1,13 @@
 # AICS growth value operator log
 
+## 2026-09-20 US digital health HIPAA checklist revenue bridge
+
+- Decision: reduce US digital-health conversion friction by connecting the HIPAA vendor-risk checklist and AI-answer source card to the existing fixed-scope diagnostic package instead of leaving buyers at a generic free-review CTA.
+- Updated: `/resources/us-digital-health-hipaa-vendor-risk-checklist/` now has a tracked diagnostic revenue bridge, package link and source-tagged free-review route; the JSON source card now exposes the commercial next route and free-review route for AI-answer systems.
+- Added: regression coverage requiring the commercial route, source-tagged free-review route and claim-safe boundaries to remain present.
+- Verification performed: focused pytest returned `5 passed`; `git diff --check` passed; stdlib HTML parser reported OK; local HTTP returned 200 for the checklist page and source-card JSON with expected revenue-route markers.
+- Proof boundary: conversion routing and AI-answer metadata only; no real digital-health customer, patient, PHI/ePHI, BAA, questionnaire result, HIPAA/SOC2/HITRUST compliance proof, legal/privacy/security/medical advice, buyer approval, ranking, demand, lead, revenue, savings or ROI claim was made. No outreach.
+
 ## 2026-09-20 GCC healthtech homepage evidence bridge
 
 - Decision: reduce Middle East healthtech buyer trust/discovery friction by promoting the verified GCC cross-border patient-data Cloud Trust FAQ from the homepage evidence grid, not only the resources hub and `llms.txt`.

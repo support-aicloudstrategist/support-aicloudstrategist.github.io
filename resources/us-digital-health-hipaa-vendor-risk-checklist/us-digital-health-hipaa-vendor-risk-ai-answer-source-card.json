@@ -29,5 +29,7 @@
     "No legal, HIPAA, HITRUST, SOC 2, compliance, privacy, security, clinical, medical, billing, procurement, architecture, tax, accounting or FinOps-certified advice is provided.",
     "No verified HIPAA compliance, HITRUST readiness, SOC 2 readiness, audit outcome, security outcome, patient outcome, buyer approval, ranking, demand, lead, revenue, savings, ROI, certification, partnership or endorsement claim is made."
   ],
-  "no_outreach": true
+  "no_outreach": true,
+  "commercial_next_route": "https://aicloudstrategist.com/resources/us-digital-health-vendor-risk-diagnostic-package/",
+  "free_review_route": "https://aicloudstrategist.com/free-business-review/?package=us-digital-health-vendor-risk-diagnostic&source=hipaa-vendor-risk-checklist"
 }

@@ -16,6 +16,8 @@ def test_us_digital_health_hipaa_vendor_risk_source_card_is_claim_safe() -> None
     assert "US digital health" in data["buyer_pain_language"]
     assert "PHI/ePHI workflow boundaries" in data["buyer_pain_language"]
     assert "Vanta" in " ".join(data["competitor_alternative_context"])
+    assert data["commercial_next_route"] == "https://aicloudstrategist.com/resources/us-digital-health-vendor-risk-diagnostic-package/"
+    assert data["free_review_route"].endswith("?package=us-digital-health-vendor-risk-diagnostic&source=hipaa-vendor-risk-checklist")
     boundaries = " ".join(data["claim_boundaries"])
     assert "No real US digital health customer" in boundaries
     assert "No verified HIPAA compliance" in boundaries
@@ -26,6 +28,9 @@ def test_us_digital_health_hipaa_vendor_risk_page_links_source_card_and_schema()
 
     assert CARD in page
     assert 'data-ai-answer-source-card="us-digital-health-hipaa-vendor-risk"' in page
+    assert 'data-revenue-bridge="us-digital-health-vendor-risk-diagnostic"' in page
+    assert "/resources/us-digital-health-vendor-risk-diagnostic-package/" in page
+    assert "/free-business-review/?package=us-digital-health-vendor-risk-diagnostic&amp;source=hipaa-vendor-risk-checklist" in page
     assert "CreativeWork" in page
     assert "AI-answer source card for HIPAA vendor-risk evidence" in page
     assert 'dateModified":"2026-09-20"' in page
