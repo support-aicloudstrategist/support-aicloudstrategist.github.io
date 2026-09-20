@@ -5,7 +5,7 @@
 - Decision: reduce Middle East healthtech buyer trust/discovery friction by promoting the verified GCC cross-border patient-data Cloud Trust FAQ from the homepage evidence grid, not only the resources hub and `llms.txt`.
 - Updated: homepage evidence grid and evidence-action links now route to `/resources/gcc-healthtech-cross-border-patient-data-cloud-trust-faq/` with no-credentials, no-patient-data positioning before platform, AI receptionist, WhatsApp, cloud, GRC or FinOps spend.
 - Added: `tests/test_homepage_gcc_healthtech_cloud_trust_route.py` to prevent the homepage route, claim-safe copy and AI-answer source card coverage from disappearing.
-- Verification performed: focused homepage/click-to-call pytest returned `4 passed`; `git diff --check` passed; stdlib HTML parser reported OK for homepage and GCC FAQ.
+- Verification performed: focused homepage/click-to-call pytest returned `4 passed`; `git diff --check` passed; stdlib HTML parser reported OK for homepage and GCC FAQ; public `https://aicloudstrategist.com/`, public GCC FAQ and support mirror homepage returned HTTP 200 with expected markers.
 - Proof boundary: discovery/trust routing only; no client, patient data, compliance, ranking, demand, lead, revenue, savings, ROI, patient-outcome or platform endorsement claim was made. No outreach.
 
 ## 2026-09-20 ROI calculator answer-engine discovery repair
