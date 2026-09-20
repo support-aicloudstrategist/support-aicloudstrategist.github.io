@@ -126,6 +126,7 @@ CURATED_PATHS = [
     "/resources/us-specialty-clinic-patient-access-cloud-trust-diagnostic-package/",
     "/resources/us-outpatient-imaging-referral-prior-auth-leakage-checklist/",
     "/resources/north-america-healthtech-ai-cloud-trust-diagnostic-package/",
+    "/resources/north-america-healthcare-ai-front-office-cloud-trust-shortlist-readiness/",
     "/resources/north-america-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
     "/resources/north-america-healthtech-redacted-cloud-ai-intake-template/",
     "/resources/north-america-healthtech-ai-cloud-owner-dashboard-demo/",

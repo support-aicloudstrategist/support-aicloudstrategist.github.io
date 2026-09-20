@@ -1,0 +1,6 @@
+source_channel,workflow,current_system,owner,ageing,human_review_trigger,trust_evidence_owner,cloud_ai_spend_owner,decision_needed,boundary
+Phone missed call,New appointment,PMS/EHR plus phone queue,Front office,1-2 days,Urgent symptom or clinical wording,Privacy/security owner,Finance plus engineering owner,Improve handoff before AI receptionist, Synthetic no-PHI sample only
+Referral fax,Referral intake,Spreadsheet plus EHR,Referral coordinator,3-5 days,Missing referral details or clinical question,BAA/subprocessor owner,Finance owner,Create owner queue before patient engagement platform, Synthetic no-PHI sample only
+Payer portal,Prior authorization,RCM tool,Prior-auth team,>5 days,Payer dispute or denial wording,Security questionnaire owner,Product owner,Escalate adviser question before automation, Synthetic no-PHI sample only
+Patient portal message,Report/query,Patient portal,Clinical reviewer,Same day,Clinical advice or sensitive detail,Data retention owner,Cloud cost owner,Define blocked answer and human review rule, Synthetic no-PHI sample only
+Cloud/LLM usage export,AI spend review,Cloud billing dashboard,Finance/engineering owner,Weekly review,Spend anomaly or budget threshold breach,Audit/logging owner,FinOps owner,Create threshold register and rollback rule, Synthetic no-credentials sample only
