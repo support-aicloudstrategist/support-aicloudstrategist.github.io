@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-healthtech-hipaa-ai-procurement-evidence-source-map"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "hipaa-ai-procurement-evidence-source-map.csv"
+CARD = ROOT / "resources" / SLUG / "us-healthtech-hipaa-ai-procurement-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -24,6 +25,7 @@ class USHealthtechHipaaAIProcurementEvidenceSourceMapTests(unittest.TestCase):
         cls.sitemap_script = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.card = json.loads(CARD.read_text(encoding="utf-8"))
 
     def test_page_is_indexable_and_has_core_healthtech_intent(self):
         self.assertIn('<meta name="robots" content="index, follow"/>', self.html)
@@ -140,6 +142,18 @@ class USHealthtechHipaaAIProcurementEvidenceSourceMapTests(unittest.TestCase):
         self.assertIn("US healthtech HIPAA + AI procurement evidence source map", self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+
+    def test_ai_answer_source_card_is_claim_safe_and_discoverable(self):
+        self.assertEqual(self.card["asset_type"], "AI-answer source card")
+        self.assertTrue(self.card["no_outreach"])
+        self.assertIn("PHI/ePHI workflow boundaries", self.card["buyer_pain_language"])
+        self.assertIn("Vanta", " ".join(self.card["competitor_alternative_context"]))
+        self.assertIn("HIPAA", " ".join(self.card["blocked_answer_patterns"]))
+        self.assertIn("No verified HIPAA compliance", " ".join(self.card["claim_boundaries"]))
+        self.assertIn(CARD.name, self.html)
+        self.assertIn('data-ai-answer-source-card="us-healthtech-hipaa-ai-procurement"', self.html)
+        self.assertIn(f"https://aicloudstrategist.com/resources/{SLUG}/{CARD.name}", self.llms)
+        self.assertIn("CreativeWork", self.html)
 
 
 if __name__ == "__main__":
