@@ -1,0 +1,1 @@
+Create a bento-grid infographic titled 'AI Tool Sprawl Control Map: 6 Safe Questions Before Adding Another App'. Six numbered rounded cards with check, owner question and safe first action. Use clean corporate memphis style, blue/green accents, white background, clear labels, and footer truth boundary.

@@ -1,0 +1,71 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='930' viewBox='0 0 1400 930'>
+  <defs><linearGradient id='hero' x1='0' x2='1'><stop stop-color='#111827'/><stop offset='.55' stop-color='#2563eb'/><stop offset='1' stop-color='#22c55e'/></linearGradient><filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#111827' flood-opacity='.16'/></filter></defs>
+  <rect width='1400' height='930' fill='#f8fafc'/><rect x='40' y='34' width='1320' height='862' rx='48' fill='white' stroke='#dbeafe' stroke-width='3'/>
+  <rect x='76' y='70' width='1248' height='174' rx='36' fill='url(#hero)'/>
+  <text x='112' y='118' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#bbf7d0' letter-spacing='3'>AICLOUDSTRATEGIST · MORNING INFOGRAPHIC</text>
+  <text x='112' y='166' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='950' fill='white'>AI Tool Sprawl Control Map: 6 Safe Questions Before Adding Another App</text>
+  <text x='112' y='207' font-family='Inter,Arial,sans-serif' font-size='18' fill='#eff6ff'>A safe educational checklist for owners to reduce duplicate tools, unclear data flows and unmanaged AI usage before buying another subscription.</text>
+  <g transform='translate(1162 98)'><rect width='126' height='98' rx='24' fill='rgba(255,255,255,.18)' stroke='#bbf7d0'/><text x='63' y='38' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='white'>6</text><text x='63' y='66' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='850' fill='#dcfce7'>Safe checks</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='88' y='286' width='330' height='244' rx='28' fill='#e0f2fe' stroke='#0284c7' stroke-width='3'/>
+    <circle cx='126' cy='326' r='24' fill='white' stroke='#0284c7' stroke-width='3'/>
+    <text x='126' y='335' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0284c7'>1</text>
+    <text x='158' y='320' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='950' fill='#111827'><tspan x='158' dy='0'>Name the business</tspan><tspan x='158' dy='24'>problem</tspan></text>
+    <text x='112' y='390' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='112' y='415' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='750' fill='#1f2937'><tspan x='112' dy='0'>What work is actually slow, risky or</tspan><tspan x='112' dy='17'>duplicated today?</tspan></text>
+    <text x='112' y='476' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='112' y='499' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#111827'><tspan x='112' dy='0'>Write the problem in plain language before</tspan><tspan x='112' dy='17'>comparing AI features.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='476' y='286' width='330' height='244' rx='28' fill='#dcfce7' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='514' cy='326' r='24' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='514' y='335' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#16a34a'>2</text>
+    <text x='546' y='320' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='950' fill='#111827'><tspan x='546' dy='0'>Map the current tools</tspan></text>
+    <text x='500' y='390' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='500' y='415' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='750' fill='#1f2937'><tspan x='500' dy='0'>Which apps already collect, store,</tspan><tspan x='500' dy='17'>summarize or send the same information?</tspan></text>
+    <text x='500' y='476' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='500' y='499' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#111827'><tspan x='500' dy='0'>List owners, logins, costs and data</tspan><tspan x='500' dy='17'>touched by each tool.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='864' y='286' width='330' height='244' rx='28' fill='#fef9c3' stroke='#ca8a04' stroke-width='3'/>
+    <circle cx='902' cy='326' r='24' fill='white' stroke='#ca8a04' stroke-width='3'/>
+    <text x='902' y='335' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#ca8a04'>3</text>
+    <text x='934' y='320' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='950' fill='#111827'><tspan x='934' dy='0'>Find the handoff point</tspan></text>
+    <text x='888' y='390' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='888' y='415' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='750' fill='#1f2937'><tspan x='888' dy='0'>Where does work move from customer, staff,</tspan><tspan x='888' dy='17'>vendor, inbox, spreadsheet or dashboard?</tspan></text>
+    <text x='888' y='476' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='888' y='499' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#111827'><tspan x='888' dy='0'>Fix the handoff rule before adding another</tspan><tspan x='888' dy='17'>automation layer.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='88' y='586' width='330' height='244' rx='28' fill='#fae8ff' stroke='#c026d3' stroke-width='3'/>
+    <circle cx='126' cy='626' r='24' fill='white' stroke='#c026d3' stroke-width='3'/>
+    <text x='126' y='635' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#c026d3'>4</text>
+    <text x='158' y='620' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='950' fill='#111827'><tspan x='158' dy='0'>Set a human approval</tspan><tspan x='158' dy='24'>line</tspan></text>
+    <text x='112' y='690' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='112' y='715' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='750' fill='#1f2937'><tspan x='112' dy='0'>Which outputs may affect customers,</tspan><tspan x='112' dy='17'>payments, staff, private data or public</tspan><tspan x='112' dy='17'>claims?</tspan></text>
+    <text x='112' y='776' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='112' y='799' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#111827'><tspan x='112' dy='0'>Keep human review for sensitive or</tspan><tspan x='112' dy='17'>externally visible outputs.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='476' y='586' width='330' height='244' rx='28' fill='#e0e7ff' stroke='#4f46e5' stroke-width='3'/>
+    <circle cx='514' cy='626' r='24' fill='white' stroke='#4f46e5' stroke-width='3'/>
+    <text x='514' y='635' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#4f46e5'>5</text>
+    <text x='546' y='620' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='950' fill='#111827'><tspan x='546' dy='0'>Decide what not to</tspan><tspan x='546' dy='24'>connect</tspan></text>
+    <text x='500' y='690' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='500' y='715' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='750' fill='#1f2937'><tspan x='500' dy='0'>Which files, inboxes, chats or records</tspan><tspan x='500' dy='17'>should stay out of the pilot?</tspan></text>
+    <text x='500' y='776' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='500' y='799' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#111827'><tspan x='500' dy='0'>Start with the smallest safe data set and</tspan><tspan x='500' dy='17'>document exclusions.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='864' y='586' width='330' height='244' rx='28' fill='#ffedd5' stroke='#ea580c' stroke-width='3'/>
+    <circle cx='902' cy='626' r='24' fill='white' stroke='#ea580c' stroke-width='3'/>
+    <text x='902' y='635' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#ea580c'>6</text>
+    <text x='934' y='620' font-family='Inter,Arial,sans-serif' font-size='19' font-weight='950' fill='#111827'><tspan x='934' dy='0'>Review before renewal</tspan></text>
+    <text x='888' y='690' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='888' y='715' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='750' fill='#1f2937'><tspan x='888' dy='0'>What evidence will show whether this tool</tspan><tspan x='888' dy='17'>should expand, pause or be removed?</tspan></text>
+    <text x='888' y='776' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='888' y='799' font-family='Inter,Arial,sans-serif' font-size='12.4' fill='#111827'><tspan x='888' dy='0'>Use internal observations and owner</tspan><tspan x='888' dy='17'>feedback; avoid inflated ROI claims.</tspan></text>
+  </g>
+  <rect x='92' y='852' width='1216' height='44' rx='22' fill='#111827'/><text x='700' y='870' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='12.8' font-weight='850' fill='#bbf7d0'>Control sprawl by naming the problem, mapping tools, fixing handoffs, defining human review, limiting data and reviewing renewals.</text><text x='700' y='889' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.2' fill='#e5e7eb'>Educational operations guide only — not legal, compliance, financial, security, procurement, certification, revenue, savings, approval, or guaranteed-performance advice.</text>
+</svg>

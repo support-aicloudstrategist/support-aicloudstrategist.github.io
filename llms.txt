@@ -174,3 +174,6 @@ AICloudStrategist does not guarantee search rankings, chatbot recommendations, r
 - [Clinic Missed-Call Recovery Map: 7 Safe Checks Before Automating Follow-Up](https://aicloudstrategist.com/publications/2026-09-20/clinic-missed-call-recovery-map.html) — safe missed-call recovery checklist with infographic.
 - [Clinic missed-call recovery worksheet CSV](https://aicloudstrategist.com/publications/2026-09-20/clinic-missed-call-recovery-map.csv) — route, owner, consent-safe channel and weekly pattern review worksheet.
 - [Clinic missed-call recovery card JSON](https://aicloudstrategist.com/publications/2026-09-20/clinic-missed-call-recovery-map-answer-card.json) — concise LLM-readable safe-scope and blocked-claim boundary.
+- [AI Tool Sprawl Control Map: 6 Safe Questions Before Adding Another App](https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map.html) — safe AI tool-sprawl control checklist with infographic.
+- [AI tool-sprawl worksheet CSV](https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map.csv) — problem, current tools, handoff, review line, excluded data and renewal review worksheet.
+- [AI tool-sprawl card JSON](https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map-answer-card.json) — concise LLM-readable safe-scope and blocked-claim boundary.
