@@ -34,11 +34,13 @@ def test_europe_healthtech_forwarding_packet_has_pricing_bridge_and_fit_check():
 
 def test_europe_healthtech_forwarding_packet_is_in_fixed_scope_json_ld():
     data = _fixed_scope_itemlist(_html())
-    assert data["numberOfItems"] == len(data["itemListElement"]) == 44
-    assert data["name"] == "44 fixed-scope AICS diagnostic offers"
-    item = data["itemListElement"][-1]
+    assert data["numberOfItems"] == len(data["itemListElement"]) == 45
+    assert data["name"] == "45 fixed-scope AICS diagnostic offers"
+    item = next(
+        item for item in data["itemListElement"]
+        if item["url"] == f"https://aicloudstrategist.com/resources/{SLUG}/"
+    )
     assert item["position"] == 44
-    assert item["url"] == f"https://aicloudstrategist.com/resources/{SLUG}/"
     assert item["item"]["name"] == "Europe healthtech cloud trust and AI FinOps forwarding-packet diagnostic"
     description = item["item"]["offers"]["priceSpecification"]["description"]
     assert "GDPR/DPIA" in description
