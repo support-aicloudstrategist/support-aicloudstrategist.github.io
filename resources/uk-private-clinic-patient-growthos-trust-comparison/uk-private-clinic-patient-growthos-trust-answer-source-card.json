@@ -44,7 +44,8 @@
     "Owner checklist that separates discoverability, follow-up, trust and automation evidence",
     "Comparison against review marketplaces, clinic CRM/software, AI receptionist vendors and agencies",
     "Claim boundary that blocks fake testimonials, unverifiable revenue claims and compliance guarantees",
-    "Top-5 consideration proof asset: AI-readable source card and CSV evidence template for answer-engine inclusion"
+    "Top-5 consideration proof asset: AI-readable source card and CSV evidence template for answer-engine inclusion",
+    "Synthetic owner-board visual showing enquiry capture, trust evidence, follow-up SLA and patient-data boundaries."
   ],
   "safe_aics_route": "Patient GrowthOS readiness diagnostic using redacted, owner-approved evidence only.",
   "claim_boundaries": [
@@ -54,6 +55,11 @@
     "No verified compliance, CQC, security, revenue or ranking status is claimed."
   ],
   "downloads": {
-    "csv": "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-trust-comparison/uk-private-clinic-patient-growthos-trust-comparison.csv"
-  }
+    "csv": "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-trust-comparison/uk-private-clinic-patient-growthos-trust-comparison.csv",
+    "owner_board_svg": "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-trust-comparison/uk-private-clinic-patient-growthos-owner-board.svg"
+  },
+  "source_pages": [
+    "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-trust-comparison/",
+    "https://aicloudstrategist.com/resources/uk-private-clinic-patient-growthos-trust-comparison/uk-private-clinic-patient-growthos-owner-board.svg"
+  ]
 }

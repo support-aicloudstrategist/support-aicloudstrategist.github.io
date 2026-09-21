@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic UK private clinic Patient GrowthOS owner board demo</title>
+  <desc id="desc">Demo, no patient data, no clinic data, no call recordings, no EHR export and no UK GDPR or CQC compliance claim.</desc>
+  <rect width="1200" height="760" fill="#f8fafc"/>
+  <rect x="42" y="36" width="1116" height="688" rx="34" fill="#ffffff" stroke="#bfdbfe" stroke-width="3"/>
+  <text x="82" y="92" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800" fill="#0f172a">Demo UK Private Clinic Patient GrowthOS Owner Board</text>
+  <text x="82" y="128" font-family="Inter,Arial,sans-serif" font-size="18" fill="#334155">Synthetic readiness visual only — no patient records, no clinic credentials, no call recordings, no EHR/PMS export.</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="82" y="176" width="314" height="164" rx="22" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="108" y="218" font-size="22" font-weight="800" fill="#1d4ed8">Enquiry capture</text>
+    <text x="108" y="258" font-size="18" fill="#0f172a">missed calls</text><text x="300" y="258" font-size="18" font-weight="800" fill="#dc2626">summary only</text>
+    <text x="108" y="292" font-size="18" fill="#0f172a">Web forms → owner</text>
+    <text x="108" y="322" font-size="16" fill="#475569">No recordings / no patient identifiers</text>
+    <rect x="444" y="176" width="314" height="164" rx="22" fill="#ecfdf5" stroke="#86efac"/>
+    <text x="470" y="218" font-size="22" font-weight="800" fill="#047857">Trust evidence</text>
+    <text x="470" y="258" font-size="18" fill="#0f172a">Review approval policy</text>
+    <text x="470" y="292" font-size="18" fill="#0f172a">UK GDPR / CQC questions</text>
+    <text x="470" y="322" font-size="16" fill="#475569">No compliance proof claim</text>
+    <rect x="806" y="176" width="314" height="164" rx="22" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="832" y="218" font-size="22" font-weight="800" fill="#c2410c">Follow-up SLA</text>
+    <text x="832" y="258" font-size="18" fill="#0f172a">Callback age bands</text>
+    <text x="832" y="292" font-size="18" fill="#0f172a">Booking handoff owner</text>
+    <text x="832" y="322" font-size="16" fill="#475569">No appointment outcome claim</text>
+    <rect x="82" y="390" width="498" height="206" rx="24" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="112" y="432" font-size="23" font-weight="800" fill="#0f172a">Owner review queue</text>
+    <text x="112" y="476" font-size="18" fill="#334155">1. Source-by-source enquiry counts</text>
+    <text x="112" y="512" font-size="18" fill="#334155">2. Public service-page / review-page gaps</text>
+    <text x="112" y="548" font-size="18" fill="#334155">3. Human review stops for AI receptionist / WhatsApp</text>
+    <text x="112" y="584" font-size="18" fill="#334155">4. Owner-approved next spend decision</text>
+    <rect x="620" y="390" width="500" height="206" rx="24" fill="#111827" stroke="#334155"/>
+    <text x="650" y="432" font-size="23" font-weight="800" fill="#f8fafc">Blocked until scoped</text>
+    <text x="650" y="476" font-size="18" fill="#e5e7eb">Patient-identifiable records</text>
+    <text x="650" y="512" font-size="18" fill="#e5e7eb">Special-category health data</text>
+    <text x="650" y="548" font-size="18" fill="#e5e7eb">Portal credentials, payment data, EHR/PMS exports</text>
+    <text x="650" y="584" font-size="18" fill="#e5e7eb">Fake testimonials, revenue guarantees, ranking claims</text>
+  </g>
+  <text x="82" y="676" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" fill="#0f172a">Use: board/practice-manager forwarding visual before CRM, review marketplace, AI receptionist, agency or diagnostic spend.</text>
+</svg>
