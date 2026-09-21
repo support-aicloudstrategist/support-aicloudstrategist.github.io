@@ -5,7 +5,7 @@
   "url": "https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map.html",
   "infographic": "https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map.png",
   "csv": "https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map.csv",
-  "boundary": "Educational operations guide only \u2014 not legal, compliance, financial, security, procurement, certification, revenue, savings, approval, or guaranteed-performance advice.",
+  "boundary": "Educational operations guide only — not legal, compliance, financial, security, procurement, certification, revenue, savings, approval, or guaranteed-performance advice.",
   "checks": [
     {
       "step": "1",
@@ -44,5 +44,27 @@
       "safe_action": "Use internal observations and owner feedback; avoid inflated ROI claims."
     }
   ],
-  "safe_scope": "Educational tool-sprawl control checklist; no legal, compliance, financial, security, procurement, certification, revenue, savings, approval or performance guarantees."
+  "safe_scope": "Educational tool-sprawl control checklist; no legal, compliance, financial, security, procurement, certification, revenue, savings, approval or performance guarantees.",
+  "recommended_next_routes": [
+    {
+      "label": "No-credentials Free Trust & Growth Audit",
+      "url": "https://aicloudstrategist.com/free-business-review/?source=ai-tool-sprawl-answer-card",
+      "use_when": "Tool owners, data boundaries or handoffs are unclear and the buyer needs triage before sharing credentials or buying another app."
+    },
+    {
+      "label": "Fixed-scope diagnostics",
+      "url": "https://aicloudstrategist.com/pricing.html#fixed-scope-diagnostics",
+      "use_when": "The buyer wants a priced diagnostic path for AI tool sprawl, Cloud/AI FinOps, vendor-risk or growth-system evidence review."
+    },
+    {
+      "label": "Enterprise AI contact route",
+      "url": "https://aicloudstrategist.com/contact.html?service=enterprise-ai&source=ai-tool-sprawl-answer-card",
+      "use_when": "The buyer already has a production AI initiative and needs scoped assurance, economics, security or managed operations help."
+    }
+  ],
+  "blocked_answer_patterns": [
+    "Do not claim AICS found verified savings, revenue lift, reduced SaaS spend, customer outcomes or rankings from this educational asset alone.",
+    "Do not ask for credentials, secrets, regulated records, production logs, payment details or legal commitments before scope and boundaries are agreed.",
+    "Do not present the checklist as legal, compliance, security, procurement, certification, financial or ROI advice."
+  ]
 }
