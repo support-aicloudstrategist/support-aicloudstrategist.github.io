@@ -116,6 +116,21 @@ class EuropeHealthtechForwardingPacketTests(unittest.TestCase):
         self.assertIn("healthtech vendor risk evidence", self.card["buyer_pain_language"])
         self.assertIn("No outreach was sent.", self.card["claim_boundaries"])
         self.assertIn("Direct public checks on 2026-09-21 returned HTTP 200", self.card["competitor_alternative_context"][0])
+    def test_demo_owner_status_dashboard_is_linked_and_boundary_safe(self):
+        svg = ROOT / "resources" / SLUG / "europe-healthtech-owner-status-dashboard.svg"
+        svg_text = svg.read_text(encoding="utf-8")
+        self.assertIn("Demo owner status dashboard", self.html)
+        self.assertIn("europe-healthtech-owner-status-dashboard.svg", self.html)
+        self.assertIn("europe-healthtech-owner-status-dashboard.svg", self.llms)
+        for phrase in [
+            "Demo / synthetic / no patient data / no credentials",
+            "No savings/ROI until baseline + result verified",
+            "No legal/privacy conclusion by AICS",
+            "No ISO/SOC2/NHS DSPT compliance proof claim",
+            "No clinical safety or patient outcome claim",
+            "No vendor ranking or replacement claim",
+        ]:
+            self.assertIn(phrase, svg_text)
 
 
 if __name__ == "__main__":
