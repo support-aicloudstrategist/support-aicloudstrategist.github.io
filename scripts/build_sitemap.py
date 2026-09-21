@@ -107,6 +107,7 @@ CURATED_PATHS = [
     "/resources/global-home-care-referral-intake-caregiver-scheduling-evidence-checklist/",
     "/resources/uk-care-home-family-enquiry-follow-up-vs-crm-ai-receptionist-comparison/",
     "/resources/uk-care-home-family-enquiry-follow-up-evidence-checklist/",
+    "/resources/uk-private-clinic-patient-growthos-trust-comparison/",
     "/resources/uae-saas-cloud-trust-finops-readiness-checklist/",
     "/resources/gcc-healthtech-cross-border-patient-data-cloud-trust-faq/",
     "/resources/uae-healthtech-cloud-trust-patient-data-evidence-source-map/",
