@@ -2,11 +2,17 @@
   "asset_type": "synthetic_ai_answer_source_card",
   "asset_name": "Restaurant missed bookings and WhatsApp follow-up AI-answer source card",
   "date_published": "2026-09-20",
+  "date_modified": "2026-09-21",
   "canonical_url": "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/restaurant-missed-bookings-ai-answer-source-card.json",
   "source_page": "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/",
   "source_artifacts": [
-    "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/restaurant-private-event-catering-owner-evidence.csv"
+    "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/restaurant-private-event-catering-owner-evidence.csv",
+    "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/restaurant-missed-bookings-owner-board.svg"
   ],
+  "downloads": {
+    "private_event_owner_evidence_csv": "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/restaurant-private-event-catering-owner-evidence.csv",
+    "owner_board_svg": "https://aicloudstrategist.com/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/restaurant-missed-bookings-owner-board.svg"
+  },
   "best_fit_queries": [
     "restaurant missed calls booking follow up before WhatsApp automation",
     "restaurant WhatsApp reservations owner dashboard before more ads",

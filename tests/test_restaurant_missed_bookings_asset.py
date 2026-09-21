@@ -9,6 +9,9 @@ REL = "/resources/restaurant-missed-bookings-whatsapp-follow-up-checklist/"
 URL = "https://aicloudstrategist.com" + REL
 CARD_REL = REL + "restaurant-missed-bookings-ai-answer-source-card.json"
 CARD_URL = "https://aicloudstrategist.com" + CARD_REL
+SVG_REL = REL + "restaurant-missed-bookings-owner-board.svg"
+SVG_URL = "https://aicloudstrategist.com" + SVG_REL
+SVG = PAGE.parent / "restaurant-missed-bookings-owner-board.svg"
 
 
 def html() -> str:
@@ -54,6 +57,9 @@ def test_restaurant_missed_bookings_asset_has_truth_boundaries_and_conversion_ro
     assert "/resources/" in source
     assert "/llms.txt" in source
     assert CARD_REL in source
+    assert SVG_REL in source
+    assert "Synthetic restaurant missed bookings owner board demo" in source
+    assert "synthetic readiness visual only" in source
     assert "data-ai-answer-source-card=\"restaurant-missed-bookings-whatsapp-follow-up\"" in source
 
 
@@ -62,8 +68,10 @@ def test_restaurant_missed_bookings_asset_is_linked_from_discovery_surfaces():
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert REL in resources
     assert CARD_REL in resources
+    assert SVG_REL in resources
     assert URL in llms
     assert CARD_URL in llms
+    assert SVG_URL in llms
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert REL in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
 
@@ -89,3 +97,28 @@ def test_restaurant_missed_bookings_ai_answer_source_card_is_claim_safe():
     ]:
         assert marker in blocked
     assert "no outreach sent" in card["proof_boundary"]
+    assert card["downloads"]["owner_board_svg"] == SVG_URL
+    assert SVG_URL in card["source_artifacts"]
+
+
+def test_restaurant_missed_bookings_owner_board_svg_is_demo_labelled_and_claim_safe():
+    svg = SVG.read_text(encoding="utf-8")
+    for marker in [
+        "Demo Restaurant Missed Bookings Owner Board",
+        "Synthetic restaurant missed bookings owner board demo",
+        "Missed calls",
+        "WhatsApp reservations",
+        "Private event enquiries",
+        "Delivery-app exceptions",
+        "Human review gates",
+        "AI receptionist automation",
+        "No customer-identifiable messages",
+        "no real restaurant",
+        "no fake testimonial",
+        "no-show reduction",
+        "revenue, ROI, ranking or AI-accuracy proof",
+    ]:
+        assert marker in svg
+    forbidden = svg.lower()
+    for marker in ["trusted by restaurants", "guaranteed bookings", "increased revenue", "five-star reviews guaranteed"]:
+        assert marker not in forbidden
