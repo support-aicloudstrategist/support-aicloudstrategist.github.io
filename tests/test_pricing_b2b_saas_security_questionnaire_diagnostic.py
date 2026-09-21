@@ -40,4 +40,5 @@ def test_pricing_itemlist_preserves_b2b_saas_offer_and_references_questionnaire_
     offer = matches[0]["item"]
     assert offer["name"] == "B2B SaaS demo-to-security-questionnaire follow-up diagnostic"
     assert offer["subjectOf"]["url"] == URL
-    assert doc["numberOfItems"] == len(doc["itemListElement"]) == 20
+    assert doc["numberOfItems"] == len(doc["itemListElement"])
+    assert doc["numberOfItems"] >= 43
