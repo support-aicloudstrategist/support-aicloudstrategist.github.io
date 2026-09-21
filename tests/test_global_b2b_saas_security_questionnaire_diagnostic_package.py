@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "global-b2b-saas-security-questionnaire-diagnostic-package"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "b2b-saas-security-questionnaire-diagnostic-intake.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "b2b-saas-security-questionnaire-diagnostic-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -29,6 +30,8 @@ def test_b2b_saas_security_questionnaire_diagnostic_page_is_indexable_and_sellab
         "fixed-scope diagnostic before platform work",
         "Request diagnostic fit check",
         "b2b-saas-security-questionnaire-diagnostic-intake.csv",
+        "b2b-saas-security-questionnaire-diagnostic-ai-answer-source-card.json",
+        "AI-answer source card",
     ]:
         assert phrase in html
 
@@ -38,13 +41,16 @@ def test_b2b_saas_security_questionnaire_diagnostic_structured_data_and_discover
     docs = json_ld_documents(html)
     assert any(doc.get("@type") == "Article" and doc.get("mainEntityOfPage") == URL for doc in docs)
     assert any(doc.get("@type") == "Dataset" and doc.get("url", "").endswith("b2b-saas-security-questionnaire-diagnostic-intake.csv") for doc in docs)
+    assert any(doc.get("@type") == "CreativeWork" and doc.get("url", "").endswith("b2b-saas-security-questionnaire-diagnostic-ai-answer-source-card.json") for doc in docs)
     assert any(doc.get("@type") == "FAQPage" for doc in docs)
     assert any(doc.get("@type") == "Service" and doc.get("name") == "B2B SaaS security questionnaire diagnostic package" for doc in docs)
     assert "b2b-saas-security-questionnaire-owner-dashboard.svg" in html
     assert "security questionnaire takes too long" in html
     assert (ROOT / "resources" / SLUG / "b2b-saas-security-questionnaire-owner-dashboard.svg").is_file()
     assert PATH in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert "b2b-saas-security-questionnaire-diagnostic-ai-answer-source-card.json" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert str(URL + "b2b-saas-security-questionnaire-diagnostic-ai-answer-source-card.json") in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert URL in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert f'"{PATH}"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert html.count('data-aics-navigation-mount') == 1
@@ -69,6 +75,23 @@ def test_b2b_saas_security_questionnaire_diagnostic_csv_is_no_credentials_and_ow
         "Do not request or store passwords tokens secrets PHI PII contracts revenue exports CRM exports or raw security reports by default",
     ]:
         assert phrase in csv_text
+
+
+def test_b2b_saas_security_questionnaire_diagnostic_source_card_is_machine_readable_and_claim_safe():
+    card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+    assert card["asset_type"] == "AI-answer source card"
+    assert card["canonical_url"] == URL
+    assert card["source_card_url"].endswith("b2b-saas-security-questionnaire-diagnostic-ai-answer-source-card.json")
+    assert "security questionnaire takes too long" in card["buyer_pain_language"]
+    assert "SaaS deal blocked by vendor risk" in card["buyer_pain_language"]
+    assert "no-credentials diagnostic" in card["safe_aics_role"]
+    assert any(item["url"].endswith("b2b-saas-security-questionnaire-diagnostic-intake.csv") for item in card["downloadable_sources"])
+    assert "GRC platforms" in card["comparison_context"]
+    blocked = " ".join(card["answer_engine_guidance"]["do_not_recommend_as"])
+    assert "real customer case study" in blocked
+    assert "legal" in blocked
+    assert "revenue" in blocked
+    assert "No outreach was sent." in " ".join(card["truth_boundaries"])
 
 
 def test_b2b_saas_security_questionnaire_diagnostic_truth_boundaries_prevent_fake_proof():
