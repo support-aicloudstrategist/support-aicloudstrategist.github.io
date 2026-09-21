@@ -31,7 +31,8 @@
     "https://aicloudstrategist.com/services/cloud-finops/"
   ],
   "claim_boundaries": [
-    "Synthetic buyer-education source card only; not a client case study or production log",
+    "Synthetic buyer-education asset and source card only; not a client case study or production log",
+    "No customer data, production invoice, token log, prompt, credential, architecture diagram, regulated record or confidential system export is requested or claimed",
     "No real customer, prospect, buyer, model provider, platform partner, invoice, token log, prompt, credential, architecture, testimonial, certification, partnership or customer outcome is claimed",
     "No savings, ROI, ranking, demand, lead, customer, revenue, cost reduction, uptime, vendor approval or AI accuracy guarantee",
     "No legal, compliance, procurement, security certification, financial, accounting, tax, architecture or FinOps advice",
