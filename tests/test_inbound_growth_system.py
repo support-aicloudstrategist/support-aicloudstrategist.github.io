@@ -72,7 +72,8 @@ def test_contact_records_begin_in_an_owned_pipeline_state():
     assert 'pipeline_stage: "new"' in CONTACT_API
     assert 'lead_status: "unreviewed"' in CONTACT_API
     assert 'owner: "AICloudStrategist Growth Operations"' in CONTACT_API
-    assert 'notification_status: "manual_review_pending"' in CONTACT_API
+    assert 'notification_status: "notification_pending"' in CONTACT_API
+    assert 'let notificationStatus = "manual_review_pending"' in CONTACT_API
 
 
 def test_contact_form_has_a_non_intrusive_spam_trap_and_restricted_cors():
@@ -237,7 +238,9 @@ def test_audit_endpoint_is_not_an_arbitrary_confirmation_email_relay():
     assert "if (!context.env.LEAD_LOG)" in LEAD_API
     assert 'notification_status: "manual_review_pending"' in LEAD_API
     assert "sendLeadEmail(context.env" not in LEAD_API
-    assert "sendGraphMail(context.env" not in CONTACT_API
+    assert "sendGraphMail(context.env" in CONTACT_API
+    assert "toRecipients: [{ emailAddress: { address: recipient } }]" in CONTACT_API
+    assert "toRecipients: [{ emailAddress: { address: contact" not in CONTACT_API
 
 
 def test_first_touch_attribution_survives_internal_navigation_for_the_session():

@@ -240,7 +240,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   };
 
   try {
-    await log.put(contactId, JSON.stringify({ ...leadRecord, notification_status: "manual_review_pending" }), { metadata: { submitted_at: submittedAt, name } });
+    await log.put(contactId, JSON.stringify({ ...leadRecord, notification_status: "notification_pending" }), { metadata: { submitted_at: submittedAt, name } });
   } catch (error) {
     const messageText = error instanceof Error ? error.message : "Lead storage failed.";
     return new Response(JSON.stringify({ ok: false, error: "Lead storage failed. Please retry or use WhatsApp.", details: messageText.slice(0, 300) }), {
@@ -249,7 +249,38 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     });
   }
 
-  return new Response(JSON.stringify({ ok: true, contact_id: contactId, notification_sent: false, notification_mode: "manual-review" }), { status: 200, headers: jsonHeaders });
+  let notificationSent = false;
+  let notificationMode = "manual-review";
+  let notificationStatus = "manual_review_pending";
+  let notificationError = "";
+  if (recipient) {
+    try {
+      const graphResult = await sendGraphMail(context.env, {
+        subject: `AICS contact enquiry — ${company || name}`,
+        body: { contentType: "Text", content: textBody },
+        toRecipients: [{ emailAddress: { address: recipient } }],
+        replyTo: looksLikeEmail(contact) ? [{ emailAddress: { address: contact, name: name || company || "AICS contact" } }] : undefined,
+      });
+      notificationSent = graphResult.status >= 200 && graphResult.status < 300;
+      notificationMode = "microsoft-graph";
+      notificationStatus = notificationSent ? "sent" : "attempted";
+    } catch (error) {
+      notificationError = error instanceof Error ? error.message.slice(0, 300) : "Notification delivery failed.";
+      notificationStatus = "notification_failed_manual_review_pending";
+    }
+  }
+
+  try {
+    await log.put(
+      contactId,
+      JSON.stringify({ ...leadRecord, notification_status: notificationStatus, notification_mode: notificationMode, notification_error: notificationError }),
+      { metadata: { submitted_at: submittedAt, name } }
+    );
+  } catch {
+    // The lead is already durably stored. A notification-status refresh failure should not create a false buyer failure.
+  }
+
+  return new Response(JSON.stringify({ ok: true, contact_id: contactId, notification_sent: notificationSent, notification_mode: notificationMode }), { status: 200, headers: jsonHeaders });
 };
 
 export const onRequestOptions: PagesFunction = async () =>

@@ -41,7 +41,10 @@ class ContactReliabilityTests(unittest.TestCase):
     def test_server_endpoint_validates_and_returns_a_contact_reference(self):
         self.assertIn('Missing required field(s)', self.endpoint)
         self.assertIn('contact_id: contactId', self.endpoint)
-        self.assertIn('JSON.stringify({ ok: true, contact_id: contactId, notification_sent: false, notification_mode: "manual-review" })', self.endpoint)
+        self.assertIn('notification_sent: notificationSent', self.endpoint)
+        self.assertIn('notification_mode: notificationMode', self.endpoint)
+        self.assertIn('AICS contact enquiry', self.endpoint)
+        self.assertIn('sendGraphMail(context.env', self.endpoint)
 
     def test_contact_form_has_clear_low_friction_requirements(self):
         required_fields = re.findall(r'<(?:input|select)\b[^>]*\brequired\b[^>]*>', self.source, flags=re.I)

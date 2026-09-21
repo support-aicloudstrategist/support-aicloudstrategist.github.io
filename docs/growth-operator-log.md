@@ -1,5 +1,15 @@
 # AICS growth value operator log
 
+## 2026-09-21 weekly strategy trap finder — contact notification reliability
+
+- Decision: remove the biggest current revenue trap in the inbound handoff: high-intent contact submissions can be stored, but revenue follow-up is weak if founder/team notification is manual-only and the CRM still shows no customer cadence.
+- Evidence checked: live homepage/contact/free-review/pricing/cloud-cost checklist/`llms.txt` returned HTTP 200; live contact HTML exposes `/api/contact` and no sampled `mailto:` fallback; CRM summary remains 100 leads, 51 leads with email, 0 send-ready now, 0 external emails sent and 0 followups due now; `llms.txt` is currently 180 lines against the <=120-line curated-map guard.
+- Updated: `functions/api/contact.ts` now stores validated contact submissions first as `notification_pending`, attempts Microsoft Graph notification to the configured internal recipient, uses buyer email only as `replyTo`, then refreshes KV with `sent`, `attempted` or `notification_failed_manual_review_pending` without failing the buyer if the refresh fails.
+- Added/updated: contact reliability and inbound guard tests covering contact notification, manual-review fallback and non-relay behaviour.
+- Verification performed: `python3 -m pytest tests/test_contact_reliability.py -q` returned `8 passed`; `python3 -m pytest tests/test_inbound_growth_system.py -q -k 'contact or audit_endpoint or first_touch'` returned `7 passed, 14 deselected`; `git diff --check` passed. Broader inbound suite still fails on the unrelated `llms.txt` length contract.
+- Proof boundary: internal reliability/cadence fix only. No outreach, spend, legal/compliance/medical/security/procurement advice, customer negotiation, identity-sensitive send, fake proof, ranking, demand, lead, customer, revenue, savings, ROI or outcome claim.
+- Next gap: curate `llms.txt` under 120 lines, then deploy/watch contact notification and scoreboard actual submissions/replies/calls/proposals rather than more asset count.
+
 ## 2026-09-21 Saudi healthtech board-forwarding memo package
 
 - Decision: improve Saudi healthtech credibility and revenue readiness by converting the existing comparison + owner-evidence checklist into a board-forwardable package, instead of chasing customer outreach.
