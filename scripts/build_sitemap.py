@@ -114,6 +114,7 @@ CURATED_PATHS = [
     "/resources/uae-healthtech-cloud-trust-executive-summary/",
     "/resources/uae-healthtech-cloud-trust-review-vs-patient-platforms-finops-grc-comparison/",
     "/resources/uae-healthtech-no-credentials-patient-data-intake-policy/",
+    "/resources/saudi-healthtech-board-forwarding-memo/",
     "/resources/saudi-healthtech-cloud-trust-vs-ehr-rcm-finops-grc-comparison/",
     "/resources/us-clinic-ai-receptionist-hipaa-patient-follow-up-checklist/",
     "/resources/us-clinic-source-to-owner-leak-map-template/",
