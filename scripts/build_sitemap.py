@@ -170,6 +170,7 @@ CURATED_PATHS = [
     "/resources/europe-private-clinic-no-credentials-intake-policy/",
     "/resources/europe-healthtech-cloud-trust-finops-no-credentials-intake-policy/",
     "/resources/europe-healthtech-cloud-trust-finops-board-decision-memo-template/",
+    "/resources/europe-healthtech-cloud-trust-finops-forwarding-packet/",
     "/resources/europe-healthtech-cloud-trust-finops-evidence-room/",
     "/resources/europe-healthtech-cloud-trust-finops-executive-summary/",
     "/resources/europe-healthtech-iso27001-gdpr-ai-act-procurement-evidence-checklist/",
