@@ -44,8 +44,8 @@ def test_pricing_surfaces_saudi_healthtech_nphies_as_sellable_first_step():
 def test_pricing_structured_data_includes_saudi_healthtech_nphies_offer():
     html = _pricing_html()
     itemlist = _fixed_scope_itemlist(html)
-    assert itemlist["numberOfItems"] == len(itemlist["itemListElement"]) == 42
-    assert itemlist["name"] == "42 fixed-scope AICS diagnostic offers"
+    assert itemlist["numberOfItems"] == len(itemlist["itemListElement"]) == 46
+    assert itemlist["name"] == "46 fixed-scope AICS diagnostic offers"
     offer = next(item for item in itemlist["itemListElement"] if item["url"] == URL)
     assert offer["position"] == 41
     assert offer["item"]["name"] == "Saudi healthtech Cloud Trust + NPHIES evidence diagnostic"

@@ -34,8 +34,8 @@ def test_europe_healthtech_forwarding_packet_has_pricing_bridge_and_fit_check():
 
 def test_europe_healthtech_forwarding_packet_is_in_fixed_scope_json_ld():
     data = _fixed_scope_itemlist(_html())
-    assert data["numberOfItems"] == len(data["itemListElement"]) == 45
-    assert data["name"] == "45 fixed-scope AICS diagnostic offers"
+    assert data["numberOfItems"] == len(data["itemListElement"]) == 46
+    assert data["name"] == "46 fixed-scope AICS diagnostic offers"
     item = next(
         item for item in data["itemListElement"]
         if item["url"] == f"https://aicloudstrategist.com/resources/{SLUG}/"

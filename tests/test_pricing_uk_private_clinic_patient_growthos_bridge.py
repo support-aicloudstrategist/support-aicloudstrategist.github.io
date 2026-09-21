@@ -35,11 +35,13 @@ def test_uk_private_clinic_patient_growthos_has_pricing_bridge_and_fit_check():
 
 def test_uk_private_clinic_patient_growthos_is_in_fixed_scope_json_ld():
     data = _fixed_scope_itemlist(_html())
-    assert data["numberOfItems"] == len(data["itemListElement"]) == 45
-    assert data["name"] == "45 fixed-scope AICS diagnostic offers"
-    item = data["itemListElement"][-1]
+    assert data["numberOfItems"] == len(data["itemListElement"]) == 46
+    assert data["name"] == "46 fixed-scope AICS diagnostic offers"
+    item = next(
+        item for item in data["itemListElement"]
+        if item["url"] == f"https://aicloudstrategist.com/resources/{SLUG}/"
+    )
     assert item["position"] == 45
-    assert item["url"] == f"https://aicloudstrategist.com/resources/{SLUG}/"
     assert item["item"]["name"] == "UK private clinic Patient GrowthOS trust diagnostic"
     description = item["item"]["offers"]["priceSpecification"]["description"]
     assert "clinic CRM" in description
