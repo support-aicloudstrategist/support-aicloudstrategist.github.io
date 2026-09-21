@@ -1,0 +1,54 @@
+{
+  "topic": "Cloud Cost Alert Triage Board: 7 Safe Checks Before Cutting Resources",
+  "date": "2026-09-21",
+  "slot": "evening",
+  "url": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.csv",
+  "boundary": "Educational operations guide only \u2014 not financial, legal, compliance, security, procurement, architecture, certification, savings, uptime, approval, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "check": "Confirm the alert window",
+      "owner_question": "Is the spike hourly, daily, monthly, or only a one-time reporting delay?",
+      "safe_action": "Compare the same service and time window before changing anything."
+    },
+    {
+      "step": "2",
+      "check": "Name the service owner",
+      "owner_question": "Who understands why this workload, storage bucket, model, job, or database exists?",
+      "safe_action": "Find the business owner and technical owner before shutdown decisions."
+    },
+    {
+      "step": "3",
+      "check": "Separate waste from work",
+      "owner_question": "Is this unused spend, planned activity, backup growth, testing, traffic, or a temporary batch job?",
+      "safe_action": "Tag the alert as investigate, expected, idle, duplicate, or unknown."
+    },
+    {
+      "step": "4",
+      "check": "Check customer and staff impact",
+      "owner_question": "Could stopping this resource affect customers, payments, support, reporting, staff, or compliance records?",
+      "safe_action": "Use a human approval line for any externally visible or sensitive system."
+    },
+    {
+      "step": "5",
+      "check": "Look for automation loops",
+      "owner_question": "Did a script, scheduler, retry queue, AI job, or integration create repeated usage?",
+      "safe_action": "Pause expansion paths before deleting core data or production resources."
+    },
+    {
+      "step": "6",
+      "check": "Document the decision",
+      "owner_question": "What evidence explains the alert, the owner, the proposed change, and the rollback path?",
+      "safe_action": "Record screenshots, IDs, timestamps, owners, and the reversible next step."
+    },
+    {
+      "step": "7",
+      "check": "Review after action",
+      "owner_question": "Did the change reduce noise without breaking the workload or hiding a real problem?",
+      "safe_action": "Review internal telemetry and owner feedback; avoid public savings claims."
+    }
+  ],
+  "safe_scope": "Educational cloud cost alert triage checklist; no financial, legal, compliance, security, procurement, architecture, certification, savings, uptime, approval or performance guarantees."
+}

@@ -1,0 +1,81 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='930' viewBox='0 0 1400 930'>
+  <defs><linearGradient id='hero' x1='0' x2='1'><stop stop-color='#111827'/><stop offset='.45' stop-color='#0f766e'/><stop offset='1' stop-color='#f97316'/></linearGradient><filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#111827' flood-opacity='.16'/></filter></defs>
+  <rect width='1400' height='930' fill='#f8fafc'/><rect x='40' y='34' width='1320' height='862' rx='48' fill='white' stroke='#fed7aa' stroke-width='3'/>
+  <rect x='76' y='70' width='1248' height='166' rx='36' fill='url(#hero)'/>
+  <text x='112' y='118' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='900' fill='#fed7aa' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='112' y='166' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='950' fill='white'>Cloud Cost Alert Triage Board: 7 Safe Checks Before Cutting Resources</text>
+  <text x='112' y='207' font-family='Inter,Arial,sans-serif' font-size='18' fill='#fffbeb'>A safe educational board for owners and operators to inspect cloud cost alerts without making risky shutdowns, performance promises, or savings claims.</text>
+  <g transform='translate(1162 96)'><rect width='126' height='96' rx='24' fill='rgba(255,255,255,.18)' stroke='#fed7aa'/><text x='63' y='38' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='950' fill='white'>7</text><text x='63' y='66' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='850' fill='#ffedd5'>Triage checks</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='82' y='278' width='280' height='226' rx='26' fill='#fee2e2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='118' cy='316' r='23' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='118' y='325' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#dc2626'>1</text>
+    <text x='148' y='310' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='148' dy='0'>Confirm the alert</tspan><tspan x='148' dy='22'>window</tspan></text>
+    <text x='104' y='369' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='104' y='394' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='104' dy='0'>Is the spike hourly, daily,</tspan><tspan x='104' dy='16'>monthly, or only a one-time</tspan><tspan x='104' dy='16'>reporting delay?</tspan></text>
+    <text x='104' y='452' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='104' y='476' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='104' dy='0'>Compare the same service and time</tspan><tspan x='104' dy='16'>window before changing anything.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='410' y='278' width='280' height='226' rx='26' fill='#ffedd5' stroke='#ea580c' stroke-width='3'/>
+    <circle cx='446' cy='316' r='23' fill='white' stroke='#ea580c' stroke-width='3'/>
+    <text x='446' y='325' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#ea580c'>2</text>
+    <text x='476' y='310' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='476' dy='0'>Name the service</tspan><tspan x='476' dy='22'>owner</tspan></text>
+    <text x='432' y='369' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='432' y='394' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='432' dy='0'>Who understands why this workload,</tspan><tspan x='432' dy='16'>storage bucket, model, job, or</tspan><tspan x='432' dy='16'>database exists?</tspan></text>
+    <text x='432' y='452' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='432' y='476' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='432' dy='0'>Find the business owner and</tspan><tspan x='432' dy='16'>technical owner before shutdown</tspan><tspan x='432' dy='16'>decisions.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='738' y='278' width='280' height='226' rx='26' fill='#fef9c3' stroke='#ca8a04' stroke-width='3'/>
+    <circle cx='774' cy='316' r='23' fill='white' stroke='#ca8a04' stroke-width='3'/>
+    <text x='774' y='325' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#ca8a04'>3</text>
+    <text x='804' y='310' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='804' dy='0'>Separate waste from</tspan><tspan x='804' dy='22'>work</tspan></text>
+    <text x='760' y='369' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='760' y='394' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='760' dy='0'>Is this unused spend, planned</tspan><tspan x='760' dy='16'>activity, backup growth, testing,</tspan><tspan x='760' dy='16'>traffic, or a temporary batch job?</tspan></text>
+    <text x='760' y='452' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='760' y='476' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='760' dy='0'>Tag the alert as investigate,</tspan><tspan x='760' dy='16'>expected, idle, duplicate, or</tspan><tspan x='760' dy='16'>unknown.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1066' y='278' width='280' height='226' rx='26' fill='#dcfce7' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='1102' cy='316' r='23' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='1102' y='325' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#16a34a'>4</text>
+    <text x='1132' y='310' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='1132' dy='0'>Check customer and</tspan><tspan x='1132' dy='22'>staff impact</tspan></text>
+    <text x='1088' y='369' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='1088' y='394' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='1088' dy='0'>Could stopping this resource</tspan><tspan x='1088' dy='16'>affect customers, payments,</tspan><tspan x='1088' dy='16'>support, reporting, staff, or</tspan></text>
+    <text x='1088' y='452' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='1088' y='476' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='1088' dy='0'>Use a human approval line for any</tspan><tspan x='1088' dy='16'>externally visible or sensitive</tspan><tspan x='1088' dy='16'>system.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='246' y='566' width='280' height='226' rx='26' fill='#dbeafe' stroke='#2563eb' stroke-width='3'/>
+    <circle cx='282' cy='604' r='23' fill='white' stroke='#2563eb' stroke-width='3'/>
+    <text x='282' y='613' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#2563eb'>5</text>
+    <text x='312' y='598' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='312' dy='0'>Look for automation</tspan><tspan x='312' dy='22'>loops</tspan></text>
+    <text x='268' y='657' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='268' y='682' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='268' dy='0'>Did a script, scheduler, retry</tspan><tspan x='268' dy='16'>queue, AI job, or integration</tspan><tspan x='268' dy='16'>create repeated usage?</tspan></text>
+    <text x='268' y='740' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='268' y='764' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='268' dy='0'>Pause expansion paths before</tspan><tspan x='268' dy='16'>deleting core data or production</tspan><tspan x='268' dy='16'>resources.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='574' y='566' width='280' height='226' rx='26' fill='#ede9fe' stroke='#7c3aed' stroke-width='3'/>
+    <circle cx='610' cy='604' r='23' fill='white' stroke='#7c3aed' stroke-width='3'/>
+    <text x='610' y='613' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#7c3aed'>6</text>
+    <text x='640' y='598' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='640' dy='0'>Document the</tspan><tspan x='640' dy='22'>decision</tspan></text>
+    <text x='596' y='657' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='596' y='682' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='596' dy='0'>What evidence explains the alert,</tspan><tspan x='596' dy='16'>the owner, the proposed change,</tspan><tspan x='596' dy='16'>and the rollback path?</tspan></text>
+    <text x='596' y='740' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='596' y='764' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='596' dy='0'>Record screenshots, IDs,</tspan><tspan x='596' dy='16'>timestamps, owners, and the</tspan><tspan x='596' dy='16'>reversible next step.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='902' y='566' width='280' height='226' rx='26' fill='#fce7f3' stroke='#db2777' stroke-width='3'/>
+    <circle cx='938' cy='604' r='23' fill='white' stroke='#db2777' stroke-width='3'/>
+    <text x='938' y='613' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='23' font-weight='950' fill='#db2777'>7</text>
+    <text x='968' y='598' font-family='Inter,Arial,sans-serif' font-size='17' font-weight='950' fill='#111827'><tspan x='968' dy='0'>Review after action</tspan></text>
+    <text x='924' y='657' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>OWNER QUESTION</text>
+    <text x='924' y='682' font-family='Inter,Arial,sans-serif' font-size='12.2' font-weight='750' fill='#1f2937'><tspan x='924' dy='0'>Did the change reduce noise</tspan><tspan x='924' dy='16'>without breaking the workload or</tspan><tspan x='924' dy='16'>hiding a real problem?</tspan></text>
+    <text x='924' y='740' font-family='Inter,Arial,sans-serif' font-size='10.5' font-weight='950' fill='#475569'>SAFE FIRST ACTION</text>
+    <text x='924' y='764' font-family='Inter,Arial,sans-serif' font-size='11.4' fill='#111827'><tspan x='924' dy='0'>Review internal telemetry and</tspan><tspan x='924' dy='16'>owner feedback; avoid public</tspan><tspan x='924' dy='16'>savings claims.</tspan></text>
+  </g>
+  <rect x='92' y='836' width='1216' height='60' rx='22' fill='#111827'/><text x='700' y='860' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='12.8' font-weight='850' fill='#fed7aa'>Inspect the alert window, owner, workload purpose, impact, loops, evidence and after-action review before cutting resources.</text><text x='700' y='883' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='11.2' fill='#e5e7eb'>Educational operations guide only — not financial, legal, compliance, security, procurement, architecture, certification, savings, uptime, approval, or guaranteed-performance advice.</text>
+</svg>

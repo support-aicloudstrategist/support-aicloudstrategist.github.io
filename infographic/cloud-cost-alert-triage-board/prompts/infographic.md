@@ -1,0 +1,1 @@
+Create a bento-grid infographic titled 'Cloud Cost Alert Triage Board: 7 Safe Checks Before Cutting Resources'. Seven numbered rounded cards with check, owner question and safe first action. Use clean corporate memphis style, teal/orange accents, white background, clear labels, and footer truth boundary.

@@ -12,6 +12,18 @@
       "answer_card": "https://aicloudstrategist.com/publications/2026-09-21/ai-tool-sprawl-control-map-answer-card.json",
       "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-21",
       "boundary": "Educational operations guide only \u2014 not legal, compliance, financial, security, procurement, certification, revenue, savings, approval, or guaranteed-performance advice."
+    },
+    {
+      "slot": "evening",
+      "slug": "cloud-cost-alert-triage-board",
+      "title": "Cloud Cost Alert Triage Board: 7 Safe Checks Before Cutting Resources",
+      "url": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.html",
+      "png": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-09-21/cloud-cost-alert-triage-board-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-09-21",
+      "boundary": "Educational operations guide only \u2014 not financial, legal, compliance, security, procurement, architecture, certification, savings, uptime, approval, or guaranteed-performance advice."
     }
   ]
 }
