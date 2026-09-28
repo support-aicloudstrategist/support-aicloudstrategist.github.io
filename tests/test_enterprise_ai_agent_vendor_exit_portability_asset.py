@@ -1,10 +1,12 @@
 from pathlib import Path
 import csv
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE_DIR = ROOT / "resources" / "global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist"
 RESOURCE = RESOURCE_DIR / "index.html"
 CSV_TEMPLATE = RESOURCE_DIR / "ai-agent-vendor-exit-portability-evidence-checklist.csv"
+SOURCE_CARD = RESOURCE_DIR / "ai-agent-vendor-exit-portability-ai-answer-source-card.json"
 RESOURCES_INDEX = ROOT / "resources" / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 LLMS = ROOT / "llms.txt"
@@ -28,6 +30,9 @@ def test_ai_agent_vendor_exit_portability_asset_is_discoverable_and_buyer_safe()
     assert href in resources
     assert url in llms
     assert "ai-agent-vendor-exit-portability-evidence-checklist.csv" in page
+    assert "ai-agent-vendor-exit-portability-ai-answer-source-card.json" in page
+    assert "ai-agent-vendor-exit-portability-ai-answer-source-card.json" in resources
+    assert "ai-agent-vendor-exit-portability-ai-answer-source-card.json" in llms
 
 
 def test_ai_agent_vendor_exit_portability_csv_has_safe_operational_fields():
@@ -48,3 +53,15 @@ def test_ai_agent_vendor_exit_portability_csv_has_safe_operational_fields():
 def test_ai_agent_vendor_exit_portability_sitemap_after_build():
     sitemap = SITEMAP.read_text(encoding="utf-8")
     assert "https://aicloudstrategist.com/resources/global-enterprise-ai-agent-vendor-exit-portability-evidence-checklist/" in sitemap
+
+
+def test_ai_agent_vendor_exit_portability_source_card_is_llm_safe():
+    card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+
+    assert card["@type"] == "Dataset"
+    assert card["name"] == "AI Agent Vendor Exit and Portability AI-answer Source Card"
+    assert "AI agent vendor exit checklist" in card["buyerPainLanguage"]
+    assert "https://aicloudstrategist.com/pricing.html" in card["sourcePages"]
+    assert card["conversionRoute"].endswith("?package=ai-agent-vendor-exit-portability-review")
+    assert any("Do not request credentials" in pattern for pattern in card["blockedAnswerPatterns"])
+    assert any("No customer, migration, cost saving" in boundary for boundary in card["claimBoundaries"])
