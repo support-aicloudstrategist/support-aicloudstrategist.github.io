@@ -4,9 +4,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PRICING_PAGES = [ROOT / "pricing.html", ROOT / "pricing" / "index.html"]
-RESOURCE = "/resources/us-clinic-source-to-owner-leak-map-template/"
+RESOURCE = "/resources/singapore-pdpa-consent-data-protection-diagnostic-package/"
 RESOURCE_URL = "https://aicloudstrategist.com" + RESOURCE
-PACKAGE = "us-clinic-source-to-owner-leak-map"
+PACKAGE = "singapore-pdpa-consent-data-protection-diagnostic"
 
 
 def _itemlist(html: str) -> dict:
@@ -18,24 +18,24 @@ def _itemlist(html: str) -> dict:
     return json.loads(payload)
 
 
-def test_us_clinic_source_to_owner_pricing_bridge_visible_on_both_pricing_pages():
+def test_singapore_pdpa_pricing_bridge_visible_on_both_pricing_pages():
     for page in PRICING_PAGES:
         html = page.read_text(encoding="utf-8")
-        assert 'data-revenue-bridge="us-clinic-source-to-owner-leak-map"' in html
-        section = html.split('data-revenue-bridge="us-clinic-source-to-owner-leak-map"', 1)[1].split("</aside>", 1)[0]
-        assert "US clinic source-to-owner leak-map diagnostic bridge" in section
+        assert 'data-revenue-bridge="singapore-pdpa-consent-data-protection-diagnostic"' in html
+        section = html.split('data-revenue-bridge="singapore-pdpa-consent-data-protection-diagnostic"', 1)[1].split("</aside>", 1)[0]
+        assert "Singapore PDPA consent + data-protection diagnostic bridge" in section
         assert RESOURCE in section
         assert f"package={PACKAGE}" in section
-        assert "AI receptionist" in section
-        assert "patient-engagement platform" in section
-        assert "no-PHI/ePHI" in section
-        assert "HIPAA-adviser prompts" in section
-        assert "appointment result" in section
+        assert "consent-management" in section
+        assert "privacy-GRC" in section
+        assert "no-personal-data" in section
+        assert "PDPA compliance proof" in section
+        assert "PDPC approval" in section
         assert "revenue" in section
         assert "No outreach" not in section
 
 
-def test_us_clinic_source_to_owner_pricing_schema_offer_added_as_49th_item():
+def test_singapore_pdpa_pricing_schema_offer_added_as_50th_item():
     for page in PRICING_PAGES:
         html = page.read_text(encoding="utf-8")
         itemlist = _itemlist(html)
@@ -45,11 +45,12 @@ def test_us_clinic_source_to_owner_pricing_schema_offer_added_as_49th_item():
         urls = [item["url"] for item in itemlist["itemListElement"]]
         assert RESOURCE_URL in urls
         offer = next(item for item in itemlist["itemListElement"] if item["url"] == RESOURCE_URL)
-        assert offer["position"] == 49
-        assert offer["item"]["name"] == "US clinic source-to-owner leak-map diagnostic"
-        assert offer["item"]["areaServed"] == ["US", "North America"]
+        assert offer["position"] == 50
+        assert offer["item"]["name"] == "Singapore PDPA consent + data-protection diagnostic"
+        assert offer["item"]["areaServed"] == ["SG", "Singapore"]
         description = offer["item"]["offers"]["priceSpecification"]["description"]
-        assert "no real clinic" in description
-        assert "PHI/ePHI" in description
-        assert "legal/privacy/security/medical/HIPAA advice" in description
+        assert "no real customer" in description
+        assert "personal data" in description
+        assert "legal/privacy/security/DPO advice" in description
+        assert "PDPA compliance proof" in description
         assert "revenue" in description
