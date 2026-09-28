@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic AI pilot budget overrun owner board</title>
+  <desc id="desc">Infographic-style board showing how to separate baseline, spend drivers, approvals, scale-cost scenarios and blocked claims before an AI pilot moves to production.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef2ff"/>
+      <stop offset="0.55" stop-color="#ecfeff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .label{font:700 18px Inter,Arial,sans-serif;fill:#475569}.title{font:900 44px Inter,Arial,sans-serif;fill:#0f172a}.subtitle{font:500 22px Inter,Arial,sans-serif;fill:#334155}.card-title{font:900 24px Inter,Arial,sans-serif;fill:#0f172a}.small{font:600 17px Inter,Arial,sans-serif;fill:#334155}.tiny{font:700 14px Inter,Arial,sans-serif;fill:#64748b}.num{font:900 30px Inter,Arial,sans-serif;fill:#ffffff}.pill{font:900 14px Inter,Arial,sans-serif;fill:#312e81}.warn{font:900 18px Inter,Arial,sans-serif;fill:#92400e}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect x="46" y="40" width="1108" height="640" rx="34" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="82" y="92" class="label">AICloudStrategist · synthetic proof-of-method visual</text>
+  <text x="82" y="146" class="title">AI pilot costs rising?</text>
+  <text x="82" y="184" class="subtitle">Use an approval board before production scale, contracts, ROI claims or more AI tooling.</text>
+  <g transform="translate(82 230)">
+    <rect width="198" height="180" rx="24" fill="#eef2ff" stroke="#c7d2fe"/>
+    <circle cx="35" cy="38" r="22" fill="url(#accent)"/><text x="27" y="48" class="num">1</text>
+    <text x="26" y="86" class="card-title">Baseline</text>
+    <text x="26" y="122" class="small">Approved budget,</text>
+    <text x="26" y="148" class="small">period, currency,</text>
+    <text x="26" y="174" class="small">excluded costs.</text>
+  </g>
+  <g transform="translate(300 230)">
+    <rect width="198" height="180" rx="24" fill="#ecfeff" stroke="#99f6e4"/>
+    <circle cx="35" cy="38" r="22" fill="url(#accent)"/><text x="27" y="48" class="num">2</text>
+    <text x="26" y="86" class="card-title">Drivers</text>
+    <text x="26" y="122" class="small">Token, GPU,</text>
+    <text x="26" y="148" class="small">cloud, retry and</text>
+    <text x="26" y="174" class="small">support evidence.</text>
+  </g>
+  <g transform="translate(518 230)">
+    <rect width="198" height="180" rx="24" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <circle cx="35" cy="38" r="22" fill="url(#accent)"/><text x="27" y="48" class="num">3</text>
+    <text x="26" y="86" class="card-title">Owners</text>
+    <text x="26" y="122" class="small">Finance, product,</text>
+    <text x="26" y="148" class="small">engineering and</text>
+    <text x="26" y="174" class="small">procurement gates.</text>
+  </g>
+  <g transform="translate(736 230)">
+    <rect width="198" height="180" rx="24" fill="#fff7ed" stroke="#fed7aa"/>
+    <circle cx="35" cy="38" r="22" fill="url(#accent)"/><text x="27" y="48" class="num">4</text>
+    <text x="26" y="86" class="card-title">Scenarios</text>
+    <text x="26" y="122" class="small">Low/base/high</text>
+    <text x="26" y="148" class="small">scale costs tied</text>
+    <text x="26" y="174" class="small">to pilot data.</text>
+  </g>
+  <g transform="translate(954 230)">
+    <rect width="150" height="180" rx="24" fill="#fef2f2" stroke="#fecaca"/>
+    <circle cx="35" cy="38" r="22" fill="url(#accent)"/><text x="27" y="48" class="num">5</text>
+    <text x="26" y="86" class="card-title">Claims</text>
+    <text x="26" y="122" class="small">Block ROI,</text>
+    <text x="26" y="148" class="small">savings and</text>
+    <text x="26" y="174" class="small">runway hype.</text>
+  </g>
+  <path d="M187 430 C270 496 418 496 520 430" stroke="#4338ca" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M608 430 C704 506 830 506 970 430" stroke="#0f766e" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <g transform="translate(105 510)">
+    <rect width="990" height="110" rx="28" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="32" y="43" class="warn">Board rule: opportunity estimates are not delivered value.</text>
+    <text x="32" y="76" class="small">Approve caps, rollback triggers and scale assumptions first. Do not publish savings, ROI, runway, customer or compliance claims without verified owner evidence.</text>
+  </g>
+  <text x="82" y="654" class="tiny">Boundary: synthetic visual only — no real customer, production bill, saving, certification, ranking, lead, revenue or outreach claim.</text>
+</svg>
