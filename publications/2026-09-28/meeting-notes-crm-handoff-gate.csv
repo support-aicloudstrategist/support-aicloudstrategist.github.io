@@ -1,0 +1,8 @@
+step,check,safe_review_question
+1,"Consent boundary","Confirm the meeting-notes source is allowed for internal processing before copying anything into CRM."
+2,"Identity match","Match the contact, company, owner, and deal record before creating tasks or updating fields."
+3,"Sensitive-data filter","Remove unnecessary personal, health, financial, legal, credential, or confidential details from summaries."
+4,"Promise control","Separate facts from guesses; do not convert casual discussion into commitments, pricing, dates, or guarantees."
+5,"Human owner","Assign a named reviewer for ambiguous notes, objections, next steps, and customer-facing replies."
+6,"Audit trail","Keep source link, timestamp, automation rule, reviewer, and change reason visible for later review."
+7,"Safe next action","Create a draft task or internal reminder first; send external follow-up only after approved review."
