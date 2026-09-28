@@ -32,6 +32,11 @@
   ],
   "downloadable_sources": [
     {
+      "name": "US digital health vendor-risk diagnostic intake worksheet CSV",
+      "url": "https://aicloudstrategist.com/resources/us-digital-health-vendor-risk-diagnostic-package/us-digital-health-vendor-risk-diagnostic-intake-worksheet.csv",
+      "boundary": "No-PHI/ePHI first intake worksheet for buyer-review trigger, PHI/BAA boundary, evidence-owner, questionnaire-source and trust-claim gaps; do not include credentials, secrets, patient data, production exports, raw audit files or private customer identifiers."
+    },
+    {
       "name": "Companion free HIPAA vendor-risk checklist",
       "url": "https://aicloudstrategist.com/resources/us-digital-health-hipaa-vendor-risk-checklist/",
       "boundary": "Synthetic buyer-education checklist only; no real patient, PHI/ePHI, customer, production export, BAA, audit file, security report, compliance proof or buyer approval."
