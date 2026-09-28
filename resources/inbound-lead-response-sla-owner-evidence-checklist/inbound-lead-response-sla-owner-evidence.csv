@@ -1,0 +1,8 @@
+evidence_area,buyer_question,redacted_input_to_collect,owner,ready_to_act_when,unsafe_claim_boundary
+Lead source map,Where do enquiries enter?,List source names only; no customer records,Growth owner,Every active source has one queue,Do not claim demand volume without verified analytics
+First-response SLA,How fast do we reply?,Redacted timestamp samples or owner estimate,Sales owner,SLA target exists by source,Do not claim conversion lift from SLA alone
+Queue ownership,Who sees stuck leads?,Queue names and stage owners only,CRM owner,Each queue has an accountable owner,Do not share CRM exports or private messages
+Human handoff,When must automation stop?,Stop-rule categories only,Operations owner,High-risk or custom requests route to humans,Do not let AI promise pricing legal medical or compliance advice
+Lost reason,Why did leads stall?,Redacted reason categories,Founder or sales lead,Reasons are categorized weekly,Do not claim revenue loss without closed-won/source data
+Pilot scope,What should be automated first?,One source one SLA one owner one dashboard,Pilot owner,Small pilot has success and stop criteria,Do not buy tools before owner evidence
+Dashboard proof,What should Raj inspect weekly?,Counts by source SLA breach owner and next action,Founder,Dashboard shows trend and exceptions,Do not publish ROI until verified
