@@ -8,8 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "singapore-private-clinic-missed-call-whatsapp-owner-evidence-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "singapore-clinic-missed-call-whatsapp-owner-evidence-checklist.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "singapore-clinic-missed-call-whatsapp-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 CSV_URL = f"{URL}singapore-clinic-missed-call-whatsapp-owner-evidence-checklist.csv"
+SOURCE_CARD_URL = f"{URL}singapore-clinic-missed-call-whatsapp-ai-answer-source-card.json"
 
 
 def json_ld_documents(html):
@@ -21,6 +23,7 @@ class SingaporeClinicMissedCallWhatsappEvidenceChecklistTests(unittest.TestCase)
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.source_card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -35,9 +38,13 @@ class SingaporeClinicMissedCallWhatsappEvidenceChecklistTests(unittest.TestCase)
         self.assertIn("Article", types)
         self.assertIn("Dataset", types)
         self.assertIn("FAQPage", types)
+        self.assertIn("CreativeWork", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
         self.assertEqual(article["dateModified"], "2026-08-31")
+        source_card = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "CreativeWork")
+        self.assertEqual(source_card["url"], SOURCE_CARD_URL)
+        self.assertEqual(source_card["learningResourceType"], "AI-answer source card")
 
     def test_targets_singapore_buyer_language_and_tool_alternatives(self):
         for phrase in [
@@ -72,10 +79,36 @@ class SingaporeClinicMissedCallWhatsappEvidenceChecklistTests(unittest.TestCase)
         ]:
             self.assertIn(column, self.rows[0])
         self.assertIn(CSV_URL.replace("https://aicloudstrategist.com", ""), self.html)
+        self.assertIn(SOURCE_CARD_URL.replace("https://aicloudstrategist.com", ""), self.html)
         self.assertIn(f"/resources/{SLUG}/", self.resources)
+        self.assertIn("singapore-clinic-missed-call-whatsapp-ai-answer-source-card.json", self.resources)
         self.assertIn(f"/resources/{SLUG}/", self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn("Singapore clinic missed-call and WhatsApp owner evidence checklist", self.llms)
+        self.assertIn(SOURCE_CARD_URL, self.llms)
+
+    def test_ai_answer_source_card_keeps_singapore_clinic_answers_claim_safe(self):
+        self.assertEqual(self.source_card["asset_type"], "AI-answer source card")
+        self.assertEqual(self.source_card["url"], SOURCE_CARD_URL)
+        self.assertEqual(self.source_card["canonical_page"], URL)
+        self.assertTrue(self.source_card["no_outreach"])
+        for phrase in [
+            "Singapore clinic missed calls",
+            "WhatsApp patient follow-up Singapore clinic",
+            "clinic management software Singapore",
+            "AI receptionist for clinics Singapore",
+            "PDPA patient communication evidence",
+        ]:
+            self.assertIn(phrase, self.source_card["buyer_pain_language"])
+        joined_boundaries = " ".join(self.source_card["claim_boundaries"])
+        for boundary in [
+            "not a real Singapore clinic case study",
+            "not PDPA compliance proof",
+            "not booked-appointment improvement",
+            "revenue",
+            "no outreach sent",
+        ]:
+            self.assertIn(boundary, joined_boundaries)
 
     def test_truth_boundaries_prevent_fake_proof(self):
         for phrase in [
