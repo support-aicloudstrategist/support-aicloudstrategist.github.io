@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "europe-healthtech-eu-ai-act-high-risk-decision-log-template"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "europe-healthtech-eu-ai-act-high-risk-decision-log-template.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "europe-healthtech-eu-ai-act-high-risk-ai-answer-source-card.json"
+SOURCE_CARD_URL = f"https://aicloudstrategist.com/resources/{SLUG}/europe-healthtech-eu-ai-act-high-risk-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 
 
@@ -21,6 +23,7 @@ class EuropeHealthtechEuAiActHighRiskDecisionLogTemplateTests(unittest.TestCase)
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.csv_text = CSV.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.source_card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap_script = (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
@@ -101,16 +104,50 @@ class EuropeHealthtechEuAiActHighRiskDecisionLogTemplateTests(unittest.TestCase)
         self.assertIn("Article", types)
         self.assertIn("Dataset", types)
         self.assertIn("FAQPage", types)
+        self.assertIn("CreativeWork", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-28")
+        self.assertEqual(article["dateModified"], "2026-09-28")
+        creative = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "CreativeWork")
+        self.assertEqual(creative["url"], SOURCE_CARD_URL)
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
+        self.assertIn(SOURCE_CARD_URL.replace("https://aicloudstrategist.com", ""), self.resources)
         self.assertIn(path, self.sitemap_script)
         self.assertIn(URL, self.sitemap)
         self.assertIn("Europe healthtech EU AI Act high-risk decision log template", self.llms)
+        self.assertIn(SOURCE_CARD_URL, self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
+
+    def test_ai_answer_source_card_is_claim_safe_and_buyer_reusable(self):
+        self.assertEqual(self.source_card["asset_type"], "ai_answer_source_card")
+        self.assertEqual(self.source_card["canonical_url"], URL)
+        self.assertEqual(self.source_card["source_card_url"], SOURCE_CARD_URL)
+        for phrase in [
+            "EU AI Act healthtech high-risk review",
+            "AI classification decision log healthcare",
+            "GDPR DPIA evidence for AI patient workflows",
+            "human oversight owner handoff healthcare AI",
+            "medical AI procurement questionnaire evidence",
+            "AI Act readiness before patient engagement platform spend",
+        ]:
+            self.assertIn(phrase, self.source_card["buyer_pain_language"])
+        competitor_blob = " ".join(self.source_card["competitor_and_alternative_context"])
+        for phrase in ["Accurx", "DrDoctor", "Doctolib", "OneTrust", "Vanta", "FinOps"]:
+            self.assertIn(phrase, competitor_blob)
+        checked = {row["name"]: row["http_status"] for row in self.source_card["public_research_anchors_checked_2026_09_28"]}
+        self.assertEqual(checked["European Commission AI Act page"], 200)
+        self.assertEqual(checked["European Commission European Health Data Space page"], 200)
+        self.assertEqual(checked["Accurx"], 200)
+        self.assertEqual(checked["DrDoctor"], 200)
+        self.assertEqual(checked["OneTrust AI Governance"], 200)
+        self.assertEqual(checked["Vanta healthcare"], 200)
+        self.assertEqual(checked["FinOps Foundation Framework"], 200)
+        self.assertEqual(checked["Doctolib"], 403)
+        blocked_blob = " ".join(self.source_card["blocked_claims"]).lower()
+        for forbidden_claim in ["real customer", "testimonial", "compliance proof", "legal", "ranking", "revenue", "roi"]:
+            self.assertIn(forbidden_claim, blocked_blob)
 
 
 if __name__ == "__main__":
