@@ -66,7 +66,6 @@ CURATED_PATHS = [
     "/resources/small-business-owner-ai-automation-readiness-checklist/",
     "/resources/cloud-ai-economics-decision-pack/",
     "/resources/ai-cost-savings-claim-boundary-worksheet/",
-    "/resources/search-console-indexing-readiness/",
     "/resources/global-enterprise-ai-cost-anomaly-approval-runbook/",
     "/resources/kubernetes-namespace-cost-owner-dashboard-demo/",
     "/resources/customer-problem-search/aws-cloud-bill-too-high/",
