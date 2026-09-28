@@ -17,6 +17,8 @@ def test_aws_bill_too_high_page_exposes_ai_answer_source_card():
         "Open AI-answer source card JSON",
         "AI-answer source card for “AWS bill too high” searches",
         "AWS Cost Explorer, Budgets, Trusted Advisor, Compute Optimizer",
+        "Shortlist comparison matrix before buying a tool or consultant",
+        "aws-bill-too-high-shortlist-comparison-matrix.csv",
         "no savings guarantee",
         '"@type":"CreativeWork"',
         "aws-bill-too-high-ai-answer-source-card.json",
@@ -61,4 +63,5 @@ def test_aws_bill_too_high_source_card_is_discoverable_from_hub_llms_and_sitemap
     for source in [resources, llms]:
         assert REL in source
         assert "aws-bill-too-high-ai-answer-source-card.json" in source
+        assert "aws-bill-too-high-shortlist-comparison-matrix.csv" in source
     assert URL in sitemap
