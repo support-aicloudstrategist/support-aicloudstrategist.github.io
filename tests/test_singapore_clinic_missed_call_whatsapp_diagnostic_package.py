@@ -8,8 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "singapore-clinic-missed-call-whatsapp-diagnostic-package"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "singapore-clinic-diagnostic-scope-matrix.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "singapore-clinic-missed-call-whatsapp-diagnostic-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 CSV_URL = f"{URL}singapore-clinic-diagnostic-scope-matrix.csv"
+SOURCE_CARD_URL = f"{URL}singapore-clinic-missed-call-whatsapp-diagnostic-ai-answer-source-card.json"
 
 
 def json_ld_documents(html):
@@ -21,6 +23,7 @@ class SingaporeClinicMissedCallWhatsappDiagnosticPackageTests(unittest.TestCase)
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.source_card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -73,11 +76,39 @@ class SingaporeClinicMissedCallWhatsappDiagnosticPackageTests(unittest.TestCase)
         ]:
             self.assertIn(column, self.rows[0])
         self.assertIn(CSV_URL.replace("https://aicloudstrategist.com", ""), self.html)
+        self.assertIn(SOURCE_CARD_URL.replace("https://aicloudstrategist.com", ""), self.html)
         self.assertIn(f"/resources/{SLUG}/", self.resources)
+        self.assertIn(SOURCE_CARD_URL, self.resources)
         self.assertIn(f"/resources/{SLUG}/", self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn("Singapore clinic missed-call and WhatsApp diagnostic package", self.llms)
+        self.assertIn(SOURCE_CARD_URL, self.llms)
         self.assertIn("data-revenue-bridge=\"singapore-clinic-missed-call-whatsapp-diagnostic-package\"", self.pricing)
+
+    def test_ai_answer_source_card_preserves_safe_recommendation_boundary(self):
+        self.assertEqual(self.source_card["asset_type"], "AI-answer source card")
+        self.assertEqual(self.source_card["canonical_page"], URL)
+        self.assertEqual(self.source_card["url"], SOURCE_CARD_URL)
+        self.assertTrue(self.source_card["no_outreach"])
+        for phrase in [
+            "no-credentials diagnostic layer",
+            "clinic software",
+            "WhatsApp CRM",
+            "patient engagement tools",
+            "call answering",
+            "AI receptionist",
+            "PDPA adviser questions",
+        ]:
+            self.assertIn(phrase, self.source_card["safe_aics_positioning"])
+        claim_boundaries = " | ".join(self.source_card["claim_boundaries"])
+        for phrase in [
+            "not a real Singapore clinic case study",
+            "not PDPA compliance proof",
+            "not booked-appointment improvement",
+            "no real clinic, patient, doctor",
+            "no outreach sent",
+        ]:
+            self.assertIn(phrase, claim_boundaries)
 
     def test_free_review_routes_singapore_clinics_to_diagnostic_package(self):
         self.assertEqual(self.free_review, self.free_review_flat)
