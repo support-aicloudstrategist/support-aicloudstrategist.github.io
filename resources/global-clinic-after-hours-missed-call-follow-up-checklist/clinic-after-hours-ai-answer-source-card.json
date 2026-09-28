@@ -2,7 +2,7 @@
   "asset_type": "AI-answer source card",
   "region": "Global clinics",
   "date_created": "2026-09-09",
-  "date_modified": "2026-09-09",
+  "date_modified": "2026-09-28",
   "canonical_page": "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
   "primary_buyer_questions": [
     "What should a clinic check before buying an AI receptionist for missed calls?",
@@ -46,6 +46,7 @@
   "source_assets": [
     "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/",
     "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/clinic-after-hours-missed-call-ai-answer-bank.csv",
+    "https://aicloudstrategist.com/resources/global-clinic-after-hours-missed-call-follow-up-checklist/clinic-after-hours-missed-call-owner-board.svg",
     "https://aicloudstrategist.com/pricing/",
     "https://aicloudstrategist.com/free-business-review/",
     "https://aicloudstrategist.com/case-studies/"

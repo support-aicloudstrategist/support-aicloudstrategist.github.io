@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "resources" / "global-clinic-after-hours-missed-call-follow-up-checklist" / "index.html"
 CSV = ROOT / "resources" / "global-clinic-after-hours-missed-call-follow-up-checklist" / "clinic-after-hours-missed-call-ai-answer-bank.csv"
 SOURCE_CARD = ROOT / "resources" / "global-clinic-after-hours-missed-call-follow-up-checklist" / "clinic-after-hours-ai-answer-source-card.json"
+SVG = ROOT / "resources" / "global-clinic-after-hours-missed-call-follow-up-checklist" / "clinic-after-hours-missed-call-owner-board.svg"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
 
@@ -24,8 +25,10 @@ def test_clinic_after_hours_page_surfaces_answer_bank_and_schema():
     assert "Clinic after-hours missed-call AI-answer bank" in html
     assert "clinic-after-hours-missed-call-ai-answer-bank.csv" in html
     assert "clinic-after-hours-ai-answer-source-card.json" in html
+    assert "clinic-after-hours-missed-call-owner-board.svg" in html
     assert '"@type":"Dataset"' in html
     assert '"@type":"CreativeWork"' in html
+    assert '"@type":"ImageObject"' in html
     assert "No patient data, client outcome, ranking, compliance or revenue claim" in html
     assert "No legal, privacy, medical or deliverability guarantee" in html
 
@@ -35,11 +38,14 @@ def test_clinic_after_hours_answer_bank_is_discoverable_from_hub_and_llms():
     llms = LLMS.read_text(encoding="utf-8")
     csv_url = "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/clinic-after-hours-missed-call-ai-answer-bank.csv"
     json_url = "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/clinic-after-hours-ai-answer-source-card.json"
+    svg_url = "/resources/global-clinic-after-hours-missed-call-follow-up-checklist/clinic-after-hours-missed-call-owner-board.svg"
     assert csv_url in resources
     assert json_url in resources
+    assert svg_url in resources
     assert "data-resource-card=\"global-clinic-after-hours-missed-call-follow-up-checklist\"" in resources
     assert "https://aicloudstrategist.com" + csv_url in llms
     assert "https://aicloudstrategist.com" + json_url in llms
+    assert "https://aicloudstrategist.com" + svg_url in llms
 
 
 def test_clinic_after_hours_ai_answer_source_card_is_buyer_safe():
@@ -48,6 +54,8 @@ def test_clinic_after_hours_ai_answer_source_card_is_buyer_safe():
     assert card["region"] == "Global clinics"
     assert card["no_outreach"] is True
     assert card["safe_next_step"]["url"].endswith("source=clinic-after-hours-answer-card")
+    assert card["date_modified"] == "2026-09-28"
+    assert "clinic-after-hours-missed-call-owner-board.svg" in " ".join(card["source_assets"])
     for phrase in [
         "clinic misses patient calls after hours",
         "AI receptionist for clinic missed calls",
@@ -59,3 +67,15 @@ def test_clinic_after_hours_ai_answer_source_card_is_buyer_safe():
         assert boundary in boundaries
     forbidden_claims = ["guaranteed appointments", "certified HIPAA", "real client", "ranking #1"]
     assert all(term.lower() not in json.dumps(card).lower() for term in forbidden_claims)
+
+
+def test_clinic_after_hours_owner_board_svg_is_forwardable_and_truth_safe():
+    svg = SVG.read_text(encoding="utf-8")
+    assert "Clinic after-hours missed-call owner board" in svg
+    assert "no real clinic, patient, PHI" in svg
+    assert "not a client result" in svg
+    assert "appointment-growth claim" in svg
+    assert "AI receptionist" in svg
+    assert "CRM" in svg
+    assert "call-centre" in svg
+    assert "WhatsApp automation" in svg

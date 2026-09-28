@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Clinic after-hours missed-call owner board</title>
+  <desc id="desc">Synthetic no-patient-data visual showing how a clinic owner can review missed calls, WhatsApp messages, booking requests, callback ageing, human-review stop rules and claim boundaries before buying AI receptionist, CRM or advertising services.</desc>
+  <rect width="1200" height="675" fill="#f7fbff"/>
+  <rect x="40" y="40" width="1120" height="595" rx="32" fill="#ffffff" stroke="#cfe0ef" stroke-width="3"/>
+  <text x="80" y="100" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#0b2742">Clinic after-hours missed-call owner board</text>
+  <text x="80" y="138" font-family="Inter, Arial, sans-serif" font-size="18" fill="#436078">Synthetic readiness visual · no real clinic, patient, PHI, call recording, WhatsApp export, appointment, revenue or compliance claim</text>
+  <g transform="translate(80 178)">
+    <rect width="248" height="132" rx="22" fill="#eaf4ff" stroke="#9fc5e8"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#0b2742">Missed calls</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#0c6fb8">37</text>
+    <text x="24" y="108" font-family="Inter, Arial, sans-serif" font-size="15" fill="#436078">count-only, no phone numbers</text>
+  </g>
+  <g transform="translate(356 178)">
+    <rect width="248" height="132" rx="22" fill="#fff7e8" stroke="#efc982"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#0b2742">Overdue callbacks</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#d67b00">11</text>
+    <text x="24" y="108" font-family="Inter, Arial, sans-serif" font-size="15" fill="#72501b">needs named staff owner</text>
+  </g>
+  <g transform="translate(632 178)">
+    <rect width="248" height="132" rx="22" fill="#eefaf1" stroke="#98d6a4"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#0b2742">Resolved safely</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#248044">24</text>
+    <text x="24" y="108" font-family="Inter, Arial, sans-serif" font-size="15" fill="#376145">status-only demo metric</text>
+  </g>
+  <g transform="translate(908 178)">
+    <rect width="172" height="132" rx="22" fill="#fff0f4" stroke="#e8a9b9"/>
+    <text x="24" y="42" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#0b2742">Stop rules</text>
+    <text x="24" y="76" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#bd2456">8</text>
+    <text x="24" y="108" font-family="Inter, Arial, sans-serif" font-size="15" fill="#7a2e47">human review</text>
+  </g>
+  <g transform="translate(80 350)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#0b2742">Owner evidence lanes before platform spend</text>
+    <g transform="translate(0 32)">
+      <rect width="1040" height="54" rx="14" fill="#f2f7fb"/>
+      <text x="22" y="35" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#0b2742">1. Source-to-owner queue</text>
+      <text x="300" y="35" font-family="Inter, Arial, sans-serif" font-size="15" fill="#436078">Calls, forms, booking clicks and WhatsApp messages mapped to owner, age, status and next action.</text>
+    </g>
+    <g transform="translate(0 98)">
+      <rect width="1040" height="54" rx="14" fill="#f2f7fb"/>
+      <text x="22" y="35" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#0b2742">2. Human-review gates</text>
+      <text x="300" y="35" font-family="Inter, Arial, sans-serif" font-size="15" fill="#436078">Urgent, clinical, complaint, consent, payment and personal-data messages stay outside autonomous AI.</text>
+    </g>
+    <g transform="translate(0 164)">
+      <rect width="1040" height="54" rx="14" fill="#f2f7fb"/>
+      <text x="22" y="35" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#0b2742">3. Decision memo</text>
+      <text x="300" y="35" font-family="Inter, Arial, sans-serif" font-size="15" fill="#436078">Use evidence to decide whether to fix reception process, call-centre handoff, CRM, AI receptionist or ads.</text>
+    </g>
+  </g>
+  <text x="80" y="610" font-family="Inter, Arial, sans-serif" font-size="15" fill="#5c7388">AICloudStrategist readiness asset: before AI receptionist, CRM, call-centre or WhatsApp automation; not a client result, appointment-growth claim, compliance proof, ranking proof, revenue proof or medical/privacy/legal advice.</text>
+</svg>
