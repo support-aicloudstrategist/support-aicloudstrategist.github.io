@@ -3,13 +3,16 @@
   "slug": "us-medical-group-healthcare-growthos-vendor-shortlist-checklist",
   "status": "demo/synthetic buyer-education trust artifact",
   "region": "North America / United States",
-  "business_hour_context_utc": "2026-09-08T16:36:58Z",
+  "region_timezone_selected": "North America / US Eastern business morning",
+  "business_hour_context_utc": "2026-09-28T11:00:00Z",
   "buyer_pain_language": [
     "Healthcare GrowthOS vendor shortlist",
     "Patient GrowthOS for medical groups",
     "AI receptionist for medical practice",
+    "front desk automation healthcare",
     "missed patient calls",
     "patient access leakage",
+    "online scheduling intake reminders reviews payments",
     "HIPAA AI vendor risk",
     "PHI/ePHI boundary",
     "security questionnaire evidence",
@@ -27,47 +30,58 @@
   ],
   "public_research_checks": [
     {
-      "source": "CMS interoperability and prior authorization final rule",
-      "url": "https://www.cms.gov/initiatives/burden-reduction/overview/interoperability/policies-regulations/cms-interoperability-prior-authorization-final-rule-cms-0057-f",
-      "automated_check": "HTTP 200"
-    },
-    {
       "source": "Phreesia public site",
       "url": "https://www.phreesia.com/",
-      "automated_check": "HTTP 200"
+      "automated_check": "HTTP 200 on 2026-09-28"
     },
     {
       "source": "Luma Health public site",
       "url": "https://www.lumahealth.io/",
-      "automated_check": "HTTP 200"
-    },
-    {
-      "source": "Artera public site",
-      "url": "https://artera.io/",
-      "automated_check": "HTTP 200"
+      "automated_check": "HTTP 200 on 2026-09-28"
     },
     {
       "source": "Notable public site",
       "url": "https://www.notablehealth.com/",
-      "automated_check": "HTTP 200"
+      "automated_check": "HTTP 200 on 2026-09-28"
     },
     {
-      "source": "Vanta healthcare solutions page",
-      "url": "https://www.vanta.com/solutions/healthcare",
-      "automated_check": "HTTP 200"
+      "source": "NexHealth public site",
+      "url": "https://www.nexhealth.com/",
+      "automated_check": "HTTP 200 on 2026-09-28"
     },
     {
-      "source": "FinOps Foundation Framework",
-      "url": "https://www.finops.org/framework/",
-      "automated_check": "HTTP 200"
+      "source": "Artera public site",
+      "url": "https://artera.io/",
+      "automated_check": "HTTP 200 on 2026-09-28"
     },
     {
-      "source": "CloudZero healthcare sample URL",
-      "url": "https://www.cloudzero.com/solutions/healthcare/",
-      "automated_check": "HTTP 404; not used as proof"
+      "source": "Klara/ModMed patient engagement page",
+      "url": "https://www.klara.com/",
+      "automated_check": "HTTP 200 redirect to ModMed patient engagement page on 2026-09-28"
+    },
+    {
+      "source": "Solutionreach public site",
+      "url": "https://www.solutionreach.com/",
+      "automated_check": "HTTP 200 on 2026-09-28"
+    },
+    {
+      "source": "Tebra public site",
+      "url": "https://www.tebra.com/",
+      "automated_check": "HTTP 200 on 2026-09-28"
+    },
+    {
+      "source": "Zocdoc provider page",
+      "url": "https://www.zocdoc.com/about/providers/",
+      "automated_check": "HTTP 403 from this environment on 2026-09-28; used only as category context, not proof"
+    },
+    {
+      "source": "HHS HIPAA Privacy Rule page",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html",
+      "automated_check": "HTTP 403 from this environment on 2026-09-28; not used as compliance proof"
     }
   ],
   "aics_positioning": "AICS should be positioned as a no-credentials, evidence-first diagnostic and owner-handoff layer before or beside patient engagement platforms, AI receptionist vendors, GRC/trust tools, FinOps tools, EHR add-ons, call centers, MSPs and agencies.",
+  "tangible_asset_added_this_run": "us-medical-group-patient-access-shortlist-scoring-rubric.csv",
   "what_to_publish_next": [
     "no-PHI source-to-owner leak map",
     "AI receptionist human-review and urgent-case stop-rule matrix",

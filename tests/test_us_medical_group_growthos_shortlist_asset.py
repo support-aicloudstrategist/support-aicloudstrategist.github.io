@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-medical-group-healthcare-growthos-vendor-shortlist-checklist"
 PAGE = ROOT / "resources" / SLUG / "index.html"
+RUBRIC = ROOT / "resources" / SLUG / "us-medical-group-patient-access-shortlist-scoring-rubric.csv"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
 PATH = f"/resources/{SLUG}/"
 
@@ -48,8 +49,25 @@ class USMedicalGroupGrowthOSShortlistAssetTests(unittest.TestCase):
             "No-PHI source-to-status sample",
             "Owner dashboard mockup",
             "AI-boundary FAQ",
+            "Patient access shortlist scoring rubric",
+            "us-medical-group-patient-access-shortlist-scoring-rubric.csv",
         ]:
             self.assertIn(phrase, self.html)
+
+    def test_patient_access_shortlist_scoring_rubric_is_synthetic_and_useful(self):
+        rubric = RUBRIC.read_text(encoding="utf-8")
+        for phrase in [
+            "criterion,buyer_question,redacted_evidence_to_collect",
+            "Patient access source coverage",
+            "AI receptionist human-review boundary",
+            "HIPAA-style vendor evidence",
+            "Cloud AI SMS and voice spend ownership",
+            "Shortlist decision readiness",
+            "Not proof of appointment growth no-show reduction patient outcome or revenue",
+            "Not HIPAA SOC 2 HITRUST BAA compliance proof or audit attestation",
+            "Not verified savings ROI margin or cost reduction evidence",
+        ]:
+            self.assertIn(phrase, rubric)
 
     def test_safe_boundaries_are_explicit(self):
         for boundary in [
@@ -86,7 +104,9 @@ class USMedicalGroupGrowthOSShortlistAssetTests(unittest.TestCase):
 
     def test_discovery_surfaces_link_to_asset(self):
         self.assertIn(PATH, self.resources)
+        self.assertIn(f"/{SLUG}/us-medical-group-patient-access-shortlist-scoring-rubric.csv", self.resources)
         self.assertIn(f"US medical group Healthcare GrowthOS vendor shortlist checklist: {URL}", self.llms)
+        self.assertIn(f"https://aicloudstrategist.com/resources/{SLUG}/us-medical-group-patient-access-shortlist-scoring-rubric.csv", self.llms)
         self.assertIn(URL, self.sitemap)
 
 
