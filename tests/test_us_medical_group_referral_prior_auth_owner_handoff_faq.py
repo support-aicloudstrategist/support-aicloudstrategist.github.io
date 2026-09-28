@@ -8,7 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "us-medical-group-referral-prior-auth-owner-handoff-faq"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "us-medical-group-referral-prior-auth-owner-handoff.csv"
+SOURCE_CARD = ROOT / "resources" / SLUG / "us-medical-group-referral-prior-auth-owner-handoff-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
+SOURCE_CARD_URL = f"{URL}us-medical-group-referral-prior-auth-owner-handoff-ai-answer-source-card.json"
 
 
 def json_ld_documents(html):
@@ -30,6 +32,7 @@ class UsMedicalGroupReferralPriorAuthOwnerHandoffFaqTests(unittest.TestCase):
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.rows = list(csv.DictReader(CSV.open(newline="", encoding="utf-8")))
+        cls.source_card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
         cls.resources = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
         cls.llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         cls.sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -66,6 +69,9 @@ class UsMedicalGroupReferralPriorAuthOwnerHandoffFaqTests(unittest.TestCase):
             "CloudZero",
             "IBM Apptio Cloudability",
             "What AICS must publish/build to look top-3/top-5 worthy",
+            "Open AI-answer source card JSON",
+            "AI-answer source card for buyer assistants",
+            "us-medical-group-referral-prior-auth-owner-handoff-ai-answer-source-card.json",
         ]:
             self.assertIn(phrase, self.html)
 
@@ -128,6 +134,26 @@ class UsMedicalGroupReferralPriorAuthOwnerHandoffFaqTests(unittest.TestCase):
         for forbidden in ["trusted by", "guaranteed compliance", "hipaa certified", "real client results", "saved "]:
             self.assertNotIn(forbidden, self.html.lower())
 
+    def test_source_card_is_valid_no_phi_answer_asset(self):
+        card = self.source_card
+        self.assertEqual(card["asset_type"], "AI-answer source card")
+        self.assertEqual(card["canonical_url"], URL)
+        self.assertEqual(card["source_card_url"], SOURCE_CARD_URL)
+        self.assertTrue(card["no_outreach"])
+        for phrase in [
+            "referral leakage medical group",
+            "prior authorization delays",
+            "AI receptionist for medical practice",
+            "HIPAA patient communication evidence",
+        ]:
+            self.assertIn(phrase, card["buyer_pain_language"])
+        self.assertIn("Phreesia", card["top_competitor_and_alternative_context"]["patient_engagement_and_access"])
+        self.assertIn("Availity", card["top_competitor_and_alternative_context"]["rcm_eligibility_prior_auth"])
+        self.assertIn("No-PHI referral status maps", card["what_aics_must_publish_to_be_top_3_top_5_worthy"][0])
+        self.assertIn("PHI/ePHI", card["blocked_inputs"])
+        self.assertIn("No outreach was sent.", card["claim_boundaries"])
+        self.assertIn("No appointment-growth", " ".join(card["claim_boundaries"]))
+
     def test_json_ld_and_discovery_wiring_are_valid(self):
         docs = json_ld_documents(self.html)
         nodes = graph_nodes(docs)
@@ -137,6 +163,9 @@ class UsMedicalGroupReferralPriorAuthOwnerHandoffFaqTests(unittest.TestCase):
         self.assertIn("Service", types)
         self.assertIn("Dataset", doc_types)
         self.assertIn("FAQPage", doc_types)
+        self.assertIn("CreativeWork", doc_types)
+        creative = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "CreativeWork")
+        self.assertEqual(creative["url"], SOURCE_CARD_URL)
         article = next(node for node in nodes if isinstance(node, dict) and node.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
         self.assertEqual(article["dateModified"], "2026-09-01")
@@ -146,9 +175,11 @@ class UsMedicalGroupReferralPriorAuthOwnerHandoffFaqTests(unittest.TestCase):
         self.assertIn("synthetic no-PHI view", self.html)
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
+        self.assertIn(SOURCE_CARD_URL.replace("https://aicloudstrategist.com", ""), self.resources)
         self.assertIn(path, self.builder)
         self.assertIn(URL, self.sitemap)
         self.assertIn(f"US medical group referral and prior authorization owner handoff FAQ: {URL}", self.llms)
+        self.assertIn(SOURCE_CARD_URL, self.llms)
         self.assertEqual(self.html.count('data-aics-navigation-mount'), 1)
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
 
