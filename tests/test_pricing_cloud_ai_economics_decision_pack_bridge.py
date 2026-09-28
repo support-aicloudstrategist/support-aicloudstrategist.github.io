@@ -34,7 +34,7 @@ def test_pricing_has_cloud_ai_economics_revenue_bridge():
 def test_pricing_itemlist_counts_cloud_ai_economics_offer_once():
     html = (ROOT / "pricing.html").read_text(encoding="utf-8")
     data = _itemlist(html)
-    assert data["numberOfItems"] == len(data["itemListElement"]) == 51
+    assert data["numberOfItems"] == len(data["itemListElement"]) == 52
     matches = [item for item in data["itemListElement"] if item.get("url") == "https://aicloudstrategist.com/resources/cloud-ai-economics-decision-pack/"]
     assert len(matches) == 1
     assert matches[0]["position"] == 51
