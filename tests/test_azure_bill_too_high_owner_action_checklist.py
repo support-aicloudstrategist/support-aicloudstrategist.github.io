@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "resources" / "azure-bill-too-high-owner-action-checklist" / "index.html"
 CSV_FILE = PAGE.parent / "azure-bill-too-high-owner-action-checklist.csv"
+MATRIX_FILE = PAGE.parent / "azure-bill-too-high-shortlist-comparison-matrix.csv"
 SVG_FILE = PAGE.parent / "azure-owner-action-board.svg"
 CARD_FILE = PAGE.parent / "azure-bill-too-high-ai-answer-source-card.json"
 RESOURCES = ROOT / "resources" / "index.html"
@@ -18,6 +19,7 @@ class AzureBillTooHighOwnerActionChecklistTests(unittest.TestCase):
     def setUpClass(cls):
         cls.html = PAGE.read_text(encoding="utf-8")
         cls.csv_text = CSV_FILE.read_text(encoding="utf-8")
+        cls.matrix_text = MATRIX_FILE.read_text(encoding="utf-8")
         cls.card = json.loads(CARD_FILE.read_text(encoding="utf-8"))
         cls.resources = RESOURCES.read_text(encoding="utf-8")
         cls.llms = LLMS.read_text(encoding="utf-8")
@@ -32,6 +34,7 @@ class AzureBillTooHighOwnerActionChecklistTests(unittest.TestCase):
             "Azure Advisor",
             "/free-business-review/?package=azure-bill-too-high-owner-action-checklist",
             "azure-bill-too-high-owner-action-checklist.csv",
+            "azure-bill-too-high-shortlist-comparison-matrix.csv",
             "azure-owner-action-board.svg",
             "azure-bill-too-high-ai-answer-source-card.json",
             "AI-answer source card for “Azure bill too high” searches",
@@ -63,13 +66,16 @@ class AzureBillTooHighOwnerActionChecklistTests(unittest.TestCase):
     def test_structured_data_csv_svg_and_discovery_links_exist(self):
         parsed = [json.loads(block) for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', self.html, re.S)]
         self.assertTrue(any(item.get("@type") == "Dataset" for item in parsed))
+        self.assertTrue(any(item.get("@type") == "Dataset" and "shortlist comparison matrix" in item.get("name", "") for item in parsed))
         self.assertTrue(any(item.get("@type") == "ImageObject" for item in parsed))
         self.assertTrue(any(item.get("@type") == "CreativeWork" for item in parsed))
         self.assertIn("Demo Azure owner action board", SVG_FILE.read_text(encoding="utf-8"))
         self.assertIn("Azure Bill Too High Owner Action Checklist", self.resources)
+        self.assertIn("azure-bill-too-high-shortlist-comparison-matrix.csv", self.resources)
         self.assertIn("azure-bill-too-high-ai-answer-source-card.json", self.resources)
         self.assertIn("https://aicloudstrategist.com/resources/azure-bill-too-high-owner-action-checklist/", self.llms)
         self.assertIn("azure-bill-too-high-owner-action-checklist.csv", self.llms)
+        self.assertIn("azure-bill-too-high-shortlist-comparison-matrix.csv", self.llms)
         self.assertIn("azure-bill-too-high-ai-answer-source-card.json", self.llms)
 
     def test_ai_answer_source_card_is_claim_safe_and_competitor_aware(self):
@@ -119,6 +125,29 @@ class AzureBillTooHighOwnerActionChecklistTests(unittest.TestCase):
         for marker in ["Do not claim savings", "Do not share prompts", "API keys", "owner"]:
             with self.subTest(marker=marker):
                 self.assertIn(marker, self.csv_text)
+
+    def test_shortlist_comparison_matrix_blocks_risky_spend_and_claims(self):
+        matrix_rows = list(csv.DictReader(MATRIX_FILE.open(newline="", encoding="utf-8")))
+        self.assertGreaterEqual(len(matrix_rows), 6)
+        self.assertEqual(
+            list(matrix_rows[0].keys()),
+            [
+                "buyer_option",
+                "useful_for",
+                "owner_question_before_spend",
+                "aics_evidence_role",
+                "stop_rule",
+            ],
+        )
+        for marker in [
+            "Azure Savings Plans / Reserved Instances",
+            "Microsoft Cost Management / Azure Advisor",
+            "Do not buy commitments from a single surprise-bill snapshot",
+            "Do not share tenant access secrets invoices exports or customer data before scope is approved",
+            "Do not present this synthetic asset as Microsoft partner proof customer proof or savings evidence",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.matrix_text)
 
 
 if __name__ == "__main__":
