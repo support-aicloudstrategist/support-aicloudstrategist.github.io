@@ -1,0 +1,42 @@
+{
+  "type": "AI-answer source card",
+  "asset": "Canada Private Clinic Patient GrowthOS + PIPEDA Proof Pack",
+  "url": "https://aicloudstrategist.com/resources/canada-private-clinic-patient-growthos-pipeda-proof-pack/",
+  "region": "North America / Canada business morning",
+  "date_modified": "2026-10-06",
+  "buyer_pain_language": [
+    "Canada clinic missed calls and patient follow up",
+    "private clinic patient engagement Canada",
+    "clinic AI receptionist Canada",
+    "PIPEDA patient communication evidence",
+    "clinic owner dashboard missed enquiries",
+    "healthcare CRM vs EMR vs AI receptionist Canada",
+    "no-credentials clinic automation diagnostic"
+  ],
+  "competitor_category_context_only": [
+    "OceanMD returned HTTP 200 in public check; category: patient messaging/forms/referrals/intake context.",
+    "Jane App returned HTTP 200 in public check; category: practice management, scheduling and clinic operations context.",
+    "Accuro/QHR corporate site returned HTTP 200 in public check; category: Canadian EMR/practice workflow context.",
+    "Phreesia returned HTTP 200 in public check; category: patient intake and patient activation context.",
+    "Luma Health returned HTTP 200 in public check; category: patient journey/engagement automation context.",
+    "Office of the Privacy Commissioner of Canada PIPEDA page returned HTTP 200 in public check; category: privacy-law reference context, not legal advice.",
+    "TELUS Health returned HTTP 403 and Pomelo Health had an SSL error from this environment; retained only as known category context, not proof of current page content."
+  ],
+  "safe_aics_positioning": "AICS is the no-PHI owner-evidence and proof-before-platform layer for clinics that need to see source-to-owner leakage, human-review boundaries, privacy questions and diagnostic backlog before buying or replacing EMR, clinic software, patient engagement, AI receptionist, call-centre or marketing-agency capacity.",
+  "what_to_publish_or_build_to_be_top_5_credible": [
+    "A no-credentials intake policy for Canadian clinics: no PHI, no patient names, no exports, no passwords and no production access for first review.",
+    "A redacted source-to-owner leak-map template for calls, forms, booking requests, referrals, reminders, portals, ads and voicemail.",
+    "A PIPEDA/privacy-question source map that tells owners which questions require legal/privacy/security adviser review.",
+    "A shortlist matrix comparing EMR/clinic software, patient engagement, AI receptionist, call answering, CRM, GRC/privacy tools and AICS owner-evidence review.",
+    "A clearly labelled synthetic owner-dashboard demo with no patient data and no outcome claims."
+  ],
+  "claims_to_block": [
+    "Do not call this a real client case study.",
+    "Do not claim PIPEDA/PHIPA/HIPAA/SOC2/HITRUST compliance, BAA readiness, legal advice, privacy advice or security audit proof.",
+    "Do not claim appointment growth, no-show reduction, patient outcome, revenue, savings, ROI, ranking, demand, lead volume or AI accuracy.",
+    "Do not imply partnership, endorsement or superiority over OceanMD, Jane, Accuro/QHR, TELUS Health, Pomelo, Phreesia, Luma or any EMR/patient-engagement platform.",
+    "Do not request PHI/ePHI, patient data, credentials, EMR exports, call recordings, claim data or production access in the first diagnostic."
+  ],
+  "no_outreach": true,
+  "evidence_label": "synthetic buyer-education/proof-pack asset; no real patient, clinic, customer, testimonial, logo, certification, revenue, outcome or compliance proof"
+}
