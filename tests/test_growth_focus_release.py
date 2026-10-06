@@ -37,3 +37,10 @@ def test_analytics_collector_is_non_pii_allowlisted():
 def test_broken_linkedin_entity_url_removed_from_priority_pages():
     for path in ('index.html','about/index.html','terms','privacy'):
         assert 'linkedin.com/company/aicloudstrategist' not in (ROOT/path).read_text(encoding='utf-8')
+
+def test_lead_endpoint_delivers_m365_notification_after_durable_storage():
+    source=(ROOT/'functions/api/lead.ts').read_text(encoding='utf-8')
+    assert source.index('await context.env.LEAD_LOG.put(leadId') < source.index('await sendLeadEmail(context.env, lead, textBody)')
+    assert 'notification_status: "microsoft_365_sent"' not in source
+    assert 'notificationStatus = "microsoft_365_sent"' in source
+    assert 'notification_configured' in source
