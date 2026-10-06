@@ -15,10 +15,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check canonical acquisition routes and sitemap
         run: python3 scripts/monitor_priority_routes.py
+      - name: Create fixed provider observation packet
+        if: always()
+        run: python3 scripts/build_provider_observation_packet.py
       - name: Preserve machine-readable evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: organic-visibility-technical-evidence
-          path: monitoring/latest-technical.json
+          path: |
+            monitoring/latest-technical.json
+            monitoring/provider-observations/*
           retention-days: 90
