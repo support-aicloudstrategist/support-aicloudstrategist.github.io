@@ -20,13 +20,15 @@ class PricingFixedScopeCountConsistencyTests(unittest.TestCase):
                 itemlist = json.loads(itemlist_json)
                 offers = itemlist["itemListElement"]
 
-                self.assertEqual(53, itemlist["numberOfItems"])
-                self.assertEqual(53, len(offers))
-                self.assertEqual("53 fixed-scope AICS diagnostic offers", itemlist["name"])
+                self.assertEqual(54, itemlist["numberOfItems"])
+                self.assertEqual(54, len(offers))
+                self.assertEqual("54 fixed-scope AICS diagnostic offers", itemlist["name"])
                 self.assertIn(
-                    "Fifty-three structured fixed-scope diagnostic offers buyers can understand before a custom build.",
+                    "Fifty-four structured fixed-scope diagnostic offers buyers can understand before a custom build.",
                     html,
                 )
+                self.assertNotIn("53 fixed-scope AICS diagnostic offers", html)
+                self.assertNotIn("Fifty-three structured fixed-scope diagnostic offers", html)
                 self.assertNotIn("52 fixed-scope AICS diagnostic offers", html)
                 self.assertNotIn("Fifty-two structured fixed-scope diagnostic offers", html)
 
