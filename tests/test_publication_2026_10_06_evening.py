@@ -23,6 +23,9 @@ def test_evening_ai_vendor_claim_publication_files_and_boundaries():
     text = html.read_text(encoding='utf-8')
     assert TITLE in text
     assert 'not legal, compliance, procurement, financial, security, certification, vendor-selection, contract, savings, revenue, or guaranteed-performance advice' in text
+    assert '"@type":"FAQPage"' in text
+    assert 'Buyer FAQ' in text
+    assert '/free-business-review/?package=enterprise-ai-diagnostic-fit-check' in text
     forbidden = ['client saved', 'guaranteed savings', 'certified compliant', 'case study result']
     assert not any(term in text.lower() for term in forbidden)
 
