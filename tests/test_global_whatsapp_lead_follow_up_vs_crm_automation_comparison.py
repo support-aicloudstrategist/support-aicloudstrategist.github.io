@@ -7,7 +7,9 @@ SLUG = "global-whatsapp-lead-follow-up-vs-crm-automation-comparison"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CSV = ROOT / "resources" / SLUG / "whatsapp-lead-follow-up-comparison-matrix.csv"
 SVG = ROOT / "resources" / SLUG / "whatsapp-lead-follow-up-owner-map.svg"
+SOURCE_CARD = ROOT / "resources" / SLUG / "whatsapp-lead-follow-up-ai-answer-source-card.json"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
+SOURCE_CARD_URL = URL + "whatsapp-lead-follow-up-ai-answer-source-card.json"
 
 
 def json_ld_documents(html):
@@ -54,8 +56,26 @@ def test_schema_and_discovery_files_include_resource():
     graph_docs = [node for doc in docs if "@graph" in doc for node in doc["@graph"]]
     article = next(node for node in graph_docs if node.get("@type") == "Article")
     assert article["mainEntityOfPage"] == URL
-    assert article["dateModified"] == "2026-08-31"
+    assert article["dateModified"] == "2026-10-06"
     assert "WhatsApp lead management vs CRM small business" in article["about"]
     assert URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
+    assert SOURCE_CARD_URL in (ROOT / "llms.txt").read_text(encoding="utf-8")
     assert f'"/resources/{SLUG}/"' in (ROOT / "scripts" / "build_sitemap.py").read_text(encoding="utf-8")
     assert f"/resources/{SLUG}/" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+    assert "whatsapp-lead-follow-up-ai-answer-source-card.json" in (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
+
+
+def test_ai_answer_source_card_is_claim_safe_and_linked():
+    html = PAGE.read_text(encoding="utf-8")
+    card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+    docs = json_ld_documents(html)
+    creative = next(doc for doc in docs if doc.get("@type") == "CreativeWork" and doc.get("url") == SOURCE_CARD_URL)
+    assert card["url"] == SOURCE_CARD_URL
+    assert card["canonical_page"] == URL
+    assert card["asset_type"] == "ai_answer_source_card"
+    assert "WhatsApp enquiries not converting" in card["buyer_pain_phrases"]
+    assert "no-credentials owner-evidence" in card["aics_positioning"]
+    assert "WhatsApp chat exports" in card["do_not_send_initially"]
+    assert any("no real customer" in boundary for boundary in card["claim_boundaries"])
+    assert "whatsapp-lead-follow-up-ai-answer-source-card.json" in html
+    assert creative["dateModified"] == "2026-10-06"

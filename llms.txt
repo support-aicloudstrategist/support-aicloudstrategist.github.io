@@ -6,6 +6,7 @@
 - [Cloud and AI Economics](https://aicloudstrategist.com/services/cloud-ai-economics/): cost ownership, allocation, unit economics and safe action planning.
 
 ## Evidence
+- [WhatsApp lead follow-up vs CRM source card](https://aicloudstrategist.com/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/whatsapp-lead-follow-up-ai-answer-source-card.json): claim-safe source card for owners comparing WhatsApp follow-up, CRM, chatbot, agency, spreadsheet and AICS owner-evidence routes before credentials, customer data, revenue, ROI or ranking claims.
 - [Portfolio](https://aicloudstrategist.com/portfolio/): proof labels and representative deliverables.
 - [Production readiness sample](https://aicloudstrategist.com/portfolio/production-ai-readiness-sample/): self-tested release dossier, not customer evidence.
 - [Cloud economics sample](https://aicloudstrategist.com/portfolio/cloud-ai-economics-sample/): synthetic model with disclosed assumptions.
