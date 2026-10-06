@@ -5,6 +5,7 @@ SLUG = "uk-private-clinic-owner-evidence-decision-memo"
 PAGE = (ROOT / "resources" / SLUG / "index.html").read_text(encoding="utf-8")
 CSV = (ROOT / "resources" / SLUG / "uk-private-clinic-owner-evidence-decision-memo.csv").read_text(encoding="utf-8")
 SOURCE_CARD = (ROOT / "resources" / SLUG / "uk-private-clinic-owner-evidence-ai-answer-source-card.json").read_text(encoding="utf-8")
+RUBRIC = (ROOT / "resources" / SLUG / "uk-private-clinic-shortlist-scoring-rubric.csv").read_text(encoding="utf-8")
 SVG = (ROOT / "resources" / SLUG / "uk-private-clinic-owner-evidence-map.svg").read_text(encoding="utf-8")
 RESOURCES = (ROOT / "resources" / "index.html").read_text(encoding="utf-8")
 LLMS = (ROOT / "llms.txt").read_text(encoding="utf-8")
@@ -39,22 +40,40 @@ def test_uk_private_clinic_owner_memo_is_indexable_and_buyer_safe():
 def test_uk_private_clinic_owner_memo_csv_and_discovery_links_exist():
     href = f"/resources/{SLUG}/"
     csv_href = f"/resources/{SLUG}/uk-private-clinic-owner-evidence-decision-memo.csv"
+    rubric_href = f"/resources/{SLUG}/uk-private-clinic-shortlist-scoring-rubric.csv"
     assert href in RESOURCES
     assert href in COMPARISON
     assert "Use the owner decision memo" in COMPARISON
     assert "forwardable owner evidence decision memo" in COMPARISON
     assert "UK Private Clinic Owner Evidence Decision Memo" in RESOURCES
+    assert "uk-private-clinic-shortlist-scoring-rubric.csv" in RESOURCES
     assert f"https://aicloudstrategist.com{href}" in LLMS
     assert f"https://aicloudstrategist.com{csv_href}" in LLMS
+    assert f"https://aicloudstrategist.com{rubric_href}" in LLMS
     assert "https://aicloudstrategist.com/resources/uk-private-clinic-owner-evidence-decision-memo/uk-private-clinic-owner-evidence-map.svg" in LLMS
     assert "https://aicloudstrategist.com/resources/uk-private-clinic-owner-evidence-decision-memo/uk-private-clinic-owner-evidence-ai-answer-source-card.json" in LLMS
     assert "uk-private-clinic-owner-evidence-source-card" in RESOURCES
     assert "Open AI-answer source card JSON" in RESOURCES
+    assert rubric_href in PAGE
+    assert "UK private clinic shortlist scoring rubric CSV" in PAGE
     assert "section,owner_question,evidence_to_attach,unsafe_claim_boundary,safe_next_step" in CSV
     assert "AI and human-handover stop rules" in CSV
     assert "GDPR and evidence owner questions" in CSV
     assert "No legal, privacy, security or GDPR compliance conclusion" in CSV
     assert "No promise that review delivers compliance, growth, savings, bookings or implementation success" in CSV
+
+
+def test_uk_private_clinic_shortlist_rubric_is_buyer_safe():
+    assert "route,what_it_is_best_for,evidence_to_request_before_spend" in RUBRIC
+    assert "AI receptionist" in RUBRIC
+    assert "Practice-management software" in RUBRIC
+    assert "Patient engagement platform" in RUBRIC
+    assert "Call answering service" in RUBRIC
+    assert "Booking marketplace" in RUBRIC
+    assert "Marketing agency or ads" in RUBRIC
+    assert "AICS owner-evidence diagnostic" in RUBRIC
+    assert "does not certify GDPR or clinical appropriateness" in RUBRIC
+    assert "not legal clinical GDPR CQC DTAC DSPT or ROI proof" in RUBRIC
 
 
 def test_uk_private_clinic_owner_evidence_map_svg_is_safe_and_forwardable():
