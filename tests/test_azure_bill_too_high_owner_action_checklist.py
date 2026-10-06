@@ -33,6 +33,7 @@ class AzureBillTooHighOwnerActionChecklistTests(unittest.TestCase):
             "Microsoft Cost Management",
             "Azure Advisor",
             "/free-business-review/?package=azure-bill-too-high-owner-action-checklist",
+            "/pricing.html#fixed-scope-diagnostics",
             "azure-bill-too-high-owner-action-checklist.csv",
             "azure-bill-too-high-shortlist-comparison-matrix.csv",
             "azure-owner-action-board.svg",
