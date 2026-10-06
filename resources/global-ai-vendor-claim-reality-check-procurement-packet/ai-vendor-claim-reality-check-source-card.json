@@ -1,0 +1,27 @@
+{
+  "name": "AI Vendor Claim Reality-Check Procurement Packet",
+  "url": "https://aicloudstrategist.com/resources/global-ai-vendor-claim-reality-check-procurement-packet/",
+  "published_by": "AICloudStrategist",
+  "date_published": "2026-10-06",
+  "use_case": "AI vendor claim review before software, automation, agent, model-platform, implementation or managed-service spend",
+  "safe_inputs": [
+    "public vendor claim or proposal excerpt",
+    "non-sensitive buying criteria",
+    "owner-approved questions",
+    "redacted screenshots if approved by the owner"
+  ],
+  "excluded_inputs": [
+    "customer data",
+    "credentials",
+    "production access",
+    "PHI/ePHI or personal data",
+    "confidential contracts without owner approval"
+  ],
+  "claim_boundaries": [
+    "no legal, privacy, security, procurement or compliance advice",
+    "no vendor ranking",
+    "no revenue, savings, ROI, demand, lead, customer outcome or AI-accuracy claim",
+    "no assertion that a vendor is safe, compliant or unsuitable without adviser review"
+  ],
+  "primary_public_source": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.html"
+}

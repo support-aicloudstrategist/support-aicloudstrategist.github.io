@@ -1,0 +1,7 @@
+question_area,buyer_question,evidence_to_request,unsafe_claim_stop
+Outcome promise,"What exact result is promised and over what measured period?","Written scope, baseline, assumptions and measurement method","No revenue, savings, lead, ranking or ROI claim without written measurement and remedy"
+Demo boundary,"Is the demo using real operating conditions or a controlled sample?","Demo script, sample data description and limitation notes","Do not treat a demo as production proof"
+Data access,"What data, credentials or integrations are required before value is shown?","Access list, data categories and least-privilege plan","No customer, PHI/ePHI, personal data or production access for first review"
+Human handoff,"Who reviews failures, exceptions and customer-impacting actions?","Escalation map, approval rule and rollback path","No autonomous customer-impacting action without approved handoff"
+Portability,"How can we export data, prompts, logs and configuration if we leave?","Export sample, retention terms and offboarding steps","No lock-in claim without export evidence"
+Support ownership,"Who is accountable when the workflow fails after launch?","Support hours, incident owner and change-control process","No 24x7 or managed-operation claim unless written in scope"
