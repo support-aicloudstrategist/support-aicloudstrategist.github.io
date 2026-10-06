@@ -20,7 +20,7 @@ def test_pricing_exposes_ai_agent_access_review_diagnostic_bridge():
         '<section class="section pricing-showcase">', 1
     )[0]
 
-    assert "Thirty concrete first offers" in section
+    assert "Fifty-three structured fixed-scope diagnostic offers" in section
     assert 'data-revenue-bridge="enterprise-ai-agent-access-review-evidence-diagnostic"' in section
     assert "AI agent access review evidence diagnostic" in section
     assert "Scope before expanding AI agent tool access, retrieval sources, service accounts, workflow permissions or production autonomy" in section
@@ -49,9 +49,9 @@ def test_pricing_itemlist_schema_includes_ai_agent_access_review_service():
         if doc.get("@id") == "https://aicloudstrategist.com/pricing#fixed-scope-diagnostics"
     )
 
-    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 30
+    assert item_list["numberOfItems"] == len(item_list["itemListElement"]) == 53
     item = next(entry for entry in item_list["itemListElement"] if entry.get("url") == RESOURCE_URL)
-    assert item["position"] == 3
+    assert item["position"] == 6
     assert item["item"]["name"] == "AI agent access review evidence diagnostic"
     description = item["item"]["offers"]["priceSpecification"]["description"]
     for boundary in [
