@@ -218,7 +218,6 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
   const missing = [
     ["business_name", businessName],
     ["website", website],
-    ["whatsapp_number", whatsappNumber],
     ["vertical", vertical],
     ["prospect_email", prospectEmail],
   ]
@@ -239,7 +238,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     });
   }
 
-  if (!/^\+?[0-9][0-9\s-]{8,18}$/.test(whatsappNumber)) {
+  if (whatsappNumber && !/^\+?[0-9][0-9\s-]{8,18}$/.test(whatsappNumber)) {
     return new Response(JSON.stringify({ ok: false, error: "Enter a valid WhatsApp number with country code." }), {
       status: 422,
       headers: jsonHeaders,

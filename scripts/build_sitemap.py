@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import html
 import re
+import subprocess
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -12,11 +13,6 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
 TODAY = dt.date.today().isoformat()
 MAX_SITEMAP_URLS = 1000
-EXTRA_ABSOLUTE_URLS = [
-    "https://support-aicloudstrategist.github.io/publications/2026-09-28/",
-    "https://support-aicloudstrategist.github.io/publications/2026-09-28/meeting-notes-crm-handoff-gate.html",
-    "https://support-aicloudstrategist.github.io/publications/2026-09-28/meeting-notes-crm-handoff-gate.png",
-]
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 REDIRECT_RE = re.compile(r"^(?P<source>/\S+)\s+(?P<target>\S+)\s+(?P<status>30[18])(?:\s|$)")
@@ -302,6 +298,16 @@ def changefreq_for(path: str) -> str:
     return "weekly" if path in {"/", "/resources/", "/case-studies/"} else "monthly"
 
 
+def lastmod_for(path: str) -> str:
+    page = local_page(path)
+    relative = page.relative_to(ROOT).as_posix()
+    changed = subprocess.run(["git", "diff", "--name-only", "--", relative], cwd=ROOT, text=True, capture_output=True, check=False)
+    if changed.stdout.strip():
+        return TODAY
+    history = subprocess.run(["git", "log", "-1", "--format=%cs", "--", relative], cwd=ROOT, text=True, capture_output=True, check=False)
+    return history.stdout.strip() or TODAY
+
+
 def html_pages() -> list[Path]:
     ignored_parts = {".git", "node_modules", "assets", "tests"}
     pages: list[Path] = []
@@ -373,10 +379,7 @@ def main() -> None:
     lines = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>", '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for path in paths:
         loc = html.escape(f"{BASE_URL}{path}")
-        lines.append(f"  <url><loc>{loc}</loc><lastmod>{TODAY}</lastmod><changefreq>{changefreq_for(path)}</changefreq><priority>{priority_for(path)}</priority></url>")
-    for url in EXTRA_ABSOLUTE_URLS:
-        loc = html.escape(url)
-        lines.append(f"  <url><loc>{loc}</loc><lastmod>{TODAY}</lastmod></url>")
+        lines.append(f"  <url><loc>{loc}</loc><lastmod>{lastmod_for(path)}</lastmod><changefreq>{changefreq_for(path)}</changefreq><priority>{priority_for(path)}</priority></url>")
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {len(paths)} indexable sitemap URLs")

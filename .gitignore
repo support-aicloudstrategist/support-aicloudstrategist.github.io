@@ -1,3 +1,8 @@
 
 # Internal workspace snapshots must never be published
 .workspace-snapshots/
+
+# Local test/runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/

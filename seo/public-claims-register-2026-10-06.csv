@@ -1,0 +1,9 @@
+claim_id,location,claim_or_boundary,evidence,status,action
+C001,Homepage,"AICloudStrategist offers production AI readiness and cloud/AI economics reviews","Published delivery methods and scoped service definitions",supported,"Keep offer language focused on deliverables rather than outcomes"
+C002,About,"Public proof is methodology, synthetic representative evidence, and an AICS self-case","Visible proof classification and claim-boundary statement",supported,"Retain explicit labels"
+C003,Website-wide,"No customer outcomes, logos, testimonials, certifications, awards, or partnerships are claimed","Founder stated zero customers; no consented customer evidence exists",boundary,"Do not create customer proof until real delivery and written consent exist"
+C004,DEV Community,"Twenty-three AWS client audits and quantified customer savings","No source records or customer evidence were available",removed,"Article rewritten as a methodology checklist with illustrative examples explicitly labelled"
+C005,Lead measurement,"First-party, non-PII event collection is available","Cloudflare Pages Function /api/events with an event/property allowlist and KV TTL",implemented,"Verify collector and production events after release"
+C006,Lead delivery,"Website form submissions are stored and notified","Cloudflare Pages lead function, KV binding LEAD_LOG, and Microsoft 365 notification variables",implemented,"Run controlled production submission and verify inbox receipt"
+C007,Search visibility,"Top-five discovery across every query and platform","No controllable setting or current evidence supports this universal result",prohibited_as_guarantee,"Measure a defined query set by provider and report observed positions over time"
+C008,Legal identity,"Registered entity name, number, address, and jurisdiction","No official registry evidence supplied or verified",waiting_on_verified_source,"Do not publish unverified third-party directory data"
