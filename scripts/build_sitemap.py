@@ -13,11 +13,6 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
 TODAY = dt.date.today().isoformat()
 MAX_SITEMAP_URLS = 1000
-EXTERNAL_SUPPORT_URLS = [
-    "https://support-aicloudstrategist.github.io/publications/2026-09-28/",
-    "https://support-aicloudstrategist.github.io/publications/2026-09-28/meeting-notes-crm-handoff-gate.html",
-    "https://support-aicloudstrategist.github.io/publications/2026-09-28/meeting-notes-crm-handoff-gate.png",
-]
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 REDIRECT_RE = re.compile(r"^(?P<source>/\S+)\s+(?P<target>\S+)\s+(?P<status>30[18])(?:\s|$)")
@@ -352,13 +347,11 @@ def canonical_path_for(page: Path) -> str | None:
 
 
 def discover_paths() -> list[str]:
-    """Return all indexable public HTML pages.
+    """Return only the reviewed routes in the visibility policy.
 
-    The monitor treats sitemap coverage as a technical-health gate. Keep the
-    manually curated high-intent URLs at the top, then append every remaining
-    canonical, indexable HTML page so crawlers see only routes with an HTML
-    canonical contract. Machine-readable CSV/JSON assets stay discoverable from
-    llms.txt and page links, but are not listed as sitemap URLs.
+    The repository intentionally contains a much larger legacy archive. Those
+    files are not acquisition pages and must not be rediscovered into the
+    sitemap by content-publication jobs.
     """
     paths = []
     seen: set[str] = set()
@@ -366,7 +359,9 @@ def discover_paths() -> list[str]:
 
     def add(path: str) -> None:
         key = path.rstrip("/") or "/"
-        if key in blocked:
+        # A redirect from the slashless variant to the canonical trailing-slash
+        # URL must not suppress the canonical URL itself.
+        if path in blocked:
             return
         if key not in seen:
             paths.append(path)
@@ -375,11 +370,6 @@ def discover_paths() -> list[str]:
     for path in CURATED_PATHS:
         validate_path(path)
         add(path)
-
-    for page in html_pages():
-        path = canonical_path_for(page)
-        if path:
-            add(path)
 
     if len(paths) > MAX_SITEMAP_URLS:
         paths = paths[:MAX_SITEMAP_URLS]
@@ -394,8 +384,6 @@ def main() -> None:
     for path in paths:
         loc = html.escape(f"{BASE_URL}{path}")
         lines.append(f"  <url><loc>{loc}</loc><lastmod>{lastmod_for(path)}</lastmod><changefreq>{changefreq_for(path)}</changefreq><priority>{priority_for(path)}</priority></url>")
-    for loc in EXTERNAL_SUPPORT_URLS:
-        lines.append(f"  <url><loc>{html.escape(loc)}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>")
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {len(paths)} indexable sitemap URLs")
