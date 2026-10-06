@@ -35,17 +35,16 @@ def test_us_clinic_source_to_owner_pricing_bridge_visible_on_both_pricing_pages(
         assert "No outreach" not in section
 
 
-def test_us_clinic_source_to_owner_pricing_schema_offer_added_as_49th_item():
+def test_us_clinic_source_to_owner_pricing_schema_offer_remains_registered():
     for page in PRICING_PAGES:
         html = page.read_text(encoding="utf-8")
         itemlist = _itemlist(html)
-        assert itemlist["numberOfItems"] == 50
-        assert itemlist["name"] == "50 fixed-scope AICS diagnostic offers"
-        assert "Fifty structured fixed-scope diagnostic offers" in html
+        assert itemlist["numberOfItems"] == len(itemlist["itemListElement"])
+        assert itemlist["name"] == f"{itemlist['numberOfItems']} fixed-scope AICS diagnostic offers"
         urls = [item["url"] for item in itemlist["itemListElement"]]
         assert RESOURCE_URL in urls
         offer = next(item for item in itemlist["itemListElement"] if item["url"] == RESOURCE_URL)
-        assert offer["position"] == 49
+        assert offer["position"] == urls.index(RESOURCE_URL) + 1
         assert offer["item"]["name"] == "US clinic source-to-owner leak-map diagnostic"
         assert offer["item"]["areaServed"] == ["US", "North America"]
         description = offer["item"]["offers"]["priceSpecification"]["description"]

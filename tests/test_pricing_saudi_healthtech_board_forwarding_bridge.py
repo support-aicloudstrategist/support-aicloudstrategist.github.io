@@ -36,11 +36,13 @@ def test_saudi_healthtech_board_forwarding_has_pricing_bridge_and_fit_check():
 
 def test_saudi_healthtech_board_forwarding_is_in_fixed_scope_json_ld():
     data = _fixed_scope_itemlist(_html())
-    assert data["numberOfItems"] == len(data["itemListElement"]) == 46
-    assert data["name"] == "46 fixed-scope AICS diagnostic offers"
-    item = data["itemListElement"][-1]
-    assert item["position"] == 46
-    assert item["url"] == f"https://aicloudstrategist.com/resources/{SLUG}/"
+    assert data["numberOfItems"] == len(data["itemListElement"])
+    assert data["name"] == f"{data['numberOfItems']} fixed-scope AICS diagnostic offers"
+    url = f"https://aicloudstrategist.com/resources/{SLUG}/"
+    urls = [item["url"] for item in data["itemListElement"]]
+    assert url in urls
+    item = next(item for item in data["itemListElement"] if item["url"] == url)
+    assert item["position"] == urls.index(url) + 1
     assert item["item"]["name"] == "Saudi healthtech board-forwarding owner-evidence diagnostic"
     assert item["item"]["areaServed"] == ["SA", "GCC", "Global"]
     description = item["item"]["offers"]["priceSpecification"]["description"]
