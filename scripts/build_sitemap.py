@@ -13,6 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://aicloudstrategist.com"
 TODAY = dt.date.today().isoformat()
 MAX_SITEMAP_URLS = 1000
+EXTERNAL_SUPPORT_URLS = [
+    "https://support-aicloudstrategist.github.io/publications/2026-09-28/",
+    "https://support-aicloudstrategist.github.io/publications/2026-09-28/meeting-notes-crm-handoff-gate.html",
+    "https://support-aicloudstrategist.github.io/publications/2026-09-28/meeting-notes-crm-handoff-gate.png",
+]
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', re.I)
 ROBOTS_RE = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 REDIRECT_RE = re.compile(r"^(?P<source>/\S+)\s+(?P<target>\S+)\s+(?P<status>30[18])(?:\s|$)")
@@ -361,7 +366,7 @@ def discover_paths() -> list[str]:
 
     def add(path: str) -> None:
         key = path.rstrip("/") or "/"
-        if path in blocked:
+        if key in blocked:
             return
         if key not in seen:
             paths.append(path)
@@ -371,9 +376,10 @@ def discover_paths() -> list[str]:
         validate_path(path)
         add(path)
 
-    # Legacy HTML stays accessible for historical links but receives a
-    # middleware noindex header. Only the reviewed inventory belongs in the
-    # sitemap; appending every canonical page would defeat the consolidation.
+    for page in html_pages():
+        path = canonical_path_for(page)
+        if path:
+            add(path)
 
     if len(paths) > MAX_SITEMAP_URLS:
         paths = paths[:MAX_SITEMAP_URLS]
@@ -388,6 +394,8 @@ def main() -> None:
     for path in paths:
         loc = html.escape(f"{BASE_URL}{path}")
         lines.append(f"  <url><loc>{loc}</loc><lastmod>{lastmod_for(path)}</lastmod><changefreq>{changefreq_for(path)}</changefreq><priority>{priority_for(path)}</priority></url>")
+    for loc in EXTERNAL_SUPPORT_URLS:
+        lines.append(f"  <url><loc>{html.escape(loc)}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>")
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {len(paths)} indexable sitemap URLs")
