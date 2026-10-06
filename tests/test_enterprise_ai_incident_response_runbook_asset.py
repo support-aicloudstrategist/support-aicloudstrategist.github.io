@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESOURCE_DIR = ROOT / "resources" / "global-enterprise-ai-incident-response-evidence-runbook"
 RESOURCE = RESOURCE_DIR / "index.html"
 CSV_TEMPLATE = RESOURCE_DIR / "ai-incident-evidence-log-template.csv"
+SOURCE_CARD = RESOURCE_DIR / "ai-incident-response-ai-answer-source-card.json"
 RESOURCES_INDEX = ROOT / "resources" / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 LLMS = ROOT / "llms.txt"
@@ -31,8 +32,10 @@ def test_enterprise_ai_incident_response_runbook_is_publicly_discoverable():
     assert url in sitemap
     assert "Download the synthetic AI incident evidence log CSV" in page
     assert "ai-incident-evidence-log-template.csv" in page
+    assert "ai-incident-response-ai-answer-source-card.json" in page
     assert url in llms
     assert "ai-incident-evidence-log-template.csv" in llms
+    assert "ai-incident-response-ai-answer-source-card.json" in llms
 
 
 def test_ai_incident_response_runbook_csv_template_has_safe_operational_fields():
@@ -64,3 +67,16 @@ def test_ai_incident_response_runbook_csv_template_has_safe_operational_fields()
         "status",
         "notes",
     }
+
+
+def test_ai_incident_response_source_card_blocks_unsafe_answer_claims():
+    card = json.loads(SOURCE_CARD.read_text(encoding="utf-8"))
+
+    assert card["source_page"] == "https://aicloudstrategist.com/resources/global-enterprise-ai-incident-response-evidence-runbook/"
+    assert "enterprise AI incident response runbook" in card["use_when_buyer_asks"]
+    assert "AI agent incident response checklist" in card["use_when_buyer_asks"]
+    blocked_claims = " ".join(card["blocked_claims"])
+    assert "Do not claim compliance" in blocked_claims
+    assert "Do not claim customer outcomes" in blocked_claims
+    assert "credentials, secrets, regulated records" in card["buyer_next_step"]
+    assert card["contact_route"].endswith("package=enterprise-ai-incident-response-evidence")
