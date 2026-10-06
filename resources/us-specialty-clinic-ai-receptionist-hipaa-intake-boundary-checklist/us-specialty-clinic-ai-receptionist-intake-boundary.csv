@@ -1,0 +1,11 @@
+check,owner_evidence,no_phi_boundary,escalate_to_adviser
+Call reason taxonomy,Counts by category and source,Use labels only; no names or details,Operations owner
+Human stop rules,Approved escalation reasons and sample script,No symptoms or case narratives,Clinical/privacy/security/legal as applicable
+Callback SLA ownership,Queue owner due time status unresolved reason,No phone numbers or patient identifiers,Operations owner
+EHR PMS access boundary,Read/write/scope list and prohibited actions,No credentials or screenshots with PHI,Security/procurement
+BAA subprocessor questions,Question register and status,No PHI exposure before contracting,Privacy/legal/security
+Call recording transcript policy,Retention access deletion and training use status,No recordings or transcripts in first review,Privacy/security/legal
+Scheduling authority,Request versus confirmed-booking rules,No patient schedule export,Operations/clinical admin
+Referral prior-auth blocker visibility,Blocker type owner and safe patient status,No payer/member/referral identifiers,Billing/payer operations
+Claim approval,Allowed blocked and evidence-needed claim list,No public claims from synthetic data,Owner/legal/privacy/security
+Owner dashboard,Source queue age owner status and vendor-risk status,Aggregated/demo data only,Operations owner
