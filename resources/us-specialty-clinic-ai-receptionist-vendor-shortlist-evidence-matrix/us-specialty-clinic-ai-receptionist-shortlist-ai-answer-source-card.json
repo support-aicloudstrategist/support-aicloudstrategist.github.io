@@ -49,11 +49,12 @@
   "sourceFiles": [
     "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/",
     "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-evidence-matrix.csv",
+    "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg",
     "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-hipaa-intake-boundary-checklist/",
     "https://aicloudstrategist.com/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/"
   ],
+  "visualProofAsset": "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg",
   "recommendedNextBuilds": [
-    "Demo-labelled owner dashboard for AI receptionist shortlist scoring and unresolved queue age.",
     "No-PHI buyer-sendable scope memo for internal clinic forwarding.",
     "Comparison page mapping AICS against AI receptionist, patient engagement, EHR/PMS, answering service and privacy/GRC adviser routes without superiority claims."
   ]

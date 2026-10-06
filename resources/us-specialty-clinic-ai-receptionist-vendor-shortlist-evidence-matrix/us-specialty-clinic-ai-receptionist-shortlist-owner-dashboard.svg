@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Demo US specialty clinic AI receptionist shortlist owner dashboard</title>
+  <desc id="desc">Synthetic no-PHI dashboard showing shortlist score, unresolved queue age and adviser-question status before a clinic shares patient data, credentials or call recordings.</desc>
+  <rect width="1200" height="720" fill="#f4f8fb"/>
+  <rect x="40" y="36" width="1120" height="648" rx="28" fill="#ffffff" stroke="#c9d9e8" stroke-width="2"/>
+  <text x="76" y="88" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#081827">Demo owner dashboard: AI receptionist shortlist gate</text>
+  <text x="76" y="120" font-family="Inter,Arial,sans-serif" font-size="16" fill="#466174">Synthetic/no-PHI view for US specialty clinics. Not a customer result, compliance proof, BAA, appointment-growth, revenue, ROI or AI-accuracy claim.</text>
+
+  <g transform="translate(76 158)">
+    <rect width="320" height="132" rx="18" fill="#eaf6ff" stroke="#b7d5eb"/>
+    <text x="22" y="36" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#0a2942">Shortlist evidence score</text>
+    <text x="22" y="86" font-family="Inter,Arial,sans-serif" font-size="46" font-weight="800" fill="#0f766e">72/100</text>
+    <text x="152" y="76" font-family="Inter,Arial,sans-serif" font-size="14" fill="#40566a">Demo score from public pages, blank workflows, no-PHI categories and adviser questions.</text>
+  </g>
+  <g transform="translate(440 158)">
+    <rect width="320" height="132" rx="18" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="22" y="36" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#5c2d05">Oldest unresolved queue</text>
+    <text x="22" y="86" font-family="Inter,Arial,sans-serif" font-size="46" font-weight="800" fill="#c2410c">18h</text>
+    <text x="126" y="76" font-family="Inter,Arial,sans-serif" font-size="14" fill="#5f4735">Callback / referral blocker / scheduling exception should have a named owner before automation.</text>
+  </g>
+  <g transform="translate(804 158)">
+    <rect width="320" height="132" rx="18" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="22" y="36" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#611414">Stop-rule open items</text>
+    <text x="22" y="86" font-family="Inter,Arial,sans-serif" font-size="46" font-weight="800" fill="#b91c1c">5</text>
+    <text x="84" y="76" font-family="Inter,Arial,sans-serif" font-size="14" fill="#694040">Urgent symptoms, identity mismatch, billing disputes, complaints and clinical questions require human review.</text>
+  </g>
+
+  <g transform="translate(76 334)">
+    <text x="0" y="0" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#081827">No-PHI shortlist lanes</text>
+    <rect x="0" y="26" width="1048" height="64" rx="14" fill="#f8fbfd" stroke="#d6e3ef"/>
+    <text x="22" y="65" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#15364f">AI receptionist / voice agent</text>
+    <rect x="282" y="46" width="230" height="20" rx="10" fill="#dbeafe"/><rect x="282" y="46" width="170" height="20" rx="10" fill="#2563eb"/>
+    <text x="548" y="65" font-family="Inter,Arial,sans-serif" font-size="14" fill="#40566a">BAA path, recording/transcript retention, model-training boundary: adviser review pending</text>
+
+    <rect x="0" y="102" width="1048" height="64" rx="14" fill="#f8fbfd" stroke="#d6e3ef"/>
+    <text x="22" y="141" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#15364f">Patient engagement platform</text>
+    <rect x="282" y="122" width="230" height="20" rx="10" fill="#dcfce7"/><rect x="282" y="122" width="142" height="20" rx="10" fill="#16a34a"/>
+    <text x="548" y="141" font-family="Inter,Arial,sans-serif" font-size="14" fill="#40566a">Consent/opt-out handling, duplicate-message controls, unresolved queue owner: needs mapping</text>
+
+    <rect x="0" y="178" width="1048" height="64" rx="14" fill="#f8fbfd" stroke="#d6e3ef"/>
+    <text x="22" y="217" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#15364f">EHR/PMS or internal workflow</text>
+    <rect x="282" y="198" width="230" height="20" rx="10" fill="#fef3c7"/><rect x="282" y="198" width="104" height="20" rx="10" fill="#d97706"/>
+    <text x="548" y="217" font-family="Inter,Arial,sans-serif" font-size="14" fill="#40566a">Write-back authority, API scope, exception queue and audit trail not ready for credentials</text>
+  </g>
+
+  <g transform="translate(76 614)">
+    <rect width="1048" height="42" rx="12" fill="#05111f"/>
+    <text x="22" y="27" font-family="Inter,Arial,sans-serif" font-size="14" fill="#eaf6fb">AICS first review inputs: public vendor pages, blank workflow diagrams, redacted screenshots and no-PHI call categories only. No patient lists, PHI/ePHI, recordings, EHR/PMS exports, passwords or production credentials.</text>
+  </g>
+</svg>

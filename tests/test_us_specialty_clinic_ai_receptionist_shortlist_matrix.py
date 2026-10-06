@@ -7,6 +7,7 @@ SLUG = "us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 CARD = PAGE.parent / "us-specialty-clinic-ai-receptionist-shortlist-ai-answer-source-card.json"
 CSV = PAGE.parent / "us-specialty-clinic-ai-receptionist-shortlist-evidence-matrix.csv"
+SVG = PAGE.parent / "us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg"
 
 
 def html() -> str:
@@ -64,6 +65,47 @@ def test_us_specialty_clinic_shortlist_source_card_and_csv_are_safe():
     assert csv_text.count("\n") >= 5
 
 
+def test_us_specialty_clinic_shortlist_demo_owner_dashboard_is_linked_and_bounded():
+    text = html()
+    svg_url = "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg"
+    assert SVG.is_file()
+    assert "data-proof-marker=\"us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard\"" in text
+    assert "us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg" in text
+    assert '"@type":"ImageObject"' in text
+    assert svg_url in text
+    for marker in [
+        "synthetic/no-PHI visual",
+        "not based on a real clinic",
+        "patient record",
+        "call recording",
+        "EHR/PMS export",
+        "customer result",
+        "compliance proof",
+        "appointment-growth",
+        "revenue",
+        "ROI",
+        "AI-accuracy measurement",
+    ]:
+        assert marker in text
+    svg = SVG.read_text(encoding="utf-8")
+    for marker in [
+        "Synthetic/no-PHI view",
+        "Not a customer result",
+        "compliance proof",
+        "BAA",
+        "appointment-growth",
+        "revenue",
+        "ROI",
+        "AI-accuracy claim",
+        "No patient lists",
+        "production credentials",
+    ]:
+        assert marker in svg
+    card = json.loads(CARD.read_text(encoding="utf-8"))
+    assert card["visualProofAsset"] == svg_url
+    assert svg_url in card["sourceFiles"]
+
+
 def test_us_specialty_clinic_shortlist_linked_from_discovery_surfaces():
     rel = f"/resources/{SLUG}/"
     abs_url = "https://aicloudstrategist.com" + rel
@@ -73,4 +115,5 @@ def test_us_specialty_clinic_shortlist_linked_from_discovery_surfaces():
     assert rel in resources
     assert abs_url in llms
     assert abs_url + "us-specialty-clinic-ai-receptionist-shortlist-ai-answer-source-card.json" in llms
+    assert abs_url + "us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg" in llms
     assert abs_url in sitemap

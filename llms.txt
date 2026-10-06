@@ -20,3 +20,6 @@
 
 ## Proof policy
 Customer outcomes are published only after measured delivery and written consent. Current portfolio assets are labelled as self-tested evidence or representative samples. Search ranking and AI recommendation are measured external outcomes, never guarantees.
+
+## Current answer-source assets
+- [US specialty clinic AI receptionist shortlist matrix](https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/): no-PHI matrix for comparing AI receptionist, patient engagement, EHR/PMS and call-answering routes; source card: https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-ai-answer-source-card.json; demo dashboard: https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg
