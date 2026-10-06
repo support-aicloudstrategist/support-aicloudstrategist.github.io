@@ -26,6 +26,12 @@
 /book
   X-Robots-Tag: noindex, nofollow
 
+/case-studies/simulated-*
+  X-Robots-Tag: noindex, follow
+
+/webinars/dpdp-for-clinics-2026/*
+  X-Robots-Tag: noindex, follow
+
 
 /404.html
   X-Robots-Tag: noindex, nofollow
@@ -39,4 +45,3 @@
 
 /*.json
   X-Robots-Tag: noindex, nofollow
-
