@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "aics-organic-visibility-v1",
+  "published": "2026-10-06",
+  "brand": "AICloudStrategist",
+  "target": "Observed top-five placement for each fixed query/provider/market combination; no universal guarantee.",
+  "markets": [
+    "India",
+    "United States",
+    "United Kingdom",
+    "Singapore",
+    "United Arab Emirates"
+  ],
+  "providers": [
+    "Google",
+    "Bing",
+    "ChatGPT",
+    "Gemini",
+    "Claude",
+    "Perplexity"
+  ],
+  "queries": [
+    {
+      "id": "R01",
+      "offer": "production-ai-readiness",
+      "market": "India",
+      "text": "how to know if an AI pilot is ready for production"
+    },
+    {
+      "id": "R02",
+      "offer": "production-ai-readiness",
+      "market": "India",
+      "text": "independent AI production readiness assessment India"
+    },
+    {
+      "id": "R03",
+      "offer": "production-ai-readiness",
+      "market": "Global",
+      "text": "AI agent human oversight and rollback readiness review"
+    },
+    {
+      "id": "R04",
+      "offer": "production-ai-readiness",
+      "market": "Global",
+      "text": "AI pilot go no go evidence review"
+    },
+    {
+      "id": "R05",
+      "offer": "production-ai-readiness",
+      "market": "United Kingdom",
+      "text": "production AI governance evidence review UK"
+    },
+    {
+      "id": "R06",
+      "offer": "production-ai-readiness",
+      "market": "Singapore",
+      "text": "AI system production readiness consultant Singapore"
+    },
+    {
+      "id": "R07",
+      "offer": "production-ai-readiness",
+      "market": "United States",
+      "text": "independent AI agent release readiness review"
+    },
+    {
+      "id": "R08",
+      "offer": "production-ai-readiness",
+      "market": "United Arab Emirates",
+      "text": "AI production risk evidence review UAE"
+    },
+    {
+      "id": "R09",
+      "offer": "production-ai-readiness",
+      "market": "India",
+      "text": "AI pilot evaluation evidence checklist for production India"
+    },
+    {
+      "id": "R10",
+      "offer": "production-ai-readiness",
+      "market": "Global",
+      "text": "AI agent access control and human approval review"
+    },
+    {
+      "id": "R11",
+      "offer": "production-ai-readiness",
+      "market": "United States",
+      "text": "AI workflow rollback and incident readiness assessment"
+    },
+    {
+      "id": "R12",
+      "offer": "production-ai-readiness",
+      "market": "United Kingdom",
+      "text": "independent AI release evidence consultant"
+    },
+    {
+      "id": "R13",
+      "offer": "production-ai-readiness",
+      "market": "Singapore",
+      "text": "AI governance production evidence diagnostic"
+    },
+    {
+      "id": "R14",
+      "offer": "production-ai-readiness",
+      "market": "United Arab Emirates",
+      "text": "AI agent human authority review UAE"
+    },
+    {
+      "id": "R15",
+      "offer": "production-ai-readiness",
+      "market": "Global",
+      "text": "what evidence is needed before deploying an AI agent"
+    },
+    {
+      "id": "R16",
+      "offer": "production-ai-readiness",
+      "market": "India",
+      "text": "production AI go no go review for CTO India"
+    },
+    {
+      "id": "E01",
+      "offer": "cloud-ai-economics",
+      "market": "India",
+      "text": "cloud and AI cost optimization review India"
+    },
+    {
+      "id": "E02",
+      "offer": "cloud-ai-economics",
+      "market": "India",
+      "text": "LLM cost allocation and unit economics consultant India"
+    },
+    {
+      "id": "E03",
+      "offer": "cloud-ai-economics",
+      "market": "Global",
+      "text": "AI model GPU cost ownership review"
+    },
+    {
+      "id": "E04",
+      "offer": "cloud-ai-economics",
+      "market": "Global",
+      "text": "cloud AI spend is too high what should we review"
+    },
+    {
+      "id": "E05",
+      "offer": "cloud-ai-economics",
+      "market": "United States",
+      "text": "AI FinOps cost allocation review"
+    },
+    {
+      "id": "E06",
+      "offer": "cloud-ai-economics",
+      "market": "United Kingdom",
+      "text": "cloud AI unit economics consultant UK"
+    },
+    {
+      "id": "E07",
+      "offer": "cloud-ai-economics",
+      "market": "Singapore",
+      "text": "cloud and AI economics review Singapore"
+    },
+    {
+      "id": "E08",
+      "offer": "cloud-ai-economics",
+      "market": "United Arab Emirates",
+      "text": "AI cloud cost owner review UAE"
+    },
+    {
+      "id": "E09",
+      "offer": "cloud-ai-economics",
+      "market": "India",
+      "text": "GPU and LLM spend optimization evidence review India"
+    },
+    {
+      "id": "E10",
+      "offer": "cloud-ai-economics",
+      "market": "Global",
+      "text": "how to allocate AI model cost by product and customer"
+    },
+    {
+      "id": "E11",
+      "offer": "cloud-ai-economics",
+      "market": "United States",
+      "text": "cloud AI cost anomaly approval review"
+    },
+    {
+      "id": "E12",
+      "offer": "cloud-ai-economics",
+      "market": "United Kingdom",
+      "text": "LLM unit economics assessment UK"
+    },
+    {
+      "id": "E13",
+      "offer": "cloud-ai-economics",
+      "market": "Singapore",
+      "text": "AI FinOps owner and allocation review Singapore"
+    },
+    {
+      "id": "E14",
+      "offer": "cloud-ai-economics",
+      "market": "United Arab Emirates",
+      "text": "cloud AI economics decision consultant UAE"
+    },
+    {
+      "id": "E15",
+      "offer": "cloud-ai-economics",
+      "market": "Global",
+      "text": "why is AI inference cost increasing and what to review"
+    },
+    {
+      "id": "E16",
+      "offer": "cloud-ai-economics",
+      "market": "India",
+      "text": "cloud model GPU cost ownership diagnostic India"
+    }
+  ],
+  "cadence": {
+    "technical": "weekly",
+    "provider_benchmark": "every 28 days",
+    "strategy_review": "every 90 days"
+  },
+  "evidence_fields": [
+    "provider",
+    "product_or_model",
+    "market",
+    "date",
+    "query_id",
+    "position_or_recommendation_order",
+    "cited_url",
+    "evidence_path",
+    "notes"
+  ]
+}

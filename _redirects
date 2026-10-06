@@ -42,8 +42,11 @@
 /contact.html /contact 301
 /contact/ /contact 301
 /free-business-review /free-business-review/ 301
-/pricing.html /pricing 301
-/pricing/ /pricing 301
+/free-business-review.html /free-business-review/ 301
+/about.html /about/ 301
+/resources.html /resources/ 301
+/pricing /pricing/ 301
+/pricing.html /pricing/ 301
 /privacy.html /privacy 301
 /terms.html /terms 301
 /website-digital-presence/ /services/website-digital-presence/ 301

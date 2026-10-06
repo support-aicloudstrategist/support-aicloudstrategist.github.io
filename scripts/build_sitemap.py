@@ -212,6 +212,15 @@ CURATED_PATHS = [
 # public resource linked from the hub and llms.txt, but it is outside the current
 # 50-URL sitemap queue while buyer-intent industry/resource routes are promoted.
 
+# The focused visibility release uses one reviewed route inventory as the
+# canonical source for both indexability and sitemap inclusion.
+INDEXABLE_ROUTES = ROOT / "seo" / "indexable-routes.txt"
+if INDEXABLE_ROUTES.is_file():
+    CURATED_PATHS = [
+        line.strip() for line in INDEXABLE_ROUTES.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
+
 
 def local_page(path: str) -> Path:
     if path == "/":
@@ -362,10 +371,9 @@ def discover_paths() -> list[str]:
         validate_path(path)
         add(path)
 
-    for page in html_pages():
-        path = canonical_path_for(page)
-        if path and path.startswith("/"):
-            add(path)
+    # Legacy HTML stays accessible for historical links but receives a
+    # middleware noindex header. Only the reviewed inventory belongs in the
+    # sitemap; appending every canonical page would defeat the consolidation.
 
     if len(paths) > MAX_SITEMAP_URLS:
         paths = paths[:MAX_SITEMAP_URLS]

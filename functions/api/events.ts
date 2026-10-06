@@ -2,7 +2,7 @@ type EventEnv = { LEAD_LOG?: KVNamespace };
 
 const headers = {"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","Access-Control-Allow-Origin":"https://aicloudstrategist.com"};
 const allowedEvents = new Set(["page_view","cta_click","form_start","form_submit_attempt","form_validation_error","form_submit_success","form_submit_error","email_click","phone_click","whatsapp_click","pricing_view"]);
-const allowedProps = new Set(["cta","destination","form","offer","section","source","status"]);
+const allowedProps = new Set(["cta","destination","form","offer","section","source","status","provider","channel","campaign"]);
 const clean = (value: unknown, max = 160) => String(value ?? "").trim().slice(0, max);
 
 function trusted(request: Request) {
