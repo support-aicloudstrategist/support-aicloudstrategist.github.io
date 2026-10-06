@@ -287,7 +287,7 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     });
   }
 
-  const initialRecord = { ...lead, notification_status: "manual_review_pending" };
+  const initialRecord = { ...lead, notification_status: "notification_pending" };
   try {
     await context.env.LEAD_LOG.put(leadId, JSON.stringify(initialRecord), { metadata: { submitted_at: submittedAt, business_name: businessName } });
   } catch (error) {
@@ -298,7 +298,29 @@ export const onRequestPost: PagesFunction<LeadEnv> = async (context) => {
     });
   }
 
-  return new Response(JSON.stringify({ ok: true, lead_id: leadId, notification_sent: false, notification_mode: "manual-review" }), { status: 200, headers: jsonHeaders });
+  let notificationSent = false;
+  let notificationStatus = "manual_review_required";
+  try {
+    await sendLeadEmail(context.env, lead, textBody);
+    notificationSent = true;
+    notificationStatus = "microsoft_365_sent";
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Lead notification failed.";
+    console.error("Lead notification failed", { leadId, message: message.slice(0, 300) });
+  }
+
+  try {
+    await context.env.LEAD_LOG.put(
+      leadId,
+      JSON.stringify({ ...lead, notification_status: notificationStatus }),
+      { metadata: { submitted_at: submittedAt, business_name: businessName, notification_status: notificationStatus } },
+    );
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Lead notification status update failed.";
+    console.error("Lead status update failed", { leadId, message: message.slice(0, 300) });
+  }
+
+  return new Response(JSON.stringify({ ok: true, lead_id: leadId, notification_sent: notificationSent, notification_mode: notificationSent ? "microsoft-365" : "manual-review" }), { status: 200, headers: jsonHeaders });
 };
 
 export const onRequestOptions: PagesFunction = async () =>
@@ -313,8 +335,9 @@ export const onRequestOptions: PagesFunction = async () =>
 
 export const onRequestGet: PagesFunction<LeadEnv> = async (context) => {
   const storageConfigured = Boolean(context.env.LEAD_LOG);
-  const ok = storageConfigured;
-  return new Response(JSON.stringify({ ok, storage_configured: storageConfigured, notification_mode: "manual-review" }), {
+  const notificationConfigured = Boolean(context.env.M365_TENANT_ID && context.env.M365_CLIENT_ID && context.env.M365_CLIENT_SECRET && context.env.M365_SENDER && context.env.M365_RECIPIENT);
+  const ok = storageConfigured && notificationConfigured;
+  return new Response(JSON.stringify({ ok, storage_configured: storageConfigured, notification_configured: notificationConfigured, notification_mode: notificationConfigured ? "microsoft-365" : "manual-review" }), {
     status: ok ? 200 : 503,
     headers: jsonHeaders,
   });
