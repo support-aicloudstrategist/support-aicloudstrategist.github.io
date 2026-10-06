@@ -1,0 +1,9 @@
+step,question,safe_check
+1,What problem is being solved?,Write the business pain in plain language before comparing AI features.
+2,What evidence is real?,"Separate live proof, demo footage, internal benchmark and marketing claim."
+3,What data is touched?,"List customer, staff, payment, health, legal, support and operational data before connecting tools."
+4,Where does a human approve?,"Keep human approval for refunds, promises, pricing, sensitive answers and account changes."
+5,What happens when it is wrong?,"Define fallback owner, correction path, logs and customer-safe recovery steps."
+6,Can we exit cleanly?,"Check export, deletion, portability, admin access and dependency risk before lock-in."
+7,Who supports day two?,"Name the owner for monitoring, prompts, model changes, permissions and incident review."
+8,How will value be measured?,Use internal before-after measures; avoid public savings or revenue claims without evidence.

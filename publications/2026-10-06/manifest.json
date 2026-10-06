@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-06",
+  "posts": [
+    {
+      "slot": "evening",
+      "slug": "ai-vendor-claim-reality-check",
+      "title": "AI Vendor Claim Reality Check: 8 Questions Before You Buy or Automate",
+      "url": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.html",
+      "png": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-10-06",
+      "boundary": "Educational buyer-readiness guide only \u2014 not legal, compliance, procurement, financial, security, certification, vendor-selection, contract, savings, revenue, or guaranteed-performance advice."
+    }
+  ]
+}

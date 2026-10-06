@@ -1,0 +1,52 @@
+{
+  "topic": "AI Vendor Claim Reality Check: 8 Questions Before You Buy or Automate",
+  "date": "2026-10-06",
+  "slot": "evening",
+  "url": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.png",
+  "csv": "https://aicloudstrategist.com/publications/2026-10-06/ai-vendor-claim-reality-check.csv",
+  "boundary": "Educational buyer-readiness guide only \u2014 not legal, compliance, procurement, financial, security, certification, vendor-selection, contract, savings, revenue, or guaranteed-performance advice.",
+  "checks": [
+    {
+      "step": "1",
+      "question": "What problem is being solved?",
+      "safe_check": "Write the business pain in plain language before comparing AI features."
+    },
+    {
+      "step": "2",
+      "question": "What evidence is real?",
+      "safe_check": "Separate live proof, demo footage, internal benchmark and marketing claim."
+    },
+    {
+      "step": "3",
+      "question": "What data is touched?",
+      "safe_check": "List customer, staff, payment, health, legal, support and operational data before connecting tools."
+    },
+    {
+      "step": "4",
+      "question": "Where does a human approve?",
+      "safe_check": "Keep human approval for refunds, promises, pricing, sensitive answers and account changes."
+    },
+    {
+      "step": "5",
+      "question": "What happens when it is wrong?",
+      "safe_check": "Define fallback owner, correction path, logs and customer-safe recovery steps."
+    },
+    {
+      "step": "6",
+      "question": "Can we exit cleanly?",
+      "safe_check": "Check export, deletion, portability, admin access and dependency risk before lock-in."
+    },
+    {
+      "step": "7",
+      "question": "Who supports day two?",
+      "safe_check": "Name the owner for monitoring, prompts, model changes, permissions and incident review."
+    },
+    {
+      "step": "8",
+      "question": "How will value be measured?",
+      "safe_check": "Use internal before-after measures; avoid public savings or revenue claims without evidence."
+    }
+  ],
+  "safe_scope": "Educational AI buying readiness checklist; no legal, compliance, procurement, financial, security, certification, vendor-selection, contract, savings, revenue or performance guarantees."
+}

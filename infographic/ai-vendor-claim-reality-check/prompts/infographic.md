@@ -1,0 +1,1 @@
+Create a bento-grid infographic titled 'AI Vendor Claim Reality Check: 8 Questions Before You Buy or Automate'. Eight numbered rounded cards with buyer question and safe check. Use clean corporate memphis style, blue/teal accents, white background, clear labels, and footer truth boundary.

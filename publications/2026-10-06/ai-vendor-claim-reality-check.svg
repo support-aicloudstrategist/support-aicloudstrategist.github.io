@@ -1,0 +1,75 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900' viewBox='0 0 1400 900'>
+  <defs><linearGradient id='hero' x1='0' x2='1'><stop stop-color='#020617'/><stop offset='.52' stop-color='#1d4ed8'/><stop offset='1' stop-color='#0f766e'/></linearGradient><filter id='shadow' x='-10%' y='-20%' width='120%' height='150%'><feDropShadow dx='0' dy='12' stdDeviation='9' flood-color='#0f172a' flood-opacity='.16'/></filter></defs>
+  <rect width='1400' height='900' fill='#f8fafc'/><rect x='36' y='30' width='1328' height='840' rx='48' fill='white' stroke='#bfdbfe' stroke-width='3'/>
+  <rect x='72' y='66' width='1256' height='160' rx='36' fill='url(#hero)'/>
+  <text x='112' y='114' font-family='Inter,Arial,sans-serif' font-size='16' font-weight='900' fill='#bfdbfe' letter-spacing='3'>AICLOUDSTRATEGIST · EVENING INFOGRAPHIC</text>
+  <text x='112' y='162' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='950' fill='white'>AI Vendor Claim Reality Check: 8 Questions Before You Buy or Automate</text>
+  <text x='112' y='203' font-family='Inter,Arial,sans-serif' font-size='18' fill='#ecfeff'>A safe educational checklist for owners to inspect AI promises, demos, data use, handoffs, support, lock-in and human approval before committing.</text>
+  <g transform='translate(1182 91)'><rect width='110' height='94' rx='24' fill='rgba(255,255,255,.16)' stroke='#bae6fd'/><text x='55' y='39' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='28' font-weight='950' fill='white'>8</text><text x='55' y='67' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='850' fill='#dbeafe'>Buyer checks</text></g>
+  
+  <g filter='url(#shadow)'>
+    <rect x='72' y='270' width='292' height='230' rx='28' fill='#e0f2fe' stroke='#0284c7' stroke-width='3'/>
+    <circle cx='110' cy='312' r='24' fill='white' stroke='#0284c7' stroke-width='3'/>
+    <text x='110' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0284c7'>1</text>
+    <text x='140' y='304' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='140' dy='0'>What problem is being</tspan><tspan x='140' dy='23'>solved?</tspan></text>
+    <text x='94' y='382' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='94' y='410' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='94' dy='0'>Write the business pain in plain</tspan><tspan x='94' dy='17'>language before comparing AI</tspan><tspan x='94' dy='17'>features.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='392' y='270' width='292' height='230' rx='28' fill='#dcfce7' stroke='#16a34a' stroke-width='3'/>
+    <circle cx='430' cy='312' r='24' fill='white' stroke='#16a34a' stroke-width='3'/>
+    <text x='430' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#16a34a'>2</text>
+    <text x='460' y='304' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='460' dy='0'>What evidence is real?</tspan></text>
+    <text x='414' y='382' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='414' y='410' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='414' dy='0'>Separate live proof, demo footage,</tspan><tspan x='414' dy='17'>internal benchmark and marketing</tspan><tspan x='414' dy='17'>claim.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='712' y='270' width='292' height='230' rx='28' fill='#fef9c3' stroke='#ca8a04' stroke-width='3'/>
+    <circle cx='750' cy='312' r='24' fill='white' stroke='#ca8a04' stroke-width='3'/>
+    <text x='750' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#ca8a04'>3</text>
+    <text x='780' y='304' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='780' dy='0'>What data is touched?</tspan></text>
+    <text x='734' y='382' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='734' y='410' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='734' dy='0'>List customer, staff, payment,</tspan><tspan x='734' dy='17'>health, legal, support and</tspan><tspan x='734' dy='17'>operational data before connecting</tspan><tspan x='734' dy='17'>tools.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1032' y='270' width='292' height='230' rx='28' fill='#ffedd5' stroke='#ea580c' stroke-width='3'/>
+    <circle cx='1070' cy='312' r='24' fill='white' stroke='#ea580c' stroke-width='3'/>
+    <text x='1070' y='321' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#ea580c'>4</text>
+    <text x='1100' y='304' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='1100' dy='0'>Where does a human</tspan><tspan x='1100' dy='23'>approve?</tspan></text>
+    <text x='1054' y='382' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='1054' y='410' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='1054' dy='0'>Keep human approval for refunds,</tspan><tspan x='1054' dy='17'>promises, pricing, sensitive</tspan><tspan x='1054' dy='17'>answers and account changes.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='72' y='560' width='292' height='230' rx='28' fill='#ede9fe' stroke='#7c3aed' stroke-width='3'/>
+    <circle cx='110' cy='602' r='24' fill='white' stroke='#7c3aed' stroke-width='3'/>
+    <text x='110' y='611' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#7c3aed'>5</text>
+    <text x='140' y='594' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='140' dy='0'>What happens when it</tspan><tspan x='140' dy='23'>is wrong?</tspan></text>
+    <text x='94' y='672' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='94' y='700' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='94' dy='0'>Define fallback owner, correction</tspan><tspan x='94' dy='17'>path, logs and customer-safe</tspan><tspan x='94' dy='17'>recovery steps.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='392' y='560' width='292' height='230' rx='28' fill='#fce7f3' stroke='#db2777' stroke-width='3'/>
+    <circle cx='430' cy='602' r='24' fill='white' stroke='#db2777' stroke-width='3'/>
+    <text x='430' y='611' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#db2777'>6</text>
+    <text x='460' y='594' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='460' dy='0'>Can we exit cleanly?</tspan></text>
+    <text x='414' y='672' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='414' y='700' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='414' dy='0'>Check export, deletion,</tspan><tspan x='414' dy='17'>portability, admin access and</tspan><tspan x='414' dy='17'>dependency risk before lock-in.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='712' y='560' width='292' height='230' rx='28' fill='#ccfbf1' stroke='#0f766e' stroke-width='3'/>
+    <circle cx='750' cy='602' r='24' fill='white' stroke='#0f766e' stroke-width='3'/>
+    <text x='750' y='611' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#0f766e'>7</text>
+    <text x='780' y='594' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='780' dy='0'>Who supports day two?</tspan></text>
+    <text x='734' y='672' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='734' y='700' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='734' dy='0'>Name the owner for monitoring,</tspan><tspan x='734' dy='17'>prompts, model changes, permissions</tspan><tspan x='734' dy='17'>and incident review.</tspan></text>
+  </g>
+  <g filter='url(#shadow)'>
+    <rect x='1032' y='560' width='292' height='230' rx='28' fill='#fee2e2' stroke='#dc2626' stroke-width='3'/>
+    <circle cx='1070' cy='602' r='24' fill='white' stroke='#dc2626' stroke-width='3'/>
+    <text x='1070' y='611' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='24' font-weight='950' fill='#dc2626'>8</text>
+    <text x='1100' y='594' font-family='Inter,Arial,sans-serif' font-size='18' font-weight='950' fill='#111827'><tspan x='1100' dy='0'>How will value be</tspan><tspan x='1100' dy='23'>measured?</tspan></text>
+    <text x='1054' y='672' font-family='Inter,Arial,sans-serif' font-size='11' font-weight='950' fill='#475569'>SAFE CHECK</text>
+    <text x='1054' y='700' font-family='Inter,Arial,sans-serif' font-size='13' font-weight='760' fill='#111827'><tspan x='1054' dy='0'>Use internal before-after measures;</tspan><tspan x='1054' dy='17'>avoid public savings or revenue</tspan><tspan x='1054' dy='17'>claims without evidence.</tspan></text>
+  </g>
+  <rect x='82' y='822' width='1236' height='54' rx='20' fill='#020617'/><text x='700' y='846' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='12.5' font-weight='850' fill='#bfdbfe'>Use plain-language problem, proof, data, approval, fallback, exit, ownership and measurement checks before adopting AI tools.</text><text x='700' y='867' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='10.8' fill='#e5e7eb'>Educational buyer-readiness guide only — not legal, compliance, procurement, financial, security, certification, vendor-selection, contract, savings, revenue, or guaranteed-performance advice.</text>
+</svg>
