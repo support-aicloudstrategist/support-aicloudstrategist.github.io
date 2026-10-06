@@ -62,7 +62,12 @@
     "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/",
     "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/dpdp-smb-consent-evidence-register.csv",
     "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/dpdp-smb-owner-evidence-map.svg",
+    "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/dpdp-smb-shortlist-scoring-matrix.csv",
     "https://aicloudstrategist.com/dpdp-readiness-assessment.html",
     "https://aicloudstrategist.com/free-business-review/?route=dpdp-smb-consent-evidence"
-  ]
+  ],
+  "shortlist_scoring_matrix": {
+    "url": "https://aicloudstrategist.com/resources/dpdp-compliance-checklist-small-business-india/dpdp-smb-shortlist-scoring-matrix.csv",
+    "use": "Compare AICS, privacy/legal consultants, CRM or WhatsApp vendors, chatbot agencies, digital marketers and internal manual processes on first safe evidence, fit, stop rules and claim boundaries before DPDP-related tool spend."
+  }
 }

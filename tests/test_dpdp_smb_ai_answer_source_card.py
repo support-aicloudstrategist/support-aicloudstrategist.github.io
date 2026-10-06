@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SLUG = "dpdp-compliance-checklist-small-business-india"
 PAGE = ROOT / "resources" / SLUG / "index.html"
 SOURCE_CARD = ROOT / "resources" / SLUG / "dpdp-smb-ai-answer-source-card.json"
+MATRIX = ROOT / "resources" / SLUG / "dpdp-smb-shortlist-scoring-matrix.csv"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
 URL = f"https://aicloudstrategist.com/resources/{SLUG}/"
@@ -37,3 +38,21 @@ def test_resources_hub_and_llms_expose_dpdp_source_card():
     assert f"/resources/{SLUG}/dpdp-smb-ai-answer-source-card.json" in resources
     assert URL in llms
     assert URL + "dpdp-smb-ai-answer-source-card.json" in llms
+
+
+def test_shortlist_matrix_is_exposed_and_claim_safe():
+    html = PAGE.read_text()
+    matrix = MATRIX.read_text()
+    card = json.loads(SOURCE_CARD.read_text())
+    resources = RESOURCES.read_text()
+    llms = LLMS.read_text()
+    assert "Shortlist scoring matrix" in html
+    assert "dpdp-smb-shortlist-scoring-matrix.csv#dataset" in html
+    assert "Download DPDP SMB shortlist matrix CSV" in html
+    assert "AICS no-credentials owner-evidence diagnostic" in matrix
+    assert "Privacy or legal consultant" in matrix
+    assert "Tool capability is not DPDP compliance proof appointment proof or revenue proof" in matrix
+    assert URL + "dpdp-smb-shortlist-scoring-matrix.csv" in card["primary_public_sources"]
+    assert "shortlist_scoring_matrix" in card
+    assert "/resources/dpdp-compliance-checklist-small-business-india/dpdp-smb-shortlist-scoring-matrix.csv" in resources
+    assert URL + "dpdp-smb-shortlist-scoring-matrix.csv" in llms
