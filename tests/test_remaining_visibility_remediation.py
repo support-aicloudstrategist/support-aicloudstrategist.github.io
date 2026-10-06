@@ -60,6 +60,13 @@ def test_legacy_catalogue_is_noindexed():
     assert "/services/production-ai-readiness/" in allow
     assert "/services/cloud-ai-economics/" in allow
 
+def test_indexed_legacy_offer_urls_consolidate_to_focus_pages():
+    redirects = (ROOT / "_redirects").read_text(encoding="utf-8")
+    assert "/services/ai-mlops/ /services/production-ai-readiness/ 301" in redirects
+    assert "/services/cloud-finops/ /services/cloud-ai-economics/ 301" in redirects
+    assert "/cloud-cost /services/cloud-ai-economics/ 301" in redirects
+    assert "/finops /services/cloud-ai-economics/ 301" in redirects
+
 def test_brand_entity_uses_verified_profiles_only():
     org = json.loads(soup("index.html").select_one('script[type="application/ld+json"]').string)
     assert org["name"] == "AICloudStrategist"
