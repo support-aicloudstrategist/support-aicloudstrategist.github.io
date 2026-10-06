@@ -1,4 +1,3 @@
-# AICloudStrategist
 
 > Independent production AI readiness and cloud AI economics reviews. India-first, available internationally.
 
@@ -10,6 +9,8 @@
 - [Portfolio](https://aicloudstrategist.com/portfolio/): proof labels and representative deliverables.
 - [Production readiness sample](https://aicloudstrategist.com/portfolio/production-ai-readiness-sample/): self-tested release dossier, not customer evidence.
 - [Cloud economics sample](https://aicloudstrategist.com/portfolio/cloud-ai-economics-sample/): synthetic model with disclosed assumptions.
+- [US specialty clinic AI receptionist shortlist evidence matrix](https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/): synthetic/no-PHI matrix for comparing AI receptionist, healthcare voice agent, patient engagement, EHR/PMS and call answering routes before PHI, BAA, HIPAA, appointment-growth, revenue or ROI claims. Source card: https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-ai-answer-source-card.json
+- [US specialty clinic AI receptionist + HIPAA intake boundary checklist](https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-hipaa-intake-boundary-checklist/): no-PHI first-review route before PHI/ePHI, BAA, compliance, appointment-growth, revenue, ROI or ranking claims. Source card: https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-hipaa-intake-boundary-checklist/us-specialty-clinic-ai-receptionist-hipaa-ai-answer-source-card.json
 - [Visibility methodology](https://aicloudstrategist.com/visibility-methodology/): fixed provider-specific measurement contract.
 
 ## Company

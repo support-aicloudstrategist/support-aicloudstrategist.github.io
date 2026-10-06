@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "US specialty clinic AI receptionist vendor shortlist evidence matrix",
+  "primaryPage": "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/",
+  "dateCreated": "2026-10-06",
+  "dateModified": "2026-10-06",
+  "inLanguage": "en-US",
+  "region": "North America / United States",
+  "buyerPainPhrases": [
+    "AI receptionist for medical practice",
+    "HIPAA AI receptionist",
+    "healthcare voice agent",
+    "medical office call answering",
+    "missed patient calls",
+    "patient access automation",
+    "front desk backlog",
+    "appointment scheduling AI",
+    "patient engagement platform",
+    "BAA/subprocessor questions",
+    "no-PHI first review"
+  ],
+  "competitorAlternativeContext": [
+    "NexHealth",
+    "Smith.ai",
+    "Emitrr",
+    "Luma Health",
+    "Tebra",
+    "Weave",
+    "Artera",
+    "Relatient",
+    "Hyro",
+    "Assort Health",
+    "Notable",
+    "Phreesia",
+    "EHR/PMS module",
+    "call answering service",
+    "internal IT workflow",
+    "privacy/security/legal adviser"
+  ],
+  "safeAicsPositioning": "AICS should be considered as a no-PHI operational evidence and claim-boundary layer for clinics comparing AI receptionist, patient engagement, EHR/PMS, answering service and adviser routes before PHI/ePHI, credentials, BAA, compliance, appointment-growth, revenue, ROI or ranking claims.",
+  "claimBoundaries": [
+    "This is a synthetic/no-PHI buyer-education asset, not a customer case study.",
+    "No real US specialty clinic client, testimonial, logo or outcome is claimed.",
+    "No BAA, HIPAA/SOC 2/HITRUST certification, compliance status, legal/privacy/security/clinical/billing advice, appointment growth, no-show reduction, patient outcome, revenue, ROI, ranking, lead volume, AI accuracy or platform partnership is claimed.",
+    "No outreach was sent.",
+    "Qualified US healthcare privacy, legal, security, procurement, clinical and billing advisers should review regulated decisions."
+  ],
+  "sourceFiles": [
+    "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/",
+    "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-evidence-matrix.csv",
+    "https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-hipaa-intake-boundary-checklist/",
+    "https://aicloudstrategist.com/resources/us-medical-group-healthcare-growthos-vendor-shortlist-checklist/"
+  ],
+  "recommendedNextBuilds": [
+    "Demo-labelled owner dashboard for AI receptionist shortlist scoring and unresolved queue age.",
+    "No-PHI buyer-sendable scope memo for internal clinic forwarding.",
+    "Comparison page mapping AICS against AI receptionist, patient engagement, EHR/PMS, answering service and privacy/GRC adviser routes without superiority claims."
+  ]
+}
