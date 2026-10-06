@@ -67,6 +67,21 @@ def test_brand_entity_uses_verified_profiles_only():
     assert "linkedin.com" not in " ".join(org["sameAs"])
     assert "github.com/support-aicloudstrategist" in " ".join(org["sameAs"])
 
+def test_registered_company_identity_is_public_and_consistent():
+    org = json.loads(soup("index.html").select_one('script[type="application/ld+json"]').string)
+    assert org["legalName"] == "AICLOUDSTRATEGIST PRIVATE LIMITED"
+    assert org["identifier"]["value"] == "U62020DC2026PTC470945"
+    assert org["foundingDate"] == "2026-04-29"
+    assert org["address"]["postalCode"] == "110039"
+    details = soup("company-details/index.html").get_text(" ", strip=True)
+    assert "AICLOUDSTRATEGIST PRIVATE LIMITED" in details
+    assert "U62020DC2026PTC470945" in details
+    assert "29 April 2026" in details
+    for path in ("about/index.html", "privacy", "terms"):
+        page = (ROOT / path).read_text(encoding="utf-8")
+        assert "U62020DC2026PTC470945" in page
+        assert "/company-details/" in page
+
 def test_focused_intake_keeps_durable_endpoint_and_attribution():
     html = (ROOT / "free-business-review/index.html").read_text(encoding="utf-8")
     assert 'action="/api/lead"' in html

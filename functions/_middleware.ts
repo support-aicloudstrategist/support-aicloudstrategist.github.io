@@ -40,7 +40,7 @@ const indexableExact = new Set([
   "/", "/about", "/pricing", "/free-business-review", "/portfolio",
   "/portfolio/production-ai-readiness-sample", "/portfolio/cloud-ai-economics-sample",
   "/services/production-ai-readiness", "/services/cloud-ai-economics",
-  "/visibility-methodology", "/resources", "/privacy", "/terms",
+  "/visibility-methodology", "/resources", "/company-details", "/privacy", "/terms",
   "/resources/global-ai-pilot-production-go-no-go-decision-record-template",
   "/resources/global-ai-pilot-model-evaluation-regression-drift-faq",
   "/resources/global-ai-pilot-human-override-escalation-matrix",
