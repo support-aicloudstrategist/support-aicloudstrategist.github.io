@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "baseline_id": "aics-organic-discovery-2026-10-06",
+  "observed_on": "2026-10-06",
+  "release_state": "before the focused consolidation could be recrawled",
+  "results": {
+    "google": {
+      "queries": 16,
+      "top_5": 1,
+      "top_10": 2
+    },
+    "bing": {
+      "queries": 16,
+      "top_10": 0
+    },
+    "gemini": {
+      "prompts": 15,
+      "recommendations": 0
+    },
+    "perplexity": {
+      "prompts": 8,
+      "recommendations": 0
+    },
+    "chatgpt": {
+      "status": "untested_signed_out"
+    },
+    "claude": {
+      "status": "untested_signed_out"
+    },
+    "google_search_console": {
+      "period": "2026-07-04 to 2026-10-03",
+      "clicks": 14,
+      "impressions": 5810,
+      "ctr_percent": 0.2,
+      "average_position": 57.1,
+      "generative_ai_impressions": 43
+    }
+  },
+  "limitations": [
+    "Search and AI results vary by provider, market, device, model, account and time.",
+    "The observed prompt sets are finite samples and do not represent every possible problem query.",
+    "A sitemap submission or crawler allow rule does not prove ranking or recommendation.",
+    "The next compatible comparison occurs only after recrawl using an unchanged benchmark."
+  ]
+}

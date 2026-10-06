@@ -36,6 +36,25 @@ const blockedPrefixes = [
   "/preview/",
 ];
 
+const indexableExact = new Set([
+  "/", "/about", "/pricing", "/free-business-review", "/portfolio",
+  "/portfolio/production-ai-readiness-sample", "/portfolio/cloud-ai-economics-sample",
+  "/services/production-ai-readiness", "/services/cloud-ai-economics",
+  "/visibility-methodology", "/resources", "/privacy", "/terms",
+  "/resources/global-ai-pilot-production-go-no-go-decision-record-template",
+  "/resources/global-ai-pilot-model-evaluation-regression-drift-faq",
+  "/resources/global-ai-pilot-human-override-escalation-matrix",
+  "/resources/global-enterprise-ai-agent-access-review-evidence-checklist",
+  "/resources/global-ai-pilot-rollback-readiness-checklist",
+  "/resources/cloud-ai-economics-decision-pack",
+  "/resources/ai-cost-savings-claim-boundary-worksheet",
+  "/resources/global-ai-agent-cost-overrun-owner-evidence-checklist",
+  "/resources/global-enterprise-ai-cost-anomaly-approval-runbook",
+  "/resources/kubernetes-namespace-cost-owner-dashboard-demo",
+  "/resources/uae-healthtech-cloud-trust-executive-summary",
+  "/resources/europe-saas-ai-governance-evidence-diagnostic-package",
+]);
+
 function canonicalizePathname(pathname: string): string | null {
   let decoded = pathname;
 
@@ -92,5 +111,14 @@ export const onRequest: PagesFunction = async (context) => {
     });
   }
 
-  return context.next();
+  const response = await context.next();
+  const method = context.request.method.toUpperCase();
+  const accept = context.request.headers.get("Accept") || "";
+  const extension = pathname && pathname.split("/").pop()?.includes(".");
+  const isDocument = method === "GET" && (!extension || accept.includes("text/html"));
+  if (!pathname || !isDocument || indexableExact.has(pathname)) return response;
+
+  const headers = new Headers(response.headers);
+  headers.set("X-Robots-Tag", "noindex, follow, noarchive");
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 };

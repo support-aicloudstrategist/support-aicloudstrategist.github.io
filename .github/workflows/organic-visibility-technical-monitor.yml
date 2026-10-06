@@ -1,0 +1,24 @@
+name: Organic visibility technical monitor
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-focused-routes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check canonical acquisition routes and sitemap
+        run: python3 scripts/monitor_priority_routes.py
+      - name: Preserve machine-readable evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: organic-visibility-technical-evidence
+          path: monitoring/latest-technical.json
+          retention-days: 90
