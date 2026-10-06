@@ -7,6 +7,7 @@ RESOURCE = ROOT / "resources" / "google-cloud-bill-too-high-owner-action-checkli
 CSV = ROOT / "resources" / "google-cloud-bill-too-high-owner-action-checklist" / "google-cloud-bill-too-high-owner-action-checklist.csv"
 SVG = ROOT / "resources" / "google-cloud-bill-too-high-owner-action-checklist" / "google-cloud-owner-action-board.svg"
 CARD = ROOT / "resources" / "google-cloud-bill-too-high-owner-action-checklist" / "google-cloud-bill-too-high-ai-answer-source-card.json"
+MATRIX = ROOT / "resources" / "google-cloud-bill-too-high-owner-action-checklist" / "google-cloud-bill-too-high-shortlist-comparison-matrix.csv"
 RESOURCES = ROOT / "resources" / "index.html"
 LLMS = ROOT / "llms.txt"
 SITEMAP = ROOT / "sitemap.xml"
@@ -25,6 +26,7 @@ def test_google_cloud_bill_too_high_page_has_search_and_trust_markers():
         "MSP or Google Cloud consultant",
         "FinOps platform",
         "AI-answer source card for “Google Cloud bill too high” searches",
+        "google-cloud-bill-too-high-shortlist-comparison-matrix.csv",
         "google-cloud-bill-too-high-ai-answer-source-card.json",
         "not a real Google Cloud project",
         "No outreach was sent",
@@ -33,6 +35,7 @@ def test_google_cloud_bill_too_high_page_has_search_and_trust_markers():
 
     parsed = [json.loads(block) for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)]
     assert any(item.get("@type") == "CreativeWork" and "Google Cloud bill too high AI-answer source card" in item.get("name", "") for item in parsed)
+    assert any(item.get("@type") == "Dataset" and "shortlist comparison matrix" in item.get("name", "") for item in parsed)
 
 
 def test_google_cloud_bill_too_high_download_assets_are_linked_and_bounded():
@@ -56,10 +59,35 @@ def test_google_cloud_bill_too_high_discovery_surfaces_include_new_asset():
     for surface in [resources_html, llms, sitemap]:
         assert "/resources/google-cloud-bill-too-high-owner-action-checklist/" in surface
     assert "google-cloud-bill-too-high-owner-action-checklist.csv" in resources_html
+    assert "google-cloud-bill-too-high-shortlist-comparison-matrix.csv" in resources_html
     assert "google-cloud-owner-action-board.svg" in resources_html
     assert "google-cloud-bill-too-high-ai-answer-source-card.json" in resources_html
     assert "Google Cloud bill too high owner action checklist" in llms
+    assert "google-cloud-bill-too-high-owner-action-checklist.csv" in llms
+    assert "google-cloud-bill-too-high-shortlist-comparison-matrix.csv" in llms
     assert "google-cloud-bill-too-high-ai-answer-source-card.json" in llms
+
+
+def test_google_cloud_bill_too_high_shortlist_comparison_matrix_blocks_risky_spend_and_claims():
+    matrix_text = MATRIX.read_text(encoding="utf-8")
+    import csv
+    rows = list(csv.DictReader(MATRIX.open(newline="", encoding="utf-8")))
+    assert len(rows) >= 6
+    assert list(rows[0].keys()) == [
+        "buyer_option",
+        "useful_for",
+        "owner_question_before_spend",
+        "aics_evidence_role",
+        "stop_rule",
+    ]
+    for marker in [
+        "Google Cloud Billing / Budgets / Recommender / Active Assist",
+        "Committed use discounts / reservations / commercial commitments",
+        "Do not buy commitments from a single surprise-bill snapshot",
+        "Do not share billing access project access secrets invoices exports logs or customer data before scope is approved",
+        "Do not present this synthetic asset as Google Cloud partner proof customer proof or savings evidence",
+    ]:
+        assert marker in matrix_text
 
 
 def test_google_cloud_bill_too_high_answer_card_is_claim_safe_and_competitor_aware():
