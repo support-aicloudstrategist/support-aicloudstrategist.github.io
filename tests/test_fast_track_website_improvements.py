@@ -79,7 +79,7 @@ class FastTrackWebsiteImprovementTests(unittest.TestCase):
             "We respond within 30 minutes during business hours, or by the next business morning.",
             copy,
         )
-        self.assertIn("Do not upload billing files, credentials or confidential information", copy)
+        self.assertIn("Do not submit billing files, credentials or confidential data", copy)
 
 
 if __name__ == "__main__":

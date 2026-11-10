@@ -21,7 +21,7 @@ class FitReviewPrivacyTrustTests(unittest.TestCase):
         for field in ("name", "contact", "company", "role", "need", "message", "company_website", "privacy_consent"):
             self.assertIn(f'name="{field}"', source)
         self.assertNotIn('type="file"', source)
-        self.assertIn('/js/cost-fit-review.js?v=20261110', source)
+        self.assertIn('/js/cost-fit-review.js?v=20261110-1', source)
 
     def test_fit_review_boundaries_are_explicit(self):
         source = FIT.read_text(encoding="utf-8").lower()
@@ -29,7 +29,7 @@ class FitReviewPrivacyTrustTests(unittest.TestCase):
             "suitability and scoping conversation",
             "not a free diagnostic",
             "not a savings promise",
-            "do not upload billing files, credentials or confidential information",
+            "do not submit billing files, credentials or confidential data",
         ):
             self.assertIn(phrase, source)
 

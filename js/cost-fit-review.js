@@ -12,6 +12,10 @@
     if (form.elements[field]) form.elements[field].value = attribution[field] || params.get(field) || '';
   });
 
+  form.addEventListener('focusin', () => {
+    if (window.aicsAnalytics) window.aicsAnalytics.track('form_start', { props: { form: 'cloud_ai_cost_fit_review' } });
+  }, { once: true });
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     success.hidden = true;
@@ -38,7 +42,7 @@
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || 'Submission failed');
 
-      success.textContent = `Request received. Reference: ${result.contact_id}. AICS will review the scope and reply using the work email supplied.`;
+      success.textContent = `Request received. Reference: ${result.contact_id}. AICS will use your preferred contact method and respond within 30 minutes during business hours, or by the next business morning.`;
       success.hidden = false;
       form.reset();
       if (window.aicsAnalytics) {
@@ -52,7 +56,7 @@
       }
     } finally {
       submit.disabled = false;
-      submit.textContent = 'Request a Cloud & AI Cost Fit Review';
+      submit.textContent = 'Request callback';
     }
   });
 })();
