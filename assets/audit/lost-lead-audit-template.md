@@ -2,7 +2,7 @@
 
 **Client / clinic:** [CLINIC NAME]
 **Prepared by:** AICloudStrategist
-**Director voice:** Anushka Bhattacharya
+**Director voice:** AICloudStrategist
 **Date:** [YYYY-MM-DD]
 **Data rule:** Use only public evidence and client-provided inputs. Mark every unknown as `UNKNOWN`.
 
@@ -119,6 +119,6 @@ If inputs are unavailable, write `UNKNOWN` and show what data is needed.
 **Days 9–11:** update privacy/cookie basics and data inventory starter.  
 **Days 12–14:** review numbers, document open risks, decide sprint or retainer.
 
-— **Anushka Bhattacharya**  
+— **AICloudStrategist**
 Director, AICloudStrategist  
 contact@aicloudstrategist.com · +91 80654 80898 · WhatsApp +91 87963 02608

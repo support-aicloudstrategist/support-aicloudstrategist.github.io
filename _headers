@@ -1,47 +1,34 @@
 /*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://*.cloudflareinsights.com; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://*.cloudflareinsights.com; upgrade-insecure-requests
 
-/blog/*
-  X-Robots-Tag: noindex, nofollow
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
 
-/papers/*
-  X-Robots-Tag: noindex, nofollow
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
 
-/papers/state-of-cloud-cost-india-2026.pdf
-  X-Robots-Tag: noindex, nofollow
-
-/audit.html
-  X-Robots-Tag: noindex, nofollow
-
-/audit
-  X-Robots-Tag: noindex, nofollow
-
-/book.html
-  X-Robots-Tag: noindex, nofollow
-
-/book
-  X-Robots-Tag: noindex, nofollow
-
-/case-studies/simulated-*
-  X-Robots-Tag: noindex, follow
-
-/webinars/dpdp-for-clinics-2026/*
-  X-Robots-Tag: noindex, follow
-
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
 
 /404.html
-  X-Robots-Tag: noindex, nofollow
+  X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: no-store
 
+/api/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow, noarchive
+
 /*.md
-  X-Robots-Tag: noindex, nofollow
+  X-Robots-Tag: noindex, nofollow, noarchive
 
 /*.csv
-  X-Robots-Tag: noindex, nofollow
+  X-Robots-Tag: noindex, nofollow, noarchive
 
 /*.json
-  X-Robots-Tag: noindex, nofollow
+  X-Robots-Tag: noindex, nofollow, noarchive

@@ -37,23 +37,45 @@ const blockedPrefixes = [
 ];
 
 const indexableExact = new Set([
-  "/", "/about", "/pricing", "/free-business-review", "/portfolio",
-  "/portfolio/production-ai-readiness-sample", "/portfolio/cloud-ai-economics-sample",
-  "/services/production-ai-readiness", "/services/cloud-ai-economics",
-  "/visibility-methodology", "/resources", "/company-details", "/privacy", "/terms",
-  "/resources/global-ai-pilot-production-go-no-go-decision-record-template",
-  "/resources/global-ai-pilot-model-evaluation-regression-drift-faq",
-  "/resources/global-ai-pilot-human-override-escalation-matrix",
-  "/resources/global-enterprise-ai-agent-access-review-evidence-checklist",
-  "/resources/global-ai-pilot-rollback-readiness-checklist",
+  "/",
+  "/about",
+  "/cloud-ai-cost-governance-diagnostic",
+  "/resources",
   "/resources/cloud-ai-economics-decision-pack",
-  "/resources/ai-cost-savings-claim-boundary-worksheet",
-  "/resources/global-ai-agent-cost-overrun-owner-evidence-checklist",
-  "/resources/global-enterprise-ai-cost-anomaly-approval-runbook",
-  "/resources/kubernetes-namespace-cost-owner-dashboard-demo",
-  "/resources/uae-healthtech-cloud-trust-executive-summary",
-  "/resources/europe-saas-ai-governance-evidence-diagnostic-package",
+  "/trust-data-handling",
+  "/request-fit-review",
+  "/company-details",
+  "/privacy",
+  "/terms",
 ]);
+
+const legacyRedirects = new Map<string, string>([
+  ["/contact", "/request-fit-review/"],
+  ["/contact.html", "/request-fit-review/"],
+  ["/free-business-review", "/request-fit-review/"],
+  ["/free-business-review.html", "/request-fit-review/"],
+  ["/pricing", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/pricing.html", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/services/cloud-ai-economics", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/services/cloud-finops", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/cloud-trust-finops", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/cloud-cost", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/finops", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/ai-cloud-cost-review", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/ai-cloud-cost-efficiency", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/portfolio/cloud-ai-economics-sample", "/resources/cloud-ai-economics-decision-pack/"],
+  ["/resources/ai-cost-savings-claim-boundary-worksheet", "/resources/cloud-ai-economics-decision-pack/"],
+  ["/resources/global-ai-agent-cost-overrun-owner-evidence-checklist", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/resources/global-enterprise-ai-cost-anomaly-approval-runbook", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/resources/kubernetes-namespace-cost-owner-dashboard-demo", "/resources/cloud-ai-economics-decision-pack/"],
+]);
+
+const legacyPrefixRedirects: Array<[string, string]> = [
+  ["/services/cloud-ai-economics/", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/services/cloud-finops/", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/cloud-cost/", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/finops/", "/cloud-ai-cost-governance-diagnostic/"],
+];
 
 function canonicalizePathname(pathname: string): string | null {
   let decoded = pathname;
@@ -112,13 +134,48 @@ export const onRequest: PagesFunction = async (context) => {
   }
 
   const response = await context.next();
+  const requestUrl = new URL(context.request.url);
   const method = context.request.method.toUpperCase();
   const accept = context.request.headers.get("Accept") || "";
-  const extension = pathname && pathname.split("/").pop()?.includes(".");
-  const isDocument = method === "GET" && (!extension || accept.includes("text/html"));
-  if (!pathname || !isDocument || indexableExact.has(pathname)) return response;
+  const filename = pathname?.split("/").pop() || "";
+  const isHtmlPath = !filename.includes(".") || filename.toLowerCase().endsWith(".html");
+  const isDocument = (method === "GET" || method === "HEAD") && (isHtmlPath || accept.includes("text/html"));
+  if (!pathname || !isDocument) return response;
 
-  const headers = new Headers(response.headers);
-  headers.set("X-Robots-Tag", "noindex, follow, noarchive");
-  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  if (indexableExact.has(pathname)) {
+    const headers = new Headers(response.headers);
+    headers.set("Content-Type", "text/html; charset=utf-8");
+    if (requestUrl.hostname.endsWith(".pages.dev")) headers.set("X-Robots-Tag", "noindex, follow, noarchive");
+    else headers.delete("X-Robots-Tag");
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  }
+
+  const legacyTarget = legacyRedirects.get(pathname)
+    || legacyPrefixRedirects.find(([prefix]) => pathname.startsWith(prefix))?.[1];
+  if (legacyTarget) {
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: new URL(legacyTarget, requestUrl).toString(),
+        "Cache-Control": "public, max-age=300",
+        "X-Robots-Tag": "noindex, follow, noarchive",
+      },
+    });
+  }
+
+  if (response.status >= 400) {
+    const headers = new Headers(response.headers);
+    headers.set("Cache-Control", "no-store");
+    headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  }
+
+  return new Response("Not Found", {
+    status: 404,
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "no-store",
+      "X-Robots-Tag": "noindex, nofollow, noarchive",
+    },
+  });
 };

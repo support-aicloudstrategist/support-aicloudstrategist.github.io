@@ -9,8 +9,8 @@ PACK = ROOT / "resources" / "cloud-ai-economics-decision-pack" / "index.html"
 PACK_CSS = ROOT / "css" / "cloud-ai-economics-decision-pack.css"
 PACK_PDF = ROOT / "downloads" / "cloud-ai-economics-decision-pack.pdf"
 PACK_BUILDER = ROOT / "scripts" / "build_cloud_ai_economics_decision_pack.py"
-SERVICE = ROOT / "services" / "cloud-finops" / "index.html"
-CONTACT = ROOT / "contact.html"
+SERVICE = ROOT / "cloud-ai-cost-governance-diagnostic" / "index.html"
+CONTACT = ROOT / "request-fit-review" / "index.html"
 
 
 def text_content(source):
@@ -142,6 +142,14 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
         self.assertIn(b"/URI", pdf_bytes)
         self.assertTrue(PACK_BUILDER.exists(), "Decision Pack PDF builder must exist")
 
+    def test_builder_preserves_current_routes_and_30_day_contract(self):
+        source = PACK_BUILDER.read_text(encoding="utf-8")
+        self.assertIn("30-day customer action plan", source)
+        self.assertIn("https://aicloudstrategist.com/request-fit-review/", source)
+        self.assertIn("https://aicloudstrategist.com/cloud-ai-cost-governance-diagnostic/", source)
+        self.assertNotIn('/contact.html?service=ai-finops-cloud-economics', source)
+        self.assertNotIn('https://aicloudstrategist.com/services/cloud-finops/', source)
+
     def test_pack_uses_a_scoped_static_accessible_visual_system(self):
         self.assertIn('<body class="economics-pack-page">', self.pack)
         self.assertIn('class="pack-skip-link" href="#main-content"', self.pack)
@@ -165,42 +173,20 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
 
     def test_service_page_routes_medium_intent_buyers_to_the_pack(self):
         href = "/resources/cloud-ai-economics-decision-pack/"
-        self.assertGreaterEqual(self.service.count(f'href="{href}"'), 3)
-        self.assertIn("Inspect the Cloud &amp; AI Economics Decision Pack", self.service)
+        self.assertGreaterEqual(self.service.count(f'href="{href}"'), 1)
+        self.assertIn("Inspect the Representative Decision Pack", self.service)
         self.assertIn('data-aics-cta="decision-pack"', self.service)
-        self.assertIn('data-aics-cta="economics-review"', self.service)
+        self.assertIn('data-aics-cta="primary-fit-review"', self.service)
 
-    def test_contact_route_exposes_service_specific_economic_qualification(self):
-        self.assertIn(
-            '<option value="ai-finops-cloud-economics">Enterprise FinOps Advisory — Cloud &amp; AI Economics</option>',
-            self.contact,
-        )
-        fieldset = re.search(
-            r'<fieldset\b[^>]*id="finopsQualification"[^>]*>(.*?)</fieldset>',
-            self.contact,
-            flags=re.I | re.S,
-        )
-        if fieldset is None:
-            self.fail("Missing service-specific Enterprise FinOps qualification fieldset")
-        block = fieldset.group(1)
-        for name in [
-            "economics_trigger",
-            "platforms_in_scope",
-            "ai_workloads_material",
-            "decision_timeline",
-            "finops_capability",
-            "spend_band",
-            "access_constraints",
-        ]:
-            self.assertRegex(block, rf'name="{name}"')
-        self.assertIn("No billing files or credentials", text_content(block))
-        self.assertIn("function syncFinOpsQualification", self.contact)
-        self.assertIn("requestedService", self.contact)
-        for field in ["economics_trigger", "platforms_in_scope", "ai_workloads_material", "decision_timeline"]:
-            self.assertIn(f"payload.{field}", self.contact)
-        self.assertRegex(block, r'name="platforms_in_scope"[^>]*maxlength="400"')
-        self.assertRegex(block, r'name="decision_timeline"[^>]*maxlength="240"')
-        self.assertRegex(block, r'name="access_constraints"[^>]*maxlength="800"')
+    def test_contact_route_exposes_short_cost_fit_qualification(self):
+        self.assertIn('id="costFitReviewForm"', self.contact)
+        self.assertIn('action="/api/contact"', self.contact)
+        for name in ["name", "contact", "company", "role", "need", "message", "privacy_consent"]:
+            self.assertRegex(self.contact, rf'name="{name}"')
+        copy = text_content(self.contact)
+        self.assertIn("Do not upload billing files, credentials or confidential information", copy)
+        self.assertIn("not a free diagnostic", copy.lower())
+        self.assertIn("not a savings promise", copy.lower())
 
 
 if __name__ == "__main__":

@@ -1,26 +1,34 @@
 # AICloudStrategist
 
-> Independent production AI readiness and cloud AI economics reviews. India-first, available internationally.
+> A professional consultancy focused on one service: the Cloud & AI Cost Governance Diagnostic.
 
-## Canonical services
-- [Production AI Readiness](https://aicloudstrategist.com/services/production-ai-readiness/): evaluation, authority, security, recovery, economics and release evidence.
-- [Cloud and AI Economics](https://aicloudstrategist.com/services/cloud-ai-economics/): cost ownership, allocation, unit economics and safe action planning.
+## Primary service
+- [Cloud & AI Cost Governance Diagnostic](https://aicloudstrategist.com/cloud-ai-cost-governance-diagnostic/): a bounded review that connects cloud, Kubernetes, GPU, model, inference and data-platform costs to workloads, products, owners, evidence gaps and safe next actions.
 
-## Evidence
-- [Portfolio](https://aicloudstrategist.com/portfolio/): proof labels and representative deliverables.
-- [Production readiness sample](https://aicloudstrategist.com/portfolio/production-ai-readiness-sample/): self-tested release dossier, not customer evidence.
-- [Cloud economics sample](https://aicloudstrategist.com/portfolio/cloud-ai-economics-sample/): synthetic model with disclosed assumptions.
-- [Visibility methodology](https://aicloudstrategist.com/visibility-methodology/): fixed provider-specific measurement contract.
+## Decision enabled
+The diagnostic helps technology and finance leaders understand where included cloud and AI spend goes, which workloads and owners create it, where cost remains shared or unallocated, and which actions should be classified as act, investigate, hold or reject.
+
+## Client outputs
+- Reconciled cost and ownership baseline.
+- Allocation and ownership map.
+- Cost-driver assessment.
+- Governance gap register.
+- Prioritized decision register.
+- 30-day customer action plan.
+
+## Evidence and boundaries
+- [Representative Cloud & AI Cost Governance Decision Pack](https://aicloudstrategist.com/resources/cloud-ai-economics-decision-pack/): a representative synthetic scenario, not customer work, a benchmark, an achieved result or a savings promise.
+- [Trust & Data Handling](https://aicloudstrategist.com/trust-data-handling/): website enquiry and diagnostic-evidence boundaries.
+- No guaranteed savings, fixed ROI, autonomous shutdowns or production changes are promised.
+- Missing evidence, ownership gaps, assumptions and client approval requirements remain explicit.
 
 ## Company
-- [About](https://aicloudstrategist.com/about/): public identity, review ownership and verified profiles.
-- [Registered company details](https://aicloudstrategist.com/company-details/): legal name, CIN, registered office and verification sources.
-- [Pricing and scope](https://aicloudstrategist.com/pricing/): two focused engagement paths and guided scoping.
-- [Request a fit review](https://aicloudstrategist.com/free-business-review/): public-information intake; do not submit credentials or confidential data.
+- [About](https://aicloudstrategist.com/about/): company-first operating position and evidence standards.
+- [Registered company details](https://aicloudstrategist.com/company-details/): legal entity, CIN, office and verification route.
+- [Privacy](https://aicloudstrategist.com/privacy)
+- [Terms](https://aicloudstrategist.com/terms)
 
-## Proof policy
-Customer outcomes are published only after measured delivery and written consent. Current portfolio assets are labelled as self-tested evidence or representative samples. Search ranking and AI recommendation are measured external outcomes, never guarantees.
-
-## Current answer-source assets
-- [US specialty clinic AI receptionist shortlist matrix](https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/): no-PHI matrix for comparing AI receptionist, patient engagement, EHR/PMS and call-answering routes; source card: https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-ai-answer-source-card.json; demo dashboard: https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-vendor-shortlist-evidence-matrix/us-specialty-clinic-ai-receptionist-shortlist-owner-dashboard.svg
-- [US specialty clinic AI receptionist no-PHI scope memo](https://aicloudstrategist.com/resources/us-specialty-clinic-ai-receptionist-no-phi-scope-memo/): forwardable internal scope memo for comparing AI receptionist, healthcare voice agent, patient engagement, EHR/PMS and call-answering routes before PHI, credentials, BAA assumptions, appointment-growth, revenue, ROI or AI-accuracy claims.
+## Contact
+- [Request a Cloud & AI Cost Fit Review](https://aicloudstrategist.com/request-fit-review/): suitability and scoping only; not a free diagnostic or savings promise.
+- Do not submit billing files, credentials or confidential information through the public form.
+- Email: contact@aicloudstrategist.com

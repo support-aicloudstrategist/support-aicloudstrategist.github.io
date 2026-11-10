@@ -174,10 +174,18 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   const utmMedium = clean(payload.utm_medium);
   const utmCampaign = clean(payload.utm_campaign);
   const companyWebsite = clean(payload.company_website);
+  const privacyConsent = clean(payload.privacy_consent).toLowerCase();
 
   // Suspicious form submission: silently accept the honeypot without delivering mail.
   if (companyWebsite) {
     return new Response(JSON.stringify({ ok: true, contact_id: "accepted" }), { status: 200, headers: jsonHeaders });
+  }
+
+  if (privacyConsent !== "yes") {
+    return new Response(JSON.stringify({ ok: false, error: "Privacy consent is required for the fit review." }), {
+      status: 422,
+      headers: jsonHeaders,
+    });
   }
 
   try {
@@ -191,6 +199,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     ["website", website, 2048], ["company", company, 160], ["role", role, 160], ["service", service, 160],
     ["stage", stage, 160], ["landing_page", landingPage, 2048], ["referrer", referrer, 2048],
     ["utm_source", utmSource, 256], ["utm_medium", utmMedium, 256], ["utm_campaign", utmCampaign, 256],
+    ["privacy_consent", privacyConsent, 16],
   ].find(([, value, max]) => String(value).length > Number(max));
   if (oversized) {
     return new Response(JSON.stringify({ ok: false, error: `${oversized[0]} is too long.` }), { status: 422, headers: jsonHeaders });
@@ -214,7 +223,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   const contactId = await submissionId("contact", context.request, submittedAt);
   const recipient = clean(context.env.M365_RECIPIENT || context.env.M365_SENDER);
 
-  const textBody = `New AICloudStrategist contact enquiry\n\nPipeline stage: NEW\nLead status: UNREVIEWED\nOwner: AICloudStrategist Growth Operations\nContact ID: ${contactId}\nSubmitted at: ${submittedAt}\nName: ${name}\nContact: ${contact}\nCompany: ${company || "not provided"}\nRole: ${role || "not provided"}\nService interest: ${service || "not specified"}\nBuyer stage: ${stage || "not specified"}\nNeed: ${need}\nWebsite: ${website || "not provided"}\nMessage: ${message || "not provided"}\nLanding page: ${landingPage || "not captured"}\nReferrer: ${referrer || "direct or unavailable"}\nUTM source: ${utmSource || "not set"}\nUTM medium: ${utmMedium || "not set"}\nUTM campaign: ${utmCampaign || "not set"}\nSource: contact page\n`;
+  const textBody = `New AICloudStrategist contact enquiry\n\nPipeline stage: NEW\nLead status: UNREVIEWED\nOwner: AICloudStrategist Growth Operations\nContact ID: ${contactId}\nSubmitted at: ${submittedAt}\nName: ${name}\nContact: ${contact}\nCompany: ${company || "not provided"}\nRole: ${role || "not provided"}\nService interest: ${service || "not specified"}\nBuyer stage: ${stage || "not specified"}\nPrivacy consent: ${privacyConsent || "not provided"}\nNeed: ${need}\nWebsite: ${website || "not provided"}\nMessage: ${message || "not provided"}\nLanding page: ${landingPage || "not captured"}\nReferrer: ${referrer || "direct or unavailable"}\nUTM source: ${utmSource || "not set"}\nUTM medium: ${utmMedium || "not set"}\nUTM campaign: ${utmCampaign || "not set"}\nSource: contact page\n`;
 
   const log = context.env.CONTACT_LOG || context.env.LEAD_LOG;
   if (!log) {
@@ -228,6 +237,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     contact_id: contactId,
     submitted_at: submittedAt,
     name, contact, company, role, service, stage, need, website, message,
+    privacy_consent: privacyConsent,
     source: "contact-page",
     landing_page: landingPage,
     referrer,
