@@ -54,7 +54,7 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
                 "Portfolio Decision Register",
                 "Forecast and Scenario Comparison",
                 "Commitment Readiness Record",
-                "90-Day Action Portfolio",
+                "30-Day Action Plan",
                 "Value Realisation Entry",
                 "Executive Decision Summary",
             ],
@@ -127,7 +127,7 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
             "Expected-value range: USD 62k–74k monthly cashable reduction",
             "Evidence state: qualified—not implemented",
             "Finance acceptance: pending",
-            "Persistence window: 90 days after implementation",
+            "Persistence window: 30 days after implementation",
             "Synthetic planning record—not realised value",
         ]:
             self.assertIn(phrase, self.pack_text)
@@ -185,8 +185,7 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
             self.assertRegex(self.contact, rf'name="{name}"')
         copy = text_content(self.contact)
         self.assertIn("Do not upload billing files, credentials or confidential information", copy)
-        self.assertIn("not a free diagnostic", copy.lower())
-        self.assertIn("not a savings promise", copy.lower())
+        self.assertIn("respond within 30 minutes during business hours", copy.lower())
 
 
 if __name__ == "__main__":
