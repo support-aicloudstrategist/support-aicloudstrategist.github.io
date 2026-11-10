@@ -184,7 +184,7 @@ class CloudAiEconomicsDecisionPackTests(unittest.TestCase):
         for name in ["name", "contact", "company", "role", "need", "message", "privacy_consent"]:
             self.assertRegex(self.contact, rf'name="{name}"')
         copy = text_content(self.contact)
-        self.assertIn("Do not upload billing files, credentials or confidential information", copy)
+        self.assertIn("Do not submit billing files, credentials or confidential data", copy)
         self.assertIn("respond within 30 minutes during business hours", copy.lower())
 
 

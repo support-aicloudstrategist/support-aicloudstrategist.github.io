@@ -23,7 +23,7 @@
     <p>Privacy contact: <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>.</p>
 
     <h2>2. Information collected through the fit review</h2>
-    <p>When you request a Cloud &amp; AI Cost Fit Review, the form may collect your name, work email, company, role, company website, selected concern, optional message, privacy consent, landing page, referring path and campaign parameters associated with the submission.</p>
+    <p>When you request a callback, the form may collect your name, company, work email, phone or WhatsApp number with country code, role, primary concern, preferred contact method and time, optional context, contact consent, separate optional marketing consent, landing page, referring path and campaign parameters associated with the submission.</p>
     <p><strong>Do not submit billing exports, invoices, credentials, customer data, architecture files or other confidential information through the public form.</strong> It has no file-upload facility.</p>
 
     <h2>3. How enquiry information is used</h2>
@@ -34,14 +34,15 @@
     <p>Form submissions are processed through Cloudflare infrastructure and may be stored in a restricted Cloudflare KV namespace. A confirmed submission may trigger a Microsoft 365 notification to the configured company mailbox. These providers may process information in locations outside your country under their applicable service terms and safeguards.</p>
 
     <h2>5. Website measurement</h2>
-    <p>First-party session storage may preserve a random session identifier, first landing path, referring path and campaign parameters. The website may record allowlisted events such as page view, CTA click, form start, validation error and confirmed form success through a first-party Cloudflare collector.</p>
-    <p>Analytics events are designed to exclude names, email addresses, telephone numbers, messages and form-field values. Existing event records are configured to expire after up to 400 days.</p>
+    <p>If enabled, first-party measurement records allowlisted events such as page views, source category, approximate country, device class, CTA clicks, Decision Pack views, form activity and chatbot activity. It does not use cookies, persistent visitor identifiers or browser fingerprinting.</p>
+    <p>Analytics excludes names, email addresses, telephone numbers, form values and chat text. Raw event records expire after 30 days and are not retrospectively joined to a person who later submits the callback form.</p>
+    <p>The AICS AI Assistant is limited to approved public AICS content. Chat transcripts are not retained. Sensitive-data and prompt-injection requests are refused; human follow-up uses the separate consented callback form.</p>
 
     <h2>6. Sharing and sale</h2>
     <p>AICS does not sell personal information. Information may be shared with service providers where necessary to operate the website, process and respond to enquiries, protect the service, or comply with lawful requirements.</p>
 
     <h2>7. Retention</h2>
-    <p>Enquiry records are retained only for as long as reasonably required for response, business follow-up, record keeping, security and legal purposes. Retention for any later diagnostic evidence must be agreed separately as part of the engagement boundary.</p>
+    <p>Identified enquiry records are configured for a maximum 12-month retention period and should be reviewed sooner when the purpose ends. Consent or suppression evidence may be retained where needed to demonstrate and honour the recorded choice. Retention for any later diagnostic evidence must be agreed separately.</p>
 
     <h2>8. Diagnostic evidence is separate</h2>
     <p>Submitting a fit review does not authorize AICS to access cloud accounts, billing exports or production systems. If an engagement proceeds, confidentiality, permitted evidence, access, storage, retention, deletion and responsibility boundaries must be agreed separately.</p>

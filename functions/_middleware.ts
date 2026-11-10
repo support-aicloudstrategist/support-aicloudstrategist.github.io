@@ -49,6 +49,8 @@ const indexableExact = new Set([
   "/terms",
 ]);
 
+const utilityExact = new Set(["/lead-desk"]);
+
 const legacyRedirects = new Map<string, string>([
   ["/contact", "/request-fit-review/"],
   ["/contact.html", "/request-fit-review/"],
@@ -135,6 +137,8 @@ export const onRequest: PagesFunction = async (context) => {
 
   const response = await context.next();
   const requestUrl = new URL(context.request.url);
+  const isApiPath = Boolean(pathname && pathname.startsWith("/api/"));
+  if (isApiPath) return response;
   const method = context.request.method.toUpperCase();
   const accept = context.request.headers.get("Accept") || "";
   const filename = pathname?.split("/").pop() || "";
@@ -147,6 +151,14 @@ export const onRequest: PagesFunction = async (context) => {
     headers.set("Content-Type", "text/html; charset=utf-8");
     if (requestUrl.hostname.endsWith(".pages.dev")) headers.set("X-Robots-Tag", "noindex, follow, noarchive");
     else headers.delete("X-Robots-Tag");
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  }
+
+  if (utilityExact.has(pathname)) {
+    const headers = new Headers(response.headers);
+    headers.set("Content-Type", "text/html; charset=utf-8");
+    headers.set("Cache-Control", "no-store");
+    headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
     return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   }
 

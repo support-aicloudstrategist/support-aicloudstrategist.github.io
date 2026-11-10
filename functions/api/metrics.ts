@@ -1,4 +1,4 @@
-type MetricsEnv = { LEAD_LOG?: KVNamespace; AICS_REPORT_TOKEN?: string };
+type MetricsEnv = { LEAD_LOG?: KVNamespace; AICS_REPORT_TOKEN?: string; AICS_ANALYTICS_ENABLED?: string };
 
 const headers = {"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store"};
 const clean = (value: unknown, max = 160) => String(value ?? "").trim().slice(0, max);
@@ -10,6 +10,7 @@ function authorized(request: Request, env: MetricsEnv) {
 }
 
 export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) => {
+  if (clean(env.AICS_ANALYTICS_ENABLED).toLowerCase() !== "true") return new Response(JSON.stringify({ok:false,error:"Analytics is disabled"}), {status:503,headers});
   if (!authorized(request, env)) return new Response(JSON.stringify({ok:false,error:"Unauthorized"}), {status:401,headers});
   if (!env.LEAD_LOG) return new Response(JSON.stringify({ok:false,error:"Metrics store unavailable"}), {status:503,headers});
 

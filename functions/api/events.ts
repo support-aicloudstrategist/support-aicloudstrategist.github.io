@@ -1,9 +1,10 @@
-type EventEnv = { LEAD_LOG?: KVNamespace };
+type EventEnv = { LEAD_LOG?: KVNamespace; AICS_ANALYTICS_ENABLED?: string };
 
 const headers = {"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","Access-Control-Allow-Origin":"https://aicloudstrategist.com"};
-const allowedEvents = new Set(["page_view","cta_click","form_start","form_submit_attempt","form_validation_error","form_submit_success","form_submit_error","email_click","phone_click","whatsapp_click","pricing_view"]);
+const allowedEvents = new Set(["page_view","cta_click","decision_pack_view","form_start","form_submit_attempt","form_validation_error","form_submit_success","form_submit_error","chat_open","chat_question","chat_answer","chat_unknown","chat_refusal","chat_handoff","email_click","phone_click"]);
 const allowedProps = new Set(["cta","destination","form","offer","section","source","status","provider","channel","campaign"]);
 const clean = (value: unknown, max = 160) => String(value ?? "").trim().slice(0, max);
+const enabled = (env: EventEnv) => clean(env.AICS_ANALYTICS_ENABLED).toLowerCase() === "true";
 
 function trusted(request: Request) {
   const origin = clean(request.headers.get("Origin"));
@@ -15,11 +16,19 @@ function trusted(request: Request) {
   } catch { return false; }
 }
 
+function deviceClass(userAgent: string) {
+  const ua = userAgent.toLowerCase();
+  if (/ipad|tablet/.test(ua)) return "tablet";
+  if (/mobile|android|iphone/.test(ua)) return "mobile";
+  return "desktop";
+}
+
 export const onRequestGet: PagesFunction<EventEnv> = async ({ env }) => new Response(JSON.stringify({
-  ok:Boolean(env.LEAD_LOG), collector:env.LEAD_LOG ? "ready" : "unavailable", privacy:"non-PII allowlist"
-}), {status:env.LEAD_LOG ? 200 : 503, headers});
+  ok:enabled(env) && Boolean(env.LEAD_LOG), enabled:enabled(env), collector:env.LEAD_LOG ? "configured" : "unavailable", privacy:"anonymous allowlist; no fingerprint or persistent visitor ID"
+}), {status:200, headers});
 
 export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) => {
+  if (!enabled(env)) return new Response(null, {status:204,headers});
   if (!trusted(request)) return new Response(JSON.stringify({ok:false,error:"Untrusted event source."}), {status:403,headers});
   if (!env.LEAD_LOG) return new Response(JSON.stringify({ok:false,error:"Collector unavailable."}), {status:503,headers});
   let input: Record<string, unknown>;
@@ -29,14 +38,15 @@ export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) =
   if (!allowedEvents.has(name)) return new Response(JSON.stringify({ok:false,error:"Unsupported event."}), {status:422,headers});
   const rawPath = clean(input.path,512);
   const path = rawPath.startsWith("/") && !rawPath.includes("?") && !rawPath.includes("#") ? rawPath : "/";
-  const session = clean(input.session,64).replace(/[^a-zA-Z0-9_-]/g,"");
   const props: Record<string,string> = {};
   if (input.props && typeof input.props === "object" && !Array.isArray(input.props)) {
     for (const [key,value] of Object.entries(input.props as Record<string,unknown>)) if (allowedProps.has(key)) props[key]=clean(value,120);
   }
   const receivedAt = new Date().toISOString();
   const id = `event:${receivedAt.slice(0,10)}:${crypto.randomUUID()}`;
-  await env.LEAD_LOG.put(id, JSON.stringify({event_id:id,received_at:receivedAt,name,path,session,props,data_policy:"non_pii_allowlist_v1"}), {expirationTtl:34560000,metadata:{received_at:receivedAt,name,path}});
+  const country = clean((request.cf as Record<string, unknown> | undefined)?.country || "unknown", 2).toUpperCase();
+  const device = deviceClass(clean(request.headers.get("User-Agent"), 512));
+  await env.LEAD_LOG.put(id, JSON.stringify({event_id:id,received_at:receivedAt,name,path,props,country,device,data_policy:"anonymous_allowlist_v2"}), {expirationTtl:2592000,metadata:{received_at:receivedAt,name,path}});
   return new Response(JSON.stringify({ok:true,event_id:id}), {status:202,headers});
 };
 
