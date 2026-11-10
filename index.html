@@ -57,14 +57,19 @@
           </ul>
         </div>
 
-        <div class="hero-system" data-cost-system data-reveal aria-label="Representative map connecting cloud and AI spend to workloads, owners and decisions">
+        <div class="hero-system" data-cost-system data-cost-state="cloud" data-reveal aria-label="Representative map connecting cloud and AI spend to workloads, owners and decisions">
           <div class="system-label"><span class="live-dot" aria-hidden="true"></span>Representative cost-ownership model</div>
+          <div class="cost-filters" role="group" aria-label="Explore the representative cost path">
+            <button type="button" data-cost-filter="cloud" aria-pressed="true">Cloud</button>
+            <button type="button" data-cost-filter="kubernetes" aria-pressed="false">Kubernetes</button>
+            <button type="button" data-cost-filter="ai-gpu" aria-pressed="false">AI + GPU</button>
+          </div>
           <div class="system-stage">
             <div class="flow-column flow-source">
               <span class="flow-heading">Spend sources</span>
-              <div class="flow-node"><span>CLD</span><strong>Cloud accounts</strong><small>Billing and usage</small></div>
-              <div class="flow-node"><span>K8S</span><strong>Clusters</strong><small>Namespaces and idle</small></div>
-              <div class="flow-node"><span>AI</span><strong>Models + GPUs</strong><small>Inference and training</small></div>
+              <div class="flow-node" data-cost-source="cloud"><span>CLD</span><strong>Cloud accounts</strong><small>Billing and usage</small></div>
+              <div class="flow-node" data-cost-source="kubernetes"><span>K8S</span><strong>Clusters</strong><small>Namespaces and idle</small></div>
+              <div class="flow-node" data-cost-source="ai-gpu"><span>AI</span><strong>Models + GPUs</strong><small>Inference and training</small></div>
             </div>
             <div class="flow-rail" aria-hidden="true"><i></i><i></i><i></i></div>
             <div class="flow-column flow-map">
@@ -75,9 +80,9 @@
             <div class="flow-rail flow-rail-two" aria-hidden="true"><i></i><i></i><i></i></div>
             <div class="flow-column flow-decision">
               <span class="flow-heading">Decision state</span>
-              <div class="decision-node decision-act"><small>01</small><strong>Act</strong><span>Evidence sufficient</span></div>
-              <div class="decision-node"><small>02</small><strong>Investigate</strong><span>Owner or data gap</span></div>
-              <div class="decision-node"><small>03</small><strong>Hold</strong><span>Risk exceeds confidence</span></div>
+              <div class="decision-node decision-act" data-cost-decision="cloud"><small>01</small><strong>Act</strong><span>Evidence sufficient</span></div>
+              <div class="decision-node" data-cost-decision="kubernetes"><small>02</small><strong>Investigate</strong><span>Owner or data gap</span></div>
+              <div class="decision-node" data-cost-decision="ai-gpu"><small>03</small><strong>Hold</strong><span>Risk exceeds confidence</span></div>
             </div>
           </div>
           <p class="visual-boundary">Illustrative system. No customer data or achieved outcome is represented.</p>

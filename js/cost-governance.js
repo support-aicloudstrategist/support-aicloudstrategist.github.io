@@ -34,6 +34,25 @@
     });
   }
 
+  const costSystem = document.querySelector('[data-cost-system]');
+  if (costSystem) {
+    const filters = [...costSystem.querySelectorAll('[data-cost-filter]')];
+    const sources = [...costSystem.querySelectorAll('[data-cost-source]')];
+    const decisions = [...costSystem.querySelectorAll('[data-cost-decision]')];
+
+    const activateCostPath = (value) => {
+      costSystem.dataset.costState = value;
+      filters.forEach((filter) => filter.setAttribute('aria-pressed', String(filter.dataset.costFilter === value)));
+      sources.forEach((source) => source.classList.toggle('is-active', source.dataset.costSource === value));
+      decisions.forEach((decision) => decision.classList.toggle('is-active', decision.dataset.costDecision === value));
+    };
+
+    filters.forEach((filter) => {
+      filter.addEventListener('click', () => activateCostPath(filter.dataset.costFilter));
+    });
+    activateCostPath(costSystem.dataset.costState || 'cloud');
+  }
+
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
   if (reducedMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
