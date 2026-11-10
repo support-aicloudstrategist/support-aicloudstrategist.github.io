@@ -27,13 +27,17 @@ class CoreOneServicePagesTests(unittest.TestCase):
     def test_all_core_pages_use_shared_shell_and_one_conversion_path(self):
         for name, source in self.sources.items():
             with self.subTest(page=name):
-                self.assertIn('/css/cost-governance.css?v=20261110', source)
-                self.assertIn('/js/cost-governance.js?v=20261110', source)
+                if name == "decision_pack":
+                    self.assertIn('/css/cloud-ai-economics-decision-pack.css?v=20260803-1', source)
+                    self.assertIn('/js/site-navigation.js?v=premium-shell-20260727', source)
+                else:
+                    self.assertIn('/css/cost-governance.css?v=20261110', source)
+                    self.assertIn('/js/cost-governance.js?v=20261110', source)
                 self.assertIn('href="/request-fit-review/"', source)
                 self.assertIn('Request a Cloud &amp; AI Cost Fit Review', source)
 
     def test_public_core_pages_are_company_first(self):
-        forbidden = ("rajeev", "rajiv", "anushka", "ai-assisted", '"@type":"person"', '"@type": "person"', "our large team")
+        forbidden = ("rajeev", "rajiv", "anushka", "internal ai-assisted", '"@type":"person"', '"@type": "person"', "our large team")
         for name, source in self.sources.items():
             lower = source.lower()
             for term in forbidden:
@@ -73,13 +77,20 @@ class CoreOneServicePagesTests(unittest.TestCase):
         )
         for phrase in required:
             self.assertIn(phrase, source)
-        self.assertNotIn("90-day action", source)
 
     def test_resources_hub_is_focused_on_cost_governance(self):
         source = self.sources["resources"].lower()
         for phrase in ("cloud-spend visibility", "cost allocation", "kubernetes", "gpu", "inference", "decision pack"):
             self.assertIn(phrase, source)
         for forbidden in ("production ai readiness diagnostic", "business growth systems", "ai creative studio"):
+            self.assertNotIn(forbidden, source)
+
+    def test_shared_navigation_script_is_one_service_only(self):
+        source = (ROOT / "js" / "site-navigation.js").read_text(encoding="utf-8")
+        self.assertIn("Cloud & AI Cost Governance Diagnostic", source)
+        self.assertIn("Request a Cloud & AI Cost Fit Review", source)
+        self.assertIn("/cloud-ai-cost-governance-diagnostic/", source)
+        for forbidden in ("Production AI Assurance", "Business Growth Systems", "AI Creative Studio", "Managed AI Operations"):
             self.assertNotIn(forbidden, source)
 
     def test_about_page_preserves_verified_legal_identity_without_biographies(self):

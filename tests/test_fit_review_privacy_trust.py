@@ -33,6 +33,13 @@ class FitReviewPrivacyTrustTests(unittest.TestCase):
         ):
             self.assertIn(phrase, source)
 
+    def test_fit_review_consent_is_enforced_server_side(self):
+        source = (ROOT / "functions" / "api" / "contact.ts").read_text(encoding="utf-8")
+        self.assertIn("privacyConsent", source)
+        self.assertIn('if (privacyConsent !== "yes")', source)
+        self.assertNotIn('service === "Cloud & AI Cost Governance Diagnostic" && privacyConsent', source)
+        self.assertIn("Privacy consent is required", source)
+
     def test_form_javascript_uses_confirmed_success_only(self):
         source = FORM_JS.read_text(encoding="utf-8")
         self.assertIn("fetch('/api/contact'", source)
