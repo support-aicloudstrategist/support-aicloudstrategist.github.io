@@ -46,7 +46,7 @@ OUTPUTS = [
     "Portfolio Decision Register",
     "Forecast and Scenario Comparison",
     "Commitment Readiness Record",
-    "90-Day Action Portfolio",
+    "30-Day Action Plan",
     "Value Realisation Entry",
     "Executive Decision Summary",
 ]
@@ -170,7 +170,7 @@ def heading(number: int, title: str, styles):
 def build_pdf():
     PDF_PATH.parent.mkdir(parents=True, exist_ok=True)
     styles = pdf_styles()
-    doc = PackDocTemplate(str(PDF_PATH), pagesize=A4, pageCompression=0, invariant=1, title="Cloud & AI Economics Decision Pack", author="AICloudStrategist", subject="Representative synthetic Enterprise FinOps decision evidence", creator="AICloudStrategist deterministic pack builder")
+    doc = PackDocTemplate(str(PDF_PATH), pagesize=A4, pageCompression=0, invariant=1, title="Cloud & AI Economics Decision Pack", author="AICloudStrategist", subject="Representative synthetic cloud and AI cost governance decision evidence", creator="AICloudStrategist deterministic pack builder")
     story = [
         Spacer(1, 18 * mm), p("REPRESENTATIVE EVIDENCE · SYNTHETIC SCENARIO", styles["label"]),
         p("Cloud & AI Economics Decision Pack", styles["title"]),
@@ -187,6 +187,19 @@ def build_pdf():
         p("It proves that AICS can structure a decision evidence trail. It does not prove a customer outcome, certification, platform partnership, realised saving or production capability beyond the explicit method shown.", styles["body"]),
         Spacer(1, 6 * mm),
         p("aicloudstrategist.com/cloud-ai-cost-governance-diagnostic/", styles["small"]),
+        PageBreak(),
+    ]
+
+    story += [
+        p("EXECUTIVE SUMMARY · READ THIS FIRST", styles["label"]),
+        p("Decision now", styles["h2"]),
+        p("Resolve ownership and outcome-unit evidence. Do not approve a broad commitment or claim value yet.", styles["body"]),
+        panel_table([
+            ("Why", "Material ownership and unit-evidence gaps remain"),
+            ("Owners required", "Technology, finance, architecture, product and procurement"),
+            ("Next gate", "Approve the source and constraint register"),
+            ("Action horizon", "Client-owned 30-day action plan"),
+        ], styles),
         PageBreak(),
     ]
 
@@ -212,13 +225,13 @@ def build_pdf():
     story += [panel_table([("Demand confidence", "Is material usage sufficiently stable?"), ("Coverage", "Which usage should remain flexible?"), ("Utilisation", "Can the organisation operate the commitment?"), ("Downside", "What happens if demand or architecture changes?"), ("Authority", "Who can approve the commercial exposure?")], styles), Spacer(1, 5 * mm), p("Representative disposition: HOLD", styles["h2"]), p("Approval is withheld until demand confidence, portability and authorised-owner evidence are complete. AICS does not broker, resell or automatically recommend provider commitments.", styles["body"]), PageBreak()]
 
     story += heading(8, OUTPUTS[7], styles)
-    story += [p("30-day customer action plan: establish allocation policy, resolve owner gaps and qualify the accepted AI outcome unit before later gates.", styles["body"]), panel_table([("D+15 · Allocation policy", "Owner: Technology Finance · dependency: product/shared mapping · accept/reject 72% coverage"), ("D+30 · AI outcome unit", "Owner: AI Product Leader · dependency: task-success telemetry · accept/revise/hold USD 0.083 unit"), ("D+45 · Kubernetes allocation", "Owner: Cloud Architect · dependency: namespace, idle and SLO evidence"), ("D+60 · Commitment readiness", "Owner: CFO Delegate + Procurement · dependency: demand confidence and terms"), ("D+75 · Legacy retirement", "Owner: Engineering Director · dependency: business confirmation and rollback"), ("D+90 · Value verification", "Owner: Technology Finance · dependency: baseline, counterfactual and evidence owner")], styles), Spacer(1, 5 * mm), p("Each action has an explicit owner, dependency and decision date. Technical approval, procurement authority and rollback conditions remain visible.", styles["body"]), PageBreak()]
+    story += [p("30-day customer action plan: resolve the minimum evidence, ownership and approval gaps needed for safe decisions.", styles["body"]), panel_table([("D+5 · Source register", "Owner: Technology Finance · dependency: billing and usage reconciliation"), ("D+10 · Allocation policy", "Owner: Technology Finance · dependency: product/shared mapping"), ("D+15 · Kubernetes allocation", "Owner: Cloud Architect · dependency: namespace, idle and SLO evidence"), ("D+20 · AI outcome unit", "Owner: AI Product Leader · dependency: task-success telemetry"), ("D+30 · Decision register", "Owner: CTO/CIO Delegate · dependency: accepted owners, constraints and evidence states")], styles), Spacer(1, 5 * mm), p("Each action has an explicit owner, dependency and decision date. Technical approval, procurement authority and rollback conditions remain visible.", styles["body"]), PageBreak()]
 
     story += heading(9, OUTPUTS[8], styles)
     proof_data = [[p(x, styles["center"]) for x in ["Observed", "Qualified", "Approved", "Implemented", "Measured", "Finance-accepted", "Sustained"]]]
     proof = Table(proof_data, colWidths=[22.4 * mm] * 7)
     proof.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), PANEL_2), ("BOX", (0, 0), (-1, -1), 0.5, LINE), ("INNERGRID", (0, 0), (-1, -1), 0.35, LINE), ("TOPPADDING", (0, 0), (-1, -1), 4 * mm), ("BOTTOMPADDING", (0, 0), (-1, -1), 4 * mm)]))
-    story += [proof, Spacer(1, 5 * mm), p("Synthetic planning record—not realised value", styles["h2"]), panel_table([("Action", "Retire the representative legacy analytics workload"), ("Baseline", "USD 86k monthly · synthetic 90-day observed run-rate"), ("Counterfactual", "USD 84k–90k monthly if no action occurs"), ("Expected-value range", "USD 62k–74k monthly cashable reduction · before USD 18k–26k one-time cost"), ("Evidence state", "Qualified—not implemented · CUR-SYN-01 + SYN-WL-17"), ("Finance acceptance", "Pending"), ("Persistence window", "90 days after implementation")], styles), Spacer(1, 4 * mm), p("Value classes remain separate", styles["h2"]), panel_table([("Cashable reduction", "Separate from avoided future cost"), ("Cost avoidance", "Requires an agreed counterfactual"), ("Negotiated rate improvement", "Separate from demand or architecture effects"), ("Capacity released", "Engineering or infrastructure capacity, not automatic cash"), ("Reliability or risk improvement", "Accepted through the relevant owner"), ("Revenue or throughput effect", "Requires business evidence; no automatic attribution"), ("Unit-margin improvement", "Requires accepted unit and finance classification")], styles), Spacer(1, 3 * mm), p("No amount advances to finance-accepted until implementation, measurement and persistence evidence exist.", styles["small"]), PageBreak()]
+    story += [proof, Spacer(1, 5 * mm), p("Synthetic planning record—not realised value", styles["h2"]), panel_table([("Action", "Retire the representative legacy analytics workload"), ("Baseline", "USD 86k monthly · synthetic 30-day observed run-rate"), ("Counterfactual", "USD 84k–90k monthly if no action occurs"), ("Expected-value range", "USD 62k–74k monthly cashable reduction · before USD 18k–26k one-time cost"), ("Evidence state", "Qualified—not implemented · CUR-SYN-01 + SYN-WL-17"), ("Finance acceptance", "Pending"), ("Persistence window", "30 days after implementation")], styles), Spacer(1, 4 * mm), p("Value classes remain separate", styles["h2"]), panel_table([("Cashable reduction", "Separate from avoided future cost"), ("Cost avoidance", "Requires an agreed counterfactual"), ("Negotiated rate improvement", "Separate from demand or architecture effects"), ("Capacity released", "Engineering or infrastructure capacity, not automatic cash"), ("Reliability or risk improvement", "Accepted through the relevant owner"), ("Revenue or throughput effect", "Requires business evidence; no automatic attribution"), ("Unit-margin improvement", "Requires accepted unit and finance classification")], styles), Spacer(1, 3 * mm), p("No amount advances to finance-accepted until implementation, measurement and persistence evidence exist.", styles["small"]), PageBreak()]
 
     story += heading(10, OUTPUTS[9], styles)
     story += [panel_table([("Decision now", "Approve evidence resolution and bounded technical qualification"), ("Why", "Material ownership and unit-evidence gaps remain"), ("Owners", "CTO/CIO, finance, FinOps, architecture, product and procurement"), ("Next gate", "Decision workshop with approved source and constraint register")], styles), Spacer(1, 7 * mm), p("Commercial next step", styles["h2"]), p("Inspect this method before sharing sensitive data. If a material decision exists, request a fit and scope conversation. No billing files, credentials or commitment to proceed are required for the first conversation.", styles["body"]), Spacer(1, 7 * mm), link_table([("Cloud & AI Cost Governance Diagnostic", SERVICE_URL), ("Request a review", CONTACT_URL), ("Public Decision Pack", PACK_URL)], styles), Spacer(1, 7 * mm), p("AICloudStrategist · accountable cloud and AI economics supported by decision-ready evidence.", styles["body"])]

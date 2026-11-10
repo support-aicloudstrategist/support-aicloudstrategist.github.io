@@ -31,7 +31,7 @@ class CoreOneServicePagesTests(unittest.TestCase):
                     self.assertIn('/css/cloud-ai-economics-decision-pack.css?v=20260803-1', source)
                     self.assertIn('/js/site-navigation.js?v=premium-shell-20260727', source)
                 else:
-                    self.assertIn('/css/cost-governance.css?v=20261110', source)
+                    self.assertRegex(source, r'/css/cost-governance\.css\?v=20261110(?:-1)?')
                     self.assertIn('/js/cost-governance.js?v=20261110', source)
                 self.assertIn('href="/request-fit-review/"', source)
                 self.assertIn('Request a Cloud &amp; AI Cost Fit Review', source)

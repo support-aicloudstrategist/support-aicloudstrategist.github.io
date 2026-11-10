@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HOME = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 
-EXPECTED_H1 = "Know where your cloud and AI money goes—and what you can safely do about it."
+EXPECTED_H1 = "Know cloud and AI spend. Decide what to do next."
 EXPECTED_CTA = "Request a Cloud & AI Cost Fit Review"
 EXPECTED_ROUTES = {
     "https://aicloudstrategist.com/",
@@ -90,7 +90,7 @@ class OneServiceHomepageFoundationTests(unittest.TestCase):
         self.assertNotIn("/portfolio/", nav_source)
 
     def test_foundation_assets_are_route_local_and_progressive(self):
-        self.assertIn('/css/cost-governance.css?v=20261110', self.source)
+        self.assertIn('/css/cost-governance.css?v=20261110-1', self.source)
         self.assertIn('/js/cost-governance.js?v=20261110', self.source)
         self.assertIn('prefers-reduced-motion', (ROOT / "css" / "cost-governance.css").read_text(encoding="utf-8"))
         self.assertIn('<noscript>', self.lower)
