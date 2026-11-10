@@ -37,7 +37,8 @@ const blockedPrefixes = [
 ];
 
 const indexableExact = new Set([
-  "/", "/about", "/pricing", "/free-business-review", "/portfolio",
+  "/", "/about", "/cloud-ai-cost-governance-diagnostic", "/request-fit-review", "/trust-data-handling",
+  "/pricing", "/free-business-review", "/portfolio",
   "/portfolio/production-ai-readiness-sample", "/portfolio/cloud-ai-economics-sample",
   "/services/production-ai-readiness", "/services/cloud-ai-economics",
   "/visibility-methodology", "/resources", "/company-details", "/privacy", "/terms",
