@@ -118,6 +118,42 @@ function isBlockedPath(pathname: string): boolean {
   });
 }
 
+/** Geo display currency from Cloudflare edge country. India → INR fee band; all others → USD. */
+function geoCurrency(request: Request): { country: string; currency: "INR" | "USD" } {
+  const country = (request.headers.get("CF-IPCountry") || "").toUpperCase();
+  const currency = country === "IN" ? "INR" : "USD";
+  return { country: country || "XX", currency };
+}
+
+function withGeoHeaders(headers: Headers, geo: { country: string; currency: "INR" | "USD" }): Headers {
+  const next = new Headers(headers);
+  next.set("Set-Cookie", `aics_currency=${geo.currency}; Path=/; Max-Age=86400; SameSite=Lax`);
+  next.set("X-AICS-Currency", geo.currency);
+  next.set("X-AICS-Country", geo.country);
+  next.append("Vary", "CF-IPCountry");
+  return next;
+}
+
+function injectGeoScript(response: Response, geo: { country: string; currency: "INR" | "USD" }, headers: Headers): Response {
+  const payload = JSON.stringify(geo).replace(/</g, "\\u003c");
+  const transformed = new HTMLRewriter()
+    .on("head", {
+      element(element) {
+        element.append(
+          `<script>window.__AICS_GEO__=${payload};</script>`,
+          { html: true },
+        );
+      },
+    })
+    .transform(response);
+
+  return new Response(transformed.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export const onRequest: PagesFunction = async (context) => {
   const pathname = canonicalizePathname(new URL(context.request.url).pathname);
   const blocked = pathname === null || isBlockedPath(pathname);
@@ -142,12 +178,18 @@ export const onRequest: PagesFunction = async (context) => {
   const isDocument = (method === "GET" || method === "HEAD") && (isHtmlPath || accept.includes("text/html"));
   if (!pathname || !isDocument) return response;
 
+  const geo = geoCurrency(context.request);
+
   if (indexableExact.has(pathname)) {
-    const headers = new Headers(response.headers);
+    const headers = withGeoHeaders(response.headers, geo);
     headers.set("Content-Type", "text/html; charset=utf-8");
     if (requestUrl.hostname.endsWith(".pages.dev")) headers.set("X-Robots-Tag", "noindex, follow, noarchive");
     else headers.delete("X-Robots-Tag");
-    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+    return injectGeoScript(
+      new Response(response.body, { status: response.status, statusText: response.statusText, headers }),
+      geo,
+      headers,
+    );
   }
 
   const legacyTarget = legacyRedirects.get(pathname)
