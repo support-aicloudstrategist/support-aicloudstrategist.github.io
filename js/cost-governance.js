@@ -59,6 +59,17 @@
     return;
   }
 
+  // Stagger siblings inside shared parents for a soft cascade, not a random scatter.
+  const delayGroups = new Map();
+  revealItems.forEach((item) => {
+    const parent = item.parentElement || document.body;
+    const index = delayGroups.get(parent) || 0;
+    delayGroups.set(parent, index + 1);
+    if (!item.style.getPropertyValue('--reveal-delay')) {
+      item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
+    }
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
