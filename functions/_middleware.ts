@@ -41,6 +41,17 @@ const indexableExact = new Set([
   "/about",
   "/pricing",
   "/cloud-ai-cost-governance-diagnostic",
+  "/cloud-cost-optimization",
+  "/finops-consulting",
+  "/reduce-cloud-spend",
+  "/aws-cost-optimization",
+  "/azure-cost-optimization",
+  "/gcp-cost-optimization",
+  "/kubernetes-cost-optimization",
+  "/gpu-ai-cost-optimization",
+  "/cloud-cost-audit",
+  "/cloud-cost-governance",
+  "/hi/cloud-cost-optimization",
   "/resources",
   "/resources/cloud-ai-economics-decision-pack",
   "/trust-data-handling",
@@ -59,22 +70,43 @@ const legacyRedirects = new Map<string, string>([
   ["/services/cloud-ai-economics", "/cloud-ai-cost-governance-diagnostic/"],
   ["/services/cloud-finops", "/cloud-ai-cost-governance-diagnostic/"],
   ["/cloud-trust-finops", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/cloud-cost", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/finops", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/ai-cloud-cost-review", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/ai-cloud-cost-efficiency", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/cloud-cost", "/cloud-cost-optimization/"],
+  ["/finops", "/finops-consulting/"],
+  ["/ai-cloud-cost-review", "/gpu-ai-cost-optimization/"],
+  ["/ai-cloud-cost-efficiency", "/gpu-ai-cost-optimization/"],
   ["/portfolio/cloud-ai-economics-sample", "/resources/cloud-ai-economics-decision-pack/"],
   ["/resources/ai-cost-savings-claim-boundary-worksheet", "/resources/cloud-ai-economics-decision-pack/"],
-  ["/resources/global-ai-agent-cost-overrun-owner-evidence-checklist", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/resources/global-enterprise-ai-cost-anomaly-approval-runbook", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/resources/kubernetes-namespace-cost-owner-dashboard-demo", "/resources/cloud-ai-economics-decision-pack/"],
+  ["/resources/global-ai-agent-cost-overrun-owner-evidence-checklist", "/gpu-ai-cost-optimization/"],
+  ["/resources/global-enterprise-ai-cost-anomaly-approval-runbook", "/cloud-cost-audit/"],
+  ["/resources/kubernetes-namespace-cost-owner-dashboard-demo", "/kubernetes-cost-optimization/"],
+  ["/cloud-waste-reduction", "/reduce-cloud-spend/"],
+  ["/cloud-bill-shock", "/reduce-cloud-spend/"],
+  ["/cloud-overspending", "/reduce-cloud-spend/"],
+  ["/cloud-rightsizing", "/cloud-cost-optimization/"],
+  ["/cloud-tco", "/cloud-cost-optimization/"],
+  ["/multi-cloud-cost-management", "/cloud-cost-optimization/"],
+  ["/cloud-financial-management", "/finops-consulting/"],
+  ["/cloud-showback", "/finops-consulting/"],
+  ["/cloud-chargeback", "/finops-consulting/"],
+  ["/cloud-tagging-strategy", "/cloud-cost-governance/"],
+  ["/cloud-cost-allocation", "/cloud-cost-governance/"],
+  ["/cloud-spend-analysis", "/cloud-cost-audit/"],
+  ["/cloud-anomaly-detection", "/cloud-cost-audit/"],
+  ["/cloud-cost-monitoring", "/cloud-cost-audit/"],
+  ["/reduce-aws-bill", "/aws-cost-optimization/"],
+  ["/cut-azure-spend", "/azure-cost-optimization/"],
+  ["/gcp-cost-savings", "/gcp-cost-optimization/"],
+  ["/container-cost-optimization", "/kubernetes-cost-optimization/"],
+  ["/serverless-cost-optimization", "/cloud-cost-optimization/"],
+  ["/ai-infrastructure-cost", "/gpu-ai-cost-optimization/"],
+  ["/llm-cost-optimization", "/gpu-ai-cost-optimization/"],
 ]);
 
 const legacyPrefixRedirects: Array<[string, string]> = [
   ["/services/cloud-ai-economics/", "/cloud-ai-cost-governance-diagnostic/"],
   ["/services/cloud-finops/", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/cloud-cost/", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/finops/", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/cloud-cost/", "/cloud-cost-optimization/"],
+  ["/finops/", "/finops-consulting/"],
 ];
 
 function canonicalizePathname(pathname: string): string | null {
@@ -118,15 +150,21 @@ function isBlockedPath(pathname: string): boolean {
   });
 }
 
-/** Geo display currency from Cloudflare edge country. India → INR fee band; all others → USD. */
+/** Geo display currency from Cloudflare edge country. India → INR fee band; all others → USD.
+ * Optional `?geo=US` / `?geo=IN` (or any ISO country) overrides CF-IPCountry for QA; not for SEO. */
 function geoCurrency(request: Request): { country: string; currency: "INR" | "USD" } {
-  const country = (request.headers.get("CF-IPCountry") || "").toUpperCase();
+  const url = new URL(request.url);
+  const geoParam = (url.searchParams.get("geo") || "").toUpperCase();
+  const cfCountry = (request.headers.get("CF-IPCountry") || "").toUpperCase();
+  const country = (geoParam || cfCountry || "XX").replace(/[^A-Z]/g, "").slice(0, 2) || "XX";
   const currency = country === "IN" ? "INR" : "USD";
-  return { country: country || "XX", currency };
+  return { country, currency };
 }
 
 function withGeoHeaders(headers: Headers, geo: { country: string; currency: "INR" | "USD" }): Headers {
   const next = new Headers(headers);
+  // Personalized currency must not be shared across countries at the edge.
+  next.set("Cache-Control", "private, no-store");
   next.set("Set-Cookie", `aics_currency=${geo.currency}; Path=/; Max-Age=86400; SameSite=Lax`);
   next.set("X-AICS-Currency", geo.currency);
   next.set("X-AICS-Country", geo.country);
