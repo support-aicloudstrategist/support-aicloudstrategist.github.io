@@ -13,9 +13,7 @@
 /free-business-review /request-fit-review/ 301
 /free-business-review/ /request-fit-review/ 301
 /free-business-review.html /request-fit-review/ 301
-/pricing /cloud-ai-cost-governance-diagnostic/ 301
-/pricing/ /cloud-ai-cost-governance-diagnostic/ 301
-/pricing.html /cloud-ai-cost-governance-diagnostic/ 301
+/pricing.html /pricing/ 301
 
 # Cloud, FinOps and AI-economics service consolidation.
 /services/cloud-ai-economics /cloud-ai-cost-governance-diagnostic/ 301

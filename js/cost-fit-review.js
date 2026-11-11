@@ -52,7 +52,7 @@
       }
     } finally {
       submit.disabled = false;
-      submit.textContent = 'Request a Cloud & AI Cost Fit Review';
+      submit.textContent = 'Book a free fit review';
     }
   });
 })();

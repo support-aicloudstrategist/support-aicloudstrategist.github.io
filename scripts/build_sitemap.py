@@ -294,7 +294,7 @@ def validate_path(path: str) -> None:
 def priority_for(path: str) -> str:
     if path == "/":
         return "1.0"
-    if path in {"/free-business-review/", "/contact", "/pricing"}:
+    if path in {"/request-fit-review/", "/pricing/", "/cloud-ai-cost-governance-diagnostic/", "/free-business-review/", "/contact"}:
         return "0.9"
     if path.startswith("/services/") or path in {"/healthcare-growthos/", "/growth-control-os/"}:
         return "0.8"

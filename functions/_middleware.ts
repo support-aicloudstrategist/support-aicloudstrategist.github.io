@@ -39,6 +39,7 @@ const blockedPrefixes = [
 const indexableExact = new Set([
   "/",
   "/about",
+  "/pricing",
   "/cloud-ai-cost-governance-diagnostic",
   "/resources",
   "/resources/cloud-ai-economics-decision-pack",
@@ -54,8 +55,7 @@ const legacyRedirects = new Map<string, string>([
   ["/contact.html", "/request-fit-review/"],
   ["/free-business-review", "/request-fit-review/"],
   ["/free-business-review.html", "/request-fit-review/"],
-  ["/pricing", "/cloud-ai-cost-governance-diagnostic/"],
-  ["/pricing.html", "/cloud-ai-cost-governance-diagnostic/"],
+  ["/pricing.html", "/pricing/"],
   ["/services/cloud-ai-economics", "/cloud-ai-cost-governance-diagnostic/"],
   ["/services/cloud-finops", "/cloud-ai-cost-governance-diagnostic/"],
   ["/cloud-trust-finops", "/cloud-ai-cost-governance-diagnostic/"],
