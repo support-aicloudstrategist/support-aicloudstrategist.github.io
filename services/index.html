@@ -23,14 +23,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-hero-tones">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-services-cards">
   <script defer src="/js/aics-analytics-shim.js?v=20261112-audit"></script>
   <script defer src="/js/cost-governance.js?v=20261112-fix"></script>
   <script defer src="/js/aics-chatbot.js?v=20261112-fix"></script>
   <script defer src="/js/geo-currency.js?v=20261112-fix"></script>
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}</style></noscript>
 </head>
-<body>
+<body class="services-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header" data-site-header>
     <div class="shell nav-shell">
@@ -95,28 +95,43 @@
       </div>
     </section>
 
-    <section class="section-shell section-dark" aria-labelledby="what-we-do-title">
+    <section class="section-shell section-dark services-pillars-section" aria-labelledby="what-we-do-title">
       <div class="shell">
-        <div class="section-intro" data-reveal>
+        <div class="section-intro services-section-intro" data-reveal>
           <p class="eyebrow">What we do</p>
           <h2 id="what-we-do-title">Governance. Optimization. FinOps—together.</h2>
         </div>
-        <div class="deliverable-grid">
-          <article data-reveal><span>01</span><h3>Cost governance</h3><p>One shared cost truth: owners, allocation gaps and approval boundaries finance and engineering can both use.</p></article>
-          <article data-reveal><span>02</span><h3>Optimization</h3><p>Idle waste, rightsizing and commitments—only where evidence and risk allow a safe move.</p></article>
-          <article data-reveal><span>03</span><h3>FinOps operating view</h3><p>Billing signals mapped to products, workloads and accountable owners for the next 30 days.</p></article>
+        <div class="services-pillars deliverable-grid">
+          <article data-reveal>
+            <span>01</span>
+            <svg class="services-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5.2a14.8 14.8 0 1 1-11.7 5.9"/><circle cx="20" cy="20" r="2.2"/><path d="M12 14h10l6.5 6-6.5 6H12l5.8-6z"/></g></svg>
+            <h3>Cost governance</h3>
+            <p>One shared cost truth: owners, allocation gaps and approval boundaries finance and engineering can both use.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <svg class="services-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 26h24"/><path d="M12 26V16l4-6h8l4 6v10"/><path d="M16 26v-6h8v6"/></g></svg>
+            <h3>Optimization</h3>
+            <p>Idle waste, rightsizing and commitments—only where evidence and risk allow a safe move.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <svg class="services-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="26" height="22" rx="2.5"/><path d="M12 15h16M12 20h10M12 25h13"/></g></svg>
+            <h3>FinOps operating view</h3>
+            <p>Billing signals mapped to products, workloads and accountable owners for the next 30 days.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-shell" aria-labelledby="platforms-title">
+    <section class="section-shell services-platforms-section" aria-labelledby="platforms-title">
       <div class="shell">
-        <div class="section-intro" data-reveal>
+        <div class="section-intro services-section-intro" data-reveal>
           <p class="eyebrow">Platforms</p>
           <h2 id="platforms-title">Where the diagnostic applies.</h2>
           <p>Included when material and inside the agreed scope.</p>
         </div>
-        <div class="signal-grid">
+        <div class="signal-grid services-platforms">
           <article class="signal-card" data-reveal><span>AWS</span><h3>Amazon Web Services</h3><p>Accounts, services, commitments and shared-platform cost pools.</p></article>
           <article class="signal-card" data-reveal><span>Azure</span><h3>Microsoft Azure</h3><p>Subscriptions, workloads and allocation evidence across estates.</p></article>
           <article class="signal-card" data-reveal><span>GCP</span><h3>Google Cloud</h3><p>Projects, billing exports and material service drivers.</p></article>
@@ -126,13 +141,13 @@
       </div>
     </section>
 
-    <section class="section-shell section-blue" aria-labelledby="process-title">
+    <section class="section-shell section-blue services-process-section" aria-labelledby="process-title">
       <div class="shell">
-        <div class="section-intro" data-reveal>
+        <div class="section-intro services-section-intro" data-reveal>
           <p class="eyebrow">Process</p>
           <h2 id="process-title">From audit to implementation readiness.</h2>
         </div>
-        <ol class="process-grid">
+        <ol class="process-grid services-process">
           <li data-reveal><span>01</span><h3>Fit and scope</h3><p>Confirm the decision, estate boundary and whether the diagnostic is appropriate.</p></li>
           <li data-reveal><span>02</span><h3>Evidence intake</h3><p>Agree permitted exports, access, retention and exclusions before sensitive data moves.</p></li>
           <li data-reveal><span>03</span><h3>Baseline and ownership</h3><p>Reconcile spend, map drivers and make assigned, shared and unallocated cost explicit.</p></li>
@@ -141,17 +156,29 @@
       </div>
     </section>
 
-    <section class="section-shell" aria-labelledby="outcomes-title">
-      <div class="shell split-layout">
-        <div class="section-intro sticky-copy" data-reveal>
+    <section class="section-shell services-outcomes-section" aria-labelledby="outcomes-title">
+      <div class="shell">
+        <div class="section-intro services-section-intro" data-reveal>
           <p class="eyebrow">Outcomes</p>
           <h2 id="outcomes-title">What you should expect—and what we will not promise.</h2>
         </div>
-        <div class="boundary-list">
-          <article data-reveal><span>Timeline</span><p>Typical readout in <strong>10–15 business days</strong> after complete evidence intake for a single agreed estate.</p></article>
-          <article data-reveal><span>Savings potential</span><p>Many estates uncover material idle waste and ownership gaps. Actual savings depend on your approvals, implementation and operating conditions—<strong>no guaranteed percentage or ROI</strong>.</p></article>
-          <article data-reveal><span>What you leave with</span><p>A reconciled baseline, ownership map, risk-aware decision register and a client-owned 30-day action sequence.</p></article>
-          <article data-reveal><span>Commercial boundary</span><p>Fixed fee after free fit review. No contingent savings share. No production changes executed as part of the diagnostic.</p></article>
+        <div class="services-outcomes">
+          <article class="proof-card" data-reveal>
+            <p class="pricing-kicker">Timeline</p>
+            <p>Typical readout in <strong>10–15 business days</strong> after complete evidence intake for a single agreed estate.</p>
+          </article>
+          <article class="proof-card" data-reveal>
+            <p class="pricing-kicker">Savings potential</p>
+            <p>Many estates uncover material idle waste and ownership gaps. Actual savings depend on your approvals, implementation and operating conditions—<strong>no guaranteed percentage or ROI</strong>.</p>
+          </article>
+          <article class="proof-card" data-reveal>
+            <p class="pricing-kicker">What you leave with</p>
+            <p>A reconciled baseline, ownership map, risk-aware decision register and a client-owned 30-day action sequence.</p>
+          </article>
+          <article class="proof-card" data-reveal>
+            <p class="pricing-kicker">Commercial boundary</p>
+            <p>Fixed fee after free fit review. No contingent savings share. No production changes executed as part of the diagnostic.</p>
+          </article>
         </div>
       </div>
     </section>
