@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-IN">
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,7 @@
   <meta name="description" content="Fixed-fee cloud and AI cost governance: cost visibility, optimization, and FinOps decisions across AWS, Azure, GCP, Kubernetes and AI workloads.">
   <link rel="canonical" href="https://aicloudstrategist.com/services/">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#06111f">
+  <meta name="theme-color" content="#b9d4db">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AICloudStrategist">
   <meta property="og:title" content="Services | Cloud &amp; AI Cost Governance Diagnostic">
@@ -17,8 +17,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/brand/aics-touch-icon.png">
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-lean">
-  <script defer src="/js/cost-governance.js?v=20261112-lean"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-proof">
+  <script defer src="/js/aics-analytics-shim.js?v=20261112-proof"></script>
+  <script defer src="/js/cost-governance.js?v=20261112-chat"></script>
+  <script defer src="/js/aics-chatbot.js?v=20261112-proof"></script>
   <script defer src="/js/geo-currency.js?v=20261111-3"></script>
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}</style></noscript>
 </head>
@@ -26,11 +31,29 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header" data-site-header>
     <div class="shell nav-shell">
-      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">AI</span><span>AI<span class="brand-accent">Cloud</span>Strategist</span></a>
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><svg class="brand-mark-geo" viewBox="0 0 40 40" focusable="false"><g class="brand-mark-motif" fill="none"><path class="brand-mark-orbit" d="M20 4.6a15.4 15.4 0 1 1-12.2 6.1"/><path class="brand-mark-blade" d="M8.8 12.2h12.4L29.8 20 21.2 27.8H8.8l7.4-7.8z"/><path class="brand-mark-cut" d="M31.4 11.2 24.6 20l6.8 8.8"/><circle class="brand-mark-node" cx="20" cy="20" r="2.35"/></g></svg></span><span>AI<span class="brand-accent">Cloud</span>Strategist</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="sr-only">Open navigation</span><span></span><span></span></button>
       <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+                <div class="nav-item">
+          <button type="button" class="nav-parent" aria-expanded="false" aria-controls="why-menu" data-nav-menu>Why AI Cloud Strategist</button>
+          <div id="why-menu" class="nav-mega" role="group" aria-label="Why AI Cloud Strategist">
+            <div class="nav-mega-col">
+              <p class="nav-mega-label">Audience</p>
+              <a href="/why/finance/">For finance<small>Defend spend with ownership</small></a>
+              <a href="/why/engineering/">For engineering<small>Act only where evidence holds</small></a>
+              <a href="/why/operations/">For operations<small>Run the next 30 days with owners</small></a>
+            </div>
+            <div class="nav-mega-col">
+              <p class="nav-mega-label">Outcomes</p>
+              <a href="/why/minimize-waste/">Minimize waste<small>Cut idle before capacity</small></a>
+              <a href="/why/reduce-risk/">Reduce risk<small>Hold when confidence is thin</small></a>
+              <a href="/why/">Overview<small>Why this diagnostic</small></a>
+            </div>
+          </div>
+        </div>
         <a href="/services/" aria-current="page">Services</a>
         <a href="/pricing/">Pricing</a>
+        <a href="/resources/">Resources</a>
         <a href="/about/">About</a>
         <a class="nav-cta" href="/request-fit-review/">Book a free fit review</a>
       </nav>
@@ -41,23 +64,31 @@
     <section class="subpage-hero section-shell">
       <div class="shell subpage-hero-grid">
         <div data-reveal>
-          <p class="eyebrow">One bounded service</p>
-          <h1>Cloud and AI cost governance diagnostic</h1>
-          <p class="hero-lead">A fixed-fee engagement that connects spend to owners and leaves you with safe next actions—not a savings-share promise.</p>
+          <p class="eyebrow">Services</p>
+          <h1>Connect every cloud dollar to an owner—then act.</h1>
+          <p class="hero-lead">One fixed-fee diagnostic for governance, optimization and FinOps decisions across AWS, Azure, GCP, Kubernetes and AI estates.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="/request-fit-review/">Book a free fit review</a>
-            <a class="button button-secondary" href="/pricing/">See pricing</a>
           </div>
         </div>
-        <aside class="scope-card" data-reveal>
-          <span>Typical engagement</span>
-          <strong>One agreed estate and decision question</strong>
-          <ul>
-            <li>10–15 business days after evidence intake</li>
-            <li><span data-usd="2500" data-usd-max="3000" data-inr="100000" data-inr-max="150000" data-format="from">From USD 2,500</span> after free fit review</li>
-            <li>No contingent savings fee</li>
-          </ul>
-        </aside>
+        <div class="hero-system page-viz" data-page-viz data-viz-state="aws" data-reveal aria-label="Platform coverage model">
+          <div class="system-label"><span class="live-dot" aria-hidden="true"></span>Platforms · live loop</div>
+          <div class="viz-filters" role="group" aria-label="Platforms">
+            <button type="button" data-viz-filter="aws" aria-pressed="true">AWS</button>
+            <button type="button" data-viz-filter="azure" aria-pressed="false">Azure</button>
+            <button type="button" data-viz-filter="gcp" aria-pressed="false">GCP</button>
+            <button type="button" data-viz-filter="k8s" aria-pressed="false">K8s</button>
+            <button type="button" data-viz-filter="ai" aria-pressed="false">AI</button>
+          </div>
+          <div class="viz-board viz-board-platforms">
+            <div class="viz-node tone-cloud is-active" data-viz-node="aws"><span>AWS</span><strong>Accounts &amp; services</strong><small>Commitments and shared pools</small></div>
+            <div class="viz-node" data-viz-node="azure"><span>AZR</span><strong>Subscriptions</strong><small>Workload allocation evidence</small></div>
+            <div class="viz-node tone-mint" data-viz-node="gcp"><span>GCP</span><strong>Projects</strong><small>Billing export drivers</small></div>
+            <div class="viz-node" data-viz-node="k8s"><span>K8S</span><strong>Clusters</strong><small>Namespaces and idle</small></div>
+            <div class="viz-node tone-amber" data-viz-node="ai"><span>AI</span><strong>GPU &amp; models</strong><small>Training and inference</small></div>
+            <div class="viz-hub"><span class="viz-orbit" aria-hidden="true"><i></i><i></i><i></i></span><strong>One diagnostic</strong><small>Governance · optimization · FinOps</small></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -65,12 +96,12 @@
       <div class="shell">
         <div class="section-intro" data-reveal>
           <p class="eyebrow">What we do</p>
-          <h2 id="what-we-do-title">Three jobs. One diagnostic.</h2>
+          <h2 id="what-we-do-title">Governance. Optimization. FinOps—together.</h2>
         </div>
         <div class="deliverable-grid">
-          <article data-reveal><span>01</span><h3>Cost governance</h3><p>Make ownership, allocation gaps and approval boundaries explicit so finance and technology share one cost truth.</p></article>
-          <article data-reveal><span>02</span><h3>Optimization</h3><p>Prioritize idle waste, rightsizing and commitment decisions only where evidence and risk allow safe action.</p></article>
-          <article data-reveal><span>03</span><h3>FinOps</h3><p>Connect billing signals to products, workloads and accountable owners for the next operating period.</p></article>
+          <article data-reveal><span>01</span><h3>Cost governance</h3><p>One shared cost truth: owners, allocation gaps and approval boundaries finance and engineering can both use.</p></article>
+          <article data-reveal><span>02</span><h3>Optimization</h3><p>Idle waste, rightsizing and commitments—only where evidence and risk allow a safe move.</p></article>
+          <article data-reveal><span>03</span><h3>FinOps operating view</h3><p>Billing signals mapped to products, workloads and accountable owners for the next 30 days.</p></article>
         </div>
       </div>
     </section>
@@ -134,8 +165,8 @@
 
   <footer class="site-footer">
     <div class="shell footer-grid">
-      <div><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">AI</span><span>AI<span class="brand-accent">Cloud</span>Strategist</span></a><p>Cloud and AI cost governance for accountable technology decisions.</p><small>AICLOUDSTRATEGIST PRIVATE LIMITED · CIN U62020DC2026PTC470945</small></div>
-      <div><strong>Explore</strong><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/about/">About</a><a href="/request-fit-review/">Book a free fit review</a></div>
+      <div><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><svg class="brand-mark-geo" viewBox="0 0 40 40" focusable="false"><g class="brand-mark-motif" fill="none"><path class="brand-mark-orbit" d="M20 4.6a15.4 15.4 0 1 1-12.2 6.1"/><path class="brand-mark-blade" d="M8.8 12.2h12.4L29.8 20 21.2 27.8H8.8l7.4-7.8z"/><path class="brand-mark-cut" d="M31.4 11.2 24.6 20l6.8 8.8"/><circle class="brand-mark-node" cx="20" cy="20" r="2.35"/></g></svg></span><span>AI<span class="brand-accent">Cloud</span>Strategist</span></a><p>Cloud and AI cost governance for accountable technology decisions.</p><small>AICLOUDSTRATEGIST PRIVATE LIMITED · CIN U62020DC2026PTC470945</small></div>
+      <div><strong>Explore</strong><a href="/resources/">Resources</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/about/">About</a><a href="/request-fit-review/">Book a free fit review</a></div>
       <div><strong>Policies</strong><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
       <div><strong>Contact</strong><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><a href="tel:+918065480898">+91 80654 80898</a></div>
     </div>

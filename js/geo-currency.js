@@ -3,10 +3,13 @@
 
   function readQueryCurrency() {
     try {
-      const value = new URLSearchParams(window.location.search).get("currency");
-      if (!value) return null;
-      const normalized = value.toUpperCase();
-      if (normalized === "INR" || normalized === "USD") return normalized;
+      const params = new URLSearchParams(window.location.search);
+      const currency = (params.get("currency") || "").toUpperCase();
+      if (currency === "INR" || currency === "USD") return currency;
+      // Mirror middleware QA override for local/static preview without CF-IPCountry.
+      const geo = (params.get("geo") || "").toUpperCase().replace(/[^A-Z]/g, "").slice(0, 2);
+      if (geo === "IN") return "INR";
+      if (geo && geo !== "XX") return "USD";
     } catch (_) {
       /* ignore */
     }
@@ -115,10 +118,10 @@
       node.hidden = false;
       if (geo.currency === "INR") {
         node.textContent =
-          "Shown in INR for visitors in India (CF-IPCountry=IN). Fit review is free. Final proposals confirm the fixed fee in writing.";
+          "Shown in INR for visitors in India. These are India fee bands (not a live FX conversion). Fit review is free. Final proposals confirm the fixed fee in writing.";
       } else {
         node.textContent =
-          "Shown in USD for international visitors. India visitors see INR 1,00,000–1,50,000. Fit review is free. Final proposals confirm the fixed fee in writing.";
+          "Shown in USD for international visitors. India visitors see separate INR fee bands (typically ₹1,00,000–1,50,000 for a single estate). Fit review is free. Final proposals confirm the fixed fee in writing.";
       }
       void RATE_NOTE;
     });
