@@ -13,18 +13,18 @@
   <meta property="og:title" content="How to read a cloud bill">
   <meta property="og:description" content="Reconcile the total, group cost pools, then ask who owns each material line before you cut.">
   <meta property="og:url" content="https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/">
-  <meta property="og:image" content="https://aicloudstrategist.com/assets/brand/aics-cost-governance-og.png?v=20261112-logo">
+  <meta property="og:image" content="https://aicloudstrategist.com/assets/brand/aics-cost-governance-og.jpg?v=20261112-audit">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://aicloudstrategist.com/assets/brand/aics-cost-governance-og.png?v=20261112-logo">
+  <meta name="twitter:image" content="https://aicloudstrategist.com/assets/brand/aics-cost-governance-og.jpg?v=20261112-audit">
   <link rel="icon" href="/favicon.ico?v=20261112-logo" sizes="any">
   <link rel="icon" href="/favicon.svg?v=20261112-logo" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/brand/aics-touch-icon.png?v=20261112-logo">
+  <link rel="apple-touch-icon" href="/assets/brand/aics-touch-icon-v2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>
   <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-fix">
-  <script defer src="/js/aics-analytics-shim.js?v=20261112-fix"></script>
+  <script defer src="/js/aics-analytics-shim.js?v=20261112-audit"></script>
   <script defer src="/js/cost-governance.js?v=20261112-fix"></script>
   <script defer src="/js/aics-chatbot.js?v=20261112-fix"></script>
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}</style></noscript>
@@ -69,7 +69,7 @@
         <h1 data-reveal>How to read a cloud bill</h1>
         <p class="hero-lead" data-reveal>Start with the total, then force every material cost pool to answer: who owns this, and what is safe next?</p>
         <div class="article-body" data-reveal>
-          <p>Console charts are useful for browsing. A decision-ready read starts from the detailed billing export (CUR, Cost Management export, BigQuery billing export) for one agreed period.</p>
+          <p>Console charts are useful for browsing. A decision-ready read starts from the detailed billing export (CUR, Cost Management export, BigQuery billing export) for one agreed period—usually the last closed month, or the window that triggered the debate.</p>
           <h2>A four-pass method</h2>
           <ul>
             <li><strong>Reconcile the total.</strong> Match invoice or console total to the export. Note credits, taxes, marketplace and support lines so debates do not restart from rounding.</li>
@@ -77,10 +77,23 @@
             <li><strong>Ask ownership.</strong> For each material pool: assigned, shared or unallocated? Missing tags are a finding—not a reason to invent owners.</li>
             <li><strong>Classify next moves.</strong> Idle and reversible waste → act. Ambiguous shared cost → investigate. Thin evidence or commitment lock-in → hold.</li>
           </ul>
+          <h2>Concrete example</h2>
+          <p>Suppose the invoice rose 18% month over month. Pass one shows marketplace and support are flat—the jump is in compute and data transfer. Pass two shows two clusters and one GPU pool dominate. Pass three finds Cluster A tagged to Product Ops, Cluster B shared across three products with no split rule, and the GPU pool unallocated. Pass four then says: idle nodes in Cluster A → act; Cluster B split rule → investigate; GPU pool without utilization evidence → hold until owners and metrics exist.</p>
           <h2>What not to do first</h2>
-          <p>Do not jump to Savings Plans or instance families before ownership and utilization evidence are clear. Rate optimization on unexplained spend creates a second bill nobody can defend.</p>
-          <p>If that pass is blocked inside your org, a bounded diagnostic exists for exactly that: reconcile, map owners, then leave a 30-day register you control.</p>
+          <p>Do not jump to Savings Plans or instance families before ownership and utilization evidence are clear. Rate optimization on unexplained spend creates a second bill nobody can defend. Likewise, do not “average” shared platform cost across products without writing the rule—averages feel fair until an outage forces a real owner conversation.</p>
+          <h2>FAQ</h2>
+          <p><strong>Do I need root credentials to start?</strong> No. For a first pass, agreed exports for one period are enough. Access expands only if you proceed and the evidence plan requires it.</p>
+          <p><strong>What if tags are incomplete?</strong> Treat gaps as unallocated. Inventing owners from naming conventions hides the problem the diagnostic is meant to surface.</p>
+          <p><strong>How long should this take?</strong> A focused internal pass can take a day. A cross-team pass that produces an act/investigate/hold register usually needs a bounded engagement once material spend spans clouds, Kubernetes and GPU estates.</p>
+          <h2>Concrete example</h2>
+          <p>A mid-market SaaS firm saw a 22% month-over-month jump on Azure. The invoice total matched. Cost Explorer showed “Virtual Machines” and “Storage” as the drivers—but product tags covered only 61% of VM spend. Shared AKS nodes were unallocated. After mapping owners, three idle non-prod pools became act items; two production right-sizing candidates became investigate; GPU burst for a stalled pilot became hold until product owned the capacity. The bill did not change overnight—the decision register did.</p>
+          <p>If that pass is blocked inside your org, a fixed-fee diagnostic exists for exactly that: reconcile, map owners, then leave a 30-day register you control.</p>
           <p><a class="text-link" href="/request-fit-review/">Book a free fit review <span aria-hidden="true">→</span></a></p>
+          <h2>Related reading</h2>
+          <ul>
+            <li><a href="/resources/what-is-cloud-cost-ownership/">What is cloud cost ownership?</a></li>
+            <li><a href="/resources/why-fixed-fee-diagnostics-beat-savings-share/">Why fixed-fee diagnostics beat savings-share</a></li>
+          </ul>
         </div>
       </div>
     </article>

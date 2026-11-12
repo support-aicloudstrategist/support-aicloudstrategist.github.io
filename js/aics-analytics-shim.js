@@ -1,6 +1,6 @@
 (function(){
   var endpoint='/api/events';
-  var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign']);
+  var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign','service']);
   var aliases={
     'cta whatsapp click':'whatsapp_click',
     'cta phone click':'phone_click',
