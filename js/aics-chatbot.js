@@ -37,13 +37,13 @@
     for (const [pattern, answer] of entries) {
       if (new RegExp(pattern, "i").test(hay)) return `${answer} Book a free fit review at /request-fit-review/.`;
     }
-    return "I can help with AICloudStrategist's diagnostic scope, pricing, process, platforms, and the free fit review. Ask about any of those, or go to /request-fit-review/.";
+    return "Ask about scope, pricing, process, platforms, or the free fit review—or go to /request-fit-review/.";
   };
 
   const root = document.createElement("div");
   root.className = "aics-chat";
   root.innerHTML = `
-    <button type="button" class="aics-chat-launcher" aria-expanded="false" aria-controls="aics-chat-panel" aria-label="Open chat — plug me">
+    <button type="button" class="aics-chat-launcher" aria-expanded="false" aria-controls="aics-chat-panel" aria-label="Open chat">
       <span class="aics-chat-bot" aria-hidden="true">
         <svg class="aics-chat-bot-svg" viewBox="0 0 100 108" width="72" height="78" focusable="false">
           <defs>
@@ -100,7 +100,7 @@
           </g>
         </svg>
       </span>
-      <span class="aics-chat-plug">plug me</span>
+      <span class="aics-chat-plug">Chat</span>
     </button>
     <section id="aics-chat-panel" class="aics-chat-panel" hidden>
       <header class="aics-chat-head">
@@ -117,7 +117,7 @@
             </svg>
           </span>
           <div>
-            <p class="aics-chat-kicker">Free site assistant</p>
+            <p class="aics-chat-kicker">AICloudStrategist Assistant</p>
             <strong>Ask about the diagnostic</strong>
           </div>
         </div>
@@ -152,7 +152,7 @@
 
   addBubble(
     "assistant",
-    "Hi — I can help with AICloudStrategist's fixed-fee Cloud & AI Cost Governance Diagnostic: scope, pricing, process, platforms, and the free fit review."
+    "Hi. Ask about our fixed-fee Cloud & AI Cost Governance Diagnostic—scope, pricing, process, the platforms we cover, or the free fit review."
   );
 
   const track = (name, props) => {
