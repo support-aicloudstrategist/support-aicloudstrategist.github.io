@@ -19,13 +19,15 @@
   <link rel="apple-touch-icon" href="/assets/brand/aics-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-proof">
+  <link rel="preload" href="/css/cost-governance.css?v=20261112-mobile" as="style">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-mobile">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aicloudstrategist.com/#organization","name":"AICloudStrategist","alternateName":"AI Cloud Strategist","legalName":"AICLOUDSTRATEGIST PRIVATE LIMITED","identifier":{"@type":"PropertyValue","propertyID":"Corporate Identity Number (India)","value":"U62020DC2026PTC470945"},"foundingDate":"2026-04-29","url":"https://aicloudstrategist.com/","logo":"https://aicloudstrategist.com/assets/brand/aics-logo.svg","description":"A professional consultancy focused on cloud and AI cost governance diagnostics.","email":"contact@aicloudstrategist.com","areaServed":["India","Worldwide"]},{"@type":"WebSite","@id":"https://aicloudstrategist.com/#website","name":"AICloudStrategist","url":"https://aicloudstrategist.com/","publisher":{"@id":"https://aicloudstrategist.com/#organization"}},{"@type":"Service","@id":"https://aicloudstrategist.com/cloud-ai-cost-governance-diagnostic/#service","name":"Cloud & AI Cost Governance Diagnostic","serviceType":"Cloud and AI cost governance diagnostic","provider":{"@id":"https://aicloudstrategist.com/#organization"},"url":"https://aicloudstrategist.com/cloud-ai-cost-governance-diagnostic/","description":"A bounded diagnostic that connects cloud and AI spend to workloads, products and accountable owners and prioritizes evidence-backed actions for the next 30 days.","areaServed":["India","Worldwide"],"offers":{"@type":"Offer","priceCurrency":"USD","price":"2500","description":"Fixed fee from USD 2,500 after scope; typical single-estate range USD 2,500–3,000. India visitors see INR 1,00,000–1,50,000."}}]}</script>
-  <script defer src="/js/aics-analytics-shim.js?v=20261112-proof"></script>
-  <script defer src="/js/cost-governance.js?v=20261112-chat"></script>
-  <script defer src="/js/aics-chatbot.js?v=20261112-proof"></script>
-  <script defer src="/js/geo-currency.js?v=20261112-geo"></script>
+  <script defer src="/js/aics-analytics-shim.js?v=20261112-mobile"></script>
+  <script defer src="/js/cost-governance.js?v=20261112-mobile"></script>
+  <script defer src="/js/aics-chatbot.js?v=20261112-mobile"></script>
+  <script defer src="/js/geo-currency.js?v=20261112-mobile"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I reduce cloud spend safely?","acceptedAnswer":{"@type":"Answer","text":"Reconcile spend to owners first, then prioritize idle waste and low-risk rightsizing. Start with a free fit review."}},{"@type":"Question","name":"What is your FinOps consulting offer?","acceptedAnswer":{"@type":"Answer","text":"A fixed-fee Cloud and AI Cost Governance Diagnostic—not a savings-share engagement."}},{"@type":"Question","name":"Do you cover AWS, Azure, GCP, Kubernetes and GPU cost optimization?","acceptedAnswer":{"@type":"Answer","text":"Yes when in scope. Use the cost-topic hub pages, then book a fit review."}}]}</script>
 <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}.intro-scene{display:none!important}.brand[data-header-brand]{opacity:1!important}</style></noscript>
 </head>
@@ -130,6 +132,18 @@
             </div>
           </div>
         </div>
+
+        <aside class="hero-mobile-strip" data-reveal aria-hidden="true">
+          <p class="hero-mobile-strip-kicker">Ownership path</p>
+          <div class="hero-mobile-strip-track">
+            <span class="hero-mobile-chip chip-spend">Spend</span>
+            <span class="hero-mobile-join" aria-hidden="true"></span>
+            <span class="hero-mobile-chip chip-owners">Owners</span>
+            <span class="hero-mobile-join" aria-hidden="true"></span>
+            <span class="hero-mobile-chip chip-next">Next move</span>
+          </div>
+          <p class="hero-mobile-strip-note">Act · Investigate · Hold</p>
+        </aside>
       </div>
     </section>
 

@@ -3,6 +3,7 @@
   const toggle = document.querySelector('.nav-toggle');
   const navigation = document.querySelector('#primary-navigation');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isNarrow = window.matchMedia('(max-width: 820px)').matches;
   const INTRO_KEY = 'aicsIntroPlayed';
 
   let introFinished = false;
@@ -28,7 +29,8 @@
     let alreadyPlayed = false;
     try { alreadyPlayed = sessionStorage.getItem(INTRO_KEY) === '1'; } catch (_) { alreadyPlayed = false; }
 
-    if (alreadyPlayed || reducedMotion) {
+    // Skip cinematic intro on phones — it delays first paint and interaction.
+    if (alreadyPlayed || reducedMotion || isNarrow) {
       scene.hidden = true;
       headerBrand.classList.add('is-intro-ready');
       return;
@@ -210,7 +212,7 @@
     };
 
     const startLoop = () => {
-      if (reducedMotion || states.length < 2) return;
+      if (reducedMotion || isNarrow || states.length < 2) return;
       window.clearInterval(timerId);
       timerId = window.setInterval(() => {
         activeIndex = (activeIndex + 1) % states.length;
@@ -218,19 +220,22 @@
       }, opts.intervalMs || 2600);
     };
 
-    filters.forEach((filter) => {
-      filter.addEventListener('click', () => {
-        activate(filter.getAttribute(filterAttr));
-        startLoop();
+    if (!isNarrow) {
+      filters.forEach((filter) => {
+        filter.addEventListener('click', () => {
+          activate(filter.getAttribute(filterAttr));
+          startLoop();
+        });
       });
-    });
+    }
 
     activate(states[activeIndex] || states[0]);
     startLoop();
   };
 
+  // Desktop-only: home ownership model is replaced on phones by .hero-mobile-strip.
   const costSystem = document.querySelector('[data-cost-system]');
-  if (costSystem) {
+  if (costSystem && !isNarrow) {
     bindVizLoop(costSystem, {
       filterAttr: 'data-cost-filter',
       nodeAttr: 'data-cost-source',
@@ -250,17 +255,26 @@
     observer.observe(costSystem, { attributes: true, attributeFilter: ['data-cost-state'] });
   }
 
-  document.querySelectorAll('[data-page-viz]').forEach((viz) => {
-    bindVizLoop(viz, {
-      filterAttr: 'data-viz-filter',
-      nodeAttr: 'data-viz-node',
-      stateAttr: 'data-viz-state',
-      intervalMs: 2400
+  if (!isNarrow) {
+    document.querySelectorAll('[data-page-viz]').forEach((viz) => {
+      bindVizLoop(viz, {
+        filterAttr: 'data-viz-filter',
+        nodeAttr: 'data-viz-node',
+        stateAttr: 'data-viz-state',
+        intervalMs: 2400
+      });
     });
-  });
+  } else {
+    document.querySelectorAll('[data-page-viz]').forEach((viz) => {
+      viz.querySelectorAll('[aria-pressed]').forEach((btn) => {
+        btn.setAttribute('tabindex', '-1');
+        btn.setAttribute('aria-disabled', 'true');
+      });
+    });
+  }
 
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
-  if (reducedMotion || !('IntersectionObserver' in window)) {
+  if (reducedMotion || isNarrow || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
     return;
   }

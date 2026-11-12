@@ -9,9 +9,9 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-logo4">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-mobile">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://aicloudstrategist.com/privacy#page","name":"Privacy Policy","url":"https://aicloudstrategist.com/privacy","isPartOf":{"@id":"https://aicloudstrategist.com/#website"},"about":{"@id":"https://aicloudstrategist.com/#organization"}}</script>
-  <script defer src="/js/cost-governance.js?v=20261112-loop"></script>
+  <script defer src="/js/cost-governance.js?v=20261112-mobile"></script>
 <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}</style></noscript>
 </head>
 <body>

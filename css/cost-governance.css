@@ -631,6 +631,9 @@ p { margin-top: 0; }
 .hero-facts dt { color: var(--cyan); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .hero-facts dd { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
 
+/* Phone-only hero substitute — desktop keeps .hero-system */
+.hero-mobile-strip { display: none; }
+
 /* Stylized governance mock — light-mode glow language */
 .hero-system {
   position: relative;
@@ -1793,6 +1796,115 @@ p { margin-top: 0; }
   .process-grid { grid-template-columns: repeat(3, 1fr); row-gap: 1rem; }
   .footer-grid { grid-template-columns: 1.4fr repeat(2, 1fr); }
   .footer-grid > div:last-child { grid-column: 2; }
+}
+
+/* Mobile hero: replace animated ownership box with a compact decorative strip */
+@media (max-width: 820px) {
+  .hero-system { display: none !important; }
+  .hero-mobile-strip {
+    display: grid;
+    gap: 0.7rem;
+    width: min(100%, 28rem);
+    margin-top: 0.35rem;
+    padding: 0.95rem 1rem 1.05rem;
+    border: 1.5px solid rgba(8, 140, 155, 0.32);
+    border-radius: 1rem;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(14, 163, 180, 0.16), transparent 45%),
+      radial-gradient(circle at 0% 100%, rgba(216, 140, 40, 0.12), transparent 42%),
+      linear-gradient(155deg, #ffffff 0%, #eef8fb 55%, #fff8ef 100%);
+    box-shadow:
+      0 0 0 1px rgba(14, 163, 180, 0.08),
+      0 14px 28px rgba(18, 55, 75, 0.1);
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-mobile-strip-kicker {
+    margin: 0;
+    color: #2a5f6c;
+    font-size: 0.66rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .hero-mobile-strip-track {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: nowrap;
+  }
+  .hero-mobile-chip {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    padding: 0.55rem 0.4rem;
+    border-radius: 0.55rem;
+    border: 1.5px solid rgba(8, 140, 155, 0.24);
+    background: #fff;
+    color: #1d4f5c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .hero-mobile-chip.chip-spend {
+    border-color: rgba(14, 163, 180, 0.35);
+    box-shadow: inset 3px 0 0 var(--cyan);
+  }
+  .hero-mobile-chip.chip-owners {
+    border-color: rgba(37, 110, 190, 0.35);
+    box-shadow: inset 3px 0 0 var(--blue);
+  }
+  .hero-mobile-chip.chip-next {
+    border-color: rgba(216, 140, 40, 0.4);
+    box-shadow: inset 3px 0 0 var(--amber);
+  }
+  .hero-mobile-join {
+    flex: 0 0 0.85rem;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(14, 163, 180, 0.55), rgba(216, 140, 40, 0.55));
+  }
+  .hero-mobile-strip-note {
+    margin: 0;
+    color: #3f5d6a;
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+  }
+
+  /* Cut continuous paint/composite cost on small screens; desktop motion unchanged */
+  body::before,
+  body::after,
+  .hero::before,
+  .hero::after,
+  .hero-glow,
+  .hero-aurora,
+  .hero-system,
+  .hero-system::before,
+  .live-dot,
+  .map-orbit .orbit-core,
+  .flow-rail i::after,
+  .viz-orbit,
+  .viz-meter span i {
+    animation: none !important;
+  }
+  .hero-glow,
+  .hero-aurora,
+  .hero::after {
+    display: none;
+  }
+  .premium-card,
+  .signal-card,
+  .deliverable-grid article,
+  .pricing-card,
+  .proof-card,
+  .process-grid li,
+  .why-rail a,
+  .audience-strip article,
+  .outcome-strip article {
+    will-change: auto;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
 }
 
 @media (max-width: 900px) {

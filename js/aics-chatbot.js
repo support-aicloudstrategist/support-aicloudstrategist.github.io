@@ -4,6 +4,10 @@
 
   const SESSION_KEY = "aicsChatSession";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isNarrow = window.matchMedia("(max-width: 820px)").matches;
+
+  const mountChatbot = () => {
+  if (document.querySelector(".aics-chat")) return;
 
   const getSessionId = () => {
     try {
@@ -226,4 +230,14 @@
       log.scrollTop = log.scrollHeight;
     }
   });
+  };
+
+  // On phones, defer widget mount so hero/CTA paint and interact first.
+  if (isNarrow && "requestIdleCallback" in window) {
+    window.requestIdleCallback(() => mountChatbot(), { timeout: 2800 });
+  } else if (isNarrow) {
+    window.setTimeout(mountChatbot, 1400);
+  } else {
+    mountChatbot();
+  }
 })();
