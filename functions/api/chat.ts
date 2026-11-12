@@ -231,6 +231,7 @@ async function runWorkersAi(env: ChatEnv, message: string, history: Array<{ role
     { role: "user", content: message.slice(0, 1200) },
   ];
 
+  // Prefer Llama 3.1 8B; fall back to smaller free-tier models if unavailable.
   const models = [
     "@cf/meta/llama-3.1-8b-instruct",
     "@cf/meta/llama-3.2-3b-instruct",
@@ -244,7 +245,7 @@ async function runWorkersAi(env: ChatEnv, message: string, history: Array<{ role
         result?: string;
       };
       const text = clean(result?.response || result?.result);
-      if (text) return text.slice(0, 1800);
+      if (text) return { text: text.slice(0, 1800), model };
     } catch {
       // Try next free-tier compatible model.
     }
@@ -299,10 +300,12 @@ export const onRequestPost: PagesFunction<ChatEnv> = async (context) => {
 
   let mode = "knowledge-base";
   let reply = "";
+  let modelUsed = "";
   const aiReply = await runWorkersAi(context.env, message, history);
-  if (aiReply) {
+  if (aiReply?.text) {
     mode = "workers-ai";
-    reply = aiReply;
+    reply = aiReply.text;
+    modelUsed = aiReply.model || "";
   } else {
     reply = knowledgeReply(message).reply;
   }
@@ -316,6 +319,7 @@ export const onRequestPost: PagesFunction<ChatEnv> = async (context) => {
     message,
     reply,
     mode,
+    model: modelUsed || null,
     source: "site-chatbot",
     pipeline_stage: "chat-lead",
     lead_status: "unreviewed",
@@ -348,6 +352,7 @@ export const onRequestPost: PagesFunction<ChatEnv> = async (context) => {
       session_id: sessionId,
       reply,
       mode,
+      model: modelUsed || null,
       notification_sent: notify.sent,
       notification_mode: notify.mode,
     }),

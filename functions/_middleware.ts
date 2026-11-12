@@ -243,6 +243,9 @@ export const onRequest: PagesFunction = async (context) => {
   const response = await context.next();
   const requestUrl = new URL(context.request.url);
   const method = context.request.method.toUpperCase();
+  // API/functions responses must pass through unchanged (pathnames like /api/chat
+  // look "extensionless" and would otherwise be treated as HTML documents).
+  if (pathname === "/api" || pathname.startsWith("/api/")) return response;
   const accept = context.request.headers.get("Accept") || "";
   const filename = pathname?.split("/").pop() || "";
   const isHtmlPath = !filename.includes(".") || filename.toLowerCase().endsWith(".html");
