@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-services-cards">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-brand-mark">
   <script defer src="/js/aics-analytics-shim.js?v=20261112-audit"></script>
   <script defer src="/js/cost-governance.js?v=20261112-fix"></script>
   <script defer src="/js/aics-chatbot.js?v=20261112-fix"></script>
@@ -64,9 +64,9 @@
   </header>
 
   <main id="main-content">
-    <section class="subpage-hero section-shell hero-tone-structured">
-      <div class="shell subpage-hero-grid">
-        <div data-reveal>
+    <section class="subpage-hero section-shell hero-tone-structured services-hero">
+      <div class="shell subpage-hero-grid services-hero-grid">
+        <div class="services-hero-copy" data-reveal>
           <p class="eyebrow">Services</p>
           <h1>Connect every cloud dollar to an owner—then act.</h1>
           <p class="hero-lead">One fixed-fee diagnostic for governance, optimization and FinOps decisions across AWS, Azure, GCP, Kubernetes and AI estates.</p>
@@ -74,23 +74,18 @@
             <a class="button button-primary" href="/request-fit-review/">Book a free fit review</a>
           </div>
         </div>
-        <div class="hero-system page-viz" data-page-viz data-viz-state="aws" data-reveal aria-label="Platform coverage model">
-          <div class="system-label"><span class="live-dot" aria-hidden="true"></span>Platforms · live loop</div>
-          <div class="viz-filters" role="group" aria-label="Platforms">
-            <button type="button" data-viz-filter="aws" aria-pressed="true">AWS</button>
-            <button type="button" data-viz-filter="azure" aria-pressed="false">Azure</button>
-            <button type="button" data-viz-filter="gcp" aria-pressed="false">GCP</button>
-            <button type="button" data-viz-filter="k8s" aria-pressed="false">K8s</button>
-            <button type="button" data-viz-filter="ai" aria-pressed="false">AI</button>
-          </div>
-          <div class="viz-board viz-board-platforms">
-            <div class="viz-node tone-cloud is-active" data-viz-node="aws"><span>AWS</span><strong>Accounts &amp; services</strong><small>Commitments and shared pools</small></div>
-            <div class="viz-node" data-viz-node="azure"><span>AZR</span><strong>Subscriptions</strong><small>Workload allocation evidence</small></div>
-            <div class="viz-node tone-mint" data-viz-node="gcp"><span>GCP</span><strong>Projects</strong><small>Billing export drivers</small></div>
-            <div class="viz-node" data-viz-node="k8s"><span>K8S</span><strong>Clusters</strong><small>Namespaces and idle</small></div>
-            <div class="viz-node tone-amber" data-viz-node="ai"><span>AI</span><strong>GPU &amp; models</strong><small>Training and inference</small></div>
-            <div class="viz-hub"><span class="viz-orbit" aria-hidden="true"><i></i><i></i><i></i></span><strong>One diagnostic</strong><small>Governance · optimization · FinOps</small></div>
-          </div>
+        <div class="services-hero-visual" data-reveal>
+          <svg class="services-hero-mark" viewBox="0 0 240 240" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="120" cy="120" r="98" stroke-width="1.1" opacity="0.35"/>
+              <circle cx="120" cy="120" r="72" stroke-width="1.1" opacity="0.45"/>
+              <path d="M120 28a92 92 0 1 1-73 36" stroke-width="1.6" opacity="0.55"/>
+              <path d="M58 78h78L178 120l-42 42H58l44-42z" stroke-width="2" opacity="0.7"/>
+              <path d="M186 72 146 120l40 48" stroke-width="1.8" opacity="0.55"/>
+              <circle cx="120" cy="120" r="7" fill="currentColor" stroke="none" opacity="0.45"/>
+            </g>
+          </svg>
+          <p class="services-hero-caption"><strong>One diagnostic.</strong> An ownership map and a 30-day act / investigate / hold register—before anyone cuts blindly.</p>
         </div>
       </div>
     </section>
