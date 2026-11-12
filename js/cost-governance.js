@@ -278,6 +278,27 @@
     });
   });
 
+  const valueGauge = document.querySelector('#value .value-gauge');
+  const playValueGauge = () => {
+    if (!valueGauge || valueGauge.classList.contains('is-animated')) return;
+    valueGauge.classList.add('is-animated');
+  };
+
+  if (valueGauge) {
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      playValueGauge();
+    } else {
+      const gaugeObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          playValueGauge();
+          gaugeObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
+      gaugeObserver.observe(valueGauge);
+    }
+  }
+
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
   if (reducedMotion || isNarrow || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'));

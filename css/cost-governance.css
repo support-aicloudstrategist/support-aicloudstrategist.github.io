@@ -2309,6 +2309,13 @@ body.has-intro.is-intro-docking .site-footer {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.ownership-value-note {
+  margin: 0;
+  padding: 0.75rem 1.1rem 0.15rem;
+  color: var(--dim);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
 .ownership-sample table {
   width: 100%;
   border-collapse: collapse;
@@ -2328,9 +2335,249 @@ body.has-intro.is-intro-docking .site-footer {
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.55);
 }
-.ownership-sample td:nth-child(2) {
+.ownership-sample td:nth-child(2),
+.ownership-sample td:nth-child(5) {
   font-variant-numeric: tabular-nums;
   color: var(--muted);
+}
+.ownership-sample td:nth-child(5) {
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+/* Homepage illustrative value / savings panel */
+.value-panel {
+  border: 1.5px solid rgba(8, 140, 155, 0.28);
+  border-radius: 1.15rem;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(10, 143, 140, 0.16), transparent 46%),
+    radial-gradient(circle at 0% 100%, rgba(31, 133, 92, 0.1), transparent 44%),
+    linear-gradient(165deg, #ffffff 0%, #eef9fb 52%, #f7fcfa 100%);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.value-panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 0.95rem 1.15rem;
+  border-bottom: 1px solid rgba(8, 140, 155, 0.14);
+}
+.value-panel-head strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.value-panel-head span {
+  color: var(--brand-mark);
+  font: 750 0.68rem/1 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.value-gauge-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(12rem, 0.85fr);
+  gap: 1.15rem 1.35rem;
+  align-items: center;
+  padding: 1.2rem 1.25rem 1.3rem;
+  border-bottom: 1px solid rgba(8, 140, 155, 0.12);
+  background:
+    radial-gradient(circle at 92% 20%, rgba(10, 143, 140, 0.08), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(238, 249, 251, 0.35));
+}
+.value-gauge-copy {
+  display: grid;
+  gap: 0.65rem;
+  align-content: center;
+}
+.value-gauge-copy .pricing-kicker { margin: 0; }
+.value-gauge-lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: 34rem;
+}
+.value-gauge-lead strong { color: var(--ink); font-weight: 750; }
+.value-gauge-keys {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.value-gauge-keys li {
+  display: grid;
+  gap: 0.18rem;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.value-gauge-keys span {
+  color: var(--cyan);
+  font: 750 0.62rem/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.value-gauge-keys strong {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
+}
+.value-gauge-aside {
+  margin: 0;
+  color: var(--dim);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+.value-gauge {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem 0.9rem 0.75rem;
+  border: 1px solid rgba(10, 143, 140, 0.38);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(10, 143, 140, 0.22), transparent 52%),
+    linear-gradient(165deg, #0a1828 0%, #07111f 58%, #061018 100%);
+  box-shadow:
+    0 0 0 1px rgba(14, 163, 180, 0.08),
+    0 14px 28px rgba(7, 17, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.value-gauge-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.value-gauge-track {
+  stroke: rgba(14, 163, 180, 0.22);
+  stroke-width: 14;
+}
+.value-gauge-fill {
+  stroke-width: 14;
+  filter: drop-shadow(0 0 8px rgba(14, 163, 180, 0.35));
+  transition: stroke-dashoffset 1.25s cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+.value-gauge-needle {
+  /* Hub is at the right end of the low-position needle bbox (extends left to $48k). */
+  transform-box: fill-box;
+  transform-origin: right center;
+  transform: rotate(0deg);
+  transition: transform 1.25s cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+.value-gauge-needle line {
+  stroke: #e8f7f8;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(14, 163, 180, 0.45));
+}
+.value-gauge-hub {
+  fill: var(--brand-mark);
+  stroke: #e8f7f8;
+  stroke-width: 1.5;
+}
+.value-gauge-tip {
+  fill: #e8f7f8;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-anchor: middle;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.35s ease 0.85s;
+}
+.value-gauge.is-animated .value-gauge-fill {
+  stroke-dashoffset: 0;
+}
+/*
+  Needle rests at low ($48k) pointing left (-x).
+  Arc sweep-flag=1 draws low→high through the TOP (clockwise on screen).
+  CSS positive rotate = clockwise = tip moves UP toward mid (~45.83% · 180° = 82.5°).
+  Negative rotate was counterclockwise → tip moved DOWN (the bug).
+*/
+.value-gauge.is-animated .value-gauge-needle {
+  transform: rotate(82.5deg);
+}
+.value-gauge.is-animated .value-gauge-tip {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .value-gauge-fill,
+  .value-gauge-needle,
+  .value-gauge-tip {
+    transition: none !important;
+  }
+  .value-gauge .value-gauge-fill {
+    stroke-dashoffset: 0;
+  }
+  .value-gauge .value-gauge-needle {
+    transform: rotate(82.5deg);
+  }
+  .value-gauge .value-gauge-tip {
+    opacity: 1;
+  }
+}
+.value-gauge-scale {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.35rem;
+  align-items: start;
+  color: rgba(215, 232, 236, 0.88);
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.value-gauge-scale span {
+  display: grid;
+  gap: 0.12rem;
+}
+.value-gauge-scale span:nth-child(2) { justify-items: center; text-align: center; }
+.value-gauge-scale span:nth-child(3) { justify-items: end; text-align: right; }
+.value-gauge-scale small {
+  color: var(--cyan-soft);
+  font: 750 0.58rem/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.value-gauge-scale .is-mid { color: #fff; }
+.value-gauge-scale .is-mid small { color: var(--brand-mark-bright); }
+.value-decision-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  padding: 1rem 1.15rem 0.35rem;
+  border-top: 1px solid rgba(8, 140, 155, 0.12);
+  background: rgba(255, 255, 255, 0.45);
+}
+.value-decision-strip article {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+.value-decision-strip strong {
+  font-family: var(--display);
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+}
+.value-decision-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+.value-footnote {
+  margin: 0;
+  padding: 0.85rem 1.15rem 1.1rem;
+  color: var(--dim);
+  font-size: 0.78rem;
 }
 .decision-pill {
   display: inline-flex;
@@ -2419,14 +2666,21 @@ body.has-intro.is-intro-docking .site-footer {
 }
 @media (max-width: 720px) {
   .engagement-before-after { grid-template-columns: 1fr; }
+  .value-gauge-wrap {
+    grid-template-columns: 1fr;
+    gap: 0.95rem;
+  }
+  .value-gauge { order: -1; }
+  .value-gauge-keys { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .value-decision-strip { grid-template-columns: 1fr; }
   .ownership-sample {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
   }
   .ownership-sample table {
-    min-width: 32rem;
-    width: max(100%, 32rem);
+    min-width: 40rem;
+    width: max(100%, 40rem);
   }
   .ownership-sample th,
   .ownership-sample td {
@@ -2442,11 +2696,26 @@ body.has-intro.is-intro-docking .site-footer {
 }
 
 @media (max-width: 560px) {
+  .value-panel { border-radius: 0.95rem; }
+  .value-panel-head,
+  .value-candle-wrap,
+  .value-decision-strip,
+  .value-footnote {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
+  }
+  .value-gauge-wrap { padding-top: 1rem; padding-bottom: 1rem; }
+  .value-gauge-keys { grid-template-columns: 1fr; }
+  .value-gauge { padding: 0.75rem 0.7rem 0.65rem; }
+  .value-gauge-scale { font-size: 0.84rem; }
   .ownership-sample {
     border-radius: 0.95rem;
   }
   .ownership-sample-head {
     padding: 0.85rem 0.9rem;
+  }
+  .ownership-value-note {
+    padding: 0.7rem 0.9rem 0.1rem;
   }
   .ownership-sample table {
     min-width: 0;
