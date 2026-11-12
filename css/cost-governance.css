@@ -3254,12 +3254,14 @@ body.has-intro.is-intro-docking .site-footer {
   padding: 1rem;
   pointer-events: none;
 }
+.aics-email-capture[hidden] {
+  display: none !important;
+}
 .aics-email-capture.is-open { pointer-events: auto; }
 .aics-email-capture-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(10, 24, 40, 0.38);
-  backdrop-filter: blur(2px);
 }
 .aics-email-capture-panel {
   position: relative;
