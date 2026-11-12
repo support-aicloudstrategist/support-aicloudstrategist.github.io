@@ -1552,6 +1552,221 @@ p { margin-top: 0; }
 .subpage-hero-grid > * { min-width: 0; }
 .subpage-hero h1 { max-width: 14ch; }
 .subpage-hero .hero-lead { max-width: 38ch; }
+
+/* Per-page subpage hero tones — homepage hero untouched */
+.subpage-hero.hero-tone-story {
+  padding-top: clamp(4.5rem, 9vw, 7.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.subpage-hero.hero-tone-story::before {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(192, 138, 58, 0.16), transparent 22rem),
+    radial-gradient(circle at 88% 8%, rgba(11, 127, 140, 0.12), transparent 20rem),
+    radial-gradient(circle at 1px 1px, rgba(192, 138, 58, 0.14) 1px, transparent 0);
+  background-size: auto, auto, 28px 28px;
+}
+.subpage-hero.hero-tone-story::after {
+  width: 12rem; height: 12rem; right: 10%; top: 28%;
+  border-radius: 50%; transform: none;
+  border-color: rgba(192, 138, 58, 0.18);
+  background: radial-gradient(circle, rgba(255, 248, 235, 0.7), transparent 70%);
+}
+.subpage-hero.hero-tone-story .subpage-hero-grid {
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  max-width: 58rem;
+}
+.subpage-hero.hero-tone-story h1 { max-width: 18ch; font-size: clamp(2.4rem, 5vw, 3.6rem); }
+.subpage-hero.hero-tone-story .hero-lead { max-width: 46ch; font-size: 1.12rem; }
+.subpage-hero.hero-tone-story .page-viz { max-width: 42rem; }
+
+.subpage-hero.hero-tone-direct {
+  padding-top: clamp(3.4rem, 6vw, 5rem);
+}
+.subpage-hero.hero-tone-direct::before {
+  background:
+    linear-gradient(90deg, rgba(8, 121, 137, 0.1), transparent 42%),
+    radial-gradient(circle at 92% 12%, rgba(8, 121, 137, 0.18), transparent 18rem),
+    radial-gradient(circle at 1px 1px, rgba(8, 121, 137, 0.16) 1px, transparent 0);
+  background-size: auto, auto, 18px 18px;
+}
+.subpage-hero.hero-tone-direct::after {
+  display: none;
+}
+.subpage-hero.hero-tone-direct .subpage-hero-grid {
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: stretch;
+}
+.subpage-hero.hero-tone-direct .subpage-hero-grid > div:first-child {
+  border-left: 3px solid var(--cyan);
+  padding-left: 1.1rem;
+}
+.subpage-hero.hero-tone-direct h1 { max-width: 16ch; letter-spacing: -0.03em; }
+
+.subpage-hero.hero-tone-structured::before {
+  background:
+    linear-gradient(rgba(16, 60, 90, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 60, 90, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(26, 90, 150, 0.14), transparent 20rem);
+  background-size: 32px 32px, 32px 32px, auto;
+}
+.subpage-hero.hero-tone-structured::after {
+  width: 14rem; height: 14rem; border-radius: 0.6rem; transform: rotate(8deg);
+  right: 4%; top: 12%;
+}
+.subpage-hero.hero-tone-structured .subpage-hero-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(28rem, 1.08fr);
+}
+.subpage-hero.hero-tone-structured .page-viz {
+  box-shadow: var(--card-shadow);
+}
+
+.subpage-hero.hero-tone-action::before {
+  background:
+    radial-gradient(circle at 70% 0%, rgba(31, 133, 92, 0.16), transparent 20rem),
+    radial-gradient(circle at 8% 80%, rgba(8, 121, 137, 0.12), transparent 16rem),
+    radial-gradient(circle at 1px 1px, rgba(31, 133, 92, 0.16) 1px, transparent 0);
+  background-size: auto, auto, 22px 22px;
+}
+.subpage-hero.hero-tone-action::after {
+  width: 10rem; height: 10rem; border-radius: 999px; transform: none;
+  right: 8%; top: 16%;
+  border-color: rgba(31, 133, 92, 0.22);
+  background: radial-gradient(circle, rgba(223, 247, 236, 0.8), transparent 68%);
+}
+.subpage-hero.hero-tone-action h1 { max-width: 12ch; }
+
+.subpage-hero.hero-tone-legal {
+  padding-top: clamp(3.2rem, 6vw, 4.8rem);
+  padding-bottom: 1.5rem;
+}
+.subpage-hero.hero-tone-legal::before {
+  background: linear-gradient(180deg, rgba(8, 121, 137, 0.06), transparent 70%);
+  mask-image: none;
+  opacity: 1;
+}
+.subpage-hero.hero-tone-legal::after { display: none; }
+.subpage-hero.hero-tone-legal .shell {
+  max-width: 46rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.6rem;
+}
+.subpage-hero.hero-tone-legal h1 { max-width: 20ch; font-size: clamp(2rem, 4vw, 2.8rem); }
+.subpage-hero.hero-tone-legal .hero-lead { max-width: 48ch; }
+
+.subpage-hero.hero-tone-index::before {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(8, 121, 137, 0.12), transparent 18rem),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.35), transparent 55%);
+}
+.subpage-hero.hero-tone-index::after {
+  width: 18rem; height: 1px; right: 8%; top: 58%;
+  border: 0; border-radius: 0; transform: none;
+  background: linear-gradient(90deg, transparent, rgba(8, 121, 137, 0.35), transparent);
+}
+.subpage-hero.hero-tone-index h1 { max-width: 18ch; }
+.subpage-hero.hero-tone-index .hero-lead { max-width: 44ch; }
+
+.subpage-hero.hero-tone-editorial {
+  padding-top: clamp(3.6rem, 7vw, 5.5rem);
+  padding-bottom: 0.5rem;
+}
+.subpage-hero.hero-tone-editorial::before {
+  background:
+    linear-gradient(90deg, rgba(10, 24, 40, 0.04), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(8, 121, 137, 0.1), transparent 16rem);
+  mask-image: none;
+}
+.subpage-hero.hero-tone-editorial::after { display: none; }
+.subpage-hero.hero-tone-editorial .resource-hero {
+  max-width: 40rem;
+  border-left: 3px solid var(--cyan);
+  padding: 0.2rem 0 0.2rem 1.15rem;
+}
+.subpage-hero.hero-tone-editorial h1 {
+  max-width: 22ch;
+  font-size: clamp(2.1rem, 4.4vw, 3.1rem);
+}
+.subpage-hero.hero-tone-editorial .hero-lead {
+  max-width: 42ch;
+  font-size: 1.12rem;
+  color: var(--muted);
+}
+
+.subpage-hero.hero-tone-rooms::before {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(26, 90, 150, 0.12), transparent 16rem),
+    radial-gradient(circle at 55% 20%, rgba(8, 121, 137, 0.12), transparent 14rem),
+    radial-gradient(circle at 85% 35%, rgba(192, 138, 58, 0.12), transparent 14rem);
+}
+.subpage-hero.hero-tone-rooms::after {
+  width: 15rem; height: 15rem; border-radius: 1.8rem; transform: rotate(-8deg);
+}
+
+.subpage-hero.hero-tone-finance::before {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(26, 90, 150, 0.18), transparent 20rem),
+    radial-gradient(circle at 10% 70%, rgba(8, 121, 137, 0.08), transparent 16rem);
+}
+.subpage-hero.hero-tone-finance::after {
+  border-color: rgba(26, 90, 150, 0.18);
+  background: linear-gradient(145deg, rgba(232, 242, 252, 0.7), transparent 70%);
+}
+
+.subpage-hero.hero-tone-engineering::before {
+  background:
+    linear-gradient(rgba(8, 121, 137, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 121, 137, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 78% 16%, rgba(8, 121, 137, 0.14), transparent 18rem);
+  background-size: 24px 24px, 24px 24px, auto;
+}
+.subpage-hero.hero-tone-engineering::after {
+  border-radius: 0.4rem; transform: rotate(18deg);
+}
+
+.subpage-hero.hero-tone-operations::before {
+  background:
+    radial-gradient(circle at 70% 10%, rgba(31, 133, 92, 0.14), transparent 18rem),
+    radial-gradient(circle at 12% 60%, rgba(8, 121, 137, 0.1), transparent 16rem);
+}
+.subpage-hero.hero-tone-operations::after {
+  width: 11rem; height: 11rem; border-radius: 999px; transform: none;
+  border-style: dashed;
+}
+
+.subpage-hero.hero-tone-waste::before {
+  background:
+    radial-gradient(circle at 75% 20%, rgba(184, 116, 31, 0.18), transparent 18rem),
+    radial-gradient(circle at 15% 75%, rgba(8, 121, 137, 0.08), transparent 14rem);
+}
+.subpage-hero.hero-tone-waste::after {
+  border-color: rgba(184, 116, 31, 0.22);
+  background: linear-gradient(145deg, rgba(255, 246, 232, 0.75), transparent 70%);
+}
+
+.subpage-hero.hero-tone-risk::before {
+  background:
+    radial-gradient(circle at 80% 15%, rgba(184, 116, 31, 0.14), transparent 16rem),
+    radial-gradient(circle at 18% 30%, rgba(10, 24, 40, 0.06), transparent 14rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 60%);
+}
+.subpage-hero.hero-tone-risk::after {
+  width: 13rem; height: 13rem; border-radius: 1rem; transform: rotate(-12deg);
+  border: 1.5px dashed rgba(184, 116, 31, 0.28);
+  background: transparent;
+}
+
+@media (max-width: 960px) {
+  .subpage-hero.hero-tone-story .subpage-hero-grid,
+  .subpage-hero.hero-tone-structured .subpage-hero-grid,
+  .subpage-hero.hero-tone-direct .subpage-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .subpage-hero.hero-tone-direct .subpage-hero-grid > div:first-child {
+    border-left-width: 2px;
+  }
+}
+
 .scope-card > span {
   display: block; margin-bottom: 0.65rem; color: var(--cyan);
   font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
