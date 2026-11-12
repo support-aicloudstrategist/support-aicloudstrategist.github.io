@@ -225,6 +225,38 @@ function injectGeoScript(response: Response, geo: { country: string; currency: "
   });
 }
 
+/** Canonical public sitemap. Served from middleware so a stuck static/edge copy cannot pin 7 URLs. */
+const sitemapEntries: Array<{ loc: string; changefreq: string; priority: string }> = [
+  { loc: "/", changefreq: "weekly", priority: "1.0" },
+  { loc: "/services/", changefreq: "weekly", priority: "0.95" },
+  { loc: "/pricing/", changefreq: "monthly", priority: "0.9" },
+  { loc: "/request-fit-review/", changefreq: "monthly", priority: "0.9" },
+  { loc: "/why/", changefreq: "monthly", priority: "0.85" },
+  { loc: "/why/finance/", changefreq: "monthly", priority: "0.8" },
+  { loc: "/why/engineering/", changefreq: "monthly", priority: "0.8" },
+  { loc: "/why/operations/", changefreq: "monthly", priority: "0.8" },
+  { loc: "/why/minimize-waste/", changefreq: "monthly", priority: "0.8" },
+  { loc: "/why/reduce-risk/", changefreq: "monthly", priority: "0.8" },
+  { loc: "/resources/", changefreq: "weekly", priority: "0.8" },
+  { loc: "/resources/what-is-cloud-cost-ownership/", changefreq: "monthly", priority: "0.7" },
+  { loc: "/resources/why-fixed-fee-diagnostics-beat-savings-share/", changefreq: "monthly", priority: "0.7" },
+  { loc: "/resources/how-to-read-a-cloud-bill/", changefreq: "monthly", priority: "0.7" },
+  { loc: "/about/", changefreq: "monthly", priority: "0.7" },
+  { loc: "/privacy", changefreq: "yearly", priority: "0.3" },
+  { loc: "/terms", changefreq: "yearly", priority: "0.3" },
+];
+
+function buildSitemapXml(origin: string): string {
+  const lastmod = new Date().toISOString().slice(0, 10);
+  const urls = sitemapEntries
+    .map(
+      (entry) =>
+        `  <url><loc>${origin}${entry.loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${entry.changefreq}</changefreq><priority>${entry.priority}</priority></url>`,
+    )
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n<!-- middleware-sitemap-17 -->\n`;
+}
+
 export const onRequest: PagesFunction = async (context) => {
   const pathname = canonicalizePathname(new URL(context.request.url).pathname);
   const blocked = pathname === null || isBlockedPath(pathname);
@@ -236,6 +268,20 @@ export const onRequest: PagesFunction = async (context) => {
         "Content-Type": "text/plain; charset=utf-8",
         "Cache-Control": "no-store",
         "X-Robots-Tag": "noindex, nofollow, noarchive",
+      },
+    });
+  }
+
+  // Bypass any stuck static/edge sitemap.xml (observed live loc count=7 while git has 17).
+  if (pathname === "/sitemap.xml") {
+    const origin = "https://aicloudstrategist.com";
+    const body = buildSitemapXml(origin);
+    return new Response(body, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "X-AICS-Sitemap": "middleware-17",
       },
     });
   }
