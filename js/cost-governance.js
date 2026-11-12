@@ -255,23 +255,28 @@
     observer.observe(costSystem, { attributes: true, attributeFilter: ['data-cost-state'] });
   }
 
-  if (!isNarrow) {
-    document.querySelectorAll('[data-page-viz]').forEach((viz) => {
+  document.querySelectorAll('[data-page-viz]').forEach((viz) => {
+    if (!isNarrow) {
       bindVizLoop(viz, {
         filterAttr: 'data-viz-filter',
         nodeAttr: 'data-viz-node',
         stateAttr: 'data-viz-state',
         intervalMs: 2400
       });
+      return;
+    }
+    // Mobile: keep a static active state, no loop / no tap chrome.
+    const state = viz.getAttribute('data-viz-state');
+    viz.querySelectorAll('[data-viz-filter]').forEach((btn) => {
+      const on = btn.getAttribute('data-viz-filter') === state;
+      btn.setAttribute('aria-pressed', String(on));
+      btn.setAttribute('tabindex', '-1');
+      btn.setAttribute('aria-disabled', 'true');
     });
-  } else {
-    document.querySelectorAll('[data-page-viz]').forEach((viz) => {
-      viz.querySelectorAll('[aria-pressed]').forEach((btn) => {
-        btn.setAttribute('tabindex', '-1');
-        btn.setAttribute('aria-disabled', 'true');
-      });
+    viz.querySelectorAll('[data-viz-node]').forEach((node) => {
+      node.classList.toggle('is-active', node.getAttribute('data-viz-node') === state);
     });
-  }
+  });
 
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
   if (reducedMotion || isNarrow || !('IntersectionObserver' in window)) {
