@@ -3,8 +3,19 @@
   window.__AICS_CHATBOT__ = true;
 
   const SESSION_KEY = "aicsChatSession";
+  const EMAIL_STORAGE_KEY = "aicsChatEmail";
+  const EMAIL_DONE_KEY = "aicsEmailCaptureDone";
+  const EMAIL_ASK =
+    "Share your Gmail so someone from AICloudStrategist can reach out for a professional call.";
+  const EMAIL_REMIND =
+    "Whenever you're ready, share your Gmail so someone from AICloudStrategist can reach out for a professional call.";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isNarrow = window.matchMedia("(max-width: 820px)").matches;
+  const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
+  const extractEmail = (value) => {
+    const match = String(value || "").match(/[^\s@]+@[^\s@]+\.[^\s@]+/);
+    return match ? match[0].trim() : "";
+  };
 
   const mountChatbot = () => {
   if (document.querySelector(".aics-chat")) return;
@@ -21,8 +32,57 @@
     }
   };
 
+  const readStoredEmail = () => {
+    try {
+      return localStorage.getItem(EMAIL_STORAGE_KEY) || "";
+    } catch (_) {
+      return "";
+    }
+  };
+
+  const alreadyCaptured = () => {
+    try {
+      return Boolean(readStoredEmail()) || localStorage.getItem(EMAIL_DONE_KEY) === "1";
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const persistEmail = async (email) => {
+    try {
+      localStorage.setItem(EMAIL_STORAGE_KEY, email);
+      localStorage.setItem(EMAIL_DONE_KEY, "1");
+    } catch (_) {}
+
+    const localPart = email.split("@")[0] || "Visitor";
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "same-origin",
+        body: JSON.stringify({
+          name: localPart.slice(0, 80),
+          email,
+          contact: email,
+          privacy_consent: "yes",
+          service: "Cloud & AI Cost Governance Diagnostic",
+          stage: "Chatbot email capture",
+          need: "Chatbot email capture",
+          message: "Email shared in site chatbot for a professional call follow-up.",
+          company_website: "",
+          landing_page: window.location.href,
+          referrer: document.referrer || "",
+        }),
+      });
+    } catch (_) {}
+  };
+
   const history = [];
   const sessionId = getSessionId();
+  let userTurns = 0;
+  let emailAsked = alreadyCaptured();
+  let emailCaptured = alreadyCaptured();
+  let emailReminded = alreadyCaptured();
 
   const localKnowledgeReply = (message) => {
     const hay = String(message || "").toLowerCase();
@@ -188,10 +248,36 @@
 
     addBubble("user", message);
     history.push({ role: "user", content: message });
+    userTurns += 1;
     track("chat_query", { section: "chatbot", source: "widget" });
     input.value = "";
     sendBtn.disabled = true;
     sendBtn.textContent = "Thinking…";
+
+    const foundEmail = extractEmail(message);
+    const emailOnly = foundEmail && looksLikeEmail(message.replace(foundEmail, "").replace(/[\s,;:]+/g, ""));
+
+    // Capture email when offered; never block the chat.
+    if (foundEmail && !emailCaptured) {
+      emailCaptured = true;
+      emailAsked = true;
+      emailReminded = true;
+      await persistEmail(foundEmail);
+      track("form_submit_success", { form: "chatbot_email_capture", section: "chatbot", status: "captured" });
+
+      const thanks = "Thanks — someone from AICloudStrategist can follow up on that email.";
+      if (emailOnly) {
+        addBubble("assistant", thanks);
+        history.push({ role: "assistant", content: thanks });
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+        log.scrollTop = log.scrollHeight;
+        return;
+      }
+
+      addBubble("assistant", thanks);
+      history.push({ role: "assistant", content: thanks });
+    }
 
     const pending = document.createElement("div");
     pending.className = "aics-chat-bubble aics-chat-assistant is-pending";
@@ -218,12 +304,32 @@
       if (!reply) {
         reply = localKnowledgeReply(message);
       }
+
+      // First question: answer, then ask for email (optional).
+      if (!emailAsked && !emailCaptured && userTurns === 1) {
+        emailAsked = true;
+        reply = `${reply}\n\n${EMAIL_ASK}`;
+        track("form_start", { form: "chatbot_email_capture", section: "chatbot" });
+      } else if (emailAsked && !emailCaptured && !emailReminded && userTurns >= 3) {
+        emailReminded = true;
+        reply = `${reply}\n\n${EMAIL_REMIND}`;
+      }
+
       pending.classList.remove("is-pending");
       pending.textContent = reply;
       history.push({ role: "assistant", content: reply });
     } catch (_) {
+      let reply = localKnowledgeReply(message);
+      if (!emailAsked && !emailCaptured && userTurns === 1) {
+        emailAsked = true;
+        reply = `${reply}\n\n${EMAIL_ASK}`;
+      } else if (emailAsked && !emailCaptured && !emailReminded && userTurns >= 3) {
+        emailReminded = true;
+        reply = `${reply}\n\n${EMAIL_REMIND}`;
+      }
       pending.classList.remove("is-pending");
-      pending.textContent = localKnowledgeReply(message);
+      pending.textContent = reply;
+      history.push({ role: "assistant", content: reply });
     } finally {
       sendBtn.disabled = false;
       sendBtn.textContent = "Send";
