@@ -5,8 +5,17 @@
   <title>Website Terms | AICloudStrategist</title>
   <meta name="description" content="Website terms for AICloudStrategist and the Cloud and AI Cost Governance Diagnostic information published on this site.">
   <link rel="canonical" href="https://aicloudstrategist.com/terms"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#b9d4db">
-  <meta property="og:type" content="website"><meta property="og:site_name" content="AICloudStrategist"><meta property="og:title" content="Website Terms | AICloudStrategist"><meta property="og:description" content="Terms governing use of the AICloudStrategist public website."><meta property="og:url" content="https://aicloudstrategist.com/terms"><meta name="twitter:card" content="summary">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AICloudStrategist">
+  <meta property="og:title" content="Website Terms | AICloudStrategist">
+  <meta property="og:description" content="Terms governing use of the AICloudStrategist public website.">
+  <meta property="og:url" content="https://aicloudstrategist.com/terms">
+  <meta property="og:image" content="https://aicloudstrategist.com/assets/brand/aics-growth-focus-og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://aicloudstrategist.com/assets/brand/aics-growth-focus-og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/brand/aics-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>

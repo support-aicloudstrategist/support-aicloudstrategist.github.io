@@ -57,11 +57,18 @@ const indexableExact = new Set([
 ]);
 
 const legacyRedirects = new Map<string, string>([
+  ["/index.html", "/"],
+  ["/about.html", "/about/"],
+  ["/resources.html", "/resources/"],
+  ["/privacy.html", "/privacy"],
+  ["/terms.html", "/terms"],
+  ["/pricing.html", "/pricing/"],
   ["/contact", "/request-fit-review/"],
   ["/contact.html", "/request-fit-review/"],
+  ["/book", "/request-fit-review/"],
+  ["/book.html", "/request-fit-review/"],
   ["/free-business-review", "/request-fit-review/"],
   ["/free-business-review.html", "/request-fit-review/"],
-  ["/pricing.html", "/pricing/"],
   ["/services/cloud-ai-economics", "/services/"],
   ["/services/cloud-finops", "/services/"],
   ["/cloud-trust-finops", "/services/"],
@@ -131,6 +138,8 @@ const legacyPrefixRedirects: Array<[string, string]> = [
   ["/company-details/", "/about/"],
   ["/cloud-cost/", "/services/"],
   ["/finops/", "/services/"],
+  ["/book/", "/request-fit-review/"],
+  ["/free-business-review/", "/request-fit-review/"],
 ];
 
 function canonicalizePathname(pathname: string): string | null {
