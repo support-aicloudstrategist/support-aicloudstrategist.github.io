@@ -452,9 +452,25 @@ p { margin-top: 0; }
   .proof-grid, .pricing-grid, #proof .proof-grid { grid-template-columns: 1fr; }
 }
 
+/* Soft attention cue for hero pricing CTA only */
+.button-glow {
+  border-color: rgba(44, 182, 225, .55);
+  box-shadow: 0 0 0 1px rgba(44, 182, 225, .18), 0 0 18px rgba(44, 182, 225, .22);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .button-glow {
+    animation: pricing-glow-pulse 2.8s ease-in-out infinite;
+  }
+}
+@keyframes pricing-glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(44, 182, 225, .16), 0 0 12px rgba(44, 182, 225, .16); }
+  50% { box-shadow: 0 0 0 1px rgba(44, 182, 225, .32), 0 0 22px rgba(44, 182, 225, .34); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
   .hero-system::before, .flow-rail i::after { display: none; }
+  .button-glow { animation: none; }
 }
