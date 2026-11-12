@@ -23,14 +23,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-hero-tones">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-about-rebuild">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","@id":"https://aicloudstrategist.com/about/#page","name":"About AICloudStrategist","url":"https://aicloudstrategist.com/about/","mainEntity":{"@id":"https://aicloudstrategist.com/#organization"}},{"@type":"Organization","@id":"https://aicloudstrategist.com/#organization","name":"AICloudStrategist","alternateName":"AI Cloud Strategist","legalName":"AICLOUDSTRATEGIST PRIVATE LIMITED","identifier":{"@type":"PropertyValue","propertyID":"Corporate Identity Number (India)","value":"U62020DC2026PTC470945"},"foundingDate":"2026-04-29","url":"https://aicloudstrategist.com/","logo":"https://aicloudstrategist.com/assets/brand/aics-logo.svg?v=20261112-logo","description":"A professional consultancy focused on cloud and AI cost governance diagnostics.","email":"contact@aicloudstrategist.com","areaServed":["India","Worldwide"]}]}</script>
   <script defer src="/js/aics-analytics-shim.js?v=20261112-audit"></script>
   <script defer src="/js/cost-governance.js?v=20261112-fix"></script>
-  <script defer src="/js/aics-chatbot.js?v=20261112-fix"></script>
+  <script defer src="/js/aics-chatbot.js?v=20261112-chat-email"></script>
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}</style></noscript>
 </head>
-<body>
+<body class="about-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header" data-site-header>
     <div class="shell nav-shell">
@@ -64,17 +64,58 @@
   </header>
 
   <main id="main-content">
-    <section class="subpage-hero section-shell hero-tone-story">
-      <div class="shell subpage-hero-grid">
-        <div data-reveal>
-          <p class="eyebrow">About</p>
-          <h1>Evidence before you cut.</h1>
-          <p class="hero-lead">AICloudStrategist exists for one job: make cloud and AI spend explainable to finance and engineering—before optimization pressure forces a blind move.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="/request-fit-review/">Book a free fit review</a>
-          </div>
+    <section class="subpage-hero section-shell hero-tone-story about-hero">
+      <div class="shell about-hero-inner" data-reveal>
+        <p class="eyebrow">About AICloudStrategist</p>
+        <h1>Evidence before you cut.</h1>
+        <p class="hero-lead about-purpose">We exist to make cloud and AI spend explainable to finance and engineering—so every material dollar has an owner before anyone is pushed to cut blindly.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/request-fit-review/">Book a free fit review</a>
+          <a class="button button-secondary" href="/services/">See the diagnostic</a>
         </div>
-        <div class="hero-system page-viz" data-page-viz data-viz-state="own" data-reveal aria-label="Working principles animation">
+        <ul class="about-trust-strip" aria-label="Company facts">
+          <li><strong>Fixed-fee</strong><span>Diagnostic, not a platform license</span></li>
+          <li><strong>Registered</strong><span>CIN U62020DC2026PTC470945</span></li>
+          <li><strong>Contactable</strong><span>India · worldwide</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-shell section-dark" aria-labelledby="about-mission-title">
+      <div class="shell">
+        <div class="section-intro about-section-intro" data-reveal>
+          <p class="eyebrow">Mission</p>
+          <h2 id="about-mission-title">Advance ownership-first cost decisions.</h2>
+          <p>Platforms show spend. We connect that spend to accountable owners—and classify what is safe to act on, investigate, or hold.</p>
+        </div>
+        <div class="about-values deliverable-grid">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Ownership first</h3>
+            <p>If spend cannot be tied to a product, team or gap, we say so—instead of averaging it into false certainty.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Restraint over theater</h3>
+            <p>Recommendations are act, investigate or hold. Reliability and commercial risk stay visible beside every cut idea.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Traceable by default</h3>
+            <p>Sources, assumptions and confidence levels stay in the dossier you leave with—so both rooms can challenge the same record.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="about-stance-title">
+      <div class="shell about-stance" data-reveal>
+        <div class="about-section-intro">
+          <p class="eyebrow">Why this firm</p>
+          <h2 id="about-stance-title">A bounded diagnostic—not another dashboard.</h2>
+          <p>Most cloud cost tools overload busy teams with recommendations and leave ownership unresolved. AICloudStrategist runs one fixed-fee Cloud &amp; AI Cost Governance Diagnostic across AWS, Azure, GCP, Kubernetes and AI/GPU estates when they are in scope. No savings-share. No production changes executed as part of the diagnostic. Implementation stays yours.</p>
+        </div>
+        <div class="hero-system page-viz about-stance-viz" data-page-viz data-viz-state="own" aria-label="Working principles animation">
           <div class="system-label"><span class="live-dot" aria-hidden="true"></span>How we work · live loop</div>
           <div class="viz-filters" role="group" aria-label="Principles">
             <button type="button" data-viz-filter="own" aria-pressed="true">Ownership</button>
@@ -91,26 +132,12 @@
       </div>
     </section>
 
-    <section class="section-shell section-dark">
-      <div class="shell">
-        <div class="section-intro" data-reveal>
-          <p class="eyebrow">How we work</p>
-          <h2>Three rules that keep decisions honest.</h2>
-        </div>
-        <div class="deliverable-grid">
-          <article data-reveal><span>01</span><h3>Ownership first</h3><p>If spend cannot be tied to a product, team or gap, we say so—instead of averaging it into false certainty.</p></article>
-          <article data-reveal><span>02</span><h3>Action with restraint</h3><p>Recommendations are act, investigate or hold. Reliability and commercial risk stay visible.</p></article>
-          <article data-reveal><span>03</span><h3>Traceable record</h3><p>Sources, assumptions and confidence levels stay in the dossier you leave with.</p></article>
-        </div>
-      </div>
-    </section>
-
     <section class="section-shell section-blue" aria-labelledby="about-proof-title">
       <div class="shell">
-        <div class="section-intro" data-reveal>
-          <p class="eyebrow">Engagement shape</p>
-          <h2 id="about-proof-title">What “proof” means before named case studies.</h2>
-          <p>Until published client stories exist, we show the diagnostic artifact itself: ownership clarity and restrained decisions.</p>
+        <div class="section-intro about-section-intro" data-reveal>
+          <p class="eyebrow">What you leave with</p>
+          <h2 id="about-proof-title">Ownership map and decision register.</h2>
+          <p>Proof is the artifact: a shared baseline, named gaps, and a 30-day act / investigate / hold register finance and engineering can defend together.</p>
         </div>
         <div class="engagement-proof" data-reveal>
           <div class="engagement-before-after">
@@ -121,7 +148,7 @@
             </article>
             <article class="proof-card">
               <p class="pricing-kicker">Diagnostic output</p>
-              <h3>A dossier both rooms can defend.</h3>
+              <h3>A readout both sides can defend.</h3>
               <p>Reconciled baseline, ownership gaps named, and a 30-day register of act / investigate / hold—owned by the client.</p>
             </article>
           </div>
@@ -160,11 +187,12 @@
       </div>
     </section>
 
-    <section class="section-shell">
-      <div class="shell split-layout">
-        <div class="section-intro sticky-copy" data-reveal>
+    <section class="section-shell" aria-labelledby="about-company-title">
+      <div class="shell split-layout about-company">
+        <div class="section-intro sticky-copy about-section-intro" data-reveal>
           <p class="eyebrow">Company</p>
-          <h2>Registered. Public. Contactable.</h2>
+          <h2 id="about-company-title">Registered. Public. Contactable.</h2>
+          <p>Legal identity and a direct line—so procurement and diligence have somewhere concrete to land.</p>
         </div>
         <div class="company-record" data-reveal>
           <dl>
@@ -172,17 +200,18 @@
             <div><dt>Legal entity</dt><dd>AICLOUDSTRATEGIST PRIVATE LIMITED</dd></div>
             <div><dt>CIN</dt><dd>U62020DC2026PTC470945</dd></div>
             <div><dt>Incorporated</dt><dd>29 April 2026</dd></div>
-            <div><dt>Contact</dt><dd><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+918065480898">+91 80654 80898</a></dd></div>
           </dl>
         </div>
       </div>
     </section>
 
-    <section class="final-cta section-shell">
+    <section class="final-cta section-shell" aria-labelledby="about-final-title">
       <div class="shell final-panel" data-reveal>
-        <p class="eyebrow">Next step</p>
-        <h2>Start with the decision that needs clarity.</h2>
-        <p>Fit review is free. No billing files required to begin.</p>
+        <p class="eyebrow">Fit review is free</p>
+        <h2 id="about-final-title">Start with the decision that needs clarity.</h2>
+        <p>Fifteen minutes. No billing files. A clear fit / no-fit answer on whether this diagnostic can unblock your next cost decision.</p>
         <a class="button button-primary" href="/request-fit-review/">Book a free fit review</a>
       </div>
     </section>
