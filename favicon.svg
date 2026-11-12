@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AICloudStrategist">
   <rect width="64" height="64" rx="14" fill="#07111f"/>
-  <path d="M15 47 29 14h7l14 33h-9l-3-8H26l-3 8h-8Zm14-16h6l-3-8-3 8Z" fill="#63e6ff"/>
+  <g fill="none" transform="translate(12 12) scale(1)">
+    <path d="M20 4.6a15.4 15.4 0 1 1-12.2 6.1" stroke="#0a8f8c" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M8.8 12.2h12.4L29.8 20 21.2 27.8H8.8l7.4-7.8z" fill="#0a8f8c"/>
+    <path d="M31.4 11.2 24.6 20l6.8 8.8" stroke="#0a8f8c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="20" r="2.35" stroke="#0a8f8c" stroke-width="1.8"/>
+  </g>
 </svg>
