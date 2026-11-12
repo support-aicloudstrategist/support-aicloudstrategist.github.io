@@ -1,9 +1,0 @@
-request_id,modality_or_service_line,prior_auth_status,next_safe_action,claim_boundary
-SYN-IMG-001,MRI lumbar spine,Auth pending payer review,Assign prior-auth owner and confirm next payer call date,Synthetic row only - do not claim faster authorization or booked-study improvement
-SYN-IMG-002,CT abdomen pelvis,Missing clinical documentation,Route redacted document request to referring-office owner,Synthetic row only - do not claim denial reduction or medical necessity advice
-SYN-IMG-003,Ultrasound abdomen,Eligibility not verified,Manual eligibility follow-up before scheduling,Synthetic row only - do not automate PHI or payer-specific advice
-SYN-IMG-004,Mammography diagnostic,Patient callback ageing 48h+,Human callback with approved script owner,Synthetic row only - do not claim appointment growth or patient outcome
-SYN-IMG-005,X-ray walk-in,Referral source unclear,Investigate source-to-owner queue before automation,Synthetic row only - do not claim real customer data or ranking
-SYN-IMG-006,MRI brain,Contrast screening incomplete,Human review of safety-screening handoff,Synthetic row only - do not provide clinical or safety advice
-SYN-IMG-007,CT angiography,Peer-to-peer flag open,Escalate to qualified internal owner/adviser route,Synthetic row only - do not claim payer-contracting or authorization service
-SYN-IMG-008,Report follow-up queue,Result question received,Keep human-reviewed and block AI response,Synthetic row only - do not claim AI accuracy or patient-result interpretation
