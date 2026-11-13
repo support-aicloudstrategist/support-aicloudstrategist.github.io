@@ -103,7 +103,7 @@
   const root = document.createElement("div");
   root.className = "aics-chat";
   root.innerHTML = `
-    <button type="button" class="aics-chat-launcher" aria-expanded="false" aria-controls="aics-chat-panel" aria-label="Open chat">
+    <button type="button" class="aics-chat-launcher" aria-expanded="false" aria-controls="aics-chat-panel" aria-label="Ask a question">
       <span class="aics-chat-bot" aria-hidden="true">
         <svg class="aics-chat-bot-svg" viewBox="0 0 100 108" width="72" height="78" focusable="false">
           <defs>
@@ -160,7 +160,7 @@
           </g>
         </svg>
       </span>
-      <span class="aics-chat-plug">Chat</span>
+      <span class="aics-chat-plug">Ask a question</span>
     </button>
     <section id="aics-chat-panel" class="aics-chat-panel" hidden>
       <header class="aics-chat-head">

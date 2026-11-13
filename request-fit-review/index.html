@@ -23,14 +23,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Syne:wght@700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/cost-governance.css?v=20261112-brand-mark">
+  <link rel="stylesheet" href="/css/cost-governance.css?v=20261113-visual-fix">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ContactPage","@id":"https://aicloudstrategist.com/request-fit-review/#page","name":"Book a Free Fit Review","url":"https://aicloudstrategist.com/request-fit-review/","description":"Free suitability and scoping conversation for the Cloud and AI Cost Governance Diagnostic.","isPartOf":{"@id":"https://aicloudstrategist.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aicloudstrategist.com/"},{"@type":"ListItem","position":2,"name":"Book a free fit review","item":"https://aicloudstrategist.com/request-fit-review/"}]}]}</script>
   <script defer src="/js/aics-analytics-shim.js?v=20261113-privacy-analytics"></script>
   <script defer src="/js/aics-conversion-tracking.js?v=20261112-fix"></script>
   <script defer src="/js/cost-governance.js?v=20261112-fix"></script>
   <script defer src="/js/aics-chatbot.js?v=20261112-fix"></script>
   <script defer src="/js/geo-currency.js?v=20261112-fix"></script>
-  <script defer src="/js/cost-fit-review.js?v=20261112-audit"></script>
+  <script defer src="/js/cost-fit-review.js?v=20261113-fit-success"></script>
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}.nav-toggle{display:none!important}.primary-nav{display:flex!important}</style></noscript>
 </head>
 <body>
@@ -69,9 +69,9 @@
   <section class="subpage-hero section-shell hero-tone-action">
     <div class="shell subpage-hero-grid">
       <div data-reveal>
-        <p class="eyebrow">Free · under two minutes</p>
-        <h1>Book a free fit review</h1>
-        <p class="hero-lead">Tell us the cost decision that is blocked. We reply within 30 minutes in business hours with a clear fit, clarify, or next-step answer.</p>
+        <p class="eyebrow">Free · 2-minute form · 30-minute call</p>
+        <h1>Request a free fit review</h1>
+        <p class="hero-lead">Tell us the cost decision that is blocked. We respond within one business day with a clear fit, clarify, or next-step answer.</p>
       </div>
       <div class="hero-system page-viz" data-page-viz data-viz-state="ask" data-reveal aria-label="Fit review flow animation">
         <div class="system-label"><span class="live-dot" aria-hidden="true"></span>Fit review · live loop</div>
@@ -84,7 +84,7 @@
           <div class="viz-node is-active" data-viz-node="ask"><span>01</span><strong>Share the decision</strong><small>No billing files. No credentials.</small></div>
           <div class="viz-node tone-mint" data-viz-node="check"><span>02</span><strong>We check fit</strong><small>Against the diagnostic boundary</small></div>
           <div class="viz-node tone-amber" data-viz-node="reply"><span>03</span><strong>Clear next step</strong><small>Proceed, clarify, or better path</small></div>
-          <div class="viz-hub"><span class="viz-orbit" aria-hidden="true"><i></i><i></i><i></i></span><strong>Reply in 30 min</strong><small>Business hours · free</small></div>
+          <div class="viz-hub"><span class="viz-orbit" aria-hidden="true"><i></i><i></i><i></i></span><strong>Reply in 1 business day</strong><small>IST · free</small></div>
         </div>
       </div>
     </div>
@@ -97,10 +97,11 @@
         <h2>Share the business question—not the bill.</h2>
         <p>Keep it simple. If the diagnostic fits, we agree evidence access separately before any sensitive transfer.</p>
         <ul class="simple-bullets">
-          <li>Response within 30 minutes during business hours</li>
+          <li>We respond within one business day (IST)</li>
           <li>Fixed fee confirmed only after scope</li>
           <li><a href="/pricing/">See pricing</a> before you commit</li>
         </ul>
+        <p class="form-warning" role="note"><strong>Do not send credentials, billing files, personal data, or confidential information in this form.</strong></p>
       </div>
 
       <form id="costFitReviewForm" class="fit-review-form" action="/api/contact" method="POST" data-reveal>
@@ -137,7 +138,7 @@
           <input id="privacy_consent" type="checkbox" name="privacy_consent" value="yes" required>
           <span>I agree to the <a href="/privacy" target="_self">Privacy Policy</a> for this initial scoping request.</span>
         </label>
-        <button id="fitReviewSubmit" class="button button-primary form-submit" type="submit">Book a free fit review</button>
+        <button id="fitReviewSubmit" class="button button-primary form-submit" type="submit">Request a free fit review</button>
         <div id="fitReviewSuccess" class="form-notice success" hidden role="status"></div>
         <div id="fitReviewError" class="form-notice error" hidden role="alert"></div>
         <p class="form-fallback">Prefer email? Write to <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>.</p>

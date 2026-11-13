@@ -4,16 +4,20 @@
 
   const STORAGE_DONE = "aicsEmailCaptureDone";
   const STORAGE_DISMISS_COUNT = "aicsEmailCaptureDismissCount";
-  const SCROLL_RATIO = 0.4;
-  const TIME_ON_PAGE_MS = 14_000;
-  const EXIT_MIN_MS = 8_000;
-  const REDISPLAY_MS = 180_000;
-  const MAX_SESSION_DISMISSES = 2;
+  const SCROLL_RATIO = 0.6;
+  const TIME_ON_PAGE_MS = 50_000;
+  const EXIT_MIN_MS = 45_000;
+  const REDISPLAY_MS = 0;
+  const MAX_SESSION_DISMISSES = 1;
+  const DISMISS_DAYS_KEY = "aicsEmailCaptureDismissUntil";
+  const DISMISS_DAYS = 7;
   const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
 
   const readDone = () => {
     try {
-      return localStorage.getItem(STORAGE_DONE) === "1";
+      if (localStorage.getItem(STORAGE_DONE) === "1") return true;
+      const until = Number(localStorage.getItem(DISMISS_DAYS_KEY) || "0");
+      return Boolean(until && Date.now() < until);
     } catch (_) {
       return false;
     }
@@ -22,6 +26,12 @@
   const markDone = () => {
     try {
       localStorage.setItem(STORAGE_DONE, "1");
+    } catch (_) {}
+  };
+
+  const markDismissDays = () => {
+    try {
+      localStorage.setItem(DISMISS_DAYS_KEY, String(Date.now() + DISMISS_DAYS * 86400000));
     } catch (_) {}
   };
 
@@ -122,15 +132,16 @@
     }, 40);
   };
 
-  const hide = ({ reschedule } = { reschedule: true }) => {
+  const hide = ({ reschedule } = { reschedule: false }) => {
     if (!open) return;
     open = false;
     root.classList.remove("is-open");
     root.hidden = true;
     document.body.classList.remove("aics-email-capture-open");
     status.textContent = "";
-    if (reschedule && !readDone() && dismissCount() < MAX_SESSION_DISMISSES) {
-      clearRedisplay();
+    markDismissDays();
+    clearRedisplay();
+    if (reschedule && REDISPLAY_MS > 0 && !readDone() && dismissCount() < MAX_SESSION_DISMISSES) {
       redisplayTimer = window.setTimeout(() => {
         redisplayTimer = null;
         show("redisplay");
@@ -151,17 +162,23 @@
   };
 
   const onExitIntent = (event) => {
-    if (open || readDone()) return;
+    if (open || readDone() || shownOnce) return;
     if (Date.now() - pageLoadAt < EXIT_MIN_MS) return;
     if (event.clientY > 12) return;
     if (event.relatedTarget) return;
     show("exit");
   };
 
+  // Prefer non-modal bar on narrow screens.
+  if (window.matchMedia("(max-width: 720px)").matches) {
+    root.classList.add("is-inline-prefer");
+  }
+
   window.addEventListener("scroll", onScroll, { passive: true });
   document.addEventListener("mouseout", onExitIntent);
   onScroll();
 
+  // Show after 45–60s OR 60% scroll (whichever first)—never immediately.
   timeGateTimer = window.setTimeout(() => {
     timeGateTimer = null;
     if (!shownOnce) show("time");

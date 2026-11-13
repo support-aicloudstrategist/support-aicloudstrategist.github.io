@@ -56,7 +56,7 @@
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || 'Submission failed');
 
-      success.textContent = `Request received. Reference: ${result.contact_id}. AICS will review the scope and reply using the work email supplied.`;
+      success.textContent = `Thanks—your request is recorded${result.contact_id ? ` (ref ${result.contact_id})` : ''}. We’ll reply within one business day. Do not send credentials or billing files by email.`;
       success.hidden = false;
       form.reset();
       track('form_submit_success', {
@@ -70,7 +70,7 @@
       track('form_submit_error', { form: 'cloud_ai_cost_fit_review', section: 'fit-review' });
     } finally {
       submit.disabled = false;
-      submit.textContent = 'Book a free fit review';
+      submit.textContent = 'Request a free fit review';
     }
   });
 })();
