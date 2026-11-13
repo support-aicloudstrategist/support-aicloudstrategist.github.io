@@ -19,6 +19,8 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
   const totals: Record<string, number> = {};
   const providers: Record<string, number> = {};
   const paths: Record<string, number> = {};
+  const devices: Record<string, number> = {};
+  const emailTriggers: Record<string, number> = {};
   let cursor: string | undefined;
   let inspected = 0;
 
@@ -35,14 +37,34 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
         const name = clean(event.name,64) || "unknown";
         const path = clean(event.path,256) || "/";
         const provider = clean(event.props && event.props.provider,120) || "unknown";
+        const device = clean(event.props && event.props.device,40) || "unknown";
+        const trigger = clean(event.props && event.props.trigger,40);
         totals[name] = (totals[name] || 0) + 1;
         paths[path] = (paths[path] || 0) + 1;
-        if (name === "page_view") providers[provider] = (providers[provider] || 0) + 1;
+        if (name === "page_view") {
+          providers[provider] = (providers[provider] || 0) + 1;
+          devices[device] = (devices[device] || 0) + 1;
+        }
+        if (name === "email_capture_open" && trigger) {
+          emailTriggers[trigger] = (emailTriggers[trigger] || 0) + 1;
+        }
         inspected += 1;
       } catch {}
     }
     cursor = page.list_complete ? undefined : page.cursor;
   } while (cursor && inspected < 10000);
 
-  return new Response(JSON.stringify({ok:true,period_days:days,generated_at:new Date().toISOString(),events_inspected:inspected,events:totals,page_views_by_provider:providers,top_paths:Object.entries(paths).sort((a,b)=>b[1]-a[1]).slice(0,25),privacy:"aggregate non-PII events only"}), {status:200,headers});
+  return new Response(JSON.stringify({
+    ok:true,
+    period_days:days,
+    generated_at:new Date().toISOString(),
+    events_inspected:inspected,
+    events:totals,
+    page_views_by_provider:providers,
+    page_views_by_device:devices,
+    email_capture_triggers:emailTriggers,
+    top_paths:Object.entries(paths).sort((a,b)=>b[1]-a[1]).slice(0,25),
+    privacy:"aggregate non-PII events only",
+    how_to_view:"GET /api/metrics?days=28 with Authorization: Bearer $AICS_REPORT_TOKEN. For country/device charts enable Cloudflare Web Analytics on the Pages project (Workers & Pages → Metrics → Enable)."
+  }), {status:200,headers});
 };

@@ -29,10 +29,15 @@
     let alreadyPlayed = false;
     try { alreadyPlayed = sessionStorage.getItem(INTRO_KEY) === '1'; } catch (_) { alreadyPlayed = false; }
 
+    const params = new URLSearchParams(window.location.search);
+    const forceSkip = params.has('skipintro') || params.get('intro') === '0';
+
     // Skip cinematic intro on phones — it delays first paint and interaction.
-    if (alreadyPlayed || reducedMotion || isNarrow) {
+    // Also skip when already played, reduced motion, or ?skipintro=1.
+    if (alreadyPlayed || reducedMotion || isNarrow || forceSkip) {
       scene.hidden = true;
       headerBrand.classList.add('is-intro-ready');
+      document.body.classList.remove('has-intro', 'is-intro-docking');
       return;
     }
 
@@ -40,13 +45,26 @@
     scene.hidden = false;
     headerBrand.classList.remove('is-intro-ready');
 
+    // Hard fail-safe: never leave the hero covered if docking stalls.
+    window.setTimeout(() => finishIntro(scene, headerBrand), 5200);
+    const skipNow = () => finishIntro(scene, headerBrand);
+    scene.style.cursor = 'pointer';
+    scene.title = 'Click to skip';
+    scene.addEventListener('click', skipNow, { once: true });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        skipNow();
+      }
+    }, { once: true });
+
     window.requestAnimationFrame(() => {
       scene.classList.add('is-active');
       introBrand.classList.add('is-alive');
     });
 
-    const holdMs = 2400;
-    const dockMs = 1100;
+    const holdMs = 1600;
+    const dockMs = 900;
 
     window.setTimeout(() => {
       // Freeze the unit (mark + wordmark) at its held pose before measuring.

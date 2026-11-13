@@ -3,9 +3,12 @@
   window.__AICS_EMAIL_CAPTURE__ = true;
 
   const STORAGE_DONE = "aicsEmailCaptureDone";
-  const SCROLL_PX = 280;
-  const FIRST_DELAY_MS = 30_000;
-  const REDISPLAY_MS = 20_000;
+  const STORAGE_DISMISS_COUNT = "aicsEmailCaptureDismissCount";
+  const SCROLL_RATIO = 0.4;
+  const TIME_ON_PAGE_MS = 14_000;
+  const EXIT_MIN_MS = 8_000;
+  const REDISPLAY_MS = 180_000;
+  const MAX_SESSION_DISMISSES = 2;
   const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
 
   const readDone = () => {
@@ -22,13 +25,29 @@
     } catch (_) {}
   };
 
+  const dismissCount = () => {
+    try {
+      return Number(sessionStorage.getItem(STORAGE_DISMISS_COUNT) || "0") || 0;
+    } catch (_) {
+      return 0;
+    }
+  };
+
+  const bumpDismiss = () => {
+    try {
+      sessionStorage.setItem(STORAGE_DISMISS_COUNT, String(dismissCount() + 1));
+    } catch (_) {}
+  };
+
   if (readDone()) return;
+  if (dismissCount() >= MAX_SESSION_DISMISSES) return;
 
   const pageLoadAt = Date.now();
-  let scrolledEnough = false;
   let open = false;
+  let shownOnce = false;
   let redisplayTimer = null;
-  let firstGateTimer = null;
+  let timeGateTimer = null;
+  let lastTrigger = "time";
 
   const root = document.createElement("div");
   root.className = "aics-email-capture";
@@ -57,7 +76,6 @@
   `;
   document.body.appendChild(root);
 
-  const panel = root.querySelector(".aics-email-capture-panel");
   const form = root.querySelector(".aics-email-capture-form");
   const input = root.querySelector("#aics-email-capture-input");
   const status = root.querySelector(".aics-email-capture-status");
@@ -80,13 +98,21 @@
     } catch (_) {}
   };
 
-  const show = () => {
+  const sectionLabel = () => {
+    const path = (location.pathname || "/").replace(/\/+$/, "") || "/";
+    return path === "/" ? "homepage" : path.slice(1, 80);
+  };
+
+  const show = (trigger) => {
     if (readDone() || open) return;
+    if (dismissCount() >= MAX_SESSION_DISMISSES) return;
+    lastTrigger = trigger || lastTrigger;
     open = true;
+    shownOnce = true;
     root.hidden = false;
     root.classList.add("is-open");
     document.body.classList.add("aics-email-capture-open");
-    track("email_capture_open", { section: "homepage" });
+    track("email_capture_open", { section: sectionLabel(), trigger: lastTrigger });
     window.setTimeout(() => {
       try {
         input.focus({ preventScroll: true });
@@ -103,48 +129,57 @@
     root.hidden = true;
     document.body.classList.remove("aics-email-capture-open");
     status.textContent = "";
-    if (reschedule && !readDone()) {
+    if (reschedule && !readDone() && dismissCount() < MAX_SESSION_DISMISSES) {
       clearRedisplay();
       redisplayTimer = window.setTimeout(() => {
         redisplayTimer = null;
-        show();
+        show("redisplay");
       }, REDISPLAY_MS);
     }
   };
 
-  const tryFirstShow = () => {
-    if (readDone() || open) return;
-    if (!scrolledEnough) return;
-    if (Date.now() - pageLoadAt < FIRST_DELAY_MS) return;
-    show();
+  const scrollDepth = () => {
+    const doc = document.documentElement;
+    const scrollTop = window.scrollY || doc.scrollTop || 0;
+    const height = Math.max(doc.scrollHeight - window.innerHeight, 1);
+    return scrollTop / height;
   };
 
   const onScroll = () => {
-    if (scrolledEnough) return;
-    if (window.scrollY >= SCROLL_PX || document.documentElement.scrollTop >= SCROLL_PX) {
-      scrolledEnough = true;
-      tryFirstShow();
-    }
+    if (open || readDone()) return;
+    if (scrollDepth() >= SCROLL_RATIO) show("scroll");
+  };
+
+  const onExitIntent = (event) => {
+    if (open || readDone()) return;
+    if (Date.now() - pageLoadAt < EXIT_MIN_MS) return;
+    if (event.clientY > 12) return;
+    if (event.relatedTarget) return;
+    show("exit");
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
+  document.addEventListener("mouseout", onExitIntent);
   onScroll();
-  firstGateTimer = window.setTimeout(() => {
-    firstGateTimer = null;
-    tryFirstShow();
-  }, FIRST_DELAY_MS);
+
+  timeGateTimer = window.setTimeout(() => {
+    timeGateTimer = null;
+    if (!shownOnce) show("time");
+  }, TIME_ON_PAGE_MS);
 
   root.querySelectorAll("[data-aics-email-dismiss]").forEach((el) => {
     el.addEventListener("click", () => {
-      track("email_capture_dismiss", { section: "homepage" });
-      hide({ reschedule: true });
+      bumpDismiss();
+      track("email_capture_dismiss", { section: sectionLabel(), trigger: lastTrigger });
+      hide({ reschedule: dismissCount() < MAX_SESSION_DISMISSES });
     });
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && open) {
-      track("email_capture_dismiss", { section: "homepage", via: "escape" });
-      hide({ reschedule: true });
+      bumpDismiss();
+      track("email_capture_dismiss", { section: sectionLabel(), via: "escape", trigger: lastTrigger });
+      hide({ reschedule: dismissCount() < MAX_SESSION_DISMISSES });
     }
   });
 
@@ -171,7 +206,7 @@
 
     submitBtn.disabled = true;
     status.textContent = "Sending…";
-    track("email_capture_submit_attempt", { section: "homepage" });
+    track("email_capture_submit_attempt", { section: sectionLabel(), trigger: lastTrigger });
 
     const localPart = email.split("@")[0] || "Visitor";
     const payload = {
@@ -208,11 +243,15 @@
     // Always persist locally after a valid submit so the popup never returns.
     markDone();
     clearRedisplay();
-    if (firstGateTimer) {
-      clearTimeout(firstGateTimer);
-      firstGateTimer = null;
+    if (timeGateTimer) {
+      clearTimeout(timeGateTimer);
+      timeGateTimer = null;
     }
-    track("email_capture_submit_success", { section: "homepage", api: apiOk ? "ok" : "local_only" });
+    track("email_capture_submit_success", {
+      section: sectionLabel(),
+      trigger: lastTrigger,
+      status: apiOk ? "ok" : "local_only",
+    });
     status.textContent = apiOk ? "Thanks — you’re on the list." : "Thanks — saved on this device.";
     window.setTimeout(() => hide({ reschedule: false }), 900);
     submitBtn.disabled = false;
