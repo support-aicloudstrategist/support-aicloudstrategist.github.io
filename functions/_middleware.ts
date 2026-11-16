@@ -55,6 +55,7 @@ const indexableExact = new Set([
   "/why/reduce-risk",
   "/privacy",
   "/terms",
+  "/40e44a58612d3ad782ec35d292fa20ce.txt",
 ]);
 
 const legacyRedirects = new Map<string, string>([

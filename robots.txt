@@ -100,3 +100,4 @@ Disallow: /ai-cloud-cost-efficiency-old/
 Disallow: /roi-calculator-old/
 
 Sitemap: https://aicloudstrategist.com/sitemap.xml
+# AI citation index: https://aicloudstrategist.com/llms.txt

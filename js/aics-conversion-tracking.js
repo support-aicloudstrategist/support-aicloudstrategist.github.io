@@ -10,6 +10,9 @@
       utm_source:params.get('utm_source')||'',
       utm_medium:params.get('utm_medium')||'',
       utm_campaign:params.get('utm_campaign')||'',
+      gclid:params.get('gclid')||'',
+      msclkid:params.get('msclkid')||'',
+      li_fat_id:params.get('li_fat_id')||'',
       captured_at:now()
     };
   }
