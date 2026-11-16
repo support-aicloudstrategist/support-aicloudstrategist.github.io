@@ -33,7 +33,7 @@
       <aside class="aics-utility-bar" data-aics-utility-bar aria-label="Service and contact information">
         <div class="aics-utility-inner">
           <span class="aics-utility-trust"><span class="aics-utility-status" aria-hidden="true"></span><span class="aics-utility-trust-copy">${SERVICE_NAME} · India and international delivery</span><span class="aics-utility-mobile-copy">Cost governance · Global delivery</span></span>
-          <span class="aics-utility-contacts"><a href="mailto:contact@aicloudstrategist.com"><span class="aics-utility-email">contact@aicloudstrategist.com</span><span class="aics-utility-email-short">Email</span></a></span>
+          <span class="aics-utility-contacts"><a href="mailto:contact@aicloudstrategist.com"><span class="aics-utility-email">contact@aicloudstrategist.com</span><span class="aics-utility-email-short">Email</span></a> · <a href="tel:+918796302608">+91 87963 02608</a> · <a href="https://wa.me/918796302608">WhatsApp</a></span>
         </div>
       </aside>
       <nav class="aics-nav-shell" aria-label="Primary navigation">
@@ -63,7 +63,7 @@
           <section class="aics-footer-brand-block"><a class="aics-footer-brand" href="/"><span class="aics-footer-mark" aria-hidden="true">AI</span><span>AICloudStrategist</span></a><p>Cloud and AI cost governance for accountable technology decisions.</p><small>AICLOUDSTRATEGIST PRIVATE LIMITED · CIN U62020DC2026PTC470945</small></section>
           <section class="aics-footer-group"><h2>Diagnostic</h2><a href="${SERVICE}">Service scope</a><a href="/resources/cloud-ai-economics-decision-pack/">Representative Decision Pack</a><a href="${FIT_REVIEW}">${CTA_LABEL}</a></section>
           <section class="aics-footer-group"><h2>Company</h2><a href="/about/">About</a><a href="/trust-data-handling/">Trust & data handling</a><a href="/company-details/">Registered company details</a></section>
-          <section class="aics-footer-contact"><h2>Contact</h2><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p></section>
+          <section class="aics-footer-contact"><h2>Contact</h2><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><a href="tel:+918796302608">+91 87963 02608</a><a href="https://wa.me/918796302608">WhatsApp +91 87963 02608</a><p><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p></section>
         </div>
         <div class="aics-footer-bottom"><span>© AICloudStrategist</span><span>${SERVICE_NAME}</span></div>
       </div>`;

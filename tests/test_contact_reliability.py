@@ -77,8 +77,8 @@ class ContactReliabilityTests(unittest.TestCase):
     def test_click_to_call_and_contact_schema_use_dialable_phone_number(self):
         masked_tel = 'tel:+918' + '****' + '0898'
         masked_schema = 'telephone":"+918' + '****' + '0898'
-        canonical_tel = 'tel:+91' + '8065480898'
-        canonical_schema = 'telephone":"+91' + '8065480898'
+        canonical_tel = 'tel:+91' + '8796302608'
+        canonical_schema = 'telephone":"+91' + '8796302608'
         self.assertNotIn(masked_tel, self.source)
         self.assertNotIn(masked_schema, self.source)
         self.assertEqual(self.source.count(canonical_tel), 2)

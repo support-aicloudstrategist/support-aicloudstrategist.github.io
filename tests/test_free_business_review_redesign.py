@@ -72,7 +72,7 @@ def test_form_is_low_friction_with_durable_native_fallback():
 def test_turnaround_and_fallback_contact_are_explicit_and_consistent():
     assert "within 48 working hours" in PAGE
     assert "+91 87963 02608" not in PAGE
-    assert "WhatsApp +91 80654 80898" in PAGE
+    assert "WhatsApp +91 87963 02608" in PAGE
 
 
 

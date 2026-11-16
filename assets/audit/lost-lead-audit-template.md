@@ -121,4 +121,4 @@ If inputs are unavailable, write `UNKNOWN` and show what data is needed.
 
 — **AICloudStrategist**
 Director, AICloudStrategist  
-contact@aicloudstrategist.com · +91 80654 80898 · WhatsApp +91 87963 02608
+contact@aicloudstrategist.com · +91 87963 02608 · WhatsApp +91 87963 02608

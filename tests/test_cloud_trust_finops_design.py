@@ -31,7 +31,7 @@ class CloudTrustFinOpsDesignTests(unittest.TestCase):
         self.assertEqual(self.html.count('data-aics-global-footer'), 1)
         self.assertNotIn('data-aics-footer-mount', self.html)
         self.assertRegex(self.html, r'(?s)<footer\b[^>]*data-aics-global-footer[^>]*>.*?</footer>\s*</body>')
-        self.assertIn('href="tel:+918065480898"', self.html)
+        self.assertIn('href="tel:+918796302608"', self.html)
 
     def test_page_sections_override_shared_shell_vertical_padding(self):
         style = re.search(r"<style>(.*?)</style>", self.html, re.S).group(1)

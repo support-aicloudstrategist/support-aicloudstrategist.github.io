@@ -216,12 +216,12 @@ def test_no_customer_journey_points_to_the_dead_calendly_route():
 
 def test_customer_click_to_call_links_are_not_masked_or_invalid():
     masked_tel = "tel:+918" + "****" + "0898"
-    canonical_tel = "tel:+91" + "8065480898"
+    canonical_tel = "tel:+91" + "8796302608"
     click_to_call_pages = 0
     for path in ROOT.rglob("*.html"):
         html = path.read_text(encoding="utf-8", errors="replace")
         assert masked_tel not in html, path
-        if "href=\"tel:" in html and "+91 80654 80898" in html:
+        if "href=\"tel:" in html and "+91 87963 02608" in html:
             assert canonical_tel in html, path
             click_to_call_pages += 1
     assert click_to_call_pages >= 5

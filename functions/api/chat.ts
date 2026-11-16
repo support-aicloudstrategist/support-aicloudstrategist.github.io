@@ -77,7 +77,7 @@ const KNOWLEDGE = [
     keys: ["about", "company", "legal", "cin", "who are you"],
     title: "Company",
     answer:
-      "Public brand: AICloudStrategist. Legal entity: AICLOUDSTRATEGIST PRIVATE LIMITED. CIN U62020DC2026PTC470945. Contact: contact@aicloudstrategist.com · +91 80654 80898.",
+      "Public brand: AICloudStrategist. Legal entity: AICLOUDSTRATEGIST PRIVATE LIMITED. CIN U62020DC2026PTC470945. Contact: contact@aicloudstrategist.com · +91 87963 02608.",
   },
 ];
 

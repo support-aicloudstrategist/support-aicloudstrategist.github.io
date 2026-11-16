@@ -28,5 +28,5 @@ def test_tel_links_are_clickable_digits_not_masked():
 
 def test_shared_navigation_has_a_click_to_call_route_for_visible_number():
     nav = (ROOT / "js" / "site-navigation.js").read_text(encoding="utf-8")
-    assert "+91 80654 80898" in nav
-    assert any(value == "+918065480898" for value in TEL_RE.findall(nav))
+    assert "+91 87963 02608" in nav
+    assert any(value == "+918796302608" for value in TEL_RE.findall(nav))
