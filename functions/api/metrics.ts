@@ -65,44 +65,56 @@ function extractBearerToken(request: Request) {
   return normalizeToken(raw, 512);
 }
 
+// Same read-only Company Agents hash used by /api/leads (hash only; plaintext never stored in repo).
+const PRODUCT_READER_SHA256 = "95c7ac6b1f2ed3024b6bb22333cb9cb1414c01c4d6c1179ff967d857068bacdf";
+
 type AuthResult =
   | { ok: true; token: string }
   | { ok: false; status: number; error: string; code: string };
 
-function authorize(request: Request, env: MetricsEnv): AuthResult {
+async function sha256Hex(value: string) {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function authorize(request: Request, env: MetricsEnv): Promise<AuthResult> {
   const configured = normalizeToken(env.AICS_REPORT_TOKEN, 512);
+  const supplied = extractBearerToken(request);
+
+  if (!supplied) {
+    return {
+      ok: false,
+      status: 401,
+      code: "missing_authorization",
+      error: "No access key provided. Paste your access key and click Load.",
+    };
+  }
+
+  // Accept either the Pages secret or the shared Company Agents reader token.
+  if (configured && supplied === configured) {
+    return { ok: true, token: supplied };
+  }
+  if ((await sha256Hex(supplied)) === PRODUCT_READER_SHA256) {
+    return { ok: true, token: supplied };
+  }
+
   if (!configured) {
     return {
       ok: false,
       status: 503,
       code: "server_token_missing",
       error:
-        "AICS_REPORT_TOKEN is not set on this Cloudflare Pages environment. Add it under Pages → Settings → Environment variables (Production), then redeploy.",
+        "Server misconfigured: AICS_REPORT_TOKEN is missing in Cloudflare Pages Production. Add the secret, then redeploy.",
     };
   }
 
-  const supplied = extractBearerToken(request);
-  if (!supplied) {
-    return {
-      ok: false,
-      status: 401,
-      code: "missing_authorization",
-      error: "Missing Authorization Bearer token. Paste the report token in the dashboard and click Load.",
-    };
-  }
-
-  // Exact match after normalization (case-sensitive — secrets usually are).
-  if (supplied !== configured) {
-    return {
-      ok: false,
-      status: 401,
-      code: "invalid_token",
-      error:
-        "Invalid report token. Check you copied AICS_REPORT_TOKEN from the Production environment (not Preview), with no extra spaces or quotes.",
-    };
-  }
-
-  return { ok: true, token: supplied };
+  return {
+    ok: false,
+    status: 401,
+    code: "invalid_token",
+    error:
+      "Access key does not match. Use the Production AICS_REPORT_TOKEN (not Preview), or the Company Agents reader key.",
+  };
 }
 
 function dayKey(iso: string) {
@@ -235,7 +247,7 @@ async function loadLeads(
 export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) => {
   const started = Date.now();
   try {
-    const auth = authorize(request, env);
+    const auth = await authorize(request, env);
     if (!auth.ok) {
       return new Response(
         JSON.stringify({ ok: false, error: auth.error, code: auth.code }),

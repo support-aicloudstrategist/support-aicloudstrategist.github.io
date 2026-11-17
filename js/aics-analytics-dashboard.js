@@ -86,9 +86,9 @@
       const data = await response.json().catch(() => ({}));
       if (!response.ok || data.ok === false) {
         const friendly = {
-          server_token_missing: "Access is not configured on the server yet. Ask an admin to add the analytics access key.",
-          missing_authorization: "Enter your access key to continue.",
-          invalid_token: "That access key is not valid. Check it and try again.",
+          missing_authorization: "No access key provided. Paste your key and click Load.",
+          invalid_token: "Access key does not match. Copy AICS_REPORT_TOKEN from Cloudflare Pages → Production (not Preview).",
+          server_token_missing: "Server misconfigured: production AICS_REPORT_TOKEN is missing. Add it in Cloudflare Pages, then redeploy.",
         };
         throw new Error(friendly[data.code] || data.error || `Request failed (${response.status})`);
       }
