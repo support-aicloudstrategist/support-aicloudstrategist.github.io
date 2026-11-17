@@ -46,3 +46,5 @@
 
 /favicon.ico
   Cache-Control: public, max-age=0, must-revalidate
+/downloads/gated/*
+  X-Robots-Tag: noindex, nofollow, noarchive
