@@ -63,6 +63,8 @@ A: Free fit review; typical single-estate diagnostic USD 2,500–3,000 (India IN
 - [Enterprise Cloud Cost Optimization](https://aicloudstrategist.com/enterprise-cloud-cost-optimization/)
 
 - [Cloud Waste Triage Quiz](https://aicloudstrategist.com/cloud-waste-triage/)
+- [Cloudability Alternatives](https://aicloudstrategist.com/cloudability-alternatives/)
+- [ProsperOps Alternatives: Savings-Share vs Fixed-Fee](https://aicloudstrategist.com/prosperops-alternatives/)
 
 ## Free FinOps capture tools
 - Cloud waste triage (result before contact)
