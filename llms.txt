@@ -61,3 +61,5 @@ A: Free fit review; typical single-estate diagnostic USD 2,500–3,000 (India IN
 - [FinOps Services India](https://aicloudstrategist.com/finops-services-india/)
 - [Kubernetes Cost Allocation](https://aicloudstrategist.com/kubernetes-cost-allocation/)
 - [Enterprise Cloud Cost Optimization](https://aicloudstrategist.com/enterprise-cloud-cost-optimization/)
+
+- [Cloud Waste Triage Quiz](https://aicloudstrategist.com/cloud-waste-triage/)
