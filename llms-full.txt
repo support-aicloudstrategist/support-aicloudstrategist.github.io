@@ -69,3 +69,7 @@
 - [Why Is Our AI & GPU Cloud Bill Rising?](https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/): Unit-economics checklist for AWS Bedrock, Azure OpenAI, Vertex AI and Kubernetes GPU spend.
 - [AI Agent & Cloud Automation Cost Checklist](https://aicloudstrategist.com/resources/ai-agent-and-cloud-automation-cost-checklist/): Six pre-production governance checks for permissions, retry loop ceilings and cloud spend ownership.
 - Direct 30-Minute Fit Review Calendar: https://cal.com/contact-ai-cloud-8abdmc/30-min-fit-review
+
+- [How to Explain Cloud & AI COGS to the Board](https://aicloudstrategist.com/resources/cloud-cogs-for-the-board-and-saas-gross-margin/)
+- [Kubernetes EKS, AKS & GKE Cost Allocation Guide](https://aicloudstrategist.com/resources/kubernetes-eks-aks-gke-cost-allocation-guide/)
+- [Cloud Optimization Tools vs Unified FinOps Platforms (2026)](https://aicloudstrategist.com/resources/europe-saas-ai-finops-vs-cloud-cost-tools-comparison/)

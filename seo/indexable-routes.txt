@@ -16,6 +16,8 @@
 /resources/gpu-and-llm-inference-cost-governance/
 /resources/ai-agent-and-cloud-automation-cost-checklist/
 /resources/europe-saas-ai-finops-vs-cloud-cost-tools-comparison/
+/resources/cloud-cogs-for-the-board-and-saas-gross-margin/
+/resources/kubernetes-eks-aks-gke-cost-allocation-guide/
 /about/
 /privacy
 /terms
