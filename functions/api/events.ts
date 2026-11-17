@@ -175,6 +175,12 @@ export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) =
   if (!props.country && cf?.country) props.country = clean(cf.country, 8).toUpperCase();
   if (!props.browser) props.browser = browserFromUa(request.headers.get("User-Agent") || "");
 
+  // Protect Cloudflare Workers KV free-tier 1,000/day write limit: passive heartbeats/scrolls go to GA4 only; persist high-intent conversion signals to KV.
+  const passiveHeartbeatEvents = new Set(["presence_ping", "dwell_tick", "scroll_depth", "page_view"]);
+  if (passiveHeartbeatEvents.has(name)) {
+    return new Response(JSON.stringify({ ok: true, mode: "ga4_only_kv_protected" }), { status: 202, headers });
+  }
+
   const receivedAt = new Date().toISOString();
   const id = `event:${receivedAt.slice(0, 10)}:${crypto.randomUUID()}`;
   await env.LEAD_LOG.put(
