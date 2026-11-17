@@ -101,3 +101,4 @@ Disallow: /roi-calculator-old/
 
 Sitemap: https://aicloudstrategist.com/sitemap.xml
 # AI citation index: https://aicloudstrategist.com/llms.txt
+# Extended AI reference: https://aicloudstrategist.com/llms-full.txt

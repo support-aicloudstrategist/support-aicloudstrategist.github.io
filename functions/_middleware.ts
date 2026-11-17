@@ -207,15 +207,31 @@ function withGeoHeaders(headers: Headers, geo: { country: string; currency: "INR
   return next;
 }
 
+const GA4_MEASUREMENT_ID = "G-5F6Y7JZFB5";
+
 function injectGeoScript(response: Response, geo: { country: string; currency: "INR" | "USD" }, headers: Headers): Response {
   const payload = JSON.stringify(geo).replace(/</g, "\\u003c");
+  let sawGaTag = false;
   const transformed = new HTMLRewriter()
+    .on('script[src*="googletagmanager.com/gtag/js"]', {
+      element() {
+        sawGaTag = true;
+      },
+    })
     .on("head", {
       element(element) {
         element.append(
           `<script>window.__AICS_GEO__=${payload};</script>`,
           { html: true },
         );
+        element.onEndTag((endTag) => {
+          if (!sawGaTag) {
+            endTag.before(
+              `<script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.__AICS_GA4_INITIALIZED__=true;gtag('js',new Date());gtag('config','${GA4_MEASUREMENT_ID}',{transport_type:'beacon'});</script>`,
+              { html: true },
+            );
+          }
+        });
       },
     })
     .transform(response);
@@ -254,7 +270,7 @@ function buildSitemapXml(origin: string): string {
   const urls = sitemapEntries
     .map(
       (entry) =>
-        `  <url><loc>${origin}${entry.loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${entry.changefreq}</changefreq><priority>${entry.priority}</priority></url>`,
+        `  <url><loc>${origin}${entry.loc}</loc><lastmod>${lastmod}</lastmod></url>`,
     )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n<!-- middleware-sitemap-17 -->\n`;
@@ -295,6 +311,14 @@ export const onRequest: PagesFunction = async (context) => {
   // API/functions responses must pass through unchanged (pathnames like /api/chat
   // look "extensionless" and would otherwise be treated as HTML documents).
   if (pathname === "/api" || pathname.startsWith("/api/")) return response;
+  if (
+    pathname === "/robots.txt"
+    || pathname === "/llms.txt"
+    || pathname === "/llms-full.txt"
+    || pathname === "/40e44a58612d3ad782ec35d292fa20ce.txt"
+  ) {
+    return response;
+  }
   const accept = context.request.headers.get("Accept") || "";
   const filename = pathname?.split("/").pop() || "";
   const isHtmlPath = !filename.includes(".") || filename.toLowerCase().endsWith(".html");

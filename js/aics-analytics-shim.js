@@ -1,5 +1,6 @@
 (function(){
   var endpoint='/api/events';
+  var gaMeasurementId='G-5F6Y7JZFB5';
   var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign','service','device','trigger','via','api']);
   var aliases={
     'cta whatsapp click':'whatsapp_click',
@@ -26,10 +27,26 @@
     var event={name:normalizeName(name),path:location.pathname,session:sessionId(),props:props};
     window.dataLayer=window.dataLayer||[];
     window.dataLayer.push({event:'aics_'+event.name,aics:event});
+    if(typeof window.gtag==='function'&&event.name!=='page_view'){try{window.gtag('event',event.name,props);}catch(e){}}
     send(event);
   }
   window.plausible=window.plausible||record;
-  window.aicsAnalytics={track:record,mode:'first-party-kv',privacy:'non-PII allowlist'};
+  window.aicsAnalytics={track:record,mode:'first-party-kv+ga4',privacy:'non-PII allowlist'};
+  function loadGoogleAnalytics(){
+    if(!/^G-[A-Z0-9]+$/i.test(gaMeasurementId))return;
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+    if(window.__AICS_GA4_INITIALIZED__)return;
+    window.__AICS_GA4_INITIALIZED__=true;
+    if(!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')){
+      var gs=document.createElement('script');
+      gs.async=true;
+      gs.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(gaMeasurementId);
+      document.head.appendChild(gs);
+    }
+    window.gtag('js',new Date());
+    window.gtag('config',gaMeasurementId,{send_page_view:true,transport_type:'beacon'});
+  }
   function acquisition(){var params=new URLSearchParams(location.search),host='';try{host=new URL(document.referrer).hostname.toLowerCase();}catch(e){}var provider=params.get('utm_source')||'';if(!provider){if(host.indexOf('chatgpt.com')>-1)provider='chatgpt';else if(host.indexOf('perplexity.ai')>-1)provider='perplexity';else if(host.indexOf('google.')>-1)provider='google';else if(host.indexOf('bing.com')>-1)provider='bing';else if(host.indexOf('claude.ai')>-1)provider='claude';else if(host.indexOf('gemini.google.com')>-1)provider='gemini';else provider=host?'referral':'direct';}var ft={utm_source:provider.slice(0,120),utm_medium:(params.get('utm_medium')||'organic_or_direct').slice(0,120),utm_campaign:(params.get('utm_campaign')||'').slice(0,120),gclid:(params.get('gclid')||'').slice(0,120),msclkid:(params.get('msclkid')||'').slice(0,120),li_fat_id:(params.get('li_fat_id')||'').slice(0,120),referrer:document.referrer.slice(0,240)};try{if(!sessionStorage.getItem('aics_first_touch_v1'))sessionStorage.setItem('aics_first_touch_v1',JSON.stringify(ft));}catch(e){}return{source:'browser',provider:ft.utm_source,channel:ft.utm_medium,campaign:ft.utm_campaign,device:deviceClass()};}
   function loadCloudflareWebAnalytics(){
     // Optional manual beacon if dashboard auto-inject is off. Token from meta only — never hardcode secrets in HTML if unused.
@@ -44,6 +61,7 @@
     document.head.appendChild(s);
   }
   function boot(){
+    loadGoogleAnalytics();
     loadCloudflareWebAnalytics();
     var acq=acquisition();
     record('page_view',{props:acq});
