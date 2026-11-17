@@ -272,7 +272,7 @@
 
   addBubble(
     "assistant",
-    "Hi. Ask about our fixed-fee Cloud & AI Cost Governance Diagnostic—scope, pricing, process, the platforms we cover, or the free fit review."
+    "Hi. Ask about our fixed-fee Cloud & AI Cost Governance Diagnostic—scope, pricing, process, platforms, or the free fit review. WhatsApp or work email works best if you want a follow-up checklist."
   );
 
   const track = (name, props) => {
@@ -285,20 +285,65 @@
     } catch (_) {}
   };
 
-  const setOpen = (open) => {
+  const setOpen = (open, source = "launcher") => {
     panel.hidden = !open;
     launcher.setAttribute("aria-expanded", String(open));
     root.classList.toggle("is-open", open);
     if (open) {
-      track("chat_open", { section: "chatbot", source: "launcher" });
+      track("chat_open", { section: "chatbot", source });
       if (!reducedMotion) input.focus();
     }
   };
 
-  launcher.addEventListener("click", () => setOpen(panel.hidden));
-  closer.addEventListener("click", () => setOpen(false));
+  launcher.addEventListener("click", () => setOpen(panel.hidden, "launcher"));
+  closer.addEventListener("click", () => setOpen(false, "close"));
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !panel.hidden) setOpen(false);
+    if (event.key === "Escape" && !panel.hidden) setOpen(false, "escape");
+  });
+
+  // Behavioral progressive capture: open after dwell / scroll / exit (once per session).
+  const CHAT_BEHAVIOR_KEY = "aicsChatBehaviorOpened";
+  const chatBehaviorDone = () => {
+    try {
+      return sessionStorage.getItem(CHAT_BEHAVIOR_KEY) === "1";
+    } catch (_) {
+      return false;
+    }
+  };
+  const markChatBehavior = () => {
+    try {
+      sessionStorage.setItem(CHAT_BEHAVIOR_KEY, "1");
+    } catch (_) {}
+  };
+  const pageLoadedAt = Date.now();
+  const tryBehaviorOpen = (reason) => {
+    if (chatBehaviorDone() || !panel.hidden) return;
+    if (document.querySelector(".aics-email-capture.is-open") || document.body.classList.contains("aics-email-capture-open")) return;
+    if (alreadyCaptured()) return;
+    markChatBehavior();
+    setOpen(true, reason);
+    if (!nameAsked && !profile.name && !emailCaptured) {
+      nameAsked = true;
+      emailAsked = true;
+      addBubble("assistant", NAME_ASK);
+    }
+  };
+  window.setTimeout(() => tryBehaviorOpen("dwell_40s"), 40000);
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (chatBehaviorDone()) return;
+      const doc = document.documentElement;
+      const ratio = (window.scrollY || doc.scrollTop || 0) / Math.max(doc.scrollHeight - window.innerHeight, 1);
+      if (ratio >= 0.5) tryBehaviorOpen("scroll_50");
+    },
+    { passive: true }
+  );
+  document.addEventListener("mouseout", (ev) => {
+    if (chatBehaviorDone()) return;
+    if (Date.now() - pageLoadedAt < 35000) return;
+    if (ev.clientY > 12 || ev.relatedTarget) return;
+    tryBehaviorOpen("exit_intent_chat");
   });
 
   form.addEventListener("submit", async (event) => {

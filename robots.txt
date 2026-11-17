@@ -62,6 +62,15 @@ Allow: /
 User-agent: BingPreview
 Allow: /
 
+User-agent: CopilotBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 User-agent: facebookexternalhit
 Allow: /
 

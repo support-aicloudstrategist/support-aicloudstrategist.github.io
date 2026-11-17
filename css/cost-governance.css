@@ -3594,6 +3594,16 @@ body.has-intro.is-intro-docking .site-footer {
 .aics-email-capture-consent input {
   margin-top: 0.15rem;
 }
+.aics-email-capture-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+.aics-email-capture-actions .button {
+  flex: 1 1 140px;
+  text-align: center;
+}
 .aics-email-capture-submit {
   width: 100%;
   justify-content: center;
