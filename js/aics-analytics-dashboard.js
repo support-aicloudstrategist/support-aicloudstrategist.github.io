@@ -431,7 +431,19 @@
     document.getElementById("content-table").innerHTML =
       contentRows || `<tr><td colspan="6" class="muted">No content metrics yet.</td></tr>`;
 
-    const leadRows = (leads.items || [])
+    renderLeads(leads);
+    renderRealtime(data.realtime || {});
+    const when = data.generated_at ? String(data.generated_at).replace("T", " ").slice(0, 19) : "";
+    document.getElementById("generated-at").textContent = when ? `Updated ${when}` : "";
+  };
+
+  const renderLeads = (leads) => {
+    const items = (leads && leads.items) || [];
+    const count = leads && leads.count != null ? leads.count : items.length;
+    document.getElementById("kpi-subscribers").textContent = fmt(count);
+    document.getElementById("delta-subscribers").textContent = "Form submissions";
+    document.getElementById("leads-count").textContent = fmt(count);
+    const leadRows = items
       .map((lead) => {
         const page = lead.landing_page || lead.stage || "—";
         return `<tr>
@@ -444,13 +456,8 @@
         </tr>`;
       })
       .join("");
-    document.getElementById("leads-count").textContent = fmt(leads.count || 0);
     document.getElementById("leads-table").innerHTML =
       leadRows || `<tr><td colspan="6" class="muted">No contacts in this range yet.</td></tr>`;
-
-    renderRealtime(data.realtime || {});
-    const when = data.generated_at ? String(data.generated_at).replace("T", " ").slice(0, 19) : "";
-    document.getElementById("generated-at").textContent = when ? `Updated ${when}` : "";
   };
 
   const queryUrl = (mode = "dashboard") => {
@@ -473,6 +480,9 @@
     try {
       const data = await fetchJson(`${queryUrl("realtime")}&realtime=1`, auth, 12000);
       if (data.realtime) renderRealtime(data.realtime);
+      // Same contact-* records as /api/contact email notifications.
+      if (data.leads) renderLeads(data.leads);
+      liveUpdated.textContent = "Updating live · contacts included";
     } catch (error) {
       liveUpdated.textContent = "Live update paused";
     }

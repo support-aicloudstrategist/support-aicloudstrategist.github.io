@@ -229,13 +229,17 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
 
   const textBody = `New AICloudStrategist contact enquiry\n\nPipeline stage: NEW\nLead status: UNREVIEWED\nOwner: AICloudStrategist Growth Operations\nContact ID: ${contactId}\nSubmitted at: ${submittedAt}\nName: ${name}\nContact: ${contact}\nCompany: ${company || "not provided"}\nRole: ${role || "not provided"}\nService interest: ${service || "not specified"}\nBuyer stage: ${stage || "not specified"}\nPrivacy consent: ${privacyConsent || "not provided"}\nNeed: ${need}\nWebsite: ${website || "not provided"}\nMessage: ${message || "not provided"}\nLanding page: ${landingPage || "not captured"}\nReferrer: ${referrer || "direct or unavailable"}\nUTM source: ${utmSource || "not set"}\nUTM medium: ${utmMedium || "not set"}\nUTM campaign: ${utmCampaign || "not set"}\nSource: contact page\n`;
 
-  const log = context.env.CONTACT_LOG || context.env.LEAD_LOG;
-  if (!log) {
+  const primaryLog = context.env.CONTACT_LOG || context.env.LEAD_LOG;
+  if (!primaryLog) {
     return new Response(JSON.stringify({ ok: false, error: "Lead storage is temporarily unavailable. Please use WhatsApp or email." }), {
       status: 503,
       headers: jsonHeaders,
     });
   }
+  // Keep both bindings in sync when present so analytics Leads and email share the same records.
+  const leadStores = [context.env.CONTACT_LOG, context.env.LEAD_LOG].filter(
+    (store, index, all): store is KVNamespace => Boolean(store) && all.indexOf(store) === index,
+  );
 
   const sourceHint = clean(payload.source).toLowerCase();
   const derivedSource =
@@ -267,7 +271,13 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   };
 
   try {
-    await log.put(contactId, JSON.stringify({ ...leadRecord, notification_status: "notification_pending" }), { metadata: { submitted_at: submittedAt, name } });
+    await Promise.all(
+      leadStores.map((store) =>
+        store.put(contactId, JSON.stringify({ ...leadRecord, notification_status: "notification_pending" }), {
+          metadata: { submitted_at: submittedAt, name },
+        }),
+      ),
+    );
   } catch (error) {
     const messageText = error instanceof Error ? error.message : "Lead storage failed.";
     return new Response(JSON.stringify({ ok: false, error: "Lead storage failed. Please retry or use WhatsApp.", details: messageText.slice(0, 300) }), {
@@ -298,10 +308,19 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   }
 
   try {
-    await log.put(
-      contactId,
-      JSON.stringify({ ...leadRecord, notification_status: notificationStatus, notification_mode: notificationMode, notification_error: notificationError }),
-      { metadata: { submitted_at: submittedAt, name } }
+    await Promise.all(
+      leadStores.map((store) =>
+        store.put(
+          contactId,
+          JSON.stringify({
+            ...leadRecord,
+            notification_status: notificationStatus,
+            notification_mode: notificationMode,
+            notification_error: notificationError,
+          }),
+          { metadata: { submitted_at: submittedAt, name } },
+        ),
+      ),
     );
   } catch {
     // The lead is already durably stored. A notification-status refresh failure should not create a false buyer failure.

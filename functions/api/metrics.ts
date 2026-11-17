@@ -176,6 +176,62 @@ async function getMany(store: KVNamespace, names: string[], batchSize = 40) {
   return out;
 }
 
+async function loadLeads(
+  stores: Array<KVNamespace | undefined>,
+  cutoff: number,
+  rangeEnd: number,
+  maxKeys = 500,
+) {
+  const leads: Array<Record<string, string>> = [];
+  const seen = new Set<string>();
+
+  for (const store of stores) {
+    if (!store) continue;
+    const leadKeys = await listKeysForPrefix(store, "contact-", maxKeys);
+    const leadBodies = await getMany(
+      store,
+      leadKeys.map((k) => k.name),
+      40,
+    );
+    for (const key of leadKeys) {
+      if (seen.has(key.name)) continue;
+      const raw = leadBodies.get(key.name);
+      if (!raw) continue;
+      try {
+        const lead = JSON.parse(raw) as StoredLead;
+        const submittedAt = clean(lead.submitted_at, 40);
+        const ts = Date.parse(submittedAt);
+        if (Number.isFinite(ts) && (ts < cutoff || ts > rangeEnd)) continue;
+        seen.add(key.name);
+        leads.push({
+          contact_id: clean(lead.contact_id || key.name, 120),
+          submitted_at: submittedAt,
+          name: clean(lead.name, 160),
+          email: clean(lead.contact, 320),
+          company: clean(lead.company, 160),
+          role: clean(lead.role, 160),
+          stage: clean(lead.stage, 160),
+          source: clean(lead.source, 80),
+          service: clean(lead.service, 160),
+          landing_page: clean(lead.landing_page, 400),
+          referrer: clean(lead.referrer, 400),
+          utm_source: clean(lead.utm_source, 120),
+          utm_medium: clean(lead.utm_medium, 120),
+          utm_campaign: clean(lead.utm_campaign, 120),
+          need: clean(lead.need, 240),
+          message: clean(lead.message, 400),
+          lead_status: clean(lead.lead_status, 40),
+        });
+      } catch {
+        // Skip malformed lead rows.
+      }
+    }
+  }
+
+  leads.sort((a, b) => String(b.submitted_at).localeCompare(String(a.submitted_at)));
+  return leads;
+}
+
 export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) => {
   const started = Date.now();
   try {
@@ -380,6 +436,8 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
     feed.sort((a, b) => String(b.at).localeCompare(String(a.at)));
 
     if (realtimeOnly) {
+      // Same contact records email notifications use (/api/contact → contact-* KV).
+      const liveLeads = await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 300);
       return new Response(
         JSON.stringify({
           ok: true,
@@ -396,7 +454,13 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
             locations: topEntries(liveLocations, 15),
             feed: feed.slice(0, 25),
             refresh_hint_seconds: 15,
-            identity: "Aggregated only — no names or emails in real-time views.",
+            identity: "Live visitor panels are aggregated only. Contacts below are voluntary form submissions.",
+          },
+          leads: {
+            count: liveLeads.length,
+            identity_policy:
+              "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms.",
+            items: liveLeads.slice(0, 200),
           },
         }),
         { status: 200, headers },
@@ -429,44 +493,7 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
       sessions: dailySessions[day] || 0,
     }));
 
-    const leads: Array<Record<string, string>> = [];
-    if (leadStore) {
-      const leadKeys = await listKeysForPrefix(leadStore, "contact-", 500);
-      const leadBodies = await getMany(leadStore, leadKeys.map((k) => k.name), 40);
-      for (const key of leadKeys) {
-        const raw = leadBodies.get(key.name);
-        if (!raw) continue;
-        try {
-          const lead = JSON.parse(raw) as StoredLead;
-          const submittedAt = clean(lead.submitted_at, 40);
-          const ts = Date.parse(submittedAt);
-          if (Number.isFinite(ts) && (ts < cutoff || ts > rangeEnd)) continue;
-          leads.push({
-            contact_id: clean(lead.contact_id || key.name, 120),
-            submitted_at: submittedAt,
-            name: clean(lead.name, 160),
-            email: clean(lead.contact, 320),
-            company: clean(lead.company, 160),
-            role: clean(lead.role, 160),
-            stage: clean(lead.stage, 160),
-            source: clean(lead.source, 80),
-            service: clean(lead.service, 160),
-            landing_page: clean(lead.landing_page, 400),
-            referrer: clean(lead.referrer, 400),
-            utm_source: clean(lead.utm_source, 120),
-            utm_medium: clean(lead.utm_medium, 120),
-            utm_campaign: clean(lead.utm_campaign, 120),
-            need: clean(lead.need, 240),
-            message: clean(lead.message, 400),
-            lead_status: clean(lead.lead_status, 40),
-          });
-        } catch {
-          // Skip malformed lead rows.
-        }
-      }
-    }
-
-    leads.sort((a, b) => String(b.submitted_at).localeCompare(String(a.submitted_at)));
+    const leads = await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 500);
 
     const pageViews = totals.page_view || 0;
     const conversions =
