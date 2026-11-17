@@ -54,3 +54,10 @@ A: Free fit review; typical single-estate diagnostic USD 2,500–3,000 (India IN
 - [How to Explain Cloud & AI COGS to the Board](https://aicloudstrategist.com/resources/cloud-cogs-for-the-board-and-saas-gross-margin/)
 - [Kubernetes EKS, AKS & GKE Cost Allocation Guide](https://aicloudstrategist.com/resources/kubernetes-eks-aks-gke-cost-allocation-guide/)
 - [Cloud Optimization Tools vs Unified FinOps Platforms (2026)](https://aicloudstrategist.com/resources/europe-saas-ai-finops-vs-cloud-cost-tools-comparison/)
+
+- [AWS Cost Optimization](https://aicloudstrategist.com/aws-cost-optimization/)
+- [Azure Cost Optimization](https://aicloudstrategist.com/azure-cost-optimization/)
+- [GCP Cost Optimization](https://aicloudstrategist.com/gcp-cost-optimization/)
+- [FinOps Services India](https://aicloudstrategist.com/finops-services-india/)
+- [Kubernetes Cost Allocation](https://aicloudstrategist.com/kubernetes-cost-allocation/)
+- [Enterprise Cloud Cost Optimization](https://aicloudstrategist.com/enterprise-cloud-cost-optimization/)
