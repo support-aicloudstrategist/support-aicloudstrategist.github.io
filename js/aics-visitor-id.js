@@ -144,7 +144,9 @@
 
   // WhatsApp click-to-chat attribution: encode visitorId + path + UTMs into prefilled text.
   function firstTouch() {
-    try { return JSON.parse(localStorage.getItem('aics_first_touch_v1') || '{}'); } catch (e) { return {}; }
+    try {
+      return JSON.parse(sessionStorage.getItem('aics_first_touch_v1') || localStorage.getItem('aics_first_touch_v1') || '{}');
+    } catch (e) { return {}; }
   }
   function buildAicsWhatsAppHref(intent) {
     var ft = firstTouch();
