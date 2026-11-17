@@ -53,6 +53,7 @@ const indexableExact = new Set([
   "/finops-services-india",
   "/kubernetes-cost-allocation",
   "/enterprise-cloud-cost-optimization",
+  "/cloud-waste-triage",
   "/resources",
   "/resources/what-is-cloud-cost-ownership",
   "/resources/why-fixed-fee-diagnostics-beat-savings-share",
@@ -327,6 +328,7 @@ const sitemapEntries: Array<{ loc: string; lastmod: string }> = [
   { loc: "/finops-services-india/", lastmod: "2026-11-17" },
   { loc: "/kubernetes-cost-allocation/", lastmod: "2026-11-17" },
   { loc: "/enterprise-cloud-cost-optimization/", lastmod: "2026-11-17" },
+  { loc: "/cloud-waste-triage/", lastmod: "2026-11-17" },
   { loc: "/privacy", lastmod: "2026-11-10" },
   { loc: "/terms", lastmod: "2026-11-10" },
 ];
