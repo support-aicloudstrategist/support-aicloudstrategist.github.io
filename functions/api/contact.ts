@@ -233,12 +233,21 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     });
   }
 
+  const sourceHint = clean(payload.source).toLowerCase();
+  const derivedSource =
+    sourceHint ||
+    (stage.toLowerCase().includes("email capture")
+      ? "email-capture"
+      : stage.toLowerCase().includes("fit review")
+        ? "fit-review"
+        : "contact-form");
+
   const leadRecord = {
     contact_id: contactId,
     submitted_at: submittedAt,
     name, contact, company, role, service, stage, need, website, message,
     privacy_consent: privacyConsent,
-    source: "contact-page",
+    source: derivedSource.slice(0, 80),
     landing_page: landingPage,
     referrer,
     utm_source: utmSource,

@@ -37,6 +37,7 @@
     const payload = Object.fromEntries(new FormData(form).entries());
     payload.service = 'Cloud & AI Cost Governance Diagnostic';
     payload.stage = 'Fit review requested';
+    payload.source = 'fit-review';
 
     track('form_submit_attempt', {
       form: 'cloud_ai_cost_fit_review',

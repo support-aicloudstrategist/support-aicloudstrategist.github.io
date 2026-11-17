@@ -58,6 +58,9 @@ const indexableExact = new Set([
   "/40e44a58612d3ad782ec35d292fa20ce.txt",
 ]);
 
+/** Private HTML routes served with noindex (token-gated dashboards, etc.). */
+const privateExact = new Set(["/analytics"]);
+
 const legacyRedirects = new Map<string, string>([
   ["/index.html", "/"],
   ["/about.html", "/about/"],
@@ -332,6 +335,18 @@ export const onRequest: PagesFunction = async (context) => {
     headers.set("Content-Type", "text/html; charset=utf-8");
     if (requestUrl.hostname.endsWith(".pages.dev")) headers.set("X-Robots-Tag", "noindex, follow, noarchive");
     else headers.delete("X-Robots-Tag");
+    return injectGeoScript(
+      new Response(response.body, { status: response.status, statusText: response.statusText, headers }),
+      geo,
+      headers,
+    );
+  }
+
+  if (privateExact.has(pathname)) {
+    const headers = withGeoHeaders(response.headers, geo);
+    headers.set("Content-Type", "text/html; charset=utf-8");
+    headers.set("Cache-Control", "no-store");
+    headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
     return injectGeoScript(
       new Response(response.body, { status: response.status, statusText: response.statusText, headers }),
       geo,

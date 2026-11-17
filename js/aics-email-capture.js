@@ -68,8 +68,10 @@
       <button type="button" class="aics-email-capture-close" data-aics-email-dismiss aria-label="Close">×</button>
       <p class="eyebrow">Stay in the loop</p>
       <h2 id="aics-email-capture-title">Get ownership-first FinOps notes</h2>
-      <p class="aics-email-capture-lead">Leave your work email for short updates on cloud cost ownership and the fixed-fee diagnostic. No billing files needed.</p>
+      <p class="aics-email-capture-lead">After you’ve spent time on this page, leave a work email for short updates on cloud cost ownership and the fixed-fee diagnostic. Opt-in only — we never collect emails from browsing alone.</p>
       <form class="aics-email-capture-form" novalidate>
+        <label class="sr-only" for="aics-email-capture-name">First name (optional)</label>
+        <input id="aics-email-capture-name" name="name" type="text" autocomplete="given-name" maxlength="80" placeholder="First name (optional)">
         <label class="sr-only" for="aics-email-capture-input">Work email</label>
         <input id="aics-email-capture-input" name="email" type="email" autocomplete="email" inputmode="email" maxlength="320" required placeholder="nina.v@example.com">
         <label class="aics-email-capture-consent">
@@ -87,6 +89,7 @@
   document.body.appendChild(root);
 
   const form = root.querySelector(".aics-email-capture-form");
+  const nameInput = root.querySelector("#aics-email-capture-name");
   const input = root.querySelector("#aics-email-capture-input");
   const status = root.querySelector(".aics-email-capture-status");
   const submitBtn = root.querySelector(".aics-email-capture-submit");
@@ -226,15 +229,17 @@
     track("email_capture_submit_attempt", { section: sectionLabel(), trigger: lastTrigger });
 
     const localPart = email.split("@")[0] || "Visitor";
+    const givenName = String((nameInput && nameInput.value) || "").trim().slice(0, 80);
     const payload = {
-      name: localPart.slice(0, 80),
+      name: givenName || localPart.slice(0, 80),
       email,
       contact: email,
       privacy_consent: "yes",
       service: "Cloud & AI Cost Governance Diagnostic",
-      stage: "Homepage email capture",
-      need: "Homepage email capture",
-      message: "Homepage email capture popup",
+      stage: "Email capture",
+      source: "email-capture",
+      need: "Email capture opt-in",
+      message: `Email capture opt-in (${lastTrigger}) on ${sectionLabel()}`,
       company_website: honeypot ? honeypot.value : "",
       landing_page: window.location.href,
       referrer: document.referrer || "",

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site analytics | AICloudStrategist (private)</title>
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="Private first-party analytics dashboard for AICloudStrategist. Token required.">
+  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261117-analytics">
+</head>
+<body>
+  <main class="dash-shell">
+    <header class="dash-top">
+      <div>
+        <p class="small muted">Private · noindex · first-party KV</p>
+        <h1>AICloudStrategist analytics</h1>
+        <p>Overview, audience, traffic, content, live activity, engagement, and voluntary leads — built on the existing <code>/api/events</code> + <code>/api/metrics</code> stack. No paid third-party analytics required.</p>
+      </div>
+      <p id="generated-at" class="small muted"></p>
+    </header>
+
+    <section class="auth-card" aria-label="Access">
+      <div class="auth-row">
+        <label>Report token
+          <input id="dash-token" type="password" autocomplete="off" placeholder="AICS_REPORT_TOKEN">
+        </label>
+        <label>Range
+          <select id="dash-days">
+            <option value="1">Daily (1 day)</option>
+            <option value="7">Weekly (7 days)</option>
+            <option value="28" selected>Monthly (28 days)</option>
+            <option value="90">90 days</option>
+            <option value="custom">Custom dates</option>
+          </select>
+        </label>
+        <label>From
+          <input id="dash-from" type="date" disabled>
+        </label>
+        <label>To
+          <input id="dash-to" type="date" disabled>
+        </label>
+        <button id="dash-load" type="button">Load / refresh</button>
+        <button id="dash-clear" class="secondary" type="button">Clear token</button>
+      </div>
+      <p id="dash-status" class="status-line">Enter the Cloudflare Pages secret <strong>AICS_REPORT_TOKEN</strong> to view data.</p>
+    </section>
+
+    <section class="live-banner" aria-live="polite">
+      <div class="pulse"><span class="dot" aria-hidden="true"></span> Real-time · <span id="kpi-live">0</span> active now · <span id="kpi-entering">0</span> entering (5m)</div>
+      <div id="live-updated" class="small">Polling starts after load</div>
+    </section>
+
+    <section class="kpi-grid" aria-label="Overview">
+      <div class="kpi"><strong id="kpi-visitors">0</strong><span>Visitors (anon ids / sessions)</span></div>
+      <div class="kpi"><strong id="kpi-views">0</strong><span>Page views</span></div>
+      <div class="kpi"><strong id="kpi-sessions">0</strong><span>Sessions</span></div>
+      <div class="kpi"><strong id="kpi-conversions">0</strong><span>Conversions (forms + email opt-in)</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>Overview · session growth</h2>
+      <p class="note">Daily page views and sessions for the selected report range.</p>
+      <div id="growth-chart"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Real-time</h2>
+      <p class="note">Aggregated only. Active visitors use a ~2 minute presence window (page views + presence heartbeats). Auto-refreshes without reloading the page.</p>
+      <div class="cols-3">
+        <div>
+          <h3 class="small muted">Pages in view</h3>
+          <div id="live-pages"></div>
+        </div>
+        <div>
+          <h3 class="small muted">Live traffic sources</h3>
+          <div id="live-sources"></div>
+        </div>
+        <div>
+          <h3 class="small muted">Live locations</h3>
+          <div id="live-locations"></div>
+        </div>
+      </div>
+      <h3 class="small muted" style="margin-top:14px">Live activity feed</h3>
+      <ul id="live-feed" class="feed"></ul>
+    </section>
+
+    <section class="cols-2">
+      <article class="panel">
+        <h2>Audience</h2>
+        <p class="note" id="age-note">Age is not available from browsers.</p>
+        <h3 class="small muted">New vs returning</h3>
+        <div id="audience-new-returning"></div>
+        <h3 class="small muted" style="margin-top:12px">Locations</h3>
+        <div id="audience-locations"></div>
+      </article>
+      <article class="panel">
+        <h2>Browsers &amp; devices</h2>
+        <h3 class="small muted">Browsers</h3>
+        <div id="audience-browsers"></div>
+        <h3 class="small muted" style="margin-top:12px">Devices</h3>
+        <div id="audience-devices"></div>
+      </article>
+    </section>
+
+    <section class="cols-2">
+      <article class="panel">
+        <h2>Traffic sources</h2>
+        <p class="note">Search, social, direct, referrals, campaigns (UTM / referrer).</p>
+        <div id="traffic-buckets"></div>
+      </article>
+      <article class="panel">
+        <h2>Providers</h2>
+        <div id="traffic-providers"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Content analytics</h2>
+      <p class="note">Sorted by dwell where samples exist. Dwell and scroll populate after engagement tracking is live on pages.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Views</th>
+              <th>Avg dwell</th>
+              <th>CTA CTR</th>
+              <th>Scroll 50%+</th>
+              <th>Downloads</th>
+            </tr>
+          </thead>
+          <tbody id="content-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Engagement</h2>
+      <p class="note" id="engagement-note"></p>
+      <div id="engagement-events"></div>
+    </section>
+
+    <section class="panel" id="leads">
+      <h2>Leads / Contacts</h2>
+      <div class="policy-callout">
+        <strong>Emails cannot arrive automatically from browsing.</strong>
+        Passive browser tracking cannot read a visitor’s email, name, or autofill data. Contacts appear here only when someone voluntarily submits the email-capture prompt or the fit-review form. The email capture already waits for engagement (about 50 seconds on page or 60% scroll) — not on page load — so opt-ins stay intentional.
+      </div>
+      <p class="note"><span id="leads-count">0</span> voluntary contacts in range · mailto links for follow-up</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Company</th>
+              <th>Source</th>
+              <th>Page / context</th>
+              <th>Submitted</th>
+            </tr>
+          </thead>
+          <tbody id="leads-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="small muted">Stack: Cloudflare Pages Functions + KV (<code>LEAD_LOG</code> / <code>CONTACT_LOG</code>) · auth via <code>AICS_REPORT_TOKEN</code> · optional Cloudflare Web Analytics for extra aggregates. No invasive fingerprinting.</p>
+  </main>
+  <script defer src="/js/aics-analytics-dashboard.js?v=20261117-analytics"></script>
+</body>
+</html>

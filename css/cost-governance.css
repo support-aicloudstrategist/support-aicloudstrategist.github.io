@@ -3569,6 +3569,7 @@ body.has-intro.is-intro-docking .site-footer {
   display: grid;
   gap: 0.7rem;
 }
+.aics-email-capture-form input[type="text"],
 .aics-email-capture-form input[type="email"] {
   width: 100%;
   border: 1px solid var(--line);

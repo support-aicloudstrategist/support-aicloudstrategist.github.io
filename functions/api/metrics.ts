@@ -1,6 +1,43 @@
-type MetricsEnv = { LEAD_LOG?: KVNamespace; AICS_REPORT_TOKEN?: string };
+type MetricsEnv = {
+  LEAD_LOG?: KVNamespace;
+  CONTACT_LOG?: KVNamespace;
+  AICS_REPORT_TOKEN?: string;
+};
 
-const headers = {"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store"};
+type StoredEvent = {
+  name?: string;
+  path?: string;
+  session?: string;
+  received_at?: string;
+  props?: Record<string, string>;
+};
+
+type StoredLead = {
+  contact_id?: string;
+  submitted_at?: string;
+  name?: string;
+  contact?: string;
+  company?: string;
+  role?: string;
+  service?: string;
+  stage?: string;
+  need?: string;
+  message?: string;
+  source?: string;
+  landing_page?: string;
+  referrer?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  pipeline_stage?: string;
+  lead_status?: string;
+};
+
+const headers = {
+  "Content-Type": "application/json; charset=utf-8",
+  "Cache-Control": "no-store",
+};
+
 const clean = (value: unknown, max = 160) => String(value ?? "").trim().slice(0, max);
 
 function authorized(request: Request, env: MetricsEnv) {
@@ -9,62 +46,341 @@ function authorized(request: Request, env: MetricsEnv) {
   return Boolean(configured && supplied && configured === supplied);
 }
 
+function dayKey(iso: string) {
+  return iso.slice(0, 10) || "unknown";
+}
+
+function bump(map: Record<string, number>, key: string, by = 1) {
+  const k = key || "unknown";
+  map[k] = (map[k] || 0) + by;
+}
+
+function topEntries(map: Record<string, number>, limit = 20) {
+  return Object.entries(map)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([key, count]) => ({ key, count }));
+}
+
+function classifySource(provider: string, channel: string, campaign: string) {
+  const p = provider.toLowerCase();
+  const c = channel.toLowerCase();
+  if (campaign || c.includes("cpc") || c.includes("ppc") || c.includes("paid")) return "campaigns";
+  if (p === "google" || p === "bing") return "search";
+  if (
+    p.includes("linkedin") ||
+    p.includes("twitter") ||
+    p.includes("x.com") ||
+    p.includes("facebook") ||
+    p.includes("instagram") ||
+    p.includes("youtube") ||
+    c.includes("social")
+  ) {
+    return "social";
+  }
+  if (p === "direct" || !p) return "direct";
+  if (p === "referral" || p.includes(".")) return "referrals";
+  return p || "other";
+}
+
 export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) => {
-  if (!authorized(request, env)) return new Response(JSON.stringify({ok:false,error:"Unauthorized"}), {status:401,headers});
-  if (!env.LEAD_LOG) return new Response(JSON.stringify({ok:false,error:"Metrics store unavailable"}), {status:503,headers});
+  if (!authorized(request, env)) {
+    return new Response(JSON.stringify({ ok: false, error: "Unauthorized" }), { status: 401, headers });
+  }
+
+  const eventStore = env.LEAD_LOG;
+  const leadStore = env.CONTACT_LOG || env.LEAD_LOG;
+  if (!eventStore && !leadStore) {
+    return new Response(JSON.stringify({ ok: false, error: "Metrics store unavailable" }), { status: 503, headers });
+  }
 
   const url = new URL(request.url);
+  const mode = clean(url.searchParams.get("mode") || "dashboard", 40);
   const days = Math.min(90, Math.max(1, Number(url.searchParams.get("days") || 28)));
-  const cutoff = Date.now() - days * 86400000;
+  const fromParam = clean(url.searchParams.get("from"), 32);
+  const toParam = clean(url.searchParams.get("to"), 32);
+  const now = Date.now();
+  let cutoff = now - days * 86400000;
+  let rangeEnd = now;
+  if (fromParam && Date.parse(fromParam)) cutoff = Date.parse(fromParam);
+  if (toParam && Date.parse(toParam)) rangeEnd = Date.parse(toParam) + 86400000 - 1;
+
   const totals: Record<string, number> = {};
   const providers: Record<string, number> = {};
-  const paths: Record<string, number> = {};
   const devices: Record<string, number> = {};
+  const browsers: Record<string, number> = {};
+  const countries: Record<string, number> = {};
+  const visitorKinds: Record<string, number> = {};
+  const trafficBuckets: Record<string, number> = {};
   const emailTriggers: Record<string, number> = {};
-  let cursor: string | undefined;
+  const pathViews: Record<string, number> = {};
+  const pathCta: Record<string, number> = {};
+  const pathScroll: Record<string, number> = {};
+  const pathDwellSum: Record<string, number> = {};
+  const pathDwellCount: Record<string, number> = {};
+  const pathDownloads: Record<string, number> = {};
+  const dailyViews: Record<string, number> = {};
+  const dailySessions: Record<string, number> = {};
+  const sessionSeen = new Set<string>();
+  const visitorSeen = new Set<string>();
+  const sessionDay = new Set<string>();
+  const liveSessions = new Set<string>();
+  const livePages: Record<string, number> = {};
+  const liveSources: Record<string, number> = {};
+  const liveLocations: Record<string, number> = {};
+  const enteringSessions = new Set<string>();
+  const feed: Array<Record<string, string>> = [];
   let inspected = 0;
+  const liveWindowMs = 2 * 60 * 1000;
+  const enterWindowMs = 5 * 60 * 1000;
 
-  do {
-    const page = await env.LEAD_LOG.list({prefix:"event:",limit:1000,cursor});
-    for (const key of page.keys) {
-      const received = String(key.metadata && (key.metadata as Record<string, unknown>).received_at || "");
-      if (received && Date.parse(received) < cutoff) continue;
-      const raw = await env.LEAD_LOG.get(key.name);
-      if (!raw) continue;
-      try {
-        const event = JSON.parse(raw) as {name?:string;path?:string;props?:Record<string,string>;received_at?:string};
-        if (event.received_at && Date.parse(event.received_at) < cutoff) continue;
-        const name = clean(event.name,64) || "unknown";
-        const path = clean(event.path,256) || "/";
-        const provider = clean(event.props && event.props.provider,120) || "unknown";
-        const device = clean(event.props && event.props.device,40) || "unknown";
-        const trigger = clean(event.props && event.props.trigger,40);
-        totals[name] = (totals[name] || 0) + 1;
-        paths[path] = (paths[path] || 0) + 1;
-        if (name === "page_view") {
-          providers[provider] = (providers[provider] || 0) + 1;
-          devices[device] = (devices[device] || 0) + 1;
-        }
-        if (name === "email_capture_open" && trigger) {
-          emailTriggers[trigger] = (emailTriggers[trigger] || 0) + 1;
-        }
-        inspected += 1;
-      } catch {}
-    }
-    cursor = page.list_complete ? undefined : page.cursor;
-  } while (cursor && inspected < 10000);
+  if (eventStore) {
+    let cursor: string | undefined;
+    do {
+      const page = await eventStore.list({ prefix: "event:", limit: 1000, cursor });
+      for (const key of page.keys) {
+        const receivedMeta = String((key.metadata as Record<string, unknown> | undefined)?.received_at || "");
+        if (receivedMeta && Date.parse(receivedMeta) < cutoff) continue;
+        const raw = await eventStore.get(key.name);
+        if (!raw) continue;
+        try {
+          const event = JSON.parse(raw) as StoredEvent;
+          const receivedAt = clean(event.received_at || receivedMeta, 40);
+          const ts = Date.parse(receivedAt);
+          if (!Number.isFinite(ts) || ts < cutoff || ts > rangeEnd) continue;
 
-  return new Response(JSON.stringify({
-    ok:true,
-    period_days:days,
-    generated_at:new Date().toISOString(),
-    events_inspected:inspected,
-    events:totals,
-    page_views_by_provider:providers,
-    page_views_by_device:devices,
-    email_capture_triggers:emailTriggers,
-    top_paths:Object.entries(paths).sort((a,b)=>b[1]-a[1]).slice(0,25),
-    privacy:"aggregate non-PII events only",
-    how_to_view:"GET /api/metrics?days=28 with Authorization: Bearer $AICS_REPORT_TOKEN. For country/device charts enable Cloudflare Web Analytics on the Pages project (Workers & Pages → Metrics → Enable)."
-  }), {status:200,headers});
+          const name = clean(event.name, 64) || "unknown";
+          const path = clean(event.path, 256) || "/";
+          const session = clean(event.session, 64);
+          const props = event.props || {};
+          const provider = clean(props.provider, 120) || "direct";
+          const channel = clean(props.channel, 120);
+          const campaign = clean(props.campaign, 120);
+          const device = clean(props.device, 40) || "unknown";
+          const browser = clean(props.browser, 40) || "unknown";
+          const country = clean(props.country, 8) || "unknown";
+          const visitor = clean(props.visitor, 64);
+          const visitorKind = clean(props.visitor_kind, 24) || "unknown";
+          const trigger = clean(props.trigger, 40);
+          const depth = clean(props.depth, 16);
+          const seconds = Number(props.seconds || 0);
+
+          bump(totals, name);
+          inspected += 1;
+
+          if (session) {
+            sessionSeen.add(session);
+            const dkey = `${dayKey(receivedAt)}:${session}`;
+            if (!sessionDay.has(dkey)) {
+              sessionDay.add(dkey);
+              bump(dailySessions, dayKey(receivedAt));
+            }
+            if (now - ts <= liveWindowMs) {
+              liveSessions.add(session);
+              bump(livePages, path);
+              bump(liveSources, classifySource(provider, channel, campaign));
+              bump(liveLocations, country);
+            }
+            if (
+              (name === "page_view" || (name === "presence_ping" && clean(props.trigger, 40) === "enter")) &&
+              now - ts <= enterWindowMs
+            ) {
+              enteringSessions.add(session);
+            }
+          }
+          if (visitor) visitorSeen.add(visitor);
+
+          if (name === "page_view") {
+            bump(pathViews, path);
+            bump(providers, provider);
+            bump(devices, device);
+            bump(browsers, browser);
+            bump(countries, country);
+            bump(visitorKinds, visitorKind);
+            bump(trafficBuckets, classifySource(provider, channel, campaign));
+            bump(dailyViews, dayKey(receivedAt));
+          }
+
+          // Presence pings keep active-visitor detection near real-time without PII.
+          if (name === "presence_ping" && now - ts <= liveWindowMs && session) {
+            liveSessions.add(session);
+            bump(livePages, path);
+          }
+
+          if (name === "cta_click" || name === "button_click") bump(pathCta, path);
+          if (name === "download_click") bump(pathDownloads, path);
+          if (name === "scroll_depth") {
+            const n = Number(depth) || 0;
+            if (n >= 50) bump(pathScroll, path);
+          }
+          if (name === "dwell_tick" && Number.isFinite(seconds) && seconds > 0) {
+            pathDwellSum[path] = (pathDwellSum[path] || 0) + seconds;
+            pathDwellCount[path] = (pathDwellCount[path] || 0) + 1;
+          }
+          if (name === "email_capture_open" && trigger) bump(emailTriggers, trigger);
+
+          feed.push({
+            at: receivedAt,
+            name,
+            path,
+            detail: clean(props.cta || props.trigger || props.provider || props.depth || "", 80),
+          });
+          if (feed.length > 80) {
+            feed.sort((a, b) => String(b.at).localeCompare(String(a.at)));
+            feed.length = 40;
+          }
+        } catch {
+          // Skip malformed rows.
+        }
+      }
+      cursor = page.list_complete ? undefined : page.cursor;
+    } while (cursor && inspected < 12000);
+  }
+
+  feed.sort((a, b) => String(b.at).localeCompare(String(a.at)));
+
+  const content = Object.keys({ ...pathViews, ...pathDwellSum })
+    .map((path) => {
+      const views = pathViews[path] || 0;
+      const cta = pathCta[path] || 0;
+      const dwellSamples = pathDwellCount[path] || 0;
+      const avgDwell = dwellSamples ? Math.round((pathDwellSum[path] || 0) / dwellSamples) : 0;
+      return {
+        path,
+        page_views: views,
+        cta_clicks: cta,
+        cta_rate: views ? Number(((cta / views) * 100).toFixed(1)) : 0,
+        scroll_50_plus: pathScroll[path] || 0,
+        downloads: pathDownloads[path] || 0,
+        avg_dwell_seconds: avgDwell,
+        dwell_samples: dwellSamples,
+      };
+    })
+    .sort((a, b) => b.avg_dwell_seconds - a.avg_dwell_seconds || b.page_views - a.page_views)
+    .slice(0, 40);
+
+  const seriesDays: string[] = [];
+  for (let t = cutoff; t <= rangeEnd; t += 86400000) {
+    seriesDays.push(new Date(t).toISOString().slice(0, 10));
+  }
+  const growth = seriesDays.map((day) => ({
+    day,
+    page_views: dailyViews[day] || 0,
+    sessions: dailySessions[day] || 0,
+  }));
+
+  const leads: Array<Record<string, string>> = [];
+  if (leadStore) {
+    let cursor: string | undefined;
+    let leadInspected = 0;
+    do {
+      const page = await leadStore.list({ prefix: "contact-", limit: 500, cursor });
+      for (const key of page.keys) {
+        const raw = await leadStore.get(key.name);
+        if (!raw) continue;
+        try {
+          const lead = JSON.parse(raw) as StoredLead;
+          const submittedAt = clean(lead.submitted_at, 40);
+          const ts = Date.parse(submittedAt);
+          if (Number.isFinite(ts) && (ts < cutoff || ts > rangeEnd)) continue;
+          leads.push({
+            contact_id: clean(lead.contact_id || key.name, 120),
+            submitted_at: submittedAt,
+            name: clean(lead.name, 160),
+            email: clean(lead.contact, 320),
+            company: clean(lead.company, 160),
+            role: clean(lead.role, 160),
+            stage: clean(lead.stage, 160),
+            source: clean(lead.source, 80),
+            service: clean(lead.service, 160),
+            landing_page: clean(lead.landing_page, 400),
+            referrer: clean(lead.referrer, 400),
+            utm_source: clean(lead.utm_source, 120),
+            utm_medium: clean(lead.utm_medium, 120),
+            utm_campaign: clean(lead.utm_campaign, 120),
+            need: clean(lead.need, 240),
+            message: clean(lead.message, 400),
+            lead_status: clean(lead.lead_status, 40),
+          });
+          leadInspected += 1;
+        } catch {
+          // Skip malformed lead rows.
+        }
+      }
+      cursor = page.list_complete ? undefined : page.cursor;
+    } while (cursor && leadInspected < 2000);
+  }
+
+  leads.sort((a, b) => String(b.submitted_at).localeCompare(String(a.submitted_at)));
+
+  const pageViews = totals.page_view || 0;
+  const conversions =
+    (totals.form_submit_success || 0) +
+    (totals.email_capture_submit_success || 0);
+
+  const body = {
+    ok: true,
+    mode,
+    period_days: days,
+    from: new Date(cutoff).toISOString(),
+    to: new Date(rangeEnd).toISOString(),
+    generated_at: new Date().toISOString(),
+    events_inspected: inspected,
+    overview: {
+      visitors: visitorSeen.size || sessionSeen.size,
+      page_views: pageViews,
+      sessions: sessionSeen.size,
+      conversions,
+      growth,
+    },
+    audience: {
+      new_vs_returning: visitorKinds,
+      locations: topEntries(countries, 25),
+      browsers: topEntries(browsers, 15),
+      devices: topEntries(devices, 10),
+      age: {
+        available: false,
+        note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
+      },
+    },
+    traffic: {
+      buckets: trafficBuckets,
+      providers: topEntries(providers, 20),
+    },
+    content,
+    realtime: {
+      live_visitors: liveSessions.size,
+      entering_visitors: enteringSessions.size,
+      window_seconds: Math.round(liveWindowMs / 1000),
+      enter_window_seconds: Math.round(enterWindowMs / 1000),
+      pages_in_view: topEntries(livePages, 15),
+      traffic_sources: topEntries(liveSources, 10),
+      locations: topEntries(liveLocations, 15),
+      feed: feed.slice(0, 25),
+      refresh_hint_seconds: 15,
+      identity: "Aggregated only — no names or emails in real-time views.",
+    },
+    engagement: {
+      events: totals,
+      email_capture_triggers: emailTriggers,
+      note: "CTA rate is on-page click-through (CTA clicks ÷ page views), not ad-network PPC impressions.",
+    },
+    leads: {
+      count: leads.length,
+      identity_policy: "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms. Passive browsing is non-PII.",
+      items: leads.slice(0, 200),
+    },
+    coverage: {
+      stack: "first-party KV events + voluntary contact records",
+      optional: "Enable Cloudflare Web Analytics in the Pages dashboard for privacy-preserving country aggregates if CF-IPCountry enrichment is sparse.",
+      gaps: [
+        "Age is not available from browsers",
+        "Passive email collection is impossible in the browser — contacts require voluntary forms",
+        "Dwell/scroll/presence metrics populate after the engagement tracker ships on pages",
+      ],
+    },
+    privacy: "Analytics events remain non-PII. Lead identity is stored separately from voluntary form consent. Passive browsing never yields emails.",
+  };
+
+  return new Response(JSON.stringify(body), { status: 200, headers });
 };
