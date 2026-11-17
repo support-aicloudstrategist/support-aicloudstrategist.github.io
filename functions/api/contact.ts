@@ -173,6 +173,10 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   const utmSource = clean(payload.utm_source);
   const utmMedium = clean(payload.utm_medium);
   const utmCampaign = clean(payload.utm_campaign);
+  const gclid = clean(payload.gclid).slice(0, 160);
+  const msclkid = clean(payload.msclkid).slice(0, 160);
+  const liFatId = clean(payload.li_fat_id || payload.liFatId).slice(0, 160);
+  const country = clean(context.request.headers.get("CF-IPCountry")).toUpperCase().replace(/[^A-Z]/g, "").slice(0, 2);
   const companyWebsite = clean(payload.company_website);
   const privacyConsent = clean(payload.privacy_consent).toLowerCase();
 
@@ -253,6 +257,10 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     utm_source: utmSource,
     utm_medium: utmMedium,
     utm_campaign: utmCampaign,
+    gclid,
+    msclkid,
+    li_fat_id: liFatId,
+    country,
     pipeline_stage: "new",
     lead_status: "unreviewed",
     owner: "AICloudStrategist Growth Operations",
