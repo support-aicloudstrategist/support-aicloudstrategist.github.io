@@ -73,7 +73,9 @@
         <label class="sr-only" for="aics-email-capture-name">First name (optional)</label>
         <input id="aics-email-capture-name" name="name" type="text" autocomplete="given-name" maxlength="80" placeholder="First name (optional)">
         <label class="sr-only" for="aics-email-capture-input">Work email</label>
-        <input id="aics-email-capture-input" name="email" type="email" autocomplete="email" inputmode="email" maxlength="320" required placeholder="nina.v@example.com">
+        <input id="aics-email-capture-input" name="email" type="email" autocomplete="email" inputmode="email" maxlength="320" required placeholder="Work email *">
+        <label class="sr-only" for="aics-email-capture-phone">Phone or WhatsApp (optional)</label>
+        <input id="aics-email-capture-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" placeholder="Phone / WhatsApp (optional)">
         <label class="aics-email-capture-consent">
           <input type="checkbox" name="privacy_consent" value="yes" required>
           <span>I agree to the <a href="/privacy">Privacy Policy</a> for this enquiry.</span>
@@ -230,10 +232,14 @@
 
     const localPart = email.split("@")[0] || "Visitor";
     const givenName = String((nameInput && nameInput.value) || "").trim().slice(0, 80);
+    const phoneVal = String((form.elements.phone && form.elements.phone.value) || '').trim();
+    if (window.aicsStitchIdentity) window.aicsStitchIdentity({ name: givenName, email, phone: phoneVal });
     const payload = {
       name: givenName || localPart.slice(0, 80),
       email,
       contact: email,
+      phone: phoneVal,
+      visitor_id: window.aicsVisitorId || '',
       privacy_consent: "yes",
       service: "Cloud & AI Cost Governance Diagnostic",
       stage: "Email capture",

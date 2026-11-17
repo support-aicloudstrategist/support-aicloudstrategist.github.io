@@ -16,6 +16,11 @@
     const match = String(value || "").match(/[^\s@]+@[^\s@]+\.[^\s@]+/);
     return match ? match[0].trim() : "";
   };
+  const extractPhone = (value) => {
+    const m = String(value || "").match(/(?:\+\d{1,3}[\s-]?)?(?:\(?\d{3,5}\)?[\s-]?)?\d{5,10}/);
+    const digits = m ? m[0].replace(/\D/g, "") : "";
+    return digits.length >= 10 && digits.length <= 15 ? m[0].trim() : "";
+  };
 
   const mountChatbot = () => {
   if (document.querySelector(".aics-chat")) return;
@@ -48,7 +53,8 @@
     }
   };
 
-  const persistEmail = async (email) => {
+  const persistEmail = async (email, phone = "") => {
+    if (window.aicsStitchIdentity) window.aicsStitchIdentity({ email, phone });
     try {
       localStorage.setItem(EMAIL_STORAGE_KEY, email);
       localStorage.setItem(EMAIL_DONE_KEY, "1");
@@ -63,7 +69,9 @@
         body: JSON.stringify({
           name: localPart.slice(0, 80),
           email,
-          contact: email,
+          contact: email || phone,
+          phone,
+          visitor_id: window.aicsVisitorId || "",
           privacy_consent: "yes",
           service: "Cloud & AI Cost Governance Diagnostic",
           stage: "Chatbot email capture",

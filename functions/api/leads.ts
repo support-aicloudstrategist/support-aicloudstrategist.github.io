@@ -72,6 +72,9 @@ function toNormalizedRecord(raw: Record<string, unknown>) {
       msclkid: String(raw.msclkid || ""),
       liFatId: String(raw.li_fat_id || ""),
       country: String(raw.country || ""),
+      region: String(raw.region || ""),
+      city: String(raw.city || ""),
+      visitorId: String(raw.visitor_id || ""),
     },
   };
 }
@@ -85,7 +88,8 @@ export const onRequestGet: PagesFunction<LeadsEnv> = async ({ request, env }) =>
   }
   const cache = caches.default;
   const cacheKey = new Request(new URL(request.url).toString(), { method: "GET" });
-  const cached = await cache.match(cacheKey);
+  const bypass = new URL(request.url).searchParams.has("fresh");
+  const cached = bypass ? null : await cache.match(cacheKey);
   if (cached) return cached;
   const url = new URL(request.url);
   const limit = Math.min(Math.max(Number(url.searchParams.get("limit") || 50), 1), 200);
