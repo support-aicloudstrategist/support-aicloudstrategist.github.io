@@ -167,16 +167,16 @@
     }
     function tickDwell(){
       if(document.visibilityState!=='visible') return;
-      dwellSeconds+=15;
+      dwellSeconds+=30;
       if(dwellSeconds===30||dwellSeconds===60||dwellSeconds===120||dwellSeconds%180===0){
         record('dwell_tick',{props:{seconds:String(dwellSeconds)}});
       }
-      // Lightweight presence signal for near-real-time active visitor counts (non-PII).
+      // Presence every 30s keeps realtime useful without flooding KV.
       record('presence_ping',{props:{seconds:String(dwellSeconds),trigger:'heartbeat'}});
     }
     window.addEventListener('scroll',onScroll,{passive:true});
     onScroll();
-    dwellTimer=window.setInterval(tickDwell,15000);
+    dwellTimer=window.setInterval(tickDwell,30000);
     if(document.visibilityState==='visible'){
       record('presence_ping',{props:{seconds:'0',trigger:'enter'}});
     }

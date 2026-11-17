@@ -32,11 +32,18 @@ Interactive Chart.js visuals (hover tooltips, clickable legends, responsive):
 - Engagement event counts (bar)
 - Live pages / sources / locations (bar + doughnut)
 
+## Performance notes
+
+- Event keys are day-prefixed (`event:YYYY-MM-DD:…`). Metrics lists **only days in range**, not the entire KV namespace.
+- Historical `presence_ping` bodies are skipped using list metadata.
+- KV values are fetched in **batched** `Promise.all` chunks.
+- Dashboard fetch has a **25s timeout**; Chart.js load is non-blocking with an 8s timeout.
+- After the first full load, live panels poll `mode=realtime` (lightweight) every 15s.
+
 ## Real-time
 
-- `presence_ping` heartbeats every 15s while the tab is visible
+- `presence_ping` heartbeats every **30s** while the tab is visible
 - Active window ≈ **2 minutes**; entering window ≈ **5 minutes**
-- Dashboard polls `/api/metrics` every **15 seconds** (no full page reload)
 - Real-time panels are **aggregated only** (counts by page / source / country)
 
 ## Privacy — hard rule (no sensitive personal information)
