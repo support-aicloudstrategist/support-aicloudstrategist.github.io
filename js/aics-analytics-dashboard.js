@@ -7,8 +7,10 @@
   const toInput = document.getElementById("dash-to");
   const liveUpdated = document.getElementById("live-updated");
 
+  const charts = {};
   let pollTimer = null;
-  let lastPayload = null;
+
+  const palette = ["#0d7a75", "#0f3350", "#1aa39b", "#4a6075", "#7fd4cf", "#c45c26", "#5b7cfa", "#8a4b12"];
 
   const setStatus = (text, kind) => {
     statusEl.textContent = text;
@@ -34,17 +36,6 @@
 
   const fmt = (n) => new Intl.NumberFormat("en-US").format(Number(n) || 0);
 
-  const bars = (items, maxFallback = 1) => {
-    const max = Math.max(maxFallback, ...items.map((item) => Number(item.count) || 0));
-    return items
-      .map((item) => {
-        const count = Number(item.count) || 0;
-        const width = max ? Math.max(4, Math.round((count / max) * 100)) : 0;
-        return `<div class="bar-row"><span>${escapeHtml(item.key)}</span><div class="bar-track"><div class="bar-fill" style="width:${width}%"></div></div><strong>${fmt(count)}</strong></div>`;
-      })
-      .join("") || `<p class="muted small">No data in this window yet.</p>`;
-  };
-
   const escapeHtml = (value) =>
     String(value || "")
       .replace(/&/g, "&amp;")
@@ -52,24 +43,112 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
 
-  const spark = (growth) => {
-    if (!growth || !growth.length) return `<p class="muted small">No growth series yet.</p>`;
-    const max = Math.max(1, ...growth.map((d) => d.page_views || 0));
-    return `<div class="chart">${growth
-      .slice(-14)
-      .map((d) => {
-        const width = Math.max(3, Math.round(((d.page_views || 0) / max) * 100));
-        return `<div class="bar-row"><span>${escapeHtml(d.day.slice(5))}</span><div class="bar-track"><div class="bar-fill" style="width:${width}%"></div></div><strong>${fmt(d.page_views)} / ${fmt(d.sessions)} sess</strong></div>`;
-      })
-      .join("")}</div>`;
+  const ensureChartJs = () =>
+    new Promise((resolve, reject) => {
+      if (window.Chart) return resolve(window.Chart);
+      const existing = document.querySelector("script[data-aics-chartjs]");
+      if (existing) {
+        existing.addEventListener("load", () => resolve(window.Chart));
+        existing.addEventListener("error", () => reject(new Error("Chart.js failed to load")));
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js";
+      script.defer = true;
+      script.dataset.aicsChartjs = "1";
+      script.onload = () => resolve(window.Chart);
+      script.onerror = () => reject(new Error("Chart.js failed to load"));
+      document.head.appendChild(script);
+    });
+
+  const destroyChart = (key) => {
+    if (charts[key]) {
+      charts[key].destroy();
+      delete charts[key];
+    }
+  };
+
+  const upsertChart = (key, canvasId, config) => {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas || !window.Chart) return null;
+    if (charts[key]) {
+      charts[key].data = config.data;
+      charts[key].options = config.options;
+      charts[key].update("none");
+      return charts[key];
+    }
+    charts[key] = new window.Chart(canvas.getContext("2d"), config);
+    return charts[key];
+  };
+
+  const baseOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: "nearest", intersect: false },
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: { boxWidth: 12, color: "#4a6075" },
+      },
+      tooltip: {
+        backgroundColor: "#0f3350",
+        titleColor: "#fff",
+        bodyColor: "#e8f2f8",
+      },
+    },
+  };
+
+  const entriesToXY = (items, limit = 12) => {
+    const rows = (items || []).slice(0, limit);
+    return {
+      labels: rows.map((row) => String(row.key || row.path || "—")),
+      values: rows.map((row) => Number(row.count ?? row.value ?? row.avg_dwell_seconds ?? 0) || 0),
+    };
   };
 
   const renderRealtime = (rt) => {
     document.getElementById("kpi-live").textContent = fmt(rt.live_visitors);
     document.getElementById("kpi-entering").textContent = fmt(rt.entering_visitors);
-    document.getElementById("live-pages").innerHTML = bars(rt.pages_in_view || []);
-    document.getElementById("live-sources").innerHTML = bars(rt.traffic_sources || []);
-    document.getElementById("live-locations").innerHTML = bars(rt.locations || []);
+
+    const pages = entriesToXY(rt.pages_in_view || []);
+    upsertChart("livePages", "chart-live-pages", {
+      type: "bar",
+      data: {
+        labels: pages.labels,
+        datasets: [{ label: "Active on page", data: pages.values, backgroundColor: "#0d7a75" }],
+      },
+      options: {
+        ...baseOptions,
+        indexAxis: "y",
+        plugins: { ...baseOptions.plugins, legend: { display: false } },
+        scales: { x: { beginAtZero: true, ticks: { precision: 0 } }, y: { ticks: { autoSkip: false } } },
+      },
+    });
+
+    const sources = entriesToXY(rt.traffic_sources || []);
+    upsertChart("liveSources", "chart-live-sources", {
+      type: "doughnut",
+      data: {
+        labels: sources.labels,
+        datasets: [{ data: sources.values, backgroundColor: palette }],
+      },
+      options: { ...baseOptions, cutout: "55%" },
+    });
+
+    const locations = entriesToXY(rt.locations || []);
+    upsertChart("liveLocations", "chart-live-locations", {
+      type: "bar",
+      data: {
+        labels: locations.labels,
+        datasets: [{ label: "Active by country", data: locations.values, backgroundColor: "#0f3350" }],
+      },
+      options: {
+        ...baseOptions,
+        plugins: { ...baseOptions.plugins, legend: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
+
     document.getElementById("live-feed").innerHTML = (rt.feed || [])
       .map(
         (row) =>
@@ -80,7 +159,6 @@
   };
 
   const renderDashboard = (data) => {
-    lastPayload = data;
     const ov = data.overview || {};
     const aud = data.audience || {};
     const traf = data.traffic || {};
@@ -91,23 +169,119 @@
     document.getElementById("kpi-views").textContent = fmt(ov.page_views);
     document.getElementById("kpi-sessions").textContent = fmt(ov.sessions);
     document.getElementById("kpi-conversions").textContent = fmt(ov.conversions);
-    document.getElementById("growth-chart").innerHTML = spark(ov.growth || []);
 
-    document.getElementById("audience-new-returning").innerHTML = bars(
-      Object.entries(aud.new_vs_returning || {}).map(([key, count]) => ({ key, count })),
-    );
-    document.getElementById("audience-locations").innerHTML = bars(aud.locations || []);
-    document.getElementById("audience-browsers").innerHTML = bars(aud.browsers || []);
-    document.getElementById("audience-devices").innerHTML = bars(aud.devices || []);
+    const growth = ov.growth || [];
+    upsertChart("growth", "chart-growth", {
+      type: "line",
+      data: {
+        labels: growth.map((d) => d.day),
+        datasets: [
+          {
+            label: "Page views",
+            data: growth.map((d) => d.page_views || 0),
+            borderColor: "#0d7a75",
+            backgroundColor: "rgba(13,122,117,0.15)",
+            tension: 0.3,
+            fill: true,
+          },
+          {
+            label: "Sessions",
+            data: growth.map((d) => d.sessions || 0),
+            borderColor: "#0f3350",
+            backgroundColor: "rgba(15,51,80,0.08)",
+            tension: 0.3,
+            fill: true,
+          },
+        ],
+      },
+      options: {
+        ...baseOptions,
+        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
+
+    const nr = Object.entries(aud.new_vs_returning || {}).map(([key, count]) => ({ key, count }));
+    const nrXY = entriesToXY(nr);
+    upsertChart("audienceNR", "chart-audience-nr", {
+      type: "doughnut",
+      data: { labels: nrXY.labels, datasets: [{ data: nrXY.values, backgroundColor: ["#0d7a75", "#0f3350", "#4a6075"] }] },
+      options: { ...baseOptions, cutout: "50%" },
+    });
+
+    const loc = entriesToXY(aud.locations || []);
+    upsertChart("audienceLoc", "chart-audience-locations", {
+      type: "bar",
+      data: { labels: loc.labels, datasets: [{ label: "Page views", data: loc.values, backgroundColor: "#1aa39b" }] },
+      options: {
+        ...baseOptions,
+        plugins: { ...baseOptions.plugins, legend: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
+
     document.getElementById("age-note").textContent =
       (aud.age && aud.age.note) || "Age is not available from browsers.";
 
-    document.getElementById("traffic-buckets").innerHTML = bars(
-      Object.entries(traf.buckets || {}).map(([key, count]) => ({ key, count })),
-    );
-    document.getElementById("traffic-providers").innerHTML = bars(traf.providers || []);
+    const browsers = entriesToXY(aud.browsers || []);
+    upsertChart("browsers", "chart-browsers", {
+      type: "pie",
+      data: { labels: browsers.labels, datasets: [{ data: browsers.values, backgroundColor: palette }] },
+      options: baseOptions,
+    });
 
-    const contentRows = (data.content || [])
+    const devices = entriesToXY(aud.devices || []);
+    upsertChart("devices", "chart-devices", {
+      type: "doughnut",
+      data: { labels: devices.labels, datasets: [{ data: devices.values, backgroundColor: palette.slice().reverse() }] },
+      options: { ...baseOptions, cutout: "45%" },
+    });
+
+    const buckets = Object.entries(traf.buckets || {}).map(([key, count]) => ({ key, count }));
+    const bucketXY = entriesToXY(buckets);
+    upsertChart("trafficBuckets", "chart-traffic-buckets", {
+      type: "doughnut",
+      data: { labels: bucketXY.labels, datasets: [{ data: bucketXY.values, backgroundColor: palette }] },
+      options: { ...baseOptions, cutout: "52%" },
+    });
+
+    const providers = entriesToXY(traf.providers || []);
+    upsertChart("trafficProviders", "chart-traffic-providers", {
+      type: "bar",
+      data: { labels: providers.labels, datasets: [{ label: "Page views", data: providers.values, backgroundColor: "#0f3350" }] },
+      options: {
+        ...baseOptions,
+        indexAxis: "y",
+        plugins: { ...baseOptions.plugins, legend: { display: false } },
+        scales: { x: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
+
+    const content = (data.content || []).slice(0, 12);
+    upsertChart("contentDwell", "chart-content-dwell", {
+      type: "bar",
+      data: {
+        labels: content.map((row) => row.path),
+        datasets: [
+          {
+            label: "Avg dwell (seconds)",
+            data: content.map((row) => row.avg_dwell_seconds || 0),
+            backgroundColor: "#0d7a75",
+          },
+          {
+            label: "Page views",
+            data: content.map((row) => row.page_views || 0),
+            backgroundColor: "#0f3350",
+          },
+        ],
+      },
+      options: {
+        ...baseOptions,
+        indexAxis: "y",
+        scales: { x: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
+
+    const contentRows = content
       .map(
         (row) => `<tr>
         <td>${escapeHtml(row.path)}</td>
@@ -124,12 +298,20 @@
 
     document.getElementById("engagement-note").textContent =
       eng.note || "CTA rate is on-page click-through, not ad impressions.";
-    document.getElementById("engagement-events").innerHTML = bars(
-      Object.entries(eng.events || {})
-        .map(([key, count]) => ({ key, count }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 16),
-    );
+    const events = Object.entries(eng.events || {})
+      .map(([key, count]) => ({ key, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 14);
+    const eventXY = entriesToXY(events);
+    upsertChart("engagement", "chart-engagement", {
+      type: "bar",
+      data: { labels: eventXY.labels, datasets: [{ label: "Events", data: eventXY.values, backgroundColor: "#5b7cfa" }] },
+      options: {
+        ...baseOptions,
+        plugins: { ...baseOptions.plugins, legend: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+      },
+    });
 
     const leadRows = (leads.items || [])
       .map((lead) => {
@@ -174,6 +356,7 @@
     }
     if (!silent) setStatus("Loading…");
     try {
+      await ensureChartJs();
       const response = await fetch(queryUrl(), {
         headers: { Authorization: `Bearer ${auth}` },
         cache: "no-store",
@@ -183,7 +366,7 @@
         throw new Error(data.error || `Request failed (${response.status})`);
       }
       renderDashboard(data);
-      setStatus("Live. Real-time panel polls automatically.", "ok");
+      setStatus("Live. Charts and real-time panel auto-refresh.", "ok");
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Failed to load metrics.", "error");
     }
@@ -204,6 +387,7 @@
       sessionStorage.removeItem(TOKEN_KEY);
     } catch (_) {}
     if (pollTimer) window.clearInterval(pollTimer);
+    Object.keys(charts).forEach(destroyChart);
     setStatus("Token cleared.");
   });
   daysSelect.addEventListener("change", () => {

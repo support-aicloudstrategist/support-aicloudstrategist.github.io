@@ -6,7 +6,7 @@
   <title>Site analytics | AICloudStrategist (private)</title>
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="description" content="Private first-party analytics dashboard for AICloudStrategist. Token required.">
-  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261117-analytics">
+  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261117-charts">
 </head>
 <body>
   <main class="dash-shell">
@@ -14,7 +14,7 @@
       <div>
         <p class="small muted">Private · noindex · first-party KV</p>
         <h1>AICloudStrategist analytics</h1>
-        <p>Overview, audience, traffic, content, live activity, engagement, and voluntary leads — built on the existing <code>/api/events</code> + <code>/api/metrics</code> stack. No paid third-party analytics required.</p>
+        <p>Overview, audience, traffic, content, live activity, engagement, and voluntary leads — built on the existing <code>/api/events</code> + <code>/api/metrics</code> stack. Charts use Chart.js (CDN).</p>
       </div>
       <p id="generated-at" class="small muted"></p>
     </header>
@@ -45,6 +45,11 @@
       <p id="dash-status" class="status-line">Enter the Cloudflare Pages secret <strong>AICS_REPORT_TOKEN</strong> to view data.</p>
     </section>
 
+    <div class="policy-callout">
+      <strong>Hard privacy rule</strong>
+      This dashboard and the events collector must never capture passwords, payment details, health data, government IDs, precise geolocation, or other sensitive personal information. Analytics stay aggregated/non-PII. The only personal contact fields shown are voluntary lead name/email from opt-in forms.
+    </div>
+
     <section class="live-banner" aria-live="polite">
       <div class="pulse"><span class="dot" aria-hidden="true"></span> Real-time · <span id="kpi-live">0</span> active now · <span id="kpi-entering">0</span> entering (5m)</div>
       <div id="live-updated" class="small">Polling starts after load</div>
@@ -59,25 +64,25 @@
 
     <section class="panel">
       <h2>Overview · session growth</h2>
-      <p class="note">Daily page views and sessions for the selected report range.</p>
-      <div id="growth-chart"></div>
+      <p class="note">Interactive line chart — hover for daily values; click legend to toggle series.</p>
+      <div class="chart-frame chart-frame-lg"><canvas id="chart-growth" aria-label="Growth chart"></canvas></div>
     </section>
 
     <section class="panel">
       <h2>Real-time</h2>
-      <p class="note">Aggregated only. Active visitors use a ~2 minute presence window (page views + presence heartbeats). Auto-refreshes without reloading the page.</p>
+      <p class="note">Aggregated only. Active visitors use a ~2 minute presence window. Charts auto-refresh every 15s without a page reload.</p>
       <div class="cols-3">
         <div>
           <h3 class="small muted">Pages in view</h3>
-          <div id="live-pages"></div>
+          <div class="chart-frame"><canvas id="chart-live-pages"></canvas></div>
         </div>
         <div>
           <h3 class="small muted">Live traffic sources</h3>
-          <div id="live-sources"></div>
+          <div class="chart-frame"><canvas id="chart-live-sources"></canvas></div>
         </div>
         <div>
           <h3 class="small muted">Live locations</h3>
-          <div id="live-locations"></div>
+          <div class="chart-frame"><canvas id="chart-live-locations"></canvas></div>
         </div>
       </div>
       <h3 class="small muted" style="margin-top:14px">Live activity feed</h3>
@@ -89,16 +94,16 @@
         <h2>Audience</h2>
         <p class="note" id="age-note">Age is not available from browsers.</p>
         <h3 class="small muted">New vs returning</h3>
-        <div id="audience-new-returning"></div>
+        <div class="chart-frame"><canvas id="chart-audience-nr"></canvas></div>
         <h3 class="small muted" style="margin-top:12px">Locations</h3>
-        <div id="audience-locations"></div>
+        <div class="chart-frame"><canvas id="chart-audience-locations"></canvas></div>
       </article>
       <article class="panel">
         <h2>Browsers &amp; devices</h2>
         <h3 class="small muted">Browsers</h3>
-        <div id="audience-browsers"></div>
+        <div class="chart-frame"><canvas id="chart-browsers"></canvas></div>
         <h3 class="small muted" style="margin-top:12px">Devices</h3>
-        <div id="audience-devices"></div>
+        <div class="chart-frame"><canvas id="chart-devices"></canvas></div>
       </article>
     </section>
 
@@ -106,18 +111,19 @@
       <article class="panel">
         <h2>Traffic sources</h2>
         <p class="note">Search, social, direct, referrals, campaigns (UTM / referrer).</p>
-        <div id="traffic-buckets"></div>
+        <div class="chart-frame"><canvas id="chart-traffic-buckets"></canvas></div>
       </article>
       <article class="panel">
         <h2>Providers</h2>
-        <div id="traffic-providers"></div>
+        <div class="chart-frame"><canvas id="chart-traffic-providers"></canvas></div>
       </article>
     </section>
 
     <section class="panel">
       <h2>Content analytics</h2>
-      <p class="note">Sorted by dwell where samples exist. Dwell and scroll populate after engagement tracking is live on pages.</p>
-      <div class="table-wrap">
+      <p class="note">Dwell vs views by page (interactive). Table below keeps exact counts.</p>
+      <div class="chart-frame chart-frame-lg"><canvas id="chart-content-dwell"></canvas></div>
+      <div class="table-wrap" style="margin-top:14px">
         <table>
           <thead>
             <tr>
@@ -137,7 +143,7 @@
     <section class="panel">
       <h2>Engagement</h2>
       <p class="note" id="engagement-note"></p>
-      <div id="engagement-events"></div>
+      <div class="chart-frame chart-frame-md"><canvas id="chart-engagement"></canvas></div>
     </section>
 
     <section class="panel" id="leads">
@@ -164,8 +170,8 @@
       </div>
     </section>
 
-    <p class="small muted">Stack: Cloudflare Pages Functions + KV (<code>LEAD_LOG</code> / <code>CONTACT_LOG</code>) · auth via <code>AICS_REPORT_TOKEN</code> · optional Cloudflare Web Analytics for extra aggregates. No invasive fingerprinting.</p>
+    <p class="small muted">Stack: Cloudflare Pages Functions + KV · Chart.js CDN · auth via <code>AICS_REPORT_TOKEN</code>. No invasive fingerprinting. No sensitive personal data in the event collector.</p>
   </main>
-  <script defer src="/js/aics-analytics-dashboard.js?v=20261117-analytics"></script>
+  <script defer src="/js/aics-analytics-dashboard.js?v=20261117-charts"></script>
 </body>
 </html>

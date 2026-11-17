@@ -56,6 +56,34 @@ const allowedProps = new Set([
   "seconds",
 ]);
 
+// Hard boundary: never accept sensitive personal fields on the analytics event path.
+// Voluntary name/email belong only on /api/contact (consented forms), never here.
+const blockedSensitivePropKeys = new Set([
+  "email",
+  "name",
+  "full_name",
+  "phone",
+  "password",
+  "passwd",
+  "secret",
+  "token",
+  "card",
+  "credit_card",
+  "cvv",
+  "ssn",
+  "aadhaar",
+  "pan",
+  "dob",
+  "health",
+  "lat",
+  "lng",
+  "latitude",
+  "longitude",
+  "precise_location",
+  "ip",
+  "address",
+]);
+
 const clean = (value: unknown, max = 160) => String(value ?? "").trim().slice(0, max);
 
 function trusted(request: Request) {
@@ -135,11 +163,14 @@ export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) =
   const props: Record<string, string> = {};
   if (input.props && typeof input.props === "object" && !Array.isArray(input.props)) {
     for (const [key, value] of Object.entries(input.props as Record<string, unknown>)) {
-      if (allowedProps.has(key)) props[key] = clean(value, 120);
+      const propKey = clean(key, 64).toLowerCase();
+      if (blockedSensitivePropKeys.has(propKey)) continue;
+      if (!allowedProps.has(key) && !allowedProps.has(propKey)) continue;
+      props[key] = clean(value, 120);
     }
   }
 
-  // Server-side enrichment only — never emails, names, or autofill.
+  // Server-side enrichment only — country/region at most; never emails, names, autofill, or precise geo.
   const cf = (request as Request & { cf?: { country?: string } }).cf;
   if (!props.country && cf?.country) props.country = clean(cf.country, 8).toUpperCase();
   if (!props.browser) props.browser = browserFromUa(request.headers.get("User-Agent") || "");
