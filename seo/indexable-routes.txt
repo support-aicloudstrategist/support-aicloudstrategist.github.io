@@ -21,3 +21,8 @@
 /about/
 /privacy
 /terms
+/cloud-cost-optimization/
+/finops-consulting/
+/reduce-cloud-spend/
+/cloud-cost-governance/
+/cloud-cost-audit/

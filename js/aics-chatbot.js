@@ -8,11 +8,11 @@
   const PROFILE_KEY = "aicsChatProfileV1";
   const NAME_ASK = "Happy to help — what name should AICloudStrategist use when we follow up?";
   const CONTACT_ASK =
-    "Thanks. What is the best work email or WhatsApp number to reach you on? (Sharing it here consents to a follow-up under our Privacy Notice.)";
+    "I can send a one-page ownership checklist for your estate. WhatsApp is usually fastest in India — reply with your WhatsApp number or work email (sharing it here consents to follow-up under our Privacy Notice).";
   const EMAIL_ASK =
-    "Reply here with your name and work email or WhatsApp so someone from AICloudStrategist can reach out for a professional call.";
+    "I can share a short next-step note after this. Reply with your name and WhatsApp number or work email so someone from AICloudStrategist can follow up.";
   const EMAIL_REMIND =
-    "Whenever you're ready, share your name plus work email or WhatsApp so someone from AICloudStrategist can reach out for a professional call.";
+    "If useful, drop your WhatsApp or work email here and we will send a concise ownership checklist — no billing files needed.";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isNarrow = window.matchMedia("(max-width: 820px)").matches;
   const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
