@@ -23,8 +23,18 @@
     statusEl.className = `status-line${kind ? ` is-${kind}` : ""}`;
   };
 
+  const normalizeToken = (value) => {
+    let token = String(value || "").replace(/^\uFEFF/, "").trim();
+    if ((token.startsWith('"') && token.endsWith('"')) || (token.startsWith("'") && token.endsWith("'"))) {
+      token = token.slice(1, -1).trim();
+    }
+    token = token.replace(/^Bearer\s+/i, "").trim();
+    return token;
+  };
+
   const token = () => {
-    const value = String(tokenInput.value || "").trim();
+    const value = normalizeToken(tokenInput.value);
+    if (value && tokenInput.value !== value) tokenInput.value = value;
     if (value) {
       try {
         sessionStorage.setItem(TOKEN_KEY, value);
@@ -75,7 +85,8 @@
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok || data.ok === false) {
-        throw new Error(data.error || `Request failed (${response.status})`);
+        const detail = data.code ? ` [${data.code}]` : "";
+        throw new Error((data.error || `Request failed (${response.status})`) + detail);
       }
       return data;
     } catch (error) {

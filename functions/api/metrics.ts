@@ -41,10 +41,68 @@ const headers = {
 
 const clean = (value: unknown, max = 160) => String(value ?? "").trim().slice(0, max);
 
-function authorized(request: Request, env: MetricsEnv) {
-  const configured = clean(env.AICS_REPORT_TOKEN, 512);
-  const supplied = clean(request.headers.get("Authorization"), 520).replace(/^Bearer\s+/i, "");
-  return Boolean(configured && supplied && configured === supplied);
+/** Normalize pasted/header tokens: trim, strip wrapping quotes, strip accidental Bearer prefix. */
+function normalizeToken(value: unknown, max = 512) {
+  let token = String(value ?? "")
+    .replace(/^\uFEFF/, "")
+    .trim()
+    .slice(0, max);
+  if (
+    (token.startsWith('"') && token.endsWith('"')) ||
+    (token.startsWith("'") && token.endsWith("'"))
+  ) {
+    token = token.slice(1, -1).trim();
+  }
+  token = token.replace(/^Bearer\s+/i, "").trim();
+  return token;
+}
+
+function extractBearerToken(request: Request) {
+  const raw = request.headers.get("Authorization") || request.headers.get("X-AICS-Report-Token") || "";
+  const match = raw.match(/^Bearer\s+(.+)$/i);
+  if (match) return normalizeToken(match[1], 512);
+  // Allow raw token in Authorization for paste mistakes, plus dedicated header.
+  return normalizeToken(raw, 512);
+}
+
+type AuthResult =
+  | { ok: true; token: string }
+  | { ok: false; status: number; error: string; code: string };
+
+function authorize(request: Request, env: MetricsEnv): AuthResult {
+  const configured = normalizeToken(env.AICS_REPORT_TOKEN, 512);
+  if (!configured) {
+    return {
+      ok: false,
+      status: 503,
+      code: "server_token_missing",
+      error:
+        "AICS_REPORT_TOKEN is not set on this Cloudflare Pages environment. Add it under Pages → Settings → Environment variables (Production), then redeploy.",
+    };
+  }
+
+  const supplied = extractBearerToken(request);
+  if (!supplied) {
+    return {
+      ok: false,
+      status: 401,
+      code: "missing_authorization",
+      error: "Missing Authorization Bearer token. Paste the report token in the dashboard and click Load.",
+    };
+  }
+
+  // Exact match after normalization (case-sensitive — secrets usually are).
+  if (supplied !== configured) {
+    return {
+      ok: false,
+      status: 401,
+      code: "invalid_token",
+      error:
+        "Invalid report token. Check you copied AICS_REPORT_TOKEN from the Production environment (not Preview), with no extra spaces or quotes.",
+    };
+  }
+
+  return { ok: true, token: supplied };
 }
 
 function dayKey(iso: string) {
@@ -121,11 +179,12 @@ async function getMany(store: KVNamespace, names: string[], batchSize = 40) {
 export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) => {
   const started = Date.now();
   try {
-    if (!authorized(request, env)) {
-      return new Response(JSON.stringify({ ok: false, error: "Unauthorized — check AICS_REPORT_TOKEN" }), {
-        status: 401,
-        headers,
-      });
+    const auth = authorize(request, env);
+    if (!auth.ok) {
+      return new Response(
+        JSON.stringify({ ok: false, error: auth.error, code: auth.code }),
+        { status: auth.status, headers },
+      );
     }
 
     const eventStore = env.LEAD_LOG;
