@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Site analytics | AICloudStrategist (private)</title>
+  <title>Analytics | AICloudStrategist</title>
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta name="description" content="Private first-party analytics dashboard for AICloudStrategist. Token required.">
-  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261117-studio">
+  <meta name="description" content="AICloudStrategist site analytics dashboard.">
+  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261117-clean">
 </head>
 <body>
   <main class="dash-shell">
     <header class="dash-top">
       <div>
-        <p class="small muted">Private studio · noindex · first-party KV</p>
-        <h1>Channel analytics</h1>
-        <p>YouTube Studio–style overview for aicloudstrategist.com — summary cards, geography, traffic, content, live activity, and voluntary leads.</p>
+        <p class="small muted">AICloudStrategist</p>
+        <h1>Analytics</h1>
+        <p>Views, visitors, geography, traffic, content, live activity, and contacts.</p>
       </div>
       <p id="generated-at" class="small muted"></p>
     </header>
 
-    <section class="auth-card" aria-label="Access">
+    <section class="auth-card" aria-label="Sign in">
       <div class="auth-row">
-        <label>Report token
-          <input id="dash-token" type="password" autocomplete="off" placeholder="AICS_REPORT_TOKEN">
+        <label>Access key
+          <input id="dash-token" type="password" autocomplete="off" placeholder="Paste access key">
         </label>
-        <label>Range
+        <label>Date range
           <select id="dash-days">
             <option value="1">Last 24 hours</option>
             <option value="7" selected>Last 7 days</option>
@@ -39,63 +39,58 @@
         <label>To
           <input id="dash-to" type="date" disabled>
         </label>
-        <button id="dash-load" type="button">Load analytics</button>
-        <button id="dash-clear" class="secondary" type="button">Clear token</button>
+        <button id="dash-load" type="button">Load</button>
+        <button id="dash-clear" class="secondary" type="button">Sign out</button>
       </div>
-      <p id="dash-status" class="status-line">Enter <strong>AICS_REPORT_TOKEN</strong> to load. Requests time out after 25s instead of spinning forever.</p>
+      <p id="dash-status" class="status-line">Enter your access key to view analytics.</p>
     </section>
 
-    <div class="policy-callout">
-      <strong>Hard privacy rule</strong>
-      Never capture passwords, payment details, health data, government IDs, or precise geolocation. Analytics are aggregated/non-PII. Name/email appear only from voluntary opt-in forms.
-    </div>
-
     <section class="live-banner" aria-live="polite">
-      <div class="pulse"><span class="dot" aria-hidden="true"></span> Live now · <span id="kpi-live">0</span> active · <span id="kpi-entering">0</span> entering</div>
-      <div id="live-updated" class="small">Realtime poll starts after first successful load</div>
+      <div class="pulse"><span class="dot" aria-hidden="true"></span> Live · <span id="kpi-live">0</span> viewing now · <span id="kpi-entering">0</span> just arrived</div>
+      <div id="live-updated" class="small">Updates automatically</div>
     </section>
 
     <p class="section-label">Overview</p>
-    <section class="summary-grid" aria-label="Summary cards">
+    <section class="summary-grid" aria-label="Summary">
       <article class="summary-card">
         <div class="label">Views</div>
         <div class="value" id="kpi-views">0</div>
-        <div class="delta" id="delta-views">Page views in range</div>
+        <div class="delta" id="delta-views">In selected range</div>
         <div class="spark"><canvas id="spark-views" aria-hidden="true"></canvas></div>
       </article>
       <article class="summary-card">
         <div class="label">Visitors</div>
         <div class="value" id="kpi-visitors">0</div>
-        <div class="delta" id="delta-visitors">Unique anon visitors / sessions</div>
+        <div class="delta" id="delta-visitors">Unique visitors</div>
         <div class="spark"><canvas id="spark-visitors" aria-hidden="true"></canvas></div>
       </article>
       <article class="summary-card">
         <div class="label">Engagement</div>
         <div class="value" id="kpi-engagement">0</div>
-        <div class="delta" id="delta-engagement">CTA + scroll + downloads + chat</div>
+        <div class="delta" id="delta-engagement">Clicks, scrolls, downloads</div>
         <div class="spark"><canvas id="spark-engagement" aria-hidden="true"></canvas></div>
       </article>
       <article class="summary-card">
         <div class="label">New contacts</div>
         <div class="value" id="kpi-subscribers">0</div>
-        <div class="delta" id="delta-subscribers">Voluntary email / fit-review opt-ins</div>
+        <div class="delta" id="delta-subscribers">Form submissions</div>
         <div class="spark"><canvas id="spark-subscribers" aria-hidden="true"></canvas></div>
       </article>
     </section>
 
     <section class="panel">
-      <h2>Growth trend</h2>
-      <p class="note">Views and sessions over the selected report range. Hover for daily values; click legend to toggle.</p>
+      <h2>Growth</h2>
+      <p class="note">Daily views and sessions.</p>
       <div class="chart-frame chart-frame-lg"><canvas id="chart-growth" aria-label="Growth chart"></canvas></div>
     </section>
 
-    <p class="section-label">Audience geography</p>
+    <p class="section-label">Geography</p>
     <section class="panel">
-      <h2>Where your visitors are</h2>
-      <p class="note">Country/region from Cloudflare request country (not precise GPS). India vs outside India highlighted.</p>
+      <h2>Visitors by country</h2>
+      <p class="note">Share of traffic from India and other countries.</p>
       <div class="geo-layout">
         <div class="geo-map">
-          <svg viewBox="0 0 800 360" role="img" aria-label="Simplified world map with India highlighted">
+          <svg viewBox="0 0 800 360" role="img" aria-label="World map highlighting India">
             <rect width="800" height="360" fill="transparent"></rect>
             <ellipse cx="220" cy="140" rx="90" ry="55" fill="#cbd5e1" opacity="0.7"></ellipse>
             <ellipse cx="380" cy="130" rx="70" ry="45" fill="#cbd5e1" opacity="0.7"></ellipse>
@@ -107,7 +102,7 @@
             <text x="520" y="192" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">IN</text>
           </svg>
           <div class="geo-stats">
-            <div class="geo-stat"><strong id="geo-india-pct">0%</strong><span>India share</span></div>
+            <div class="geo-stat"><strong id="geo-india-pct">0%</strong><span>India</span></div>
             <div class="geo-stat"><strong id="geo-outside-pct">0%</strong><span>Outside India</span></div>
           </div>
         </div>
@@ -121,23 +116,23 @@
 
     <p class="section-label">Live</p>
     <section class="panel">
-      <h2>Real-time</h2>
-      <p class="note">Aggregated only. ~2 minute active window. Lightweight realtime endpoint refreshes every 15s without reloading the full report.</p>
+      <h2>Right now</h2>
+      <p class="note">What people are viewing at this moment.</p>
       <div class="cols-3">
         <div>
-          <h3 class="small">Pages in view</h3>
+          <h3 class="small">Pages</h3>
           <div class="chart-frame"><canvas id="chart-live-pages"></canvas></div>
         </div>
         <div>
-          <h3 class="small">Live traffic sources</h3>
+          <h3 class="small">Sources</h3>
           <div class="chart-frame"><canvas id="chart-live-sources"></canvas></div>
         </div>
         <div>
-          <h3 class="small">Live locations</h3>
+          <h3 class="small">Locations</h3>
           <div class="chart-frame"><canvas id="chart-live-locations"></canvas></div>
         </div>
       </div>
-      <h3 class="small" style="margin-top:14px">Live activity feed</h3>
+      <h3 class="small" style="margin-top:14px">Activity</h3>
       <ul id="live-feed" class="feed"></ul>
     </section>
 
@@ -145,7 +140,7 @@
     <section class="cols-2">
       <article class="panel">
         <h2>Audience</h2>
-        <p class="note" id="age-note">Age is not available from browsers.</p>
+        <p class="note" id="age-note">New and returning visitors.</p>
         <h3 class="small">New vs returning</h3>
         <div class="chart-frame"><canvas id="chart-audience-nr"></canvas></div>
       </article>
@@ -167,19 +162,19 @@
     <section class="cols-2">
       <article class="panel">
         <h2>Traffic sources</h2>
-        <p class="note">Search, social, direct, referrals, campaigns.</p>
+        <p class="note">Search, social, direct, referrals, and campaigns.</p>
         <div class="chart-frame"><canvas id="chart-traffic-buckets"></canvas></div>
       </article>
       <article class="panel">
-        <h2>Providers</h2>
+        <h2>Top referrers</h2>
         <div class="chart-frame"><canvas id="chart-traffic-providers"></canvas></div>
       </article>
     </section>
 
     <p class="section-label">Content &amp; engagement</p>
     <section class="panel">
-      <h2>Content analytics</h2>
-      <p class="note">Dwell vs views by page. Table keeps exact counts.</p>
+      <h2>Top pages</h2>
+      <p class="note">Time on page and views.</p>
       <div class="chart-frame chart-frame-lg"><canvas id="chart-content-dwell"></canvas></div>
       <div class="table-wrap" style="margin-top:14px">
         <table>
@@ -187,9 +182,9 @@
             <tr>
               <th>Page</th>
               <th>Views</th>
-              <th>Avg dwell</th>
-              <th>CTA CTR</th>
-              <th>Scroll 50%+</th>
+              <th>Avg time</th>
+              <th>Click rate</th>
+              <th>Scroll depth</th>
               <th>Downloads</th>
             </tr>
           </thead>
@@ -200,18 +195,14 @@
 
     <section class="panel">
       <h2>Engagement</h2>
-      <p class="note" id="engagement-note"></p>
+      <p class="note" id="engagement-note">How people interact with the site.</p>
       <div class="chart-frame chart-frame-md"><canvas id="chart-engagement"></canvas></div>
     </section>
 
-    <p class="section-label">Leads / contacts</p>
+    <p class="section-label">Contacts</p>
     <section class="panel" id="leads">
-      <h2>Leads / Contacts</h2>
-      <div class="policy-callout">
-        <strong>Emails cannot arrive automatically from browsing.</strong>
-        Contacts appear only from the email-capture prompt or fit-review form (voluntary). Capture waits for ~50s or 60% scroll — not on page load.
-      </div>
-      <p class="note"><span id="leads-count">0</span> voluntary contacts in range · mailto for follow-up</p>
+      <h2>Contacts</h2>
+      <p class="note"><span id="leads-count">0</span> people who shared their details</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -220,7 +211,7 @@
               <th>Email</th>
               <th>Company</th>
               <th>Source</th>
-              <th>Page / context</th>
+              <th>Page</th>
               <th>Submitted</th>
             </tr>
           </thead>
@@ -228,9 +219,7 @@
         </table>
       </div>
     </section>
-
-    <p class="small muted">Reports: use the range control above (1 / 7 / 28 / 90 / custom). Stack: KV events + metrics · Chart.js · <code>AICS_REPORT_TOKEN</code>. Loading uses a 25s timeout and separate realtime polling so the UI cannot spin forever.</p>
   </main>
-  <script defer src="/js/aics-analytics-dashboard.js?v=20261117-authfix"></script>
+  <script defer src="/js/aics-analytics-dashboard.js?v=20261117-clean"></script>
 </body>
 </html>

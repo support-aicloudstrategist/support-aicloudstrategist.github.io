@@ -85,8 +85,12 @@
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok || data.ok === false) {
-        const detail = data.code ? ` [${data.code}]` : "";
-        throw new Error((data.error || `Request failed (${response.status})`) + detail);
+        const friendly = {
+          server_token_missing: "Access is not configured on the server yet. Ask an admin to add the analytics access key.",
+          missing_authorization: "Enter your access key to continue.",
+          invalid_token: "That access key is not valid. Check it and try again.",
+        };
+        throw new Error(friendly[data.code] || data.error || `Request failed (${response.status})`);
       }
       return data;
     } catch (error) {
@@ -228,7 +232,7 @@
           <span>${fmt(count)} · ${pct}%</span>
         </li>`;
       })
-      .join("") || `<li><span class="pos">–</span><div class="muted">No country data yet</div><span></span></li>`;
+      .join("") || `<li><span class="pos">–</span><div class="muted">No location data yet</div><span></span></li>`;
 
     const loc = entriesToXY(rows);
     upsertChart("audienceLoc", "chart-audience-locations", {
@@ -281,8 +285,8 @@
         (row) =>
           `<li><time>${escapeHtml(String(row.at || "").slice(11, 19))}</time><div><strong>${escapeHtml(row.name)}</strong> · ${escapeHtml(row.path)}${row.detail ? ` · ${escapeHtml(row.detail)}` : ""}</div></li>`,
       )
-      .join("") || `<li><time>--</time><div class="muted">Waiting for live activity…</div></li>`;
-    liveUpdated.textContent = `Realtime every ${rt.refresh_hint_seconds || 15}s · window ${rt.window_seconds || 120}s · aggregated only`;
+      .join("") || `<li><time>--</time><div class="muted">No live activity yet</div></li>`;
+    liveUpdated.textContent = "Updating live";
   };
 
   const renderDashboard = (data) => {
@@ -299,10 +303,10 @@
     document.getElementById("kpi-visitors").textContent = fmt(ov.visitors);
     document.getElementById("kpi-engagement").textContent = fmt(engage);
     document.getElementById("kpi-subscribers").textContent = fmt(leads.count || 0);
-    document.getElementById("delta-views").textContent = `${fmt(ov.sessions || 0)} sessions · ${data.period_days || "—"} day range`;
-    document.getElementById("delta-visitors").textContent = "Anonymous visitor / session ids";
-    document.getElementById("delta-engagement").textContent = "CTA, scroll, downloads, chat, capture opens";
-    document.getElementById("delta-subscribers").textContent = "Voluntary contacts only (not passive)";
+    document.getElementById("delta-views").textContent = `${fmt(ov.sessions || 0)} sessions in range`;
+    document.getElementById("delta-visitors").textContent = "Unique visitors";
+    document.getElementById("delta-engagement").textContent = "Clicks, scrolls, downloads";
+    document.getElementById("delta-subscribers").textContent = "Form submissions";
 
     if (window.Chart) {
       renderSparklines(growth, leads.count || 0);
@@ -409,10 +413,8 @@
       });
     }
 
-    document.getElementById("age-note").textContent =
-      (aud.age && aud.age.note) || "Age is not available from browsers.";
-    document.getElementById("engagement-note").textContent =
-      eng.note || "CTA rate is on-page click-through, not ad impressions.";
+    document.getElementById("age-note").textContent = "New and returning visitors.";
+    document.getElementById("engagement-note").textContent = "How people interact with the site.";
 
     const contentRows = (data.content || [])
       .map(
@@ -444,11 +446,11 @@
       .join("");
     document.getElementById("leads-count").textContent = fmt(leads.count || 0);
     document.getElementById("leads-table").innerHTML =
-      leadRows || `<tr><td colspan="6" class="muted">No voluntary leads in this range yet.</td></tr>`;
+      leadRows || `<tr><td colspan="6" class="muted">No contacts in this range yet.</td></tr>`;
 
     renderRealtime(data.realtime || {});
-    const timing = data.duration_ms != null ? ` · API ${data.duration_ms}ms` : "";
-    document.getElementById("generated-at").textContent = `Generated ${data.generated_at || ""}${timing}`;
+    const when = data.generated_at ? String(data.generated_at).replace("T", " ").slice(0, 19) : "";
+    document.getElementById("generated-at").textContent = when ? `Updated ${when}` : "";
   };
 
   const queryUrl = (mode = "dashboard") => {
@@ -472,7 +474,7 @@
       const data = await fetchJson(`${queryUrl("realtime")}&realtime=1`, auth, 12000);
       if (data.realtime) renderRealtime(data.realtime);
     } catch (error) {
-      liveUpdated.textContent = `Realtime refresh failed: ${error instanceof Error ? error.message : "error"}`;
+      liveUpdated.textContent = "Live update paused";
     }
   };
 
@@ -484,13 +486,12 @@
   const load = async ({ silent } = { silent: false }) => {
     const auth = token();
     if (!auth) {
-      setStatus("Enter the report token to load metrics.", "error");
+      setStatus("Enter your access key to view analytics.", "error");
       return;
     }
     const seq = ++loadSeq;
-    if (!silent) setStatus("Loading analytics…");
+    if (!silent) setStatus("Loading…");
 
-    // Do not block the metrics request on Chart.js CDN.
     const chartPromise = ensureChartJs().catch((error) => {
       console.warn(error);
       return null;
@@ -502,16 +503,11 @@
       await chartPromise;
       if (seq !== loadSeq) return;
       renderDashboard(data);
-      const extra =
-        data.keys_listed != null
-          ? ` · scanned ${fmt(data.keys_listed)} keys` +
-            (data.presence_skipped ? `, skipped ${fmt(data.presence_skipped)} presence` : "")
-          : "";
-      setStatus(`Loaded successfully${extra}. Realtime panel polls separately.`, "ok");
+      setStatus("Analytics loaded.", "ok");
       startPolling();
     } catch (error) {
       if (seq !== loadSeq) return;
-      setStatus(error instanceof Error ? error.message : "Failed to load metrics.", "error");
+      setStatus(error instanceof Error ? error.message : "Could not load analytics.", "error");
     }
   };
 
@@ -523,7 +519,7 @@
     } catch (_) {}
     if (pollTimer) window.clearInterval(pollTimer);
     Object.keys(charts).forEach(destroyChart);
-    setStatus("Token cleared.");
+    setStatus("Signed out.");
   });
   daysSelect.addEventListener("change", () => {
     const custom = daysSelect.value === "custom";
