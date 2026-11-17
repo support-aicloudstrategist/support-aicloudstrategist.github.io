@@ -174,13 +174,13 @@
         record('dwell_tick',{props:{seconds:String(dwellSeconds)}});
       }
       // Presence every 30s keeps realtime useful without flooding KV.
-      record('presence_ping',{props:{seconds:String(dwellSeconds),trigger:'heartbeat'}});
+      /* presence_ping disabled to conserve KV daily write quota */
     }
     window.addEventListener('scroll',onScroll,{passive:true});
     onScroll();
     dwellTimer=window.setInterval(tickDwell,30000);
     if(document.visibilityState==='visible'){
-      record('presence_ping',{props:{seconds:'0',trigger:'enter'}});
+      /* initial presence_ping disabled to conserve KV daily write quota */
     }
     document.addEventListener('visibilitychange',function(){
       if(document.visibilityState==='hidden' && dwellSeconds>0){

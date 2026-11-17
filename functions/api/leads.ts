@@ -83,13 +83,17 @@ export const onRequestGet: PagesFunction<LeadsEnv> = async ({ request, env }) =>
   if (!env.CONTACT_LOG && !env.LEAD_LOG) {
     return new Response(JSON.stringify({ ok: false, error: "Lead storage is not configured" }), { status: 503, headers: jsonHeaders });
   }
+  const cache = caches.default;
+  const cacheKey = new Request(new URL(request.url).toString(), { method: "GET" });
+  const cached = await cache.match(cacheKey);
+  if (cached) return cached;
   const url = new URL(request.url);
   const limit = Math.min(Math.max(Number(url.searchParams.get("limit") || 50), 1), 200);
   const seen = new Set<string>();
   const candidates: Array<{ kv: KVNamespace; name: string; submittedAt: string }> = [];
   for (const item of [
     ...(await listKeys(env.CONTACT_LOG, ["contact-"])),
-    ...(await listKeys(env.LEAD_LOG, ["contact-", "lead-"])),
+    ...(await listKeys(env.LEAD_LOG, ["lead-"])),
   ]) {
     if (!seen.has(item.name)) {
       seen.add(item.name);
@@ -106,5 +110,10 @@ export const onRequestGet: PagesFunction<LeadsEnv> = async ({ request, env }) =>
       }),
     )
   ).filter(Boolean);
-  return new Response(JSON.stringify({ ok: true, count: leads.length, totalStored: candidates.length, leads }), { status: 200, headers: jsonHeaders });
+  const resp = new Response(JSON.stringify({ ok: true, count: leads.length, totalStored: candidates.length, leads }), {
+    status: 200,
+    headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "private, max-age=240" },
+  });
+  await cache.put(cacheKey, resp.clone());
+  return resp;
 };
