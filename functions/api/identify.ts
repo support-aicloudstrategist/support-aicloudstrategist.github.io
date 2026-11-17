@@ -98,7 +98,6 @@ export const onRequest: PagesFunction = async (context) => {
   }
 
   const geo = geoFromRequest(request);
-  const vid = readVid(request.headers.get("Cookie") || "") || randomHex16();
   let body: Record<string, unknown> = {};
   if (request.method === "POST") {
     try {
@@ -107,6 +106,10 @@ export const onRequest: PagesFunction = async (context) => {
       body = {};
     }
   }
+  // Prefer first-party cookie; fall back to client-sent visitorId when cookies are blocked.
+  const bodyVid = clean(body.visitorId || body.vid, 36).toLowerCase();
+  const cookieVid = readVid(request.headers.get("Cookie") || "");
+  const vid = cookieVid || (/^[a-f0-9]{16}$/.test(bodyVid) ? bodyVid : "") || randomHex16();
   const ptr = geo.ip ? await reverseDns(geo.ip) : "";
 
   const profile = {
@@ -117,7 +120,7 @@ export const onRequest: PagesFunction = async (context) => {
     email: clean(body.email, 160),
     phone: clean(body.phone, 40),
     company: clean(body.company, 160),
-    page: clean(body.page, 200),
+    page: clean(body.page || body.path, 200),
     url: clean(body.url, 500),
     referrer: clean(body.referrer || request.headers.get("Referer") || "", 400),
     deviceClass: clean(body.deviceClass, 40),
