@@ -142,6 +142,54 @@
 
   window.aicsIdentifyBeacon = beacon;
 
+  // WhatsApp click-to-chat attribution: encode visitorId + path + UTMs into prefilled text.
+  function firstTouch() {
+    try {
+      return JSON.parse(sessionStorage.getItem('aics_first_touch_v1') || localStorage.getItem('aics_first_touch_v1') || '{}');
+    } catch (e) { return {}; }
+  }
+  function buildAicsWhatsAppHref(intent) {
+    var ft = firstTouch();
+    var parts = [String(intent || 'Hi AICloudStrategist, I want ownership-first FinOps notes').trim()];
+    parts.push('vid:' + String(window.aicsVisitorId || '').slice(0, 16));
+    parts.push('p:' + String(location.pathname || '/').slice(0, 80));
+    if (ft.utm_source) parts.push('src:' + String(ft.utm_source).slice(0, 40));
+    if (ft.utm_campaign) parts.push('cmp:' + String(ft.utm_campaign).slice(0, 40));
+    if (ft.gclid) parts.push('gclid:1');
+    return 'https://wa.me/918796302608?text=' + encodeURIComponent(parts.join(' | '));
+  }
+  window.aicsWhatsAppHref = buildAicsWhatsAppHref;
+  function decorateAicsWhatsAppLinks() {
+    document.querySelectorAll('a[href*="wa.me/918796302608"]').forEach(function (link) {
+      if (link.getAttribute('data-aics-wa-decorated') === '1') return;
+      var intent = 'Hi AICloudStrategist, I want ownership-first FinOps notes';
+      try {
+        var u = new URL(link.getAttribute('href') || '', location.origin);
+        var existing = u.searchParams.get('text');
+        if (existing) intent = existing.split(' | vid:')[0].split(' | p:')[0].trim() || intent;
+      } catch (e) {}
+      link.setAttribute('href', buildAicsWhatsAppHref(intent));
+      link.setAttribute('data-aics-wa-decorated', '1');
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', decorateAicsWhatsAppLinks);
+  } else {
+    decorateAicsWhatsAppLinks();
+  }
+  document.addEventListener('click', function (ev) {
+    var link = ev.target && ev.target.closest && ev.target.closest('a[href*="wa.me/918796302608"]');
+    if (!link) return;
+    var intent = 'Hi AICloudStrategist, I want ownership-first FinOps notes';
+    try {
+      var u = new URL(link.getAttribute('href') || '', location.origin);
+      var t = u.searchParams.get('text') || '';
+      intent = t.split(' | vid:')[0].split(' | p:')[0].trim() || intent;
+    } catch (e) {}
+    link.setAttribute('href', buildAicsWhatsAppHref(intent));
+    beacon({ contact_source: 'whatsapp_click' });
+  }, true);
+
   window.addEventListener('scroll', function () {
     var doc = document.documentElement;
     var max = Math.max(doc.scrollHeight - window.innerHeight, 1);
