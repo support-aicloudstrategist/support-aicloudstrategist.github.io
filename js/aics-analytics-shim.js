@@ -88,12 +88,20 @@
   
   function ensureAicsVid(){
     var m=(document.cookie.match(/(?:^|;\s*)aics_vid=([a-f0-9]{16})/i)||[])[1];
-    if(m) return m.toLowerCase();
+    var ls='';
+    try{ ls=String(localStorage.getItem('aics_vid_ls')||''); }catch(e){}
+    var existing=(m||ls||'').toLowerCase();
+    if(/^[a-f0-9]{16}$/.test(existing)){
+      document.cookie='aics_vid='+existing+'; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
+      try{ localStorage.setItem('aics_vid_ls', existing); }catch(e){}
+      return existing;
+    }
     var b=new Uint8Array(8);
     if(window.crypto&&window.crypto.getRandomValues) window.crypto.getRandomValues(b);
     else for(var i=0;i<8;i++) b[i]=Math.floor(Math.random()*256);
     var v=Array.from(b).map(function(x){return x.toString(16).padStart(2,'0');}).join('');
     document.cookie='aics_vid='+v+'; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
+    try{ localStorage.setItem('aics_vid_ls', v); }catch(e){}
     return v;
   }
   var aicsVid=ensureAicsVid();

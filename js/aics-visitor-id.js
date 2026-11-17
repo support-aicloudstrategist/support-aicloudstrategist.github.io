@@ -96,8 +96,10 @@
   function beacon(extra) {
     var id = savedIdentity();
     var payload = Object.assign({
+      visitorId: window.aicsVisitorId || '',
       fingerprint: window.__aicsFingerprint || '',
       page: location.pathname,
+      path: location.pathname,
       url: location.href,
       referrer: document.referrer || '',
       deviceClass: deviceClass(),
@@ -122,6 +124,10 @@
       .then(function (data) {
         if (data && data.ok) {
           window.__aicsIdentify = data;
+          if (data.vid) {
+            window.aicsVisitorId = data.vid;
+            try { localStorage.setItem('aics_vid_ls', data.vid); } catch (e) {}
+          }
           try {
             localStorage.setItem('aics_visitor_enrichment_v1', JSON.stringify({
               at: new Date().toISOString(),
