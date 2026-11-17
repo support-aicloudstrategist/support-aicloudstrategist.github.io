@@ -295,8 +295,7 @@ const sitemapEntries: Array<{ loc: string; lastmod: string }> = [
 function buildSitemapXml(origin: string): string {
   const urls = sitemapEntries
     .map((entry) => `  <url><loc>${origin}${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod></url>`)
-    .join("
-");
+    .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
@@ -347,7 +346,6 @@ export const onRequest: PagesFunction = async (context) => {
   ) {
     return response;
   }
-  const accept = context.request.headers.get("Accept") || "";
   const filename = pathname?.split("/").pop() || "";
   const isHtmlPath = !filename.includes(".") || filename.toLowerCase().endsWith(".html");
   const isDocument = (method === "GET" || method === "HEAD") && isHtmlPath;
