@@ -1,0 +1,492 @@
+(() => {
+  if (window.__AICS_CHATBOT__) return;
+  window.__AICS_CHATBOT__ = true;
+
+  const SESSION_KEY = "aicsChatSession";
+  const EMAIL_STORAGE_KEY = "aicsChatEmail";
+  const EMAIL_DONE_KEY = "aicsEmailCaptureDone";
+  const PROFILE_KEY = "aicsChatProfileV1";
+  const NAME_ASK = "Happy to help — what name should AICloudStrategist use when we follow up?";
+  const CONTACT_ASK =
+    "I can send a one-page ownership checklist for your estate. WhatsApp is usually fastest in India — reply with your WhatsApp number or work email (sharing it here consents to follow-up under our Privacy Notice).";
+  const EMAIL_ASK =
+    "I can share a short next-step note after this. Reply with your name and WhatsApp number or work email so someone from AICloudStrategist can follow up.";
+  const EMAIL_REMIND =
+    "If useful, drop your WhatsApp or work email here and we will send a concise ownership checklist — no billing files needed.";
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isNarrow = window.matchMedia("(max-width: 820px)").matches;
+  const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
+  const extractEmail = (value) => {
+    const match = String(value || "").match(/[^\s@]+@[^\s@]+\.[^\s@]+/);
+    return match ? match[0].trim() : "";
+  };
+  const extractPhone = (value) => {
+    const m = String(value || "").match(/(?:\+\d{1,3}[\s-]?)?(?:\(?\d{3,5}\)?[\s-]?)?\d{5,10}/);
+    const digits = m ? m[0].replace(/\D/g, "") : "";
+    return digits.length >= 10 && digits.length <= 15 ? m[0].trim() : "";
+  };
+  const extractName = (value) => {
+    const raw = String(value || "").trim();
+    if (!raw || extractEmail(raw) || extractPhone(raw)) return "";
+    if (/^(hi|hello|hey|thanks|thank you|ok|okay|yes|no|sure)\b/i.test(raw)) return "";
+    const m =
+      raw.match(/^(?:i(?:'m| am)|my name is|this is)\s+([A-Za-z][A-Za-z .'-]{1,60})$/i) ||
+      raw.match(/^([A-Za-z][A-Za-z .'-]{1,40})$/);
+    if (!m) return "";
+    const name = m[1].trim().replace(/\s+/g, " ");
+    if (name.split(" ").length > 4 || name.length < 2) return "";
+    return name.slice(0, 80);
+  };
+
+  const mountChatbot = () => {
+  if (document.querySelector(".aics-chat")) return;
+
+  const getSessionId = () => {
+    try {
+      const existing = sessionStorage.getItem(SESSION_KEY);
+      if (existing) return existing;
+      const id = `web-${crypto.randomUUID()}`;
+      sessionStorage.setItem(SESSION_KEY, id);
+      return id;
+    } catch (_) {
+      return `web-${Date.now()}`;
+    }
+  };
+
+  const readStoredEmail = () => {
+    try {
+      return localStorage.getItem(EMAIL_STORAGE_KEY) || "";
+    } catch (_) {
+      return "";
+    }
+  };
+
+  const alreadyCaptured = () => {
+    try {
+      return Boolean(readStoredEmail()) || localStorage.getItem(EMAIL_DONE_KEY) === "1";
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const readProfile = () => {
+    try {
+      return { name: "", email: "", phone: "", ...JSON.parse(localStorage.getItem(PROFILE_KEY) || "{}") };
+    } catch (_) {
+      return { name: "", email: "", phone: "" };
+    }
+  };
+
+  let profile = readProfile();
+
+  const persistProfile = async ({ name = "", email = "", phone = "" } = {}) => {
+    profile = {
+      name: name || profile.name || "",
+      email: email || profile.email || "",
+      phone: phone || profile.phone || "",
+    };
+    if (window.aicsStitchIdentity) {
+      window.aicsStitchIdentity({
+        name: profile.name,
+        email: profile.email,
+        phone: profile.phone,
+      });
+    }
+    try {
+      localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+      if (profile.email || profile.phone) {
+        localStorage.setItem(EMAIL_STORAGE_KEY, profile.email || profile.phone);
+        localStorage.setItem(EMAIL_DONE_KEY, "1");
+      }
+      sessionStorage.setItem("aics_chat_turns", String(userTurns));
+    } catch (_) {}
+    if (typeof window.aicsIdentifyBeacon === "function") {
+      window.aicsIdentifyBeacon({
+        name: profile.name,
+        email: profile.email,
+        phone: profile.phone,
+        contact_source: "progressive_chat",
+        chatTurns: userTurns,
+      });
+    }
+    if (!(profile.email || profile.phone)) return;
+    const localPart = profile.name || (profile.email ? profile.email.split("@")[0] : "") || "Visitor";
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "same-origin",
+        body: JSON.stringify({
+          name: localPart.slice(0, 80),
+          email: profile.email,
+          contact: profile.email || profile.phone,
+          phone: profile.phone,
+          visitor_id: window.aicsVisitorId || "",
+          privacy_consent: "yes",
+          service: "Cloud & AI Cost Governance Diagnostic",
+          stage: "Chatbot progressive profile",
+          need: "Chatbot progressive profile",
+          message: "Contact shared in site chatbot for a professional call follow-up.",
+          company_website: "",
+          landing_page: window.location.href,
+          referrer: document.referrer || "",
+        }),
+      });
+    } catch (_) {}
+  };
+
+  const history = [];
+  const sessionId = getSessionId();
+  let userTurns = 0;
+  let emailAsked = alreadyCaptured() || Boolean(profile.email || profile.phone);
+  let emailCaptured = alreadyCaptured() || Boolean(profile.email || profile.phone);
+  let emailReminded = emailCaptured;
+  let nameAsked = Boolean(profile.name);
+  let contactAsked = Boolean(profile.email || profile.phone);
+
+  const localKnowledgeReply = (message) => {
+    const hay = String(message || "").toLowerCase();
+    const entries = [
+      ["price|pricing|fee|cost|how much", "Fit review is free. Typical single-estate diagnostic: USD 2,500–3,000 (India visitors see an INR band). Complex multi-cloud/GPU work: USD 5,500–12,000. Fixed fee after scope — no savings share."],
+      ["fit review|book|start|contact", "Start with a free fit review at /request-fit-review/. No billing files or credentials required to begin."],
+      ["aws|azure|gcp|kubernetes|k8s|gpu|ai", "The diagnostic covers material spend in scope across AWS, Azure, GCP, Kubernetes, and AI/GPU or model estates."],
+      ["process|how it works|timeline", "Process: free fit review → evidence intake → ownership map → 30-day action plan. Typical single-estate readout is 10–15 business days after complete evidence intake."],
+      ["guarantee|savings|risk|roi", "We do not guarantee savings percentages. Recommendations use act / investigate / hold so thin evidence does not become a forced cut."],
+      ["service|diagnostic|finops|what do you", "AICloudStrategist offers one fixed-fee Cloud & AI Cost Governance Diagnostic: connect spend to owners, then prioritize safe next actions."],
+    ];
+    for (const [pattern, answer] of entries) {
+      if (new RegExp(pattern, "i").test(hay)) return `${answer} Book a free fit review at /request-fit-review/.`;
+    }
+    return "Ask about scope, pricing, process, platforms, or the free fit review—or go to /request-fit-review/.";
+  };
+
+  const root = document.createElement("div");
+  root.className = "aics-chat";
+  root.innerHTML = `
+    <button type="button" class="aics-chat-launcher" aria-expanded="false" aria-controls="aics-chat-panel" aria-label="Ask a question">
+      <span class="aics-chat-bot" aria-hidden="true">
+        <svg class="aics-chat-bot-svg" viewBox="0 0 100 108" width="72" height="78" focusable="false">
+          <defs>
+            <linearGradient id="aicsBotPastel" x1="18%" y1="8%" x2="82%" y2="95%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="42%" stop-color="#e8faf7"/>
+              <stop offset="100%" stop-color="#b8ebe4"/>
+            </linearGradient>
+            <linearGradient id="aicsBotBelly" x1="30%" y1="0%" x2="70%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#dff7f3"/>
+            </linearGradient>
+            <radialGradient id="aicsBotCheek" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffb7c8" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#ffb7c8" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <ellipse class="aics-bot-shadow" cx="50" cy="101" rx="22" ry="4.5" fill="rgba(8,121,137,0.16)"/>
+          <g class="aics-bot-figure">
+            <g class="aics-bot-leg aics-bot-leg-left">
+              <ellipse cx="38" cy="88" rx="8" ry="10" fill="#c9efe9"/>
+              <ellipse cx="36" cy="96" rx="9" ry="5" fill="#dff7f3"/>
+            </g>
+            <g class="aics-bot-leg aics-bot-leg-right">
+              <ellipse cx="62" cy="88" rx="8" ry="10" fill="#c9efe9"/>
+              <ellipse cx="64" cy="96" rx="9" ry="5" fill="#dff7f3"/>
+            </g>
+            <g class="aics-bot-arm aics-bot-arm-left">
+              <ellipse cx="22" cy="58" rx="9" ry="12" fill="#d4f3ee"/>
+              <circle cx="18" cy="68" r="6.5" fill="#e8faf7"/>
+            </g>
+            <ellipse class="aics-bot-body" cx="50" cy="62" rx="28" ry="26" fill="url(#aicsBotPastel)"/>
+            <ellipse cx="50" cy="68" rx="16" ry="12" fill="url(#aicsBotBelly)" opacity="0.9"/>
+            <g class="aics-bot-head">
+              <circle cx="50" cy="34" r="22" fill="url(#aicsBotPastel)"/>
+              <circle cx="50" cy="12" r="4.5" fill="#d4f3ee"/>
+              <circle cx="50" cy="8" r="3.2" fill="#9ee8e0"/>
+              <ellipse cx="38" cy="40" rx="6" ry="3.5" fill="url(#aicsBotCheek)"/>
+              <ellipse cx="62" cy="40" rx="6" ry="3.5" fill="url(#aicsBotCheek)"/>
+              <g class="aics-bot-eyes">
+                <ellipse cx="41" cy="32" rx="7" ry="8" fill="#fff"/>
+                <ellipse cx="59" cy="32" rx="7" ry="8" fill="#fff"/>
+                <ellipse cx="41.5" cy="33" rx="4.2" ry="5" fill="#2a5f6a"/>
+                <ellipse cx="59.5" cy="33" rx="4.2" ry="5" fill="#2a5f6a"/>
+                <circle cx="39.5" cy="30.5" r="1.8" fill="#fff"/>
+                <circle cx="57.5" cy="30.5" r="1.8" fill="#fff"/>
+              </g>
+              <path d="M44 43c2 2.8 10 2.8 12 0" fill="none" stroke="#4a8a94" stroke-width="2.2" stroke-linecap="round"/>
+            </g>
+            <g class="aics-bot-arm aics-bot-arm-right">
+              <ellipse cx="78" cy="52" rx="9" ry="12" fill="#d4f3ee"/>
+              <circle cx="82" cy="42" r="6.5" fill="#e8faf7"/>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <span class="aics-chat-plug">Ask a question</span>
+    </button>
+    <section id="aics-chat-panel" class="aics-chat-panel" hidden>
+      <header class="aics-chat-head">
+        <div class="aics-chat-head-copy">
+          <span class="aics-chat-head-bot" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="20" height="20" focusable="false">
+              <circle cx="16" cy="17" r="11" fill="#d4f3ee"/>
+              <circle cx="16" cy="13" r="8" fill="#e8faf7"/>
+              <circle cx="13" cy="12.5" r="2.2" fill="#2a5f6a"/>
+              <circle cx="19" cy="12.5" r="2.2" fill="#2a5f6a"/>
+              <circle cx="12.3" cy="11.7" r="0.7" fill="#fff"/>
+              <circle cx="18.3" cy="11.7" r="0.7" fill="#fff"/>
+              <path d="M13 16.5c1 1.3 5 1.3 6 0" fill="none" stroke="#4a8a94" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <div>
+            <p class="aics-chat-kicker">AICloudStrategist Assistant</p>
+            <strong>Ask about the diagnostic</strong>
+          </div>
+        </div>
+        <button type="button" class="aics-chat-close" aria-label="Close chat">×</button>
+      </header>
+      <div class="aics-chat-log" role="log" aria-live="polite"></div>
+      <form class="aics-chat-form">
+        <label class="sr-only" for="aics-chat-input">Your question</label>
+        <textarea id="aics-chat-input" rows="2" maxlength="1200" placeholder="Ask about services, pricing, process…" required></textarea>
+        <button type="submit" class="button button-primary aics-chat-send">Send</button>
+      </form>
+      <p class="aics-chat-note">Queries are logged for follow-up. No billing files needed here.</p>
+    </section>
+  `;
+  document.body.appendChild(root);
+
+  const launcher = root.querySelector(".aics-chat-launcher");
+  const panel = root.querySelector(".aics-chat-panel");
+  const closer = root.querySelector(".aics-chat-close");
+  const log = root.querySelector(".aics-chat-log");
+  const form = root.querySelector(".aics-chat-form");
+  const input = root.querySelector("#aics-chat-input");
+  const sendBtn = root.querySelector(".aics-chat-send");
+
+  const addBubble = (role, text) => {
+    const bubble = document.createElement("div");
+    bubble.className = `aics-chat-bubble aics-chat-${role}`;
+    bubble.textContent = text;
+    log.appendChild(bubble);
+    log.scrollTop = log.scrollHeight;
+  };
+
+  addBubble(
+    "assistant",
+    "Hi. Ask about our fixed-fee Cloud & AI Cost Governance Diagnostic—scope, pricing, process, platforms, or the free fit review. WhatsApp or work email works best if you want a follow-up checklist."
+  );
+
+  const track = (name, props) => {
+    try {
+      if (window.aicsAnalytics && typeof window.aicsAnalytics.track === "function") {
+        window.aicsAnalytics.track(name, { props: props || {} });
+      } else if (typeof window.plausible === "function") {
+        window.plausible(name, { props: props || {} });
+      }
+    } catch (_) {}
+  };
+
+  const setOpen = (open, source = "launcher") => {
+    panel.hidden = !open;
+    launcher.setAttribute("aria-expanded", String(open));
+    root.classList.toggle("is-open", open);
+    if (open) {
+      track("chat_open", { section: "chatbot", source });
+      if (!reducedMotion) input.focus();
+    }
+  };
+
+  launcher.addEventListener("click", () => setOpen(panel.hidden, "launcher"));
+  closer.addEventListener("click", () => setOpen(false, "close"));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !panel.hidden) setOpen(false, "escape");
+  });
+
+  // Behavioral progressive capture: open after dwell / scroll / exit (once per session).
+  const CHAT_BEHAVIOR_KEY = "aicsChatBehaviorOpened";
+  const chatBehaviorDone = () => {
+    try {
+      return sessionStorage.getItem(CHAT_BEHAVIOR_KEY) === "1";
+    } catch (_) {
+      return false;
+    }
+  };
+  const markChatBehavior = () => {
+    try {
+      sessionStorage.setItem(CHAT_BEHAVIOR_KEY, "1");
+    } catch (_) {}
+  };
+  const pageLoadedAt = Date.now();
+  const tryBehaviorOpen = (reason) => {
+    if (chatBehaviorDone() || !panel.hidden) return;
+    if (document.querySelector(".aics-email-capture.is-open") || document.body.classList.contains("aics-email-capture-open")) return;
+    if (alreadyCaptured()) return;
+    markChatBehavior();
+    setOpen(true, reason);
+    if (!nameAsked && !profile.name && !emailCaptured) {
+      nameAsked = true;
+      emailAsked = true;
+      addBubble("assistant", NAME_ASK);
+    }
+  };
+  window.setTimeout(() => tryBehaviorOpen("dwell_40s"), 40000);
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (chatBehaviorDone()) return;
+      const doc = document.documentElement;
+      const ratio = (window.scrollY || doc.scrollTop || 0) / Math.max(doc.scrollHeight - window.innerHeight, 1);
+      if (ratio >= 0.5) tryBehaviorOpen("scroll_50");
+    },
+    { passive: true }
+  );
+  document.addEventListener("mouseout", (ev) => {
+    if (chatBehaviorDone()) return;
+    if (Date.now() - pageLoadedAt < 35000) return;
+    if (ev.clientY > 12 || ev.relatedTarget) return;
+    tryBehaviorOpen("exit_intent_chat");
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const message = String(input.value || "").trim();
+    if (!message) return;
+
+    addBubble("user", message);
+    history.push({ role: "user", content: message });
+    userTurns += 1;
+    track("chat_query", { section: "chatbot", source: "widget" });
+    input.value = "";
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Thinking…";
+
+    const foundEmail = extractEmail(message);
+    const foundPhone = extractPhone(message);
+    const foundName = extractName(message);
+    const contactOnly =
+      (foundEmail || foundPhone) &&
+      looksLikeEmail(message.replace(foundEmail || "", "").replace(foundPhone || "", "").replace(/[\s,;:]+/g, "") || foundEmail || "");
+
+    if (foundName && !profile.name) {
+      nameAsked = true;
+      await persistProfile({ name: foundName });
+      if (!(foundEmail || foundPhone) && !emailCaptured) {
+        contactAsked = true;
+        emailAsked = true;
+        const ask = `Thanks, ${foundName}. ${CONTACT_ASK}`;
+        addBubble("assistant", ask);
+        history.push({ role: "assistant", content: ask });
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+        log.scrollTop = log.scrollHeight;
+        return;
+      }
+    }
+
+    // Capture email/phone when offered; never block the chat.
+    if ((foundEmail || foundPhone) && !emailCaptured) {
+      emailCaptured = true;
+      emailAsked = true;
+      emailReminded = true;
+      contactAsked = true;
+      await persistProfile({ name: foundName || profile.name, email: foundEmail, phone: foundPhone });
+      track("form_submit_success", { form: "chatbot_email_capture", section: "chatbot", status: "captured" });
+
+      const thanks = "Thanks — someone from AICloudStrategist can follow up on those details.";
+      if (contactOnly || message.replace(foundEmail || "", "").replace(foundPhone || "", "").trim().length < 6) {
+        addBubble("assistant", thanks);
+        history.push({ role: "assistant", content: thanks });
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+        log.scrollTop = log.scrollHeight;
+        return;
+      }
+
+      addBubble("assistant", thanks);
+      history.push({ role: "assistant", content: thanks });
+    }
+
+    const pending = document.createElement("div");
+    pending.className = "aics-chat-bubble aics-chat-assistant is-pending";
+    pending.textContent = "Looking that up…";
+    log.appendChild(pending);
+    log.scrollTop = log.scrollHeight;
+
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message,
+          session_id: sessionId,
+          page: window.location.pathname,
+          history: history.slice(-6),
+        }),
+      });
+      let reply = "";
+      if (response.ok) {
+        const data = await response.json().catch(() => ({}));
+        reply = data.reply || data.error || "";
+      }
+      if (!reply) {
+        reply = localKnowledgeReply(message);
+      }
+
+      // Progressive profiling in chat (no formal form UI).
+      if (!nameAsked && !profile.name && !emailCaptured && userTurns === 1) {
+        nameAsked = true;
+        emailAsked = true;
+        reply = `${reply}\n\n${NAME_ASK}`;
+        track("form_start", { form: "chatbot_email_capture", section: "chatbot" });
+      } else if (profile.name && !emailCaptured && !contactAsked && userTurns >= 2) {
+        contactAsked = true;
+        emailAsked = true;
+        reply = `${reply}\n\n${CONTACT_ASK}`;
+      } else if (!emailAsked && !emailCaptured && userTurns === 1) {
+        emailAsked = true;
+        reply = `${reply}\n\n${EMAIL_ASK}`;
+        track("form_start", { form: "chatbot_email_capture", section: "chatbot" });
+      } else if (emailAsked && !emailCaptured && !emailReminded && userTurns >= 3) {
+        emailReminded = true;
+        reply = `${reply}\n\n${EMAIL_REMIND}`;
+      }
+
+      pending.classList.remove("is-pending");
+      pending.textContent = reply;
+      history.push({ role: "assistant", content: reply });
+    } catch (_) {
+      let reply = localKnowledgeReply(message);
+      if (!nameAsked && !profile.name && !emailCaptured && userTurns === 1) {
+        nameAsked = true;
+        emailAsked = true;
+        reply = `${reply}\n\n${NAME_ASK}`;
+      } else if (profile.name && !emailCaptured && !contactAsked && userTurns >= 2) {
+        contactAsked = true;
+        emailAsked = true;
+        reply = `${reply}\n\n${CONTACT_ASK}`;
+      } else if (!emailAsked && !emailCaptured && userTurns === 1) {
+        emailAsked = true;
+        reply = `${reply}\n\n${EMAIL_ASK}`;
+      } else if (emailAsked && !emailCaptured && !emailReminded && userTurns >= 3) {
+        emailReminded = true;
+        reply = `${reply}\n\n${EMAIL_REMIND}`;
+      }
+      pending.classList.remove("is-pending");
+      pending.textContent = reply;
+      history.push({ role: "assistant", content: reply });
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Send";
+      log.scrollTop = log.scrollHeight;
+    }
+  });
+  };
+
+  // On phones, defer widget mount so hero/CTA paint and interact first.
+  if (isNarrow && "requestIdleCallback" in window) {
+    window.requestIdleCallback(() => mountChatbot(), { timeout: 2800 });
+  } else if (isNarrow) {
+    window.setTimeout(mountChatbot, 1400);
+  } else {
+    mountChatbot();
+  }
+})();
