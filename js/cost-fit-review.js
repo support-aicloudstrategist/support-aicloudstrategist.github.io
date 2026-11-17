@@ -9,7 +9,7 @@
   const params = new URLSearchParams(window.location.search);
   let started = false;
 
-  ['landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign'].forEach((field) => {
+  ['landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'gclid', 'msclkid', 'li_fat_id'].forEach((field) => {
     if (form.elements[field]) form.elements[field].value = attribution[field] || params.get(field) || '';
   });
 
@@ -34,9 +34,18 @@
       return;
     }
 
+    const ft = window.aicsAttribution || {};
     const payload = Object.fromEntries(new FormData(form).entries());
     payload.service = 'Cloud & AI Cost Governance Diagnostic';
     payload.stage = 'Fit review requested';
+    payload.landing_page = payload.landing_page || ft.landing_page || (window.location.origin + window.location.pathname);
+    payload.referrer = payload.referrer || ft.referrer || '';
+    payload.utm_source = payload.utm_source || ft.utm_source || '';
+    payload.utm_medium = payload.utm_medium || ft.utm_medium || '';
+    payload.utm_campaign = payload.utm_campaign || ft.utm_campaign || '';
+    payload.gclid = payload.gclid || ft.gclid || params.get('gclid') || '';
+    payload.msclkid = payload.msclkid || ft.msclkid || params.get('msclkid') || '';
+    payload.li_fat_id = payload.li_fat_id || ft.li_fat_id || params.get('li_fat_id') || '';
 
     track('form_submit_attempt', {
       form: 'cloud_ai_cost_fit_review',
@@ -59,7 +68,7 @@
       success.textContent = `Thanks—your request is recorded${result.contact_id ? ` (ref ${result.contact_id})` : ''}. We’ll reply within one business day. Do not send credentials or billing files by email.`;
       success.hidden = false;
       form.reset();
-      track('form_submit_success', {
+      track('generate_lead', {
         form: 'cloud_ai_cost_fit_review',
         service: payload.service,
         section: 'fit-review',

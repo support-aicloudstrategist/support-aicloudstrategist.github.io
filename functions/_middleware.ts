@@ -47,6 +47,8 @@ const indexableExact = new Set([
   "/resources/why-fixed-fee-diagnostics-beat-savings-share",
   "/resources/how-to-read-a-cloud-bill",
   "/resources/sample-diagnostic-deliverable",
+  "/resources/gpu-and-llm-inference-cost-governance",
+  "/resources/ai-agent-and-cloud-automation-cost-checklist",
   "/why",
   "/why/finance",
   "/why/engineering",
@@ -119,11 +121,31 @@ const legacyRedirects = new Map<string, string>([
   ["/serverless-cost-optimization", "/services/"],
   ["/ai-infrastructure-cost", "/services/"],
   ["/llm-cost-optimization", "/services/"],
+  ["/advisory", "/services/"],
+  ["/advisory.html", "/services/"],
+  ["/case-studies", "/resources/sample-diagnostic-deliverable/"],
+  ["/services/production-ai-readiness", "/resources/ai-agent-and-cloud-automation-cost-checklist/"],
+  ["/ai-automation-agency", "/resources/ai-agent-and-cloud-automation-cost-checklist/"],
+  ["/resources/europe-saas-ai-finops-vs-cloud-cost-tools-comparison", "/resources/why-fixed-fee-diagnostics-beat-savings-share/"],
+  ["/resources/dpdp-compliance-checklist-dental-clinics-india", "/resources/"],
+  ["/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist", "/resources/"],
+  ["/resources/india-coaching-centre-admission-follow-up-checklist", "/resources/"],
+  ["/resources/italy-whatsapp-crm-ai-automation-diagnostic-package", "/resources/"],
 ]);
 
 const legacyPrefixRedirects: Array<[string, string]> = [
   ["/services/cloud-ai-economics/", "/services/"],
   ["/services/cloud-finops/", "/services/"],
+  ["/services/production-ai-readiness/", "/resources/ai-agent-and-cloud-automation-cost-checklist/"],
+  ["/ai-automation-agency-", "/resources/ai-agent-and-cloud-automation-cost-checklist/"],
+  ["/ai-automation-agency/", "/resources/ai-agent-and-cloud-automation-cost-checklist/"],
+  ["/case-studies/", "/resources/sample-diagnostic-deliverable/"],
+  ["/advisory/", "/services/"],
+  ["/resources/europe-saas-ai-finops-vs-cloud-cost-tools-comparison/", "/resources/why-fixed-fee-diagnostics-beat-savings-share/"],
+  ["/resources/dpdp-compliance-checklist-dental-clinics-india/", "/resources/"],
+  ["/resources/global-b2b-saas-trial-to-paid-conversion-follow-up-evidence-checklist/", "/resources/"],
+  ["/resources/india-coaching-centre-admission-follow-up-checklist/", "/resources/"],
+  ["/resources/italy-whatsapp-crm-ai-automation-diagnostic-package/", "/resources/"],
   ["/cloud-ai-cost-governance-diagnostic/", "/services/"],
   ["/cloud-cost-optimization/", "/services/"],
   ["/finops-consulting/", "/services/"],
@@ -244,36 +266,37 @@ function injectGeoScript(response: Response, geo: { country: string; currency: "
 }
 
 /** Canonical public sitemap. Served from middleware so a stuck static/edge copy cannot pin 7 URLs. */
-const sitemapEntries: Array<{ loc: string; changefreq: string; priority: string }> = [
-  { loc: "/", changefreq: "weekly", priority: "1.0" },
-  { loc: "/services/", changefreq: "weekly", priority: "0.95" },
-  { loc: "/pricing/", changefreq: "monthly", priority: "0.9" },
-  { loc: "/request-fit-review/", changefreq: "monthly", priority: "0.9" },
-  { loc: "/why/", changefreq: "monthly", priority: "0.85" },
-  { loc: "/why/finance/", changefreq: "monthly", priority: "0.8" },
-  { loc: "/why/engineering/", changefreq: "monthly", priority: "0.8" },
-  { loc: "/why/operations/", changefreq: "monthly", priority: "0.8" },
-  { loc: "/why/minimize-waste/", changefreq: "monthly", priority: "0.8" },
-  { loc: "/why/reduce-risk/", changefreq: "monthly", priority: "0.8" },
-  { loc: "/resources/", changefreq: "weekly", priority: "0.8" },
-  { loc: "/resources/what-is-cloud-cost-ownership/", changefreq: "monthly", priority: "0.7" },
-  { loc: "/resources/why-fixed-fee-diagnostics-beat-savings-share/", changefreq: "monthly", priority: "0.7" },
-  { loc: "/resources/how-to-read-a-cloud-bill/", changefreq: "monthly", priority: "0.7" },
-  { loc: "/resources/sample-diagnostic-deliverable/", changefreq: "monthly", priority: "0.7" },
-  { loc: "/about/", changefreq: "monthly", priority: "0.7" },
-  { loc: "/privacy", changefreq: "yearly", priority: "0.3" },
-  { loc: "/terms", changefreq: "yearly", priority: "0.3" },
+const sitemapEntries: Array<{ loc: string; lastmod: string }> = [
+  { loc: "/", lastmod: "2026-11-17" },
+  { loc: "/services/", lastmod: "2026-11-17" },
+  { loc: "/pricing/", lastmod: "2026-11-15" },
+  { loc: "/request-fit-review/", lastmod: "2026-11-17" },
+  { loc: "/why/", lastmod: "2026-11-13" },
+  { loc: "/why/finance/", lastmod: "2026-11-13" },
+  { loc: "/why/engineering/", lastmod: "2026-11-13" },
+  { loc: "/why/operations/", lastmod: "2026-11-13" },
+  { loc: "/why/minimize-waste/", lastmod: "2026-11-13" },
+  { loc: "/why/reduce-risk/", lastmod: "2026-11-13" },
+  { loc: "/resources/", lastmod: "2026-11-17" },
+  { loc: "/resources/what-is-cloud-cost-ownership/", lastmod: "2026-11-17" },
+  { loc: "/resources/why-fixed-fee-diagnostics-beat-savings-share/", lastmod: "2026-11-17" },
+  { loc: "/resources/how-to-read-a-cloud-bill/", lastmod: "2026-11-17" },
+  { loc: "/resources/sample-diagnostic-deliverable/", lastmod: "2026-11-17" },
+  { loc: "/resources/gpu-and-llm-inference-cost-governance/", lastmod: "2026-11-17" },
+  { loc: "/resources/ai-agent-and-cloud-automation-cost-checklist/", lastmod: "2026-11-17" },
+  { loc: "/about/", lastmod: "2026-11-14" },
+  { loc: "/privacy", lastmod: "2026-11-10" },
+  { loc: "/terms", lastmod: "2026-11-10" },
 ];
 
 function buildSitemapXml(origin: string): string {
-  const lastmod = new Date().toISOString().slice(0, 10);
   const urls = sitemapEntries
     .map(
       (entry) =>
-        `  <url><loc>${origin}${entry.loc}</loc><lastmod>${lastmod}</lastmod></url>`,
+        `  <url><loc>${origin}${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod></url>`,
     )
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n<!-- middleware-sitemap-17 -->\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
 export const onRequest: PagesFunction = async (context) => {
@@ -319,10 +342,9 @@ export const onRequest: PagesFunction = async (context) => {
   ) {
     return response;
   }
-  const accept = context.request.headers.get("Accept") || "";
   const filename = pathname?.split("/").pop() || "";
   const isHtmlPath = !filename.includes(".") || filename.toLowerCase().endsWith(".html");
-  const isDocument = (method === "GET" || method === "HEAD") && (isHtmlPath || accept.includes("text/html"));
+  const isDocument = (method === "GET" || method === "HEAD") && isHtmlPath;
   if (!pathname || !isDocument) return response;
 
   const geo = geoCurrency(context.request);
