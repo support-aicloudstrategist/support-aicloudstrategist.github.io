@@ -71,6 +71,7 @@ function toNormalizedRecord(raw: Record<string, unknown>) {
       gclid: String(raw.gclid || ""),
       msclkid: String(raw.msclkid || ""),
       liFatId: String(raw.li_fat_id || ""),
+      country: String(raw.country || ""),
     },
   };
 }

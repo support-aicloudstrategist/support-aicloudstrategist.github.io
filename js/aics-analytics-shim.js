@@ -117,6 +117,7 @@
       else provider=host?'referral':'direct';
     }
     var ft={
+      landing_page:location.origin+location.pathname,
       utm_source:provider.slice(0,120),
       utm_medium:(params.get('utm_medium')||'organic_or_direct').slice(0,120),
       utm_campaign:(params.get('utm_campaign')||'').slice(0,120),
@@ -125,7 +126,8 @@
       li_fat_id:(params.get('li_fat_id')||'').slice(0,120),
       referrer:document.referrer.slice(0,240)
     };
-    try{ if(!sessionStorage.getItem('aics_first_touch_v1')) sessionStorage.setItem('aics_first_touch_v1',JSON.stringify(ft)); }catch(e){}
+    try{ var sv=sessionStorage.getItem('aics_first_touch_v1'); if(sv) ft=JSON.parse(sv); else sessionStorage.setItem('aics_first_touch_v1',JSON.stringify(ft)); }catch(e){}
+    window.aicsAttribution=ft;
     return {
       source:'browser',
       provider:ft.utm_source,
@@ -201,6 +203,10 @@
       var link=target.closest('a[href]');
       if(!link) return;
       var href=link.getAttribute('href')||'';
+      if(href.indexOf('mailto:')===0){record('email_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_mailto',{props:{destination:href.slice(0,120),section:'contact'}});return;}
+      if(href.indexOf('tel:')===0){record('phone_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_phone',{props:{destination:href.slice(0,120),section:'contact'}});return;}
+      if(href.indexOf('wa.me/')>-1||href.indexOf('whatsapp')>-1){record('whatsapp_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_whatsapp',{props:{destination:href.slice(0,120),section:'contact'}});return;}
+      if(href.indexOf('cal.com/')>-1){record('cta_click',{props:{cta:'calcom_booking',destination:href.slice(0,120),section:'booking'}});return;}
       var download=link.hasAttribute('download')||/\.(pdf|docx?|xlsx?|csv|zip)(\?|$)/i.test(href);
       if(download){
         record('download_click',{props:{destination:href.slice(0,120),cta:link.textContent?link.textContent.trim().slice(0,80):'download'}});
@@ -221,6 +227,23 @@
     if(path==='/pricing') record('pricing_view',{props:{section:'pricing',source:acq.provider||'direct'}});
     trackEngagement();
     trackClicks();
+    document.querySelectorAll('form[data-aics-quick-form]').forEach(function(qf){
+      qf.addEventListener('submit',function(ev){
+        ev.preventDefault();
+        var note=qf.querySelector('[data-quick-status]'),btn=qf.querySelector('button[type="submit"]'),fd=new FormData(qf),ft=window.aicsAttribution||{};
+        var payload={name:fd.get('name')||'',contact:fd.get('contact')||'',company:fd.get('company')||'',need:fd.get('need')||'Guide question',message:fd.get('message')||'',service:'Cloud & AI Cost Governance Diagnostic',stage:'Guide quick enquiry',source:'resource-guide',privacy_consent:fd.get('privacy_consent')?'yes':'',company_website:fd.get('company_website')||'',landing_page:ft.landing_page||(location.origin+location.pathname),referrer:ft.referrer||document.referrer||'',utm_source:ft.utm_source||'',utm_medium:ft.utm_medium||'',utm_campaign:ft.utm_campaign||'',gclid:ft.gclid||'',msclkid:ft.msclkid||'',li_fat_id:ft.li_fat_id||''};
+        record('form_submit_attempt',{props:{form:'guide_quick_enquiry',section:'resource'}});
+        if(btn){btn.disabled=true;btn.textContent='Sending…';}
+        fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(j){return{ok:r.ok&&j.ok,j:j};});}).then(function(res){
+          if(!res.ok)throw new Error('Failed');
+          if(note){note.hidden=false;note.textContent='Recorded ('+(res.j.contact_id||'ok')+'). We reply within 1 business day.';}
+          qf.reset();record('form_submit_success',{props:{form:'guide_quick_enquiry',section:'resource'}});record('generate_lead',{props:{form:'guide_quick_enquiry',section:'resource'}});
+        }).catch(function(){
+          if(note){note.hidden=false;note.textContent='Could not send — please use Cal.com above or email contact@aicloudstrategist.com.';}
+          record('form_submit_error',{props:{form:'guide_quick_enquiry',section:'resource'}});
+        }).finally(function(){if(btn){btn.disabled=false;btn.textContent='Send question';}});
+      });
+    });
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();

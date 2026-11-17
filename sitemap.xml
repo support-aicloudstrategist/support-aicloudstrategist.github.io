@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aicloudstrategist.com/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/services/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/pricing/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/request-fit-review/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/why/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/why/finance/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/why/engineering/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/why/operations/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/why/minimize-waste/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/why/reduce-risk/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/resources/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/resources/what-is-cloud-cost-ownership/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/resources/why-fixed-fee-diagnostics-beat-savings-share/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/about/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/privacy</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://aicloudstrategist.com/terms</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/services/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/pricing/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/request-fit-review/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/why/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/why/finance/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/why/engineering/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/why/operations/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/why/minimize-waste/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/why/reduce-risk/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/what-is-cloud-cost-ownership/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/why-fixed-fee-diagnostics-beat-savings-share/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/resources/ai-agent-and-cloud-automation-cost-checklist/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/about/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/privacy</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://aicloudstrategist.com/terms</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>
-<!-- audit-fix-17-urls 2026-11-12T17:55+0530 middleware-served -->
