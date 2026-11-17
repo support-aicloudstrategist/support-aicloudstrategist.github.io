@@ -7,8 +7,26 @@
   const EMAIL_DONE_KEY = "aicsEmailCaptureDone";
   const PROFILE_KEY = "aicsChatProfileV1";
   const NAME_ASK = "Happy to help — what name should AICloudStrategist use when we follow up?";
-  const CONTACT_ASK =
-    "I can send a one-page ownership checklist for your estate. WhatsApp is usually fastest in India — reply with your WhatsApp number or work email (sharing it here consents to follow-up under our Privacy Notice).";
+  const enrichHint = () => {
+    try {
+      const e = JSON.parse(localStorage.getItem("aics_visitor_enrichment_v1") || "{}");
+      const company = (e.geo && e.geo.companyCandidate) || "";
+      const domain = (e.geo && e.geo.domainGuess) || (e.enrichment && e.enrichment.domainGuess) || "";
+      return { company, domain };
+    } catch (_) {
+      return { company: "", domain: "" };
+    }
+  };
+  const CONTACT_ASK = (() => {
+    const { company, domain } = enrichHint();
+    if (company && domain) {
+      return `If you are with ${company}, WhatsApp or your work email (often @${domain}) is enough for a one-page ownership checklist — sharing it here consents to follow-up under our Privacy Notice.`;
+    }
+    if (company) {
+      return `If this visit is from ${company}, reply with WhatsApp or work email for a one-page ownership checklist (consent under our Privacy Notice).`;
+    }
+    return "I can send a one-page ownership checklist for your estate. WhatsApp is usually fastest in India — reply with your WhatsApp number or work email (sharing it here consents to follow-up under our Privacy Notice).";
+  })();
   const EMAIL_ASK =
     "I can share a short next-step note after this. Reply with your name and WhatsApp number or work email so someone from AICloudStrategist can follow up.";
   const EMAIL_REMIND =

@@ -134,12 +134,15 @@
               vid: data.vid,
               fingerprint: data.fingerprint,
               geo: data.geo,
-              identity: data.identity
+              enrichment: data.enrichment || null,
+              identity: data.identity,
+              limits: data.limits || null
             }));
           } catch (e) {}
-          if (data.geo && data.geo.asnOrg && window.aicsStitchIdentity) {
+          if (data.geo && window.aicsStitchIdentity) {
             var cur = savedIdentity();
-            if (!cur.company) window.aicsStitchIdentity({ company: data.geo.asnOrg });
+            var orgHint = data.geo.companyCandidate || '';
+            if (!cur.company && orgHint) window.aicsStitchIdentity({ company: orgHint });
           }
         }
         return data;
