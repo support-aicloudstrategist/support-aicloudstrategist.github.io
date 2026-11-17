@@ -72,10 +72,27 @@ async function reverseDns(ip: string): Promise<string> {
 }
 
 async function teamCymru(ip: string) {
-  const parts = String(ip || "").split(".");
-  if (parts.length !== 4) return { asn: "", prefix: "", registry: "", allocated: "" };
+  const rawIp = String(ip || "");
+  let name = "";
+  const v4 = rawIp.split(".");
+  if (v4.length === 4 && v4.every((p) => /^\d{1,3}$/.test(p))) {
+    name = `${v4.join(".")}.origin.asn.cymru.com`;
+  } else if (rawIp.includes(":")) {
+    try {
+      const parts = rawIp.split("::");
+      const head = (parts[0] ? parts[0].split(":") : []).filter(Boolean);
+      const tail = (parts[1] ? parts[1].split(":") : []).filter(Boolean);
+      const miss = 8 - (head.length + tail.length);
+      const full = [...head, ...Array(Math.max(miss, 0)).fill("0"), ...tail].map((h) => h.padStart(4, "0"));
+      const nibbles = full.join("").split("").join(".");
+      name = `${nibbles}.origin6.asn.cymru.com`;
+    } catch {
+      return { asn: "", prefix: "", registry: "", allocated: "" };
+    }
+  } else {
+    return { asn: "", prefix: "", registry: "", allocated: "" };
+  }
   try {
-    const name = `${parts.join(".")}.origin.asn.cymru.com`;
     const res = await fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(name)}&type=TXT`, {
       headers: { Accept: "application/dns-json" },
     });
@@ -238,11 +255,30 @@ function geoFromRequest(request: Request) {
   };
 }
 
+
+async function ripeAsOverview(asn: string) {
+  const n = String(asn || "").replace(/^AS/i, "");
+  if (!/^\d+$/.test(n)) return { holder: "", type: "" };
+  try {
+    const res = await fetch(`https://stat.ripe.net/data/as-overview/data.json?resource=AS${encodeURIComponent(n)}`, {
+      headers: { Accept: "application/json" },
+    });
+    if (!res.ok) return { holder: "", type: "" };
+    const data = (await res.json()) as { data?: { holder?: string; type?: string } };
+    const d = data.data || {};
+    return { holder: clean(d.holder, 160), type: clean(d.type, 40) };
+  } catch {
+    return { holder: "", type: "" };
+  }
+}
+
 async function enrichIp(ip: string, cfAsnOrg: string, cfAsn: string): Promise<Enrich> {
   const [ptr, cymru, rdap] = await Promise.all([reverseDns(ip), teamCymru(ip), rdapLookup(ip)]);
   const asn = clean(cymru.asn || cfAsn, 12);
-  const pdb = await peeringDb(asn);
-  const classified = classifyNetwork({ asnOrg: cfAsnOrg || pdb.name, pdb, rdap, ptrHost: ptr });
+  const [pdb, ripe] = await Promise.all([peeringDb(asn), ripeAsOverview(asn)]);
+  if (!pdb.name && ripe.holder) pdb.name = ripe.holder;
+  if (!pdb.infoType && ripe.type) pdb.infoType = ripe.type;
+  const classified = classifyNetwork({ asnOrg: cfAsnOrg || pdb.name || ripe.holder, pdb, rdap, ptrHost: ptr });
   const domain = domainFromUrlOrHost(pdb.website) || domainFromUrlOrHost(ptr) || "";
   const corporateDomain = classified.networkType === "possible_business" ? domain : "";
   return {
@@ -256,7 +292,7 @@ async function enrichIp(ip: string, cfAsnOrg: string, cfAsn: string): Promise<En
     confidence: classified.confidence,
     domainGuess: corporateDomain || null,
     emailPatterns: corporateDomain ? emailPatternTemplates(corporateDomain) : [],
-    sources: ["cloudflare_edge", "team_cymru_doh", "rdap", "peeringdb", "ptr_doh"],
+    sources: ["cloudflare_edge", "team_cymru_doh", "rdap", "peeringdb", "ripe_stat", "ptr_doh"],
   };
 }
 
