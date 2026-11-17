@@ -68,7 +68,7 @@
       <button type="button" class="aics-email-capture-close" data-aics-email-dismiss aria-label="Close">×</button>
       <p class="eyebrow">Stay in the loop</p>
       <h2 id="aics-email-capture-title">Get the ownership checklist + waste triage</h2>
-      <p class="aics-email-capture-lead">Fastest in India: WhatsApp first. Or leave WhatsApp / work email for the ownership checklist — and try the free <a href="/cloud-waste-triage/">cloud waste triage</a> (result before any ask). Opt-in only.</p>
+      <p class="aics-email-capture-lead">Fastest in India: WhatsApp first. Or leave WhatsApp / work email for the ownership checklist — try the free <a href="/cloud-waste-triage/">cloud waste triage</a> (result before any ask) or unlock the <a href="/get/finops-comparison-onepager/">FinOps comparison PDF</a>. Opt-in only.</p>
       <form class="aics-email-capture-form" novalidate>
         <label class="sr-only" for="aics-email-capture-name">First name (optional)</label>
         <input id="aics-email-capture-name" name="name" type="text" autocomplete="given-name" maxlength="80" placeholder="First name (optional)">

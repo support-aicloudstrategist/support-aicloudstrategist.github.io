@@ -28,9 +28,9 @@
     return "I can send a one-page ownership checklist for your estate. WhatsApp is usually fastest in India — reply with your WhatsApp number or work email (sharing it here consents to follow-up under our Privacy Notice).";
   })();
   const EMAIL_ASK =
-    "I can share a short next-step note after this. Reply with your name and WhatsApp number or work email so someone from AICloudStrategist can follow up.";
+    "Want the FinOps vs cloud-cost-tools PDF one-pager? Reply with your name and WhatsApp or work email (consent under our Privacy Notice). Preview first at /get/finops-comparison-onepager/ — or book a fit review at /request-fit-review/.";
   const EMAIL_REMIND =
-    "If useful, drop your WhatsApp or work email here and we will send a concise ownership checklist — no billing files needed.";
+    "Still useful: WhatsApp or work email unlocks the comparison PDF at /get/finops-comparison-onepager/ (or the alert triage board at /get/cost-alert-triage-onepager/) — no billing files needed.";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isNarrow = window.matchMedia("(max-width: 820px)").matches;
   const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
