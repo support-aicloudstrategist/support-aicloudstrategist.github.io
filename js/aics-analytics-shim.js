@@ -206,7 +206,7 @@
       if(href.indexOf('mailto:')===0){record('email_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_mailto',{props:{destination:href.slice(0,120),section:'contact'}});return;}
       if(href.indexOf('tel:')===0){record('phone_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_phone',{props:{destination:href.slice(0,120),section:'contact'}});return;}
       if(href.indexOf('wa.me/')>-1||href.indexOf('whatsapp')>-1){record('whatsapp_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_whatsapp',{props:{destination:href.slice(0,120),section:'contact'}});return;}
-      if(href.indexOf('cal.com/')>-1){record('cta_click',{props:{cta:'calcom_booking',destination:href.slice(0,120),section:'booking'}});return;}
+      if(href.indexOf('cal.com/')>-1){record('cta_click',{props:{cta:'calcom_booking',destination:href.slice(0,120),section:'booking'}});record('click_booking',{props:{destination:href.slice(0,120),section:'booking'}});return;}
       var download=link.hasAttribute('download')||/\.(pdf|docx?|xlsx?|csv|zip)(\?|$)/i.test(href);
       if(download){
         record('download_click',{props:{destination:href.slice(0,120),cta:link.textContent?link.textContent.trim().slice(0,80):'download'}});

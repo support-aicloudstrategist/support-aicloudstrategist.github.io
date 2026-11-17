@@ -15,6 +15,7 @@
 /resources/sample-diagnostic-deliverable/
 /resources/gpu-and-llm-inference-cost-governance/
 /resources/ai-agent-and-cloud-automation-cost-checklist/
+/resources/europe-saas-ai-finops-vs-cloud-cost-tools-comparison/
 /about/
 /privacy
 /terms
