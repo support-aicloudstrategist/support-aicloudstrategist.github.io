@@ -16,5 +16,9 @@
 /resources/gpu-and-llm-inference-cost-governance/
 /resources/ai-agent-and-cloud-automation-cost-checklist/
 /about/
+/how-we-work/
+/data-handling/
+/scope-and-limits/
+/company/
 /privacy
 /terms

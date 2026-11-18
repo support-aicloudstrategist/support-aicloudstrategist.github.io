@@ -1,0 +1,112 @@
+%PDF-1.4
+1 0 obj<< /Type /Catalog /Pages 2 0 R >>endobj
+2 0 obj<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R 6 0 R] /Count 4 >>endobj
+3 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 7 0 R /Resources<< /Font<< /F1 11 0 R /F2 12 0 R >> >> >>endobj
+4 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources<< /Font<< /F1 11 0 R /F2 12 0 R >> >> >>endobj
+5 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 9 0 R /Resources<< /Font<< /F1 11 0 R /F2 12 0 R >> >> >>endobj
+6 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources<< /Font<< /F1 11 0 R /F2 12 0 R >> >> >>endobj
+7 0 obj<< /Length 980 >>stream
+BT
+/F2 18 Tf 50 740 Td (AICloudStrategist) Tj
+/F1 11 Tf 0 -22 Td (SAMPLE DIAGNOSTIC DELIVERABLE - SYNTHETIC DATA ONLY) Tj
+0 -18 Td (Not a client result. Illustrative Cloud and AI Cost Governance Diagnostic.) Tj
+/F2 14 Tf 0 -36 Td (1. Executive summary) Tj
+/F1 11 Tf 0 -20 Td (Estate: SynthoSaaS Pvt Ltd - synthetic multi-account AWS + EKS + GPU pool.) Tj
+0 -14 Td (Period: 2026-08-01 to 2026-08-31 (illustrative).) Tj
+0 -14 Td (Question: Who owns the MoM cloud and GPU rise before we cut?) Tj
+0 -22 Td (Findings at a glance:) Tj
+0 -14 Td (- Reconciled bill total: USD 186,400 synthetic) Tj
+0 -14 Td (- Assigned ownership: 61% | Shared: 24% | Unallocated gap: 15%) Tj
+0 -14 Td (- Safe Act items (next 30 days): 7 | Investigate: 5 | Hold: 3) Tj
+0 -22 Td (What this pack contains:) Tj
+0 -14 Td (1) Owned spend map  2) Decision register  3) 30-day action plan) Tj
+0 -22 Td (Boundaries: No production credentials used. Export-based evidence only.) Tj
+0 -14 Td (No savings guarantee. Implementation stays with the client.) Tj
+/F1 9 Tf 0 -40 Td (AICLOUDSTRATEGIST PRIVATE LIMITED - CIN U62020DC2026PTC470945) Tj
+0 -12 Td (contact@aicloudstrategist.com - Sample pack structure for fit-review buyers) Tj
+ET
+endstream
+endobj
+8 0 obj<< /Length 1100 >>stream
+BT
+/F2 14 Tf 50 740 Td (2. Owned spend map (synthetic)) Tj
+/F1 11 Tf 0 -24 Td (Cost pool                  Owner class        Amount     Share) Tj
+0 -16 Td (Product API - prod compute Assigned / Platform  USD 52,100  28%) Tj
+0 -14 Td (Customer data plane        Assigned / Data      USD 31,400  17%) Tj
+0 -14 Td (Shared EKS platform        Shared / Platform    USD 28,900  16%) Tj
+0 -14 Td (GPU training pool          Shared / ML          USD 24,700  13%) Tj
+0 -14 Td (LLM inference APIs         Assigned / AI Prod   USD 18,200  10%) Tj
+0 -14 Td (Non-prod + sandbox         Unallocated gap      USD 16,800   9%) Tj
+0 -14 Td (Networking / egress        Shared / Platform    USD 8,600    5%) Tj
+0 -14 Td (Other / untagged           Unallocated gap      USD 5,700    3%) Tj
+0 -24 Td (Ownership gaps named (not averaged away):) Tj
+0 -14 Td (- Non-prod overnight idle without an accountable product owner) Tj
+0 -14 Td (- Shared EKS namespaces without chargeback tags) Tj
+0 -14 Td (- GPU nodes retained after experiment end dates) Tj
+0 -24 Td (Method note: Totals reconcilable to the synthetic invoice export.) Tj
+0 -14 Td (Confidence is recorded per pool in the decision register.) Tj
+ET
+endstream
+endobj
+9 0 obj<< /Length 1250 >>stream
+BT
+/F2 14 Tf 50 740 Td (3. Decision register - Act / Investigate / Hold) Tj
+/F1 10 Tf 0 -22 Td (ID  Finding                         Conf  Risk  Owner            Next) Tj
+0 -14 Td (A1  Stop idle non-prod nights       High  Low   Platform Eng     Act) Tj
+0 -14 Td (A2  Rightsize oversized API ASGs    High  Low   Product Eng      Act) Tj
+0 -14 Td (A3  Delete orphaned GPU volumes     High  Low   ML Ops           Act) Tj
+0 -14 Td (A4  Cap sandbox account budgets     Med   Low   FinOps           Act) Tj
+0 -14 Td (I1  Allocate shared EKS costs       Med   Med   Platform + Fin   Investigate) Tj
+0 -14 Td (I2  Trace egress spike to service   Med   Med   Networking       Investigate) Tj
+0 -14 Td (I3  LLM token owner unclear         Med   Med   AI Prod + Fin    Investigate) Tj
+0 -14 Td (I4  Spot interruption impact        Low   Med   Platform Eng     Investigate) Tj
+0 -14 Td (H1  RI / SP purchase now            Low   High  FinOps           Hold) Tj
+0 -14 Td (H2  Prod downsize without SLO       Low   High  SRE              Hold) Tj
+0 -14 Td (H3  Multi-AZ collapse proposal      Low   High  Architecture     Hold) Tj
+0 -24 Td (Each Act row includes evidence ID, confidence, residual risk, and named owner.) Tj
+0 -14 Td (Hold rows remain visible so commercial pressure cannot erase them.) Tj
+ET
+endstream
+endobj
+10 0 obj<< /Length 1150 >>stream
+BT
+/F2 14 Tf 50 740 Td (4. 30-day action plan (client-owned)) Tj
+/F1 11 Tf 0 -24 Td (Days 1-7: Confirm owners for Act items A1-A4; freeze Hold list.) Tj
+0 -14 Td (Days 8-14: Execute A1/A3 in non-prod; open Investigate tickets I1-I3.) Tj
+0 -14 Td (Days 15-21: Review I1 allocation rule options; draft chargeback proposal.) Tj
+0 -14 Td (Days 22-30: Re-measure synthetic baseline; decide which Investigate items) Tj
+0 -14 Td (promote to Act vs remain Hold. No production changes by AICloudStrategist.) Tj
+0 -28 Td (What we need from the client (typical):) Tj
+0 -14 Td (- Billing export or Cost Explorer / CUR-equivalent for one period) Tj
+0 -14 Td (- Account/subscription list and known product owners) Tj
+0 -14 Td (- Optional: cluster namespace labels, GPU job metadata, model API bills) Tj
+0 -28 Td (What this diagnostic does NOT do:) Tj
+0 -14 Td (- No production login or credentials required to start) Tj
+0 -14 Td (- No savings-share contract and no savings guarantee) Tj
+0 -14 Td (- No implementation of cuts as part of the diagnostic fee) Tj
+0 -28 Td (SAMPLE ONLY - synthetic SynthoSaaS estate - not a customer endorsement.) Tj
+0 -14 Td (Request a diagnostic fit check: aicloudstrategist.com/request-fit-review/) Tj
+ET
+endstream
+endobj
+11 0 obj<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>endobj
+12 0 obj<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>endobj
+xref
+0 13
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000145 00000 n 
+0000000290 00000 n 
+0000000435 00000 n 
+0000000580 00000 n 
+0000000725 00000 n 
+0000001760 00000 n 
+0000002915 00000 n 
+0000004220 00000 n 
+0000005425 00000 n 
+0000005504 00000 n 
+trailer<< /Size 13 /Root 1 0 R >>
+startxref
+5584
+%%EOF

@@ -91,6 +91,8 @@ Allow: /
 Allow: /resources/
 Allow: /services/
 Disallow: /api/
+Disallow: /analytics/
+Disallow: /analytics
 Disallow: /.workspace-snapshots/
 Disallow: /preview/
 Disallow: /about-old/

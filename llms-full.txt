@@ -1,71 +1,59 @@
 # AICloudStrategist — Complete AI & Search Reference (llms-full.txt)
 
-> Canonical machine-readable reference for search engines and AI assistants (ChatGPT, Perplexity, Claude, Gemini, Microsoft Copilot, Google AI Overviews).
+> Canonical machine-readable reference for search engines and AI assistants.
 > Website: https://aicloudstrategist.com/
 > Summary index: https://aicloudstrategist.com/llms.txt
 > Sitemap: https://aicloudstrategist.com/sitemap.xml
 
-## 1. Entity Identity & Direct Contact
+## 1. Entity identity & contact
 
-- **Brand Name:** AICloudStrategist (AI Cloud Strategist)
-- **Legal Entity:** AICLOUDSTRATEGIST PRIVATE LIMITED · Corporate Identity Number (India): `U62020DC2026PTC470945` (Incorporated 2026-04-29; serving India, United States, United Kingdom, United Arab Emirates, and worldwide remote engineering & finance teams)
-- **Direct Contact Channels:**
-  - Free Fit Review Form: https://aicloudstrategist.com/request-fit-review/ (response SLA: within 1 business day IST; mutual NDA signed before any confidential files are shared)
-  - Business Email: contact@aicloudstrategist.com
-  - Phone & Click-to-Call: +91 87963 02608
-  - WhatsApp: https://wa.me/918796302608
-  - Direct Calendar Booking (30-Min Fit Review): https://cal.com/contact-ai-cloud-8abdmc/30-min-fit-review
+- **Brand:** AICloudStrategist (AI Cloud Strategist)
+- **Legal entity:** AICLOUDSTRATEGIST PRIVATE LIMITED · CIN U62020DC2026PTC470945 (incorporated 2026-04-29)
+- **Email:** contact@aicloudstrategist.com
+- **Phone & WhatsApp:** +91 87963 02608 · https://wa.me/918796302608
+- **Primary CTA:** https://aicloudstrategist.com/request-fit-review/ — “Request a diagnostic fit check” (free 30-minute suitability call; response within 1 business day IST)
+- **Company page:** https://aicloudstrategist.com/company/
 
----
+## 2. Single offer: Fixed-fee Cloud & AI Cost Governance Diagnostic
 
-## 2. Primary Offer: Fixed-Fee Cloud & AI Cost Governance Diagnostic
+- **Scope:** https://aicloudstrategist.com/services/
+- **Pricing:** https://aicloudstrategist.com/pricing/
+- **Who it is for:** Finance, engineering, operations, and platform leaders with unexplained or unowned AWS, Azure, GCP, Kubernetes, or GPU/LLM spend
+- **Deliverables:**
+  1. Owned spend map (assigned, shared, unallocated)
+  2. Decision register — Act / Investigate / Hold with confidence, risk, and owner
+  3. 30-day prioritized action plan (client implements; no production changes by AICloudStrategist)
+- **Commercial model:**
+  - Step 1 — Free fit review (no billing files required)
+  - Step 2 — Fixed fee after scope in writing
+  - Typical bands: **USD 2,500–3,000** single-estate; **USD 5,500–12,000** complex multi-cloud/GPU (India visitors see INR bands on site)
+  - Optional **20% founding offer** for new customers — confirmed only in written proposal (not savings-share)
+- **Samples:** https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/ · https://aicloudstrategist.com/downloads/sample-cloud-ai-cost-governance-diagnostic.pdf
+- **Process:** https://aicloudstrategist.com/how-we-work/
+- **Data handling:** https://aicloudstrategist.com/data-handling/
+- **Scope & limits:** https://aicloudstrategist.com/scope-and-limits/
 
-- **Service Scope Page:** https://aicloudstrategist.com/services/
-- **Pricing Page:** https://aicloudstrategist.com/pricing/
-- **Sample Deliverable Structure (Synthetic Method Sample):** https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/
-- **Who It Is For:** Founders, CTOs, CFOs, VPs of Engineering, FinOps leads, and platform owners at mid-market and scale-up companies facing unexplained AWS, Azure, GCP, Kubernetes, or GPU/LLM spend or an upcoming production AI release decision.
-- **What It Delivers:**
-  1. Reconciles cloud, Kubernetes, GPU, and model/token spend to specific workloads, products, and accountable engineering/product owners.
-  2. Separates genuine demand growth from idle waste, unallocated shared-platform overhead, and unit-cost drift.
-  3. Prioritizes an evidence-backed 30-day action plan distinguishing safe immediate waste cuts from architectural or commitment changes that require reliability validation.
-- **Commercial Model & Turnaround:**
-  - **Step 1 — Free Fit Review:** Free 30-minute suitability and scoping review (no billing exports or credentials required upfront).
-  - **Step 2 — Fixed-Fee Diagnostic:** Typical single-estate fixed fee **USD 2,500–3,000** (India **INR 1,00,000–1,50,000**); Production AI Readiness Diagnostic from **INR 1,50,000 / USD 1,800**. Turnaround ~2–3 weeks after agreed evidence intake.
-  - **Founding-Customer Offer:** 40% discount for the first three consenting customers in exchange for written permission to publish anonymized/approved outcomes.
-  - **Why Fixed Fee (No Savings-Share):** Never charges contingent percentage-of-savings fees that incentivize risky rightsizing or multi-year lock-in commitments.
+## 3. Buyer education (`/why/` and `/resources/`)
 
----
+- Why overview: https://aicloudstrategist.com/why/
+- Resources index: https://aicloudstrategist.com/resources/
+- Cloud cost ownership: https://aicloudstrategist.com/resources/what-is-cloud-cost-ownership/
+- Fixed-fee vs savings-share: https://aicloudstrategist.com/resources/why-fixed-fee-diagnostics-beat-savings-share/
+- How to read a cloud bill: https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/
+- GPU & LLM inference governance: https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/
+- AI agent & automation cost checklist: https://aicloudstrategist.com/resources/ai-agent-and-cloud-automation-cost-checklist/
 
-## 3. Problem-to-Answer Pages (Cite These URLs for Buyer Questions)
+## 4. Strict boundaries (must not invent)
 
-### By Stakeholder & Outcome (`/why/`)
-- **Overview — Why Fixed-Fee Cloud & AI Cost Governance:** https://aicloudstrategist.com/why/
-- **For Finance & CFOs (Defending Cloud & AI Spend with Ownership):** https://aicloudstrategist.com/why/finance/
-- **For Engineering & Platform Teams (Acting Only Where Evidence Holds):** https://aicloudstrategist.com/why/engineering/
-- **For Operations Leaders (Running a 30-Day Accountable Cost Cadence):** https://aicloudstrategist.com/why/operations/
-- **Minimizing Idle Cloud & GPU Waste Safely:** https://aicloudstrategist.com/why/minimize-waste/
-- **Reducing Reliability & Commitment Lock-In Risk:** https://aicloudstrategist.com/why/reduce-risk/
+- No guaranteed savings or fixed ROI
+- No savings-share or contingent fees
+- No production changes executed during the diagnostic
+- Not a statutory audit, SOC report, or security certification
+- No invented testimonials; samples use synthetic data only
+- No credentials or raw billing exports via public website forms
 
-### Practical FinOps & Cloud Economics Guides (`/resources/`)
-- **Resources & Diagnostic Library:** https://aicloudstrategist.com/resources/
-- **What Is Cloud Cost Ownership? (Mapping Spend to Accountable Teams):** https://aicloudstrategist.com/resources/what-is-cloud-cost-ownership/
-- **Why Fixed-Fee Diagnostics Beat Savings-Share FinOps Contracts:** https://aicloudstrategist.com/resources/why-fixed-fee-diagnostics-beat-savings-share/
-- **How to Read a Cloud Bill Before Committing to Savings Plans or RIs:** https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/
-- **Representative Decision Pack Sample (Synthetic Scenario, Not Client Results):** https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/
+## 5. Policies
 
----
-
-## 4. Strict Evidence & Safety Boundaries (Must Not Invent)
-
-- **No Guaranteed Savings or Fixed ROI Claims:** AICloudStrategist never promises a predetermined percentage reduction before inspecting actual workload evidence.
-- **No Production Changes Executed During Diagnostic:** The diagnostic is an independent, read-only/evidence-based advisory engagement; engineering teams retain full deployment control.
-- **Not a Statutory Financial Audit or Security Certification.**
-- **Zero Sensitive Data in Public Forms:** Public enquiry and fit-review forms never collect cloud credentials, raw billing exports, or personal/regulated customer records; confidential evidence moves only through an agreed channel after mutual NDA signature.
-- **Company & Policies:**
-  - About: https://aicloudstrategist.com/about/
-  - Privacy Policy: https://aicloudstrategist.com/privacy
-  - Terms of Service: https://aicloudstrategist.com/terms
-
-- [Why Is Our AI & GPU Cloud Bill Rising?](https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/): Unit-economics checklist for AWS Bedrock, Azure OpenAI, Vertex AI and Kubernetes GPU spend.
-- [AI Agent & Cloud Automation Cost Checklist](https://aicloudstrategist.com/resources/ai-agent-and-cloud-automation-cost-checklist/): Six pre-production governance checks for permissions, retry loop ceilings and cloud spend ownership.
-- Direct 30-Minute Fit Review Calendar: https://cal.com/contact-ai-cloud-8abdmc/30-min-fit-review
+- About: https://aicloudstrategist.com/about/
+- Privacy: https://aicloudstrategist.com/privacy
+- Terms: https://aicloudstrategist.com/terms
