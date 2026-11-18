@@ -266,6 +266,12 @@
       track("form_submit_success", { form: "chatbot_email_capture", section: "chatbot", status: "captured" });
 
       const thanks = "Thanks — someone from AICloudStrategist can follow up on that email.";
+      if (typeof window.aicsShowFormReceived === "function") {
+        window.aicsShowFormReceived({
+          title: "Your message has been received",
+          body: "Thank you. We recorded your email for a follow-up. Do not send billing files or credentials in chat.",
+        });
+      }
       if (emailOnly) {
         addBubble("assistant", thanks);
         history.push({ role: "assistant", content: thanks });

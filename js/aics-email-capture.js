@@ -275,7 +275,15 @@
       status: apiOk ? "ok" : "local_only",
     });
     status.textContent = apiOk ? "Thanks — you’re on the list." : "Thanks — saved on this device.";
-    window.setTimeout(() => hide({ reschedule: false }), 900);
+    hide({ reschedule: false });
+    if (typeof window.aicsShowFormReceived === "function") {
+      window.aicsShowFormReceived({
+        title: "Your message has been received",
+        body: apiOk
+          ? "Thank you. You’re on the list for ownership-first FinOps notes. We only email what you opted into."
+          : "Thank you. Your preference was saved on this device. If the network failed, email contact@aicloudstrategist.com.",
+      });
+    }
     submitBtn.disabled = false;
   });
 })();

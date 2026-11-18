@@ -21,6 +21,49 @@ const jsonHeaders = {
   "Access-Control-Allow-Origin": "https://aicloudstrategist.com",
 };
 
+function wantsJsonResponse(request: Request) {
+  const accept = (request.headers.get("Accept") || "").toLowerCase();
+  const contentType = (request.headers.get("Content-Type") || "").toLowerCase();
+  if (contentType.includes("application/json")) return true;
+  if (accept.includes("application/json") && !accept.includes("text/html")) return true;
+  // Native HTML form posts must never render raw JSON in the browser.
+  if (contentType.includes("application/x-www-form-urlencoded") || contentType.includes("multipart/form-data")) {
+    return false;
+  }
+  return accept.includes("application/json");
+}
+
+function respondContact(
+  request: Request,
+  body: Record<string, unknown>,
+  status = 200,
+): Response {
+  if (wantsJsonResponse(request)) {
+    return new Response(JSON.stringify(body), { status, headers: jsonHeaders });
+  }
+  const ok = Boolean(body.ok);
+  const contactId = clean(body.contact_id);
+  const error = clean(body.error) || "Submission could not be completed.";
+  if (ok) {
+    const loc = contactId ? `/thank-you.html?ref=${encodeURIComponent(contactId)}` : "/thank-you.html";
+    return new Response(null, {
+      status: 303,
+      headers: {
+        Location: loc,
+        "Cache-Control": "no-store",
+      },
+    });
+  }
+  const html = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Could not send</title><link rel="stylesheet" href="/css/cost-governance.css"></head><body><main class="section-shell"><div class="shell final-panel"><h1>We could not confirm that submission</h1><p>${error.replace(/[<>&]/g, "")}</p><p><a class="button button-primary" href="/request-fit-review/">Try the fit-check form</a> <a class="button button-secondary" href="/resources/">Back to resources</a></p></div></main></body></html>`;
+  return new Response(html, {
+    status,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-store",
+    },
+  });
+}
+
 const clean = (value: unknown) => String(value ?? "").trim();
 
 const sanitizeAttributionUrl = (value: unknown) => {
@@ -52,7 +95,20 @@ async function enforceRateLimit(env: ContactEnv, request: Request) {
 
 function hasTrustedBrowserProvenance(request: Request) {
   const origin = clean(request.headers.get("Origin"));
-  const fetchSite = clean(request.headers.get("Sec-Fetch-Site"));
+  const fetchSite = clean(request.headers.get("Sec-Fetch-Site")).toLowerCase();
+  const referer = clean(request.headers.get("Referer"));
+  // Native same-origin form posts always send Sec-Fetch-Site; some agents omit Origin.
+  if (!origin && (fetchSite === "same-origin" || fetchSite === "same-site")) {
+    return true;
+  }
+  if (!origin && referer) {
+    try {
+      const host = new URL(referer).hostname.toLowerCase();
+      return host === "aicloudstrategist.com" || host === "www.aicloudstrategist.com" || host.endsWith(".aicloudstrategist-site.pages.dev");
+    } catch {
+      return false;
+    }
+  }
   if (!origin) return false;
   try {
     const host = new URL(origin).hostname.toLowerCase();
@@ -148,15 +204,16 @@ async function sendGraphMail(env: ContactEnv, graphMessage: Record<string, unkno
 const looksLikeEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
 export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
-  if (!hasTrustedBrowserProvenance(context.request)) {
-    return new Response(JSON.stringify({ ok: false, error: "Untrusted submission source." }), { status: 403, headers: jsonHeaders });
+  const req = context.request;
+  if (!hasTrustedBrowserProvenance(req)) {
+    return respondContact(req, { ok: false, error: "Untrusted submission source." }, 403);
   }
 
   let payload: Record<string, unknown>;
   try {
-    payload = await parsePayload(context.request);
+    payload = await parsePayload(req);
   } catch {
-    return new Response(JSON.stringify({ ok: false, error: "Invalid submission payload." }), { status: 400, headers: jsonHeaders });
+    return respondContact(req, { ok: false, error: "Invalid submission payload." }, 400);
   }
 
   const name = clean(payload.name || payload.full_name);
@@ -182,20 +239,17 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
 
   // Suspicious form submission: silently accept the honeypot without delivering mail.
   if (companyWebsite) {
-    return new Response(JSON.stringify({ ok: true, contact_id: "accepted" }), { status: 200, headers: jsonHeaders });
+    return respondContact(req, { ok: true, contact_id: "accepted" }, 200);
   }
 
   if (privacyConsent !== "yes") {
-    return new Response(JSON.stringify({ ok: false, error: "Privacy consent is required for the fit review." }), {
-      status: 422,
-      headers: jsonHeaders,
-    });
+    return respondContact(req, { ok: false, error: "Privacy consent is required for the fit review." }, 422);
   }
 
   try {
-    await enforceRateLimit(context.env, context.request);
+    await enforceRateLimit(context.env, req);
   } catch {
-    return new Response(JSON.stringify({ ok: false, error: "Too many requests. Please wait and retry." }), { status: 429, headers: jsonHeaders });
+    return respondContact(req, { ok: false, error: "Too many requests. Please wait and retry." }, 429);
   }
 
   const oversized = [
@@ -206,7 +260,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     ["privacy_consent", privacyConsent, 16],
   ].find(([, value, max]) => String(value).length > Number(max));
   if (oversized) {
-    return new Response(JSON.stringify({ ok: false, error: `${oversized[0]} is too long.` }), { status: 422, headers: jsonHeaders });
+    return respondContact(req, { ok: false, error: `${oversized[0]} is too long.` }, 422);
   }
 
   const missing = [
@@ -217,24 +271,18 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     .map(([field]) => field);
 
   if (missing.length) {
-    return new Response(JSON.stringify({ ok: false, error: `Missing required field(s): ${missing.join(", ")}` }), {
-      status: 422,
-      headers: jsonHeaders,
-    });
+    return respondContact(req, { ok: false, error: `Missing required field(s): ${missing.join(", ")}` }, 422);
   }
 
   const submittedAt = new Date().toISOString();
-  const contactId = await submissionId("contact", context.request, submittedAt);
+  const contactId = await submissionId("contact", req, submittedAt);
   const recipient = clean(context.env.M365_RECIPIENT || context.env.M365_SENDER);
 
   const textBody = `New AICloudStrategist contact enquiry\n\nPipeline stage: NEW\nLead status: UNREVIEWED\nOwner: AICloudStrategist Growth Operations\nContact ID: ${contactId}\nSubmitted at: ${submittedAt}\nName: ${name}\nContact: ${contact}\nCompany: ${company || "not provided"}\nRole: ${role || "not provided"}\nService interest: ${service || "not specified"}\nBuyer stage: ${stage || "not specified"}\nPrivacy consent: ${privacyConsent || "not provided"}\nNeed: ${need}\nWebsite: ${website || "not provided"}\nMessage: ${message || "not provided"}\nLanding page: ${landingPage || "not captured"}\nReferrer: ${referrer || "direct or unavailable"}\nUTM source: ${utmSource || "not set"}\nUTM medium: ${utmMedium || "not set"}\nUTM campaign: ${utmCampaign || "not set"}\nSource: contact page\n`;
 
   const primaryLog = context.env.CONTACT_LOG || context.env.LEAD_LOG;
   if (!primaryLog) {
-    return new Response(JSON.stringify({ ok: false, error: "Lead storage is temporarily unavailable. Please use WhatsApp or email." }), {
-      status: 503,
-      headers: jsonHeaders,
-    });
+    return respondContact(req, { ok: false, error: "Lead storage is temporarily unavailable. Please use WhatsApp or email." }, 503);
   }
   // Keep both bindings in sync when present so analytics Leads and email share the same records.
   const leadStores = [context.env.CONTACT_LOG, context.env.LEAD_LOG].filter(
@@ -280,10 +328,11 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     );
   } catch (error) {
     const messageText = error instanceof Error ? error.message : "Lead storage failed.";
-    return new Response(JSON.stringify({ ok: false, error: "Lead storage failed. Please retry or use WhatsApp.", details: messageText.slice(0, 300) }), {
-      status: 502,
-      headers: jsonHeaders,
-    });
+    return respondContact(
+      req,
+      { ok: false, error: "Lead storage failed. Please retry or use WhatsApp.", details: messageText.slice(0, 300) },
+      502,
+    );
   }
 
   let notificationSent = false;
@@ -326,7 +375,11 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
     // The lead is already durably stored. A notification-status refresh failure should not create a false buyer failure.
   }
 
-  return new Response(JSON.stringify({ ok: true, contact_id: contactId, notification_sent: notificationSent, notification_mode: notificationMode }), { status: 200, headers: jsonHeaders });
+  return respondContact(
+    req,
+    { ok: true, contact_id: contactId, notification_sent: notificationSent, notification_mode: notificationMode },
+    200,
+  );
 };
 
 export const onRequestOptions: PagesFunction = async () =>

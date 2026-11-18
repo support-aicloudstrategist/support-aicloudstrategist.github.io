@@ -5029,3 +5029,73 @@ body.aics-email-capture-open { overflow: hidden; }
 @media (max-width: 900px) {
   .sample-meta-grid { grid-template-columns: 1fr; }
 }
+
+/* Shared post-submit confirmation modal (all contact / fit / capture forms) */
+.aics-form-success {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+.aics-form-success[hidden] { display: none !important; }
+.aics-form-success-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 17, 31, 0.55);
+}
+.aics-form-success-panel {
+  position: relative;
+  z-index: 1;
+  width: min(28rem, 100%);
+  padding: 1.5rem 1.4rem 1.35rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.98), rgba(243, 249, 250, 0.96)),
+    #fff;
+  box-shadow: 0 24px 70px rgba(5, 17, 31, 0.28);
+  color: #1f3344;
+}
+.aics-form-success-panel .eyebrow {
+  margin: 0 0 0.45rem;
+}
+.aics-form-success-panel h2 {
+  margin: 0 0 0.65rem;
+  font-family: var(--display, Syne, sans-serif);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: #0b1d2c;
+}
+.aics-form-success-body {
+  margin: 0 0 0.75rem;
+  color: #2c4458;
+  line-height: 1.5;
+}
+.aics-form-success-ref {
+  margin: 0 0 1rem;
+  font-family: var(--mono, "IBM Plex Mono", monospace);
+  font-size: 0.78rem;
+  color: #3d5a6c;
+}
+.aics-form-success-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.7rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  color: #24364c;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.aics-form-success-panel .button {
+  width: 100%;
+}
+body.aics-form-success-open {
+  overflow: hidden;
+}
