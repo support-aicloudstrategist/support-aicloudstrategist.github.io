@@ -39,7 +39,6 @@
     payload.stage = 'Fit review requested';
     const ft = window.aicsAttribution || {};
     payload.source = 'fit-review';
-    payload.visitor_id = window.aicsVisitorId || '';
     payload.landing_page = payload.landing_page || ft.landing_page || (window.location.origin + window.location.pathname);
     payload.referrer = payload.referrer || ft.referrer || '';
     payload.utm_source = payload.utm_source || ft.utm_source || '';
@@ -69,7 +68,6 @@
 
       success.textContent = `Thanks—your request is recorded${result.contact_id ? ` (ref ${result.contact_id})` : ''}. We’ll reply within one business day. Do not send credentials or billing files by email.`;
       success.hidden = false;
-      if (window.aicsStitchIdentity) window.aicsStitchIdentity({ name: payload.name, email: payload.contact, phone: payload.phone, company: payload.company });
       form.reset();
       track('form_submit_success', { form: 'cloud_ai_cost_fit_review', service: payload.service, section: 'fit-review' });
       track('generate_lead', { form: 'cloud_ai_cost_fit_review', service: payload.service, section: 'fit-review' });

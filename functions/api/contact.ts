@@ -160,13 +160,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   }
 
   const name = clean(payload.name || payload.full_name);
-  const phone = clean(payload.phone || payload.whatsapp_number).slice(0, 40);
-  const contact = clean(payload.contact || payload.email || phone);
-  const cookieVid = ((context.request.headers.get("Cookie") || "").match(/(?:^|;\s*)aics_vid=([a-f0-9]{16})/i) || [])[1] || "";
-  const visitorId = clean(payload.visitor_id || cookieVid).slice(0, 36);
-  const cfObj = (context.request as Request & { cf?: { city?: string; region?: string } }).cf || {};
-  const city = clean(cfObj.city).slice(0, 80);
-  const region = clean(cfObj.region).slice(0, 80);
+  const contact = clean(payload.contact || payload.email || payload.whatsapp_number);
   const need = clean(payload.need || payload.vertical || "Not specified");
   const message = clean(payload.message || payload.notes || payload.specific_notes);
   const website = clean(payload.website || payload.website_url);
@@ -259,7 +253,7 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
   const leadRecord = {
     contact_id: contactId,
     submitted_at: submittedAt,
-    name, contact, whatsapp_number: phone, visitor_id: visitorId, city, region, company, role, service, stage, need, website, message,
+    name, contact, company, role, service, stage, need, website, message,
     privacy_consent: privacyConsent,
     source: derivedSource.slice(0, 80),
     landing_page: landingPage,
@@ -291,39 +285,6 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
       headers: jsonHeaders,
     });
   }
-
-
-  context.waitUntil((async () => {
-    const uid = contact || phone;
-    const tasks: Array<Promise<unknown>> = [];
-    if (uid) {
-      const mp = new URLSearchParams({
-        idsite: "1",
-        rec: "1",
-        action_name: `Lead Captured (${stage || "contact"})`,
-        url: landingPage || "https://aicloudstrategist.com/request-fit-review/",
-        uid,
-        e_c: "LeadCapture",
-        e_a: stage || "contact",
-        e_n: contactId,
-      });
-      if (/^[a-f0-9]{16}$/i.test(visitorId)) mp.set("_id", visitorId.toLowerCase());
-      if (name) mp.set("dimension1", name.slice(0, 120));
-      if (contact.includes("@")) mp.set("dimension2", contact.slice(0, 160));
-      if (phone) mp.set("dimension3", phone.slice(0, 40));
-      if (company) mp.set("dimension4", company.slice(0, 120));
-      const ip = clean(context.request.headers.get("CF-Connecting-IP"));
-      const hdrs: Record<string, string> = { "User-Agent": context.request.headers.get("User-Agent") || "Mozilla/5.0" };
-      if (ip) hdrs["X-Real-Visitor-IP"] = ip;
-      tasks.push(fetch(`https://app.aicloudstrategist.cloud/matomo-aics/matomo.php?${mp.toString()}`, { headers: hdrs }).catch(() => null));
-    }
-    tasks.push(fetch("https://app.aicloudstrategist.cloud/lead-alert-hook/site-aicloudstrategist-com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ wake: true, contactId }),
-    }).catch(() => null));
-    await Promise.allSettled(tasks);
-  })());
 
   let notificationSent = false;
   let notificationMode = "manual-review";

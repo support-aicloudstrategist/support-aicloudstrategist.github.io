@@ -5,37 +5,16 @@
   const SESSION_KEY = "aicsChatSession";
   const EMAIL_STORAGE_KEY = "aicsChatEmail";
   const EMAIL_DONE_KEY = "aicsEmailCaptureDone";
-  const PROFILE_KEY = "aicsChatProfileV1";
-  const NAME_ASK = "Happy to help — what name should AICloudStrategist use when we follow up?";
-  const CONTACT_ASK =
-    "I can send a one-page ownership checklist for your estate. WhatsApp is usually fastest in India — reply with your WhatsApp number or work email (sharing it here consents to follow-up under our Privacy Notice).";
   const EMAIL_ASK =
-    "Want the FinOps vs cloud-cost-tools PDF one-pager? Reply with your name and WhatsApp or work email (consent under our Privacy Notice). Preview first at /get/finops-comparison-onepager/ — or book a fit review at /request-fit-review/.";
+    "Share your Gmail so someone from AICloudStrategist can reach out for a professional call.";
   const EMAIL_REMIND =
-    "Still useful: WhatsApp or work email unlocks the comparison PDF at /get/finops-comparison-onepager/ (or the alert triage board at /get/cost-alert-triage-onepager/) — no billing files needed.";
+    "Whenever you're ready, share your Gmail so someone from AICloudStrategist can reach out for a professional call.";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isNarrow = window.matchMedia("(max-width: 820px)").matches;
   const looksLikeEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
   const extractEmail = (value) => {
     const match = String(value || "").match(/[^\s@]+@[^\s@]+\.[^\s@]+/);
     return match ? match[0].trim() : "";
-  };
-  const extractPhone = (value) => {
-    const m = String(value || "").match(/(?:\+\d{1,3}[\s-]?)?(?:\(?\d{3,5}\)?[\s-]?)?\d{5,10}/);
-    const digits = m ? m[0].replace(/\D/g, "") : "";
-    return digits.length >= 10 && digits.length <= 15 ? m[0].trim() : "";
-  };
-  const extractName = (value) => {
-    const raw = String(value || "").trim();
-    if (!raw || extractEmail(raw) || extractPhone(raw)) return "";
-    if (/^(hi|hello|hey|thanks|thank you|ok|okay|yes|no|sure)\b/i.test(raw)) return "";
-    const m =
-      raw.match(/^(?:i(?:'m| am)|my name is|this is)\s+([A-Za-z][A-Za-z .'-]{1,60})$/i) ||
-      raw.match(/^([A-Za-z][A-Za-z .'-]{1,40})$/);
-    if (!m) return "";
-    const name = m[1].trim().replace(/\s+/g, " ");
-    if (name.split(" ").length > 4 || name.length < 2) return "";
-    return name.slice(0, 80);
   };
 
   const mountChatbot = () => {
@@ -69,48 +48,13 @@
     }
   };
 
-  const readProfile = () => {
+  const persistEmail = async (email) => {
     try {
-      return { name: "", email: "", phone: "", ...JSON.parse(localStorage.getItem(PROFILE_KEY) || "{}") };
-    } catch (_) {
-      return { name: "", email: "", phone: "" };
-    }
-  };
-
-  let profile = readProfile();
-
-  const persistProfile = async ({ name = "", email = "", phone = "" } = {}) => {
-    profile = {
-      name: name || profile.name || "",
-      email: email || profile.email || "",
-      phone: phone || profile.phone || "",
-    };
-    if (window.aicsStitchIdentity) {
-      window.aicsStitchIdentity({
-        name: profile.name,
-        email: profile.email,
-        phone: profile.phone,
-      });
-    }
-    try {
-      localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
-      if (profile.email || profile.phone) {
-        localStorage.setItem(EMAIL_STORAGE_KEY, profile.email || profile.phone);
-        localStorage.setItem(EMAIL_DONE_KEY, "1");
-      }
-      sessionStorage.setItem("aics_chat_turns", String(userTurns));
+      localStorage.setItem(EMAIL_STORAGE_KEY, email);
+      localStorage.setItem(EMAIL_DONE_KEY, "1");
     } catch (_) {}
-    if (typeof window.aicsIdentifyBeacon === "function") {
-      window.aicsIdentifyBeacon({
-        name: profile.name,
-        email: profile.email,
-        phone: profile.phone,
-        contact_source: "progressive_chat",
-        chatTurns: userTurns,
-      });
-    }
-    if (!(profile.email || profile.phone)) return;
-    const localPart = profile.name || (profile.email ? profile.email.split("@")[0] : "") || "Visitor";
+
+    const localPart = email.split("@")[0] || "Visitor";
     try {
       await fetch("/api/contact", {
         method: "POST",
@@ -118,15 +62,13 @@
         credentials: "same-origin",
         body: JSON.stringify({
           name: localPart.slice(0, 80),
-          email: profile.email,
-          contact: profile.email || profile.phone,
-          phone: profile.phone,
-          visitor_id: window.aicsVisitorId || "",
+          email,
+          contact: email,
           privacy_consent: "yes",
           service: "Cloud & AI Cost Governance Diagnostic",
-          stage: "Chatbot progressive profile",
-          need: "Chatbot progressive profile",
-          message: "Contact shared in site chatbot for a professional call follow-up.",
+          stage: "Chatbot email capture",
+          need: "Chatbot email capture",
+          message: "Email shared in site chatbot for a professional call follow-up.",
           company_website: "",
           landing_page: window.location.href,
           referrer: document.referrer || "",
@@ -138,11 +80,9 @@
   const history = [];
   const sessionId = getSessionId();
   let userTurns = 0;
-  let emailAsked = alreadyCaptured() || Boolean(profile.email || profile.phone);
-  let emailCaptured = alreadyCaptured() || Boolean(profile.email || profile.phone);
-  let emailReminded = emailCaptured;
-  let nameAsked = Boolean(profile.name);
-  let contactAsked = Boolean(profile.email || profile.phone);
+  let emailAsked = alreadyCaptured();
+  let emailCaptured = alreadyCaptured();
+  let emailReminded = alreadyCaptured();
 
   const localKnowledgeReply = (message) => {
     const hay = String(message || "").toLowerCase();
@@ -272,7 +212,7 @@
 
   addBubble(
     "assistant",
-    "Hi. Ask about our fixed-fee Cloud & AI Cost Governance Diagnostic—scope, pricing, process, platforms, or the free fit review. WhatsApp or work email works best if you want a follow-up checklist."
+    "Hi. Ask about our fixed-fee Cloud & AI Cost Governance Diagnostic—scope, pricing, process, the platforms we cover, or the free fit review."
   );
 
   const track = (name, props) => {
@@ -285,65 +225,20 @@
     } catch (_) {}
   };
 
-  const setOpen = (open, source = "launcher") => {
+  const setOpen = (open) => {
     panel.hidden = !open;
     launcher.setAttribute("aria-expanded", String(open));
     root.classList.toggle("is-open", open);
     if (open) {
-      track("chat_open", { section: "chatbot", source });
+      track("chat_open", { section: "chatbot", source: "launcher" });
       if (!reducedMotion) input.focus();
     }
   };
 
-  launcher.addEventListener("click", () => setOpen(panel.hidden, "launcher"));
-  closer.addEventListener("click", () => setOpen(false, "close"));
+  launcher.addEventListener("click", () => setOpen(panel.hidden));
+  closer.addEventListener("click", () => setOpen(false));
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !panel.hidden) setOpen(false, "escape");
-  });
-
-  // Behavioral progressive capture: open after dwell / scroll / exit (once per session).
-  const CHAT_BEHAVIOR_KEY = "aicsChatBehaviorOpened";
-  const chatBehaviorDone = () => {
-    try {
-      return sessionStorage.getItem(CHAT_BEHAVIOR_KEY) === "1";
-    } catch (_) {
-      return false;
-    }
-  };
-  const markChatBehavior = () => {
-    try {
-      sessionStorage.setItem(CHAT_BEHAVIOR_KEY, "1");
-    } catch (_) {}
-  };
-  const pageLoadedAt = Date.now();
-  const tryBehaviorOpen = (reason) => {
-    if (chatBehaviorDone() || !panel.hidden) return;
-    if (document.querySelector(".aics-email-capture.is-open") || document.body.classList.contains("aics-email-capture-open")) return;
-    if (alreadyCaptured()) return;
-    markChatBehavior();
-    setOpen(true, reason);
-    if (!nameAsked && !profile.name && !emailCaptured) {
-      nameAsked = true;
-      emailAsked = true;
-      addBubble("assistant", NAME_ASK);
-    }
-  };
-  window.setTimeout(() => tryBehaviorOpen("dwell_40s"), 40000);
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (chatBehaviorDone()) return;
-      const doc = document.documentElement;
-      const ratio = (window.scrollY || doc.scrollTop || 0) / Math.max(doc.scrollHeight - window.innerHeight, 1);
-      if (ratio >= 0.5) tryBehaviorOpen("scroll_50");
-    },
-    { passive: true }
-  );
-  document.addEventListener("mouseout", (ev) => {
-    if (chatBehaviorDone()) return;
-    if (Date.now() - pageLoadedAt < 35000) return;
-    if (ev.clientY > 12 || ev.relatedTarget) return;
-    tryBehaviorOpen("exit_intent_chat");
+    if (event.key === "Escape" && !panel.hidden) setOpen(false);
   });
 
   form.addEventListener("submit", async (event) => {
@@ -360,39 +255,18 @@
     sendBtn.textContent = "Thinking…";
 
     const foundEmail = extractEmail(message);
-    const foundPhone = extractPhone(message);
-    const foundName = extractName(message);
-    const contactOnly =
-      (foundEmail || foundPhone) &&
-      looksLikeEmail(message.replace(foundEmail || "", "").replace(foundPhone || "", "").replace(/[\s,;:]+/g, "") || foundEmail || "");
+    const emailOnly = foundEmail && looksLikeEmail(message.replace(foundEmail, "").replace(/[\s,;:]+/g, ""));
 
-    if (foundName && !profile.name) {
-      nameAsked = true;
-      await persistProfile({ name: foundName });
-      if (!(foundEmail || foundPhone) && !emailCaptured) {
-        contactAsked = true;
-        emailAsked = true;
-        const ask = `Thanks, ${foundName}. ${CONTACT_ASK}`;
-        addBubble("assistant", ask);
-        history.push({ role: "assistant", content: ask });
-        sendBtn.disabled = false;
-        sendBtn.textContent = "Send";
-        log.scrollTop = log.scrollHeight;
-        return;
-      }
-    }
-
-    // Capture email/phone when offered; never block the chat.
-    if ((foundEmail || foundPhone) && !emailCaptured) {
+    // Capture email when offered; never block the chat.
+    if (foundEmail && !emailCaptured) {
       emailCaptured = true;
       emailAsked = true;
       emailReminded = true;
-      contactAsked = true;
-      await persistProfile({ name: foundName || profile.name, email: foundEmail, phone: foundPhone });
+      await persistEmail(foundEmail);
       track("form_submit_success", { form: "chatbot_email_capture", section: "chatbot", status: "captured" });
 
-      const thanks = "Thanks — someone from AICloudStrategist can follow up on those details.";
-      if (contactOnly || message.replace(foundEmail || "", "").replace(foundPhone || "", "").trim().length < 6) {
+      const thanks = "Thanks — someone from AICloudStrategist can follow up on that email.";
+      if (emailOnly) {
         addBubble("assistant", thanks);
         history.push({ role: "assistant", content: thanks });
         sendBtn.disabled = false;
@@ -431,17 +305,8 @@
         reply = localKnowledgeReply(message);
       }
 
-      // Progressive profiling in chat (no formal form UI).
-      if (!nameAsked && !profile.name && !emailCaptured && userTurns === 1) {
-        nameAsked = true;
-        emailAsked = true;
-        reply = `${reply}\n\n${NAME_ASK}`;
-        track("form_start", { form: "chatbot_email_capture", section: "chatbot" });
-      } else if (profile.name && !emailCaptured && !contactAsked && userTurns >= 2) {
-        contactAsked = true;
-        emailAsked = true;
-        reply = `${reply}\n\n${CONTACT_ASK}`;
-      } else if (!emailAsked && !emailCaptured && userTurns === 1) {
+      // First question: answer, then ask for email (optional).
+      if (!emailAsked && !emailCaptured && userTurns === 1) {
         emailAsked = true;
         reply = `${reply}\n\n${EMAIL_ASK}`;
         track("form_start", { form: "chatbot_email_capture", section: "chatbot" });
@@ -455,15 +320,7 @@
       history.push({ role: "assistant", content: reply });
     } catch (_) {
       let reply = localKnowledgeReply(message);
-      if (!nameAsked && !profile.name && !emailCaptured && userTurns === 1) {
-        nameAsked = true;
-        emailAsked = true;
-        reply = `${reply}\n\n${NAME_ASK}`;
-      } else if (profile.name && !emailCaptured && !contactAsked && userTurns >= 2) {
-        contactAsked = true;
-        emailAsked = true;
-        reply = `${reply}\n\n${CONTACT_ASK}`;
-      } else if (!emailAsked && !emailCaptured && userTurns === 1) {
+      if (!emailAsked && !emailCaptured && userTurns === 1) {
         emailAsked = true;
         reply = `${reply}\n\n${EMAIL_ASK}`;
       } else if (emailAsked && !emailCaptured && !emailReminded && userTurns >= 3) {

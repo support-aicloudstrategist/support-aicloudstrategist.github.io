@@ -85,64 +85,6 @@
   }
   window.plausible=window.plausible||record;
   window.aicsAnalytics={track:record,mode:'first-party-kv+ga4',privacy:'non-PII allowlist — no emails from passive browsing'};
-  
-  function ensureAicsVid(){
-    var m=(document.cookie.match(/(?:^|;\s*)aics_vid=([a-f0-9]{16})/i)||[])[1];
-    var ls='';
-    try{ ls=String(localStorage.getItem('aics_vid_ls')||''); }catch(e){}
-    var existing=(m||ls||'').toLowerCase();
-    if(/^[a-f0-9]{16}$/.test(existing)){
-      document.cookie='aics_vid='+existing+'; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
-      try{ localStorage.setItem('aics_vid_ls', existing); }catch(e){}
-      return existing;
-    }
-    var b=new Uint8Array(8);
-    if(window.crypto&&window.crypto.getRandomValues) window.crypto.getRandomValues(b);
-    else for(var i=0;i<8;i++) b[i]=Math.floor(Math.random()*256);
-    var v=Array.from(b).map(function(x){return x.toString(16).padStart(2,'0');}).join('');
-    document.cookie='aics_vid='+v+'; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
-    try{ localStorage.setItem('aics_vid_ls', v); }catch(e){}
-    return v;
-  }
-  var aicsVid=ensureAicsVid();
-  window.aicsVisitorId=aicsVid;
-  window.aicsStitchIdentity=function(info){
-    try{
-      var prev=JSON.parse(localStorage.getItem('aics_visitor_identity_v1')||'{}');
-      var merged={vid:aicsVid,name:(info&&info.name)||prev.name||'',email:(info&&info.email)||prev.email||'',phone:(info&&info.phone)||prev.phone||'',company:(info&&info.company)||prev.company||''};
-      localStorage.setItem('aics_visitor_identity_v1',JSON.stringify(merged));
-      window._paq=window._paq||[];
-      var uid=merged.email||merged.phone;
-      if(uid) window._paq.push(['setUserId',uid]);
-      if(merged.name) window._paq.push(['setCustomDimension',1,merged.name]);
-      if(merged.email) window._paq.push(['setCustomDimension',2,merged.email]);
-      if(merged.phone) window._paq.push(['setCustomDimension',3,merged.phone]);
-      if(merged.company) window._paq.push(['setCustomDimension',4,merged.company]);
-      if(uid&&typeof window.gtag==='function') window.gtag('config',gaMeasurementId,{user_id:aicsVid,allow_google_signals:true});
-    }catch(e){}
-  };
-  function loadMatomoOpenSource(){
-    if(location.hostname==='127.0.0.1'||location.hostname==='localhost') return;
-    var _paq=window._paq=window._paq||[];
-    _paq.push(['setVisitorId',aicsVid]);
-    try{
-      var sv=JSON.parse(localStorage.getItem('aics_visitor_identity_v1')||'{}');
-      if(sv.email||sv.phone) _paq.push(['setUserId',sv.email||sv.phone]);
-      if(sv.name) _paq.push(['setCustomDimension',1,sv.name]);
-      if(sv.email) _paq.push(['setCustomDimension',2,sv.email]);
-      if(sv.phone) _paq.push(['setCustomDimension',3,sv.phone]);
-      if(sv.company) _paq.push(['setCustomDimension',4,sv.company]);
-    }catch(e){}
-    _paq.push(['enableLinkTracking']);
-    _paq.push(['trackPageView']);
-    _paq.push(['setTrackerUrl','/api/tracker']);
-    _paq.push(['setSiteId','1']);
-    var ms=document.createElement('script');
-    ms.async=true;
-    ms.src='/api/tracker?js=1';
-    document.head.appendChild(ms);
-  }
-
   function loadGoogleAnalytics(){
     if(!/^G-[A-Z0-9]+$/i.test(gaMeasurementId))return;
     window.dataLayer=window.dataLayer||[];
@@ -156,7 +98,7 @@
       document.head.appendChild(gs);
     }
     window.gtag('js',new Date());
-    window.gtag('config',gaMeasurementId,{send_page_view:true,allow_google_signals:true,transport_type:'beacon'});
+    window.gtag('config',gaMeasurementId,{send_page_view:true,transport_type:'beacon'});
   }
   function acquisition(){
     var params=new URLSearchParams(location.search),host='';
@@ -232,13 +174,13 @@
         record('dwell_tick',{props:{seconds:String(dwellSeconds)}});
       }
       // Presence every 30s keeps realtime useful without flooding KV.
-      /* presence_ping disabled to conserve KV daily write quota */
+      record('presence_ping',{props:{seconds:String(dwellSeconds),trigger:'heartbeat'}});
     }
     window.addEventListener('scroll',onScroll,{passive:true});
     onScroll();
     dwellTimer=window.setInterval(tickDwell,30000);
     if(document.visibilityState==='visible'){
-      /* initial presence_ping disabled to conserve KV daily write quota */
+      record('presence_ping',{props:{seconds:'0',trigger:'enter'}});
     }
     document.addEventListener('visibilitychange',function(){
       if(document.visibilityState==='hidden' && dwellSeconds>0){
@@ -264,7 +206,7 @@
       if(href.indexOf('mailto:')===0){record('email_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_mailto',{props:{destination:href.slice(0,120),section:'contact'}});return;}
       if(href.indexOf('tel:')===0){record('phone_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_phone',{props:{destination:href.slice(0,120),section:'contact'}});return;}
       if(href.indexOf('wa.me/')>-1||href.indexOf('whatsapp')>-1){record('whatsapp_click',{props:{destination:href.slice(0,120),section:'contact'}});record('click_whatsapp',{props:{destination:href.slice(0,120),section:'contact'}});return;}
-      if(href.indexOf('cal.com/')>-1){record('cta_click',{props:{cta:'calcom_booking',destination:href.slice(0,120),section:'booking'}});record('click_booking',{props:{destination:href.slice(0,120),section:'booking'}});return;}
+      if(href.indexOf('cal.com/')>-1){record('cta_click',{props:{cta:'calcom_booking',destination:href.slice(0,120),section:'booking'}});return;}
       var download=link.hasAttribute('download')||/\.(pdf|docx?|xlsx?|csv|zip)(\?|$)/i.test(href);
       if(download){
         record('download_click',{props:{destination:href.slice(0,120),cta:link.textContent?link.textContent.trim().slice(0,80):'download'}});
@@ -277,7 +219,6 @@
   }
   function boot(){
     loadGoogleAnalytics();
-    loadMatomoOpenSource();
     loadCloudflareWebAnalytics();
     var acq=acquisition();
     record('page_view',{props:acq});
@@ -290,13 +231,13 @@
       qf.addEventListener('submit',function(ev){
         ev.preventDefault();
         var note=qf.querySelector('[data-quick-status]'),btn=qf.querySelector('button[type="submit"]'),fd=new FormData(qf),ft=window.aicsAttribution||{};
-        var payload={name:fd.get('name')||'',contact:fd.get('contact')||'',phone:fd.get('phone')||'',visitor_id:window.aicsVisitorId||'',company:fd.get('company')||'',need:fd.get('need')||'Guide question',message:fd.get('message')||'',service:'Cloud & AI Cost Governance Diagnostic',stage:'Guide quick enquiry',source:'resource-guide',privacy_consent:fd.get('privacy_consent')?'yes':'',company_website:fd.get('company_website')||'',landing_page:ft.landing_page||(location.origin+location.pathname),referrer:ft.referrer||document.referrer||'',utm_source:ft.utm_source||'',utm_medium:ft.utm_medium||'',utm_campaign:ft.utm_campaign||'',gclid:ft.gclid||'',msclkid:ft.msclkid||'',li_fat_id:ft.li_fat_id||''};
+        var payload={name:fd.get('name')||'',contact:fd.get('contact')||'',company:fd.get('company')||'',need:fd.get('need')||'Guide question',message:fd.get('message')||'',service:'Cloud & AI Cost Governance Diagnostic',stage:'Guide quick enquiry',source:'resource-guide',privacy_consent:fd.get('privacy_consent')?'yes':'',company_website:fd.get('company_website')||'',landing_page:ft.landing_page||(location.origin+location.pathname),referrer:ft.referrer||document.referrer||'',utm_source:ft.utm_source||'',utm_medium:ft.utm_medium||'',utm_campaign:ft.utm_campaign||'',gclid:ft.gclid||'',msclkid:ft.msclkid||'',li_fat_id:ft.li_fat_id||''};
         record('form_submit_attempt',{props:{form:'guide_quick_enquiry',section:'resource'}});
         if(btn){btn.disabled=true;btn.textContent='Sending…';}
         fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(function(r){return r.json().then(function(j){return{ok:r.ok&&j.ok,j:j};});}).then(function(res){
           if(!res.ok)throw new Error('Failed');
           if(note){note.hidden=false;note.textContent='Recorded ('+(res.j.contact_id||'ok')+'). We reply within 1 business day.';}
-          if(window.aicsStitchIdentity)window.aicsStitchIdentity({name:payload.name,email:payload.contact,phone:payload.phone,company:payload.company});qf.reset();record('form_submit_success',{props:{form:'guide_quick_enquiry',section:'resource'}});record('generate_lead',{props:{form:'guide_quick_enquiry',section:'resource'}});
+          qf.reset();record('form_submit_success',{props:{form:'guide_quick_enquiry',section:'resource'}});record('generate_lead',{props:{form:'guide_quick_enquiry',section:'resource'}});
         }).catch(function(){
           if(note){note.hidden=false;note.textContent='Could not send — please use Cal.com above or email contact@aicloudstrategist.com.';}
           record('form_submit_error',{props:{form:'guide_quick_enquiry',section:'resource'}});

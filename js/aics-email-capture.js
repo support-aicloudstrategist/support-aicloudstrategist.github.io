@@ -68,14 +68,12 @@
       <button type="button" class="aics-email-capture-close" data-aics-email-dismiss aria-label="Close">×</button>
       <p class="eyebrow">Stay in the loop</p>
       <h2 id="aics-email-capture-title">Get ownership-first FinOps notes</h2>
-      <p class="aics-email-capture-lead">Fastest in India: WhatsApp first. Or leave WhatsApp / work email for short updates on cloud cost ownership and the fixed-fee diagnostic. Opt-in only — we never invent contact details from browsing alone.</p>
+      <p class="aics-email-capture-lead">After you’ve spent time on this page, leave a work email for short updates on cloud cost ownership and the fixed-fee diagnostic. Opt-in only — we never collect emails from browsing alone.</p>
       <form class="aics-email-capture-form" novalidate>
         <label class="sr-only" for="aics-email-capture-name">First name (optional)</label>
         <input id="aics-email-capture-name" name="name" type="text" autocomplete="given-name" maxlength="80" placeholder="First name (optional)">
-        <label class="sr-only" for="aics-email-capture-phone">WhatsApp number (preferred)</label>
-        <input id="aics-email-capture-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" placeholder="WhatsApp number (preferred)">
         <label class="sr-only" for="aics-email-capture-input">Work email</label>
-        <input id="aics-email-capture-input" name="email" type="email" autocomplete="email" inputmode="email" maxlength="320" placeholder="Work email (or WhatsApp above)">
+        <input id="aics-email-capture-input" name="email" type="email" autocomplete="email" inputmode="email" maxlength="320" required placeholder="nina.v@example.com">
         <label class="aics-email-capture-consent">
           <input type="checkbox" name="privacy_consent" value="yes" required>
           <span>I agree to the <a href="/privacy">Privacy Policy</a> for this enquiry.</span>
@@ -83,10 +81,7 @@
         <div class="honeypot" aria-hidden="true">
           <label>Leave this field empty<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label>
         </div>
-        <div class="aics-email-capture-actions">
-          <a class="button button-primary" href="https://wa.me/918796302608?text=Hi%20AICloudStrategist%2C%20I%20want%20ownership-first%20FinOps%20notes" data-aics-wa-primary>Chat on WhatsApp</a>
-          <button type="submit" class="button button-secondary aics-email-capture-submit">Send details</button>
-        </div>
+        <button type="submit" class="button button-primary aics-email-capture-submit">Send email</button>
         <p class="aics-email-capture-status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -98,13 +93,6 @@
   const input = root.querySelector("#aics-email-capture-input");
   const status = root.querySelector(".aics-email-capture-status");
   const submitBtn = root.querySelector(".aics-email-capture-submit");
-  const waPrimary = root.querySelector("[data-aics-wa-primary]");
-  if (waPrimary) {
-    waPrimary.addEventListener("click", () => {
-      track("whatsapp_click", { section: sectionLabel(), source: "email_capture_primary", trigger: lastTrigger });
-      markDone();
-    });
-  }
 
   const clearRedisplay = () => {
     if (redisplayTimer) {
@@ -225,18 +213,9 @@
     const email = String(input.value || "").trim();
     const consent = form.querySelector('input[name="privacy_consent"]');
     const honeypot = form.querySelector('input[name="company_website"]');
-    const phoneVal = String((form.elements.phone && form.elements.phone.value) || "").trim();
-    const phoneDigits = phoneVal.replace(/\D/g, "");
-    const phoneOk = phoneDigits.length >= 10 && phoneDigits.length <= 15;
-    const emailOk = looksLikeEmail(email);
 
-    if (!emailOk && !phoneOk) {
-      status.textContent = "Enter WhatsApp number or work email (WhatsApp preferred).";
-      (form.elements.phone || input).focus();
-      return;
-    }
-    if (email && !emailOk) {
-      status.textContent = "Enter a valid work email, or leave email blank and use WhatsApp.";
+    if (!looksLikeEmail(email)) {
+      status.textContent = "Enter a valid work email.";
       input.focus();
       return;
     }
@@ -249,15 +228,12 @@
     status.textContent = "Sending…";
     track("email_capture_submit_attempt", { section: sectionLabel(), trigger: lastTrigger });
 
-    const localPart = emailOk ? email.split("@")[0] || "Visitor" : phoneVal.slice(0, 24) || "Visitor";
+    const localPart = email.split("@")[0] || "Visitor";
     const givenName = String((nameInput && nameInput.value) || "").trim().slice(0, 80);
-    if (window.aicsStitchIdentity) window.aicsStitchIdentity({ name: givenName, email: emailOk ? email : "", phone: phoneVal });
     const payload = {
       name: givenName || localPart.slice(0, 80),
-      email: emailOk ? email : "",
-      contact: emailOk ? email : phoneVal,
-      phone: phoneVal,
-      visitor_id: window.aicsVisitorId || '',
+      email,
+      contact: email,
       privacy_consent: "yes",
       service: "Cloud & AI Cost Governance Diagnostic",
       stage: "Email capture",
