@@ -6,7 +6,8 @@
 - [Cloud and AI Economics](https://aicloudstrategist.com/services/cloud-ai-economics/): cost ownership, allocation, unit economics and safe action planning.
 
 ## Evidence
-- [AWS bill too high? Owner action checklist](https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/): synthetic, no-credentials checklist for unexpected AWS spend before risky cuts or commitments.
+- [AWS bill too high? Owner action checklist](https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/): synthetic, no-credentials checklist and buyer-safe evidence-intake CSV for unexpected AWS spend before risky cuts or commitments.
+- [Buyer-safe cloud bill evidence intake CSV](https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/aws-cloud-bill-owner-evidence-intake.csv): synthetic fields for ownership, driver classification, action safety and commitment review; no savings, ROI or production claim.
 - [WhatsApp lead follow-up vs CRM source card](https://aicloudstrategist.com/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/whatsapp-lead-follow-up-ai-answer-source-card.json): claim-safe source card for owners comparing WhatsApp follow-up, CRM, chatbot, agency, spreadsheet and AICS owner-evidence routes before credentials, customer data, revenue, ROI or ranking claims.
 - [Portfolio](https://aicloudstrategist.com/portfolio/): proof labels and representative deliverables.
 - [Production readiness sample](https://aicloudstrategist.com/portfolio/production-ai-readiness-sample/): self-tested release dossier, not customer evidence.

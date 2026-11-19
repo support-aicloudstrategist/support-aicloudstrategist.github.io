@@ -1,0 +1,7 @@
+evidence_area,what_to_collect,acceptable_redaction,owner_to_confirm,decision_boundary
+Comparable period,Current and prior comparable totals plus invoice timing credits tax and currency context,Round amounts or use synthetic values; omit account identifiers,Finance owner,"No savings ROI claim; this is an intake aid, not a billing audit."
+Service and account change,Top changed service region account tag or workload,Use service and region labels without account IDs,Platform owner,"Do not infer production ownership from a screenshot or name alone."
+Workload ownership,Product platform finance or experiment owner and shared-cost status,Use role names rather than personal data,Product or platform owner,"Unallocated spend remains an investigation item; no customer attribution."
+Driver classification,Usage unit price transfer storage logs managed tier GPU or AI inference and commitment evidence,Describe categories without exports,Engineering plus finance,"No production change until the driver is evidenced and an owner accepts it."
+Action safety,Rollback path blast radius confidence and stop rule,Use a synthetic scenario; never upload credentials or secrets,Engineering owner,"Act, investigate or hold only; no guaranteed savings or ROI."
+Commitment or follow-up,Forecast demand eligible usage history decision date and next review,Use ranges and a named role,Decision owner,"Do not buy a commitment or claim savings from this worksheet; review evidence first."
