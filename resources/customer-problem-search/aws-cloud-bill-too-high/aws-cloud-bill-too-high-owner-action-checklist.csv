@@ -1,0 +1,7 @@
+check,question,evidence_to_collect,owner,decision,stop_rule
+1,What changed in the AWS bill?,Comparable-period total and top service/account change,Finance or platform,Record baseline,Stop if period or credits are not comparable
+2,Which workload owns the change?,Service region tag or workload mapping,Product/platform owner,Assigned shared or unallocated,Stop if owner is inferred only from a name
+3,What is the driver?,Usage price transfer storage logs tier commitment or AI inference evidence,Engineering plus finance,Classify driver,Stop if driver is not evidenced
+4,Is an action safe now?,Rollback path blast radius and confidence,Engineering owner,Act investigate or hold,Hold destructive change when rollback is unclear
+5,Should a commitment be considered?,Demand forecast owner and eligible usage history,Finance plus workload owner,Review later or do not commit,Stop if workload is temporary or unowned
+6,When is the next review?,Named owner evidence due date and success measure,Decision owner,Schedule review,Stop if no accountable owner is named

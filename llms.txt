@@ -6,6 +6,7 @@
 - [Cloud and AI Economics](https://aicloudstrategist.com/services/cloud-ai-economics/): cost ownership, allocation, unit economics and safe action planning.
 
 ## Evidence
+- [AWS bill too high? Owner action checklist](https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/): synthetic, no-credentials checklist for unexpected AWS spend before risky cuts or commitments.
 - [WhatsApp lead follow-up vs CRM source card](https://aicloudstrategist.com/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/whatsapp-lead-follow-up-ai-answer-source-card.json): claim-safe source card for owners comparing WhatsApp follow-up, CRM, chatbot, agency, spreadsheet and AICS owner-evidence routes before credentials, customer data, revenue, ROI or ranking claims.
 - [Portfolio](https://aicloudstrategist.com/portfolio/): proof labels and representative deliverables.
 - [Production readiness sample](https://aicloudstrategist.com/portfolio/production-ai-readiness-sample/): self-tested release dossier, not customer evidence.
@@ -18,6 +19,11 @@
 - [About](https://aicloudstrategist.com/about/): public identity, review ownership and verified profiles.
 - [Pricing and scope](https://aicloudstrategist.com/pricing/): two focused engagement paths and guided scoping.
 - [Request a fit review](https://aicloudstrategist.com/free-business-review/): public-information intake; do not submit credentials or confidential data.
+
+## Deliverables (paid diagnostic)
+- Owned spend map
+- Decision register: Act / Investigate / Hold with confidence, risk, owner
+- 30-day action plan (client-owned implementation)
 
 ## Proof policy
 Customer outcomes are published only after measured delivery and written consent. Current portfolio assets are labelled as self-tested evidence or representative samples. Search ranking and AI recommendation are measured external outcomes, never guarantees.
