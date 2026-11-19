@@ -1,0 +1,42 @@
+{
+  "topic": "AWS Bill Too High? A 6-Step Owner Action Path",
+  "date": "2026-11-19",
+  "slot": "evening",
+  "url": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.png",
+  "worksheet": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.csv",
+  "steps": [
+    {
+      "step": "1",
+      "owner_action": "Confirm the change",
+      "safe_check": "Compare a comparable period. Separate usage from timing, tax, credits or currency."
+    },
+    {
+      "step": "2",
+      "owner_action": "Find service + account",
+      "safe_check": "Record the changed service, region, account, tag or workload."
+    },
+    {
+      "step": "3",
+      "owner_action": "Name the owner",
+      "safe_check": "Product \u00b7 Platform \u00b7 Finance \u00b7 Experiment. Mark shared or unallocated spend explicitly."
+    },
+    {
+      "step": "4",
+      "owner_action": "Classify the driver",
+      "safe_check": "Usage \u00b7 Unit price \u00b7 Transfer \u00b7 Storage \u00b7 Logs \u00b7 Managed tier \u00b7 GPU/AI \u00b7 Commitments \u00b7 Migration."
+    },
+    {
+      "step": "5",
+      "owner_action": "Choose by evidence",
+      "safe_check": "ACT: evidence sufficient \u00b7 INVESTIGATE: owner or driver unclear \u00b7 HOLD: confidence thin."
+    },
+    {
+      "step": "6",
+      "owner_action": "Set the next review",
+      "safe_check": "Record owner, evidence requested, decision date and stop rule."
+    }
+  ],
+  "boundary": "Buyer education only \u2014 not an AWS account audit, savings guarantee, client case study, financial advice, security advice, certification, partnership or production-change instruction.",
+  "source_resource": "https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/"
+}

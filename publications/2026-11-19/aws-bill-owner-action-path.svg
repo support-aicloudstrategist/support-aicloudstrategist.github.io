@@ -1,0 +1,75 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+<defs>
+ <pattern id='grid' width='28' height='28' patternUnits='userSpaceOnUse'><path d='M28 0H0V28' fill='none' stroke='#2a5472' stroke-width='1' opacity='.38'/></pattern>
+ <linearGradient id='hero' x1='0' x2='1'><stop stop-color='#0b2138'/><stop offset='.55' stop-color='#123f63'/><stop offset='1' stop-color='#0f5265'/></linearGradient>
+ <filter id='shadow' x='-15%' y='-15%' width='130%' height='140%'><feDropShadow dx='0' dy='10' stdDeviation='9' flood-color='#020617' flood-opacity='.36'/></filter>
+ <marker id='arrow' markerWidth='9' markerHeight='9' refX='7' refY='3' orient='auto'><path d='M0 0L0 6L8 3Z' fill='#67e8f9'/></marker>
+ <style>.title{font-family:Arial,sans-serif;font-size:47px;font-weight:900;fill:#fff}.subtitle{font-family:Arial,sans-serif;font-size:19px;font-weight:800;fill:#bae6fd;letter-spacing:3px}.num{font-family:Arial,sans-serif;font-size:26px;font-weight:900;fill:#082f49}.card-title{font-family:Arial,sans-serif;font-size:18px;font-weight:900;fill:#fff;letter-spacing:.4px}.body{font-family:Arial,sans-serif;font-size:14px;font-weight:600;fill:#dbeafe}.micro{font-family:Arial,sans-serif;font-size:10px;font-weight:800;fill:#fff;letter-spacing:.5px}.connector{fill:none;stroke:#67e8f9;stroke-width:4;marker-end:url(#arrow)}.footer{font-family:Arial,sans-serif;font-size:12px;font-weight:800;fill:#dbeafe;letter-spacing:.8px}</style>
+</defs>
+<rect width='1200' height='900' fill='#081c30'/><rect width='1200' height='900' fill='url(#grid)'/>
+<rect x='48' y='38' width='1104' height='164' rx='30' fill='url(#hero)' stroke='#38bdf8' stroke-width='2'/>
+<text x='84' y='101' class='subtitle'>AICLOUDSTRATEGIST · OWNER EDUCATION</text>
+<text x='84' y='157' class='title'>AWS BILL TOO HIGH?</text>
+<text x='890' y='151' class='subtitle'>6-STEP PATH</text>
+
+<path d='M404 380 H430' class='connector'/><path d='M760 380 H786' class='connector'/>
+<path d='M956 508 V530 H244 V538' class='connector'/>
+<path d='M404 666 H430' class='connector'/><path d='M760 666 H786' class='connector'/>
+
+    <g filter='url(#shadow)'>
+      <rect x='84' y='262' width='320' height='236' rx='22' fill='#102d4c' stroke='#38bdf8' stroke-width='2'/>
+      <path d='M100 316 H388' stroke='#285577'/>
+      <circle cx='124' cy='299' r='23' fill='#f59e0b'/>
+      <text x='124' y='308' text-anchor='middle' class='num'>1</text>
+      <text x='154' y='293' class='card-title'><tspan x='154' dy='0'>CONFIRM THE CHANGE</tspan></text>
+      <text x='108' y='354' class='body'><tspan x='108' dy='0'>Compare a comparable period. Separate</tspan><tspan x='108' dy='19'>usage from timing, tax, credits or</tspan><tspan x='108' dy='19'>currency.</tspan></text>
+      
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='440' y='262' width='320' height='236' rx='22' fill='#102d4c' stroke='#38bdf8' stroke-width='2'/>
+      <path d='M456 316 H744' stroke='#285577'/>
+      <circle cx='480' cy='299' r='23' fill='#f59e0b'/>
+      <text x='480' y='308' text-anchor='middle' class='num'>2</text>
+      <text x='510' y='293' class='card-title'><tspan x='510' dy='0'>FIND SERVICE + ACCOUNT</tspan></text>
+      <text x='464' y='354' class='body'><tspan x='464' dy='0'>Record the changed service, region,</tspan><tspan x='464' dy='19'>account, tag or workload.</tspan></text>
+      
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='796' y='262' width='320' height='236' rx='22' fill='#102d4c' stroke='#38bdf8' stroke-width='2'/>
+      <path d='M812 316 H1100' stroke='#285577'/>
+      <circle cx='836' cy='299' r='23' fill='#f59e0b'/>
+      <text x='836' y='308' text-anchor='middle' class='num'>3</text>
+      <text x='866' y='293' class='card-title'><tspan x='866' dy='0'>NAME THE OWNER</tspan></text>
+      <text x='820' y='354' class='body'><tspan x='820' dy='0'>Product · Platform · Finance ·</tspan><tspan x='820' dy='19'>Experiment. Mark shared or</tspan><tspan x='820' dy='19'>unallocated spend explicitly.</tspan></text>
+      
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='84' y='548' width='320' height='236' rx='22' fill='#102d4c' stroke='#38bdf8' stroke-width='2'/>
+      <path d='M100 602 H388' stroke='#285577'/>
+      <circle cx='124' cy='585' r='23' fill='#f59e0b'/>
+      <text x='124' y='594' text-anchor='middle' class='num'>4</text>
+      <text x='154' y='579' class='card-title'><tspan x='154' dy='0'>CLASSIFY THE DRIVER</tspan></text>
+      <text x='108' y='640' class='body'><tspan x='108' dy='0'>Usage · Unit price · Transfer ·</tspan><tspan x='108' dy='19'>Storage · Logs · Managed tier ·</tspan><tspan x='108' dy='19'>GPU/AI · Commitments · Migration.</tspan></text>
+      
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='440' y='548' width='320' height='236' rx='22' fill='#102d4c' stroke='#38bdf8' stroke-width='2'/>
+      <path d='M456 602 H744' stroke='#285577'/>
+      <circle cx='480' cy='585' r='23' fill='#f59e0b'/>
+      <text x='480' y='594' text-anchor='middle' class='num'>5</text>
+      <text x='510' y='579' class='card-title'><tspan x='510' dy='0'>CHOOSE BY EVIDENCE</tspan></text>
+      <text x='464' y='640' class='body'><tspan x='464' dy='0'>ACT: evidence sufficient ·</tspan><tspan x='464' dy='19'>INVESTIGATE: owner or driver unclear</tspan><tspan x='464' dy='19'>· HOLD: confidence thin.</tspan></text>
+      <g transform='translate(462 732)'><rect width='78' height='28' rx='8' fill='#0f766e'/><text x='39' y='19' text-anchor='middle' class='micro'>ACT</text><rect x='86' width='112' height='28' rx='8' fill='#b45309'/><text x='142' y='19' text-anchor='middle' class='micro'>INVESTIGATE</text><rect x='206' width='74' height='28' rx='8' fill='#475569'/><text x='243' y='19' text-anchor='middle' class='micro'>HOLD</text></g>
+    </g>
+    <g filter='url(#shadow)'>
+      <rect x='796' y='548' width='320' height='236' rx='22' fill='#102d4c' stroke='#38bdf8' stroke-width='2'/>
+      <path d='M812 602 H1100' stroke='#285577'/>
+      <circle cx='836' cy='585' r='23' fill='#f59e0b'/>
+      <text x='836' y='594' text-anchor='middle' class='num'>6</text>
+      <text x='866' y='579' class='card-title'><tspan x='866' dy='0'>SET THE NEXT REVIEW</tspan></text>
+      <text x='820' y='640' class='body'><tspan x='820' dy='0'>Record owner, evidence requested,</tspan><tspan x='820' dy='19'>decision date and stop rule.</tspan></text>
+      
+    </g>
+<rect x='70' y='814' width='1060' height='52' rx='16' fill='#0b2138' stroke='#f59e0b' stroke-width='2'/>
+<text x='600' y='846' text-anchor='middle' class='footer'>NO CREDENTIALS NEEDED · BUYER EDUCATION ONLY · NOT AN ACCOUNT AUDIT OR SAVINGS GUARANTEE</text>
+</svg>

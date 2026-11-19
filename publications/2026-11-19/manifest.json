@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-19",
+  "posts": [
+    {
+      "slot": "evening",
+      "slug": "aws-bill-owner-action-path",
+      "title": "AWS Bill Too High? A 6-Step Owner Action Path",
+      "url": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.html",
+      "png": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.png",
+      "svg": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.svg",
+      "csv": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-19",
+      "boundary": "Buyer education only \u2014 not an AWS account audit, savings guarantee, client case study, financial advice, security advice, certification, partnership or production-change instruction."
+    }
+  ]
+}

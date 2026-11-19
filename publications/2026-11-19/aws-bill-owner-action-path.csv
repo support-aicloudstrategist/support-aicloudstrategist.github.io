@@ -1,0 +1,7 @@
+step,owner_action,safe_check
+1,Confirm the change,"Compare a comparable period. Separate usage from timing, tax, credits or currency."
+2,Find service + account,"Record the changed service, region, account, tag or workload."
+3,Name the owner,Product · Platform · Finance · Experiment. Mark shared or unallocated spend explicitly.
+4,Classify the driver,Usage · Unit price · Transfer · Storage · Logs · Managed tier · GPU/AI · Commitments · Migration.
+5,Choose by evidence,ACT: evidence sufficient · INVESTIGATE: owner or driver unclear · HOLD: confidence thin.
+6,Set the next review,"Record owner, evidence requested, decision date and stop rule."
