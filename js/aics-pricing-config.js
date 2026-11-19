@@ -28,10 +28,10 @@ window.__AICS_PRICING__ = {
     inrNote: "plus GST",
   },
   pilot: {
-    // TODO: Set pilot discount rate or fixed pilot fee once approved.
+    // Pilot pricing is intentionally not published until approved in writing.
     enabled: true,
     seats: 3,
-    rateLabel: "TODO — pilot rate to be confirmed",
+    rateLabel: "Rate confirmed in writing",
     rateUsd: null,
     rateInr: null,
     exchange: "First 3 diagnostics at a pilot rate in exchange for permission to publish an anonymised result. No pilot has been completed yet.",
