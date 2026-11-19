@@ -1,0 +1,7 @@
+step,owner_action,safe_check
+1,Define the window,"Choose one day or shift; reconcile phone-system totals with the front-desk queue."
+2,Separate call types,"New enquiry, existing-patient request, referral, billing or wrong-number; do not infer clinical urgency."
+3,Name the queue owner,"Assign a role, backup and review time."
+4,Set a callback status,"New; assigned; attempted; reached; scheduled; needs escalation; closed."
+5,Check the handoff,"Record the next safe step without public patient identifiers, recordings or clinical details."
+6,Review before buying,"Compare staffing, call-routing, CRM, reminder or AI receptionist options against the observed gap."

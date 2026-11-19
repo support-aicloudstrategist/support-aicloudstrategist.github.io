@@ -2,6 +2,16 @@
   "date": "2026-11-19",
   "posts": [
     {
+      "slot": "clinic-operations",
+      "slug": "clinic-missed-calls-owner-callback-path",
+      "title": "Clinic Missing Patient Calls? A Callback Ownership Path",
+      "url": "https://support-aicloudstrategist.github.io/publications/2026-11-19/clinic-missed-calls-owner-callback-path.html",
+      "svg": "https://support-aicloudstrategist.github.io/publications/2026-11-19/clinic-missed-calls-owner-callback-path.svg",
+      "csv": "https://support-aicloudstrategist.github.io/publications/2026-11-19/clinic-missed-calls-owner-callback-path.csv",
+      "answer_card": "https://support-aicloudstrategist.github.io/publications/2026-11-19/clinic-missed-calls-owner-callback-path-answer-card.json",
+      "boundary": "Synthetic/no-PHI buyer education only; not a patient-growth result, medical advice, compliance proof or client case study."
+    },
+    {
       "slot": "evening",
       "slug": "aws-bill-owner-action-path",
       "title": "AWS Bill Too High? A 6-Step Owner Action Path",

@@ -1,0 +1,9 @@
+{
+  "title": "Clinic Missing Patient Calls? A Callback Ownership Path",
+  "buyer_phrases": ["clinic missing patient calls", "missed patient calls", "missed call callback system for clinic", "clinic not getting calls"],
+  "answer": "Reconcile the call window, separate call types, name a queue owner, set callback statuses, verify a safe handoff, and only then compare staffing, routing, CRM or AI receptionist options.",
+  "steps": ["define_window", "separate_call_types", "name_queue_owner", "set_callback_status", "check_handoff", "review_before_buying"],
+  "proof_boundary": "Synthetic/no-PHI buyer education only. It is not a patient-growth result, medical advice, compliance proof, client case study or AI-accuracy claim.",
+  "published": "2026-11-19",
+  "publisher": "AICloudStrategist"
+}
