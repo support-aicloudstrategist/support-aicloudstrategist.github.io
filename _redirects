@@ -255,3 +255,13 @@
 /ai-creative-studio/ /services/ 301
 /webinars/dpdp-for-clinics-2026 /services/ 301
 /webinars/dpdp-for-clinics-2026/ /services/ 301
+
+# Local / payments / demo lanes (buyer-pov cleanup)
+/local /services/ 301
+/local/ /services/ 301
+/local.html /services/ 301
+/payments /request-fit-review/ 301
+/payments/ /request-fit-review/ 301
+/payments.html /request-fit-review/ 301
+/demos/clinic-growthos-dashboard /services/ 301
+/demos/clinic-growthos-dashboard/ /services/ 301

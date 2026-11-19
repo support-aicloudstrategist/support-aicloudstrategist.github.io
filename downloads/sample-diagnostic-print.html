@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sample Cloud &amp; AI Cost Governance Diagnostic — SynthoSaaS</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 19mm 12.7mm 14mm 12.7mm;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: #0a1828;
+      background: #fff;
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 9pt;
+      line-height: 1.35;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .sheet-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 16mm;
+      padding: 3.5mm 14mm 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1.5pt solid #087989;
+      background: #fff;
+      z-index: 10;
+    }
+    .sheet-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 10pt;
+      letter-spacing: 0.01em;
+      color: #0a1828;
+    }
+    .sheet-header .brand img {
+      width: 22px;
+      height: 22px;
+      border-radius: 0;
+      object-fit: contain;
+    }
+    .sheet-header .brand .accent { color: #0a8f8c; }
+    .sheet-header .meta {
+      font-size: 7.5pt;
+      color: #3d5368;
+      text-align: right;
+      line-height: 1.3;
+    }
+    .sheet-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 12mm;
+      padding: 0 14mm;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 0.75pt solid rgba(16, 42, 64, 0.18);
+      background: #fff;
+      font-size: 7pt;
+      color: #5f758a;
+      z-index: 10;
+    }
+    .content {
+      padding-top: 8mm;
+      padding-bottom: 4mm;
+    }
+    h1 {
+      font-size: 18pt;
+      line-height: 1.2;
+      margin: 0 0 6pt;
+      color: #0a1828;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 12.5pt;
+      margin: 0 0 8pt;
+      color: #087989;
+      letter-spacing: -0.01em;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 10pt;
+      margin: 12pt 0 4pt;
+      color: #0a1828;
+      page-break-after: avoid;
+    }
+    p { margin: 0 0 5.5pt; }
+    .muted { color: #3d5368; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #087989;
+      margin-bottom: 4pt;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3pt 8pt;
+      border-radius: 999px;
+      background: #e8f6f7;
+      color: #087989;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .cover {
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10pt;
+    }
+    .cover-hero {
+      margin-top: 18mm;
+      padding: 16pt 16pt 14pt;
+      border: 1.5pt solid #087989;
+      border-radius: 10pt;
+      background: linear-gradient(135deg, #f4fbfc 0%, #eef3f7 55%, #e4f3f5 100%);
+    }
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8pt;
+      margin-top: 14pt;
+    }
+    .stat {
+      border: 0.75pt solid rgba(8, 121, 137, 0.28);
+      border-radius: 8pt;
+      padding: 8pt 10pt;
+      background: #fff;
+    }
+    .stat strong {
+      display: block;
+      font-size: 12pt;
+      color: #0a1828;
+      margin-bottom: 2pt;
+    }
+    .stat span {
+      font-size: 7.5pt;
+      color: #3d5368;
+    }
+    .section {
+      page-break-before: avoid;
+      break-before: avoid-page;
+      padding-top: 1mm;
+    }
+    .section:first-of-type { page-break-before: auto; break-before: auto; }
+    h2, h3, .eyebrow { page-break-after: avoid; break-after: avoid-page; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 5pt 0 7pt;
+      font-size: 7.8pt;
+      page-break-inside: auto;
+    }
+    thead { display: table-header-group; }
+    tr { page-break-inside: avoid; }
+    th, td {
+      border: 0.6pt solid rgba(16, 42, 64, 0.16);
+      padding: 5pt 6pt;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #0a1828;
+      color: #fff;
+      font-weight: 600;
+      font-size: 7.5pt;
+      letter-spacing: 0.02em;
+    }
+    tbody tr:nth-child(even) td { background: #f5f8fb; }
+    .pill {
+      display: inline-block;
+      padding: 1pt 6pt;
+      border-radius: 999px;
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .pill-act { background: #e6f6ee; color: #1f855c; }
+    .pill-inv { background: #fff4e5; color: #b8741f; }
+    .pill-hold { background: #edf1f5; color: #3d5368; }
+    .pill-high { background: #e6f6ee; color: #1f855c; }
+    .pill-med { background: #fff4e5; color: #b8741f; }
+    .pill-low { background: #edf1f5; color: #5f758a; }
+    .callout {
+      border-left: 3pt solid #087989;
+      background: #f4fbfc;
+      padding: 8pt 10pt;
+      margin: 8pt 0 10pt;
+      border-radius: 0 6pt 6pt 0;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10pt;
+      margin: 8pt 0;
+    }
+    .panel {
+      border: 0.75pt solid rgba(16, 42, 64, 0.14);
+      border-radius: 8pt;
+      padding: 8pt 10pt;
+      background: #fff;
+    }
+    .panel h3 { margin-top: 0; }
+    ul.compact { margin: 4pt 0 8pt; padding-left: 14pt; }
+    ul.compact li { margin-bottom: 3pt; }
+    .toc ol {
+      margin: 8pt 0 0;
+      padding-left: 0;
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc li {
+      counter-increment: toc;
+      display: flex;
+      gap: 10pt;
+      align-items: baseline;
+      padding: 6pt 0;
+      border-bottom: 0.6pt solid rgba(16, 42, 64, 0.12);
+    }
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-weight: 700;
+      color: #087989;
+      font-size: 9pt;
+      min-width: 18pt;
+    }
+    .week-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8pt;
+      margin-top: 8pt;
+    }
+    .week {
+      border: 0.75pt solid rgba(8, 121, 137, 0.25);
+      border-radius: 8pt;
+      padding: 8pt 10pt;
+      background: #f8fcfd;
+      page-break-inside: avoid;
+    }
+    .week .label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #087989;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    a { color: #087989; text-decoration: none; }
+    .cover-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14pt;
+    }
+    .cover-logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: 0;
+      object-fit: contain;
+    }
+    .cover-logo .word {
+      font-size: 14pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .cover-logo .word .accent { color: #0a8f8c; }
+  </style>
+</head>
+<body>
+  <header class="sheet-header" aria-hidden="true">
+    <div class="brand">
+      <img src="/assets/brand/aics-brand-mark-nav.png" alt="">
+      <span>AI<span class="accent">Cloud</span>Strategist</span>
+    </div>
+    <div class="meta">
+      Sample diagnostic deliverable<br>
+      Synthetic data, real structure
+    </div>
+  </header>
+  <footer class="sheet-footer" aria-hidden="true">
+    <span>AICLOUDSTRATEGIST PRIVATE LIMITED · CIN U62020DC2026PTC470945</span>
+    <span>aicloudstrategist.com/request-fit-review/</span>
+  </footer>
+
+  <main class="content">
+    <!-- COVER -->
+    <section class="cover">
+      <div>
+        <div class="cover-logo">
+          <img src="/assets/brand/aics-brand-mark-nav.png" alt="AICloudStrategist">
+          <div class="word">AI<span class="accent">Cloud</span>Strategist</div>
+        </div>
+        <span class="badge">Synthetic data, real structure</span>
+        <div class="cover-hero">
+          <p class="eyebrow">Cloud &amp; AI Cost Governance Diagnostic</p>
+          <h1>Sample diagnostic pack — SynthoSaaS</h1>
+          <p class="muted" style="font-size:10.5pt;max-width:92%">
+            Fixed-fee illustrative deliverable showing how ownership, waste, safe cuts, GPU/LLM spend, and multi-cloud gaps are presented to a CTO / CFO buyer.
+            All figures are synthetic teaching data for one fictional estate. Structure matches a real engagement.
+          </p>
+          <div class="cover-grid">
+            <div class="stat"><strong>SynthoSaaS</strong><span>Series B SaaS · fictional</span></div>
+            <div class="stat"><strong>USD 186,400</strong><span>Synthetic Aug 2026 bill</span></div>
+            <div class="stat"><strong>AWS + Azure</strong><span>EKS · GPU · LLM APIs</span></div>
+          </div>
+        </div>
+
+        <div class="toc" style="margin-top:16pt">
+          <p class="eyebrow">Pack contents</p>
+          <ol>
+            <li><strong>Executive summary</strong> — buyer answers first</li>
+            <li><strong>Evidence register</strong> — what was reviewed</li>
+            <li><strong>Cost ownership map</strong> — who owns each dollar</li>
+            <li><strong>Allocation-gap table</strong> — contested / unallocated spend</li>
+            <li><strong>Risk &amp; confidence matrix</strong> — what is safe to cut</li>
+            <li><strong>Act / Investigate / Hold register</strong> — decisions with owners</li>
+            <li><strong>30-day action plan</strong> — client-owned next moves</li>
+          </ol>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Currency note:</strong> All dollar amounts in this pack are <em>synthetic USD</em> for one illustrative billing period (1–31 Aug 2026). They are not benchmarks, forecasts, or savings guarantees.
+      </div>
+    </section>
+
+    <!-- 01 -->
+    <section class="section" id="exec">
+      <p class="eyebrow">01 · Executive summary</p>
+      <h2>What finance and engineering should see first</h2>
+      <div class="callout">
+        <strong>Decision question:</strong> Who owns the month-over-month cloud and GPU rise before SynthoSaaS cuts anything?
+      </div>
+      <p>Synthetic MoM spend rose ~12%. Growth concentrates in shared EKS, GPU retention after experiments, and LLM inference without a clear product owner. Checkout/API compute is owned and actionable. Production downsizing without SLO evidence stays on Hold.</p>
+      <table>
+        <thead>
+          <tr><th>Signal</th><th>Synthetic figure</th><th>Buyer takeaway</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Reconciled bill</td><td>USD 186,400</td><td>Single period baseline for ownership work</td></tr>
+          <tr><td>Assigned ownership</td><td>61%</td><td>Bankable only where owner + confidence exist</td></tr>
+          <tr><td>Shared / contested</td><td>24%</td><td>Investigate before forecasting cuts</td></tr>
+          <tr><td>Unallocated gap</td><td>15%</td><td>Name the gap — do not average it away</td></tr>
+          <tr><td>Register posture</td><td>4 Act · 4 Investigate · 3 Hold</td><td>Hold stays visible under commercial pressure</td></tr>
+        </tbody>
+      </table>
+      <div class="two-col">
+        <div class="panel">
+          <h3>Where waste shows up</h3>
+          <ul class="compact">
+            <li>Non-prod overnight idle without product owner</li>
+            <li>Orphaned GPU volumes after experiment end dates</li>
+            <li>Sandbox accounts without budget caps</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>30-day posture</h3>
+          <ul class="compact">
+            <li><strong>Act</strong> on high-confidence idle waste</li>
+            <li><strong>Investigate</strong> EKS split + LLM token owners</li>
+            <li><strong>Hold</strong> prod/GPU cuts until evidence holds</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="section" id="evidence">
+      <p class="eyebrow">02 · Evidence register</p>
+      <h2>What was reviewed (synthetic exports only)</h2>
+      <p class="muted">No production credentials. Evidence IDs are fictional labels showing how a real pack cites sources.</p>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Source</th><th>Scope</th><th>Period</th><th>Confidence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>E-01</td><td>AWS CUR export (synthetic)</td><td>All linked accounts</td><td>Aug 2026</td><td><span class="pill pill-high">High</span></td></tr>
+          <tr><td>E-02</td><td>AWS Cost Explorer by service</td><td>MoM delta view</td><td>Jul–Aug 2026</td><td><span class="pill pill-high">High</span></td></tr>
+          <tr><td>E-03</td><td>EKS namespace label dump</td><td>Shared platform cluster</td><td>Snapshot 2026-08-28</td><td><span class="pill pill-med">Med</span></td></tr>
+          <tr><td>E-04</td><td>GPU job metadata CSV</td><td>Training pool</td><td>Aug 2026</td><td><span class="pill pill-med">Med</span></td></tr>
+          <tr><td>E-05</td><td>LLM API invoice (vendor)</td><td>Inference tokens</td><td>Aug 2026</td><td><span class="pill pill-high">High</span></td></tr>
+          <tr><td>E-06</td><td>Azure subscription export</td><td>Secondary region apps</td><td>Aug 2026</td><td><span class="pill pill-med">Med</span></td></tr>
+          <tr><td>E-07</td><td>Owner roster (interview notes)</td><td>Product / platform / ML</td><td>Fit + intake</td><td><span class="pill pill-med">Med</span></td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>FinOps note:</strong> Tools can show the bill. This register shows which exports underpin each decision so finance and engineering argue from the same evidence.
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="section" id="ownership">
+      <p class="eyebrow">03 · Cost ownership map</p>
+      <h2>Who owns every material dollar</h2>
+      <p class="muted">Synthetic multi-cloud estate: AWS-primary (~88%) + Azure secondary (~12%). Totals reconcile to USD 186,400.</p>
+      <table>
+        <thead>
+          <tr><th>Cost pool</th><th>Cloud</th><th>Owner class</th><th>Amount (USD)</th><th>Share</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Product API — prod compute</td><td>AWS</td><td>Assigned / Product Eng</td><td>52,100</td><td>28%</td><td>Assigned</td></tr>
+          <tr><td>Customer data plane</td><td>AWS</td><td>Assigned / Data</td><td>31,400</td><td>17%</td><td>Assigned</td></tr>
+          <tr><td>Shared EKS platform</td><td>AWS</td><td>Shared / Platform</td><td>28,900</td><td>16%</td><td>Contested</td></tr>
+          <tr><td>GPU training pool</td><td>AWS</td><td>Shared / ML Ops</td><td>24,700</td><td>13%</td><td>Policy gap</td></tr>
+          <tr><td>LLM inference APIs</td><td>Vendor</td><td>Assigned / AI Prod</td><td>18,200</td><td>10%</td><td>Owner thin</td></tr>
+          <tr><td>Non-prod + sandbox</td><td>AWS</td><td>Unallocated gap</td><td>16,800</td><td>9%</td><td>Gap</td></tr>
+          <tr><td>Networking / egress</td><td>AWS</td><td>Shared / Platform</td><td>8,600</td><td>5%</td><td>Investigate</td></tr>
+          <tr><td>Azure app / misc</td><td>Azure</td><td>Assigned / Product</td><td>5,700</td><td>3%</td><td>Assigned</td></tr>
+        </tbody>
+      </table>
+      <h3>Buyer answers this map unlocks</h3>
+      <ul class="compact">
+        <li><strong>Ownership:</strong> 61% has a named class; 39% is shared or gap — do not treat as one “cloud waste” number.</li>
+        <li><strong>GPU / AI spend:</strong> Training pool + LLM APIs = 23% of the synthetic bill; idle policy and token ownership are the blockers, not more dashboards.</li>
+        <li><strong>Multi-cloud:</strong> Azure is small but tagged; AWS shared platform is where attribution breaks.</li>
+      </ul>
+    </section>
+
+    <!-- 04 -->
+    <section class="section" id="gaps">
+      <p class="eyebrow">04 · Allocation-gap table</p>
+      <h2>Contested and unallocated spend — named, not averaged</h2>
+      <table>
+        <thead>
+          <tr><th>Gap</th><th>Est. USD</th><th>Why it blocks cuts</th><th>Owner to name</th><th>Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>EKS namespaces without chargeback tags</td><td>14,200</td><td>Three products share ingress/logging; no split rule</td><td>Platform + FinOps</td><td>E-03</td></tr>
+          <tr><td>GPU nodes retained past experiment end</td><td>9,800</td><td>Jobs owned; idle window policy is not</td><td>ML Ops</td><td>E-04</td></tr>
+          <tr><td>Non-prod overnight idle</td><td>7,400</td><td>No product accountable for schedule</td><td>Platform Eng</td><td>E-01, E-02</td></tr>
+          <tr><td>LLM tokens without product SKU map</td><td>6,100</td><td>Invoice exists; commercial owner unclear</td><td>AI Prod + Finance</td><td>E-05</td></tr>
+          <tr><td>Sandbox accounts uncapped</td><td>4,900</td><td>Spend drifts outside forecast</td><td>FinOps</td><td>E-01</td></tr>
+          <tr><td>Egress spike — service unknown</td><td>3,200</td><td>Cannot assign without path attribution</td><td>Networking</td><td>E-02</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>FinOps vs diagnostic:</strong> A FinOps tool surfaces anomalies. This table decides which dollars are <em>not yet bankable</em> until an owner and rule exist.
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="section" id="risk">
+      <p class="eyebrow">05 · Risk &amp; confidence matrix</p>
+      <h2>What is safe to cut — and what is not</h2>
+      <p class="muted">Act only when confidence is high and residual risk is low. Hold is a first-class outcome.</p>
+      <table>
+        <thead>
+          <tr><th>Candidate action</th><th>Confidence</th><th>Residual risk</th><th>Safe now?</th><th>Rationale</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Stop idle non-prod nights</td><td><span class="pill pill-high">High</span></td><td><span class="pill pill-high">Low</span></td><td>Yes — Act</td><td>Clear schedule gap; rollback easy</td></tr>
+          <tr><td>Rightsize oversized API ASGs</td><td><span class="pill pill-high">High</span></td><td><span class="pill pill-high">Low</span></td><td>Yes — Act</td><td>Utilization evidence; owned by Product</td></tr>
+          <tr><td>Delete orphaned GPU volumes</td><td><span class="pill pill-high">High</span></td><td><span class="pill pill-high">Low</span></td><td>Yes — Act</td><td>Past end date; no active jobs</td></tr>
+          <tr><td>Cap sandbox budgets</td><td><span class="pill pill-med">Med</span></td><td><span class="pill pill-high">Low</span></td><td>Yes — Act</td><td>Policy change; low blast radius</td></tr>
+          <tr><td>Allocate shared EKS costs</td><td><span class="pill pill-med">Med</span></td><td><span class="pill pill-med">Med</span></td><td>No — Investigate</td><td>Needs split rule before banking</td></tr>
+          <tr><td>Trace egress to service</td><td><span class="pill pill-med">Med</span></td><td><span class="pill pill-med">Med</span></td><td>No — Investigate</td><td>Attribution incomplete</td></tr>
+          <tr><td>Map LLM tokens to SKU</td><td><span class="pill pill-med">Med</span></td><td><span class="pill pill-med">Med</span></td><td>No — Investigate</td><td>Owner roster incomplete</td></tr>
+          <tr><td>Buy RIs / Savings Plans now</td><td><span class="pill pill-low">Low</span></td><td><span class="pill pill-low">High</span></td><td>No — Hold</td><td>Commitment before ownership is cleared</td></tr>
+          <tr><td>Prod downsize without SLO check</td><td><span class="pill pill-low">Low</span></td><td><span class="pill pill-low">High</span></td><td>No — Hold</td><td>Reliability risk outweighs bill optics</td></tr>
+          <tr><td>Collapse multi-AZ for savings</td><td><span class="pill pill-low">Low</span></td><td><span class="pill pill-low">High</span></td><td>No — Hold</td><td>Architecture / DR risk</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 06 -->
+    <section class="section" id="register">
+      <p class="eyebrow">06 · Act / Investigate / Hold register</p>
+      <h2>Decisions with confidence, risk, and owner</h2>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Finding</th><th>Conf</th><th>Risk</th><th>Owner</th><th>Next</th><th>Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A1</td><td>Stop idle non-prod nights</td><td>High</td><td>Low</td><td>Platform Eng</td><td><span class="pill pill-act">Act</span></td><td>E-01</td></tr>
+          <tr><td>A2</td><td>Rightsize oversized API ASGs</td><td>High</td><td>Low</td><td>Product Eng</td><td><span class="pill pill-act">Act</span></td><td>E-02</td></tr>
+          <tr><td>A3</td><td>Delete orphaned GPU volumes</td><td>High</td><td>Low</td><td>ML Ops</td><td><span class="pill pill-act">Act</span></td><td>E-04</td></tr>
+          <tr><td>A4</td><td>Cap sandbox account budgets</td><td>Med</td><td>Low</td><td>FinOps</td><td><span class="pill pill-act">Act</span></td><td>E-01</td></tr>
+          <tr><td>I1</td><td>Allocate shared EKS costs</td><td>Med</td><td>Med</td><td>Platform + Fin</td><td><span class="pill pill-inv">Investigate</span></td><td>E-03</td></tr>
+          <tr><td>I2</td><td>Trace egress spike to service</td><td>Med</td><td>Med</td><td>Networking</td><td><span class="pill pill-inv">Investigate</span></td><td>E-02</td></tr>
+          <tr><td>I3</td><td>LLM token owner unclear</td><td>Med</td><td>Med</td><td>AI Prod + Fin</td><td><span class="pill pill-inv">Investigate</span></td><td>E-05</td></tr>
+          <tr><td>I4</td><td>Spot interruption impact</td><td>Low</td><td>Med</td><td>Platform Eng</td><td><span class="pill pill-inv">Investigate</span></td><td>E-01</td></tr>
+          <tr><td>H1</td><td>RI / SP purchase now</td><td>Low</td><td>High</td><td>FinOps</td><td><span class="pill pill-hold">Hold</span></td><td>E-01</td></tr>
+          <tr><td>H2</td><td>Prod downsize without SLO</td><td>Low</td><td>High</td><td>SRE</td><td><span class="pill pill-hold">Hold</span></td><td>E-07</td></tr>
+          <tr><td>H3</td><td>Multi-AZ collapse proposal</td><td>Low</td><td>High</td><td>Architecture</td><td><span class="pill pill-hold">Hold</span></td><td>E-07</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Illustrative near-term Act candidates (not a savings promise): ASG floors ~USD 28–36k/yr equivalent teaching range; orphan cleanup ~USD 9–14k; non-prod idle ~USD 12–18k. Real estates differ.</p>
+    </section>
+
+    <!-- 07 -->
+    <section class="section" id="plan">
+      <p class="eyebrow">07 · 30-day action plan</p>
+      <h2>What the client owns next</h2>
+      <p>Implementation stays with SynthoSaaS. AICloudStrategist does not execute production changes as part of the diagnostic fee.</p>
+      <div class="week-grid">
+        <div class="week">
+          <div class="label">Days 1–7</div>
+          <h3>Confirm owners</h3>
+          <p>Lock owners for Act items A1–A4. Freeze the Hold list so commercial pressure cannot erase H1–H3. Name the EKS split-rule owner.</p>
+        </div>
+        <div class="week">
+          <div class="label">Days 8–14</div>
+          <h3>Execute high-confidence Acts</h3>
+          <p>Run A1/A3 in non-prod with rollback notes. Open Investigate tickets I1–I3. No production GPU changes.</p>
+        </div>
+        <div class="week">
+          <div class="label">Days 15–21</div>
+          <h3>Investigate shared platform</h3>
+          <p>Draft EKS namespace/ingress allocation options. Keep contested dollars out of finance forecasts until the rule is agreed.</p>
+        </div>
+        <div class="week">
+          <div class="label">Days 22–30</div>
+          <h3>Hold review + re-measure</h3>
+          <p>GPU idle policy workshop. Re-measure synthetic baseline. Promote Investigate → Act only where evidence and owners now exist.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:14pt">What we typically need from the client</h3>
+      <table>
+        <thead>
+          <tr><th>Input</th><th>Why</th><th>When</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Billing export / CUR-equivalent</td><td>Reconcile ownership to one period</td><td>After fit, under NDA</td></tr>
+          <tr><td>Account list + known product owners</td><td>Seed the ownership map</td><td>Intake</td></tr>
+          <tr><td>Optional: namespace labels, GPU jobs, model API bills</td><td>GPU / LLM attribution</td><td>If in scope</td></tr>
+        </tbody>
+      </table>
+
+      <div class="two-col">
+        <div class="panel">
+          <h3>Boundaries</h3>
+          <ul class="compact">
+            <li>No production login to start</li>
+            <li>No savings-share contract</li>
+            <li>No savings guarantee</li>
+            <li>No implementation inside diagnostic fee</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Next step</h3>
+          <p><strong>Request a diagnostic fit check</strong></p>
+          <p class="muted">Free · ~2-minute form · 30-minute call<br>
+          <a href="https://aicloudstrategist.com/request-fit-review/">aicloudstrategist.com/request-fit-review/</a></p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:12pt">
+        <strong>Synthetic data, real structure.</strong> SynthoSaaS is fictional. This pack demonstrates deliverable shape for fit-review buyers — not a client endorsement, case study, or promised outcome.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

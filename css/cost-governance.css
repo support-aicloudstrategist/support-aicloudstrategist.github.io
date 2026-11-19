@@ -4350,6 +4350,29 @@ body.aics-email-capture-open { overflow: hidden; }
 .pricing-page .pricing-card-featured .pricing-amount {
   font-size: clamp(1.5rem, 3.2vw, 2rem);
 }
+.currency-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0.75rem;
+}
+.currency-toggle .pricing-kicker {
+  margin: 0;
+  margin-right: 0.35rem;
+}
+.currency-toggle button[data-set-currency] {
+  min-width: 4.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.55rem;
+  font-weight: 700;
+}
+.currency-toggle button[data-set-currency].is-active,
+.currency-toggle button[data-set-currency][aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
 .pricing-page .pricing-founding {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

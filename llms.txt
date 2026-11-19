@@ -5,7 +5,7 @@
 ## Primary pages
 - [Home](https://aicloudstrategist.com/): Know who owns every cloud and AI dollar before you cut anything
 - [Diagnostics scope](https://aicloudstrategist.com/services/): Single bounded diagnostic for AWS, Azure, GCP, Kubernetes, GPU/LLM
-- [Pricing](https://aicloudstrategist.com/pricing/): Free fit review · USD 2,500–3,000 single-estate · USD 5,500–12,000 complex
+- [Pricing](https://aicloudstrategist.com/pricing/): Free fit review · USD 2,500–3,000 single-estate · USD 5,500–12,000 complex (India visitors: INR bands in js/aics-pricing-config.js; plus GST)
 - [Request a diagnostic fit check](https://aicloudstrategist.com/request-fit-review/): Primary CTA — free 30-minute suitability call
 - [Sample PDF](https://aicloudstrategist.com/downloads/sample-cloud-ai-cost-governance-diagnostic.pdf): Synthetic illustrative pack
 - [Sample deliverable (web)](https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/)

@@ -36,58 +36,55 @@
         <a href="/services/">Diagnostics</a>
         <a href="/pricing/">Pricing</a>
         <a href="/about/">About</a>
-        <a class="nav-cta" href="/request-fit-review/">Book a free fit review</a>
+        <a class="nav-cta" href="/request-fit-review/">Request a diagnostic fit check</a>
       </nav>
     </div>
   </header>
 <main id="main-content">
   <section class="subpage-hero section-shell"><div class="shell"><p class="eyebrow">Legal</p><h1>Website Terms</h1><p class="hero-lead">Terms governing use of the public AICloudStrategist website.</p></div></section>
   <section class="section-shell section-dark"><article class="shell legal-document">
-    <p><strong>Last updated:</strong> 10 November 2026</p>
+    <p><strong>Last updated:</strong> 19 November 2026</p>
+    <p><!-- TODO: Legal counsel review before relying on these website terms as a substitute for engagement contracts. --></p>
     <h2>1. Website operator</h2>
-    <p>This website is operated by <strong>AICLOUDSTRATEGIST PRIVATE LIMITED</strong>, CIN <strong>U62020DC2026PTC470945</strong>, using the public brand AICloudStrategist. Contact: <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>.</p>
+    <p>This website is operated by <strong>AICLOUDSTRATEGIST PRIVATE LIMITED</strong>, CIN <strong>U62020DC2026PTC470945</strong>, using the public brand AICloudStrategist. Contact: <!--email_off--><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><!--/email_off-->.</p>
 
     <h2>2. General information only</h2>
-    <p>Website content is provided for general business and technical information. It is not legal, accounting, tax, investment, security-certification or cloud-provider advice. Decisions should consider the facts, contracts, technical constraints and professional advice applicable to the relevant organization.</p>
+    <p>Website content is general business and technical information about the Cloud &amp; AI Cost Governance Diagnostic. It is not legal, accounting, tax, investment, security-certification or cloud-provider advice.</p>
 
-    <h2>3. Cloud &amp; AI Cost Governance Diagnostic</h2>
-    <p>Public descriptions explain the intended structure and boundaries of the diagnostic. Actual scope, inputs, delivery, price, confidentiality, responsibility, intellectual property and acceptance criteria must be agreed in a separate written engagement.</p>
-    <p>The diagnostic does not guarantee savings, fixed ROI, service improvement, compliance or any other outcome. It does not authorize AICS to make production changes, shut down workloads, purchase commitments or access systems without explicit agreement.</p>
+    <h2>3. Single offer: Cloud &amp; AI Cost Governance Diagnostic</h2>
+    <p>Public pages describe one fixed-fee diagnostic: ownership mapping, an Act / Investigate / Hold decision register, and a 30-day action plan. Scope and fee are confirmed in writing before sensitive evidence is transferred. Implementation stays with the client. AICS does not execute production changes as part of the diagnostic fee, does not take savings-share, and does not guarantee savings or ROI.</p>
 
     <h2>4. Fit review</h2>
-    <p>The Cloud &amp; AI Cost Fit Review is a suitability and scoping conversation. It is not a free diagnostic, savings estimate, audit or consulting engagement. AICS may conclude that the proposed problem is outside the diagnostic boundary.</p>
+    <p>The diagnostic fit check is a suitability and scoping conversation. It is not a free diagnostic, savings estimate or consulting engagement. AICS may conclude the problem is outside the diagnostic boundary.</p>
 
-    <h2>5. Representative evidence</h2>
-    <p>Artifacts labelled representative or synthetic are demonstrations of structure and method. They are not customer work, benchmarks, achieved results, case studies or savings promises. Simulated values must not be applied to another organization without suitable evidence.</p>
+    <h2>5. Evidence, NDA and data ownership</h2>
+    <p>Do not submit credentials or billing files through the public form. If an engagement proceeds, evidence exchange is under a mutual NDA (or equivalent written confidentiality terms). The client retains ownership of its data. Retention and deletion follow the agreed engagement boundary and the <a href="/data-handling/">Data handling</a> page.</p>
 
-    <h2>6. Sensitive information</h2>
-    <p>Do not submit credentials, billing exports, customer data or confidential files through the public fit-review form. If an engagement proceeds, an authorized evidence-transfer and data-handling boundary must be agreed separately.</p>
+    <h2>6. Deliverable licence</h2>
+    <p>The client may use the diagnostic deliverable internally for its own cost-governance decisions. Public website samples labelled synthetic remain AICS property and are not customer work. <!-- TODO: Confirm deliverable IP wording with counsel. --></p>
 
-    <h2>7. Intellectual property</h2>
-    <p>Unless otherwise stated, website text, graphics, diagrams, methods and downloadable materials are owned by or licensed to AICLOUDSTRATEGIST PRIVATE LIMITED. You may reference public pages and use ungated materials internally for evaluation, but you may not misrepresent, resell or republish them as your own work.</p>
+    <h2>7. Payment terms and taxes</h2>
+    <p>Published bands are indicative. The written proposal states currency, fixed fee, payment schedule and applicable taxes (including GST where relevant). Work starts only after the commercial terms are accepted as written.</p>
 
-    <h2>8. External links</h2>
-    <p>External links are provided for convenience or source verification. AICS does not control and is not responsible for the availability, content or privacy practices of external websites.</p>
+    <h2>8. Limitation of liability</h2>
+    <p>To the extent permitted by applicable law, AICS is not liable for decisions made solely from general website content or synthetic samples. Engagement-specific liability is governed by the written agreement. <!-- TODO: Confirm liability cap with counsel. --></p>
 
-    <h2>9. Availability</h2>
-    <p>AICS may update, move or withdraw website content. Reasonable effort is made to keep information accurate, but uninterrupted availability or error-free operation is not guaranteed.</p>
+    <h2>9. Governing law</h2>
+    <p><!-- TODO: Confirm governing law and dispute forum with counsel. Placeholder: --> These website terms are governed by the laws of India, without prejudice to mandatory consumer protections that may apply.</p>
 
-    <h2>10. Liability boundary</h2>
-    <p>To the extent permitted by applicable law, AICS is not liable for decisions made solely from general website content or representative artifacts. Engagement-specific liability is governed by the applicable written agreement.</p>
+    <h2>10. Privacy</h2>
+    <p>Enquiry forms and measurement are described in the <a href="/privacy">Privacy Policy</a> and <a href="/data-handling/">Data handling</a> page.</p>
 
-    <h2>11. Privacy</h2>
-    <p>Use of enquiry forms and website measurement is described in the <a href="/privacy">Privacy Policy</a> and <a href="/privacy">Trust &amp; Data Handling</a> page.</p>
-
-    <h2>12. Contact</h2>
-    <p>Questions about these terms may be sent to <a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a>.</p>
+    <h2>11. Contact</h2>
+    <p>Questions: <!--email_off--><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><!--/email_off-->.</p>
   </article></section>
 </main>
 <footer class="site-footer">
     <div class="shell footer-grid">
       <div><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><svg class="brand-mark-geo" viewBox="0 0 40 40" focusable="false"><g class="brand-mark-motif" fill="none"><path class="brand-mark-orbit" d="M20 4.6a15.4 15.4 0 1 1-12.2 6.1"/><path class="brand-mark-blade" d="M8.8 12.2h12.4L29.8 20 21.2 27.8H8.8l7.4-7.8z"/><path class="brand-mark-cut" d="M31.4 11.2 24.6 20l6.8 8.8"/><circle class="brand-mark-node" cx="20" cy="20" r="2.35"/></g></svg></span><span>AI<span class="brand-accent">Cloud</span>Strategist</span></a><p>Cloud and AI cost governance for accountable technology decisions.</p><small>AICLOUDSTRATEGIST PRIVATE LIMITED · CIN U62020DC2026PTC470945</small></div>
-      <div><strong>Explore</strong><a href="/services/">Diagnostics</a><a href="/pricing/">Pricing</a><a href="/about/">About</a><a href="/request-fit-review/">Book a free fit review</a></div>
-      <div><strong>Policies</strong><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
-      <div><strong>Contact</strong><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><a href="tel:+918065480898">+91 80654 80898</a></div>
+      <div><strong>Explore</strong><a href="/services/">Diagnostics</a><a href="/pricing/">Pricing</a><a href="/about/">About</a><a href="/request-fit-review/">Request a diagnostic fit check</a></div>
+      <div><strong>Policies</strong><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/data-handling/">Data handling</a><a href="/scope-and-limits/">Scope &amp; limits</a></div>
+      <div><strong>Contact</strong><a href="mailto:contact@aicloudstrategist.com">contact@aicloudstrategist.com</a><a href="tel:+918796302608">+91 87963 02608</a></div>
     </div>
   </footer>
 
