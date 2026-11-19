@@ -8,7 +8,7 @@ SLUG = "aws-bill-owner-action-path"
 TITLE = "AWS Bill Too High? A 6-Step Owner Action Path"
 HOOK = "A no-credentials educational path to confirm the change, find the scope, name the owner, classify the driver and choose an evidence-matched next action."
 BOUNDARY = "Buyer education only — not an AWS account audit, savings guarantee, client case study, financial advice, security advice, certification, partnership or production-change instruction."
-BASE = f"https://aicloudstrategist.com/publications/{DATE}"
+BASE = f"https://support-aicloudstrategist.github.io/publications/{DATE}"
 URL = f"{BASE}/{SLUG}.html"
 PNG_URL = f"{BASE}/{SLUG}.png"
 SVG_URL = f"{BASE}/{SLUG}.svg"
@@ -109,7 +109,7 @@ card = {
     "worksheet": CSV_URL,
     "steps": [{"step": n, "owner_action": t, "safe_check": b} for n, t, b in steps],
     "boundary": BOUNDARY,
-    "source_resource": "https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/",
+    "source_resource": "https://support-aicloudstrategist.github.io/resources/customer-problem-search/aws-cloud-bill-too-high/",
 }
 (pub / f"{SLUG}-answer-card.json").write_text(json.dumps(card, indent=2), encoding="utf-8")
 

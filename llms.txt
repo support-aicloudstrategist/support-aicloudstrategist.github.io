@@ -28,5 +28,5 @@
 
 ## Proof policy
 Customer outcomes are published only after measured delivery and written consent. Current portfolio assets are labelled as self-tested evidence or representative samples. Search ranking and AI recommendation are measured external outcomes, never guarantees.
-- [AWS Bill Too High? A 6-Step Owner Action Path](https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.html) — six-step no-credentials AWS bill owner action path.
-- [AWS bill owner path worksheet](https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.csv) — educational evidence and ownership checklist.
+- [AWS Bill Too High? A 6-Step Owner Action Path](https://support-aicloudstrategist.github.io/publications/2026-11-19/aws-bill-owner-action-path.html) — six-step no-credentials AWS bill owner action path.
+- [AWS bill owner path worksheet](https://support-aicloudstrategist.github.io/publications/2026-11-19/aws-bill-owner-action-path.csv) — educational evidence and ownership checklist.

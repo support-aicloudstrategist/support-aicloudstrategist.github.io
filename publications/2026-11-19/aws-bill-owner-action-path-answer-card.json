@@ -2,9 +2,9 @@
   "topic": "AWS Bill Too High? A 6-Step Owner Action Path",
   "date": "2026-11-19",
   "slot": "evening",
-  "url": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.html",
-  "infographic": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.png",
-  "worksheet": "https://aicloudstrategist.com/publications/2026-11-19/aws-bill-owner-action-path.csv",
+  "url": "https://support-aicloudstrategist.github.io/publications/2026-11-19/aws-bill-owner-action-path.html",
+  "infographic": "https://support-aicloudstrategist.github.io/publications/2026-11-19/aws-bill-owner-action-path.png",
+  "worksheet": "https://support-aicloudstrategist.github.io/publications/2026-11-19/aws-bill-owner-action-path.csv",
   "steps": [
     {
       "step": "1",
@@ -38,5 +38,5 @@
     }
   ],
   "boundary": "Buyer education only \u2014 not an AWS account audit, savings guarantee, client case study, financial advice, security advice, certification, partnership or production-change instruction.",
-  "source_resource": "https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/"
+  "source_resource": "https://support-aicloudstrategist.github.io/resources/customer-problem-search/aws-cloud-bill-too-high/"
 }
