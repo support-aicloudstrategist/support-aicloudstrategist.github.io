@@ -131,7 +131,7 @@ class EuropeHealthtechProcurementResponseReadinessChecklistTests(unittest.TestCa
         self.assertIn("FAQPage", types)
         article = next(doc for doc in docs if isinstance(doc, dict) and doc.get("@type") == "Article")
         self.assertEqual(article["mainEntityOfPage"], URL)
-        self.assertEqual(article["dateModified"], "2026-08-31")
+        self.assertEqual(article["dateModified"], "2026-11-19")
         path = f"/resources/{SLUG}/"
         self.assertIn(path, self.resources)
         self.assertIn(path, self.builder)
