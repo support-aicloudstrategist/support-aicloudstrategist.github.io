@@ -1697,28 +1697,128 @@ p { margin-top: 0; }
 
 /* About page — FinOps-style company structure */
 .about-page .about-hero {
-  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  padding-top: clamp(4.2rem, 8vw, 6.8rem);
+  padding-bottom: clamp(2.2rem, 4vw, 3.5rem);
+  overflow: hidden;
 }
-.about-page .about-hero-inner {
-  max-width: 46rem;
+.about-page .about-hero-glow {
+  position: absolute;
+  inset: -10% 0 auto;
+  height: 70%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 60% at 18% 30%, rgba(11, 127, 140, 0.18), transparent 70%),
+    radial-gradient(ellipse 45% 50% at 88% 18%, rgba(14, 163, 180, 0.14), transparent 65%);
+}
+.about-page .about-hero-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.about-page .about-aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.55;
+  animation: about-aurora-drift 16s ease-in-out infinite;
+}
+.about-page .about-aurora-a {
+  width: 14rem;
+  height: 14rem;
+  top: 8%;
+  right: 12%;
+  background: radial-gradient(circle, rgba(11, 127, 140, 0.28), transparent 70%);
+}
+.about-page .about-aurora-b {
+  width: 10rem;
+  height: 10rem;
+  top: 42%;
+  right: 28%;
+  background: radial-gradient(circle, rgba(192, 138, 58, 0.18), transparent 70%);
+  animation-delay: -5s;
+}
+.about-page .about-aurora-c {
+  width: 8rem;
+  height: 8rem;
+  bottom: 18%;
+  left: 8%;
+  background: radial-gradient(circle, rgba(14, 163, 180, 0.2), transparent 70%);
+  animation-delay: -9s;
+}
+.about-page .about-aurora-beam {
+  position: absolute;
+  width: 42%;
+  height: 1px;
+  top: 36%;
+  right: 4%;
+  background: linear-gradient(90deg, transparent, rgba(11, 127, 140, 0.35), transparent);
+  transform: rotate(-12deg);
+  opacity: 0.7;
+}
+@keyframes about-aurora-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0.6rem, -0.8rem, 0) scale(1.04); }
+}
+.about-page .about-hero-stage {
   position: relative;
   z-index: 1;
 }
+.about-page .about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: clamp(2rem, 5vw, 3.75rem);
+  align-items: center;
+}
+.about-page .about-hero-copy {
+  min-width: 0;
+}
+.about-page .about-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 0.85rem;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.about-page .about-hero-eyebrow::before {
+  content: "";
+  width: 1.35rem;
+  height: 1px;
+  background: var(--cyan);
+}
 .about-page .about-hero h1 {
-  max-width: 14ch;
-  margin-bottom: 0.85rem;
+  max-width: 12ch;
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.45rem, 5.2vw, 3.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.about-page .about-hero-line {
+  display: block;
 }
 .about-page .about-purpose {
-  max-width: 42ch;
-  font-size: clamp(1.08rem, 2.2vw, 1.22rem);
+  max-width: 40ch;
+  font-size: clamp(1.05rem, 2vw, 1.18rem);
   line-height: 1.55;
   color: var(--muted);
-  margin: 0 0 1.35rem;
+  margin: 0 0 1.25rem;
+}
+.about-page .about-hero-assurance {
+  margin: 1.1rem 0 0;
+  max-width: 40ch;
+  color: var(--dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 .about-page .about-trust-strip {
   list-style: none;
-  margin: 1.75rem 0 0;
-  padding: 1.1rem 0 0;
+  margin: 1.55rem 0 0;
+  padding: 1.05rem 0 0;
   border-top: 1px solid rgba(16, 42, 64, 0.12);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1738,6 +1838,172 @@ p { margin-top: 0; }
   color: var(--dim);
   font-size: 0.86rem;
   line-height: 1.4;
+}
+.about-page .about-hero-visual {
+  min-width: 0;
+}
+.about-page .about-hero-glass {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 1.35rem;
+  padding: 1.25rem 1.3rem 1.35rem;
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(232, 245, 247, 0.55) 55%, rgba(255, 255, 255, 0.4)),
+    radial-gradient(circle at 85% 12%, rgba(11, 127, 140, 0.12), transparent 45%);
+  box-shadow:
+    0 18px 40px rgba(16, 42, 64, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.about-page .about-hero-glass::before {
+  content: "";
+  position: absolute;
+  inset: auto -8% -18% auto;
+  width: 9rem;
+  height: 9rem;
+  background: var(--aics-mark-svg) center / contain no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.about-page .about-hero-glass-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.about-page .about-hero-flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.about-page .about-hero-flow li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.85rem 0.95rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(11, 127, 140, 0.14);
+  background: rgba(255, 255, 255, 0.55);
+}
+.about-page .about-hero-flow li:nth-child(2) {
+  animation: about-hero-pulse 5.5s ease-in-out infinite;
+}
+.about-page .about-hero-step {
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(145deg, rgba(11, 127, 140, 0.16), rgba(11, 127, 140, 0.05));
+  color: var(--cyan);
+  font-family: var(--mono, "IBM Plex Mono", monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.about-page .about-hero-flow strong {
+  display: block;
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.about-page .about-hero-flow small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--dim);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+.about-page .about-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+.about-page .about-hero-chip {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 127, 140, 0.16);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.about-page .about-hero-ribbon {
+  margin-top: clamp(1.6rem, 3vw, 2.25rem);
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 127, 140, 0.14);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.about-page .about-hero-ribbon-track {
+  display: flex;
+  width: max-content;
+  animation: about-hero-marquee 28s linear infinite;
+}
+.about-page .about-hero-features {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0.7rem 1.4rem;
+}
+.about-page .about-hero-features li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  color: var(--ink);
+  font-size: 0.86rem;
+}
+.about-page .about-hero-features li::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(11, 127, 140, 0.12);
+}
+.about-page .about-hero-ribbon:hover .about-hero-ribbon-track {
+  animation-play-state: paused;
+}
+@keyframes about-hero-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes about-hero-pulse {
+  0%, 100% { border-color: rgba(11, 127, 140, 0.14); box-shadow: none; }
+  50% { border-color: rgba(11, 127, 140, 0.32); box-shadow: 0 0 0 4px rgba(11, 127, 140, 0.06); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-aurora-orb,
+  .about-page .about-hero-ribbon-track,
+  .about-page .about-hero-flow li:nth-child(2) {
+    animation: none;
+  }
+}
+@media (max-width: 960px) {
+  .about-page .about-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .about-page .about-trust-strip {
+    grid-template-columns: 1fr;
+  }
+  .about-page .about-hero h1 {
+    max-width: 11ch;
+  }
 }
 .about-page .about-section-intro {
   max-width: 40rem;
