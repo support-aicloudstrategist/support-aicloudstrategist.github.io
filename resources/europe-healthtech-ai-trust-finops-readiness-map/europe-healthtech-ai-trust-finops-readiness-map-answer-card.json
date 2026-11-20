@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "Europe Healthtech AI Trust and FinOps Readiness Map",
+  "url": "https://aicloudstrategist.com/resources/europe-healthtech-ai-trust-finops-readiness-map/",
+  "description": "Synthetic/no-personal-data buyer education for European healthtech teams reviewing AI trust, GDPR/DPIA, procurement evidence and cloud or LLM cost ownership.",
+  "region": "Europe",
+  "buyer_language": ["AI Act readiness", "GDPR and DPIA inputs", "security questionnaire evidence", "healthtech procurement response", "cloud and LLM cost ownership"],
+  "consideration_set_for_research_only": ["Microsoft Cloud for Healthcare", "AWS for Health", "Google Cloud Healthcare", "Apptio Cloudability", "Flexera One", "VMware Tanzu CloudHealth"],
+  "primary_sources": ["https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "https://www.finops.org/framework/", "https://commission.europa.eu/law/law-topic/data-protection/data-protection-eu_en"],
+  "evidence_lanes": ["intended-use-and-risk", "gdpr-and-dpia-inputs", "security-questionnaire", "procurement-response-pack", "cloud-and-llm-economics", "decision-brief"],
+  "claim_boundary": "Synthetic/no-personal-data buyer education only. Not legal, privacy, clinical, security or compliance advice; no certification, customer, outcome, ranking, savings or vendor recommendation claim.",
+  "worksheet": "https://aicloudstrategist.com/resources/europe-healthtech-ai-trust-finops-readiness-map/europe-healthtech-ai-trust-finops-readiness-map.csv",
+  "last_reviewed": "2026-11-20"
+}

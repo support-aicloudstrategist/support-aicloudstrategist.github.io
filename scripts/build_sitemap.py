@@ -78,6 +78,7 @@ CURATED_PATHS = [
     "/resources/saudi-private-clinic-whatsapp-appointment-follow-up-checklist/",
     "/resources/gcc-clinic-whatsapp-ai-receptionist-vs-booking-crm-comparison/",
     "/resources/singapore-private-clinic-pdpa-patient-follow-up-evidence-checklist/",
+    "/resources/europe-healthtech-ai-trust-finops-readiness-map/",
     "/resources/singapore-private-clinic-missed-call-whatsapp-owner-evidence-checklist/",
     "/resources/singapore-clinic-missed-call-whatsapp-diagnostic-package/",
     "/resources/singapore-private-clinic-patient-growthos-vs-clinic-software-ai-receptionist-comparison/",

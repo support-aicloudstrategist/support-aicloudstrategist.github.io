@@ -1,0 +1,7 @@
+lane,buyer_pain_language,evidence_to_collect,owner,stop_rule
+intended-use-and-risk,"Is this use case in scope and what risk questions apply?","Use-case card with users, purpose, affected people, human oversight, system boundary and open questions",Product + qualified adviser,"Stop before calling a system compliant or low risk"
+gdpr-and-dpia-inputs,"Where does personal or health data go and who can access it?","Purpose, categories, access, retention, processor/subprocessor, transfer and privacy-owner register",Privacy/data owner,"Stop before processing personal or health data in a demo"
+security-questionnaire,"Can you show current evidence rather than a sales statement?","Control owner, source URL, version/date, scope, exceptions, incident and recovery answers",Security + vendor owner,"Stop before treating a demo, logo or certificate claim as proof"
+procurement-response-pack,"Who owns each answer and what remains unknown?","Question/answer matrix with owner, evidence link, date, scope, status and follow-up",Bid/procurement lead,"Stop before submitting unsupported claims"
+cloud-and-llm-economics,"What is the driver, unit of value and safe next action?","Synthetic cost map by account, product, environment, model/API, driver and allocation confidence",Finance + engineering,"Stop before production changes or savings claims"
+decision-brief,"What should we Act, Investigate or Hold?","One-page decision brief with owner, due date, evidence link and stop rule",Executive sponsor,"Stop before pilot, vendor or platform commitment without sign-off"
