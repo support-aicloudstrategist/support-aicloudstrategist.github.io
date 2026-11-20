@@ -7,6 +7,10 @@
 ## Infographic
 - https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.png
 
+## Discoverability repair — 2026-11-20
+- Added the small-business AI automation owner checklist, synthetic worksheet and claim-safe answer card to the canonical Resources hub and `llms.txt` so the newest buyer asset is reachable from the evidence library and answer-engine index.
+- Local verification: hub HTML parsed with one H1 and all three artifact links; CSV parsed with 5 data rows; JSON parsed; no unsupported outcome or customer-proof claim added. Public propagation follows push and Pages polling.
+
 ## Verification boundary
 Educational workflow review only — not a client case study, productivity guarantee, security assessment, legal or compliance advice, vendor recommendation or production-change instruction.
 
