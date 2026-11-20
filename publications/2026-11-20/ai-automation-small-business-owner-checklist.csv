@@ -1,0 +1,6 @@
+check_id,owner_question,example_answer,next_move,boundary
+1,What repeatable job is being considered?,"When a web enquiry arrives someone copies it into a sheet",Define trigger and output,Use synthetic example only
+2,Who owns the output?,"Operations lead reviews the queue",Name accountable owner,No personal data
+3,Which steps are rules?,"Assign by service type; escalate unknowns",Separate judgement,Human review for exceptions
+4,What stops the workflow?,"Missing details or sensitive request",Write stop and escalation path,No regulated or payment data
+5,What is the smallest next move?,"Test a checklist with synthetic rows",Run reversible experiment,No ROI or savings promise
