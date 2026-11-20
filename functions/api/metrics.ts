@@ -1,3 +1,16 @@
+import {
+  geographyFromLegacyCountryCounts,
+  geographyFromVisitorGeo,
+  isPrivateRoute,
+  labelEvents,
+  meaningfulEngagementTotal,
+  normalizeAudience,
+  normalizePath,
+  partitionEventTotals,
+  validateReportInvariants,
+  type AudienceFilter,
+} from "./_lib/analytics-rules";
+
 type MetricsEnv = {
   LEAD_LOG?: KVNamespace;
   CONTACT_LOG?: KVNamespace;
@@ -182,24 +195,11 @@ function metricsCacheKey(
 ) {
   const fromDay = fromIso.slice(0, 10) || "na";
   const toDay = toIso.slice(0, 10) || "na";
-  return `cache:metrics:v2:${kind}:a${audience}:d${days}:${fromDay}:${toDay}`;
-}
-
-type AudienceFilter = "external" | "internal" | "bot" | "unknown" | "all";
-
-function normalizeAudience(value: unknown): AudienceFilter {
-  const raw = clean(value, 24).toLowerCase();
-  if (raw === "internal" || raw === "bot" || raw === "unknown" || raw === "all") return raw;
-  return "external";
+  return `cache:metrics:v3:${kind}:a${audience}:d${days}:${fromDay}:${toDay}`;
 }
 
 function meaningfulEngagement(totals: Record<string, number>) {
-  let sum = 0;
-  for (const [name, count] of Object.entries(totals || {})) {
-    if (name === "presence_ping" || name === "dwell_tick") continue;
-    sum += Number(count) || 0;
-  }
-  return sum;
+  return meaningfulEngagementTotal(totals);
 }
 
 async function readMetricsCache(store: KVNamespace | undefined, key: string, allowLastKnown = false) {
@@ -267,9 +267,11 @@ async function getMany(store: KVNamespace, names: string[], batchSize = 40) {
 
 type DayAggSlice = {
   totals?: Record<string, number>;
+  orphan_totals?: Record<string, number>;
   page_views?: number;
   sessions?: Record<string, true>;
   visitors?: Record<string, true>;
+  visitor_geo?: Record<string, string>;
   countries?: Record<string, number>;
   browsers?: Record<string, number>;
   devices?: Record<string, number>;
@@ -285,6 +287,7 @@ type DayAggSlice = {
       downloads?: number;
       dwell_sum?: number;
       dwell_samples?: number;
+      dwell_by_session?: Record<string, number>;
     }
   >;
 };
@@ -476,10 +479,10 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
         : eachDay(cutoff, rangeEnd);
       const aggs = await loadDayAggregates(eventStore, dayList);
       const totals: Record<string, number> = {};
+      const orphanTotals: Record<string, number> = {};
       const providers: Record<string, number> = {};
       const devices: Record<string, number> = {};
       const browsers: Record<string, number> = {};
-      const countries: Record<string, number> = {};
       const visitorKinds: Record<string, number> = {};
       const trafficBuckets: Record<string, number> = {};
       const pathViews: Record<string, number> = {};
@@ -492,6 +495,9 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
       const dailySessions: Record<string, number> = {};
       const sessionSeen = new Set<string>();
       const visitorSeen = new Set<string>();
+      const visitorGeoMerged: Record<string, string> = {};
+      const legacyCountryCounts: Record<string, number> = {};
+      let hasVisitorGeo = false;
       const liveSessions = new Set<string>();
       const livePages: Record<string, number> = {};
       const liveSources: Record<string, number> = {};
@@ -504,10 +510,11 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
         const slice = sliceForAudience(agg, audience);
         if (!slice) continue;
         for (const [k, v] of Object.entries(slice.totals || {})) bump(totals, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.orphan_totals || {})) bump(orphanTotals, k, Number(v) || 0);
         for (const [k, v] of Object.entries(slice.providers || {})) bump(providers, k, Number(v) || 0);
         for (const [k, v] of Object.entries(slice.devices || {})) bump(devices, k, Number(v) || 0);
         for (const [k, v] of Object.entries(slice.browsers || {})) bump(browsers, k, Number(v) || 0);
-        for (const [k, v] of Object.entries(slice.countries || {})) bump(countries, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.countries || {})) bump(legacyCountryCounts, k, Number(v) || 0);
         for (const [k, v] of Object.entries(slice.visitor_kinds || {})) bump(visitorKinds, k, Number(v) || 0);
         for (const [k, v] of Object.entries(slice.traffic_buckets || {})) bump(trafficBuckets, k, Number(v) || 0);
         bump(dailyViews, day, Number(slice.page_views) || 0);
@@ -515,18 +522,31 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
         bump(dailySessions, day, daySessions.length);
         for (const s of daySessions) sessionSeen.add(s);
         for (const v of Object.keys(slice.visitors || {})) visitorSeen.add(v);
+        for (const [vid, country] of Object.entries(slice.visitor_geo || {})) {
+          hasVisitorGeo = true;
+          // First valid public page view in range wins (earlier days processed first via eachDay order).
+          if (!visitorGeoMerged[vid]) visitorGeoMerged[vid] = country;
+        }
         for (const [path, stats] of Object.entries(slice.paths || {})) {
+          if (isPrivateRoute(path)) continue;
           bump(pathViews, path, Number(stats.page_views) || 0);
           bump(pathCta, path, Number(stats.cta_clicks) || 0);
           bump(pathScroll, path, Number(stats.scroll_50_plus) || 0);
           bump(pathDownloads, path, Number(stats.downloads) || 0);
-          pathDwellSum[path] = (pathDwellSum[path] || 0) + (Number(stats.dwell_sum) || 0);
-          pathDwellCount[path] = (pathDwellCount[path] || 0) + (Number(stats.dwell_samples) || 0);
+          // Prefer per-session maxima when present (new schema); else legacy dwell_sum/samples.
+          const bySession = stats.dwell_by_session || {};
+          const sessionVals = Object.values(bySession);
+          if (sessionVals.length) {
+            pathDwellSum[path] = (pathDwellSum[path] || 0) + sessionVals.reduce((a, b) => a + (Number(b) || 0), 0);
+            pathDwellCount[path] = (pathDwellCount[path] || 0) + sessionVals.length;
+          } else {
+            pathDwellSum[path] = (pathDwellSum[path] || 0) + (Number(stats.dwell_sum) || 0);
+            pathDwellCount[path] = (pathDwellCount[path] || 0) + (Number(stats.dwell_samples) || 0);
+          }
         }
         for (const row of agg.live || []) {
-          const rowClass = clean(row.traffic_class, 24) || (agg.by_class ? "unknown" : "unknown");
-          if (audience !== "all" && rowClass !== audience && !(audience === "unknown" && !row.traffic_class && !agg.by_class)) {
-            // Legacy live rows without class only appear under Unknown / All.
+          const rowClass = clean(row.traffic_class, 24) || "unknown";
+          if (audience !== "all" && rowClass !== audience) {
             if (!(audience === "unknown" && !agg.by_class)) continue;
           }
           if (audience === "external" && rowClass !== "external") continue;
@@ -535,8 +555,10 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
           const at = clean(row.at, 40);
           const ts = Date.parse(at);
           const session = clean(row.session, 64);
-          const path = clean(row.path, 256) || "/";
-          if (Number.isFinite(ts) && now - ts <= liveWindowMs && session) {
+          const path = normalizePath(row.path || "/");
+          // Live content panels exclude private routes; feed may note them as admin-only.
+          const privateLive = isPrivateRoute(path);
+          if (Number.isFinite(ts) && now - ts <= liveWindowMs && session && !privateLive) {
             liveSessions.add(session);
             bump(livePages, path);
             bump(liveSources, clean(row.source, 40) || "direct");
@@ -546,11 +568,12 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
             Number.isFinite(ts) &&
             now - ts <= enterWindowMs &&
             session &&
-            (row.name === "page_view" || row.name === "presence_ping")
+            row.name === "page_view" &&
+            !privateLive
           ) {
             enteringSessions.add(session);
           }
-          if (feed.length < 40) {
+          if (feed.length < 40 && !privateLive) {
             feed.push({
               at,
               name: clean(row.name, 64),
@@ -587,51 +610,97 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
         return new Response(JSON.stringify(realtimePayload), { status: 200, headers });
       }
 
-      const content = Object.keys({ ...pathViews, ...pathDwellSum })
+      let pageViews = totals.page_view || Object.values(dailyViews).reduce((a, b) => a + b, 0);
+      // Page-view anchor: without valid views, business KPIs must be zero (orphans → diagnostics only).
+      const anchored = pageViews > 0;
+      let reportVisitors = anchored ? visitorSeen.size : 0;
+      let reportSessions = anchored ? sessionSeen.size : 0;
+      if (!anchored) {
+        for (const day of Object.keys(dailySessions)) dailySessions[day] = 0;
+      }
+
+      const geo = hasVisitorGeo
+        ? geographyFromVisitorGeo(visitorGeoMerged, anchored ? visitorSeen : [])
+        : geographyFromLegacyCountryCounts(legacyCountryCounts, reportVisitors);
+      const countries = geo.countries;
+      const locationRows = topEntries(countries, 25);
+      const locationDenominator = geo.denominator;
+      const locationSum = locationRows.reduce((sum, row) => sum + (row.count || 0), 0);
+
+      let content = Object.keys({ ...pathViews, ...pathDwellSum })
+        .filter((path) => !isPrivateRoute(path))
+        .filter((path) => (pathViews[path] || 0) > 0 || (pathDwellCount[path] || 0) > 0)
         .map((path) => {
           const views = pathViews[path] || 0;
           const cta = pathCta[path] || 0;
           const dwellSamples = pathDwellCount[path] || 0;
-          const avgDwell = dwellSamples ? Math.round((pathDwellSum[path] || 0) / dwellSamples) : null;
+          // Dwell without page views is orphaned — do not publish page metrics.
+          const publishDwell = views > 0 && dwellSamples > 0;
+          const avgDwell = publishDwell ? Math.round((pathDwellSum[path] || 0) / dwellSamples) : null;
           return {
             path,
             page_views: views,
-            cta_clicks: cta,
+            cta_clicks: views > 0 ? cta : 0,
             cta_rate: views ? Number(((cta / views) * 100).toFixed(1)) : 0,
-            scroll_50_plus: pathScroll[path] || 0,
-            downloads: pathDownloads[path] || 0,
-            // null when missing — UI must not display a fabricated 0s dwell.
+            scroll_50_plus: views > 0 ? pathScroll[path] || 0 : 0,
+            downloads: views > 0 ? pathDownloads[path] || 0 : 0,
             avg_dwell_seconds: avgDwell,
-            dwell_available: dwellSamples > 0,
-            dwell_samples: dwellSamples,
+            dwell_available: publishDwell,
+            dwell_samples: publishDwell ? dwellSamples : 0,
           };
         })
+        .filter((row) => row.page_views > 0)
         .sort(
           (a, b) =>
             (b.avg_dwell_seconds || 0) - (a.avg_dwell_seconds || 0) || b.page_views - a.page_views,
         )
         .slice(0, 40);
 
+      if (!anchored) content = [];
+
       const growth = eachDay(cutoff, rangeEnd).map((day) => ({
         day,
         page_views: dailyViews[day] || 0,
-        sessions: dailySessions[day] || 0,
+        sessions: anchored ? dailySessions[day] || 0 : 0,
       }));
 
-      // Contacts are voluntary form submissions (not page-traffic classes). Show for external/all only.
       const leads =
         audience === "external" || audience === "all"
           ? await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 400)
           : [];
-      const pageViews = totals.page_view || Object.values(dailyViews).reduce((a, b) => a + b, 0);
       const conversions =
         (totals.form_submit_success || 0) + (totals.email_capture_submit_success || 0);
-      const engagementMeaningful = meaningfulEngagement(totals);
-      // Verified external customer traffic requires page views. Presence/dwell-only
-      // sessions must not hide the empty state or inflate External interest.
+      const parts = partitionEventTotals(anchored ? totals : {});
+      const engagementMeaningful = anchored ? meaningfulEngagement(totals) : 0;
       const emptyExternal = audience === "external" && pageViews === 0;
-      const locationRows = topEntries(countries, 25);
-      const locationDenominator = locationRows.reduce((sum, row) => sum + (row.count || 0), 0);
+
+      // When views=0, strip traffic/engagement/geo from business totals; keep raw orphans in diagnostics.
+      if (!anchored) {
+        reportVisitors = 0;
+        reportSessions = 0;
+        pageViews = 0;
+      }
+
+      const invariants = validateReportInvariants({
+        audience,
+        pageViews,
+        sessions: reportSessions,
+        visitors: reportVisitors,
+        meaningful: engagementMeaningful,
+        locationDenominator,
+        locationSum,
+        contentPaths: content.map((c) => c.path),
+        engagementIncludesPageView: Object.prototype.hasOwnProperty.call(parts.meaningful, "page_view"),
+        engagementIncludesTelemetry:
+          Object.prototype.hasOwnProperty.call(parts.meaningful, "presence_ping") ||
+          Object.prototype.hasOwnProperty.call(parts.meaningful, "dwell_tick"),
+        dwellMissingAsZero: content.some(
+          (c) => c.dwell_available === false && c.avg_dwell_seconds === 0,
+        ),
+      });
+      if (geo.warning) {
+        invariants.push({ code: "geo_legacy_note", message: geo.warning });
+      }
 
       const dashboardPayload: Record<string, unknown> = {
         ok: true,
@@ -652,39 +721,41 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
           ? "No verified external customer traffic in this range."
           : undefined,
         overview: {
-          visitors: visitorSeen.size || sessionSeen.size,
+          visitors: reportVisitors,
           page_views: pageViews,
-          sessions: sessionSeen.size,
-          conversions,
+          sessions: reportSessions,
+          conversions: anchored ? conversions : 0,
           engagement_meaningful: engagementMeaningful,
           growth,
         },
         audience_metrics: {
-          new_vs_returning: visitorKinds,
+          new_vs_returning: anchored ? visitorKinds : {},
           locations: locationRows,
           location_denominator: locationDenominator,
-          browsers: topEntries(browsers, 15),
-          devices: topEntries(devices, 10),
+          geography_mode: geo.mode,
+          browsers: anchored ? topEntries(browsers, 15) : [],
+          devices: anchored ? topEntries(devices, 10) : [],
           age: {
             available: false,
             note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
           },
         },
-        // Keep legacy key for older dashboard JS during rollout.
         audience: {
-          new_vs_returning: visitorKinds,
+          new_vs_returning: anchored ? visitorKinds : {},
           locations: locationRows,
           location_denominator: locationDenominator,
-          browsers: topEntries(browsers, 15),
-          devices: topEntries(devices, 10),
+          geography_mode: geo.mode,
+          browsers: anchored ? topEntries(browsers, 15) : [],
+          devices: anchored ? topEntries(devices, 10) : [],
           age: {
             available: false,
             note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
           },
         },
         traffic: {
-          buckets: trafficBuckets,
-          providers: topEntries(providers, 20),
+          buckets: anchored ? trafficBuckets : {},
+          providers: anchored ? topEntries(providers, 20) : [],
+          labeled: labelEvents(parts.traffic),
         },
         content,
         realtime: {
@@ -700,11 +771,31 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
           identity: "Aggregated only — no names or emails in real-time views.",
         },
         engagement: {
-          events: totals,
+          // Chart payload: meaningful only, human labels.
+          events: parts.meaningful,
+          labeled: labelEvents(parts.meaningful),
           meaningful_total: engagementMeaningful,
-          excluded: ["presence_ping", "dwell_tick"],
+          conversion_intent: parts.conversion,
+          conversion_labeled: labelEvents(parts.conversion),
+          traffic_events: parts.traffic,
+          excluded: ["presence_ping", "dwell_tick", "page_view"],
           email_capture_triggers: {},
-          note: "Meaningful engagement excludes presence pings and dwell ticks. CTA rate is on-page click-through (CTA clicks ÷ page views).",
+          note: "Meaningful engagement = scrolls, CTA/button clicks, downloads, and contact clicks. Page views and operational telemetry are excluded.",
+          reconciliation: {
+            before_formula: "all event counts except presence_ping and dwell_tick (included page_view)",
+            after_formula: "MEANINGFUL_ENGAGEMENT set only (scroll_depth, cta_click, button_click, download_click, chat_open, email/phone/whatsapp clicks)",
+            included: Object.keys(parts.meaningful),
+            meaningful_total: engagementMeaningful,
+          },
+        },
+        diagnostics: {
+          operational_telemetry: parts.telemetry,
+          operational_labeled: labelEvents(parts.telemetry),
+          orphan_unanchored_events: orphanTotals,
+          orphan_labeled: labelEvents(orphanTotals),
+          consistency_issues: invariants,
+          geography_mode: geo.mode,
+          note: "Orphan / unanchored events lack a valid public page-view anchor. Private routes are excluded from content reports. Historical records are preserved.",
         },
         leads: {
           count: leads.length,
@@ -712,6 +803,10 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
             "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms. Passive browsing is non-PII.",
           items: leads.slice(0, 200),
           funnel_audience: audience,
+          attribution_note:
+            leads.length && !anchored
+              ? "Contacts shown from voluntary forms; related session attribution unavailable for this traffic filter."
+              : undefined,
         },
         coverage: {
           stack: "write-time day aggregates (KV get) + voluntary contact index",
@@ -725,7 +820,6 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
           "Analytics events remain non-PII. Lead identity is stored separately from voluntary form consent. Passive browsing never yields emails.",
       };
 
-      // Avoid locking in an empty rollup while aggregates are still warming up.
       if (Number(dashboardPayload.aggregate_days) > 0 || pageViews > 0) {
         await writeMetricsCache(cacheStore, cacheKey, dashboardPayload, cacheTtl);
       }

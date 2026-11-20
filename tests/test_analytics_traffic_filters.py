@@ -29,7 +29,7 @@ class AnalyticsTrafficFiltersTest(unittest.TestCase):
 
     def test_events_drop_analytics_path_and_allow_traffic_class(self):
         self.assertIn('"traffic_class"', EVENTS)
-        self.assertIn("analytics_path", EVENTS)
+        self.assertTrue("private_route" in EVENTS or "analytics_path" in EVENTS)
         self.assertIn("normalizeTrafficClass", EVENTS)
         self.assertIn("by_class", EVENTS)
 
@@ -54,11 +54,10 @@ class AnalyticsTrafficFiltersTest(unittest.TestCase):
         self.assertIn("dwell_available", DASH_JS)
 
     def test_meaningful_engagement_excludes_presence_and_dwell(self):
-        self.assertIn('name === "presence_ping"', DASH_JS)
-        self.assertIn('name === "dwell_tick"', DASH_JS)
-        self.assertIn('"presence_ping", "dwell_tick"', METRICS) or self.assertIn(
-            "presence_ping", METRICS
-        )
+        self.assertIn("MEANINGFUL", DASH_JS)
+        self.assertIn("presence_ping", METRICS)
+        self.assertIn("dwell_tick", METRICS)
+        self.assertIn("orphan", EVENTS.lower() + METRICS.lower())
 
 
 if __name__ == "__main__":

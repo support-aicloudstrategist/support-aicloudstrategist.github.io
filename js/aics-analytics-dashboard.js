@@ -244,6 +244,17 @@
     };
   };
 
+  const MEANINGFUL = new Set([
+    "scroll_depth",
+    "cta_click",
+    "button_click",
+    "download_click",
+    "chat_open",
+    "email_click",
+    "phone_click",
+    "whatsapp_click",
+  ]);
+
   const engagementTotal = (events, meaningfulFallback) => {
     if (meaningfulFallback != null && Number.isFinite(Number(meaningfulFallback))) {
       return Number(meaningfulFallback) || 0;
@@ -251,10 +262,30 @@
     const e = events || {};
     let sum = 0;
     Object.keys(e).forEach((name) => {
-      if (name === "presence_ping" || name === "dwell_tick") return;
+      if (!MEANINGFUL.has(name)) return;
       sum += Number(e[name]) || 0;
     });
     return sum;
+  };
+
+  const labeledRows = (labeled, fallbackEvents) => {
+    if (Array.isArray(labeled) && labeled.length) {
+      return labeled.map((row) => ({ key: row.label || row.key, count: row.count }));
+    }
+    return Object.entries(fallbackEvents || {}).map(([key, count]) => ({ key, count }));
+  };
+
+  const syncMarkUi = () => {
+    let marked = false;
+    try {
+      marked = String(localStorage.getItem(MARK_KEY) || "").toLowerCase() === "internal";
+    } catch (_) {}
+    if (markInternalBtn) {
+      markInternalBtn.setAttribute("aria-pressed", marked ? "true" : "false");
+      markInternalBtn.textContent = marked ? "Browser marked Internal" : "Mark this browser Internal";
+    }
+    const unmark = document.getElementById("dash-unmark-internal");
+    if (unmark) unmark.hidden = !marked;
   };
 
   const renderSparklines = (growth, leadsCount) => {
@@ -280,9 +311,10 @@
     mk("sparkContacts", "spark-contacts", leadProxy, "#b8741f");
   };
 
-  const renderGeo = (locations) => {
+  const renderGeo = (locations, denominator) => {
     const rows = locations || [];
-    const total = rows.reduce((sum, row) => sum + (Number(row.count) || 0), 0) || 1;
+    const summed = rows.reduce((sum, row) => sum + (Number(row.count) || 0), 0);
+    const total = Number(denominator) > 0 ? Number(denominator) : summed || 1;
     const india = rows.find((row) => String(row.key).toUpperCase() === "IN");
     const indiaCount = india ? Number(india.count) || 0 : 0;
     const indiaPct = Math.round((indiaCount / total) * 100);
@@ -384,8 +416,20 @@
     document.getElementById("kpi-contacts").textContent = fmt(leads.count || 0);
     document.getElementById("delta-views").textContent = `${fmt(ov.sessions || 0)} sessions in range`;
     document.getElementById("delta-visitors").textContent = "Unique visitors";
-    document.getElementById("delta-engagement").textContent = "Meaningful engagement (excludes presence/dwell)";
+    document.getElementById("delta-engagement").textContent = "Meaningful engagement (excludes page views & telemetry)";
     document.getElementById("delta-contacts").textContent = "Form submissions";
+
+    const invEl = document.getElementById("dash-invariants");
+    const issues = (data.diagnostics && data.diagnostics.consistency_issues) || [];
+    if (invEl) {
+      if (issues.length) {
+        invEl.hidden = false;
+        invEl.textContent = `Consistency: ${issues.map((i) => i.message || i.code).join(" · ")}`;
+      } else {
+        invEl.hidden = true;
+        invEl.textContent = "";
+      }
+    }
 
     if (window.Chart) {
       renderSparklines(growth, leads.count || 0);
@@ -415,7 +459,7 @@
         options: { ...baseOptions, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } },
       });
 
-      renderGeo(aud.locations || []);
+      renderGeo(aud.locations || [], aud.location_denominator);
 
       const nr = Object.entries(aud.new_vs_returning || {}).map(([key, count]) => ({ key, count }));
       const nrXY = entriesToXY(nr);
@@ -465,7 +509,14 @@
         data: {
           labels: content.map((row) => row.path),
           datasets: [
-            { label: "Avg dwell (s)", data: content.map((row) => row.avg_dwell_seconds || 0), backgroundColor: "#087989" },
+            {
+              label: "Avg dwell (s)",
+              data: content.map((row) =>
+                row.dwell_available === false || row.avg_dwell_seconds == null ? null : row.avg_dwell_seconds,
+              ),
+              backgroundColor: "#087989",
+              spanGaps: false,
+            },
             { label: "Views", data: content.map((row) => row.page_views || 0), backgroundColor: "#0a1828" },
           ],
         },
@@ -476,32 +527,68 @@
         },
       });
 
-      const events = Object.entries(eng.events || {})
-        .map(([key, count]) => ({ key, count }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 14);
-      const eventXY = entriesToXY(events);
+      const meaningful = labeledRows(eng.labeled, eng.events).slice(0, 14);
+      const eventXY = entriesToXY(meaningful);
       upsertChart("engagement", "chart-engagement", {
         type: "bar",
-        data: { labels: eventXY.labels, datasets: [{ label: "Events", data: eventXY.values, backgroundColor: "#5b7cfa" }] },
+        data: { labels: eventXY.labels, datasets: [{ label: "Meaningful engagement", data: eventXY.values, backgroundColor: "#5b7cfa" }] },
         options: {
           ...baseOptions,
           plugins: { ...baseOptions.plugins, legend: { display: false } },
           scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
         },
       });
+
+      const conversion = labeledRows(eng.conversion_labeled, eng.conversion_intent).slice(0, 10);
+      const convXY = entriesToXY(conversion);
+      upsertChart("conversion", "chart-conversion", {
+        type: "bar",
+        data: { labels: convXY.labels, datasets: [{ label: "Conversion intent", data: convXY.values, backgroundColor: "#b8741f" }] },
+        options: {
+          ...baseOptions,
+          plugins: { ...baseOptions.plugins, legend: { display: false } },
+          scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+        },
+      });
+
+      const diag = data.diagnostics || {};
+      const telemetry = labeledRows(diag.operational_labeled, diag.operational_telemetry).slice(0, 10);
+      const telXY = entriesToXY(telemetry);
+      upsertChart("telemetry", "chart-telemetry", {
+        type: "bar",
+        data: { labels: telXY.labels, datasets: [{ label: "Operational telemetry", data: telXY.values, backgroundColor: "#3d5368" }] },
+        options: {
+          ...baseOptions,
+          plugins: { ...baseOptions.plugins, legend: { display: false } },
+          scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+        },
+      });
+      const diagList = document.getElementById("diagnostics-list");
+      if (diagList) {
+        const orphan = labeledRows(diag.orphan_labeled, diag.orphan_unanchored_events);
+        diagList.innerHTML =
+          orphan
+            .slice(0, 8)
+            .map(
+              (row, index) =>
+                `<li><span class="pos">${index + 1}</span><div><strong>${escapeHtml(row.key)}</strong><div class="muted">Orphan / unanchored</div></div><span>${fmt(row.count)}</span></li>`,
+            )
+            .join("") || `<li><span class="pos">–</span><div class="muted">No orphan events</div><span></span></li>`;
+      }
+      const diagNote = document.getElementById("diagnostics-note");
+      if (diagNote) diagNote.textContent = diag.note || "Operational telemetry only.";
     }
 
     document.getElementById("age-note").textContent = "New and returning visitors.";
     document.getElementById("engagement-note").textContent =
-      eng.note || "Meaningful engagement excludes presence pings and dwell ticks.";
+      eng.note || "Meaningful engagement excludes page views and operational telemetry.";
 
     const contentRows = (data.content || [])
       .map((row) => {
         const dwell =
           row.dwell_available === false || row.avg_dwell_seconds == null
             ? "—"
-            : `${fmt(row.avg_dwell_seconds)}s`;
+            : `${fmt(row.avg_dwell_seconds)}s${row.dwell_samples ? ` · ${fmt(row.dwell_samples)} measured` : ""}`;
         return `<tr>
         <td>${escapeHtml(row.path)}</td>
         <td>${fmt(row.page_views)}</td>
@@ -519,6 +606,7 @@
     renderRealtime(data.realtime || {});
     const when = data.generated_at ? String(data.generated_at).replace("T", " ").slice(0, 19) : "";
     document.getElementById("generated-at").textContent = when ? `Updated ${when}` : "";
+    syncMarkUi();
   };
 
   const showProgressSection = (visible) => {
@@ -829,11 +917,22 @@
   markInternalBtn?.addEventListener("click", () => {
     try {
       localStorage.setItem(MARK_KEY, "internal");
-      setStatus("This browser is marked Internal. Public External reports will exclude it.", "ok");
+      syncMarkUi();
+      setStatus("This browser is marked Internal. Public External reports will exclude it. Marker persists after logout.", "ok");
     } catch (_) {
       setStatus("Could not mark this browser Internal (storage blocked).", "error");
     }
   });
+  document.getElementById("dash-unmark-internal")?.addEventListener("click", () => {
+    try {
+      localStorage.removeItem(MARK_KEY);
+      syncMarkUi();
+      setStatus("Internal mark removed for this browser. New visits are Unknown until classified.", "ok");
+    } catch (_) {
+      setStatus("Could not clear Internal mark (storage blocked).", "error");
+    }
+  });
+  syncMarkUi();
 
   showLoggedOut();
   const saved = restoreSession();

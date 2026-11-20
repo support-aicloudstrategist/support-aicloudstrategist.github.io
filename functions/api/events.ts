@@ -1,3 +1,10 @@
+import {
+  classifyTraffic,
+  isPrivateRoute,
+  normalizePath,
+  storageTrafficBucket,
+} from "./_lib/analytics-rules";
+
 type EventEnv = { LEAD_LOG?: KVNamespace };
 
 const headers = {
@@ -55,19 +62,16 @@ const allowedProps = new Set([
   "api",
   "depth",
   "seconds",
+  "dwell_mode",
+  "visible_seconds",
+  "hidden_seconds",
 ]);
 
-const TRAFFIC_CLASSES = new Set(["external", "internal", "bot", "unknown"]);
-
 function normalizeTrafficClass(value: unknown, path: string, ua: string) {
-  const raw = clean(value, 24).toLowerCase();
-  if (path === "/analytics" || path.startsWith("/analytics/")) return "internal";
-  if (/bot|crawl|spider|slurp|headless|phantom|selenium|puppeteer|playwright|httpclient|wget|curl|python-requests|scrapy/i.test(ua)) {
-    return "bot";
-  }
-  if (TRAFFIC_CLASSES.has(raw)) return raw;
-  // Unmarked / legacy client payloads stay Unknown — never auto-promote to external.
-  return raw ? "unknown" : "unknown";
+  // Central classifier — never auto-promote unmarked traffic to external.
+  return storageTrafficBucket(
+    classifyTraffic({ path, ua, clientClass: value }),
+  );
 }
 
 // Hard boundary: never accept sensitive personal fields on the analytics event path.
@@ -172,10 +176,13 @@ export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) =
   }
 
   const rawPath = clean(input.path, 512);
-  const path = rawPath.startsWith("/") && !rawPath.includes("?") && !rawPath.includes("#") ? rawPath : "/";
-  // Dashboard path must never create public analytics records.
-  if (path === "/analytics" || path.startsWith("/analytics/")) {
-    return new Response(JSON.stringify({ ok: true, dropped: true, reason: "analytics_path" }), {
+  const path =
+    rawPath.startsWith("/") && !rawPath.includes("?") && !rawPath.includes("#")
+      ? normalizePath(rawPath)
+      : "/";
+  // Private / operational routes must never create public analytics records.
+  if (isPrivateRoute(path)) {
+    return new Response(JSON.stringify({ ok: true, dropped: true, reason: "private_route" }), {
       status: 202,
       headers,
     });
@@ -231,15 +238,22 @@ type PathStats = {
   cta_clicks: number;
   scroll_50_plus: number;
   downloads: number;
+  /** Sum of per-session max active dwell seconds (not cumulative tick totals). */
   dwell_sum: number;
   dwell_samples: number;
+  /** session -> max active dwell seconds observed for this path */
+  dwell_by_session?: Record<string, number>;
 };
 
 type DayAggSlice = {
   totals: Record<string, number>;
+  /** Events that arrived without a valid public page-view anchor in this slice. */
+  orphan_totals: Record<string, number>;
   page_views: number;
   sessions: Record<string, true>;
   visitors: Record<string, true>;
+  /** visitor_id -> country from first valid public page view (unique-visitor geography). */
+  visitor_geo: Record<string, string>;
   countries: Record<string, number>;
   browsers: Record<string, number>;
   devices: Record<string, number>;
@@ -260,9 +274,11 @@ type DayAgg = DayAggSlice & {
 function emptySlice(): DayAggSlice {
   return {
     totals: {},
+    orphan_totals: {},
     page_views: 0,
     sessions: {},
     visitors: {},
+    visitor_geo: {},
     countries: {},
     browsers: {},
     devices: {},
@@ -282,51 +298,85 @@ function ensurePath(paths: Record<string, PathStats>, path: string): PathStats {
       downloads: 0,
       dwell_sum: 0,
       dwell_samples: 0,
+      dwell_by_session: {},
     };
   }
+  if (!paths[path].dwell_by_session) paths[path].dwell_by_session = {};
   return paths[path];
 }
 
+function trimSetMap(map: Record<string, true>, keep = 600, max = 800) {
+  const ids = Object.keys(map);
+  if (ids.length > max) {
+    for (const id of ids.slice(0, ids.length - keep)) delete map[id];
+  }
+}
+
+/**
+ * Business KPIs require a valid public page-view anchor.
+ * Telemetry without an anchored session is counted only under orphan_totals.
+ */
 function applyEventToSlice(
   slice: DayAggSlice,
   event: { name: string; path: string; session: string; props: Record<string, string> },
 ) {
+  if (!slice.orphan_totals) slice.orphan_totals = {};
+  if (!slice.visitor_geo) slice.visitor_geo = {};
+
   bumpMap(slice.totals, event.name);
-  if (event.session) {
-    slice.sessions[event.session] = true;
-    const sessionIds = Object.keys(slice.sessions);
-    if (sessionIds.length > 800) {
-      for (const id of sessionIds.slice(0, sessionIds.length - 600)) delete slice.sessions[id];
-    }
-  }
-  const visitor = clean(event.props.visitor, 64);
-  if (visitor) {
-    slice.visitors[visitor] = true;
-    const visitorIds = Object.keys(slice.visitors);
-    if (visitorIds.length > 800) {
-      for (const id of visitorIds.slice(0, visitorIds.length - 600)) delete slice.visitors[id];
-    }
-  }
+
+  const privatePath = isPrivateRoute(event.path);
   const provider = clean(event.props.provider, 120) || "direct";
   const channel = clean(event.props.channel, 120);
   const campaign = clean(event.props.campaign, 120);
   const device = clean(event.props.device, 40) || "unknown";
   const browser = clean(event.props.browser, 40) || "unknown";
-  const country = clean(event.props.country, 8) || "unknown";
+  const country = (clean(event.props.country, 8) || "unknown").toUpperCase();
   const visitorKind = clean(event.props.visitor_kind, 24) || "unknown";
+  const visitor = clean(event.props.visitor, 64);
   const depth = Number(event.props.depth || 0);
   const seconds = Number(event.props.seconds || 0);
+  const isDelta = clean(event.props.dwell_mode, 24) === "delta";
+
+  // Private routes never enter content-performance path stats (collection also drops them).
+  if (privatePath) {
+    bumpMap(slice.orphan_totals, event.name);
+    return;
+  }
 
   if (event.name === "page_view") {
     slice.page_views += 1;
+    if (event.session) {
+      slice.sessions[event.session] = true;
+      trimSetMap(slice.sessions);
+    }
+    if (visitor) {
+      slice.visitors[visitor] = true;
+      trimSetMap(slice.visitors);
+      // First valid public page view wins country for this visitor (deterministic).
+      if (!slice.visitor_geo[visitor]) slice.visitor_geo[visitor] = country;
+      // Keep countries map in sync with unique visitor geography for new data.
+      slice.countries = {};
+      for (const c of Object.values(slice.visitor_geo)) bumpMap(slice.countries, c || "UNKNOWN");
+    } else {
+      bumpMap(slice.countries, country);
+    }
     bumpMap(slice.providers, provider);
     bumpMap(slice.devices, device);
     bumpMap(slice.browsers, browser);
-    bumpMap(slice.countries, country);
     bumpMap(slice.visitor_kinds, visitorKind);
     bumpMap(slice.traffic_buckets, classifySource(provider, channel, campaign));
     ensurePath(slice.paths, event.path).page_views += 1;
+    return;
   }
+
+  const sessionAnchored = Boolean(event.session && slice.sessions[event.session]);
+  if (!sessionAnchored) {
+    // Orphan / unanchored: dwell, engagement, presence without a prior page_view in this slice.
+    bumpMap(slice.orphan_totals, event.name);
+    return;
+  }
+
   if (event.name === "cta_click" || event.name === "button_click") {
     ensurePath(slice.paths, event.path).cta_clicks += 1;
   }
@@ -338,8 +388,17 @@ function applyEventToSlice(
   }
   if (event.name === "dwell_tick" && Number.isFinite(seconds) && seconds > 0) {
     const row = ensurePath(slice.paths, event.path);
-    row.dwell_sum += seconds;
-    row.dwell_samples += 1;
+    const sid = event.session || "unknown";
+    const prev = row.dwell_by_session![sid] || 0;
+    // Delta mode: accumulate active visible seconds. Legacy cumulative: keep max per session.
+    const next = isDelta ? prev + seconds : Math.max(prev, seconds);
+    // Flag unusually long sessions in diagnostics via totals; still store measured value.
+    if (next > 3600) bumpMap(slice.orphan_totals, "dwell_long_session_flag");
+    row.dwell_by_session![sid] = next;
+    // Recompute path dwell from per-session maxima (idempotent; avoids double-counting ticks).
+    const vals = Object.values(row.dwell_by_session!);
+    row.dwell_samples = vals.length;
+    row.dwell_sum = vals.reduce((a, b) => a + b, 0);
   }
 }
 

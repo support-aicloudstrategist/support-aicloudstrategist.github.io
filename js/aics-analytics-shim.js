@@ -2,7 +2,7 @@
   var endpoint='/api/events';
   var gaMeasurementId='G-5F6Y7JZFB5';
   var MARK_KEY='aics_traffic_mark_v1';
-  var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign','service','device','browser','country','visitor','visitor_kind','traffic_class','trigger','via','api','depth','seconds']);
+  var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign','service','device','browser','country','visitor','visitor_kind','traffic_class','trigger','via','api','depth','seconds','dwell_mode','visible_seconds','hidden_seconds']);
   function isAnalyticsPath(pathname){
     var p=String(pathname||location.pathname||'').replace(/\/+$/,'')||'/';
     return p==='/analytics' || p.indexOf('/analytics/')===0;
@@ -188,8 +188,13 @@
   }
   function trackEngagement(){
     var marks={25:false,50:false,75:false,100:false};
-    var dwellSeconds=0;
+    // Active visible-page dwell only (pauses when hidden). Sent as deltas to avoid cumulative double-count.
+    var activeSeconds=0;
+    var hiddenSeconds=0;
+    var unsentActive=0;
+    var lastTickAt=Date.now();
     var dwellTimer=null;
+    var lastFlushKey='';
     function scrollRatio(){
       var doc=document.documentElement;
       var top=window.scrollY||doc.scrollTop||0;
@@ -205,14 +210,41 @@
         }
       });
     }
-    function tickDwell(){
-      if(document.visibilityState!=='visible') return;
-      dwellSeconds+=30;
-      if(dwellSeconds===30||dwellSeconds===60||dwellSeconds===120||dwellSeconds%180===0){
-        record('dwell_tick',{props:{seconds:String(dwellSeconds)}});
+    function advanceClock(){
+      var now=Date.now();
+      var delta=Math.max(0,Math.min(60,Math.round((now-lastTickAt)/1000)));
+      lastTickAt=now;
+      if(!delta) return;
+      if(document.visibilityState==='visible'){
+        activeSeconds+=delta;
+        unsentActive+=delta;
+      }else{
+        hiddenSeconds+=delta;
       }
-      // Presence every 30s keeps realtime useful without flooding KV.
-      record('presence_ping',{props:{seconds:String(dwellSeconds),trigger:'heartbeat'}});
+    }
+    function flushDwell(trigger){
+      advanceClock();
+      if(unsentActive<=0) return;
+      var payloadSeconds=unsentActive;
+      var key=String(activeSeconds)+':'+String(payloadSeconds)+':'+String(trigger||'tick');
+      if(key===lastFlushKey) return; // idempotent duplicate beacon guard
+      lastFlushKey=key;
+      unsentActive=0;
+      record('dwell_tick',{props:{
+        seconds:String(payloadSeconds),
+        dwell_mode:'delta',
+        visible_seconds:String(activeSeconds),
+        hidden_seconds:String(hiddenSeconds),
+        trigger:String(trigger||'tick')
+      }});
+    }
+    function tickDwell(){
+      advanceClock();
+      // Flush active deltas every 30s while visible; do not accumulate hidden time.
+      if(document.visibilityState==='visible' && unsentActive>0){
+        flushDwell('heartbeat');
+        record('presence_ping',{props:{seconds:String(activeSeconds),trigger:'heartbeat'}});
+      }
     }
     window.addEventListener('scroll',onScroll,{passive:true});
     onScroll();
@@ -221,11 +253,18 @@
       record('presence_ping',{props:{seconds:'0',trigger:'enter'}});
     }
     document.addEventListener('visibilitychange',function(){
-      if(document.visibilityState==='hidden' && dwellSeconds>0){
-        record('dwell_tick',{props:{seconds:String(dwellSeconds),trigger:'hide'}});
+      if(document.visibilityState==='hidden'){
+        flushDwell('hide');
+      }else{
+        lastTickAt=Date.now();
       }
     });
+    window.addEventListener('pagehide',function(){
+      flushDwell('pagehide');
+      if(dwellTimer) window.clearInterval(dwellTimer);
+    });
     window.addEventListener('beforeunload',function(){
+      flushDwell('beforeunload');
       if(dwellTimer) window.clearInterval(dwellTimer);
     });
   }

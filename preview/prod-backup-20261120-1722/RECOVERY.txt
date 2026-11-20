@@ -1,0 +1,13 @@
+﻿RECOVERY POINT — analytics consistency fix
+Created: 2026-11-20
+Git commit: b6e0a07ac4998628b7d3332213503779db83dbdc
+Branch tip backup: backup/analytics-consistency-20261120-1722
+Prior analytics checkpoint: backup/analytics-pre-audit-20261120-145412 @ fd93ab3
+Production Pages project: aicloudstrategist-site
+Active deploy at start: c75c9533 (source b6e0a07)
+
+ROLLBACK:
+  git checkout backup/analytics-consistency-20261120-1722
+  wrangler pages deploy . --project-name=aicloudstrategist-site --branch=main --commit-dirty=true --commit-message="Rollback analytics consistency fix"
+
+Data: do NOT delete LEAD_LOG KV keys. No destructive migration.

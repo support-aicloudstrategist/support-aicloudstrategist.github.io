@@ -16,16 +16,16 @@ const checks = [
   ["analytics HTML noindex", /noindex/.test(html) && /nofollow/.test(html) && /noarchive/.test(html)],
   ["shim skips analytics path", shim.includes("isAnalyticsPath") && shim.includes("if(isAnalyticsPath()) return;")],
   ["shim traffic_class", shim.includes("traffic_class") && shim.includes("markBrowserInternal")],
-  ["events drops analytics path", events.includes("analytics_path") && events.includes("traffic_class")],
-  ["events never auto-promote", events.includes("never auto-promote to external")],
-  ["metrics external default", metrics.includes('return "external"')],
-  ["metrics empty message", metrics.includes("No verified external customer traffic in this range.") && metrics.includes("audience === \"external\" && pageViews === 0")],
+  ["events drops private routes", (events.includes("private_route") || events.includes("analytics_path")) && events.includes("traffic_class")],
+  ["events never auto-promote", events.includes("never auto-promote")],
+  ["metrics external default", metrics.includes('return "external"') || metrics.includes("normalizeAudience")],
+  ["metrics empty message", metrics.includes("No verified external customer traffic in this range.")],
   ["metrics dwell_available", metrics.includes("dwell_available")],
   ["metrics sliceForAudience", metrics.includes("sliceForAudience")],
   ["dashboard audience select", html.includes('id="dash-audience"') && /value="external"\s+selected/.test(html)],
   ["dashboard empty message UI", html.includes("No verified external customer traffic in this range.")],
   ["dashboard dwell handling", dash.includes("dwell_available")],
-  ["dashboard excludes presence/dwell", dash.includes('name === "presence_ping"') && dash.includes('name === "dwell_tick"')],
+  ["dashboard meaningful set", dash.includes("MEANINGFUL") || dash.includes("scroll_depth")],
 ];
 
 let failed = 0;

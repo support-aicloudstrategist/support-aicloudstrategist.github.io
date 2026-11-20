@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261120-traffic">
+  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261120-consistency">
 </head>
 <body class="is-locked">
   <section id="login-screen" class="login-screen" aria-label="Sign in">
@@ -102,10 +102,13 @@
           <input id="dash-to" type="date" disabled>
         </label>
         <button id="dash-load" type="button">Refresh</button>
-        <button id="dash-mark-internal" class="secondary" type="button" title="Mark this browser as Internal (owner / Rajiv)">Mark this browser Internal</button>
+        <button id="dash-mark-internal" class="secondary" type="button" title="Mark this browser as Internal (owner / Rajiv)" aria-pressed="false">Mark this browser Internal</button>
+        <button id="dash-unmark-internal" class="secondary" type="button" hidden>Unmark Internal</button>
       </div>
+      <p class="mark-guidance small muted">To exclude your testing, mark every browser and device used by the owner or Rajiv as Internal. Private windows and cleared cookies are not identified automatically — they stay Unknown unless marked again.</p>
       <p id="dash-status" class="status-line">Loading analytics…</p>
       <p id="dash-empty" class="empty-external" hidden>No verified external customer traffic in this range.</p>
+      <p id="dash-invariants" class="invariant-warn" hidden></p>
     </section>
 
     <section class="live-banner" aria-live="polite">
@@ -288,8 +291,16 @@
 
     <section class="panel">
       <h2>Engagement</h2>
-      <p class="note" id="engagement-note">How people interact with the site.</p>
+      <p class="note" id="engagement-note">Meaningful scrolls, CTA clicks, downloads, and contact clicks only.</p>
       <div class="chart-frame chart-frame-md"><canvas id="chart-engagement"></canvas></div>
+      <h3 class="small" style="margin-top:14px">Conversion intent</h3>
+      <div class="chart-frame chart-frame-sm"><canvas id="chart-conversion"></canvas></div>
+      <details class="diagnostics-panel" id="diagnostics-panel">
+        <summary>Operational telemetry &amp; diagnostics</summary>
+        <p class="note" id="diagnostics-note">Presence checks, dwell ticks, and orphan/unanchored events. Not included in Meaningful Engagement.</p>
+        <div class="chart-frame chart-frame-sm"><canvas id="chart-telemetry"></canvas></div>
+        <ul id="diagnostics-list" class="rank-list"></ul>
+      </details>
     </section>
 
     <p class="section-label">Contacts</p>
@@ -316,6 +327,6 @@
 
   <input id="dash-token" type="hidden" value="" autocomplete="off">
   <!-- Analytics shim intentionally omitted: /analytics/ must not create public page views. -->
-  <script defer src="/js/aics-analytics-dashboard.js?v=20261120-traffic"></script>
+  <script defer src="/js/aics-analytics-dashboard.js?v=20261120-consistency"></script>
 </body>
 </html>
