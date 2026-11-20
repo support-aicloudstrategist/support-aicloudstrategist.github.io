@@ -1,0 +1,6 @@
+check,question,evidence_needed
+1,Is the workflow defined?,Owner-written step list and trigger
+2,Are handoffs visible?,Role or queue for each transition
+3,Are rules separate from exceptions?,Approved rule list and exception path
+4,Can success be measured?,Baseline and review metric
+5,Is a safe next move clear?,Human-approved pilot or diagnostic

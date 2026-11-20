@@ -1,0 +1,13 @@
+{
+  "title": "Manual work automation readiness map",
+  "purpose": "Claim-safe educational source card for workflow discovery.",
+  "synthetic": true,
+  "checks": [
+    "workflow definition",
+    "handoff visibility",
+    "rules and exceptions",
+    "measurement",
+    "safe next move"
+  ],
+  "claims_excluded": ["customer results", "ROI", "conversion rates", "rankings", "testimonials"]
+}

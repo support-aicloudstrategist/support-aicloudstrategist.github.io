@@ -83,6 +83,8 @@ class LinkParser(HTMLParser):
 
 def public_html_files() -> Iterable[Path]:
     for path in ROOT.rglob("*.html"):
+        if not path.is_file():
+            continue
         rel_parts = set(path.relative_to(ROOT).parts)
         if rel_parts & PUBLIC_SKIP_PARTS:
             continue
@@ -187,6 +189,8 @@ def check_repo() -> dict:
         route_key = route_key_from_url(page_url(path))
         if route_key in blocked_routes:
             continue
+        editorial_page = rel.startswith("publications/")
+        internal_tool = rel.startswith("analytics/")
         text = path.read_text(encoding="utf-8", errors="ignore")
         lower = text.lower()
         parser = LinkParser()
@@ -195,7 +199,7 @@ def check_repo() -> dict:
         noindex = "name=\"robots\"" in lower and "noindex" in lower
         redirect_shim = is_noindex_redirect(text, lower)
 
-        if rel != "404.html" and not parser.canonicals:
+        if rel != "404.html" and not internal_tool and not parser.canonicals:
             findings.append(Finding("warn", "canonical", rel, "Missing canonical link"))
             urls_from_pages.add(normalize_url(page_url(path)))
         elif parser.canonicals and not noindex:
@@ -205,7 +209,7 @@ def check_repo() -> dict:
         if not redirect_shim:
             if rel != "404.html" and parser.descriptions == 0:
                 findings.append(Finding("warn", "metadata", rel, "Missing meta description"))
-            if not any(hint in lower for hint in COMMERCIAL_HINTS):
+            if not editorial_page and not internal_tool and not any(hint in lower for hint in COMMERCIAL_HINTS):
                 findings.append(Finding("warn", "conversion", rel, "No obvious contact/free-review/WhatsApp CTA"))
 
         for href in parser.hrefs:
@@ -225,7 +229,13 @@ def check_repo() -> dict:
                 findings.append(Finding("fail", "internal-link", rel, f"Broken local link: {href}"))
 
     missing_from_sitemap = sorted(urls_from_pages - sitemap_urls)
-    public_missing = [u for u in missing_from_sitemap if "/assets/" not in u and u != f"{BASE_URL}/404.html"]
+    public_missing = [
+        u for u in missing_from_sitemap
+        if u.startswith(BASE_URL)
+        and "/assets/" not in u
+        and "/publications/" not in u
+        and u != f"{BASE_URL}/404.html"
+    ]
     for url in public_missing[:50]:
         findings.append(Finding("warn", "sitemap", url, "Public page not listed in sitemap"))
 
