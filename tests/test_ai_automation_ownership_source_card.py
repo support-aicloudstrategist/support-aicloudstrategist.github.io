@@ -35,3 +35,13 @@ def test_source_card_is_discoverable_from_page_hub_and_llms():
     assert creative["url"] == SOURCE_CARD_URL
     assert SOURCE_CARD_URL in llms
     assert "ai-automation-ownership-ai-answer-source-card.json" in hub
+
+
+def test_page_has_claim_safe_buyer_faq_and_faq_schema():
+    html = PAGE.read_text(encoding="utf-8")
+    docs = json_ld_documents(html)
+    faq = next(doc for doc in docs if doc.get("@type") == "FAQPage")
+    assert len(faq["mainEntity"]) == 4
+    assert "Does this comparison predict savings or ROI?" in html
+    assert "Do not send credentials, API keys" in html
+    assert "not a customer case study, vendor ranking, savings claim or ROI estimate" in html
