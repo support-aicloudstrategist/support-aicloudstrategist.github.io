@@ -33,6 +33,7 @@ CURATED_PATHS = [
     "/ai-creative-studio/",
     "/resources/global-ai-generated-marketing-creative-approval-checklist/",
 
+
     "/growth-control-os/",
     "/trust-compliance/",
     "/industries/clinics/",
