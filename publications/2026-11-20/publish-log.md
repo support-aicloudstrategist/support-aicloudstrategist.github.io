@@ -4,6 +4,10 @@
 - AICS website / GitHub Pages — Morning: https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map-live.html/
 - GitHub repository / deployment evidence — Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-20
 
+## Discoverability cleanup — 2026-11-20
+- Removed a duplicate WhatsApp comparison card from the Resources hub whose title and downloads pointed back to `/resources/` rather than the canonical comparison asset.
+- Verification: targeted comparison-link pytest passed; GitHub Pages Resources hub, comparison page and answer-card JSON returned HTTP 200 after propagation, with one canonical comparison card. The custom-domain comparison route remains HTTP 404 and is recorded as a deployment/domain-alignment blocker.
+
 ## Infographic
 - https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.png
 
