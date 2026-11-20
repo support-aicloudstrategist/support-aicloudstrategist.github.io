@@ -164,11 +164,88 @@ function eachDay(fromMs: number, toMs: number): string[] {
   return days;
 }
 
+function isKvQuotaError(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error ?? "");
+  return /list\(\)\s*limit|operation limit|limit exceeded|429|quota/i.test(message);
+}
+
+const DASHBOARD_CACHE_TTL_SEC = 180;
+const REALTIME_CACHE_TTL_SEC = 45;
+const LAST_KNOWN_CACHE_TTL_SEC = 86400;
+
+function metricsCacheKey(
+  kind: "dashboard" | "realtime",
+  days: number,
+  fromIso: string,
+  toIso: string,
+  audience = "external",
+) {
+  const fromDay = fromIso.slice(0, 10) || "na";
+  const toDay = toIso.slice(0, 10) || "na";
+  return `cache:metrics:v2:${kind}:a${audience}:d${days}:${fromDay}:${toDay}`;
+}
+
+type AudienceFilter = "external" | "internal" | "bot" | "unknown" | "all";
+
+function normalizeAudience(value: unknown): AudienceFilter {
+  const raw = clean(value, 24).toLowerCase();
+  if (raw === "internal" || raw === "bot" || raw === "unknown" || raw === "all") return raw;
+  return "external";
+}
+
+function meaningfulEngagement(totals: Record<string, number>) {
+  let sum = 0;
+  for (const [name, count] of Object.entries(totals || {})) {
+    if (name === "presence_ping" || name === "dwell_tick") continue;
+    sum += Number(count) || 0;
+  }
+  return sum;
+}
+
+async function readMetricsCache(store: KVNamespace | undefined, key: string, allowLastKnown = false) {
+  if (!store) return null;
+  try {
+    const raw = await store.get(key);
+    if (raw) return JSON.parse(raw) as Record<string, unknown>;
+    if (!allowLastKnown) return null;
+    const last = await store.get(`${key}:last`);
+    if (!last) return null;
+    return JSON.parse(last) as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
+async function writeMetricsCache(
+  store: KVNamespace | undefined,
+  key: string,
+  payload: Record<string, unknown>,
+  ttlSec: number,
+) {
+  if (!store) return;
+  try {
+    // Cache writes use get/put only (no list). Fresh TTL for normal hits; 24h last-known for quota fallback.
+    const body = JSON.stringify(payload);
+    await store.put(key, body, { expirationTtl: Math.max(60, ttlSec) });
+    await store.put(`${key}:last`, body, { expirationTtl: LAST_KNOWN_CACHE_TTL_SEC });
+  } catch {
+    // Ignore cache write failures; primary response still returns.
+  }
+}
+
 async function listKeysForPrefix(store: KVNamespace, prefix: string, maxKeys: number) {
   const keys: Array<{ name: string; metadata?: KeyMeta }> = [];
   let cursor: string | undefined;
   do {
-    const page = await store.list({ prefix, limit: Math.min(1000, maxKeys - keys.length), cursor });
+    let page: KVNamespaceListResult<KeyMeta>;
+    try {
+      page = await store.list({ prefix, limit: Math.min(1000, maxKeys - keys.length), cursor });
+    } catch (error) {
+      if (isKvQuotaError(error)) {
+        throw new Error("KV list() limit exceeded for the day.");
+      }
+      throw error;
+    }
     for (const key of page.keys) {
       keys.push({ name: key.name, metadata: key.metadata as KeyMeta | undefined });
       if (keys.length >= maxKeys) return keys;
@@ -188,6 +265,76 @@ async function getMany(store: KVNamespace, names: string[], batchSize = 40) {
   return out;
 }
 
+type DayAggSlice = {
+  totals?: Record<string, number>;
+  page_views?: number;
+  sessions?: Record<string, true>;
+  visitors?: Record<string, true>;
+  countries?: Record<string, number>;
+  browsers?: Record<string, number>;
+  devices?: Record<string, number>;
+  providers?: Record<string, number>;
+  visitor_kinds?: Record<string, number>;
+  traffic_buckets?: Record<string, number>;
+  paths?: Record<
+    string,
+    {
+      page_views?: number;
+      cta_clicks?: number;
+      scroll_50_plus?: number;
+      downloads?: number;
+      dwell_sum?: number;
+      dwell_samples?: number;
+    }
+  >;
+};
+
+type DayAgg = DayAggSlice & {
+  day?: string;
+  updated_at?: string;
+  live?: Array<{
+    at?: string;
+    name?: string;
+    path?: string;
+    session?: string;
+    country?: string;
+    source?: string;
+    traffic_class?: string;
+  }>;
+  by_class?: Partial<Record<"external" | "internal" | "bot" | "unknown", DayAggSlice>>;
+};
+
+/** Resolve the rollup slice for an audience filter. Legacy days without by_class = Unknown only. */
+function sliceForAudience(agg: DayAgg, audience: AudienceFilter): DayAggSlice | null {
+  if (audience === "all") return agg;
+  const hasClass = agg.by_class && Object.keys(agg.by_class).length > 0;
+  if (!hasClass) {
+    // Historical / restored rollups without traffic_class → Unknown (never auto-external).
+    return audience === "unknown" ? agg : null;
+  }
+  return agg.by_class?.[audience as "external" | "internal" | "bot" | "unknown"] || null;
+}
+
+async function loadDayAggregates(store: KVNamespace | undefined, days: string[]) {
+  if (!store || !days.length) return [] as DayAgg[];
+  const bodies = await getMany(
+    store,
+    days.map((day) => `agg:v1:day:${day}`),
+    20,
+  );
+  const out: DayAgg[] = [];
+  for (const day of days) {
+    const raw = bodies.get(`agg:v1:day:${day}`);
+    if (!raw) continue;
+    try {
+      out.push(JSON.parse(raw) as DayAgg);
+    } catch {
+      // skip bad rollup
+    }
+  }
+  return out;
+}
+
 async function loadLeads(
   stores: Array<KVNamespace | undefined>,
   cutoff: number,
@@ -199,24 +346,36 @@ async function loadLeads(
 
   for (const store of stores) {
     if (!store) continue;
-    const leadKeys = await listKeysForPrefix(store, "contact-", maxKeys);
-    const leadBodies = await getMany(
-      store,
-      leadKeys.map((k) => k.name),
-      40,
-    );
-    for (const key of leadKeys) {
-      if (seen.has(key.name)) continue;
-      const raw = leadBodies.get(key.name);
+
+    // Prefer list-free index maintained by /api/contact.
+    let leadKeyNames: string[] = [];
+    try {
+      const indexRaw = await store.get("agg:v1:leads:index");
+      if (indexRaw) {
+        const parsed = JSON.parse(indexRaw) as { keys?: string[] };
+        if (Array.isArray(parsed.keys)) leadKeyNames = parsed.keys.slice(0, maxKeys);
+      }
+    } catch {
+      leadKeyNames = [];
+    }
+
+    // Never fall back to KV list() here — free-plan daily list quota must stay reserved
+    // for optional ?scan=raw rebuilds. Without an index, skip contacts for this store.
+    if (!leadKeyNames.length) continue;
+
+    const leadBodies = await getMany(store, leadKeyNames, 40);
+    for (const keyName of leadKeyNames) {
+      if (seen.has(keyName)) continue;
+      const raw = leadBodies.get(keyName);
       if (!raw) continue;
       try {
         const lead = JSON.parse(raw) as StoredLead;
         const submittedAt = clean(lead.submitted_at, 40);
         const ts = Date.parse(submittedAt);
         if (Number.isFinite(ts) && (ts < cutoff || ts > rangeEnd)) continue;
-        seen.add(key.name);
+        seen.add(keyName);
         leads.push({
-          contact_id: clean(lead.contact_id || key.name, 120),
+          contact_id: clean(lead.contact_id || keyName, 120),
           submitted_at: submittedAt,
           name: clean(lead.name, 160),
           email: clean(lead.contact, 320),
@@ -267,6 +426,8 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
     const url = new URL(request.url);
     const mode = clean(url.searchParams.get("mode") || "dashboard", 40);
     const realtimeOnly = mode === "realtime" || url.searchParams.get("realtime") === "1";
+    const forceRefresh = url.searchParams.get("refresh") === "1";
+    const audience = normalizeAudience(url.searchParams.get("audience") || url.searchParams.get("traffic"));
     const days = Math.min(90, Math.max(1, Number(url.searchParams.get("days") || 28)));
     const fromParam = clean(url.searchParams.get("from"), 32);
     const toParam = clean(url.searchParams.get("to"), 32);
@@ -276,10 +437,303 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
     if (fromParam && Date.parse(fromParam)) cutoff = Date.parse(fromParam);
     if (toParam && Date.parse(toParam)) rangeEnd = Date.parse(toParam) + 86400000 - 1;
 
-    // Long ranges: prefer coarser work budgets so Workers finish before the edge times out.
-    const maxEventKeys = realtimeOnly ? 1500 : days >= 60 ? 4000 : days >= 28 ? 6000 : 8000;
+    const cacheStore = eventStore || leadStore;
+    const cacheKind = realtimeOnly ? "realtime" : "dashboard";
+    const cacheKey = metricsCacheKey(
+      cacheKind,
+      days,
+      new Date(cutoff).toISOString(),
+      new Date(rangeEnd).toISOString(),
+      audience,
+    );
+    const cacheTtl = realtimeOnly ? REALTIME_CACHE_TTL_SEC : DASHBOARD_CACHE_TTL_SEC;
+
+    const preferAggregates = url.searchParams.get("scan") !== "raw";
+
+    // Cache only for the aggregate path. Raw scans must never be short-circuited by a stale rollup.
+    if (!forceRefresh && preferAggregates) {
+      const cached = await readMetricsCache(cacheStore, cacheKey);
+      if (cached && cached.ok === true) {
+        return new Response(
+          JSON.stringify({
+            ...cached,
+            from_cache: true,
+            cache_key: cacheKey,
+            duration_ms: Date.now() - started,
+          }),
+          { status: 200, headers },
+        );
+      }
+    }
+
     const liveWindowMs = 2 * 60 * 1000;
     const enterWindowMs = 5 * 60 * 1000;
+
+    // Primary path: day rollups via KV get() only — avoids the free-plan daily list() quota.
+    if (preferAggregates && eventStore) {
+      const dayList = realtimeOnly
+        ? eachDay(now - liveWindowMs - 86400000, now)
+        : eachDay(cutoff, rangeEnd);
+      const aggs = await loadDayAggregates(eventStore, dayList);
+      const totals: Record<string, number> = {};
+      const providers: Record<string, number> = {};
+      const devices: Record<string, number> = {};
+      const browsers: Record<string, number> = {};
+      const countries: Record<string, number> = {};
+      const visitorKinds: Record<string, number> = {};
+      const trafficBuckets: Record<string, number> = {};
+      const pathViews: Record<string, number> = {};
+      const pathCta: Record<string, number> = {};
+      const pathScroll: Record<string, number> = {};
+      const pathDwellSum: Record<string, number> = {};
+      const pathDwellCount: Record<string, number> = {};
+      const pathDownloads: Record<string, number> = {};
+      const dailyViews: Record<string, number> = {};
+      const dailySessions: Record<string, number> = {};
+      const sessionSeen = new Set<string>();
+      const visitorSeen = new Set<string>();
+      const liveSessions = new Set<string>();
+      const livePages: Record<string, number> = {};
+      const liveSources: Record<string, number> = {};
+      const liveLocations: Record<string, number> = {};
+      const enteringSessions = new Set<string>();
+      const feed: Array<Record<string, string>> = [];
+
+      for (const agg of aggs) {
+        const day = clean(agg.day, 12);
+        const slice = sliceForAudience(agg, audience);
+        if (!slice) continue;
+        for (const [k, v] of Object.entries(slice.totals || {})) bump(totals, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.providers || {})) bump(providers, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.devices || {})) bump(devices, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.browsers || {})) bump(browsers, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.countries || {})) bump(countries, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.visitor_kinds || {})) bump(visitorKinds, k, Number(v) || 0);
+        for (const [k, v] of Object.entries(slice.traffic_buckets || {})) bump(trafficBuckets, k, Number(v) || 0);
+        bump(dailyViews, day, Number(slice.page_views) || 0);
+        const daySessions = Object.keys(slice.sessions || {});
+        bump(dailySessions, day, daySessions.length);
+        for (const s of daySessions) sessionSeen.add(s);
+        for (const v of Object.keys(slice.visitors || {})) visitorSeen.add(v);
+        for (const [path, stats] of Object.entries(slice.paths || {})) {
+          bump(pathViews, path, Number(stats.page_views) || 0);
+          bump(pathCta, path, Number(stats.cta_clicks) || 0);
+          bump(pathScroll, path, Number(stats.scroll_50_plus) || 0);
+          bump(pathDownloads, path, Number(stats.downloads) || 0);
+          pathDwellSum[path] = (pathDwellSum[path] || 0) + (Number(stats.dwell_sum) || 0);
+          pathDwellCount[path] = (pathDwellCount[path] || 0) + (Number(stats.dwell_samples) || 0);
+        }
+        for (const row of agg.live || []) {
+          const rowClass = clean(row.traffic_class, 24) || (agg.by_class ? "unknown" : "unknown");
+          if (audience !== "all" && rowClass !== audience && !(audience === "unknown" && !row.traffic_class && !agg.by_class)) {
+            // Legacy live rows without class only appear under Unknown / All.
+            if (!(audience === "unknown" && !agg.by_class)) continue;
+          }
+          if (audience === "external" && rowClass !== "external") continue;
+          if (audience === "internal" && rowClass !== "internal") continue;
+          if (audience === "bot" && rowClass !== "bot") continue;
+          const at = clean(row.at, 40);
+          const ts = Date.parse(at);
+          const session = clean(row.session, 64);
+          const path = clean(row.path, 256) || "/";
+          if (Number.isFinite(ts) && now - ts <= liveWindowMs && session) {
+            liveSessions.add(session);
+            bump(livePages, path);
+            bump(liveSources, clean(row.source, 40) || "direct");
+            bump(liveLocations, clean(row.country, 8) || "unknown");
+          }
+          if (
+            Number.isFinite(ts) &&
+            now - ts <= enterWindowMs &&
+            session &&
+            (row.name === "page_view" || row.name === "presence_ping")
+          ) {
+            enteringSessions.add(session);
+          }
+          if (feed.length < 40) {
+            feed.push({
+              at,
+              name: clean(row.name, 64),
+              path,
+              detail: clean(row.source || row.country, 80),
+            });
+          }
+        }
+      }
+
+      feed.sort((a, b) => String(b.at).localeCompare(String(a.at)));
+
+      if (realtimeOnly) {
+        const realtimePayload: Record<string, unknown> = {
+          ok: true,
+          mode: "realtime",
+          source: "day_aggregates",
+          generated_at: new Date().toISOString(),
+          duration_ms: Date.now() - started,
+          realtime: {
+            live_visitors: liveSessions.size,
+            entering_visitors: enteringSessions.size,
+            window_seconds: Math.round(liveWindowMs / 1000),
+            enter_window_seconds: Math.round(enterWindowMs / 1000),
+            pages_in_view: topEntries(livePages, 15),
+            traffic_sources: topEntries(liveSources, 10),
+            locations: topEntries(liveLocations, 15),
+            feed: feed.slice(0, 25),
+            refresh_hint_seconds: 45,
+            identity: "Live visitor panels are aggregated only. Contacts below are voluntary form submissions.",
+          },
+        };
+        await writeMetricsCache(cacheStore, cacheKey, realtimePayload, cacheTtl);
+        return new Response(JSON.stringify(realtimePayload), { status: 200, headers });
+      }
+
+      const content = Object.keys({ ...pathViews, ...pathDwellSum })
+        .map((path) => {
+          const views = pathViews[path] || 0;
+          const cta = pathCta[path] || 0;
+          const dwellSamples = pathDwellCount[path] || 0;
+          const avgDwell = dwellSamples ? Math.round((pathDwellSum[path] || 0) / dwellSamples) : null;
+          return {
+            path,
+            page_views: views,
+            cta_clicks: cta,
+            cta_rate: views ? Number(((cta / views) * 100).toFixed(1)) : 0,
+            scroll_50_plus: pathScroll[path] || 0,
+            downloads: pathDownloads[path] || 0,
+            // null when missing — UI must not display a fabricated 0s dwell.
+            avg_dwell_seconds: avgDwell,
+            dwell_available: dwellSamples > 0,
+            dwell_samples: dwellSamples,
+          };
+        })
+        .sort(
+          (a, b) =>
+            (b.avg_dwell_seconds || 0) - (a.avg_dwell_seconds || 0) || b.page_views - a.page_views,
+        )
+        .slice(0, 40);
+
+      const growth = eachDay(cutoff, rangeEnd).map((day) => ({
+        day,
+        page_views: dailyViews[day] || 0,
+        sessions: dailySessions[day] || 0,
+      }));
+
+      // Contacts are voluntary form submissions (not page-traffic classes). Show for external/all only.
+      const leads =
+        audience === "external" || audience === "all"
+          ? await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 400)
+          : [];
+      const pageViews = totals.page_view || Object.values(dailyViews).reduce((a, b) => a + b, 0);
+      const conversions =
+        (totals.form_submit_success || 0) + (totals.email_capture_submit_success || 0);
+      const engagementMeaningful = meaningfulEngagement(totals);
+      const emptyExternal =
+        audience === "external" && pageViews === 0 && visitorSeen.size === 0 && sessionSeen.size === 0;
+      const locationRows = topEntries(countries, 25);
+      const locationDenominator = locationRows.reduce((sum, row) => sum + (row.count || 0), 0);
+
+      const dashboardPayload: Record<string, unknown> = {
+        ok: true,
+        mode,
+        source: "day_aggregates",
+        audience_filter: audience,
+        period_days: days,
+        from: new Date(cutoff).toISOString(),
+        to: new Date(rangeEnd).toISOString(),
+        generated_at: new Date().toISOString(),
+        duration_ms: Date.now() - started,
+        events_inspected: Object.values(totals).reduce((a, b) => a + b, 0),
+        keys_listed: 0,
+        presence_skipped: 0,
+        aggregate_days: aggs.length,
+        empty_external: emptyExternal,
+        empty_message: emptyExternal
+          ? "No verified external customer traffic in this range."
+          : undefined,
+        overview: {
+          visitors: visitorSeen.size || sessionSeen.size,
+          page_views: pageViews,
+          sessions: sessionSeen.size,
+          conversions,
+          engagement_meaningful: engagementMeaningful,
+          growth,
+        },
+        audience_metrics: {
+          new_vs_returning: visitorKinds,
+          locations: locationRows,
+          location_denominator: locationDenominator,
+          browsers: topEntries(browsers, 15),
+          devices: topEntries(devices, 10),
+          age: {
+            available: false,
+            note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
+          },
+        },
+        // Keep legacy key for older dashboard JS during rollout.
+        audience: {
+          new_vs_returning: visitorKinds,
+          locations: locationRows,
+          location_denominator: locationDenominator,
+          browsers: topEntries(browsers, 15),
+          devices: topEntries(devices, 10),
+          age: {
+            available: false,
+            note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
+          },
+        },
+        traffic: {
+          buckets: trafficBuckets,
+          providers: topEntries(providers, 20),
+        },
+        content,
+        realtime: {
+          live_visitors: liveSessions.size,
+          entering_visitors: enteringSessions.size,
+          window_seconds: Math.round(liveWindowMs / 1000),
+          enter_window_seconds: Math.round(enterWindowMs / 1000),
+          pages_in_view: topEntries(livePages, 15),
+          traffic_sources: topEntries(liveSources, 10),
+          locations: topEntries(liveLocations, 15),
+          feed: feed.slice(0, 25),
+          refresh_hint_seconds: 45,
+          identity: "Aggregated only — no names or emails in real-time views.",
+        },
+        engagement: {
+          events: totals,
+          meaningful_total: engagementMeaningful,
+          excluded: ["presence_ping", "dwell_tick"],
+          email_capture_triggers: {},
+          note: "Meaningful engagement excludes presence pings and dwell ticks. CTA rate is on-page click-through (CTA clicks ÷ page views).",
+        },
+        leads: {
+          count: leads.length,
+          identity_policy:
+            "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms. Passive browsing is non-PII.",
+          items: leads.slice(0, 200),
+          funnel_audience: audience,
+        },
+        coverage: {
+          stack: "write-time day aggregates (KV get) + voluntary contact index",
+          scan: "agg:v1:day:YYYY-MM-DD via get(); raw event list() avoided to stay under free KV list quotas",
+          note:
+            aggs.length === 0
+              ? "Day aggregates start filling as new site events arrive. Historical raw events remain stored but are not listed while the daily KV list quota is exhausted."
+              : undefined,
+        },
+        privacy:
+          "Analytics events remain non-PII. Lead identity is stored separately from voluntary form consent. Passive browsing never yields emails.",
+      };
+
+      // Avoid locking in an empty rollup while aggregates are still warming up.
+      if (Number(dashboardPayload.aggregate_days) > 0 || pageViews > 0) {
+        await writeMetricsCache(cacheStore, cacheKey, dashboardPayload, cacheTtl);
+      }
+      return new Response(JSON.stringify(dashboardPayload), { status: 200, headers });
+    }
+
+    // Optional raw scan (?scan=raw) — expensive list() path for forensic rebuilds only.
+    // Cap list fan-out: each day prefix costs ≥1 KV list() against the daily account quota.
+    const maxEventKeys = realtimeOnly ? 800 : days >= 60 ? 2500 : days >= 28 ? 3500 : 4500;
 
     const totals: Record<string, number> = {};
     const providers: Record<string, number> = {};
@@ -448,35 +902,28 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
     feed.sort((a, b) => String(b.at).localeCompare(String(a.at)));
 
     if (realtimeOnly) {
-      // Same contact records email notifications use (/api/contact → contact-* KV).
-      const liveLeads = await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 300);
-      return new Response(
-        JSON.stringify({
-          ok: true,
-          mode: "realtime",
-          generated_at: new Date().toISOString(),
-          duration_ms: Date.now() - started,
-          realtime: {
-            live_visitors: liveSessions.size,
-            entering_visitors: enteringSessions.size,
-            window_seconds: Math.round(liveWindowMs / 1000),
-            enter_window_seconds: Math.round(enterWindowMs / 1000),
-            pages_in_view: topEntries(livePages, 15),
-            traffic_sources: topEntries(liveSources, 10),
-            locations: topEntries(liveLocations, 15),
-            feed: feed.slice(0, 25),
-            refresh_hint_seconds: 15,
-            identity: "Live visitor panels are aggregated only. Contacts below are voluntary form submissions.",
-          },
-          leads: {
-            count: liveLeads.length,
-            identity_policy:
-              "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms.",
-            items: liveLeads.slice(0, 200),
-          },
-        }),
-        { status: 200, headers },
-      );
+      // Skip loadLeads on realtime polls — contacts already load with the dashboard and
+      // listing contact-* keys on every 15–60s poll burned most of the daily KV list quota.
+      const realtimePayload: Record<string, unknown> = {
+        ok: true,
+        mode: "realtime",
+        generated_at: new Date().toISOString(),
+        duration_ms: Date.now() - started,
+        realtime: {
+          live_visitors: liveSessions.size,
+          entering_visitors: enteringSessions.size,
+          window_seconds: Math.round(liveWindowMs / 1000),
+          enter_window_seconds: Math.round(enterWindowMs / 1000),
+          pages_in_view: topEntries(livePages, 15),
+          traffic_sources: topEntries(liveSources, 10),
+          locations: topEntries(liveLocations, 15),
+          feed: feed.slice(0, 25),
+          refresh_hint_seconds: 45,
+          identity: "Live visitor panels are aggregated only. Contacts below are voluntary form submissions.",
+        },
+      };
+      await writeMetricsCache(cacheStore, cacheKey, realtimePayload, cacheTtl);
+      return new Response(JSON.stringify(realtimePayload), { status: 200, headers });
     }
 
     const content = Object.keys({ ...pathViews, ...pathDwellSum })
@@ -505,94 +952,139 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
       sessions: dailySessions[day] || 0,
     }));
 
-    const leads = await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 500);
+    // One contact list pass on dashboard only (not on realtime polls).
+    const leads = await loadLeads([env.CONTACT_LOG, env.LEAD_LOG], cutoff, rangeEnd, 400);
 
     const pageViews = totals.page_view || 0;
     const conversions =
       (totals.form_submit_success || 0) + (totals.email_capture_submit_success || 0);
 
-    return new Response(
-      JSON.stringify({
-        ok: true,
-        mode,
-        period_days: days,
-        from: new Date(cutoff).toISOString(),
-        to: new Date(rangeEnd).toISOString(),
-        generated_at: new Date().toISOString(),
-        duration_ms: Date.now() - started,
-        events_inspected: inspected,
-        keys_listed: keysListed,
-        presence_skipped: skippedPresence,
-        overview: {
-          visitors: visitorSeen.size || sessionSeen.size,
-          page_views: pageViews,
-          sessions: sessionSeen.size,
-          conversions,
-          growth,
+    const dashboardPayload: Record<string, unknown> = {
+      ok: true,
+      mode,
+      period_days: days,
+      from: new Date(cutoff).toISOString(),
+      to: new Date(rangeEnd).toISOString(),
+      generated_at: new Date().toISOString(),
+      duration_ms: Date.now() - started,
+      events_inspected: inspected,
+      keys_listed: keysListed,
+      presence_skipped: skippedPresence,
+      overview: {
+        visitors: visitorSeen.size || sessionSeen.size,
+        page_views: pageViews,
+        sessions: sessionSeen.size,
+        conversions,
+        growth,
+      },
+      audience: {
+        new_vs_returning: visitorKinds,
+        locations: topEntries(countries, 25),
+        browsers: topEntries(browsers, 15),
+        devices: topEntries(devices, 10),
+        age: {
+          available: false,
+          note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
         },
-        audience: {
-          new_vs_returning: visitorKinds,
-          locations: topEntries(countries, 25),
-          browsers: topEntries(browsers, 15),
-          devices: topEntries(devices, 10),
-          age: {
-            available: false,
-            note: "Browsers do not expose visitor age. Age will remain unavailable without a voluntary form field.",
-          },
-        },
-        traffic: {
-          buckets: trafficBuckets,
-          providers: topEntries(providers, 20),
-        },
-        content,
-        realtime: {
-          live_visitors: liveSessions.size,
-          entering_visitors: enteringSessions.size,
-          window_seconds: Math.round(liveWindowMs / 1000),
-          enter_window_seconds: Math.round(enterWindowMs / 1000),
-          pages_in_view: topEntries(livePages, 15),
-          traffic_sources: topEntries(liveSources, 10),
-          locations: topEntries(liveLocations, 15),
-          feed: feed.slice(0, 25),
-          refresh_hint_seconds: 15,
-          identity: "Aggregated only — no names or emails in real-time views.",
-        },
-        engagement: {
-          events: totals,
-          email_capture_triggers: emailTriggers,
-          note: "CTA rate is on-page click-through (CTA clicks ÷ page views), not ad-network PPC impressions.",
-        },
-        leads: {
-          count: leads.length,
-          identity_policy:
-            "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms. Passive browsing is non-PII.",
-          items: leads.slice(0, 200),
-        },
-        coverage: {
-          stack: "first-party KV events + voluntary contact records",
-          scan: "day-prefixed event:YYYY-MM-DD keys + batched gets; historical presence_ping skipped",
-          optional:
-            "Enable Cloudflare Web Analytics in the Pages dashboard for privacy-preserving country aggregates if CF-IPCountry enrichment is sparse.",
-          gaps: [
-            "Age is not available from browsers",
-            "Passive email collection is impossible in the browser — contacts require voluntary forms",
-            "Dwell/scroll/presence metrics populate after the engagement tracker ships on pages",
-          ],
-        },
-        privacy:
-          "Analytics events remain non-PII. Lead identity is stored separately from voluntary form consent. Passive browsing never yields emails.",
-      }),
-      { status: 200, headers },
-    );
+      },
+      traffic: {
+        buckets: trafficBuckets,
+        providers: topEntries(providers, 20),
+      },
+      content,
+      realtime: {
+        live_visitors: liveSessions.size,
+        entering_visitors: enteringSessions.size,
+        window_seconds: Math.round(liveWindowMs / 1000),
+        enter_window_seconds: Math.round(enterWindowMs / 1000),
+        pages_in_view: topEntries(livePages, 15),
+        traffic_sources: topEntries(liveSources, 10),
+        locations: topEntries(liveLocations, 15),
+        feed: feed.slice(0, 25),
+        refresh_hint_seconds: 45,
+        identity: "Aggregated only — no names or emails in real-time views.",
+      },
+      engagement: {
+        events: totals,
+        email_capture_triggers: emailTriggers,
+        note: "CTA rate is on-page click-through (CTA clicks ÷ page views), not ad-network PPC impressions.",
+      },
+      leads: {
+        count: leads.length,
+        identity_policy:
+          "Name and email appear only when voluntarily submitted via fit review, email capture, or contact forms. Passive browsing is non-PII.",
+        items: leads.slice(0, 200),
+      },
+      coverage: {
+        stack: "first-party KV events + voluntary contact records",
+        scan: "day-prefixed event:YYYY-MM-DD keys + batched gets; historical presence_ping skipped; responses cached to stay under KV list quotas",
+        optional:
+          "Enable Cloudflare Web Analytics in the Pages dashboard for privacy-preserving country aggregates if CF-IPCountry enrichment is sparse.",
+        gaps: [
+          "Age is not available from browsers",
+          "Passive email collection is impossible in the browser — contacts require voluntary forms",
+          "Dwell/scroll/presence metrics populate after the engagement tracker ships on pages",
+        ],
+      },
+      privacy:
+        "Analytics events remain non-PII. Lead identity is stored separately from voluntary form consent. Passive browsing never yields emails.",
+    };
+
+    await writeMetricsCache(cacheStore, cacheKey, dashboardPayload, cacheTtl);
+    return new Response(JSON.stringify(dashboardPayload), { status: 200, headers });
   } catch (error) {
     const message = error instanceof Error ? error.message.slice(0, 300) : "Metrics query failed";
+    const url = new URL(request.url);
+    const wantsRaw = url.searchParams.get("scan") === "raw";
+    if (isKvQuotaError(error) && !wantsRaw) {
+      try {
+        const mode = clean(url.searchParams.get("mode") || "dashboard", 40);
+        const realtimeOnly = mode === "realtime" || url.searchParams.get("realtime") === "1";
+        const days = Math.min(90, Math.max(1, Number(url.searchParams.get("days") || 28)));
+        const fromParam = clean(url.searchParams.get("from"), 32);
+        const toParam = clean(url.searchParams.get("to"), 32);
+        const now = Date.now();
+        let cutoff = now - days * 86400000;
+        let rangeEnd = now;
+        if (fromParam && Date.parse(fromParam)) cutoff = Date.parse(fromParam);
+        if (toParam && Date.parse(toParam)) rangeEnd = Date.parse(toParam) + 86400000 - 1;
+        const cacheStore = env.LEAD_LOG || env.CONTACT_LOG;
+        const audience = normalizeAudience(url.searchParams.get("audience") || url.searchParams.get("traffic"));
+        const cacheKey = metricsCacheKey(
+          realtimeOnly ? "realtime" : "dashboard",
+          days,
+          new Date(cutoff).toISOString(),
+          new Date(rangeEnd).toISOString(),
+          audience,
+        );
+        const cached = await readMetricsCache(cacheStore, cacheKey, true);
+        if (cached && cached.ok === true) {
+          return new Response(
+            JSON.stringify({
+              ...cached,
+              from_cache: true,
+              stale: true,
+              cache_warning: "KV list quota hit — showing last cached analytics.",
+              duration_ms: Date.now() - started,
+            }),
+            { status: 200, headers },
+          );
+        }
+      } catch {
+        // Fall through to error response.
+      }
+    }
     return new Response(
       JSON.stringify({
         ok: false,
         error: message,
+        code: isKvQuotaError(error) ? "kv_list_quota" : "metrics_error",
+        hint: isKvQuotaError(error)
+          ? "Cloudflare free KV list() quota is exhausted until daily reset (typically 00:00 UTC). Day aggregates via get() should still work after redeploy; use ?scan=raw only after reset to rebuild from raw events."
+          : undefined,
         duration_ms: Date.now() - started,
       }),
-      { status: 500, headers },
+      { status: isKvQuotaError(error) ? 503 : 500, headers },
     );
   }
 };

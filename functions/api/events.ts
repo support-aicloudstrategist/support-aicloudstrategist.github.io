@@ -49,12 +49,26 @@ const allowedProps = new Set([
   "country",
   "visitor",
   "visitor_kind",
+  "traffic_class",
   "trigger",
   "via",
   "api",
   "depth",
   "seconds",
 ]);
+
+const TRAFFIC_CLASSES = new Set(["external", "internal", "bot", "unknown"]);
+
+function normalizeTrafficClass(value: unknown, path: string, ua: string) {
+  const raw = clean(value, 24).toLowerCase();
+  if (path === "/analytics" || path.startsWith("/analytics/")) return "internal";
+  if (/bot|crawl|spider|slurp|headless|phantom|selenium|puppeteer|playwright|httpclient|wget|curl|python-requests|scrapy/i.test(ua)) {
+    return "bot";
+  }
+  if (TRAFFIC_CLASSES.has(raw)) return raw;
+  // Unmarked / legacy client payloads stay Unknown — never auto-promote to external.
+  return raw ? "unknown" : "unknown";
+}
 
 // Hard boundary: never accept sensitive personal fields on the analytics event path.
 // Voluntary name/email belong only on /api/contact (consented forms), never here.
@@ -159,6 +173,13 @@ export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) =
 
   const rawPath = clean(input.path, 512);
   const path = rawPath.startsWith("/") && !rawPath.includes("?") && !rawPath.includes("#") ? rawPath : "/";
+  // Dashboard path must never create public analytics records.
+  if (path === "/analytics" || path.startsWith("/analytics/")) {
+    return new Response(JSON.stringify({ ok: true, dropped: true, reason: "analytics_path" }), {
+      status: 202,
+      headers,
+    });
+  }
   const session = clean(input.session, 64).replace(/[^a-zA-Z0-9_-]/g, "");
   const props: Record<string, string> = {};
   if (input.props && typeof input.props === "object" && !Array.isArray(input.props)) {
@@ -172,30 +193,234 @@ export const onRequestPost: PagesFunction<EventEnv> = async ({ request, env }) =
 
   // Server-side enrichment only — country/region at most; never emails, names, autofill, or precise geo.
   const cf = (request as Request & { cf?: { country?: string } }).cf;
+  const ua = request.headers.get("User-Agent") || "";
   if (!props.country && cf?.country) props.country = clean(cf.country, 8).toUpperCase();
-  if (!props.browser) props.browser = browserFromUa(request.headers.get("User-Agent") || "");
+  if (!props.browser) props.browser = browserFromUa(ua);
+  props.traffic_class = normalizeTrafficClass(props.traffic_class, path, ua);
 
   const receivedAt = new Date().toISOString();
-  const id = `event:${receivedAt.slice(0, 10)}:${crypto.randomUUID()}`;
-  await env.LEAD_LOG.put(
-    id,
-    JSON.stringify({
-      event_id: id,
-      received_at: receivedAt,
-      name,
-      path,
-      session,
-      props,
-      data_policy: "non_pii_allowlist_v2",
-    }),
-    {
-      expirationTtl: 34560000,
-      metadata: { received_at: receivedAt, name, path },
-    },
-  );
+  const day = receivedAt.slice(0, 10);
+  const id = `event:${day}:${crypto.randomUUID()}`;
+  const record = {
+    event_id: id,
+    received_at: receivedAt,
+    name,
+    path,
+    session,
+    props,
+    data_policy: "non_pii_allowlist_v2",
+  };
+
+  // Raw event (for forensic detail when KV list quota allows) + day rollup for list-free dashboards.
+  await env.LEAD_LOG.put(id, JSON.stringify(record), {
+    expirationTtl: 34560000,
+    metadata: { received_at: receivedAt, name, path },
+  });
+
+  try {
+    await bumpDayAggregate(env.LEAD_LOG, day, record);
+  } catch {
+    // Aggregate is best-effort; never fail the collector on rollup issues.
+  }
 
   return new Response(JSON.stringify({ ok: true, event_id: id }), { status: 202, headers });
 };
+
+type PathStats = {
+  page_views: number;
+  cta_clicks: number;
+  scroll_50_plus: number;
+  downloads: number;
+  dwell_sum: number;
+  dwell_samples: number;
+};
+
+type DayAggSlice = {
+  totals: Record<string, number>;
+  page_views: number;
+  sessions: Record<string, true>;
+  visitors: Record<string, true>;
+  countries: Record<string, number>;
+  browsers: Record<string, number>;
+  devices: Record<string, number>;
+  providers: Record<string, number>;
+  visitor_kinds: Record<string, number>;
+  traffic_buckets: Record<string, number>;
+  paths: Record<string, PathStats>;
+};
+
+type DayAgg = DayAggSlice & {
+  day: string;
+  updated_at: string;
+  live?: Array<{ at: string; name: string; path: string; session: string; country: string; source: string; traffic_class?: string }>;
+  /** Per-audience rollups. Legacy days without by_class are treated as Unknown at read time. */
+  by_class?: Partial<Record<"external" | "internal" | "bot" | "unknown", DayAggSlice>>;
+};
+
+function emptySlice(): DayAggSlice {
+  return {
+    totals: {},
+    page_views: 0,
+    sessions: {},
+    visitors: {},
+    countries: {},
+    browsers: {},
+    devices: {},
+    providers: {},
+    visitor_kinds: {},
+    traffic_buckets: {},
+    paths: {},
+  };
+}
+
+function ensurePath(paths: Record<string, PathStats>, path: string): PathStats {
+  if (!paths[path]) {
+    paths[path] = {
+      page_views: 0,
+      cta_clicks: 0,
+      scroll_50_plus: 0,
+      downloads: 0,
+      dwell_sum: 0,
+      dwell_samples: 0,
+    };
+  }
+  return paths[path];
+}
+
+function applyEventToSlice(
+  slice: DayAggSlice,
+  event: { name: string; path: string; session: string; props: Record<string, string> },
+) {
+  bumpMap(slice.totals, event.name);
+  if (event.session) {
+    slice.sessions[event.session] = true;
+    const sessionIds = Object.keys(slice.sessions);
+    if (sessionIds.length > 800) {
+      for (const id of sessionIds.slice(0, sessionIds.length - 600)) delete slice.sessions[id];
+    }
+  }
+  const visitor = clean(event.props.visitor, 64);
+  if (visitor) {
+    slice.visitors[visitor] = true;
+    const visitorIds = Object.keys(slice.visitors);
+    if (visitorIds.length > 800) {
+      for (const id of visitorIds.slice(0, visitorIds.length - 600)) delete slice.visitors[id];
+    }
+  }
+  const provider = clean(event.props.provider, 120) || "direct";
+  const channel = clean(event.props.channel, 120);
+  const campaign = clean(event.props.campaign, 120);
+  const device = clean(event.props.device, 40) || "unknown";
+  const browser = clean(event.props.browser, 40) || "unknown";
+  const country = clean(event.props.country, 8) || "unknown";
+  const visitorKind = clean(event.props.visitor_kind, 24) || "unknown";
+  const depth = Number(event.props.depth || 0);
+  const seconds = Number(event.props.seconds || 0);
+
+  if (event.name === "page_view") {
+    slice.page_views += 1;
+    bumpMap(slice.providers, provider);
+    bumpMap(slice.devices, device);
+    bumpMap(slice.browsers, browser);
+    bumpMap(slice.countries, country);
+    bumpMap(slice.visitor_kinds, visitorKind);
+    bumpMap(slice.traffic_buckets, classifySource(provider, channel, campaign));
+    ensurePath(slice.paths, event.path).page_views += 1;
+  }
+  if (event.name === "cta_click" || event.name === "button_click") {
+    ensurePath(slice.paths, event.path).cta_clicks += 1;
+  }
+  if (event.name === "download_click") {
+    ensurePath(slice.paths, event.path).downloads += 1;
+  }
+  if (event.name === "scroll_depth" && depth >= 50) {
+    ensurePath(slice.paths, event.path).scroll_50_plus += 1;
+  }
+  if (event.name === "dwell_tick" && Number.isFinite(seconds) && seconds > 0) {
+    const row = ensurePath(slice.paths, event.path);
+    row.dwell_sum += seconds;
+    row.dwell_samples += 1;
+  }
+}
+
+function classifySource(provider: string, channel: string, campaign: string) {
+  const p = provider.toLowerCase();
+  const c = channel.toLowerCase();
+  if (campaign || c.includes("cpc") || c.includes("ppc") || c.includes("paid")) return "campaigns";
+  if (p === "google" || p === "bing") return "search";
+  if (
+    p.includes("linkedin") ||
+    p.includes("twitter") ||
+    p.includes("x.com") ||
+    p.includes("facebook") ||
+    p.includes("instagram") ||
+    p.includes("youtube") ||
+    c.includes("social")
+  ) {
+    return "social";
+  }
+  if (p === "direct" || !p) return "direct";
+  if (p === "referral" || p.includes(".")) return "referrals";
+  return p || "other";
+}
+
+function bumpMap(map: Record<string, number>, key: string, by = 1) {
+  const k = key || "unknown";
+  map[k] = (map[k] || 0) + by;
+}
+
+async function bumpDayAggregate(
+  store: KVNamespace,
+  day: string,
+  event: {
+    received_at: string;
+    name: string;
+    path: string;
+    session: string;
+    props: Record<string, string>;
+  },
+) {
+  const key = `agg:v1:day:${day}`;
+  const raw = await store.get(key);
+  const agg: DayAgg = raw
+    ? (JSON.parse(raw) as DayAgg)
+    : {
+        day,
+        updated_at: event.received_at,
+        ...emptySlice(),
+        live: [],
+        by_class: {},
+      };
+
+  agg.updated_at = event.received_at;
+  if (!agg.by_class) agg.by_class = {};
+  const trafficClass = (["external", "internal", "bot", "unknown"].includes(event.props.traffic_class)
+    ? event.props.traffic_class
+    : "unknown") as "external" | "internal" | "bot" | "unknown";
+
+  // Top-level = All Traffic. by_class keeps filterable slices without rewriting history.
+  applyEventToSlice(agg, event);
+  if (!agg.by_class[trafficClass]) agg.by_class[trafficClass] = emptySlice();
+  applyEventToSlice(agg.by_class[trafficClass]!, event);
+
+  const provider = clean(event.props.provider, 120) || "direct";
+  const channel = clean(event.props.channel, 120);
+  const campaign = clean(event.props.campaign, 120);
+  const country = clean(event.props.country, 8) || "unknown";
+  const live = Array.isArray(agg.live) ? agg.live : [];
+  live.unshift({
+    at: event.received_at,
+    name: event.name,
+    path: event.path,
+    session: event.session,
+    country,
+    source: classifySource(provider, channel, campaign),
+    traffic_class: trafficClass,
+  });
+  agg.live = live.slice(0, 40);
+
+  await store.put(key, JSON.stringify(agg), { expirationTtl: 34560000 });
+}
 
 export const onRequestOptions: PagesFunction = async () =>
   new Response(null, {

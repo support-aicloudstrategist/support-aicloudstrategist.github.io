@@ -1,7 +1,32 @@
 (function(){
   var endpoint='/api/events';
   var gaMeasurementId='G-5F6Y7JZFB5';
-  var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign','service','device','browser','country','visitor','visitor_kind','trigger','via','api','depth','seconds']);
+  var MARK_KEY='aics_traffic_mark_v1';
+  var allowedProps=new Set(['cta','destination','form','offer','section','source','status','provider','channel','campaign','service','device','browser','country','visitor','visitor_kind','traffic_class','trigger','via','api','depth','seconds']);
+  function isAnalyticsPath(pathname){
+    var p=String(pathname||location.pathname||'').replace(/\/+$/,'')||'/';
+    return p==='/analytics' || p.indexOf('/analytics/')===0;
+  }
+  function isBotUa(){
+    var ua=(navigator.userAgent||'').toLowerCase();
+    return /bot|crawl|spider|slurp|headless|phantom|selenium|puppeteer|playwright|httpclient|wget|curl|python-requests|scrapy/.test(ua);
+  }
+  function trafficClass(){
+    if(isAnalyticsPath()) return 'internal';
+    try{
+      var mark=String(localStorage.getItem(MARK_KEY)||'').toLowerCase();
+      if(mark==='internal'||mark==='owner'||mark==='rajiv') return 'internal';
+    }catch(e){}
+    if(isBotUa()) return 'bot';
+    return 'external';
+  }
+  function markBrowserInternal(){
+    try{ localStorage.setItem(MARK_KEY,'internal'); }catch(e){}
+    return 'internal';
+  }
+  function clearBrowserMark(){
+    try{ localStorage.removeItem(MARK_KEY); }catch(e){}
+  }
   var aliases={
     'cta whatsapp click':'whatsapp_click',
     'cta phone click':'phone_click',
@@ -71,20 +96,33 @@
     fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true,credentials:'same-origin'}).catch(function(){});
   }
   function record(name,options){
+    // Private dashboard and owner-marked sessions must not inflate public metrics.
+    if(isAnalyticsPath()) return;
     var props=safeProps((options&&options.props)||{});
     if(!props.device) props.device=deviceClass();
     if(!props.browser) props.browser=browserClass();
     var visitor=visitorId();
     if(visitor.id && !props.visitor) props.visitor=visitor.id;
     if(!props.visitor_kind) props.visitor_kind=visitor.kind;
+    if(!props.traffic_class) props.traffic_class=trafficClass();
     var event={name:normalizeName(name),path:location.pathname,session:sessionId(),props:props};
     window.dataLayer=window.dataLayer||[];
     window.dataLayer.push({event:'aics_'+event.name,aics:event});
-    if(typeof window.gtag==='function'&&event.name!=='page_view'){try{window.gtag('event',event.name,props);}catch(e){}}
-    send(event);
+    // Skip GA4 for internal/bot so owner activity does not contaminate public analytics.
+    if(props.traffic_class==='external' && typeof window.gtag==='function'&&event.name!=='page_view'){
+      try{window.gtag('event',event.name,props);}catch(e){}
+    }
+    send(event); // store all classes; External reports filter server-side
   }
   window.plausible=window.plausible||record;
-  window.aicsAnalytics={track:record,mode:'first-party-kv+ga4',privacy:'non-PII allowlist — no emails from passive browsing'};
+  window.aicsAnalytics={
+    track:record,
+    markBrowserInternal:markBrowserInternal,
+    clearBrowserMark:clearBrowserMark,
+    trafficClass:trafficClass,
+    mode:'first-party-kv+ga4',
+    privacy:'non-PII allowlist — no emails from passive browsing'
+  };
   function loadGoogleAnalytics(){
     if(!/^G-[A-Z0-9]+$/i.test(gaMeasurementId))return;
     window.dataLayer=window.dataLayer||[];
@@ -218,6 +256,7 @@
     },true);
   }
   function boot(){
+    if(isAnalyticsPath()) return;
     loadGoogleAnalytics();
     loadCloudflareWebAnalytics();
     var acq=acquisition();

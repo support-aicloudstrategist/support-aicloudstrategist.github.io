@@ -326,6 +326,23 @@ export const onRequestPost: PagesFunction<ContactEnv> = async (context) => {
         }),
       ),
     );
+    // Maintain a list-free index so /api/metrics can load contacts without KV list().
+    await Promise.all(
+      leadStores.map(async (store) => {
+        try {
+          const indexKey = "agg:v1:leads:index";
+          const raw = await store.get(indexKey);
+          const parsed = raw ? (JSON.parse(raw) as { keys?: string[] }) : { keys: [] };
+          const keys = Array.isArray(parsed.keys) ? parsed.keys.filter((k) => k !== contactId) : [];
+          keys.unshift(contactId);
+          await store.put(indexKey, JSON.stringify({ keys: keys.slice(0, 500), updated_at: submittedAt }), {
+            expirationTtl: 34560000,
+          });
+        } catch {
+          // Index is best-effort.
+        }
+      }),
+    );
   } catch (error) {
     const messageText = error instanceof Error ? error.message : "Lead storage failed.";
     return respondContact(
