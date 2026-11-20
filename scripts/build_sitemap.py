@@ -227,7 +227,11 @@ def local_page(path: str) -> Path:
         return ROOT / "index.html"
     if path.endswith("/"):
         return ROOT / path.lstrip("/") / "index.html"
-    return ROOT / f"{path.lstrip('/')}.html"
+    # Some public policy routes intentionally use extensionless files (for
+    # example /privacy and /terms). Prefer the exact route file before falling
+    # back to the conventional .html representation.
+    exact = ROOT / path.lstrip("/")
+    return exact if exact.is_file() else ROOT / f"{path.lstrip('/')}.html"
 
 
 def clean_route(path: str) -> str:
