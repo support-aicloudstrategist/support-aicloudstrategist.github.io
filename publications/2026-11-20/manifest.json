@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-20",
+  "posts": [
+    {
+      "slot": "morning",
+      "slug": "manual-work-automation-readiness-map",
+      "title": "Too Much Manual Work? A 5-Check Automation Readiness Map",
+      "url": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.html",
+      "png": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.png",
+      "svg": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.svg",
+      "csv": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.csv",
+      "answer_card": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-20",
+      "boundary": "Educational workflow review only \u2014 not a client case study, productivity guarantee, security assessment, legal or compliance advice, vendor recommendation or production-change instruction."
+    }
+  ]
+}

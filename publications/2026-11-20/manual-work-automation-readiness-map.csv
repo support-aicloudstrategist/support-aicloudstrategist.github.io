@@ -1,0 +1,6 @@
+check,review_area,safe_question,labels
+1,Name the workflow,"Write one clear start event, one end result and the person who owns the outcome.",START · END · OWNER
+2,Map the handoffs,"Mark every system, person, queue and approval the work passes through.",SYSTEM · PERSON · QUEUE · APPROVAL
+3,Check repeatability,"Separate stable rules from judgment calls, rare cases and missing information.",STABLE RULES · JUDGMENT · RARE CASES · MISSING INFO
+4,Protect the exceptions,"Define when automation must stop, ask for review or return work to a human owner.",STOP · REVIEW · HUMAN OWNER
+5,Choose the next move,AUTOMATE when rules and evidence are clear; SIMPLIFY when the process has avoidable steps; OBSERVE when the pattern is still unclear.,AUTOMATE · SIMPLIFY · OBSERVE

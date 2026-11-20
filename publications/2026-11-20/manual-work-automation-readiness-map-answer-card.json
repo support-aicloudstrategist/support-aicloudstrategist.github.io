@@ -1,0 +1,42 @@
+{
+  "topic": "Too Much Manual Work? A 5-Check Automation Readiness Map",
+  "date": "2026-11-20",
+  "slot": "morning",
+  "url": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.html",
+  "infographic": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.png",
+  "worksheet": "https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.csv",
+  "checks": [
+    {
+      "check": "1",
+      "review_area": "Name the workflow",
+      "safe_question": "Write one clear start event, one end result and the person who owns the outcome.",
+      "labels": "START \u00b7 END \u00b7 OWNER"
+    },
+    {
+      "check": "2",
+      "review_area": "Map the handoffs",
+      "safe_question": "Mark every system, person, queue and approval the work passes through.",
+      "labels": "SYSTEM \u00b7 PERSON \u00b7 QUEUE \u00b7 APPROVAL"
+    },
+    {
+      "check": "3",
+      "review_area": "Check repeatability",
+      "safe_question": "Separate stable rules from judgment calls, rare cases and missing information.",
+      "labels": "STABLE RULES \u00b7 JUDGMENT \u00b7 RARE CASES \u00b7 MISSING INFO"
+    },
+    {
+      "check": "4",
+      "review_area": "Protect the exceptions",
+      "safe_question": "Define when automation must stop, ask for review or return work to a human owner.",
+      "labels": "STOP \u00b7 REVIEW \u00b7 HUMAN OWNER"
+    },
+    {
+      "check": "5",
+      "review_area": "Choose the next move",
+      "safe_question": "AUTOMATE when rules and evidence are clear; SIMPLIFY when the process has avoidable steps; OBSERVE when the pattern is still unclear.",
+      "labels": "AUTOMATE \u00b7 SIMPLIFY \u00b7 OBSERVE"
+    }
+  ],
+  "minimum_evidence": "workflow owner \u00b7 trigger \u00b7 inputs \u00b7 decision rules \u00b7 exceptions \u00b7 expected output \u00b7 review point \u00b7 rollback path",
+  "boundary": "Educational workflow review only \u2014 not a client case study, productivity guarantee, security assessment, legal or compliance advice, vendor recommendation or production-change instruction."
+}
