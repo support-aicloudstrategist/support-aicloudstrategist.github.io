@@ -1,0 +1,7 @@
+step,owner_action,evidence_to_request,decision
+1,Confirm the signal,Comparable period and billing timing,ACT only when the change is real
+2,Locate the scope,Account service region project tag or workload,Name the affected boundary
+3,Assign an owner,Product platform finance or experiment owner,Mark unallocated spend explicitly
+4,Name the driver,Usage price transfer storage logs managed tier GPU AI or commitment,Do not infer from a screenshot
+5,Choose a reversible move,ACT INVESTIGATE or HOLD plus rollback path,Hold irreversible action when confidence is thin
+6,Set the review,Owner missing evidence decision date and stop rule,Record the next review
