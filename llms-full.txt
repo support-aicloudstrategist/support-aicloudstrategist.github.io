@@ -27,7 +27,7 @@
   - Step 1 — Free fit review (no billing files required)
   - Step 2 — Fixed fee after scope in writing
   - Typical bands: **USD 2,500–3,000** single-estate; **USD 5,500–12,000** complex multi-cloud/GPU (India visitors see INR bands on site)
-  - Optional **20% founding offer** for new customers — confirmed only in written proposal (not savings-share)
+  - Pilot seats: first 3 diagnostics may receive a reduced pilot rate in exchange for permission to publish an anonymised result; rate confirmed only in writing, and no pilot has been completed yet (not savings-share)
 - **Samples:** https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/ · https://aicloudstrategist.com/downloads/sample-cloud-ai-cost-governance-diagnostic.pdf
 - **Process:** https://aicloudstrategist.com/how-we-work/
 - **Data handling:** https://aicloudstrategist.com/data-handling/
