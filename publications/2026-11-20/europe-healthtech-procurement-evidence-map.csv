@@ -1,0 +1,7 @@
+gate,owner_prompt,evidence_to_record,stop_condition
+intended_use,What is the job and who is affected?,purpose scope oversight and exclusions,Use or affected group is undefined
+data_boundary,Where does personal or health data go?,purpose access retention and unresolved DPIA inputs,Data flow or responsibility is unknown
+security_evidence,Who owns each security answer?,control source date and subprocessor questions,Answer depends on an unverified assumption
+procurement_response,Can every claim be traced to evidence?,question response source owner and date,Commitment exceeds available evidence
+cloud_llm_economics,What is the cost driver and unit of value?,driver budget owner change trigger and measurement plan,Savings or budget impact is being promised without measurement
+decision_brief,What is the smallest reversible next step?,approver open risks hold rule and review date,No approver or stop rule exists

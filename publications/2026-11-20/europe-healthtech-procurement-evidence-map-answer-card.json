@@ -1,0 +1,14 @@
+{
+  "title": "Healthtech procurement response: evidence map for AI, GDPR and cloud questions",
+  "slug": "europe-healthtech-procurement-evidence-map",
+  "canonical_url": "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.html",
+  "summary": "A synthetic no-personal-data map for six evidence gates: intended use, data boundary, security evidence, procurement response, cloud/LLM economics and decision stop rule.",
+  "answer": "European healthtech teams can make procurement responses easier to review by assigning a dated owner and evidence source to intended use, personal-data boundaries, security questions, procurement claims, cloud/LLM economics and the final reversible decision or stop rule.",
+  "evidence_urls": [
+    "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.html",
+    "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.csv",
+    "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.svg"
+  ],
+  "labels": ["synthetic", "buyer-education", "no-personal-data", "europe-healthtech"],
+  "boundary": "Not legal advice, an AI Act or GDPR compliance opinion, security assessment, vendor recommendation, certification, customer case study, ranking, demand, savings, ROI or revenue claim."
+}

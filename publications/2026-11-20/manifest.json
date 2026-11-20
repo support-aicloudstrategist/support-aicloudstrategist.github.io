@@ -23,6 +23,17 @@
       "answer_card": "https://support-aicloudstrategist.github.io/publications/2026-11-20/ai-automation-small-business-owner-checklist-answer-card.json",
       "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-20",
       "boundary": "Synthetic buyer education only \u2014 not a client case study, productivity guarantee, security assessment, legal or compliance advice, vendor recommendation or production-change instruction."
+    },
+    {
+      "slot": "supporting",
+      "slug": "europe-healthtech-procurement-evidence-map",
+      "title": "Healthtech Procurement Response: Evidence Map for AI, GDPR and Cloud Questions",
+      "url": "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.html",
+      "svg": "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.svg",
+      "csv": "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map.csv",
+      "answer_card": "https://support-aicloudstrategist.github.io/publications/2026-11-20/europe-healthtech-procurement-evidence-map-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-20",
+      "boundary": "Synthetic/no-personal-data buyer education only — not legal advice, a compliance opinion, security assessment, vendor recommendation, certification, customer case study, ranking, demand, savings, ROI or revenue claim."
     }
   ]
 }
