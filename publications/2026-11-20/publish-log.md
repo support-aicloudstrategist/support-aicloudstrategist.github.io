@@ -17,3 +17,7 @@ Educational workflow review only — not a client case study, productivity guara
 ## Discoverability follow-up — 2026-11-20
 - Added a Resources-hub card linking the publication page and downloadable worksheet so the artifact is reachable from the canonical evidence library, not only the dated publication index.
 - The card labels the artifact as educational and explicitly avoids client-proof or productivity claims.
+
+## Broken-route repair — 2026-11-20
+- Restored the previously linked WhatsApp lead follow-up vs CRM comparison, synthetic comparison CSV, owner-map SVG and claim-safe answer card after public route checks found 404s; added verified homepage and Resources-hub links.
+- Public GitHub Pages verification after propagation: homepage, Resources hub, comparison page, JSON and CSV all returned HTTP 200 with expected markers.
