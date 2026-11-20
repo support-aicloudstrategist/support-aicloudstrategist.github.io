@@ -22,3 +22,11 @@ def test_middle_east_readiness_map_has_bounded_commercial_next_step():
     assert "/pricing/" in html
     assert "/request-fit-review/" in html
     assert "without patient data, health data, personal data or production access" in html
+
+
+def test_manual_work_publication_uses_directory_index_fallback():
+    root = ROOT / "publications" / "2026-11-20"
+    page = root / "manual-work-automation-readiness-map-live.html" / "index.html"
+    assert page.exists()
+    assert "Too Much Manual Work? A 5-Check Automation Readiness Map" in page.read_text(encoding="utf-8")
+    assert "manual-work-automation-readiness-map-live.html/" in (root / "manual-work-automation-readiness-map-answer-card.json").read_text(encoding="utf-8")

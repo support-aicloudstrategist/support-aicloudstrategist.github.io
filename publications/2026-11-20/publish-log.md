@@ -1,7 +1,7 @@
 # Publish log — 2026-11-20
 
 ## Published / verified
-- AICS website / GitHub Pages — Morning: https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.html
+- AICS website / GitHub Pages — Morning: https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map-live.html/
 - GitHub repository / deployment evidence — Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-20
 
 ## Infographic

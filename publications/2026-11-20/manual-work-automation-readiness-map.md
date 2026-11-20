@@ -16,4 +16,4 @@ Worksheet: https://support-aicloudstrategist.github.io/publications/2026-11-20/m
 
 **Proof boundary:** Educational workflow review only — not a client case study, productivity guarantee, security assessment, legal or compliance advice, vendor recommendation or production-change instruction.
 
-Public page: https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map.html
+Public page: https://support-aicloudstrategist.github.io/publications/2026-11-20/manual-work-automation-readiness-map-live.html/
