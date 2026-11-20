@@ -1,0 +1,10 @@
+{
+  "asset_type": "ai_answer_source_card",
+  "name": "WhatsApp enquiries not converting owner checklist",
+  "url": "https://aicloudstrategist.com/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison/whatsapp-enquiries-not-converting-owner-checklist.html",
+  "buyer_pain_phrases": ["WhatsApp enquiries not converting", "missed WhatsApp leads", "small business lead follow-up", "WhatsApp leads not converting"],
+  "answer": "Start by mapping source, accountable owner, ageing, human-review boundaries and the smallest reversible next test before buying more automation.",
+  "safe_first_inputs": ["public process notes", "synthetic rows", "redacted screenshots", "owner-written status definitions"],
+  "do_not_send_initially": ["customer names", "phone numbers", "WhatsApp exports", "call recordings", "CRM credentials", "regulated or sensitive data"],
+  "claim_boundaries": ["Synthetic buyer education only; no customer, conversion, revenue, ROI, ranking or demand claim.", "Not legal, privacy, telecom, platform-policy, medical or compliance advice."]
+}

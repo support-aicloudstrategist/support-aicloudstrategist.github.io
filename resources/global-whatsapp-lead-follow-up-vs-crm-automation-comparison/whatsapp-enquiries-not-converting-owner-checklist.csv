@@ -1,0 +1,6 @@
+check_id,owner_question,minimum_evidence,hold_condition,proof_boundary
+1,Where did the enquiry arrive?,Source field plus timestamp across WhatsApp phone form social referral or marketplace,Source is missing or cannot be reconciled,Synthetic worksheet; not demand or attribution proof
+2,Who owns the next action?,Named owner and backup with next-action date,No accountable owner or absence cover,Synthetic worksheet; not service-level or conversion proof
+3,How old is the open enquiry?,Age bucket and last human action,Open items cannot be sorted by age,Synthetic worksheet; not pipeline or revenue proof
+4,What needs human review?,Consent sensitive data pricing medical legal financial or complaint flag,Automated response would cross a boundary,Synthetic worksheet; not legal privacy or compliance advice
+5,What is the smallest reversible test?,One queue one stop condition and one review date,Test requires credentials exports or irreversible sends,Synthetic worksheet; not automation safety or ROI proof
