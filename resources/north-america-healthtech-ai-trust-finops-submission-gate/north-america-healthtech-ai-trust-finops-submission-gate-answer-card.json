@@ -1,0 +1,41 @@
+{
+  "title": "North America healthtech AI trust and FinOps submission gate",
+  "region": "North America",
+  "updated": "2026-11-20",
+  "type": "synthetic_buyer_education",
+  "summary": "A six-gate, no-PHI coordination aid for healthtech teams preparing a patient-access, AI vendor security questionnaire, HIPAA/privacy adviser question queue or cloud/LLM cost response.",
+  "buyer_language": [
+    "healthcare AI vendor security questionnaire",
+    "patient access procurement evidence",
+    "HIPAA / BAA adviser questions",
+    "prior-authorization owner handoff",
+    "healthcare cloud cost allocation",
+    "LLM spend governance"
+  ],
+  "decision_rule": "Mark each response ready, adviser review or hold. Hold when workflow scope, data boundary, evidence owner, exception path or cost owner is unclear; do not assert compliance, certification, savings or outcomes without qualified review and verifiable evidence.",
+  "gates": [
+    "workflow boundary and human handoff",
+    "PHI/ePHI and sensitive-data boundary",
+    "security-questionnaire evidence owner and review date",
+    "patient-access exception queue and manual fallback",
+    "cloud/API/voice/message cost ownership",
+    "named approver and submit/hold decision log"
+  ],
+  "safe_first_inputs": [
+    "redacted workflow names",
+    "roles or accountable owners",
+    "question IDs and evidence links",
+    "unresolved questions",
+    "rough cost categories"
+  ],
+  "do_not_send": ["PHI", "patient identifiers", "credentials", "secrets", "production exports"],
+  "alternatives_checked_as_category_context": [
+    "Waystar",
+    "Phreesia",
+    "Vanta",
+    "IBM Apptio Cloudability",
+    "FinOps Foundation Framework"
+  ],
+  "evidence_boundary": "Synthetic/no-PHI buyer education only. Not legal, privacy, security, clinical, HIPAA/BAA or procurement advice; not a certification, vendor ranking, customer case study, testimonial, logo, demand, lead, savings, ROI, revenue or patient-outcome claim.",
+  "source": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-finops-submission-gate/"
+}
