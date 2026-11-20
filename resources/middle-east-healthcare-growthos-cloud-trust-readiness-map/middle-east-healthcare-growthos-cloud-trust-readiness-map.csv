@@ -1,0 +1,6 @@
+lane,owner_question,evidence_to_collect,stop_rule
+patient-enquiry-flow,Who owns the next callback?,Synthetic queue with source/status/owner/SLA,Stop before exporting patient identifiers
+ai-vendor-questionnaire,Which answer is current and in scope?,Questionnaire answer with owner/date/scope/source,Stop before treating a demo as security proof
+data-responsibility,Who approves purpose/access/retention?,Internal decision register and escalation owner,Stop before giving legal or compliance conclusions
+cloud-cost-ownership,Which team owns each cost driver?,Synthetic cost-pool map with confidence and action,Stop before production changes or savings claims
+executive-decision-brief,What is Act Investigate or Hold?,One-page brief with due date/evidence/stop rule,Stop before vendor or platform commitment
