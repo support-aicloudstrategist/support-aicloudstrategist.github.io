@@ -17,6 +17,8 @@
 - [Visibility methodology](https://aicloudstrategist.com/visibility-methodology/): fixed provider-specific measurement contract.
 
 - Europe healthtech procurement response readiness checklist: https://aicloudstrategist.com/resources/europe-healthtech-procurement-response-readiness-checklist/ — synthetic six-gate submission pack for AI trust, GDPR/DPIA, EU AI Act, security, subprocessors/residency and cloud/LLM economics before a buyer response is sent.
+- Middle East Healthcare GrowthOS & Cloud Trust Readiness Map: https://aicloudstrategist.com/resources/middle-east-healthcare-growthos-cloud-trust-readiness-map/ — synthetic UAE/Saudi buyer-language map for patient enquiry ownership, data-responsibility evidence, cloud-cost accountability and procurement-safe proof; not legal, privacy, security, clinical or compliance advice.
+- Singapore clinic PDPA, Cloud Trust and FinOps intake map: https://aicloudstrategist.com/resources/singapore-clinic-pdpa-cloud-trust-finops-intake/ — synthetic/no-patient-data map for missed calls, WhatsApp follow-up, PDPA evidence, cloud trust and AI/API spend ownership; not compliance, legal, privacy, security, medical, ranking or outcome proof.
 - [About](https://aicloudstrategist.com/about/): public identity, review ownership and verified profiles.
 - [Pricing and scope](https://aicloudstrategist.com/pricing/): two focused engagement paths and guided scoping.
 - [Request a fit review](https://aicloudstrategist.com/free-business-review/): public-information intake; do not submit credentials or confidential data.
