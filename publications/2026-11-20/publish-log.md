@@ -9,7 +9,7 @@
 
 ## Discoverability repair — 2026-11-20
 - Added the small-business AI automation owner checklist, synthetic worksheet and claim-safe answer card to the canonical Resources hub and `llms.txt` so the newest buyer asset is reachable from the evidence library and answer-engine index.
-- Local verification: hub HTML parsed with one H1 and all three artifact links; CSV parsed with 5 data rows; JSON parsed; no unsupported outcome or customer-proof claim added. Public propagation follows push and Pages polling.
+- Local and public verification: hub HTML parsed with one H1 and all three artifact links; CSV parsed with 5 data rows; JSON parsed; no unsupported outcome or customer-proof claim added. After push, GitHub Pages returned HTTP 200 with the new hub/`llms.txt` marker using a commit-scoped cache-busting query; checklist HTML, CSV and JSON routes also returned HTTP 200 with expected content.
 
 ## Verification boundary
 Educational workflow review only — not a client case study, productivity guarantee, security assessment, legal or compliance advice, vendor recommendation or production-change instruction.
