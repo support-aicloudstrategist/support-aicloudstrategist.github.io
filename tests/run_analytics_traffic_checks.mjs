@@ -19,7 +19,7 @@ const checks = [
   ["events drops analytics path", events.includes("analytics_path") && events.includes("traffic_class")],
   ["events never auto-promote", events.includes("never auto-promote to external")],
   ["metrics external default", metrics.includes('return "external"')],
-  ["metrics empty message", metrics.includes("No verified external customer traffic in this range.")],
+  ["metrics empty message", metrics.includes("No verified external customer traffic in this range.") && metrics.includes("audience === \"external\" && pageViews === 0")],
   ["metrics dwell_available", metrics.includes("dwell_available")],
   ["metrics sliceForAudience", metrics.includes("sliceForAudience")],
   ["dashboard audience select", html.includes('id="dash-audience"') && /value="external"\s+selected/.test(html)],

@@ -627,8 +627,9 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
       const conversions =
         (totals.form_submit_success || 0) + (totals.email_capture_submit_success || 0);
       const engagementMeaningful = meaningfulEngagement(totals);
-      const emptyExternal =
-        audience === "external" && pageViews === 0 && visitorSeen.size === 0 && sessionSeen.size === 0;
+      // Verified external customer traffic requires page views. Presence/dwell-only
+      // sessions must not hide the empty state or inflate External interest.
+      const emptyExternal = audience === "external" && pageViews === 0;
       const locationRows = topEntries(countries, 25);
       const locationDenominator = locationRows.reduce((sum, row) => sum + (row.count || 0), 0);
 
