@@ -28,6 +28,7 @@
   let pollTimer = null;
   let loadSeq = 0;
   let lastDashboard = null;
+  let lastDiagnostics = null;
 
   const palette = ["#087989", "#0a1828", "#0ea3b4", "#1a5a96", "#7ec8d0", "#b8741f", "#3d7ec4", "#8a5a2b"];
 
@@ -312,43 +313,189 @@
   };
 
   const renderGeo = (locations, denominator) => {
-    const rows = locations || [];
+    const rows = (locations || []).filter((row) => Number(row.count) > 0);
     const summed = rows.reduce((sum, row) => sum + (Number(row.count) || 0), 0);
-    const total = Number(denominator) > 0 ? Number(denominator) : summed || 1;
-    const india = rows.find((row) => String(row.key).toUpperCase() === "IN");
+    const denom = Number(denominator);
+    const total = denom > 0 ? denom : summed;
+    const empty = !(total > 0) || rows.length === 0;
+
+    const emptyEl = document.getElementById("geo-empty");
+    const layoutEl = document.getElementById("geo-layout");
+    const chartWrap = document.getElementById("geo-chart-wrap");
+    const mapTitle = document.getElementById("geo-map-title");
+    const indiaEl = document.getElementById("geo-india-pct");
+    const outsideEl = document.getElementById("geo-outside-pct");
+    const blob = document.getElementById("geo-india-blob");
+
+    if (emptyEl) emptyEl.hidden = !empty;
+    if (layoutEl) layoutEl.hidden = false;
+    if (layoutEl) layoutEl.classList.toggle("is-geo-empty", empty);
+    if (chartWrap) chartWrap.hidden = empty;
+
+    if (empty) {
+      if (indiaEl) indiaEl.textContent = "—";
+      if (outsideEl) outsideEl.textContent = "—";
+      if (blob) blob.setAttribute("opacity", "0.2");
+      if (mapTitle) mapTitle.textContent = "No location data for this traffic selection.";
+      document.getElementById("geo-rank").innerHTML =
+        `<li><span class="pos" aria-hidden="true">–</span><div class="muted">No location data yet.</div><span></span></li>`;
+      if (charts.audienceLoc) {
+        try {
+          charts.audienceLoc.destroy();
+        } catch (_) {}
+        delete charts.audienceLoc;
+      }
+      const canvas = document.getElementById("chart-audience-locations");
+      if (canvas && canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      return;
+    }
+
+    const india = rows.find((row) => /^(IN|INDIA)$/i.test(String(row.key || "")));
     const indiaCount = india ? Number(india.count) || 0 : 0;
     const indiaPct = Math.round((indiaCount / total) * 100);
     const outsidePct = Math.max(0, 100 - indiaPct);
-    document.getElementById("geo-india-pct").textContent = `${indiaPct}%`;
-    document.getElementById("geo-outside-pct").textContent = `${outsidePct}%`;
-    const blob = document.getElementById("geo-india-blob");
+    if (indiaEl) indiaEl.textContent = `${indiaPct}%`;
+    if (outsideEl) outsideEl.textContent = `${outsidePct}%`;
     if (blob) blob.setAttribute("opacity", String(0.35 + Math.min(0.65, indiaPct / 100)));
+    if (mapTitle) {
+      mapTitle.textContent = `India ${indiaPct} percent of visitors; Outside India ${outsidePct} percent (includes Unknown).`;
+    }
 
     document.getElementById("geo-rank").innerHTML = rows.slice(0, 8)
       .map((row, index) => {
         const count = Number(row.count) || 0;
         const pct = Math.round((count / total) * 100);
+        const label = String(row.key || "Unknown");
         return `<li>
           <span class="pos">${index + 1}</span>
           <div>
-            <strong>${escapeHtml(row.key)}</strong>
-            <div class="bar"><div class="fill" style="width:${Math.max(4, pct)}%"></div></div>
+            <strong>${escapeHtml(label)}</strong>
+            <div class="bar" aria-hidden="true"><div class="fill" style="width:${Math.max(4, pct)}%"></div></div>
           </div>
           <span>${fmt(count)} · ${pct}%</span>
         </li>`;
       })
-      .join("") || `<li><span class="pos">–</span><div class="muted">No location data yet</div><span></span></li>`;
+      .join("");
 
     const loc = entriesToXY(rows);
     upsertChart("audienceLoc", "chart-audience-locations", {
       type: "bar",
-      data: { labels: loc.labels, datasets: [{ label: "Views", data: loc.values, backgroundColor: "#0ea3b4" }] },
+      data: { labels: loc.labels, datasets: [{ label: "Visitors", data: loc.values, backgroundColor: "#0ea3b4" }] },
       options: {
         ...baseOptions,
         plugins: { ...baseOptions.plugins, legend: { display: false } },
         scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
       },
     });
+  };
+
+  let showZeroDiagnostics = false;
+
+  const DIAGNOSTIC_DEFS = [
+    {
+      id: "orphan",
+      name: "Orphan / unanchored events",
+      explain: "Events without a valid public page-view anchor. Excluded from external business metrics.",
+      affects: "Does not affect customer engagement KPIs.",
+    },
+    {
+      id: "long_session",
+      name: "Long active-session flags",
+      explain: "Unusually long measured sessions retained for review. Not automatically treated as invalid.",
+      affects: "Does not remove the session from dwell samples automatically.",
+    },
+    {
+      id: "presence",
+      name: "Presence checks",
+      explain: "Operational events used for live status. Excluded from engagement.",
+      affects: "Excluded from Meaningful Engagement.",
+    },
+    {
+      id: "dwell_ticks",
+      name: "Dwell measurement ticks",
+      explain: "Operational timing events used to calculate active time. Excluded from engagement.",
+      affects: "Excluded from Meaningful Engagement.",
+    },
+    {
+      id: "private_routes",
+      name: "Private routes excluded",
+      explain: "Events from analytics, login and private operational routes. Excluded from content reports.",
+      affects: "Excluded from Top Pages and content reports.",
+    },
+    {
+      id: "duplicates",
+      name: "Duplicates rejected",
+      explain: "Repeated events removed by idempotency or deduplication rules.",
+      affects: "Excluded from reports.",
+    },
+    {
+      id: "invalid",
+      name: "Invalid events rejected",
+      explain: "Malformed or inconsistent events excluded from reports.",
+      affects: "Excluded from reports.",
+    },
+  ];
+
+  const diagnosticCountsFromPayload = (diag) => {
+    const orphans = diag.orphan_unanchored_events || {};
+    const telemetry = diag.operational_telemetry || {};
+    let orphanSum = 0;
+    let longSession = 0;
+    Object.entries(orphans).forEach(([key, count]) => {
+      const n = Number(count) || 0;
+      if (key === "dwell_long_session_flag") longSession += n;
+      else orphanSum += n;
+    });
+    return {
+      orphan: orphanSum,
+      long_session: longSession,
+      presence: Number(telemetry.presence_ping) || 0,
+      dwell_ticks: Number(telemetry.dwell_tick) || 0,
+      private_routes: Number(diag.private_routes_excluded) || 0,
+      duplicates: Number(diag.duplicates_rejected) || 0,
+      invalid: Number(diag.invalid_events_rejected) || 0,
+    };
+  };
+
+  const renderDiagnostics = (diag) => {
+    const counts = diagnosticCountsFromPayload(diag || {});
+    const list = document.getElementById("diagnostics-list");
+    const note = document.getElementById("diagnostics-note");
+    if (note) {
+      note.textContent =
+        "These events help validate tracking and are excluded from customer-facing engagement metrics unless stated otherwise.";
+    }
+    if (!list) return;
+    const rows = DIAGNOSTIC_DEFS.map((def) => {
+      const count = counts[def.id] || 0;
+      return { ...def, count };
+    }).filter((row) => showZeroDiagnostics || row.count > 0);
+
+    list.innerHTML =
+      rows
+        .map(
+          (row) => `<li class="diagnostics-row" data-diag="${escapeHtml(row.id)}">
+            <div class="diagnostics-row-main">
+              <strong id="diag-label-${escapeHtml(row.id)}">${escapeHtml(row.name)}</strong>
+              <span class="diagnostics-count" aria-labelledby="diag-label-${escapeHtml(row.id)}">${fmt(row.count)}</span>
+            </div>
+            <p class="diagnostics-explain">${escapeHtml(row.explain)}</p>
+            <p class="diagnostics-affects muted">${escapeHtml(row.affects)}</p>
+          </li>`,
+        )
+        .join("") ||
+      `<li class="diagnostics-row"><div class="diagnostics-row-main"><strong>No diagnostic events in this range</strong><span class="diagnostics-count">0</span></div>
+        <p class="diagnostics-explain">Operational counters are empty for the selected traffic filter.</p>
+        <p class="diagnostics-affects muted">Business metrics are unaffected.</p></li>`;
+
+    const zeroBtn = document.getElementById("diagnostics-show-zeros");
+    if (zeroBtn) {
+      zeroBtn.setAttribute("aria-pressed", showZeroDiagnostics ? "true" : "false");
+      zeroBtn.textContent = showZeroDiagnostics ? "Hide zero-count diagnostics" : "Show zero-count diagnostics";
+    }
   };
 
   const renderRealtime = (rt) => {
@@ -563,20 +710,8 @@
           scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
         },
       });
-      const diagList = document.getElementById("diagnostics-list");
-      if (diagList) {
-        const orphan = labeledRows(diag.orphan_labeled, diag.orphan_unanchored_events);
-        diagList.innerHTML =
-          orphan
-            .slice(0, 8)
-            .map(
-              (row, index) =>
-                `<li><span class="pos">${index + 1}</span><div><strong>${escapeHtml(row.key)}</strong><div class="muted">Orphan / unanchored</div></div><span>${fmt(row.count)}</span></li>`,
-            )
-            .join("") || `<li><span class="pos">–</span><div class="muted">No orphan events</div><span></span></li>`;
-      }
-      const diagNote = document.getElementById("diagnostics-note");
-      if (diagNote) diagNote.textContent = diag.note || "Operational telemetry only.";
+      renderDiagnostics(diag);
+      lastDiagnostics = diag;
     }
 
     document.getElementById("age-note").textContent = "New and returning visitors.";
@@ -933,6 +1068,19 @@
     }
   });
   syncMarkUi();
+
+  document.getElementById("diagnostics-show-zeros")?.addEventListener("click", () => {
+    showZeroDiagnostics = !showZeroDiagnostics;
+    renderDiagnostics(lastDiagnostics || lastDashboard?.diagnostics || {});
+  });
+
+  const diagnosticsPanel = document.getElementById("diagnostics-panel");
+  const syncDiagnosticsExpanded = () => {
+    if (!diagnosticsPanel) return;
+    diagnosticsPanel.setAttribute("aria-expanded", diagnosticsPanel.open ? "true" : "false");
+  };
+  diagnosticsPanel?.addEventListener("toggle", syncDiagnosticsExpanded);
+  syncDiagnosticsExpanded();
 
   showLoggedOut();
   const saved = restoreSession();

@@ -643,6 +643,89 @@ body.is-unlocked #login-screen {
   color: #0a1828;
 }
 
+.diagnostics-panel summary:focus-visible,
+.diagnostics-zero-toggle:focus-visible,
+#dash-mark-internal:focus-visible,
+#dash-unmark-internal:focus-visible {
+  outline: 2px solid #087989;
+  outline-offset: 2px;
+}
+
+.geo-empty {
+  margin: 0 0 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(8, 121, 137, 0.06);
+  border: 1px solid rgba(8, 121, 137, 0.18);
+  color: #0a1828;
+  font-weight: 500;
+}
+
+.geo-empty[hidden],
+#geo-chart-wrap[hidden] {
+  display: none !important;
+}
+
+.geo-layout.is-geo-empty .geo-stats .geo-stat strong {
+  color: #5a6b7a;
+}
+
+.diagnostics-rows {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.diagnostics-row {
+  margin: 0;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(10, 24, 40, 0.08);
+  background: #fff;
+}
+
+.diagnostics-row-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.diagnostics-count {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #0a1828;
+}
+
+.diagnostics-explain,
+.diagnostics-affects {
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+  font-size: 0.92rem;
+}
+
+.diagnostics-zero-toggle-wrap {
+  margin: 0.85rem 0 0;
+}
+
+.diagnostics-zero-toggle {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .geo-layout,
+  .diagnostics-row-main {
+    min-width: 0;
+  }
+  .diagnostics-panel,
+  .geo-empty {
+    overflow-wrap: anywhere;
+  }
+}
+
 .policy-callout {
   border-left: 4px solid var(--warn);
   background: #fffbeb;

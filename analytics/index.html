@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261120-consistency">
+  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261120-ui">
 </head>
 <body class="is-locked">
   <section id="login-screen" class="login-screen" aria-label="Sign in">
@@ -181,12 +181,14 @@
     </section>
 
     <p class="section-label">Geography</p>
-    <section class="panel">
-      <h2>Visitors by country</h2>
-      <p class="note">Share of traffic from India and other countries.</p>
-      <div class="geo-layout">
+    <section class="panel" aria-labelledby="geo-heading">
+      <h2 id="geo-heading">Visitors by country</h2>
+      <p class="note" id="geo-note">Share of reportable visitors by country. Outside India means every visitor whose country is not India (including Unknown).</p>
+      <p id="geo-empty" class="geo-empty" hidden role="status">No location data for this traffic selection.</p>
+      <div id="geo-layout" class="geo-layout">
         <div class="geo-map">
-          <svg viewBox="0 0 800 360" role="img" aria-label="World map highlighting India">
+          <svg id="geo-map-svg" viewBox="0 0 800 360" role="img" aria-labelledby="geo-map-title">
+            <title id="geo-map-title">World map highlighting India share of visitors</title>
             <rect width="800" height="360" fill="transparent"></rect>
             <ellipse cx="220" cy="140" rx="90" ry="55" fill="#cbd5e1" opacity="0.7"></ellipse>
             <ellipse cx="380" cy="130" rx="70" ry="45" fill="#cbd5e1" opacity="0.7"></ellipse>
@@ -197,15 +199,15 @@
             <ellipse id="geo-india-blob" cx="520" cy="185" rx="28" ry="34" fill="#0d7a75" opacity="0.9"></ellipse>
             <text x="520" y="192" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">IN</text>
           </svg>
-          <div class="geo-stats">
-            <div class="geo-stat"><strong id="geo-india-pct">0%</strong><span>India</span></div>
-            <div class="geo-stat"><strong id="geo-outside-pct">0%</strong><span>Outside India</span></div>
+          <div class="geo-stats" id="geo-stats" aria-live="polite">
+            <div class="geo-stat"><strong id="geo-india-pct">—</strong><span>India</span></div>
+            <div class="geo-stat"><strong id="geo-outside-pct">—</strong><span>Outside India</span></div>
           </div>
         </div>
         <div>
-          <h3 class="small">Top countries</h3>
-          <ul id="geo-rank" class="rank-list"></ul>
-          <div class="chart-frame chart-frame-sm" style="margin-top:12px"><canvas id="chart-audience-locations"></canvas></div>
+          <h3 class="small" id="geo-rank-heading">Top countries</h3>
+          <ul id="geo-rank" class="rank-list" aria-labelledby="geo-rank-heading"></ul>
+          <div id="geo-chart-wrap" class="chart-frame chart-frame-sm" style="margin-top:12px"><canvas id="chart-audience-locations" aria-label="Visitors by country chart"></canvas></div>
         </div>
       </div>
     </section>
@@ -296,10 +298,16 @@
       <h3 class="small" style="margin-top:14px">Conversion intent</h3>
       <div class="chart-frame chart-frame-sm"><canvas id="chart-conversion"></canvas></div>
       <details class="diagnostics-panel" id="diagnostics-panel">
-        <summary>Operational telemetry &amp; diagnostics</summary>
-        <p class="note" id="diagnostics-note">Presence checks, dwell ticks, and orphan/unanchored events. Not included in Meaningful Engagement.</p>
-        <div class="chart-frame chart-frame-sm"><canvas id="chart-telemetry"></canvas></div>
-        <ul id="diagnostics-list" class="rank-list"></ul>
+        <summary aria-controls="diagnostics-body">Operational telemetry &amp; diagnostics</summary>
+        <div id="diagnostics-body">
+          <h3 class="small" id="diagnostics-heading">Operational data — not customer engagement</h3>
+          <p class="note" id="diagnostics-note">These events help validate tracking and are excluded from customer-facing engagement metrics unless stated otherwise.</p>
+          <div class="chart-frame chart-frame-sm"><canvas id="chart-telemetry" aria-label="Operational telemetry chart"></canvas></div>
+          <ul id="diagnostics-list" class="diagnostics-rows" aria-labelledby="diagnostics-heading"></ul>
+          <p class="diagnostics-zero-toggle-wrap">
+            <button type="button" id="diagnostics-show-zeros" class="secondary diagnostics-zero-toggle" aria-pressed="false">Show zero-count diagnostics</button>
+          </p>
+        </div>
       </details>
     </section>
 
@@ -327,6 +335,6 @@
 
   <input id="dash-token" type="hidden" value="" autocomplete="off">
   <!-- Analytics shim intentionally omitted: /analytics/ must not create public page views. -->
-  <script defer src="/js/aics-analytics-dashboard.js?v=20261120-consistency"></script>
+  <script defer src="/js/aics-analytics-dashboard.js?v=20261120-ui"></script>
 </body>
 </html>

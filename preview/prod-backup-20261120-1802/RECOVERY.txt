@@ -1,0 +1,9 @@
+﻿RECOVERY — analytics UI presentation fixes
+Created: 2026-11-20
+Git: 437529b5f537399f4cb33be19e1c5ba5576351b4
+Branch: backup/analytics-ui-20261120-1802
+Prior analytics consistency: 548b852 / backup/analytics-consistency-20261120-1722
+ROLLBACK:
+  git checkout backup/analytics-ui-20261120-1802
+  wrangler pages deploy . --project-name=aicloudstrategist-site --branch=main --commit-dirty=true --commit-message="Rollback analytics UI presentation fixes"
+Do not delete LEAD_LOG / contacts.
