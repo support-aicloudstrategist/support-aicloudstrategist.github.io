@@ -109,6 +109,8 @@
 /llm-cost-optimization/ /services/ 301
 
 # Legacy evidence URLs → live resources or services.
+/resources/ai-tool-pilot-brief /resources/#ai-tool-pilot-brief 301
+/resources/ai-tool-pilot-brief/ /resources/#ai-tool-pilot-brief 301
 /resources/cloud-ai-economics-decision-pack /resources/ 301
 /resources/cloud-ai-economics-decision-pack/ /resources/ 301
 /resources/ai-cost-savings-claim-boundary-worksheet /resources/ 301
