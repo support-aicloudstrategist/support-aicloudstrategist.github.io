@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "asset_type": "synthetic_scope_card",
+  "title": "North America healthtech AI trust and FinOps submission gate scope card",
+  "status": "internal-and-buyer-education",
+  "source": "https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-finops-submission-gate/",
+  "audience": [
+    "medical groups",
+    "digital-health teams",
+    "healthcare SaaS operators",
+    "patient-access and procurement owners"
+  ],
+  "decision_before_spend": "Can a healthtech AI procurement response be assigned, evidenced and held safely before sensitive data, credentials or production exports are shared?",
+  "included": [
+    "six-gate ownership and evidence review",
+    "workflow and data-boundary questions",
+    "security-questionnaire source and review-date fields",
+    "patient-access exception ownership",
+    "cloud and LLM cost-category ownership",
+    "ready, adviser-review or hold decision language"
+  ],
+  "safe_first_inputs": [
+    "redacted workflow names",
+    "roles rather than personal identifiers",
+    "question IDs and public evidence URLs",
+    "unresolved questions and review dates",
+    "rough cost categories without billing exports"
+  ],
+  "do_not_send": [
+    "PHI or ePHI",
+    "patient identifiers",
+    "credentials, secrets or tokens",
+    "production exports or recordings",
+    "unreviewed compliance or certification claims"
+  ],
+  "stop_rules": [
+    "hold when scope is described as clinical or autonomous without qualified human review",
+    "hold before sensitive-data sharing or any unsupported HIPAA, BAA, security or certification assertion",
+    "hold when patient-access exceptions have no accountable owner or manual fallback",
+    "hold when savings or outcome language has no measured baseline and approved evidence"
+  ],
+  "commercial_next_step": "A no-credentials fit review can confirm whether a separately scoped fixed-fee diagnostic is appropriate; it is not a findings deliverable.",
+  "claim_boundary": "Synthetic/no-PHI buyer education only. This card is not legal, privacy, security, clinical, HIPAA, BAA or procurement advice; a certification; a vendor ranking; a customer case study; or evidence of demand, leads, customers, savings, ROI, revenue or patient outcomes.",
+  "human_review_required": true,
+  "no_outreach_sent": true,
+  "generated_on": "2026-11-21"
+}
