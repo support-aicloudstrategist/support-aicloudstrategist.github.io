@@ -49,6 +49,7 @@ const indexableExact = new Set([
   "/resources/ai-agent-and-cloud-automation-cost-checklist",
   "/resources/ai-workflow-auto-act-or-ask-first",
   "/resources/whatsapp-lead-follow-up-owner-path",
+  "/resources/small-business-ai-automation-owner-path",
   "/publications/2026-11-21",
   "/publications/2026-11-21/ai-tool-pilot-brief",
   "/publications/2026-11-21/ai-workflow-auto-act-or-ask-first",
