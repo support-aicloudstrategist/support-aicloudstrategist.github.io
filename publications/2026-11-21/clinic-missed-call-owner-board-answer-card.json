@@ -1,0 +1,12 @@
+{
+  "title": "Clinic Missed Calls: Who Owns the Callback?",
+  "audience": "Clinic owners and front-office operators",
+  "search_phrases": ["clinic missing patient calls", "missed patient calls", "clinic callback process", "clinic AI receptionist missed calls"],
+  "answer": "Start with one safe shift window, reconcile the phone and queue totals, assign a role and backup, and record callback status before choosing staffing, routing, CRM, reminder or AI receptionist options.",
+  "six_checks": ["window", "queue type", "accountable role", "callback status", "escalation rule", "tool decision after evidence"],
+  "safe_first_inputs": ["time window", "aggregate call total", "role owner", "callback status", "review time"],
+  "do_not_send": ["names", "phone numbers", "recordings", "clinical details", "credentials", "production exports"],
+  "stop_rules": ["totals conflict", "owner is unclear", "escalation has no owner", "requested data is unsafe"],
+  "proof_boundary": "Synthetic/no-PHI buyer education only; not a clinic case study, patient-growth result, medical or legal advice, compliance proof, ranking, demand, lead, customer, savings, ROI or revenue evidence.",
+  "outreach": "none"
+}

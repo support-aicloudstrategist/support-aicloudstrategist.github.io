@@ -1,0 +1,7 @@
+field,synthetic_value,owner_check,stop_rule
+review_window,Tuesday 09:00-13:00,Confirm phone and queue totals refer to the same shift,Stop if the time window is unclear
+queue_total,15,Reconcile system total with the front-desk queue,Stop if totals cannot be reconciled
+queue_type,new enquiry / existing request / referral / billing,Use category only and do not infer clinical urgency,Stop if a public worksheet would contain patient details
+accountable_role,front-desk role with practice-lead backup,Name the role and review time,Stop if nobody owns the first attempt
+callback_status,new / assigned / attempted / reached / scheduled / escalate / closed,Use one status per synthetic row,Stop if escalation has no named owner
+next_decision,compare staffing routing CRM reminders or AI receptionist,Compare options only after the gap is defined,Stop before making savings or appointment claims
