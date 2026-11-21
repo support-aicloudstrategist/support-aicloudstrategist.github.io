@@ -44,4 +44,6 @@ def test_infographic_workflow_discovery_and_status():
     assert status["successful_posts"] == 2
     assert status["morning"]["status"] == "published"
     assert status["evening"]["status"] == "published"
-    assert status["successful_portal_count"] == 2
+    assert status["successful_portal_count"] == 1
+    assert status["site_deployment"] == "pending_custom_domain_exposure"
+    assert all("github.com/" in url for url in status["live_links"])

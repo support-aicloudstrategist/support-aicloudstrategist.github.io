@@ -16,6 +16,8 @@ SVG_URL = f"{BASE}/{SLUG}.svg"
 CSV_URL = f"{BASE}/{SLUG}.csv"
 CARD_URL = f"{BASE}/{SLUG}-answer-card.json"
 REPO_URL = f"https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/{DATE}"
+MORNING_REPO_URL = f"https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/f29e5b3b/publications/{DATE}/ai-tool-pilot-brief.html"
+EVENING_REPO_URL = f"https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/publications/{DATE}/{SLUG}.html"
 
 checks = [
     ("1", "Scope", "Bounded, approved and reversible", "Ambiguous, external-facing or high-impact"),
@@ -117,14 +119,14 @@ links = "".join(f"<li><strong>{esc(item['slot'].title())}:</strong> <a href='{es
 (pub / "index.html").write_text(f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>AICS publications — {DATE}</title><link rel='canonical' href='{BASE}/'><style>body{{font-family:Inter,Arial,sans-serif;background:#f6f2ff;color:#20154f}}main{{max-width:850px;margin:auto;padding:40px 18px}}section{{background:white;border-radius:22px;padding:24px}}a{{color:#4d34bf;font-weight:800}}</style></head><body><main><section><h1>AICS publications — {DATE}</h1><p>Safe educational posts with infographic-style visuals and downloadable worksheets.</p><ul>{links}</ul></section></main></body></html>", encoding="utf-8")
 
 morning = next(item for item in manifest["posts"] if item["slot"] == "morning")
-log = f"# Publish log — {DATE}\n\n## Published / verified\n- AICS website / GitHub Pages — Morning: {morning['url']}\n- GitHub repository / deployment evidence — Morning: {REPO_URL}\n- AICS website / GitHub Pages — Evening: {URL}\n- GitHub repository / deployment evidence — Evening: {REPO_URL}\n\n## Infographics\n- {morning['png']}\n- {PNG_URL}\n\n## Verification boundaries\n- Morning: {morning['boundary']}\n- Evening: {BOUNDARY}\n"
+log = f"# Publish log — {DATE}\n\n## Published / verified\n- GitHub repository evidence — Morning: {MORNING_REPO_URL}\n- GitHub repository evidence — Evening: {EVENING_REPO_URL}\n\n## Site deployment state\n- Repository publication is verified. The custom-domain site has not yet exposed the new publication routes.\n\n## Infographics\n- {morning['png']}\n- {PNG_URL}\n\n## Verification boundaries\n- Morning: {morning['boundary']}\n- Evening: {BOUNDARY}\n"
 (pub / "publish-log.md").write_text(log, encoding="utf-8")
 
 mirror_root = Path("/home/agent/.hermes/aicloudstrategist/publications")
 mirror = mirror_root / DATE
 mirror.mkdir(parents=True, exist_ok=True)
 shutil.copy2(pub / "publish-log.md", mirror / "publish-log.md")
-status = {"date": DATE, "timezone": "Asia/Kolkata", "target_posts": 2, "successful_posts": 2, "morning": {"status": "published", "topic": morning["title"], "successful_portals": [{"name": "AICS website / GitHub Pages", "url": morning["url"]}, {"name": "GitHub repository / deployment evidence", "url": REPO_URL}]}, "evening": {"status": "published", "topic": TITLE, "successful_portals": [{"name": "AICS website / GitHub Pages", "url": URL}, {"name": "GitHub repository / deployment evidence", "url": REPO_URL}]}, "successful_portal_count": 2}
+status = {"date": DATE, "timezone": "Asia/Kolkata", "target_posts": 2, "successful_posts": 2, "morning": {"status": "published", "topic": morning["title"], "successful_portals": [{"name": "GitHub repository / deployment evidence", "url": MORNING_REPO_URL}]}, "evening": {"status": "published", "topic": TITLE, "successful_portals": [{"name": "GitHub repository / deployment evidence", "url": EVENING_REPO_URL}]}, "successful_portal_count": 1, "live_links": [MORNING_REPO_URL, EVENING_REPO_URL], "site_deployment": "pending_custom_domain_exposure"}
 (mirror_root / f"daily-publication-status-{DATE}.json").write_text(json.dumps(status, indent=2), encoding="utf-8")
 
 resources = ROOT / "resources" / "index.html"
