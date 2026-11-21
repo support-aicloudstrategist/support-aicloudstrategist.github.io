@@ -1,0 +1,48 @@
+{
+  "topic": "Before You Buy an AI Tool: A 6-Box Pilot Brief",
+  "date": "2026-11-21",
+  "slot": "morning",
+  "url": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.html",
+  "infographic": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.png",
+  "worksheet": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.csv",
+  "boxes": [
+    {
+      "box": "1",
+      "review_area": "Business task",
+      "safe_instruction": "Name one task, its current owner, the trigger that starts it and the output that marks it complete.",
+      "labels": "TASK \u00b7 OWNER \u00b7 TRIGGER \u00b7 OUTPUT"
+    },
+    {
+      "box": "2",
+      "review_area": "Evidence baseline",
+      "safe_instruction": "Record current time, error, rework or queue evidence using a consistent method. If no baseline exists, observe first.",
+      "labels": "TIME \u00b7 ERROR \u00b7 REWORK \u00b7 QUEUE \u00b7 OBSERVE FIRST"
+    },
+    {
+      "box": "3",
+      "review_area": "Data boundary",
+      "safe_instruction": "List the data the pilot may use, the data it must not use and the approved storage or access path.",
+      "labels": "ALLOWED \u00b7 RESTRICTED \u00b7 APPROVED PATH"
+    },
+    {
+      "box": "4",
+      "review_area": "Human control",
+      "safe_instruction": "Identify who reviews outputs, what requires approval and when the workflow must stop or return to a person.",
+      "labels": "REVIEW \u00b7 APPROVAL \u00b7 STOP \u00b7 RETURN TO PERSON"
+    },
+    {
+      "box": "5",
+      "review_area": "Pilot measure",
+      "safe_instruction": "Choose one observable process measure and one quality check. Define how both will be recorded.",
+      "labels": "PROCESS MEASURE \u00b7 QUALITY CHECK \u00b7 RECORD BOTH"
+    },
+    {
+      "box": "6",
+      "review_area": "Exit decision",
+      "safe_instruction": "At the review date, choose: proceed, revise or stop. Record the evidence and owner for the next decision.",
+      "labels": "PROCEED \u00b7 REVISE \u00b7 STOP \u00b7 EVIDENCE + OWNER"
+    }
+  ],
+  "minimum_pilot_record": "task \u00b7 owner \u00b7 trigger \u00b7 baseline \u00b7 allowed data \u00b7 restricted data \u00b7 reviewer \u00b7 stop condition \u00b7 process measure \u00b7 quality check \u00b7 review date \u00b7 exit decision",
+  "boundary": "Educational pilot-planning material only \u2014 not a client case study, performance guarantee, security assessment, legal or compliance advice, procurement recommendation or production-change instruction."
+}

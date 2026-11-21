@@ -1,0 +1,7 @@
+box,review_area,safe_instruction,labels
+1,Business task,"Name one task, its current owner, the trigger that starts it and the output that marks it complete.",TASK · OWNER · TRIGGER · OUTPUT
+2,Evidence baseline,"Record current time, error, rework or queue evidence using a consistent method. If no baseline exists, observe first.",TIME · ERROR · REWORK · QUEUE · OBSERVE FIRST
+3,Data boundary,"List the data the pilot may use, the data it must not use and the approved storage or access path.",ALLOWED · RESTRICTED · APPROVED PATH
+4,Human control,"Identify who reviews outputs, what requires approval and when the workflow must stop or return to a person.",REVIEW · APPROVAL · STOP · RETURN TO PERSON
+5,Pilot measure,Choose one observable process measure and one quality check. Define how both will be recorded.,PROCESS MEASURE · QUALITY CHECK · RECORD BOTH
+6,Exit decision,"At the review date, choose: proceed, revise or stop. Record the evidence and owner for the next decision.",PROCEED · REVISE · STOP · EVIDENCE + OWNER

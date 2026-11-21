@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-21",
+  "posts": [
+    {
+      "slot": "morning",
+      "slug": "ai-tool-pilot-brief",
+      "title": "Before You Buy an AI Tool: A 6-Box Pilot Brief",
+      "url": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.html",
+      "png": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.png",
+      "svg": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.svg",
+      "csv": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief.csv",
+      "answer_card": "https://support-aicloudstrategist.github.io/publications/2026-11-21/ai-tool-pilot-brief-answer-card.json",
+      "repository": "https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/tree/main/publications/2026-11-21",
+      "boundary": "Educational pilot-planning material only \u2014 not a client case study, performance guarantee, security assessment, legal or compliance advice, procurement recommendation or production-change instruction."
+    }
+  ]
+}
