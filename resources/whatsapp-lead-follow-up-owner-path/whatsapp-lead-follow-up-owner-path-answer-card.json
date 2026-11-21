@@ -1,0 +1,10 @@
+{
+  "title": "WhatsApp enquiries not converting? Start with the owner path.",
+  "url": "https://aicloudstrategist.com/resources/whatsapp-lead-follow-up-owner-path/",
+  "intent": ["WhatsApp lead follow-up automation for small business", "WhatsApp enquiries not converting", "missed lead follow-up between WhatsApp and CRM"],
+  "checks": ["source", "owner", "age", "status", "hold"],
+  "evidence_boundary": "Synthetic buyer education only; no customer data, credentials, conversion, revenue, savings, ROI, ranking or compliance claim.",
+  "safe_inputs": ["public process notes", "aggregate counts", "synthetic rows", "redacted screenshots"],
+  "hold_conditions": ["no accountable owner", "unclear consent", "sensitive data", "pricing or regulated commitment", "no rollback or human review"],
+  "last_verified": "2026-11-21"
+}

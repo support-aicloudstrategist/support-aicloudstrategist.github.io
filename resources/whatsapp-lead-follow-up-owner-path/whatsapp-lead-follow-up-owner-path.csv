@@ -1,0 +1,6 @@
+check,question,synthetic_evidence,hold_rule
+source,Where did the enquiry arrive?,channel label only; no message content,"Hold if source cannot be reconciled"
+owner,Who owns the next action?,role plus backup; no personal data,"Hold if no accountable owner"
+status,What is the current state?,new/contacted/waiting/quote/booked/closed/no-consent,"Hold if status is ambiguous"
+age,How old is the next action?,under 1 hour/same day/1-2 days/older,"Hold if ageing cannot be measured"
+safety,Could this create risk?,consent/sensitive data/pricing or regulated issue flag,"Hold for authorised human review"

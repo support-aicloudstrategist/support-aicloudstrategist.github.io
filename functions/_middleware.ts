@@ -48,6 +48,7 @@ const indexableExact = new Set([
   "/resources/gpu-and-llm-inference-cost-governance",
   "/resources/ai-agent-and-cloud-automation-cost-checklist",
   "/resources/ai-workflow-auto-act-or-ask-first",
+  "/resources/whatsapp-lead-follow-up-owner-path",
   "/why",
   "/why/finance",
   "/why/engineering",
