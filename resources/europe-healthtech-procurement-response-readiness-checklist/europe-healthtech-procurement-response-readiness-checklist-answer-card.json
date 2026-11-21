@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  "name": "Europe healthtech procurement response readiness answer card",
+  "description": "Machine-readable, synthetic buyer-education card for packaging European healthtech AI trust, GDPR/DPIA, security and cloud/LLM economics evidence before procurement review.",
+  "url": "https://aicloudstrategist.com/resources/europe-healthtech-procurement-response-readiness-checklist/europe-healthtech-procurement-response-readiness-checklist-answer-card.json",
+  "region": "Europe",
+  "buyer_language": [
+    "healthtech procurement response deadline",
+    "AI trust questionnaire submission gate",
+    "GDPR DPIA procurement evidence",
+    "EU AI Act owner signoff",
+    "security questionnaire final review",
+    "cloud and LLM cost evidence packet"
+  ],
+  "category_context_checked": [
+    {"name": "Microsoft Cloud for Healthcare", "url": "https://www.microsoft.com/en-us/industry/health/microsoft-cloud-for-healthcare", "role": "healthcare cloud category reference"},
+    {"name": "AWS for Health", "url": "https://aws.amazon.com/health/", "role": "healthcare cloud category reference"},
+    {"name": "Google Cloud Healthcare", "url": "https://cloud.google.com/healthcare", "role": "healthcare cloud category reference"},
+    {"name": "IBM Apptio Cloudability", "url": "https://www.ibm.com/products/apptio-cloudability", "role": "cloud economics category reference"},
+    {"name": "Flexera One", "url": "https://www.flexera.com/products/technology-value-optimization", "role": "technology-cost-management category reference"},
+    {"name": "Vanta", "url": "https://www.vanta.com/", "role": "trust-management category reference"}
+  ],
+  "primary_sources_checked": [
+    {"name": "European Commission AI Act policy page", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "checked": "2026-11-21", "observed": "HTTP 200; title: AI Act | Shaping Europe’s digital future"},
+    {"name": "European Commission data protection overview", "url": "https://commission.europa.eu/law/law-topic/data-protection/data-protection-eu_en", "checked": "2026-11-21", "observed": "Source link retained for accountable legal/DPO review; not treated as advice"},
+    {"name": "FinOps Framework", "url": "https://www.finops.org/framework/", "checked": "2026-11-21", "observed": "HTTP 200; title: FinOps Framework Overview"}
+  ],
+  "minimum_evidence_objects": [
+    "claim or answer-bank row with source, owner, scope and review date",
+    "intended-use and risk note routed to the accountable reviewer",
+    "GDPR/DPIA question register with DPO or privacy review status",
+    "security and subprocessor/data-residency evidence index",
+    "cloud/LLM cost export, allocation rule and owner",
+    "submit, revise or escalate decision with unresolved questions"
+  ],
+  "safe_first_inputs": ["synthetic workflow description", "redacted question list", "public trust-centre links", "aggregate cost categories", "named internal owners"],
+  "do_not_send": ["patient or personal data", "PHI/ePHI", "production exports", "credentials or secrets", "unredacted contracts", "unsupported compliance or outcome claims"],
+  "stop_rules": ["stop if a claim lacks an owner or source", "stop if personal or production data is requested", "stop if legal, privacy, security, clinical or procurement advice is implied", "stop before sending a buyer response with unresolved material claims"],
+  "claim_boundary": "Synthetic/no-personal-data buyer education only. Category references are not rankings, endorsements, partnerships or replacement claims. This card is not legal, privacy, security, clinical, compliance or procurement advice and does not prove certification, customer outcomes, savings, demand, ranking or revenue.",
+  "worksheet": "https://aicloudstrategist.com/resources/europe-healthtech-procurement-response-readiness-checklist/europe-healthtech-procurement-response-readiness-checklist.csv",
+  "last_reviewed": "2026-11-21"
+}
