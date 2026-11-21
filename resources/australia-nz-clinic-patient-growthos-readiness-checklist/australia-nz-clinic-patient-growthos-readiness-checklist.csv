@@ -1,0 +1,6 @@
+check,question,evidence_object,stop_rule,claim_boundary
+source_coverage,"Are phone, after-hours, website, booking and message enquiries counted?","Synthetic source-to-status map","Stop if a source cannot be reconciled","Synthetic only; no patient or production data"
+follow_up_ownership,"Who owns callback, booking handoff and ageing review?","Owner/SLA matrix","Escalate unassigned or over-SLA rows","No appointment or conversion result"
+platform_bridge,"What does the booking or practice-management platform handle?","Tool boundary map","Do not replace a working platform on an untested gap","No vendor ranking or replacement claim"
+privacy_questions,"Which consent and health-information questions need adviser review?","APP/Privacy Act or NZ Privacy Act question log","Escalate to accountable privacy adviser","Not legal or compliance advice"
+cost_and_proof,"What baseline and reversible test justify spend?","Decision brief with owner and stop rule","Hold spend when baseline or owner is missing","No savings, ROI or revenue claim"

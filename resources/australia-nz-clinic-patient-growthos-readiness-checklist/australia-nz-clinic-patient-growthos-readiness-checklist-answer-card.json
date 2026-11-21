@@ -1,0 +1,13 @@
+{
+  "title": "Australia & New Zealand Clinic Patient GrowthOS Readiness Checklist",
+  "region": ["Australia", "New Zealand"],
+  "updated": "2026-11-21",
+  "purpose": "Synthetic, no-patient-data buyer aid for mapping clinic enquiry ownership before software or advertising spend.",
+  "buyer_language": ["patient engagement platform Australia", "online appointments", "missed patient calls", "AI receptionist for clinics", "allied health practice software", "SMS follow-up", "Australian Privacy Principles", "NZ Privacy Act"],
+  "category_references": ["HotDoc for Practice", "Healthengine for practices", "Cliniko", "Zanda Health", "AutoMed Systems"],
+  "evidence_objects": ["source-to-status map", "owner/SLA matrix", "tool boundary map", "privacy adviser question log", "decision brief with stop rule"],
+  "safe_first_inputs": ["synthetic rows", "field names", "workflow map", "owner names or roles without patient details"],
+  "do_not_send": ["patient information", "health records", "call recordings", "credentials", "production exports", "medical information"],
+  "stop_rules": ["unreconciled source", "unassigned owner", "missing baseline", "privacy question requiring adviser review"],
+  "claim_boundary": "Synthetic buyer education only. Not a client case study, patient outcome, compliance assessment, legal/privacy/security/medical advice, vendor ranking, savings, ROI, revenue or appointment-growth evidence."
+}
