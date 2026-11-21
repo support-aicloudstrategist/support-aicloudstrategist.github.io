@@ -53,6 +53,8 @@ def test_publication_routes_are_allowed_by_custom_domain_middleware():
     middleware = (ROOT / "functions" / "_middleware.ts").read_text(encoding="utf-8")
     for route in (
         f"/publications/{DATE}",
+        f"/publications/{DATE}/ai-tool-pilot-brief",
+        f"/publications/{DATE}/{SLUG}",
         f"/publications/{DATE}/ai-tool-pilot-brief.html",
         f"/publications/{DATE}/{SLUG}.html",
     ):

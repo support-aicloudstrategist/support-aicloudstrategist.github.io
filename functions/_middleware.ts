@@ -50,6 +50,8 @@ const indexableExact = new Set([
   "/resources/ai-workflow-auto-act-or-ask-first",
   "/resources/whatsapp-lead-follow-up-owner-path",
   "/publications/2026-11-21",
+  "/publications/2026-11-21/ai-tool-pilot-brief",
+  "/publications/2026-11-21/ai-workflow-auto-act-or-ask-first",
   "/publications/2026-11-21/ai-tool-pilot-brief.html",
   "/publications/2026-11-21/ai-workflow-auto-act-or-ask-first.html",
   "/why",
