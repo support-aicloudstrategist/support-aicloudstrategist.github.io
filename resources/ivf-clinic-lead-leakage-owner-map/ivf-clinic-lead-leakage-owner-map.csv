@@ -1,0 +1,6 @@
+check,owner_question,safe_evidence,hold_rule
+source,Where did the enquiry arrive?,Synthetic channel label only,Hold if source is unclear
+owner,Who owns the next review?,Role name only,Hold if ownership is shared or missing
+status,What is the current state?,New/assigned/waiting/reviewed/closed,Hold if status cannot be dated
+boundary,What needs human review?,Process rule with no patient data,Hold before clinical or sensitive automation
+reversible_test,What is the smallest safe test?,Synthetic or redacted example,Hold before production data or spend

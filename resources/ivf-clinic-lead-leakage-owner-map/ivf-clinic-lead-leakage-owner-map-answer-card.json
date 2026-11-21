@@ -1,0 +1,9 @@
+{
+  "title": "IVF clinic lead leakage owner map",
+  "buyer_phrases": ["IVF clinic lead leakage", "clinic enquiries not followed up", "missed fertility clinic calls"],
+  "purpose": "Synthetic process-readiness aid for checking enquiry source, owner, status, human boundary and reversible next test.",
+  "safe_inputs": ["synthetic channel labels", "role names", "status values", "redacted process examples"],
+  "do_not_send": ["patient names", "phone numbers", "treatment details", "recordings", "health information", "credentials", "production exports"],
+  "hold_rules": ["missing owner", "undated status", "unclear human-review boundary", "request for production data or unsupported outcome claim"],
+  "claim_boundary": "Synthetic/no-patient-data buyer education only; not medical, privacy, legal, security or compliance advice and not evidence of appointments, patients, savings, ROI, ranking, demand or revenue."
+}
