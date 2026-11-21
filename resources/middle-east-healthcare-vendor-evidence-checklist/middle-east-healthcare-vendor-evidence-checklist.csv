@@ -1,0 +1,7 @@
+check_id,question,evidence_to_request,owner,decision,notes
+1,What exact workflow is in scope?,Task channels handoffs exceptions and out-of-scope cases,Operations,Investigate,,
+2,What is the data path?,Inputs storage access retention subprocessors and deletion handling,Privacy/Security,Hold,,
+3,Who owns each claim?,Named evidence owner scope date and unresolved question,Procurement,Investigate,,
+4,How does human control work?,Reviewer approval threshold pause mechanism and escalation route,Clinical/Operations,Hold,,
+5,Who owns usage and cloud/API cost?,Account service driver alert and budget owner plus baseline,Finance/Engineering,Investigate,,
+6,What is the shortlist decision?,Proceed Investigate or Hold with evidence link and review date,Executive sponsor,Hold,,

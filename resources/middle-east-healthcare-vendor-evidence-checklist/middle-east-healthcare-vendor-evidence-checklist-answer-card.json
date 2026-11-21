@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "UAE and Saudi Healthcare AI Vendor Evidence Checklist",
+  "url": "https://aicloudstrategist.com/resources/middle-east-healthcare-vendor-evidence-checklist/",
+  "description": "Synthetic no-PHI buyer education for comparing healthcare AI, patient-engagement, cloud and automation vendor evidence.",
+  "audience": "Healthcare operators and technology buyers in the UAE and Saudi Arabia",
+  "checks": ["workflow-scope", "data-path", "evidence-owner", "human-control", "cost-accountability", "shortlist-decision"],
+  "category_context": ["patient-engagement", "AI receptionist or voice agent", "cloud provider", "FinOps platform"],
+  "claim_boundary": "Synthetic/no-PHI buyer education only. Not legal, privacy, security, clinical or compliance advice; no vendor ranking, certification, patient outcome, savings, ROI, customer or revenue claim.",
+  "worksheet": "https://aicloudstrategist.com/resources/middle-east-healthcare-vendor-evidence-checklist/middle-east-healthcare-vendor-evidence-checklist.csv",
+  "last_reviewed": "2026-11-21"
+}
