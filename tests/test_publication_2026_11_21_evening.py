@@ -47,3 +47,14 @@ def test_infographic_workflow_discovery_and_status():
     assert status["successful_portal_count"] == 1
     assert status["site_deployment"] == "pending_custom_domain_exposure"
     assert all("github.com/" in url for url in status["live_links"])
+
+
+def test_publication_routes_are_allowed_by_custom_domain_middleware():
+    middleware = (ROOT / "functions" / "_middleware.ts").read_text(encoding="utf-8")
+    for route in (
+        f"/publications/{DATE}",
+        f"/publications/{DATE}/ai-tool-pilot-brief.html",
+        f"/publications/{DATE}/{SLUG}.html",
+    ):
+        assert f'"{route}"' in middleware
+    assert f'{{ loc: "/publications/{DATE}/", lastmod: "{DATE}" }}' in middleware
