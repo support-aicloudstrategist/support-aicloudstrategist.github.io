@@ -61,6 +61,7 @@ const indexableExact = new Set([
   "/resources/europe-healthtech-procurement-response-readiness-checklist",
   "/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison",
   "/resources/ivf-clinic-lead-leakage-owner-map",
+  "/resources/missed-patient-calls-owner-path",
   "/resources/manual-work-automation-owner-path",
   "/resources/middle-east-healthcare-growthos-cloud-trust-readiness-map",
   "/resources/middle-east-healthcare-vendor-evidence-checklist",
