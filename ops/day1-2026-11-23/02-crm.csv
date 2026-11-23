@@ -1,0 +1,21 @@
+account,buyer,role,touches,status,next_action,notes
+Postman,Engineering leadership (Platform/Infra),VP Eng / Head of Platform,0,prospect,LinkedIn connect + Day1 msg 1,ICP: product SaaS; cloud + API infra cost ownership
+Freshworks,Cloud / Platform lead,Head of Infrastructure,0,prospect,LinkedIn connect + Day1 msg 2,ICP: SaaS at scale; shared platform showback gaps
+Zoho,FinOps or Cloud COE,FinOps / Cloud lead,0,prospect,LinkedIn connect + Day1 msg 3,ICP: multi-product cloud; ownership before cuts
+Razorpay,Platform / SRE lead,Head of Platform,0,prospect,LinkedIn connect + Day1 msg 4,ICP: fintech SaaS; reliability + bill clarity
+Chargebee,VP Engineering,VP Engineering,0,prospect,LinkedIn connect + Day1 msg 5,ICP: SaaS; cost decision blocked before commit
+BrowserStack,Infra / DevOps lead,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP: product SaaS; CI/cloud spend ownership
+Hasura,Platform eng lead,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: developer SaaS; cloud + data plane costs
+Druva,Cloud ops / FinOps,FinOps lead,0,prospect,Research buyer LinkedIn → connect,ICP: data SaaS; multi-cloud cost ownership
+Yellow.ai,AI platform / Eng lead,VP Eng / AI Platform,0,prospect,Research buyer LinkedIn → connect,ICP: AI product; GPU/inference ownership gap
+Observe.ai,Eng / Platform lead,VP Engineering,0,prospect,Research buyer LinkedIn → connect,ICP: AI SaaS; voice/ML infra spend
+Fractal Analytics,Cloud COE / CTO office,Cloud COE lead,0,prospect,Research buyer LinkedIn → connect,ICP: AI/analytics; shared GPU queues
+Tata Digital,Platform / Cloud lead,Head of Cloud,0,prospect,Research buyer LinkedIn → connect,ICP: digital product; multi-cloud governance
+PhonePe,SRE / Platform,Head of SRE,0,prospect,Research buyer LinkedIn → connect,ICP: scale product; bill ownership fights
+CRED,Infra / Platform,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP: consumer fintech product; cloud spend clarity
+Meesho,Platform eng,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: marketplace product; cost vs growth
+ShareChat / Moj,Infra / ML platform,ML Platform lead,0,prospect,Research buyer LinkedIn → connect,ICP: consumer + ML; GPU idle risk
+Unacademy,Cloud / Platform,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: edtech SaaS; cloud ownership
+Lenskart,Tech / Cloud lead,CTO office / Cloud,0,prospect,Research buyer LinkedIn → connect,ICP: product retail tech; AWS/Azure spend
+Ola Electric / Ola,Platform / Data,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: product+AI; cost decision blocked
+Delhivery,Infra / Platform,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP: logistics tech; cloud cost ownership
