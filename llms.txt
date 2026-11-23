@@ -6,6 +6,15 @@
 - [Cloud and AI Economics](https://aicloudstrategist.com/services/): cost ownership, allocation, unit economics and safe action planning.
 
 ## Evidence
+- [Cloud cost owner path](https://aicloudstrategist.com/resources/cloud-cost-owner-path/): synthetic six-step route for tracing a sudden cloud-cost signal to evidence, an accountable owner and a safe next move; no audit, savings or ROI claim.
+- [How to read a cloud bill](https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/): buyer-safe guide to reconciling AWS, Azure or GCP billing exports, finding cost pools and assigning ownership; synthetic education only.
+- [Cloud cost ownership guide](https://aicloudstrategist.com/resources/what-is-cloud-cost-ownership/): explains how to tie spend to accountable teams and products without averaging shared platforms into false certainty; no customer or savings claim.
+- [AI and GPU inference cost governance](https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/): synthetic checklist for separating LLM inference, idle GPU, vector-search and unowned experiment cost before action.
+- [AI agent permissions and cloud automation cost checklist](https://aicloudstrategist.com/resources/ai-agent-and-cloud-automation-cost-checklist/): pre-production checklist for tool permissions, token-loop caps, spend ownership and act/investigate/hold gates.
+- [Sample diagnostic deliverable](https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/): illustrative synthetic Cloud and AI Cost Governance Diagnostic pack with ownership map, cost drivers and decision register.
+- [Brand trust monitoring method](https://aicloudstrategist.com/resources/brand-trust-monitoring/): public monitoring method showing what is checked, verified and blocked without fabricating proof claims.
+- [Why fixed-fee diagnostics beat savings-share](https://aicloudstrategist.com/resources/why-fixed-fee-diagnostics-beat-savings-share/): explains the evidence and incentive boundary for fixed-fee diagnostics; no savings outcome is claimed.
+
 - [AI automation vs MSP vs in-house source card](https://aicloudstrategist.com/resources/ai-automation-vs-msp-vs-in-house/ai-automation-ownership-ai-answer-source-card.json): claim-safe machine-readable buyer context for comparing ownership, exceptions, access boundaries and rollback before tool, MSP or hiring spend; synthetic decision aid only.
 - [AWS bill too high? Owner action checklist](https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/): synthetic, no-credentials checklist and buyer-safe evidence-intake CSV for unexpected AWS spend before risky cuts or commitments.
 - [Buyer-safe cloud bill evidence intake CSV](https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/aws-cloud-bill-owner-evidence-intake.csv): synthetic fields for ownership, driver classification, action safety and commitment review; no savings, ROI or production claim.
