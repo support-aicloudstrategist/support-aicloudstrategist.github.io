@@ -420,7 +420,7 @@ const sitemapEntries: Array<{ loc: string; lastmod: string }> = [
   { loc: "/resources/north-america-healthtech-ai-trust-finops-submission-gate/", lastmod: "2026-11-23" },
   { loc: "/resources/singapore-clinic-pdpa-cloud-trust-finops-intake/", lastmod: "2026-11-20" },
   { loc: "/resources/whatsapp-lead-follow-up-owner-path/", lastmod: "2026-11-21" },
-  { loc: "/resources/small-business-ai-automation-owner-path/", lastmod: "2026-11-21" },
+  { loc: "/resources/small-business-ai-automation-owner-path/", lastmod: "2026-11-23" },
   { loc: "/publications/2026-11-21/", lastmod: "2026-11-21" },
   { loc: "/publications/2026-11-21/ai-tool-pilot-brief.html", lastmod: "2026-11-21" },
   { loc: "/publications/2026-11-21/ai-tool-pilot-brief.png", lastmod: "2026-11-21" },
