@@ -1,0 +1,7 @@
+number,review_question,question
+1,"Purpose","What specific task needs this access?"
+2,"Minimum Access","Can the task work with fewer files, fields, permissions, or systems?"
+3,"Data Boundary","Does the connection avoid secrets, credentials, sensitive personal data, and restricted information?"
+4,"Owner","Who approves the connection and remains accountable?"
+5,"Visibility","Can the team review what the tool reads, creates, changes, and sends?"
+6,"Exit Path","Can access be revoked, tokens rotated, exports removed, and changes reviewed?"
