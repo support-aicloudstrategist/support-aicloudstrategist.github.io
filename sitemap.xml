@@ -17,7 +17,8 @@
   <url><loc>https://aicloudstrategist.com/resources/sample-diagnostic-deliverable/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/ai-agent-and-cloud-automation-cost-checklist/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aicloudstrategist.com/resources/ai-automation-vs-msp-vs-in-house/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aicloudstrategist.com/resources/ai-automation-vs-msp-vs-in-house/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aicloudstrategist.com/resources/ai-tool-pilot-brief/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/cloud-cost-owner-path/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/brand-trust-monitoring/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/customer-problem-search/aws-cloud-bill-too-high/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -32,18 +33,20 @@
   <url><loc>https://aicloudstrategist.com/resources/middle-east-healthcare-vendor-evidence-checklist/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/singapore-clinic-pdpa-cloud-trust-finops-intake/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/north-america-healthtech-ai-trust-finops-submission-gate/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aicloudstrategist.com/resources/ivf-clinic-lead-leakage-owner-map/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aicloudstrategist.com/resources/manual-work-automation-owner-path/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://aicloudstrategist.com/about/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://aicloudstrategist.com/resources/manual-work-automation-owner-path/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
   <url><loc>https://aicloudstrategist.com/how-we-work/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://aicloudstrategist.com/data-handling/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://aicloudstrategist.com/scope-and-limits/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://aicloudstrategist.com/company/</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://aicloudstrategist.com/privacy</loc><lastmod>2026-11-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://aicloudstrategist.com/terms</loc><lastmod>2026-11-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://aicloudstrategist.com/resources/ivf-clinic-lead-leakage-owner-map/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <url><loc>https://aicloudstrategist.com/resources/ivf-clinic-lead-leakage-owner-map/ivf-clinic-lead-leakage-owner-map.csv</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/ivf-clinic-lead-leakage-owner-map/ivf-clinic-lead-leakage-owner-map-answer-card.json</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://aicloudstrategist.com/resources/australia-nz-clinic-patient-growthos-readiness-checklist/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <url><loc>https://aicloudstrategist.com/resources/australia-nz-clinic-patient-growthos-readiness-checklist/australia-nz-clinic-patient-growthos-readiness-checklist.csv</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/australia-nz-clinic-patient-growthos-readiness-checklist/australia-nz-clinic-patient-growthos-readiness-checklist-answer-card.json</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://aicloudstrategist.com/resources/ai-workflow-auto-act-or-ask-first/</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
