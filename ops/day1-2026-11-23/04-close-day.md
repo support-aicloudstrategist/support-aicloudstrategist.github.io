@@ -11,7 +11,7 @@
 | 20 ICP accounts | Done → 20 rows in CRM |
 | 5 personalized first messages | **Drafted** → `03-outreach-drafts.md` (A1–A5) — **not sent from workspace** |
 | 5 warm intro asks | **Drafted** → `03-outreach-drafts.md` (B1–B5) — **not sent from workspace** |
-| Publish short Cloud & AI cost governance note (no % claims) | Done → `/resources/cloud-ai-cost-governance-before-you-cut/` + resources index + sitemap; deploy with Day 1 commit |
+| Publish short Cloud & AI cost governance note (no % claims) | Done live → https://aicloudstrategist.com/resources/cloud-ai-cost-governance-before-you-cut/ (allowlisted in middleware) |
 | EOD log + tomorrow first task | This file |
 
 ## What was NOT sent
