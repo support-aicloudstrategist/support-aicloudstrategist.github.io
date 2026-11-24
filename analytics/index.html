@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261120-ui">
+  <link rel="stylesheet" href="/css/aics-analytics-dashboard.css?v=20261123-button-system">
 </head>
 <body class="is-locked">
   <section id="login-screen" class="login-screen" aria-label="Sign in">
@@ -62,20 +62,99 @@
   </section>
 
   <main id="dash-app" class="dash-shell" hidden>
+    <aside class="workspace-sidebar" aria-label="Internal dashboard navigation">
+      <div class="workspace-brand">
+        <span class="workspace-brand-mark" aria-hidden="true">AI</span>
+        <div><strong>AI Cloud Strategist</strong><small>Founder control center</small></div>
+      </div>
+      <nav class="workspace-nav">
+        <button class="workspace-nav-item" type="button" data-workspace="command-home"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg></span><span><b>Command Home</b><small>Everything at a glance</small></span><em>›</em></button>
+        <button class="workspace-nav-item" type="button" data-workspace="daily-operations"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v5l3 2"/></svg></span><span><b>Daily Operations Tracker</b><small>Plan, track &amp; close</small></span><em>›</em></button>
+        <button class="workspace-nav-item" type="button" data-workspace="company-operations"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v11H4zM8 8V5h8v3M4 12h16M10 12v2h4v-2"/></svg></span><span><b>Company Operations</b><small>Run the business</small></span><em>›</em></button>
+        <div class="workspace-subnav" data-subnav="company-operations"><button type="button" class="is-active" data-ops-open="overview">Overview</button><button type="button" data-ops-open="crm">Pipeline</button><button type="button" data-ops-open="delivery">Delivery</button><button type="button" data-ops-open="finance">Finance</button><button type="button" data-ops-open="evidence">Evidence</button><button type="button" data-ops-open="history">Work History</button><button type="button" data-ops-open="knowledge">Knowledge</button><button type="button" data-ops-open="administration">Administration</button></div>
+        <button class="workspace-nav-item" type="button" data-workspace="growth-navigator"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 17 5-5 3 3 6-8M14 7h5v5"/></svg></span><span><b>Growth Navigator</b><small>Think &amp; decide</small></span><em>›</em></button>
+        <div class="workspace-subnav" data-subnav="growth-navigator"><button type="button" data-growth-open="findings">Findings</button><button type="button" data-growth-open="actions">Action Plan</button><button type="button" data-growth-open="results">Results</button></div>
+        <button class="workspace-nav-item is-active" type="button" data-workspace="site-pulse" aria-current="page"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span><b>Site Pulse</b><small>Measure reality</small></span><em>›</em></button>
+        <div class="workspace-subnav" data-subnav="site-pulse"><button type="button" data-pulse-open="pulse-overview">Overview</button><button type="button" data-pulse-open="pulse-visitors">Visitors</button><button type="button" data-pulse-open="pulse-content">Content</button><button type="button" data-pulse-open="pulse-conversions">Conversions</button><button type="button" data-pulse-open="diagnostics-panel">Diagnostics</button></div>
+      </nav>
+      <p class="workspace-sidebar-note"><i></i><span><b>Protected workspace</b><small>Company-scoped access</small></span></p>
+    </aside>
+
+    <div class="workspace-main">
     <header class="dash-top">
       <div>
-        <p class="small muted">AICloudStrategist</p>
-        <h1>Analytics</h1>
-        <p>Views, visitors, geography, traffic, content, live activity, and contacts.</p>
+        <p class="small muted">AI CLOUD STRATEGIST</p>
+        <h1 id="workspace-title">Site Pulse</h1>
+        <p id="workspace-subtitle">Verified website truth and live customer activity.</p>
       </div>
       <div class="dash-top-actions">
+        <div class="live-clock"><strong id="header-live-time">--:--:--</strong><small id="header-live-date">Local time</small></div>
         <p id="generated-at" class="small muted"></p>
-        <p id="dash-user" class="small muted"></p>
+        <label class="header-company-picker"><span>Company</span><select id="header-company" aria-label="Active company"><option value="aics">AI Cloud Strategist</option><option value="dst">Digi Science Techsol</option></select></label>
+        <div class="header-tools"><button id="global-search" class="secondary" type="button" aria-haspopup="dialog">Search</button><button id="notifications" class="secondary notification-bell" type="button" aria-label="Notifications" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10a6 6 0 0 1 12 0v4l2 3H4l2-3z"></path><path d="M10 20h4"></path></svg><i id="notification-dot" hidden></i></button></div>
         <button id="dash-logout" class="secondary" type="button">Log out</button>
       </div>
     </header>
 
-    <section class="toolbar-card" aria-label="Date range">
+    <section id="workspace-command-home" class="workspace-view workspace-foundation" data-workspace-view="command-home" hidden>
+      <div class="command-hero"><div><span class="command-badge">FOUNDER COMMAND HOME</span><h2>One clear view.<br><em>Every system connected.</em></h2><p>Verified website truth, customer movement, daily execution and owner-controlled decisions in one operating view.</p><div class="command-actions"><button type="button" data-home-open="daily-operations">Open today's work</button><button type="button" class="secondary" data-home-open="site-pulse">View Site Pulse</button></div></div><div class="command-orbit" aria-hidden="true"><div class="command-core">YOU<small>Owner control</small></div><div class="sat sat-growth">GN<small>Decide</small></div><div class="sat sat-pulse">SP<small>Measure</small></div></div></div>
+      <div class="command-section-head"><div><p class="section-label">TODAY'S CONTROL PANEL</p><h2>What deserves attention</h2></div><span>Live company view</span></div>
+      <div class="command-grid"><article class="command-card"><div><small>DAILY OPERATIONS</small><h3>Active workday</h3></div><strong>Day <span id="home-active-day">1</span></strong><p>Revenue-linked priorities, timer and carry-over.</p><button type="button" data-home-open="daily-operations">Open tracker →</button></article><article class="command-card"><div><small>COMPANY OPERATIONS</small><h3>Pipeline to finance</h3></div><strong id="home-ops-count">0 records</strong><p>Customers, delivery, cash, proof and knowledge.</p><button type="button" data-home-open="company-operations">Open operations →</button></article><article class="command-card"><div><small>GROWTH NAVIGATOR</small><h3>Decisions and actions</h3></div><strong>Owner controlled</strong><p>Evidence becomes action only after approval.</p><button type="button" data-home-open="growth-navigator">Open navigator →</button></article><article class="command-card"><div><small>SITE PULSE</small><h3>Verified reality</h3></div><strong>Tracking connected</strong><p>Real website signals without inflated activity.</p><button type="button" data-home-open="site-pulse">Open analytics →</button></article></div>
+    </section>
+
+    <section id="workspace-daily-operations" class="workspace-view workspace-foundation" data-workspace-view="daily-operations" hidden>
+      <div class="daily-hero">
+        <div><span>30 ACTIVE WORKDAYS</span><small id="daily-hero-date">ACTIVE PLAN</small><h2>Active Day <span id="daily-hero-day">1</span> <em>of 30</em></h2><p>Your plan waits for you. Calendar gaps never skip a workday.</p></div>
+        <div class="daily-hero-controls"><div><button id="daily-start" type="button">Start Day</button><button id="daily-close" class="secondary" type="button" disabled>Close Day</button></div><small id="daily-state-label">Ready to start</small><div class="daily-clock"><strong id="daily-elapsed">00:00:00</strong><span id="daily-started-at">Timer starts with Start Day</span></div></div>
+      </div>
+      <div class="daily-progress"><span></span></div>
+      <div class="daily-workspace-grid">
+        <section class="panel daily-task-panel">
+          <div class="daily-section-head"><div><p class="section-label">TODAY'S PLAN</p><h2>Revenue-linked priorities</h2><p class="note">Unfinished items carry into the next Active Day.</p></div><form id="daily-task-form"><input id="daily-task-input" maxlength="160" placeholder="Add a target" aria-label="New daily target"><button type="submit">Add</button></form></div>
+          <ul id="daily-task-list" class="daily-task-list"><li class="muted">Start the day to load targets.</li></ul>
+        </section>
+        <aside class="daily-side-stack"><article class="panel daily-north-star"><p class="section-label">NORTH STAR</p><h2>First suitable paying customer</h2><p>Clarity → proof → conversations → proposal → paid delivery.</p><div><span><b>20</b><small>Accounts</small></span><span><b>0</b><small>Touches</small></span><span><b>0</b><small>Follow-ups</small></span></div></article><article class="panel daily-review"><p class="section-label">REVIEW RHYTHM</p><h2 id="daily-review-label">Four-day review after Day 4</h2><p>Funnel, blockers, decisions and tactics—not a fixed weekday.</p><strong>Active Day <span id="daily-day-number">1</span> of 30</strong></article></aside>
+      </div>
+      <div class="daily-target-strip"><div><span>ICP accounts</span><b>100</b><small>Cycle target</small></div><div><span>First touches</span><b>100</b><small>Cycle target</small></div><div><span>Fit calls</span><b>8–12</b><small>Target</small></div><div><span>Proposals</span><b>4–6</b><small>Target</small></div><div><span>Customers</span><b>1–2</b><small>Target, not guarantee</small></div></div>
+      <section class="panel daily-history-panel"><h2>Work history</h2><p class="note">Closed days, start and end times, duration and completed targets.</p><ul id="daily-history-list" class="milestone-list"><li class="muted">No closed workdays yet.</li></ul></section>
+    </section>
+
+    <section id="workspace-company-operations" class="workspace-view workspace-foundation" data-workspace-view="company-operations" hidden>
+      <p class="section-label">Company Operations</p>
+      <div class="ops-hero"><div><span>OPERATING SYSTEM</span><h2>Run the company from one accountable workspace.</h2><p>Pipeline, delivery, cash, proof and approved operating knowledge stay connected without mixing company data.</p></div><strong id="ops-record-count">0 records</strong></div>
+      <nav class="ops-tabs" aria-label="Company Operations sections">
+        <button type="button" class="is-active" data-ops-tab="overview">Overview</button><button type="button" data-ops-tab="crm">Pipeline</button><button type="button" data-ops-tab="delivery">Delivery</button><button type="button" data-ops-tab="finance">Finance</button><button type="button" data-ops-tab="evidence">Evidence</button><button type="button" data-ops-tab="history">Work History</button><button type="button" data-ops-tab="knowledge">Knowledge</button><button type="button" data-ops-tab="administration">Administration</button>
+      </nav>
+      <section class="ops-panel" data-ops-panel="overview"><div class="ops-overview-grid"><article><small>PIPELINE</small><strong id="ops-kpi-pipeline">0</strong><span>Active opportunities</span></article><article><small>DELIVERY</small><strong id="ops-kpi-delivery">0</strong><span>Active engagements</span></article><article><small>FINANCE</small><strong id="ops-kpi-finance">0</strong><span>Open records</span></article><article><small>EVIDENCE</small><strong id="ops-kpi-evidence">0</strong><span>Proof assets</span></article></div><div class="ops-overview-lower"><article><h2>Operating priorities</h2><p>Customer acquisition first, then delivery quality, cash visibility and reusable proof.</p></article><article><h2>Control standard</h2><p>Every record needs an owner, status and next action. Nothing important stays only in chat.</p></article></div></section>
+      <section class="ops-panel" data-ops-panel="crm" hidden><div class="ops-panel-head"><div><h2>Customer pipeline</h2><p>Target accounts, stage, owner and next action.</p></div><form class="ops-add-form ops-form-structured" data-ops-form="crm"><input name="title" aria-label="Company or opportunity" required maxlength="160" placeholder="Company or opportunity"><select name="stage" aria-label="Pipeline stage"><option>Target</option><option>Contacted</option><option>Conversation</option><option>Proposal</option><option>Won</option><option>Lost</option></select><input name="owner" aria-label="Opportunity owner" maxlength="80" placeholder="Owner"><input name="next_action" aria-label="Next action" required maxlength="160" placeholder="Next action"><button>Add opportunity</button></form></div><div id="ops-records-crm" class="ops-record-grid"></div></section>
+      <section class="ops-panel" data-ops-panel="delivery" hidden><div class="ops-panel-head"><div><h2>Client delivery</h2><p>Active engagements, milestones, owners and risks.</p></div><form class="ops-add-form ops-form-structured" data-ops-form="delivery"><input name="title" aria-label="Client or engagement" required maxlength="160" placeholder="Client or engagement"><input name="milestone" aria-label="Next milestone" required maxlength="160" placeholder="Next milestone"><input name="owner" aria-label="Delivery owner" maxlength="80" placeholder="Owner"><select name="risk" aria-label="Delivery risk"><option>On track</option><option>At risk</option><option>Blocked</option><option>Complete</option></select><button>Add engagement</button></form></div><div id="ops-records-delivery" class="ops-record-grid"></div></section>
+      <section class="ops-panel" data-ops-panel="finance" hidden><div class="ops-panel-head"><div><h2>Finance</h2><p>Quotes, invoices, payments and forecast.</p></div><form class="ops-add-form ops-form-structured" data-ops-form="finance"><input name="title" aria-label="Finance record name" required maxlength="160" placeholder="Quote, invoice or payment"><input name="amount" type="number" min="0" step="0.01" aria-label="Amount" placeholder="Amount"><input name="due_date" type="date" aria-label="Due date"><select name="status" aria-label="Payment status"><option>Draft</option><option>Sent</option><option>Due</option><option>Paid</option><option>Overdue</option></select><button>Add record</button></form></div><div id="ops-records-finance" class="ops-record-grid"></div></section>
+      <section class="ops-panel" data-ops-panel="evidence" hidden><div class="ops-panel-head"><div><h2>Evidence library</h2><p>Secure proof, proposals, samples and delivery records.</p></div><form class="ops-add-form" data-ops-form="evidence"><input name="title" aria-label="Evidence title" required maxlength="160" placeholder="Evidence title"><input name="detail" aria-label="Evidence type status and source" required maxlength="240" placeholder="Type · status · source"><input name="file" type="file" aria-label="Evidence file" required accept=".pdf,.png,.jpg,.jpeg,.webp,.csv,.docx,.xlsx"><button>Upload evidence</button></form></div><p id="ops-evidence-status" class="status-line" role="status"></p><div id="ops-records-evidence" class="ops-record-grid"></div></section>
+      <section class="ops-panel" data-ops-panel="history" hidden><div class="ops-panel-head"><div><h2>Work history</h2><p>Closed Active Days with duration and completion evidence.</p></div></div><div id="ops-history-list" class="ops-history-list"><p class="muted">No closed workdays yet.</p></div></section>
+      <section class="ops-panel" data-ops-panel="knowledge" hidden><div class="ops-panel-head"><div><h2>Knowledge base</h2><p>Approved offers, pricing, SOPs, objections and decisions.</p></div><form class="ops-add-form" data-ops-form="knowledge"><input name="title" aria-label="Knowledge item title" required maxlength="160" placeholder="Knowledge item"><input name="detail" aria-label="Approved fact or operating rule" required maxlength="240" placeholder="Approved fact or operating rule"><button>Add item</button></form></div><div id="ops-records-knowledge" class="ops-record-grid"></div></section>
+      <section class="ops-panel" data-ops-panel="administration" hidden><div class="admin-grid"><article><p class="section-label">ACCESS</p><h2>Named users and permissions</h2><form id="admin-user-form" class="admin-user-form"><input name="name" required maxlength="100" aria-label="User name" placeholder="Full name"><input name="email" type="email" required maxlength="160" aria-label="User email" placeholder="Work email"><select name="role" aria-label="User role"><option value="viewer">Viewer</option><option value="owner">Owner</option></select><select name="company" aria-label="Company access"><option value="aics">AI Cloud Strategist</option><option value="dst">Digi Science Techsol</option><option value="both">Both companies</option></select><button>Create access</button></form><p id="admin-user-token" class="admin-one-time-token" role="status"></p><div id="admin-user-list" class="admin-user-list"><p class="muted">No named users yet.</p></div><p class="admin-note">New access codes are shown once. Share them only through an approved secure channel; revoking a user invalidates the code immediately.</p></article><article><p class="section-label">RESILIENCE</p><h2>Backup and recovery</h2><p>Export or validate a company-scoped JSON backup of operating records.</p><button id="admin-export-backup" type="button">Export backup</button><form id="admin-restore-form" class="admin-restore-form"><label>Backup file<input id="admin-restore-file" type="file" accept="application/json,.json" required></label><button type="submit" class="secondary">Validate backup</button><label id="admin-restore-confirm-wrap" hidden>Type confirmation<input id="admin-restore-confirm" autocomplete="off"></label><button id="admin-restore-apply" type="button" class="danger" hidden>Apply validated restore</button></form><small id="admin-backup-status">Owner-only export and guarded restore</small></article></div><article class="admin-audit"><div><p class="section-label">AUDIT TRAIL</p><h2>Recent accountable changes</h2></div><div id="admin-audit-list"><p class="muted">No audit events yet.</p></div></article></section>
+    </section>
+
+    <section id="workspace-growth-navigator" class="workspace-view workspace-foundation" data-workspace-view="growth-navigator" hidden>
+      <p class="section-label">Growth Navigator</p>
+      <div class="growth-hero"><div><span>EVIDENCE BEFORE OPINION</span><h2>Turn verified signals into owner-controlled action.</h2><p>Site Pulse provides facts. Growth Navigator proposes a decision. The owner approves the action and records the result.</p></div><button id="growth-run-analysis" type="button">Create finding from Site Pulse</button></div>
+      <div class="growth-flow"><div><strong>1</strong><span>Evidence<small>Verified signals</small></span></div><i>→</i><div><strong>2</strong><span>Finding<small>Rule-based analysis</small></span></div><i>→</i><div><strong>3</strong><span>Approval<small>Owner controlled</small></span></div><i>→</i><div><strong>4</strong><span>Result<small>Measured outcome</small></span></div></div>
+      <nav class="growth-tabs"><button type="button" class="is-active" data-growth-tab="findings">Findings</button><button type="button" data-growth-tab="actions">Action plan</button><button type="button" data-growth-tab="results">Results</button></nav>
+      <section class="growth-panel" data-growth-panel="findings"><div class="growth-panel-head"><div><h2>Evidence-backed findings</h2><p>Each finding keeps its source snapshot and creation time.</p></div></div><div id="growth-findings" class="growth-records"></div></section>
+      <section class="growth-panel" data-growth-panel="actions" hidden><div class="growth-panel-head"><div><h2>Approved action plan</h2><p>Only owner-approved findings become actions.</p></div></div><div id="growth-actions" class="growth-records"></div></section>
+      <section class="growth-panel" data-growth-panel="results" hidden><div class="growth-panel-head"><div><h2>Measured results</h2><p>Record what changed after an approved action.</p></div><form id="growth-result-form"><input name="title" aria-label="Result title" required maxlength="160" placeholder="Result title"><input name="detail" aria-label="Measured outcome and evidence" required maxlength="240" placeholder="Measured outcome and evidence"><button>Record result</button></form></div><div id="growth-results" class="growth-records"></div></section>
+    </section>
+
+    <section id="workspace-site-pulse" class="workspace-view" data-workspace-view="site-pulse">
+    <div class="pulse-hero">
+      <div><span>SITE PULSE · VERIFIED ANALYTICS</span><h2>See what is actually happening.</h2><p>Real website activity stays separate from AI interpretation and owner decisions.</p></div>
+      <div class="pulse-health"><i aria-hidden="true"></i><strong>Tracking connected</strong><small>Production metrics API</small></div>
+    </div>
+    <nav class="pulse-tabs" aria-label="Site Pulse sections">
+      <button type="button" data-pulse-target="pulse-overview">Overview</button><button type="button" data-pulse-target="pulse-visitors">Visitors</button><button type="button" data-pulse-target="pulse-content">Content</button><button type="button" data-pulse-target="pulse-conversions">Conversions</button><button type="button" data-pulse-target="diagnostics-panel">Diagnostics</button>
+    </nav>
+
+    <section class="toolbar-card" id="pulse-overview" aria-label="Date range">
       <div class="auth-row">
         <label>Date range
           <select id="dash-days">
@@ -102,10 +181,10 @@
           <input id="dash-to" type="date" disabled>
         </label>
         <button id="dash-load" type="button">Refresh</button>
-        <button id="dash-mark-internal" class="secondary" type="button" title="Mark this browser as Internal (owner / Rajiv)" aria-pressed="false">Mark this browser Internal</button>
+        <button id="dash-mark-internal" class="secondary" type="button" title="Exclude this authorized internal browser from customer analytics" aria-pressed="false">Mark this browser Internal</button>
         <button id="dash-unmark-internal" class="secondary" type="button" hidden>Unmark Internal</button>
       </div>
-      <p class="mark-guidance small muted">To exclude your testing, mark every browser and device used by the owner or Rajiv as Internal. Private windows and cleared cookies are not identified automatically — they stay Unknown unless marked again.</p>
+      <p class="mark-guidance small muted">To exclude internal testing, mark every authorized team browser and device as Internal. Private windows and cleared cookies stay Unknown unless marked again.</p>
       <p id="dash-status" class="status-line">Loading analytics…</p>
       <p id="dash-empty" class="empty-external" hidden>No verified external customer traffic in this range.</p>
       <p id="dash-invariants" class="invariant-warn" hidden></p>
@@ -180,7 +259,7 @@
       <div class="chart-frame chart-frame-lg"><canvas id="chart-growth" aria-label="Growth chart"></canvas></div>
     </section>
 
-    <p class="section-label">Geography</p>
+    <p class="section-label" id="pulse-visitors">Geography</p>
     <section class="panel" aria-labelledby="geo-heading">
       <h2 id="geo-heading">Visitors by country</h2>
       <p class="note" id="geo-note">Share of reportable visitors by country. Outside India means every visitor whose country is not India (including Unknown).</p>
@@ -269,7 +348,7 @@
       </article>
     </section>
 
-    <p class="section-label">Content &amp; engagement</p>
+    <p class="section-label" id="pulse-content">Content &amp; engagement</p>
     <section class="panel">
       <h2>Top pages</h2>
       <p class="note">Time on page and views.</p>
@@ -291,7 +370,7 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="pulse-conversions">
       <h2>Engagement</h2>
       <p class="note" id="engagement-note">Meaningful scrolls, CTA clicks, downloads, and contact clicks only.</p>
       <div class="chart-frame chart-frame-md"><canvas id="chart-engagement"></canvas></div>
@@ -331,10 +410,15 @@
         </table>
       </div>
     </section>
+    </section>
+    </div>
   </main>
+
+  <dialog id="search-dialog" class="workspace-dialog" aria-labelledby="search-dialog-title"><form method="dialog" class="dialog-head"><div><small>WORKSPACE SEARCH</small><h2 id="search-dialog-title">Find pages and records</h2></div><button class="secondary" aria-label="Close search">Close</button></form><label class="dialog-search"><span class="visually-hidden">Search dashboard</span><input id="search-query" type="search" autocomplete="off" placeholder="Search pipeline, evidence, knowledge, decisions…"></label><div id="search-results" class="dialog-results"><p class="muted">Type to search the selected company.</p></div></dialog>
+  <dialog id="notifications-dialog" class="workspace-dialog" aria-labelledby="notifications-dialog-title"><form method="dialog" class="dialog-head"><div><small>NOTIFICATIONS</small><h2 id="notifications-dialog-title">Items needing attention</h2></div><button class="secondary" aria-label="Close notifications">Close</button></form><div id="notification-results" class="dialog-results"><p class="muted">Checking current records…</p></div></dialog>
 
   <input id="dash-token" type="hidden" value="" autocomplete="off">
   <!-- Analytics shim intentionally omitted: /analytics/ must not create public page views. -->
-  <script defer src="/js/aics-analytics-dashboard.js?v=20261120-ui"></script>
+  <script defer src="/js/aics-analytics-dashboard.js?v=20261123-company-switch"></script>
 </body>
 </html>

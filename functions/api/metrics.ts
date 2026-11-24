@@ -10,6 +10,7 @@ import {
   validateReportInvariants,
   type AudienceFilter,
 } from "./_lib/analytics-rules";
+import { authorizeInternal, canAccessCompany } from "./_lib/internal-auth";
 
 type MetricsEnv = {
   LEAD_LOG?: KVNamespace;
@@ -409,11 +410,20 @@ async function loadLeads(
 export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) => {
   const started = Date.now();
   try {
-    const auth = await authorize(request, env);
+    const auth = await authorizeInternal(request, env);
     if (!auth.ok) {
       return new Response(
         JSON.stringify({ ok: false, error: auth.error, code: auth.code }),
         { status: auth.status, headers },
+      );
+    }
+
+    const url = new URL(request.url);
+    const requestedCompany = clean(url.searchParams.get("company") || "aics", 40).toLowerCase();
+    if (!canAccessCompany(auth.identity, requestedCompany)) {
+      return new Response(
+        JSON.stringify({ ok: false, error: "Company access is not allowed.", code: "company_forbidden" }),
+        { status: 403, headers },
       );
     }
 
@@ -426,7 +436,6 @@ export const onRequestGet: PagesFunction<MetricsEnv> = async ({ request, env }) 
       });
     }
 
-    const url = new URL(request.url);
     const mode = clean(url.searchParams.get("mode") || "dashboard", 40);
     const realtimeOnly = mode === "realtime" || url.searchParams.get("realtime") === "1";
     const forceRefresh = url.searchParams.get("refresh") === "1";
