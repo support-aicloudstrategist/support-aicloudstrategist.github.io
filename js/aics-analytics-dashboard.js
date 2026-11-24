@@ -137,7 +137,7 @@
       target.innerHTML = '<p class="muted">Owner access is required to manage users.</p>';
       return;
     }
-    target.innerHTML = adminUsers.length ? adminUsers.map((user) => `<article><span><b>${escapeHtml(user.name)}</b><small>${escapeHtml(user.email)} · ${escapeHtml(user.role)} · ${escapeHtml((user.companies || []).join(", "))}</small></span><button type="button" data-user-revoke="${escapeHtml(user.id)}">Revoke</button></article>`).join("") : '<p class="muted">No named users yet.</p>';
+    target.innerHTML = adminUsers.length ? adminUsers.map((user) => `<article><span><b>${escapeHtml(user.name)}</b><small>${escapeHtml(user.email)} · ${escapeHtml(user.role)} · ${escapeHtml((user.companies || []).join(", "))}</small><small>${user.expires_at ? `Expires ${escapeHtml(new Date(user.expires_at).toLocaleDateString())}` : "Legacy access · recreate to add expiry"}</small></span><button type="button" data-user-revoke="${escapeHtml(user.id)}">Revoke</button></article>`).join("") : '<p class="muted">No named users yet.</p>';
   };
 
   const dailySeedTasks = [
@@ -251,6 +251,7 @@
     const detail = String(fields.get("detail") || fields.get("next_action") || fields.get("milestone") || "").trim();
     if (!title || !detail && !fields.get("amount")) return;
     const data = { title, detail, status: String(fields.get("status") || "active") };
+    let uploadedFileKey = "";
     ["stage", "owner", "next_action", "milestone", "risk", "amount", "due_date"].forEach((key) => { const value = String(fields.get(key) || "").trim(); if (value) data[key] = value; });
     if (module === "evidence") {
       const file = fields.get("file");
@@ -259,13 +260,21 @@
       if (status) status.textContent = "Uploading evidence securely…";
       try {
         const uploaded = await evidenceFileRequest({ method: "POST", file, name: file.name });
+        uploadedFileKey = uploaded.file.key;
         Object.assign(data, { file_key: uploaded.file.key, file_name: uploaded.file.name, file_size: uploaded.file.size, content_type: uploaded.file.content_type });
       } catch (error) {
         if (status) status.textContent = error instanceof Error ? error.message : "Evidence upload failed.";
         return;
       }
     }
-    await internalRequest(module, { method: "POST", body: { data } });
+    try {
+      await internalRequest(module, { method: "POST", body: { data } });
+    } catch (error) {
+      if (uploadedFileKey) await evidenceFileRequest({ method: "DELETE", key: uploadedFileKey }).catch(() => {});
+      const evidenceStatus = document.getElementById("ops-evidence-status");
+      if (module === "evidence" && evidenceStatus) evidenceStatus.textContent = error instanceof Error ? error.message : "Evidence record could not be saved.";
+      return;
+    }
     form.reset();
     const evidenceStatus = document.getElementById("ops-evidence-status");
     if (module === "evidence" && evidenceStatus) evidenceStatus.textContent = "Evidence uploaded and recorded.";

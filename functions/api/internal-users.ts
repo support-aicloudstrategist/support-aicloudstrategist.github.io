@@ -1,7 +1,7 @@
 import { authorizeInternal, sha256Hex, type InternalAuthEnv, type InternalRole } from "./_lib/internal-auth";
 
 type UsersEnv = InternalAuthEnv & { AICS_INTERNAL_OS?: KVNamespace };
-type StoredUser = { id: string; name: string; email: string; role: InternalRole; companies: string[]; status: "active"; token_hash: string; created_at: string; created_by: string };
+type StoredUser = { id: string; name: string; email: string; role: InternalRole; companies: string[]; status: "active"; token_hash: string; created_at: string; expires_at: string; created_by: string };
 
 const headers = { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" };
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers });
@@ -38,12 +38,16 @@ export const onRequestPost: PagesFunction<UsersEnv> = async ({ request, env }) =
   const role: InternalRole = body?.role === "owner" ? "owner" : "viewer";
   const companies = Array.from(new Set((Array.isArray(body?.companies) ? body.companies : ["aics"]).map((company: unknown) => clean(company, 40).toLowerCase()).filter((company: string) => ["aics", "dst"].includes(company))));
   if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !companies.length) return json({ ok: false, code: "invalid_user", error: "Name, valid email and at least one company are required." }, 400);
+  const existingKeys = await ctx.store.list({ prefix: "internal:user:v1:", limit: 200 });
+  const existingUsers = (await Promise.all(existingKeys.keys.map((key) => ctx.store.get(key.name, "json") as Promise<StoredUser | null>))).filter(Boolean) as StoredUser[];
+  if (existingUsers.some((user) => user.email === email && user.status === "active")) return json({ ok: false, code: "duplicate_user", error: "An active user already exists for this email." }, 409);
   const accessToken = randomToken();
   const tokenHash = await sha256Hex(accessToken);
   const now = new Date().toISOString();
-  const user: StoredUser = { id: crypto.randomUUID(), name, email, role, companies, status: "active", token_hash: tokenHash, created_at: now, created_by: ctx.identity.subject };
+  const expiresAt = new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString();
+  const user: StoredUser = { id: crypto.randomUUID(), name, email, role, companies, status: "active", token_hash: tokenHash, created_at: now, expires_at: expiresAt, created_by: ctx.identity.subject };
   await ctx.store.put(`internal:user:v1:${user.id}`, JSON.stringify(user));
-  await ctx.store.put(`internal:access:v1:${tokenHash}`, JSON.stringify({ id: user.id, role, companies, status: "active" }));
+  await ctx.store.put(`internal:access:v1:${tokenHash}`, JSON.stringify({ id: user.id, role, companies, status: "active", expires_at: expiresAt }), { expirationTtl: 90 * 24 * 60 * 60 });
   return json({ ok: true, user: publicUser(user), access_token: accessToken, notice: "Show this access code once and share it through an approved secure channel." }, 201);
 };
 

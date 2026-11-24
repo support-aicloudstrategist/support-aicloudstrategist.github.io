@@ -47,8 +47,9 @@ export async function authorizeInternal(request: Request, env: InternalAuthEnv):
   }
   if (env.AICS_INTERNAL_OS) {
     const hash = await sha256Hex(supplied);
-    const access = await env.AICS_INTERNAL_OS.get(`internal:access:v1:${hash}`, "json") as { id?: string; role?: InternalRole; companies?: string[]; status?: string } | null;
-    if (access?.id && access.status === "active" && (access.role === "owner" || access.role === "viewer") && Array.isArray(access.companies)) {
+    const access = await env.AICS_INTERNAL_OS.get(`internal:access:v1:${hash}`, "json") as { id?: string; role?: InternalRole; companies?: string[]; status?: string; expires_at?: string } | null;
+    const unexpired = Boolean(access?.expires_at && Date.parse(access.expires_at) > Date.now());
+    if (access?.id && access.status === "active" && unexpired && (access.role === "owner" || access.role === "viewer") && Array.isArray(access.companies)) {
       return { ok: true, identity: { subject: `user:${access.id}`, role: access.role, companies: access.companies.map((company) => String(company).toLowerCase()) } };
     }
   }

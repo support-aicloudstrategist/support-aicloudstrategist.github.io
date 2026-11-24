@@ -13,6 +13,7 @@ const checks = [
   ["downloads are private and no-store", api.includes('"Cache-Control": "private, no-store"')],
   ["evidence form requires a file", html.includes('name="file"') && html.includes("Upload evidence")],
   ["dashboard uploads then records metadata", js.includes("evidenceFileRequest") && js.includes("file_key")],
+  ["orphaned uploads are cleaned up if metadata fails", js.includes("uploadedFileKey") && js.includes('method: "DELETE", key: uploadedFileKey')],
   ["file downloads stay authenticated", js.includes("data-evidence-download") && js.includes("Authorization: `Bearer ${auth}`")],
   ["file deletion precedes metadata deletion", js.includes('method: "DELETE", key: record.data.file_key')],
 ];
