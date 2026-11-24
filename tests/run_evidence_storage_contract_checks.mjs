@@ -5,10 +5,11 @@ const html = fs.readFileSync("analytics/index.html", "utf8");
 const js = fs.readFileSync("js/aics-analytics-dashboard.js", "utf8");
 
 const checks = [
-  ["R2 binding is required", api.includes("AICS_EVIDENCE?: R2Bucket") && api.includes("storage_unavailable")],
+  ["existing private KV binding is required", api.includes("AICS_INTERNAL_OS?: KVNamespace") && api.includes("storage_unavailable")],
   ["uploads are owner only", api.includes("context(request, env, true)") && api.includes("write_forbidden")],
-  ["company scope is enforced", api.includes("canAccessCompany") && api.includes("`${ctx.company}/evidence/`")],
-  ["size and file types are bounded", api.includes("10 * 1024 * 1024") && api.includes("ALLOWED_TYPES")],
+  ["company scope is enforced", api.includes("canAccessCompany") && api.includes("internal:evidence:v1:${ctx.company}:")],
+  ["size and file types are bounded", api.includes("5 * 1024 * 1024") && api.includes("ALLOWED_TYPES")],
+  ["binary files use KV metadata", api.includes("getWithMetadata") && api.includes("originalName: name, contentType")],
   ["downloads are private and no-store", api.includes('"Cache-Control": "private, no-store"')],
   ["evidence form requires a file", html.includes('name="file"') && html.includes("Upload evidence")],
   ["dashboard uploads then records metadata", js.includes("evidenceFileRequest") && js.includes("file_key")],
