@@ -1,26 +1,36 @@
 account,buyer,role,touches,status,next_action,notes
-Postman,Engineering leadership (Platform/Infra),VP Eng / Head of Platform,0,follow_up_queued,Send Day1 touch if needed else Day+3 nudge,Day2: follow-up logged; ICP product SaaS
-Freshworks,Cloud / Platform lead,Head of Infrastructure,0,follow_up_queued,Send Day1 touch if needed else Day+3 nudge,Day2: follow-up logged; shared platform ownership
-Zoho,FinOps or Cloud COE,FinOps / Cloud lead,0,follow_up_queued,Send Day1 touch if needed else Day+3 nudge,Day2: follow-up logged; multi-product cloud
-Razorpay,Platform / SRE lead,Head of Platform,0,follow_up_queued,Send Day1 touch if needed else Day+3 nudge,Day2: follow-up logged; fintech SaaS
-Chargebee,VP Engineering,VP Engineering,0,follow_up_queued,Send Day1 touch if needed else Day+3 nudge,Day2: follow-up logged; cost decision blocked
-BrowserStack,Infra / DevOps lead,Head of Infra,0,first_touch_queued,Send Day2 first touch 1,Day2: first-touch draft ready
-Hasura,Platform eng lead,Head of Platform,0,first_touch_queued,Send Day2 first touch 2,Day2: first-touch draft ready
-Druva,Cloud ops / FinOps,FinOps lead,0,first_touch_queued,Send Day2 first touch 3,Day2: first-touch draft ready
-Yellow.ai,AI platform / Eng lead,VP Eng / AI Platform,0,first_touch_queued,Send Day2 first touch 4,Day2: first-touch draft ready; GPU/inference angle
-Observe.ai,Eng / Platform lead,VP Engineering,0,first_touch_queued,Send Day2 first touch 5,Day2: first-touch draft ready; ML infra angle
-Fractal Analytics,Cloud COE / CTO office,Cloud COE lead,0,prospect,Research buyer LinkedIn → connect,ICP: AI/analytics; shared GPU queues
-Tata Digital,Platform / Cloud lead,Head of Cloud,0,prospect,Research buyer LinkedIn → connect,ICP: digital product; multi-cloud governance
-PhonePe,SRE / Platform,Head of SRE,0,prospect,Research buyer LinkedIn → connect,ICP: scale product; bill ownership fights
-CRED,Infra / Platform,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP: consumer fintech product; cloud spend clarity
-Meesho,Platform eng,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: marketplace product; cost vs growth
-ShareChat / Moj,Infra / ML platform,ML Platform lead,0,prospect,Research buyer LinkedIn → connect,ICP: consumer + ML; GPU idle risk
-Unacademy,Cloud / Platform,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: edtech SaaS; cloud ownership
-Lenskart,Tech / Cloud lead,CTO office / Cloud,0,prospect,Research buyer LinkedIn → connect,ICP: product retail tech; AWS/Azure spend
-Ola Electric / Ola,Platform / Data,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP: product+AI; cost decision blocked
-Delhivery,Infra / Platform,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP: logistics tech; cloud cost ownership
-CleverTap,Head of Platform / VP Eng,VP Eng / Platform,0,researched,Resolve LinkedIn buyer → first touch,Day2 research: engagement SaaS; multi-region cloud ownership
-Darwinbox,Head of Infra / VP Eng,Head of Infra,0,researched,Resolve LinkedIn buyer → first touch,Day2 research: HR SaaS; shared cluster attribution
-Innovaccer,VP Eng / Cloud COE,VP Eng / Platform,0,researched,Resolve LinkedIn buyer → first touch,Day2 research: health data/AI platform; no PHI in outreach
-Whatfix,Head of Platform / SRE,Head of Platform,0,researched,Resolve LinkedIn buyer → first touch,Day2 research: enterprise SaaS; shared platform bill debates
-Sprinklr,VP Eng / FinOps / Cloud,VP Eng / FinOps,0,researched,Resolve LinkedIn buyer → first touch,Day2 research: large product SaaS; AI spend ownership
+Postman,Engineering leadership (Platform/Infra),VP Eng / Head of Platform,0,follow_up_queued,Continue cadence / Rajiv send queue,Days1–4 logged
+Freshworks,Cloud / Platform lead,Head of Infrastructure,0,follow_up_queued,Continue cadence / Rajiv send queue,Days1–4 logged
+Zoho,FinOps or Cloud COE,FinOps / Cloud lead,0,follow_up_queued,Continue cadence / Rajiv send queue,Days1–4 logged
+Razorpay,Platform / SRE lead,Head of Platform,0,follow_up_queued,Continue cadence / Rajiv send queue,Days1–4 logged
+Chargebee,VP Engineering,VP Engineering,0,follow_up_queued,Continue cadence / Rajiv send queue,Days1–4 logged
+BrowserStack,Infra / DevOps lead,Head of Infra,0,follow_up_queued,Send pending FT else nudge,Days2–4 logged
+Hasura,Platform eng lead,Head of Platform,0,follow_up_queued,Send pending FT else nudge,Days2–4 logged
+Druva,Cloud ops / FinOps,FinOps lead,0,follow_up_queued,Send pending FT else nudge,Days2–4 logged
+Yellow.ai,AI platform / Eng lead,VP Eng / AI Platform,0,follow_up_queued,Send pending FT else nudge,Days2–4 logged
+Observe.ai,Eng / Platform lead,VP Engineering,0,follow_up_queued,Send pending FT else nudge,Days2–4 logged
+Fractal Analytics,Cloud COE / CTO office,Cloud COE lead,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+Tata Digital,Platform / Cloud lead,Head of Cloud,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+PhonePe,SRE / Platform,Head of SRE,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+CRED,Infra / Platform,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+Meesho,Platform eng,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+ShareChat / Moj,Infra / ML platform,ML Platform lead,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+Unacademy,Cloud / Platform,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+Lenskart,Tech / Cloud lead,CTO office / Cloud,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+Ola Electric / Ola,Platform / Data,Head of Platform,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+Delhivery,Infra / Platform,Head of Infra,0,prospect,Research buyer LinkedIn → connect,ICP pipeline
+CleverTap,Head of Platform / VP Eng,VP Eng / Platform,0,follow_up_queued,Send Day3 FT if needed else Day4 nudge,Day4 follow-up logged
+Darwinbox,Head of Infra / VP Eng,Head of Infra,0,follow_up_queued,Send Day3 FT if needed else Day4 nudge,Day4 follow-up logged
+Innovaccer,VP Eng / Cloud COE,VP Eng / Platform,0,follow_up_queued,Send Day3 FT if needed else Day4 nudge,Day4 follow-up logged
+Whatfix,Head of Platform / SRE,Head of Platform,0,follow_up_queued,Send Day3 FT if needed else Day4 nudge,Day4 follow-up logged
+Sprinklr,VP Eng / FinOps / Cloud,VP Eng / FinOps,0,follow_up_queued,Send Day3 FT if needed else Day4 nudge,Day4 follow-up logged
+MoEngage,VP Eng / Head of Platform,VP Eng / Platform,0,first_touch_queued,Send Day4 first touch 1,Day4 FT draft ready
+LeadSquared,Head of Infra / VP Eng,Head of Infra,0,first_touch_queued,Send Day4 first touch 2,Day4 FT draft ready
+Cashfree Payments,Head of Platform / SRE,Head of Platform,0,first_touch_queued,Send Day4 first touch 3,Day4 FT draft ready
+Capillary Technologies,Head of Cloud / FinOps / VP Eng,Head of Cloud,0,first_touch_queued,Send Day4 first touch 4,Day4 FT draft ready
+IDfy,VP Eng / AI Platform / Infra,VP Eng / AI Platform,0,first_touch_queued,Send Day4 first touch 5,Day4 FT draft ready
+Zenoti,VP Eng / Head of Cloud / Platform,VP Eng / Platform,0,researched,Resolve LinkedIn → first touch,Day4 research: vertical SaaS
+Shiprocket,Head of Platform / SRE / VP Eng,Head of Platform,0,researched,Resolve LinkedIn → first touch,Day4 research: commerce/logistics SaaS
+Practo,VP Eng / Cloud / Platform,VP Eng / Platform,0,researched,Resolve LinkedIn → first touch,Day4 research: health product; no PHI outreach
+HackerEarth,Head of Infra / VP Eng,Head of Infra,0,researched,Resolve LinkedIn → first touch,Day4 research: developer SaaS
+Dukaan,VP Eng / Head of Platform,VP Eng / Platform,0,researched,Resolve LinkedIn → first touch,Day4 research: commerce SaaS
