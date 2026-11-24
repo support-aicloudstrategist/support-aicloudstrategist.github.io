@@ -9,6 +9,7 @@ export type InternalIdentity = {
 export type InternalAuthEnv = {
   AICS_REPORT_TOKEN?: string;
   AICS_INTERNAL_OS?: KVNamespace;
+  AICS_IDENTITY_DB?: D1Database;
 };
 
 export type InternalAuthResult =
@@ -45,12 +46,14 @@ export async function authorizeInternal(request: Request, env: InternalAuthEnv):
   if ((await sha256Hex(supplied)) === PRODUCT_READER_SHA256) {
     return { ok: true, identity: { subject: "company-agents-reader", role: "viewer", companies: ["aics"] } };
   }
-  if (env.AICS_INTERNAL_OS) {
+  if (env.AICS_IDENTITY_DB) {
     const hash = await sha256Hex(supplied);
-    const access = await env.AICS_INTERNAL_OS.get(`internal:access:v1:${hash}`, "json") as { id?: string; role?: InternalRole; companies?: string[]; status?: string; expires_at?: string } | null;
+    const access = await env.AICS_IDENTITY_DB.prepare("SELECT id, role, companies, status, expires_at FROM internal_users WHERE token_hash = ? LIMIT 1").bind(hash).first<{ id?: string; role?: InternalRole; companies?: string; status?: string; expires_at?: string }>();
     const unexpired = Boolean(access?.expires_at && Date.parse(access.expires_at) > Date.now());
-    if (access?.id && access.status === "active" && unexpired && (access.role === "owner" || access.role === "viewer") && Array.isArray(access.companies)) {
-      return { ok: true, identity: { subject: `user:${access.id}`, role: access.role, companies: access.companies.map((company) => String(company).toLowerCase()) } };
+    let companies: string[] = [];
+    try { companies = JSON.parse(access?.companies || "[]"); } catch { companies = []; }
+    if (access?.id && access.status === "active" && unexpired && (access.role === "owner" || access.role === "viewer") && Array.isArray(companies)) {
+      return { ok: true, identity: { subject: `user:${access.id}`, role: access.role, companies: companies.map((company) => String(company).toLowerCase()) } };
     }
   }
   if (!ownerToken) {
