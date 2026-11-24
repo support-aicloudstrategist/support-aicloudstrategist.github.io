@@ -64,6 +64,7 @@ const indexableExact = new Set([
   "/resources/ivf-clinic-lead-leakage-owner-map",
   "/resources/missed-patient-calls-owner-path",
   "/resources/manual-work-automation-owner-path",
+  "/resources/manual-data-entry-owner-path",
   "/resources/middle-east-healthcare-growthos-cloud-trust-readiness-map",
   "/resources/middle-east-healthcare-vendor-evidence-checklist",
   "/resources/north-america-healthtech-ai-trust-finops-submission-gate",
