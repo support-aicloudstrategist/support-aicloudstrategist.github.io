@@ -1,6 +1,6 @@
 # Can We Leave This SaaS Tool? 6 Exit Checks Before Renewal
 
-![Can We Leave This SaaS Tool? 6 Exit Checks Before Renewal](https://support-aicloudstrategist.github.io/publications/2026-11-24/saas-exit-readiness-checks.png)
+![Can We Leave This SaaS Tool? 6 Exit Checks Before Renewal](https://aicloudstrategist.com/publications/2026-11-24/saas-exit-readiness-checks.png)
 
 A practical educational checklist for small-business owners testing data portability, ownership, restore evidence, and exit sequencing before a SaaS renewal decision.
 
@@ -13,6 +13,6 @@ A practical educational checklist for small-business owners testing data portabi
 
 **Decision rule:** Renew, renegotiate, or exit only after the required records, owners, test evidence, and sequence are clear.
 
-Worksheet: https://support-aicloudstrategist.github.io/publications/2026-11-24/saas-exit-readiness-checks.csv
+Worksheet: https://aicloudstrategist.com/publications/2026-11-24/saas-exit-readiness-checks.csv
 
 **Proof boundary:** Educational vendor-exit planning material only — not legal, compliance, privacy, security, procurement, accounting, contract, or production migration advice. No client results, certifications, rankings, savings, or guarantees are claimed.
