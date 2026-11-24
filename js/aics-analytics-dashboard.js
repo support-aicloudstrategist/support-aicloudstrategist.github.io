@@ -31,7 +31,7 @@
   let lastDashboard = null;
   let lastDiagnostics = null;
   let sessionIdentity = null;
-  let dailyState = { active: null, history: [] };
+  let dailyState = { active: null, activeVersion: null, history: [] };
   let dailyTimer = null;
   const operationsState = { crm: [], delivery: [], finance: [], evidence: [], knowledge: [] };
   let adminUsers = [];
@@ -182,14 +182,20 @@
   };
   const loadDailyOperations = async () => {
     const [tasks, history] = await Promise.all([internalRequest("tasks"), internalRequest("history")]);
-    dailyState.active = (tasks.records || []).find((record) => record.id === "active-day")?.data || null;
+    const activeRecord = (tasks.records || []).find((record) => record.id === "active-day");
+    dailyState.active = activeRecord?.data || null;
+    dailyState.activeVersion = activeRecord?.version || null;
     dailyState.history = (history.records || []).filter((record) => record.data?.status === "closed").sort((a, b) => Number(b.data.day_number) - Number(a.data.day_number));
     renderDailyOperations();
     window.clearInterval(dailyTimer);
     syncDailyTimer();
     dailyTimer = window.setInterval(syncDailyTimer, 1000);
   };
-  const saveActiveDay = () => internalRequest("tasks", { method: "POST", body: { id: "active-day", data: dailyState.active } });
+  const saveActiveDay = async () => {
+    const result = await internalRequest("tasks", { method: "POST", body: { id: "active-day", data: dailyState.active, ...(dailyState.activeVersion ? { expected_version: dailyState.activeVersion } : {}) } });
+    dailyState.activeVersion = result.record.version;
+    return result;
+  };
 
   const renderCompanyOperations = () => {
     let total = 0;
@@ -440,7 +446,7 @@
   document.getElementById("workspace-growth-navigator")?.addEventListener("click", async (event) => {
     const id = event.target.closest?.("[data-growth-approve]")?.getAttribute("data-growth-approve");
     if (!id) return; const record = growthState.find((item) => item.id === id); if (!record) return;
-    await internalRequest("decisions", { method: "POST", body: { id, data: { ...record.data, status: "approved", approved_at: new Date().toISOString() } } }); await loadGrowthNavigator();
+    await internalRequest("decisions", { method: "POST", body: { id, expected_version: record.version, data: { ...record.data, status: "approved", approved_at: new Date().toISOString() } } }); await loadGrowthNavigator();
   });
   document.getElementById("growth-result-form")?.addEventListener("submit", async (event) => {
     event.preventDefault(); const fields = new FormData(event.currentTarget); const title = String(fields.get("title") || "").trim(); const detail = String(fields.get("detail") || "").trim(); if (!title || !detail) return;
@@ -487,6 +493,7 @@
     const carried = (previous?.tasks || []).filter((task) => !task.done).map((task) => ({ ...task, id: crypto.randomUUID(), carried: true }));
     const dayNumber = Math.min(30, (dailyState.history?.length || 0) + 1);
     dailyState.active = { status: "active", day_number: dayNumber, started_at: new Date().toISOString(), tasks: [...carried, ...dailySeedTasks.map((label) => ({ id: crypto.randomUUID(), label, done: false, carried: false }))] };
+    dailyState.activeVersion = null;
     await saveActiveDay(); renderDailyOperations(); syncDailyTimer();
   });
   document.getElementById("daily-close")?.addEventListener("click", async () => {
@@ -495,7 +502,7 @@
     const closed = { ...dailyState.active, status: "closed", ended_at: endedAt, duration: formatDuration(Date.parse(endedAt) - Date.parse(dailyState.active.started_at)), completed_count: dailyState.active.tasks.filter((task) => task.done).length, task_count: dailyState.active.tasks.length };
     await internalRequest("history", { method: "POST", body: { id: `active-day-${closed.day_number}`, data: closed } });
     await internalRequest("tasks", { method: "DELETE", id: "active-day" });
-    dailyState.active = null; await loadDailyOperations();
+    dailyState.active = null; dailyState.activeVersion = null; await loadDailyOperations();
   });
   document.getElementById("daily-task-list")?.addEventListener("change", async (event) => {
     const id = event.target?.getAttribute?.("data-daily-task");

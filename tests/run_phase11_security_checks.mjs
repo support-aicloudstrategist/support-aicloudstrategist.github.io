@@ -1,7 +1,7 @@
 import fs from "fs";
 const records=fs.readFileSync("functions/api/internal-records.ts","utf8"), backup=fs.readFileSync("functions/api/internal-backup.ts","utf8");
 const checks=[
-  ["audit module exists",records.includes('"audit"')&&records.includes("writeAudit")],
+  ["audit module exists",records.includes('"audit"')&&records.includes("auditStatement")],
   ["audit records are immutable",records.includes("audit_immutable")&&records.includes('ctx.module === "audit"')],
   ["mutations create audit events",records.includes('"create"')&&records.includes('"update"')&&records.includes('"delete"')],
   ["rate limits protect reads and writes",records.includes("enforceRateLimit")&&records.includes("rate_limited")&&records.includes('"Retry-After"')],

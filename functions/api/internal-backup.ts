@@ -1,6 +1,6 @@
 import { authorizeInternal, canAccessCompany, type InternalAuthEnv } from "./_lib/internal-auth";
 
-type BackupEnv = InternalAuthEnv & { AICS_INTERNAL_OS?: KVNamespace };
+type BackupEnv = InternalAuthEnv & { AICS_INTERNAL_OS?: KVNamespace; AICS_IDENTITY_DB?: D1Database };
 const MODULES = ["tasks", "crm", "history", "finance", "delivery", "evidence", "knowledge", "decisions", "audit"];
 const RESTORABLE_MODULES = MODULES.filter((module) => module !== "audit");
 const MAX_BACKUP_BYTES = 24 * 1024 * 1024;
@@ -37,8 +37,8 @@ async function ownerContext(request: Request, env: BackupEnv) {
   const auth = await authorizeInternal(request, env);
   if (!auth.ok) return { response: json({ ok: false, code: auth.code, error: auth.error }, auth.status) };
   if (auth.identity.role !== "owner") return { response: json({ ok: false, code: "backup_forbidden", error: "Owner access is required." }, 403) };
-  if (!env.AICS_INTERNAL_OS) return { response: json({ ok: false, code: "storage_unavailable", error: "Internal storage is not configured." }, 503) };
-  return { identity: auth.identity, store: env.AICS_INTERNAL_OS };
+  if (!env.AICS_INTERNAL_OS || !env.AICS_IDENTITY_DB) return { response: json({ ok: false, code: "storage_unavailable", error: "Internal storage is not configured." }, 503) };
+  return { identity: auth.identity, store: env.AICS_INTERNAL_OS, db: env.AICS_IDENTITY_DB };
 }
 
 export const onRequestGet: PagesFunction<BackupEnv> = async ({ request, env }) => {
@@ -49,11 +49,11 @@ export const onRequestGet: PagesFunction<BackupEnv> = async ({ request, env }) =
   if (auth.identity.role !== "owner") return new Response(JSON.stringify({ ok: false, code: "backup_forbidden", error: "Owner access is required.", request_id: requestId }), { status: 403, headers: baseHeaders });
   const company = String(new URL(request.url).searchParams.get("company") || "aics").trim().toLowerCase();
   if (!canAccessCompany(auth.identity, company)) return new Response(JSON.stringify({ ok: false, code: "company_forbidden", error: "Company access is not allowed.", request_id: requestId }), { status: 403, headers: baseHeaders });
-  if (!env.AICS_INTERNAL_OS) return new Response(JSON.stringify({ ok: false, code: "storage_unavailable", error: "Internal storage is not configured.", request_id: requestId }), { status: 503, headers: baseHeaders });
+  if (!env.AICS_INTERNAL_OS || !env.AICS_IDENTITY_DB) return new Response(JSON.stringify({ ok: false, code: "storage_unavailable", error: "Internal storage is not configured.", request_id: requestId }), { status: 503, headers: baseHeaders });
   const records: Record<string, unknown[]> = {};
   for (const module of MODULES) {
-    const listed = await env.AICS_INTERNAL_OS.list({ prefix: `internal:v1:${company}:${module}:`, limit: 1000 });
-    records[module] = (await Promise.all(listed.keys.map((key) => env.AICS_INTERNAL_OS!.get(key.name, "json")))).filter(Boolean);
+    const result = await env.AICS_IDENTITY_DB.prepare("SELECT * FROM internal_records WHERE company = ? AND module = ? ORDER BY updated_at DESC LIMIT 1000").bind(company, module).all();
+    records[module] = (result.results || []).map((row: any) => ({ ...row, data: JSON.parse(row.data || "{}") }));
   }
   let evidence;
   try { evidence = await collectEvidence(env.AICS_INTERNAL_OS, company); }
@@ -107,24 +107,25 @@ export const onRequestPost: PagesFunction<BackupEnv> = async ({ request, env }) 
 
   const current: Record<string, unknown[]> = {};
   for (const module of RESTORABLE_MODULES) {
-    const listed = await ctx.store.list({ prefix: `internal:v1:${company}:${module}:`, limit: 1000 });
-    current[module] = (await Promise.all(listed.keys.map((key) => ctx.store.get(key.name, "json")))).filter(Boolean);
+    const result = await ctx.db.prepare("SELECT * FROM internal_records WHERE company = ? AND module = ? ORDER BY updated_at DESC LIMIT 1000").bind(company, module).all();
+    current[module] = (result.results || []).map((row: any) => ({ ...row, data: JSON.parse(row.data || "{}") }));
   }
   let currentEvidence;
   try { currentEvidence = await collectEvidence(ctx.store, company); }
   catch { return json({ ok: false, code: "snapshot_too_large", error: "Current evidence exceeds the safety-snapshot limit; restore was not started." }, 413); }
   const snapshotId = `${Date.now()}-${crypto.randomUUID()}`;
   await ctx.store.put(`internal:restore-snapshot:v1:${company}:${snapshotId}`, JSON.stringify({ schema_version: 1, company, generated_at: new Date().toISOString(), records: current, evidence_files: currentEvidence.files }), { expirationTtl: 604800 });
+  const restoreStatements: D1PreparedStatement[] = [];
   for (const module of RESTORABLE_MODULES) {
-    const listed = await ctx.store.list({ prefix: `internal:v1:${company}:${module}:`, limit: 1000 });
-    await Promise.all(listed.keys.map((key) => ctx.store.delete(key.name)));
-    await Promise.all(normalized[module].map((record) => ctx.store.put(`internal:v1:${company}:${module}:${record.id}`, JSON.stringify({ ...record, company, module, updated_at: new Date().toISOString(), updated_by: ctx.identity.subject }))));
+    restoreStatements.push(ctx.db.prepare("DELETE FROM internal_records WHERE company = ? AND module = ?").bind(company, module));
+    for (const record of normalized[module]) restoreStatements.push(ctx.db.prepare("INSERT INTO internal_records (company, module, id, data, created_at, updated_at, updated_by, version) VALUES (?, ?, ?, ?, ?, ?, ?, ?)").bind(company, module, record.id, JSON.stringify(record.data), record.created_at || new Date().toISOString(), new Date().toISOString(), ctx.identity.subject, Number(record.version || 1)));
   }
   const existingEvidence = await ctx.store.list({ prefix: `internal:evidence:v1:${company}:`, limit: 1000 });
   await Promise.all(existingEvidence.keys.map((key) => ctx.store.delete(key.name)));
   await Promise.all(normalizedEvidence.map((file) => ctx.store.put(file.key, file.value, { metadata: file.metadata })));
   const auditId = `${Date.now()}-${crypto.randomUUID()}`;
   const now = new Date().toISOString();
-  await ctx.store.put(`internal:v1:${company}:audit:${auditId}`, JSON.stringify({ id: auditId, company, module: "audit", data: { action: "restore", actor: ctx.identity.subject, restored_records: total, snapshot_id: snapshotId }, created_at: now, updated_at: now, updated_by: ctx.identity.subject }));
+  restoreStatements.push(ctx.db.prepare("INSERT INTO internal_records (company, module, id, data, created_at, updated_at, updated_by, version) VALUES (?, 'audit', ?, ?, ?, ?, ?, 1)").bind(company, auditId, JSON.stringify({ action: "restore", actor: ctx.identity.subject, restored_records: total, snapshot_id: snapshotId }), now, now, ctx.identity.subject));
+  await ctx.db.batch(restoreStatements);
   return json({ ok: true, restored: true, company, counts: { ...counts, evidence_files: normalizedEvidence.length }, total: total + normalizedEvidence.length, snapshot_created: true });
 };

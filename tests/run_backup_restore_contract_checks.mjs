@@ -8,7 +8,7 @@ const checks = [
   ["restore remains owner only and company scoped", api.includes("ownerContext") && api.includes("canAccessCompany(ctx.identity, company)")],
   ["restore payload and record counts are bounded", api.includes("MAX_BACKUP_BYTES") && api.includes("total > 1000") && api.includes("20000")],
   ["evidence binaries are included and bounded", api.includes("evidence_files") && api.includes("collectEvidence") && api.includes("MAX_EVIDENCE_BYTES")],
-  ["audit history cannot be overwritten", api.includes('module !== "audit"') && api.includes('data: { action: "restore"')],
+  ["audit history cannot be overwritten", api.includes('module !== "audit"') && api.includes('action: "restore"') && api.includes("INSERT INTO internal_records")],
   ["dry run is the default", api.includes("payload.apply !== true") && api.includes("dry_run: true")],
   ["exact company confirmation is required", api.includes('`RESTORE ${company.toUpperCase()}`') && api.includes("confirmation_required")],
   ["a complete rollback snapshot precedes restore", api.includes("internal:restore-snapshot:v1") && api.includes("currentEvidence.files") && api.includes("expirationTtl: 604800")],

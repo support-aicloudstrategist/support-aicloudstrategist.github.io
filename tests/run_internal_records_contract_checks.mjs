@@ -1,12 +1,14 @@
 import fs from "fs";
 
 const source = fs.readFileSync("functions/api/internal-records.ts", "utf8");
+const js = fs.readFileSync("js/aics-analytics-dashboard.js", "utf8");
 const checks = [
-  ["persistent KV binding required", source.includes("AICS_INTERNAL_OS?: KVNamespace") && source.includes("storage_unavailable")],
+  ["transactional D1 binding required", source.includes("AICS_IDENTITY_DB?: D1Database") && source.includes("storage_unavailable")],
   ["company access enforced", source.includes("canAccessCompany") && source.includes("company_forbidden")],
   ["owner-only writes", source.includes('ctx.auth.role !== "owner"') && source.includes("write_forbidden")],
   ["all operating modules covered", ["tasks", "crm", "history", "finance", "delivery", "evidence", "knowledge", "decisions"].every((name) => source.includes(`"${name}"`))],
-  ["records are company and module namespaced", source.includes("internal:v1:${company}:${module}:")],
+  ["records are company and module scoped", source.includes("WHERE company = ? AND module = ?")],
+  ["concurrent edits use optimistic versions", source.includes("expected_version") && source.includes("edit_conflict") && js.includes("activeVersion")],
   ["payload size is bounded", source.includes("20000") && source.includes("record_too_large")],
   ["read write delete handlers exist", source.includes("onRequestGet") && source.includes("onRequestPost") && source.includes("onRequestDelete")],
   ["responses cannot be cached", source.includes('"Cache-Control": "no-store"')],
