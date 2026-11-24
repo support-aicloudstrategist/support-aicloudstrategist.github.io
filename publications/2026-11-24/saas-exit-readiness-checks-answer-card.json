@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Can We Leave This SaaS Tool? 6 Exit Checks Before Renewal",
+  "description": "A practical educational checklist for small-business owners testing data portability, ownership, restore evidence, and exit sequencing before a SaaS renewal decision.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "author": {
+    "@type": "Organization",
+    "name": "AICloudStrategist"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AICloudStrategist"
+  },
+  "claimBoundary": "Educational vendor-exit planning material only \u2014 not legal, compliance, privacy, security, procurement, accounting, contract, or production migration advice. No client results, certifications, rankings, savings, or guarantees are claimed.",
+  "exitChecks": [
+    {
+      "position": 1,
+      "name": "Data Inventory",
+      "text": "What records, files, settings, and history does the team rely on?"
+    },
+    {
+      "position": 2,
+      "name": "Export Format",
+      "text": "Can required information be exported in documented, reusable formats?"
+    },
+    {
+      "position": 3,
+      "name": "Relationships",
+      "text": "Do exports preserve links between customers, messages, invoices, tasks, and attachments?"
+    },
+    {
+      "position": 4,
+      "name": "Ownership",
+      "text": "Who is authorized to export, verify, retain, and approve deletion?"
+    },
+    {
+      "position": 5,
+      "name": "Restore Test",
+      "text": "Can a sample export be opened, counted, and reconstructed in a safe test location?"
+    },
+    {
+      "position": 6,
+      "name": "Exit Sequence",
+      "text": "Are access removal, retention, integrations, billing, and final verification ordered and assigned?"
+    }
+  ]
+}
