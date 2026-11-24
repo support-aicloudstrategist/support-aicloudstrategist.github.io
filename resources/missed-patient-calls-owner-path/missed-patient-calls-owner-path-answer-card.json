@@ -1,0 +1,14 @@
+{
+  "title": "Missed Patient Calls: Clinic Callback Owner Path",
+  "audience": "Clinic owners, practice managers and front-office operators",
+  "search_phrases": ["missed patient calls", "clinic callback process", "clinic AI receptionist missed calls", "why is my clinic missing calls"],
+  "answer": "Choose one safe time window, reconcile the aggregate missed-call signal, assign a callback owner and backup, record status, and test a reversible workflow change before buying an AI receptionist or automation tool.",
+  "four_steps": ["reconcile_window", "assign_owner_and_backup", "record_callback_status", "decide_after_evidence"],
+  "safe_first_inputs": ["time window", "aggregate call count", "callback role", "status", "review time"],
+  "do_not_send": ["names", "phone numbers", "recordings", "health details", "credentials", "production exports"],
+  "stop_rules": ["source is unclear", "owner is unclear", "status cannot be reconciled", "requested input is unsafe"],
+  "proof_boundary": "Synthetic/no-patient-data buyer education only. It is not medical, privacy, legal, security or compliance advice, a customer result, ranking, demand, savings, ROI or revenue claim.",
+  "published": "2026-11-23",
+  "publisher": "AICloudStrategist",
+  "outreach": "none"
+}

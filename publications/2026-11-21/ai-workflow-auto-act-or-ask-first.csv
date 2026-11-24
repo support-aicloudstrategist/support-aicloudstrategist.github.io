@@ -1,0 +1,6 @@
+check,review_area,auto_act_lane,ask_first_lane
+1,Scope,"Bounded, approved and reversible","Ambiguous, external-facing or high-impact"
+2,Data,"Approved, necessary and non-sensitive","Secrets, personal data or restricted data"
+3,Evidence,Rule matched and required evidence is available,"Evidence is missing, stale or conflicting"
+4,Review,Action is logged and included in an approved review process,Human approval is required before action
+5,Failure control,Tested stop or rollback path is ready,"No safe stop, rollback or accountable owner"

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Tool Access Review: 6 Questions Before Connecting Business Data",
+  "description": "A practical educational review for small-business teams before granting an AI tool access to files, inboxes, calendars, customer records, or internal systems.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Organization",
+    "name": "AICloudStrategist"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AICloudStrategist"
+  },
+  "claimBoundary": "Educational access-review material only \u2014 not legal, compliance, privacy, security, procurement, or production authorization advice. No client results, certifications, rankings, savings, or guarantees are claimed.",
+  "reviewQuestions": [
+    {
+      "position": 1,
+      "name": "Purpose",
+      "text": "What specific task needs this access?"
+    },
+    {
+      "position": 2,
+      "name": "Minimum Access",
+      "text": "Can the task work with fewer files, fields, permissions, or systems?"
+    },
+    {
+      "position": 3,
+      "name": "Data Boundary",
+      "text": "Does the connection avoid secrets, credentials, sensitive personal data, and restricted information?"
+    },
+    {
+      "position": 4,
+      "name": "Owner",
+      "text": "Who approves the connection and remains accountable?"
+    },
+    {
+      "position": 5,
+      "name": "Visibility",
+      "text": "Can the team review what the tool reads, creates, changes, and sends?"
+    },
+    {
+      "position": 6,
+      "name": "Exit Path",
+      "text": "Can access be revoked, tokens rotated, exports removed, and changes reviewed?"
+    }
+  ]
+}

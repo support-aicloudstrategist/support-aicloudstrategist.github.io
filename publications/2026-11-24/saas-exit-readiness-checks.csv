@@ -1,0 +1,7 @@
+number,exit_check,owner_question,evidence_status,owner,notes
+1,"Data Inventory","What records, files, settings, and history does the team rely on?",,,
+2,"Export Format","Can required information be exported in documented, reusable formats?",,,
+3,"Relationships","Do exports preserve links between customers, messages, invoices, tasks, and attachments?",,,
+4,"Ownership","Who is authorized to export, verify, retain, and approve deletion?",,,
+5,"Restore Test","Can a sample export be opened, counted, and reconstructed in a safe test location?",,,
+6,"Exit Sequence","Are access removal, retention, integrations, billing, and final verification ordered and assigned?",,,

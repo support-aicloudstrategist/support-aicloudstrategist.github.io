@@ -1,0 +1,10 @@
+{
+  "title": "Too much manual data entry? Owner path",
+  "url": "https://aicloudstrategist.com/resources/manual-data-entry-owner-path/",
+  "audience": "Owners and operators evaluating a manual data-entry workflow",
+  "search_phrases": ["too much manual data entry", "manual data entry taking too long", "how to reduce manual data entry"],
+  "checks": ["source", "owner", "rule", "exception", "reversal"],
+  "safe_inputs": ["synthetic fields", "aggregate workflow description", "public process context"],
+  "stop_rules": ["unclear ownership", "sensitive or regulated data", "undefined exception path", "no rollback or review window"],
+  "proof_boundary": "Synthetic buyer education and readiness guidance only; not a customer result, productivity guarantee, savings, ROI, ranking, demand, compliance or security claim."
+}

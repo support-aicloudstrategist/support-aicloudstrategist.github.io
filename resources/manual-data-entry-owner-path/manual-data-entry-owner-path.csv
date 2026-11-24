@@ -1,0 +1,6 @@
+check,question,synthetic-evidence,owner,stop-rule
+source,Where does the field originate?,Named source and authoritative format,Process owner,Hold if source is unknown or conflicting
+owner,Who validates the entry?,Named owner and backup,Workflow owner,Hold if no accountable reviewer exists
+rule,What validation is required?,Required fields and allowed values,Process owner,Hold if rule cannot be explained
+exception,What needs human review?,Duplicate missing sensitive or unusual cases,Reviewer,Hold if exception path is undefined
+reversal,How can the test be undone?,Safe sample review window and rollback step,Change owner,Pause before production write

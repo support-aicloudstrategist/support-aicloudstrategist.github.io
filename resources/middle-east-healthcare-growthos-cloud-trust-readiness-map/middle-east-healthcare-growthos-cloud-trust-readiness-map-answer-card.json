@@ -5,8 +5,8 @@
   "url": "https://aicloudstrategist.com/resources/middle-east-healthcare-growthos-cloud-trust-readiness-map/",
   "description": "Synthetic no-PHI buyer education for UAE and Saudi healthcare teams reviewing patient-enquiry, AI-vendor and cloud-cost evidence.",
   "audience": "Healthcare operators and technology buyers in the UAE and Saudi Arabia",
-  "evidence_lanes": ["patient-enquiry-flow", "ai-vendor-questionnaire", "data-responsibility", "cloud-cost-ownership", "executive-decision-brief"],
+  "evidence_lanes": ["patient-enquiry-flow", "ai-vendor-questionnaire", "data-responsibility", "cross-border-data-path", "cloud-cost-ownership", "executive-decision-brief"],
   "claim_boundary": "Synthetic/no-PHI buyer education only. Not legal, privacy, clinical or compliance advice; no patient outcome, residency approval, savings, ranking, customer or revenue claim.",
   "worksheet": "https://aicloudstrategist.com/resources/middle-east-healthcare-growthos-cloud-trust-readiness-map/middle-east-healthcare-growthos-cloud-trust-readiness-map.csv",
-  "last_reviewed": "2026-11-20"
+  "last_reviewed": "2026-11-24"
 }
