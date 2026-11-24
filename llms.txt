@@ -7,6 +7,7 @@
 
 ## Evidence
 - [Cloud cost owner path](https://aicloudstrategist.com/resources/cloud-cost-owner-path/): synthetic six-step route for tracing a sudden cloud-cost signal to evidence, an accountable owner and a safe next move; no audit, savings or ROI claim.
+- [Cloud and AI cost governance before you cut](https://aicloudstrategist.com/resources/cloud-ai-cost-governance-before-you-cut/): buyer-safe guide for a suddenly high cloud bill, separating assigned, shared and unallocated spend before an act, investigate or hold decision; no savings-percent claim.
 - [How to read a cloud bill](https://aicloudstrategist.com/resources/how-to-read-a-cloud-bill/): buyer-safe guide to reconciling AWS, Azure or GCP billing exports, finding cost pools and assigning ownership; synthetic education only.
 - [Cloud cost ownership guide](https://aicloudstrategist.com/resources/what-is-cloud-cost-ownership/): explains how to tie spend to accountable teams and products without averaging shared platforms into false certainty; no customer or savings claim.
 - [AI and GPU inference cost governance](https://aicloudstrategist.com/resources/gpu-and-llm-inference-cost-governance/): synthetic checklist for separating LLM inference, idle GPU, vector-search and unowned experiment cost before action.

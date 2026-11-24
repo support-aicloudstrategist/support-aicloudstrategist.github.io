@@ -404,7 +404,7 @@ const sitemapEntries: Array<{ loc: string; lastmod: string }> = [
   { loc: "/why/minimize-waste/", lastmod: "2026-11-13" },
   { loc: "/why/reduce-risk/", lastmod: "2026-11-13" },
   { loc: "/resources/", lastmod: "2026-11-23" },
-  { loc: "/resources/cloud-ai-cost-governance-before-you-cut/", lastmod: "2026-11-23" },
+  { loc: "/resources/cloud-ai-cost-governance-before-you-cut/", lastmod: "2026-11-24" },
   { loc: "/resources/what-is-cloud-cost-ownership/", lastmod: "2026-11-17" },
   { loc: "/resources/why-fixed-fee-diagnostics-beat-savings-share/", lastmod: "2026-11-17" },
   { loc: "/resources/how-to-read-a-cloud-bill/", lastmod: "2026-11-17" },
