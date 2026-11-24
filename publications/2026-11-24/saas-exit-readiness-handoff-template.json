@@ -1,0 +1,19 @@
+{
+  "title": "SaaS exit readiness buyer-safe handoff template",
+  "status": "educational_template",
+  "purpose": "Structure a redacted fit-review request before any credential, production export or regulated-data discussion.",
+  "fields": [
+    {"name": "decision_question", "prompt": "What renewal, exit or replacement decision is being considered?"},
+    {"name": "safe_evidence_summary", "prompt": "What was checked, by whom and in what safe test context?"},
+    {"name": "unresolved_boundary", "prompt": "What is unavailable, sensitive or still unverified?"},
+    {"name": "reversible_next_step", "prompt": "What bounded review can happen without changing production?"}
+  ],
+  "do_not_send": [
+    "credentials or secrets",
+    "production exports",
+    "personal or regulated records",
+    "unredacted customer data"
+  ],
+  "stop_rule": "If the next step requires sensitive access before fit is established, hold and request a narrower scope.",
+  "claim_boundary": "Educational vendor-exit planning only; not customer proof, legal advice, compliance advice, security advice, procurement advice or a guarantee."
+}
