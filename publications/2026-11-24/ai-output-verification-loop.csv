@@ -1,7 +1,7 @@
-number,verification_step,review_question,status,evidence,reviewer,date
-1,"Define The Task","Write the intended use, audience, required format, and acceptance criteria.",,,,
-2,"Check The Sources","Open the cited source, confirm it exists, and verify that it supports the claim.",,,,
-3,"Recompute The Numbers","Recalculate totals, percentages, dates, units, and conversions from the original inputs.",,,,
-4,"Test The Constraints","Check required fields, exclusions, policy boundaries, tone, and output format.",,,,
-5,"Review The Risk","Route higher-risk or irreversible decisions to an authorized human.",,,,
-6,"Record The Decision","Save the input, output, evidence, reviewer, decision, and date.",,,,
+step,check,record
+1,Define the task,Decision and intended audience
+2,Trace the sources,Facts sources assumptions and unsupported claims
+3,Recompute the numbers,Dates units and totals independently checked
+4,Test constraints,Scope permissions privacy data boundaries and reversibility
+5,Review risk,Human reviewer and explicit hold rule
+6,Record the decision,Evidence reviewer decision and next check
