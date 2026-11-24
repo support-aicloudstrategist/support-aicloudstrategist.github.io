@@ -43,6 +43,7 @@ const indexableExact = new Set([
   "/resources",
   "/resources/what-is-cloud-cost-ownership",
   "/resources/cloud-ai-cost-governance-before-you-cut",
+  "/resources/ai-cost-governance-diagnostic",
   "/resources/why-fixed-fee-diagnostics-beat-savings-share",
   "/resources/how-to-read-a-cloud-bill",
   "/resources/sample-diagnostic-deliverable",
