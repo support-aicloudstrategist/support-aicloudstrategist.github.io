@@ -2,10 +2,11 @@
 
 ## Published / verified
 - GitHub repository evidence — Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/publications/2026-11-24/saas-exit-readiness-checks.html
-- GitHub Pages deployment evidence — Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/actions/runs/45320398874
+- GitHub repository evidence — Evening: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/publications/2026-11-24/ai-output-verification-loop.html
 
-## Infographic
-- https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/publications/2026-11-24/saas-exit-readiness-checks.png
+## Infographics
+- Morning: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/publications/2026-11-24/saas-exit-readiness-checks.png
+- Evening: https://github.com/support-aicloudstrategist/support-aicloudstrategist.github.io/blob/main/publications/2026-11-24/ai-output-verification-loop.png
 
 ## Verification boundary
-- Educational vendor-exit planning material only — not legal, compliance, privacy, security, procurement, accounting, contract, or production migration advice. No client results, certifications, rankings, savings, or guarantees are claimed.
+- Educational AI-output review material only — not legal, financial, security, privacy, safety, compliance, or professional advice. No client results, certifications, rankings, savings, or guarantees are claimed.

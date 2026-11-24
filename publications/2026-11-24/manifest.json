@@ -8,6 +8,14 @@
       "url": "https://support-aicloudstrategist.github.io/publications/2026-11-24/saas-exit-readiness-checks.html",
       "visual": "https://support-aicloudstrategist.github.io/publications/2026-11-24/saas-exit-readiness-checks.png",
       "boundary": "Educational vendor-exit planning material only \u2014 not legal, compliance, privacy, security, procurement, accounting, contract, or production migration advice. No client results, certifications, rankings, savings, or guarantees are claimed."
+    },
+    {
+      "slot": "evening",
+      "title": "Don't Ship the First AI Answer: 6-Step Verification Loop",
+      "slug": "ai-output-verification-loop",
+      "url": "https://support-aicloudstrategist.github.io/publications/2026-11-24/ai-output-verification-loop.html",
+      "visual": "https://support-aicloudstrategist.github.io/publications/2026-11-24/ai-output-verification-loop.png",
+      "boundary": "Educational AI-output review material only \u2014 not legal, financial, security, privacy, safety, compliance, or professional advice. No client results, certifications, rankings, savings, or guarantees are claimed."
     }
   ]
 }
