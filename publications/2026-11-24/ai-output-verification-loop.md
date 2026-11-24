@@ -1,6 +1,6 @@
 # Don't Ship the First AI Answer: 6-Step Verification Loop
 
-![Don't Ship the First AI Answer: 6-Step Verification Loop](https://support-aicloudstrategist.github.io/publications/2026-11-24/ai-output-verification-loop.png)
+![Don't Ship the First AI Answer: 6-Step Verification Loop](https://aicloudstrategist.com/publications/2026-11-24/ai-output-verification-loop.png)
 
 A practical educational workflow for checking sources, calculations, constraints, risk, and review evidence before using AI-generated work.
 
@@ -13,6 +13,6 @@ A practical educational workflow for checking sources, calculations, constraints
 
 **Decision gate:** Use only when evidence, calculations, constraints, and authorized review are complete. Otherwise revise or escalate.
 
-Worksheet: https://support-aicloudstrategist.github.io/publications/2026-11-24/ai-output-verification-loop.csv
+Worksheet: https://aicloudstrategist.com/publications/2026-11-24/ai-output-verification-loop.csv
 
 **Proof boundary:** Educational AI-output review material only — not legal, financial, security, privacy, safety, compliance, or professional advice. No client results, certifications, rankings, savings, or guarantees are claimed.
