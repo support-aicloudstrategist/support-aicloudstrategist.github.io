@@ -1,0 +1,7 @@
+step,handoff_area,record,safe_instruction
+1,Name the decision,Decision + owner,Write the decision this report supports and the person who owns that decision.
+2,List the sources,Approved source · Owner · Timing · Access path,"Record each approved source, its owner, update timing and access path."
+3,Define the rules,Calculation · Filter · Grouping · Exceptions,"Write the calculation, filter, grouping and exception rules in plain language."
+4,Mark the checks,Reviewer · Checks · Evidence,"Identify who reviews the output, what they check and what evidence is retained."
+5,Set the fallback,Missing · Late · Duplicated · Inconsistent,"Define what happens when data is missing, late, duplicated or inconsistent."
+6,Choose the release gate,Manual + Automated → Compare → Owner accepts,Run the automated and manual versions together; release only after the authorized owner accepts the comparison.

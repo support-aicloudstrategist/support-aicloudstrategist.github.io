@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-25",
+  "posts": [
+    {
+      "slot": "morning",
+      "title": "Still Building the Same Report by Hand? A 6-Step Automation Handoff",
+      "slug": "recurring-report-automation-handoff",
+      "url": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.html",
+      "visual": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.png",
+      "worksheet": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.csv",
+      "answer_card": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff-answer-card.json",
+      "boundary": "Educational workflow-design material only \u2014 not accounting, financial, legal, compliance, security, privacy or production advice. No client result, certification, ranking, saving or guarantee is claimed."
+    }
+  ]
+}

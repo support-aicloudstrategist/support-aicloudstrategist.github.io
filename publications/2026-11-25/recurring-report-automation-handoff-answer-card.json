@@ -1,0 +1,48 @@
+{
+  "topic": "Still Building the Same Report by Hand? A 6-Step Automation Handoff",
+  "date": "2026-11-25",
+  "slot": "morning",
+  "url": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.html",
+  "infographic": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.png",
+  "worksheet": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.csv",
+  "steps": [
+    {
+      "step": "1",
+      "handoff_area": "Name the decision",
+      "record": "Decision + owner",
+      "safe_instruction": "Write the decision this report supports and the person who owns that decision."
+    },
+    {
+      "step": "2",
+      "handoff_area": "List the sources",
+      "record": "Approved source \u00b7 Owner \u00b7 Timing \u00b7 Access path",
+      "safe_instruction": "Record each approved source, its owner, update timing and access path."
+    },
+    {
+      "step": "3",
+      "handoff_area": "Define the rules",
+      "record": "Calculation \u00b7 Filter \u00b7 Grouping \u00b7 Exceptions",
+      "safe_instruction": "Write the calculation, filter, grouping and exception rules in plain language."
+    },
+    {
+      "step": "4",
+      "handoff_area": "Mark the checks",
+      "record": "Reviewer \u00b7 Checks \u00b7 Evidence",
+      "safe_instruction": "Identify who reviews the output, what they check and what evidence is retained."
+    },
+    {
+      "step": "5",
+      "handoff_area": "Set the fallback",
+      "record": "Missing \u00b7 Late \u00b7 Duplicated \u00b7 Inconsistent",
+      "safe_instruction": "Define what happens when data is missing, late, duplicated or inconsistent."
+    },
+    {
+      "step": "6",
+      "handoff_area": "Choose the release gate",
+      "record": "Manual + Automated \u2192 Compare \u2192 Owner accepts",
+      "safe_instruction": "Run the automated and manual versions together; release only after the authorized owner accepts the comparison."
+    }
+  ],
+  "minimum_handoff_record": "Decision \u00b7 Owners \u00b7 Sources \u00b7 Timing \u00b7 Rules \u00b7 Reviewer \u00b7 Evidence \u00b7 Fallback \u00b7 Comparison \u00b7 Release owner",
+  "boundary": "Educational workflow-design material only \u2014 not accounting, financial, legal, compliance, security, privacy or production advice. No client result, certification, ranking, saving or guarantee is claimed."
+}

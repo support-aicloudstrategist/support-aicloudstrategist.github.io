@@ -1,0 +1,51 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='675' viewBox='0 0 1200 675'>
+<defs><filter id='shadow' x='-15%' y='-15%' width='140%' height='150%'><feDropShadow dx='3' dy='5' stdDeviation='4' flood-color='#635b52' flood-opacity='.19'/></filter><style>.title{font-family:Arial,sans-serif;font-size:38px;font-weight:900;fill:#2D2D2D}.sub{font-family:Arial,sans-serif;font-size:20px;font-weight:900;fill:#E8655A;letter-spacing:2px}.deck{font-family:Arial,sans-serif;font-size:15px;font-weight:700;fill:#5a554f}.num{font-family:Arial,sans-serif;font-size:22px;font-weight:900;fill:#fff;text-anchor:middle}.icon{font-family:Arial,sans-serif;font-size:24px;font-weight:900;fill:#2D2D2D}.heading{font-family:Arial,sans-serif;font-size:14px;font-weight:900;fill:#2D2D2D}.labels{font-family:Arial,sans-serif;font-size:12px;font-weight:800;fill:#3f3b36}.strip-title{font-family:Arial,sans-serif;font-size:14px;font-weight:900;fill:#2D2D2D}.strip{font-family:Arial,sans-serif;font-size:12px;font-weight:800;fill:#2D2D2D}.footer{font-family:Arial,sans-serif;font-size:9px;font-weight:800;fill:#fff}</style></defs>
+<rect width='1200' height='675' fill='#F5F0E8'/><path d='M40 60 Q280 31 530 55' stroke='#A8D8EA' stroke-width='13' fill='none' stroke-linecap='round' opacity='.76'/><path d='M930 42 q22 15 40 0 q-15 20 0 39 q-20 -12 -40 0 q12 -20 0 -39z' fill='#B5E5CF'/>
+<text x='40' y='72' class='title'>STILL BUILDING THE SAME REPORT BY HAND?</text><text x='42' y='108' class='sub'>A 6-STEP AUTOMATION HANDOFF</text><text x='42' y='140' class='deck'>Define ownership, inputs, rules, review, fallback and release before automation.</text>
+<g filter='url(#shadow)'>
+      <rect x='35' y='184' width='170' height='260' rx='24' fill='#A8D8EA' stroke='#2D2D2D' stroke-width='3'/>
+      <circle cx='68' cy='218' r='22' fill='#2D2D2D'/><text x='68' y='226' class='num'>1</text>
+      <text x='172' y='226' class='icon' text-anchor='middle'>◆</text>
+      <text x='53' y='274' class='heading'><tspan x='53' dy='0'>NAME THE DECISION</tspan></text>
+      <path d='M52 320 Q120 314 188 320' fill='none' stroke='#6B6B6B' stroke-width='2' stroke-dasharray='5 6'/>
+      <text x='53' y='350' class='labels'><tspan x='53' dy='0'>Decision + owner</tspan></text>
+    </g><g filter='url(#shadow)'>
+      <rect x='227' y='184' width='170' height='260' rx='24' fill='#B5E5CF' stroke='#2D2D2D' stroke-width='3'/>
+      <circle cx='260' cy='218' r='22' fill='#2D2D2D'/><text x='260' y='226' class='num'>2</text>
+      <text x='364' y='226' class='icon' text-anchor='middle'>▤</text>
+      <text x='245' y='274' class='heading'><tspan x='245' dy='0'>LIST THE SOURCES</tspan></text>
+      <path d='M244 320 Q312 314 380 320' fill='none' stroke='#6B6B6B' stroke-width='2' stroke-dasharray='5 6'/>
+      <text x='245' y='350' class='labels'><tspan x='245' dy='0'>Approved source ·</tspan><tspan x='245' dy='17'>Owner · Timing ·</tspan><tspan x='245' dy='17'>Access path</tspan></text>
+    </g><g filter='url(#shadow)'>
+      <rect x='419' y='184' width='170' height='260' rx='24' fill='#D5C6E0' stroke='#2D2D2D' stroke-width='3'/>
+      <circle cx='452' cy='218' r='22' fill='#2D2D2D'/><text x='452' y='226' class='num'>3</text>
+      <text x='556' y='226' class='icon' text-anchor='middle'>≡</text>
+      <text x='437' y='274' class='heading'><tspan x='437' dy='0'>DEFINE THE RULES</tspan></text>
+      <path d='M436 320 Q504 314 572 320' fill='none' stroke='#6B6B6B' stroke-width='2' stroke-dasharray='5 6'/>
+      <text x='437' y='350' class='labels'><tspan x='437' dy='0'>Calculation ·</tspan><tspan x='437' dy='17'>Filter · Grouping ·</tspan><tspan x='437' dy='17'>Exceptions</tspan></text>
+    </g><g filter='url(#shadow)'>
+      <rect x='611' y='184' width='170' height='260' rx='24' fill='#FFD5C2' stroke='#2D2D2D' stroke-width='3'/>
+      <circle cx='644' cy='218' r='22' fill='#2D2D2D'/><text x='644' y='226' class='num'>4</text>
+      <text x='748' y='226' class='icon' text-anchor='middle'>✓</text>
+      <text x='629' y='274' class='heading'><tspan x='629' dy='0'>MARK THE CHECKS</tspan></text>
+      <path d='M628 320 Q696 314 764 320' fill='none' stroke='#6B6B6B' stroke-width='2' stroke-dasharray='5 6'/>
+      <text x='629' y='350' class='labels'><tspan x='629' dy='0'>Reviewer · Checks ·</tspan><tspan x='629' dy='17'>Evidence</tspan></text>
+    </g><g filter='url(#shadow)'>
+      <rect x='803' y='184' width='170' height='260' rx='24' fill='#A8D8EA' stroke='#2D2D2D' stroke-width='3'/>
+      <circle cx='836' cy='218' r='22' fill='#2D2D2D'/><text x='836' y='226' class='num'>5</text>
+      <text x='940' y='226' class='icon' text-anchor='middle'>!</text>
+      <text x='821' y='274' class='heading'><tspan x='821' dy='0'>SET THE FALLBACK</tspan></text>
+      <path d='M820 320 Q888 314 956 320' fill='none' stroke='#6B6B6B' stroke-width='2' stroke-dasharray='5 6'/>
+      <text x='821' y='350' class='labels'><tspan x='821' dy='0'>Missing · Late ·</tspan><tspan x='821' dy='17'>Duplicated ·</tspan><tspan x='821' dy='17'>Inconsistent</tspan></text>
+    </g><g filter='url(#shadow)'>
+      <rect x='995' y='184' width='170' height='260' rx='24' fill='#FFD5C2' stroke='#2D2D2D' stroke-width='3'/>
+      <circle cx='1028' cy='218' r='22' fill='#2D2D2D'/><text x='1028' y='226' class='num'>6</text>
+      <text x='1132' y='226' class='icon' text-anchor='middle'>▣</text>
+      <text x='1013' y='274' class='heading'><tspan x='1013' dy='0'>CHOOSE THE RELEASE</tspan><tspan x='1013' dy='18'>GATE</tspan></text>
+      <path d='M1012 320 Q1080 314 1148 320' fill='none' stroke='#6B6B6B' stroke-width='2' stroke-dasharray='5 6'/>
+      <text x='1013' y='350' class='labels'><tspan x='1013' dy='0'>Manual + Automated</tspan><tspan x='1013' dy='17'>→ Compare → Owner</tspan><tspan x='1013' dy='17'>accepts</tspan></text>
+    </g><path d='M207 310 q9 -11 18 0' fill='none' stroke='#E8655A' stroke-width='5' stroke-linecap='round'/><path d='M220 301 l10 9 -10 9' fill='none' stroke='#E8655A' stroke-width='4' stroke-linecap='round'/><path d='M399 310 q9 -11 18 0' fill='none' stroke='#E8655A' stroke-width='5' stroke-linecap='round'/><path d='M412 301 l10 9 -10 9' fill='none' stroke='#E8655A' stroke-width='4' stroke-linecap='round'/><path d='M591 310 q9 -11 18 0' fill='none' stroke='#E8655A' stroke-width='5' stroke-linecap='round'/><path d='M604 301 l10 9 -10 9' fill='none' stroke='#E8655A' stroke-width='4' stroke-linecap='round'/><path d='M783 310 q9 -11 18 0' fill='none' stroke='#E8655A' stroke-width='5' stroke-linecap='round'/><path d='M796 301 l10 9 -10 9' fill='none' stroke='#E8655A' stroke-width='4' stroke-linecap='round'/><path d='M975 310 q9 -11 18 0' fill='none' stroke='#E8655A' stroke-width='5' stroke-linecap='round'/><path d='M988 301 l10 9 -10 9' fill='none' stroke='#E8655A' stroke-width='4' stroke-linecap='round'/>
+<g transform='translate(1060 126)'><circle cx='24' cy='18' r='12' fill='none' stroke='#2D2D2D' stroke-width='3'/><path d='M24 30 v40 M24 44 l-22 18 M24 44 l24 10 M24 70 l-18 28 M24 70 l22 26' fill='none' stroke='#2D2D2D' stroke-width='3' stroke-linecap='round'/><path d='M54 24 q22 -15 40 0 v42 q-18 -14 -40 0z' fill='#fff' stroke='#2D2D2D' stroke-width='2'/><path d='M62 36h24M62 46h19M62 56h22' stroke='#6B6B6B' stroke-width='2'/></g>
+<rect x='35' y='474' width='1130' height='105' rx='22' fill='#fffaf3' stroke='#2D2D2D' stroke-width='3' stroke-dasharray='8 7'/><text x='58' y='507' class='strip-title'>MINIMUM HANDOFF RECORD</text><text x='58' y='541' class='strip'>Decision · Owners · Sources · Timing · Rules · Reviewer · Evidence · Fallback · Comparison · Release owner</text><text x='58' y='564' class='deck'>Run manual and automated versions together. Release only after the authorized owner accepts the comparison.</text>
+<rect x='35' y='606' width='1130' height='34' rx='12' fill='#2D2D2D'/><text x='600' y='628' class='footer' text-anchor='middle'>EDUCATIONAL WORKFLOW-DESIGN MATERIAL ONLY · NO CLIENT RESULT, CERTIFICATION, RANKING, SAVING OR GUARANTEE IS CLAIMED</text>
+</svg>
