@@ -9,7 +9,7 @@ TITLE = "Still Building the Same Report by Hand? A 6-Step Automation Handoff"
 
 def test_morning_publication_assets_and_truth_boundary():
     pub = ROOT / "publications" / DATE
-    for name in [f"{SLUG}.html", f"{SLUG}.png", f"{SLUG}.svg", f"{SLUG}.csv", f"{SLUG}-answer-card.json", f"{SLUG}.md", "manifest.json", "index.html", "publish-log.md"]:
+    for name in [f"{SLUG}.html", f"{SLUG}.png", f"{SLUG}.svg", f"{SLUG}.csv", f"{SLUG}-answer-card.json", f"{SLUG}-proof-boundary.json", f"{SLUG}.md", "manifest.json", "index.html", "publish-log.md"]:
         assert (pub / name).exists(), name
     assert (pub / f"{SLUG}.png").stat().st_size > 20_000
     page = (pub / f"{SLUG}.html").read_text(encoding="utf-8")
@@ -18,6 +18,13 @@ def test_morning_publication_assets_and_truth_boundary():
     assert '"@type":"FAQPage"' in page
     for forbidden in ["client saved", "guaranteed result", "certified compliant", "customer result"]:
         assert forbidden not in page.lower()
+    boundary = json.loads((pub / f"{SLUG}-proof-boundary.json").read_text(encoding="utf-8"))
+    assert boundary["classification"] == "synthetic educational buyer aid"
+    assert boundary["review_required"] is True
+    assert "credentials" in boundary["excluded_inputs"]
+    assert "customer result" in boundary["claims_not_made"]
+    manifest = json.loads((pub / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["posts"][0]["proof_boundary_manifest"].endswith("-proof-boundary.json")
 
 
 def test_exactly_one_post_and_infographic_workflow():

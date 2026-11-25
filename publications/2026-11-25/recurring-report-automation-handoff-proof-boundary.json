@@ -1,0 +1,18 @@
+{
+  "asset": "recurring-report-automation-handoff",
+  "date": "2026-11-25",
+  "classification": "synthetic educational buyer aid",
+  "purpose": "Make the report-automation handoff controls inspectable before a buyer discusses access or production changes.",
+  "assets": [
+    {"role": "guide", "path": "recurring-report-automation-handoff.html"},
+    {"role": "worksheet", "path": "recurring-report-automation-handoff.csv"},
+    {"role": "answer_card", "path": "recurring-report-automation-handoff-answer-card.json"},
+    {"role": "visual", "path": "recurring-report-automation-handoff.png"}
+  ],
+  "safe_inputs": ["redacted workflow context", "source names and owners", "plain-language rules", "review and fallback requirements"],
+  "excluded_inputs": ["credentials", "secrets", "production exports", "personal data", "regulated records", "client-identifying information"],
+  "decision_boundary": "Use as a pre-access design aid only. An authorized owner must compare manual and automated outputs before release.",
+  "claims_not_made": ["customer result", "client result", "savings", "ROI", "ranking", "certification", "compliance approval", "production authorization", "guarantee"],
+  "review_required": true,
+  "proof_boundary": "This is synthetic educational workflow-design material, not customer evidence or accounting, financial, legal, compliance, security, privacy or production advice."
+}

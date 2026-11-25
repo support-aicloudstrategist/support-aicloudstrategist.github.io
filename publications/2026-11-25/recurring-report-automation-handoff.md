@@ -15,6 +15,8 @@ Minimum handoff record: Decision · Owners · Sources · Timing · Rules · Revi
 
 Worksheet: https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.csv
 
+Proof-boundary manifest: https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff-proof-boundary.json
+
 **Proof boundary:** Educational workflow-design material only — not accounting, financial, legal, compliance, security, privacy or production advice. No client result, certification, ranking, saving or guarantee is claimed.
 
 Public page: https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.html
