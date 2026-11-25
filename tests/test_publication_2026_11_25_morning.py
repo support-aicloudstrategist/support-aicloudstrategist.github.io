@@ -25,6 +25,10 @@ def test_morning_publication_assets_and_truth_boundary():
     assert "customer result" in boundary["claims_not_made"]
     manifest = json.loads((pub / "manifest.json").read_text(encoding="utf-8"))
     assert manifest["posts"][0]["proof_boundary_manifest"].endswith("-proof-boundary.json")
+    answer = json.loads((pub / f"{SLUG}-answer-card.json").read_text(encoding="utf-8"))
+    assert answer["proof_boundary_manifest"].endswith("-proof-boundary.json")
+    assert answer["bounded_next_step"]["url"].endswith("/request-fit-review/")
+    assert "credentials" in answer["bounded_next_step"]["intake_boundary"]
 
 
 def test_exactly_one_post_and_infographic_workflow():
