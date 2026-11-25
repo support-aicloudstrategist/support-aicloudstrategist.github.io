@@ -5,12 +5,6 @@
   "url": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.html",
   "infographic": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.png",
   "worksheet": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff.csv",
-  "proof_boundary_manifest": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff-proof-boundary.json",
-  "bounded_next_step": {
-    "label": "Request a fit review",
-    "url": "https://aicloudstrategist.com/request-fit-review/",
-    "intake_boundary": "Share public, redacted workflow context only; do not send credentials, production exports, personal data or regulated data."
-  },
   "steps": [
     {
       "step": "1",
@@ -50,5 +44,11 @@
     }
   ],
   "minimum_handoff_record": "Decision \u00b7 Owners \u00b7 Sources \u00b7 Timing \u00b7 Rules \u00b7 Reviewer \u00b7 Evidence \u00b7 Fallback \u00b7 Comparison \u00b7 Release owner",
-  "boundary": "Educational workflow-design material only \u2014 not accounting, financial, legal, compliance, security, privacy or production advice. No client result, certification, ranking, saving or guarantee is claimed."
+  "boundary": "Educational workflow-design material only \u2014 not accounting, financial, legal, compliance, security, privacy or production advice. No client result, certification, ranking, saving or guarantee is claimed.",
+  "proof_boundary_manifest": "https://aicloudstrategist.com/publications/2026-11-25/recurring-report-automation-handoff-proof-boundary.json",
+  "bounded_next_step": {
+    "label": "Request a fit review",
+    "url": "https://aicloudstrategist.com/request-fit-review/",
+    "intake_boundary": "Public information only; do not send credentials, production exports, personal data or regulated data."
+  }
 }

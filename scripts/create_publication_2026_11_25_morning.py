@@ -94,13 +94,15 @@ answer = {
     "topic": TITLE, "date": DATE, "slot": SLOT, "url": URL, "infographic": PNG_URL,
     "worksheet": CSV_URL,
     "steps": [{"step": n, "handoff_area": h, "record": label, "safe_instruction": body} for n, h, label, body in steps],
-    "minimum_handoff_record": minimum, "boundary": BOUNDARY,
+    "minimum_handoff_record": minimum, "boundary": BOUNDARY, "proof_boundary_manifest": f"{BASE}/{SLUG}-proof-boundary.json",
+    "bounded_next_step": {"label": "Request a fit review", "url": f"{DOMAIN}/request-fit-review/", "intake_boundary": "Public information only; do not send credentials, production exports, personal data or regulated data."},
 }
 (pub / f"{SLUG}-answer-card.json").write_text(json.dumps(answer, indent=2), encoding="utf-8")
 rows = "".join(f"<tr><td>{n}</td><td><strong>{esc(h)}</strong></td><td>{esc(label)}</td><td>{esc(body)}</td></tr>" for n, h, label, body in steps)
 faq = [
     ("What should be documented before automating a recurring report?", "Document the decision, decision owner, approved sources, rules, reviewer, retained evidence, fallback, comparison period and release owner."),
     ("How should the automated report be checked before release?", "Run the automated and manual versions together and let the authorized owner review the comparison."),
+    ("Should we automate a recurring report or keep using spreadsheets?", "Compare the decision, ownership, source quality, exception handling and review effort first; automate only when the authorized owner can test and accept the comparison."),
     ("Does this handoff authorize a production change?", "No. It is educational workflow-design material only; local policy and authorized owners control any production decision."),
 ]
 faq_json = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
@@ -108,11 +110,11 @@ article_json = {"@context": "https://schema.org", "@type": "Article", "headline"
 faq_html = "".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q, a in faq)
 page = f"""<!doctype html><html lang='en-IN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{esc(TITLE)} | AICloudStrategist</title><meta name='description' content='{esc(HOOK)}'><link rel='canonical' href='{URL}'><meta name='robots' content='index,follow,max-image-preview:large'><meta property='og:type' content='article'><meta property='og:site_name' content='AICloudStrategist'><meta property='og:title' content='{esc(TITLE)}'><meta property='og:description' content='{esc(HOOK)}'><meta property='og:url' content='{URL}'><meta property='og:image' content='{PNG_URL}'><meta name='twitter:card' content='summary_large_image'><script type='application/ld+json'>{json.dumps(article_json, separators=(',', ':'))}</script><script type='application/ld+json'>{json.dumps(faq_json, separators=(',', ':'))}</script><style>body{{margin:0;background:#F5F0E8;color:#2D2D2D;font-family:Inter,Segoe UI,Arial,sans-serif}}main{{max-width:1120px;margin:auto;padding:32px 18px}}.hero,.card{{background:#fffaf3;border:3px solid #2D2D2D;border-radius:26px;padding:30px;margin:24px 0;box-shadow:7px 7px 0 #A8D8EA}}.eyebrow{{color:#c9483e;text-transform:uppercase;font-weight:900;letter-spacing:.12em;font-size:12px}}h1{{font-size:clamp(34px,6vw,58px);line-height:1.03;margin:12px 0}}.lead{{font-size:20px;line-height:1.5}}img{{width:100%;height:auto;border-radius:18px;border:2px solid #2D2D2D}}table{{width:100%;border-collapse:collapse}}th,td{{border:1px solid #6B6B6B;padding:11px;text-align:left;vertical-align:top}}.boundary{{background:#2D2D2D;color:#fff;box-shadow:none}}a{{color:#075985;font-weight:800}}.button{{display:inline-block;background:#2D2D2D;color:#fff;padding:13px 18px;border-radius:10px;text-decoration:none}}</style></head><body><main><section class='hero'><p class='eyebrow'>Morning publication · workflow education</p><h1>{esc(TITLE)}</h1><p class='lead'>{esc(HOOK)}</p></section><section class='card'><img src='{PNG_URL}' alt='{esc(TITLE)}'><p><a class='button' href='{CSV_URL}'>Download the handoff worksheet (CSV)</a></p></section><section class='card'><h2>The six-step handoff</h2><table><thead><tr><th>Step</th><th>Area</th><th>Record</th><th>Safe instruction</th></tr></thead><tbody>{rows}</tbody></table></section><section class='card'><h2>Minimum handoff record</h2><p>{esc(minimum)}</p></section><section class='card'><h2>Questions buyers and operators ask</h2>{faq_html}</section><section class='card boundary'><h2>Proof boundary</h2><p>{esc(BOUNDARY)}</p></section></main></body></html>"""
 (pub / f"{SLUG}.html").write_text(page, encoding="utf-8")
-(pub / f"{SLUG}.md").write_text(f"# {TITLE}\n\n![{TITLE}]({PNG_URL})\n\n{HOOK}\n\n" + "\n".join(f"{n}. **{h}.** {body}" for n, h, _label, body in steps) + f"\n\nMinimum handoff record: {minimum}\n\nWorksheet: {CSV_URL}\n\n**Proof boundary:** {BOUNDARY}\n\nPublic page: {URL}\n", encoding="utf-8")
-manifest = {"date": DATE, "posts": [{"slot": SLOT, "title": TITLE, "slug": SLUG, "url": URL, "visual": PNG_URL, "worksheet": CSV_URL, "answer_card": CARD_URL, "boundary": BOUNDARY}]}
+(pub / f"{SLUG}.md").write_text(f"# {TITLE}\n\n![{TITLE}]({PNG_URL})\n\n{HOOK}\n\n" + "\n".join(f"{n}. **{h}.** {body}" for n, h, _label, body in steps) + f"\n\nMinimum handoff record: {minimum}\n\nWorksheet: {CSV_URL}\n\nProof-boundary manifest: {BASE}/{SLUG}-proof-boundary.json\n\nAnswer card: {CARD_URL}\n\nBounded next step: {DOMAIN}/request-fit-review/ — share public, redacted workflow context only; do not send credentials, production exports, personal data or regulated data.\n\n**Proof boundary:** {BOUNDARY}\n\nPublic page: {URL}\n", encoding="utf-8")
+manifest = {"date": DATE, "posts": [{"slot": SLOT, "title": TITLE, "slug": SLUG, "url": f"{BASE}/{SLUG}/", "visual": PNG_URL, "worksheet": CSV_URL, "answer_card": CARD_URL, "proof_boundary_manifest": f"{BASE}/{SLUG}-proof-boundary.json", "boundary": BOUNDARY}]}
 (pub / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-(pub / "index.html").write_text(f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>AICS publications — {DATE}</title><link rel='canonical' href='{BASE}/'></head><body><main><h1>AICS publications — {DATE}</h1><ul><li><strong>Morning:</strong> <a href='{SLUG}.html'>{esc(TITLE)}</a> · <a href='{SLUG}.png'>infographic</a> · <a href='{SLUG}.csv'>worksheet</a></li></ul></main></body></html>", encoding="utf-8")
-(pub / "publish-log.md").write_text(f"# Publish log — {DATE}\n\n## Published / verified\n- GitHub repository evidence — Morning: {REPO_URL}\n\n## Infographic\n- Morning: {REPO_PNG}\n\n## Verification boundary\n- {BOUNDARY}\n", encoding="utf-8")
+(pub / "index.html").write_text(f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>AICS publications — {DATE}</title><link rel='canonical' href='{BASE}/'></head><body><main><h1>AICS publications — {DATE}</h1><ul><li><strong>Morning:</strong> <a href='{SLUG}/'>{esc(TITLE)}</a> · <a href='{SLUG}.png'>infographic</a> · <a href='{SLUG}.csv'>worksheet</a> · <a href='{SLUG}-answer-card.json'>answer card</a> · <a href='{SLUG}-proof-boundary.json'>proof-boundary manifest</a></li></ul></main></body></html>", encoding="utf-8")
+(pub / "publish-log.md").write_text(f"# Publish log — {DATE}\n\n## Published / verified\n- GitHub repository evidence — Morning: {REPO_URL}\n\n## Infographic\n- Morning: {REPO_PNG}\n\n## Proof-boundary manifest\n- Morning: `{SLUG}-proof-boundary.json` records the synthetic classification, safe/excluded inputs, review gate and claims not made.\n\n## Verification boundary\n- {BOUNDARY}\n", encoding="utf-8")
 
 mirror_root = Path("/home/agent/.hermes/aicloudstrategist/publications")
 mirror = mirror_root / DATE
@@ -132,8 +134,8 @@ if f"/publications/{DATE}/{SLUG}.html" not in text:
     resources.write_text(text, encoding="utf-8")
 llms = ROOT / "llms.txt"
 text = llms.read_text(encoding="utf-8")
-if URL not in text:
-    llms.write_text(text.rstrip() + f"\n- [{TITLE}]({URL}) — six-step educational recurring-report automation handoff with worksheet.\n", encoding="utf-8")
+if URL not in text and f"{BASE}/{SLUG}/" not in text:
+    llms.write_text(text.rstrip() + f"\n- [{TITLE}]({BASE}/{SLUG}/) — six-step educational recurring-report automation handoff with worksheet.\n", encoding="utf-8")
 sitemap = ROOT / "sitemap.xml"
 text = sitemap.read_text(encoding="utf-8")
 for link, priority in [(URL, "0.7"), (PNG_URL, "0.5"), (SVG_URL, "0.5"), (CSV_URL, "0.5"), (CARD_URL, "0.5"), (f"{BASE}/", "0.6")]:
