@@ -1,0 +1,13 @@
+{
+  "title": "India Healthcare Patient GrowthOS + DPDP Owner Path",
+  "route": "https://aicloudstrategist.com/resources/india-healthcare-dpdp-patient-growthos-owner-path/",
+  "review_date": "2026-11-25",
+  "region": "India",
+  "audience": ["clinic owner", "diagnostic centre operator", "healthtech workflow owner"],
+  "questions": ["Who owns the enquiry?", "What is the data path and vendor access?", "Which DPDP questions need qualified review?", "Who owns cloud/API cost?", "What is the human stop rule?"],
+  "safe_inputs": ["aggregate counts", "redacted workflow context", "role ownership", "review dates", "public documentation"],
+  "excluded_inputs": ["patient names", "phone numbers", "health details", "call recordings", "credentials", "production exports", "regulated data"],
+  "next_step": "Request a fit review using public or redacted information only.",
+  "evidence_link": "https://aicloudstrategist.com/resources/india-healthcare-dpdp-patient-growthos-owner-path/india-healthcare-dpdp-patient-growthos-owner-path.csv",
+  "claim_boundary": "Synthetic buyer education only; not legal, privacy, medical, security or DPDP compliance advice; no customer, patient, ranking, demand, savings, ROI or revenue claim."
+}
