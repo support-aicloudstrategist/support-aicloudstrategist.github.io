@@ -11,5 +11,6 @@
   "evidence_lanes": ["intended-use-and-risk", "gdpr-and-dpia-inputs", "security-questionnaire", "procurement-response-pack", "cloud-and-llm-economics", "decision-brief"],
   "claim_boundary": "Synthetic/no-personal-data buyer education only. Not legal, privacy, clinical, security or compliance advice; no certification, customer, outcome, ranking, savings or vendor recommendation claim.",
   "worksheet": "https://aicloudstrategist.com/resources/europe-healthtech-ai-trust-finops-readiness-map/europe-healthtech-ai-trust-finops-readiness-map.csv",
-  "last_reviewed": "2026-11-20"
+  "last_reviewed": "2026-11-25",
+  "update_note": "Added a buyer-ready comparison-packet section covering evidence state, cross-functional ownership, economics fields and redacted handoff boundaries; category references remain compare-not-rank context."
 }
