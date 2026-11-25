@@ -1,0 +1,25 @@
+{
+  "title": "UAE Healthcare AI Pilot Readiness: Patient Access, Trust and Cloud-Cost Owner Path",
+  "asset_type": "synthetic_buyer_education",
+  "reviewed": "2026-11-25",
+  "region": "UAE / Gulf",
+  "search_phrases": [
+    "How do we make an AI healthcare pilot safe to approve?",
+    "Arabic and English patient enquiries",
+    "healthcare AI security and privacy questionnaire",
+    "cloud or AI API bill increased"
+  ],
+  "six_checks": [
+    "source and language",
+    "patient-access owner and SLA",
+    "workflow and data boundary",
+    "vendor access, residency and retention questions",
+    "cloud/API cost owner",
+    "human review and stop rule"
+  ],
+  "safe_inputs": ["aggregate counts", "role ownership", "workflow status", "review window", "public source/version"],
+  "excluded_inputs": ["patient names", "phone numbers", "health details", "call recordings", "credentials", "production exports", "regulated data"],
+  "positioning": "AICS is a no-credentials evidence handoff and decision-control layer before a bounded pilot; it does not replace a booking platform, cloud provider, FinOps tool, privacy adviser, security reviewer or clinical owner.",
+  "next_step": "Request a fit review using public or redacted workflow context only.",
+  "proof_boundary": "Synthetic education only. Not legal, privacy, clinical, security, regulatory or financial advice; not UAE compliance proof, residency proof, certification, vendor ranking, patient growth, customer outcome, savings, ROI, demand, revenue or appointment evidence."
+}

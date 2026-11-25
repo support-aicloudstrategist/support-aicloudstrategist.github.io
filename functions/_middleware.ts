@@ -64,6 +64,7 @@ const indexableExact = new Set([
   "/resources/global-whatsapp-lead-follow-up-vs-crm-automation-comparison",
   "/resources/ivf-clinic-lead-leakage-owner-map",
   "/resources/india-healthcare-dpdp-patient-growthos-owner-path",
+  "/resources/uae-healthcare-ai-pilot-readiness-owner-path",
   "/resources/missed-patient-calls-owner-path",
   "/resources/manual-work-automation-owner-path",
   "/resources/manual-data-entry-owner-path",
